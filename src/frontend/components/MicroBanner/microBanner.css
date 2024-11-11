@@ -1,0 +1,47 @@
+.micro_banner{
+
+  padding:150px 0 250px!important;
+  position:relative;
+  text-align: center;
+
+  .microbanner_bg{
+    
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.3;
+  }
+
+  .microTitle{
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0;
+    margin-bottom: 4px;
+    font-size: 24px;
+  }
+
+  .breadcrumb{
+    justify-content: center;
+    margin:0;
+
+    li{
+
+      color:var(--theme_primary_color);
+      font-size: 16px;
+
+      &:before{
+        color:var(--theme_primary_color);
+      }
+
+      a{
+        color:var(--theme_primary_color);
+        font-size: 16px;
+      }
+    }
+  }
+}
