@@ -9,6 +9,7 @@ const Testimonial = React.lazy(()=>import('../components/homepage/Testimonial'))
 const Enquire = React.lazy(()=>import('../components/homepage/Enquire'))
 const EnquireForm = React.lazy(()=>import('../components/homepage/EnquireForm'))
 const ScrollVideo = React.lazy(()=>import('../components/homepage/ScrollVideo'));
+const Typology = React.lazy(()=>import('../components/homepage/Typology'));
 
 import { Suspense } from "react";
 
@@ -19,6 +20,10 @@ const Homepage = ()=>{
 
       <Suspense fallback="Loading">
         <ScrollVideo />
+      </Suspense>
+
+      <Suspense fallback="Loading">
+        <Typology />
       </Suspense>
 
       <Suspense fallback="Loading">

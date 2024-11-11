@@ -2,8 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import scVideo from '../../assets/videos/building_view.mp4';
-
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
