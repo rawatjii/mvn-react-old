@@ -63,7 +63,8 @@ const Header = ()=>{
 
   return(
     <>
-      <Navbar expand="false" className={`${scrolled ? 'fixed':''}`}>
+      <Navbar expand="false"> 
+      {/* className={`${scrolled ? 'fixed':''}`} */}
         <Container>
           <Navbar.Brand ref={logoRef} to="/" className="logo">
             <img src={CONFIG.IMAGE_URL + 'logo_dark.webp'} alt="mvn-logo" className='img-fluid' fetchPriority='high' />

@@ -13,6 +13,7 @@ gsap.registerPlugin(ScrollTrigger);
 const Hero = ()=>{
   const titleRef = useRef();
   const desRef = useRef();
+  const heroRef = useRef();
 
   useEffect(()=>{
     // logo animation
@@ -41,16 +42,29 @@ const Hero = ()=>{
       }
     })
 
+    gsap.to(heroRef.current, {
+      opacity: 0,   // Animation duration in seconds
+      // ease: "power2" // Easing function for a smooth effect
+
+      scrollTrigger:{
+        trigger: heroRef.current,
+        start: "top 0",
+        end: `+=500`,
+        scrub: true,
+        pin:true,
+        markers:true,
+      }
+    })
+
   }, [])
 
   return(
     <>
-      <section className="section hero_section p-0">
+      <section ref={heroRef} className="section hero_section p-0">
         <div className="hero-img">
           <img src={hero_img} alt="mvn-hero-image" className="img-fluid d-none d-md-block" fetchPriority="high" />
           <img src={hero_img_sm} alt="mvn-hero-image" className="img-fluid d-md-none" fetchPriority="high" />
         </div>
-
         
         <div className="hero_content">
           <Container>
@@ -69,7 +83,6 @@ const Hero = ()=>{
 
           </Container>
         </div>
-        
       </section>
     </>
   )

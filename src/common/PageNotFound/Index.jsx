@@ -1,21 +1,35 @@
 import React from "react";
-import Container from 'react-bootstrap/Container';
-import Header from "frontend/components/Header/Header";
-import './page_not_found.css';
-import * as CONFIG from 'root/config/config'
+import Container from "react-bootstrap/Container";
+import Header from "../../frontend/components/Header";
+import Button from "../Button/Button";
+import "./page_not_found.css";
 
+import notFoundGif from "../../frontend/assets/images/page_not_found/404.gif";
+import { Link } from "react-router-dom";
 
-const PageNotFound = ()=>{
-    return(
-        <>
-            <div className="page_not_found micro_page">
-                <Header />
-                <Container> 
-                    <img src={CONFIG.IMAGE_URL + '404.png'} alt="page not found" className="img-fluid thumbnail" />
-                </Container>
-            </div>
-        </>
-    )
-}
+const PageNotFound = () => {
+  return (
+    <>
+      <div className="page_not_found micro_page">
+        {/* <Header /> */}
 
-export default PageNotFound
+        <img
+          src={notFoundGif}
+          alt="page not found"
+          className="img-fluid thumbnail"
+        />
+
+        <Container>
+          <div className="content">
+            <h2 className="title">404</h2>
+            <h3 className="sub_title">Look like you're lost</h3>
+            <p className="para">The page you are looking for not avaible!</p>
+            <Link to="/mvn/" className="btn btn_style3">Go To Home</Link>
+          </div>
+        </Container>
+      </div>
+    </>
+  );
+};
+
+export default PageNotFound;

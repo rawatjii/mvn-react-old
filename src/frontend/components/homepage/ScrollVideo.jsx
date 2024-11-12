@@ -10,6 +10,7 @@ const ScrollVideo = () => {
   const [images, setImages] = useState([]);
   const totalFrames = 70;
   const frameRefs = useRef([]);
+  const contentRef = useRef(null);
 
   useEffect(() => {
     // Preload images
@@ -23,26 +24,32 @@ const ScrollVideo = () => {
   }, []);
 
   useEffect(() => {
-    if (images.length !== totalFrames) return ; // Wait until all images are loaded
+    if (images.length !== totalFrames) return; // Wait until all images are loaded
 
+    // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: 'top 79px',
+      start: 'top top',
       end: `+=${window.innerHeight * 2}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
-        // Calculate the exact frame based on scroll progress
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
         
-        // Update frame visibility based on calculated frame index
-        frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === frameIndex ? "block" : "none";
-        });
+        // Only start changing frames after a scroll progress threshold
+        // First condition: Only start changing frames after a scroll progress threshold
+        if (self.progress > 0.1) {
+          frameRefs.current.forEach((img, index) => {
+            if (img) img.style.display = index === frameIndex ? "block" : "none";
+          });
+        }
 
-        // images.forEach((img, index) => {
-        //   img.style.display = index === frameIndex ? 'block' : 'none';
-        // });
+        // Second condition: Handle contentRef visibility independently
+        if(self.progress > 0.3 && self.progress < 0.9){
+          contentRef.current.classList.add('active');
+        }else{
+          contentRef.current.classList.remove('active');
+        }
       },
       onLeaveBack: () => {
         // Reset to first frame when scrolling back to the start smoothly
@@ -76,6 +83,19 @@ const ScrollVideo = () => {
           style={{ display: index === 0 ? "block" : "none" }}
         />
       ))}
+
+      <div className="content" ref={contentRef}>
+        <h4 className="title">JUMEIRA BAY ISLAND</h4>
+        <p>
+          An exclusive sanctuary of peace and tranquillity, Jumeira Bay Island
+          is a vibrant tapestry of gardens, pools, and quiet boulevards, bathed
+          in the unique natural light found on this coastline. In classic
+          Bulgari style, the intricate patterns of the architectural coral
+          project soft shadows onto the black and gold Paonazzo marble. Opulent
+          Bulgari chandeliers positioned along the bay create the impression of
+          jewel-lined waters. The perfect backdrop to luxury living.
+        </p>
+      </div>
     </div>
   );
 };

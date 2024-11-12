@@ -21,6 +21,8 @@ import ContactUs from './admin/Contactus.jsx'
 import Blogs from './admin/Blogs/Index.jsx'
 import InitialLoading from './frontend/skeleton/Initial/Index.jsx'
 
+import PageNotFound from './common/PageNotFound/Index.jsx'
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
 
@@ -48,6 +50,10 @@ const router = createBrowserRouter([
       {
         path:'contact-us',
         element:<Layout><ContactPage /></Layout>
+      },
+      {
+        path:'*',
+        element:<PageNotFound />
       }
     ]
   },
