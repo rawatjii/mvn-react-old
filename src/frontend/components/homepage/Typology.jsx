@@ -38,9 +38,13 @@ const Typology = () => {
       pin: true,
       scrub: 0.2,
       onUpdate: (self) => {
-        const segmentIndex = Math.floor(self.progress * segments.length);
+        const segmentIndex = Math.min(
+          Math.floor(self.progress * segments.length),
+          segments.length - 1
+        );
         const segment = segments[segmentIndex];
-        const frameIndex = segment.startFrame + Math.floor((self.progress % (1 / segments.length)) * (segment.endFrame - segment.startFrame));
+        const segmentProgress = (self.progress - segmentIndex / segments.length) * segments.length;
+        const frameIndex = segment.startFrame + Math.floor(segmentProgress * (segment.endFrame - segment.startFrame));
 
         // Show the current frame and hide others
         frameRefs.current.forEach((img, index) => {

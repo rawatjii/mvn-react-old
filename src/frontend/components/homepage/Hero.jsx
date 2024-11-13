@@ -42,19 +42,18 @@ const Hero = ()=>{
       }
     })
 
-    gsap.to(heroRef.current, {
-      opacity: 0,   // Animation duration in seconds
-      // ease: "power2" // Easing function for a smooth effect
+    // gsap.to(heroRef.current, {
+    //   opacity: 0,   // Animation duration in seconds
+    //   // ease: "power2" // Easing function for a smooth effect
 
-      scrollTrigger:{
-        trigger: heroRef.current,
-        start: "top 0",
-        end: `+=500`,
-        scrub: true,
-        pin:true,
-        markers:true,
-      }
-    })
+    //   scrollTrigger:{
+    //     trigger: heroRef.current,
+    //     start: "top 0",
+    //     end: `+=500`,
+    //     scrub: true,
+    //     pin:true,
+    //   }
+    // })
 
   }, [])
 
@@ -68,18 +67,18 @@ const Hero = ()=>{
         
         <div className="hero_content">
           <Container>
-            <div className="logo">
+            {/* <div className="logo">
               <img src={CONFIG.IMAGE_URL + 'logo_dark.webp'} alt="mvn-logo" className='img-fluid' fetchPriority='high' />
-            </div>
+            </div> */}
             
             <div className="center">
               <h1 className="hero_title" ref={titleRef}>40+ years of delivering trust and projects on time</h1>
               <h5 className="hero_desc" ref={desRef}>MVN Group is one of the best entities focused on Education and Real Estate. As per The Hindustan Times-C Fore Top Schools Survey, the leading newspaper of India, MVN is known as the first educational group to be Ranked no.1 for Eight years in Academic Performance.</h5>
             </div>
 
-            <div className="bottom">
+            {/* <div className="bottom">
               <small>Scroll Down</small>
-            </div>
+            </div> */}
 
           </Container>
         </div>

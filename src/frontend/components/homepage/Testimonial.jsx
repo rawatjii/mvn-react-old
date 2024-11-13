@@ -11,6 +11,9 @@ import 'swiper/css';
 
 import quoteIcon from '../../assets/images/icons/quote.svg';
 import testiImg1 from '../../assets/images/testimonials/naina.png';
+import testiImg2 from '../../assets/images/testimonials/prabhat.png';
+import testiImg3 from '../../assets/images/testimonials/prashant.png';
+import testiImg4 from '../../assets/images/testimonials/vikas.png';
 import LazyLoad from "react-lazyload";
 
 
@@ -22,28 +25,22 @@ const testimonialData = [
      name:'~Naina Singhal',
   },
   { 
-    image:testiImg1,
+    image:testiImg2,
     title:'A sense of community',
     msg:'MVN Athens is a beautiful society and, in all probability, the best in Sohna. The atmosphere over here is awesome and it simply feels great to be a part of this thriving community.',
     name:'~Prabhat Mainik',
   },
   { 
-    image:testiImg1,
+    image:testiImg3,
     title:'A heavenly experience',
     msg:'My family and I will always be thankful to everyone at MVN who helped us create our dream home. It was a wonderful experience and we would highly recommend the MVN Athens project if you really are looking to experience heaven on earth!',
     name:'~Prashant Kumar Singh',
   },
   { 
-    image:testiImg1,
+    image:testiImg4,
     title:'A heartening experience',
     msg:'It was our dream to have a home of our own. Today, we are happy to come home to a great environment, created with so much thoughtfulness and dedication. MVN ensured that everything was on schedule.',
     name:'~Vikas Singhal',
-  },
-  { 
-    image:testiImg1,
-    title:'A rewarding journey',
-    msg:'I want to thank MVN for the amazing work they have done! My family is really enjoying living in our new home. We feel like we have climbed a mountain together, and now we stand at the mountain top, only because of the MVN team.',
-    name:'~Sarvesh Mishra',
   }
 ]
 

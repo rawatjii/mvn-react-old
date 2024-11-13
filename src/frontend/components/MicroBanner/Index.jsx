@@ -5,12 +5,12 @@ import './microBanner.css';
 
 import bannerBg from '../../assets/images/hero/hero_img.webp'
 
-const MicroBanner = ()=>{
+const MicroBanner = ({bg})=>{
   return(
     <section className="section micro_banner">
       <Container>
         <LazyLoad>
-          <img src={bannerBg} alt="mvn-microbanner-bg" className="img-fluid microbanner_bg" />
+          <img src={bg} alt="mvn-microbanner-bg" className="img-fluid microbanner_bg" />
         </LazyLoad>
         <h2 className="microTitle">About Us</h2>
         <Breadcrumb>

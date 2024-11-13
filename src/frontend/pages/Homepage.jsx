@@ -10,6 +10,7 @@ const Enquire = React.lazy(()=>import('../components/homepage/Enquire'))
 const EnquireForm = React.lazy(()=>import('../components/homepage/EnquireForm'))
 const ScrollVideo = React.lazy(()=>import('../components/homepage/ScrollVideo'));
 const Typology = React.lazy(()=>import('../components/homepage/Typology'));
+const Overview = React.lazy(()=>import('../components/homepage/Overview'));
 
 import { Suspense } from "react";
 
@@ -18,13 +19,17 @@ const Homepage = ()=>{
     <>
       <Hero />
 
-      <Suspense fallback="Loading">
+      {/* <Suspense fallback="Loading">
         <ScrollVideo />
-      </Suspense>
+      </Suspense> */}
 
-      <Suspense fallback="Loading">
+      {/* <Suspense fallback="Loading">
         <Typology />
-      </Suspense>
+      </Suspense> */}
+
+      {/* <Suspense fallback="Loading">
+        <Overview />
+      </Suspense> */}
 
       <Suspense fallback="Loading">
         <Projects />
