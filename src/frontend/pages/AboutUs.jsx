@@ -4,10 +4,12 @@ import AboutOverview from '../components/About/Overview';
 import Philosophy from "../components/About/Philosophy";
 import Timeline from "../components/About/Timeline";
 
+import micro_bg from '../assets/images/about/micro_bg.jpg'
+
 const AboutUs = ()=>{
   return(
     <>
-      <MicroBanner />
+      <MicroBanner bg={micro_bg} />
       <div className="micro_content">
         <div className="micro_data">
           <AboutOverview />
