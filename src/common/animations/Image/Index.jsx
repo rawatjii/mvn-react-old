@@ -2,9 +2,9 @@ import React, { forwardRef } from "react";
 
 import './image.css'
 
-const AnImage = forwardRef(({height, children}, ref)=>{
+const AnImage = forwardRef(({className, height, children}, ref)=>{
   return(
-    <div ref={ref} className="an_img" style={height ? {height:'100%'} : null}>
+    <div ref={ref} className={`an_img ${className}`} style={height ? {height:'100%'} : null}>
       {children}
     </div>
   )

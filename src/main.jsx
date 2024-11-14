@@ -49,7 +49,10 @@ const router = createBrowserRouter([
       },
       {
         path:'contact-us',
-        element:<Layout><ContactPage /></Layout>
+        element:
+        <Suspense fallback={<InitialLoading />}>
+          <Layout><ContactPage /></Layout>
+        </Suspense>
       },
       {
         path:'*',

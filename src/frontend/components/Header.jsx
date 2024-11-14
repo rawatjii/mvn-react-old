@@ -65,9 +65,11 @@ const Header = ()=>{
     <>
       <Navbar expand="false" className={`${scrolled ? 'fixed':''}`}> 
         <Container>
-          <Navbar.Brand ref={logoRef} to="/" className="logo">
-            <img src={CONFIG.IMAGE_URL + 'logo_dark.webp'} alt="mvn-logo" className='img-fluid d-none d-md-block' fetchPriority='high' />
-            <img src={CONFIG.IMAGE_URL + 'logo_white.webp'} alt="mvn-logo" className='img-fluid d-md-none' fetchPriority='high' />
+          <Navbar.Brand ref={logoRef}  className="logo">
+            <Link to="/mvn/" onClick={()=>toggleMenu('close')}>
+              <img src={CONFIG.IMAGE_URL + 'logo_dark.webp'} alt="mvn-logo" className='img-fluid d-none d-md-block' fetchpriority='high' />
+              <img src={CONFIG.IMAGE_URL + 'logo_white.webp'} alt="mvn-logo" className='img-fluid d-md-none' fetchpriority='high' />
+            </Link>
           </Navbar.Brand>
 
           <Navbar.Toggle ref={toggleRef} aria-controls="basic-navbar-nav" onClick={()=>toggleMenu('show')} />
@@ -75,8 +77,10 @@ const Header = ()=>{
           <div id="basic-navbar-nav" className='navbar_collapse' ref={menusRef}>
             <Container>
               <div className="header">
-                <Navbar.Brand to="/" className="logo">
-                  <img src={CONFIG.IMAGE_URL + 'logo.png'} alt="mvn-logo" className='img-fluid' fetchPriority='high' />
+                <Navbar.Brand className="logo">
+                  <Link to="/mvn/" onClick={()=>toggleMenu('close')}>
+                    <img src={CONFIG.IMAGE_URL + 'logo.png'} alt="mvn-logo" className='img-fluid' fetchpriority='high' />
+                  </Link>
                 </Navbar.Brand>
 
                 <span className='close' onClick={()=>toggleMenu('close')}>&times;</span>
@@ -84,11 +88,11 @@ const Header = ()=>{
 
               <ul className="menus">
                 <li className='nav-link'>
-                  <NavLink>Home</NavLink>
+                  <NavLink to="/mvn/" onClick={()=>toggleMenu('close')}>Home</NavLink>
                 </li>
 
                 <li className='nav-link'>
-                  <NavLink to='about-us' onClick={()=>toggleMenu('close')}>About Us</NavLink>
+                  <NavLink to='/mvn/about-us' onClick={()=>toggleMenu('close')}>About Us</NavLink>
                 </li>
 
                 <li className='nav-link'>

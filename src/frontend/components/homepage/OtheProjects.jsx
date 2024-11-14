@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 
@@ -35,39 +35,53 @@ gsap.registerPlugin(ScrollTrigger);
 const OtherProjects = ()=>{
   const titleRef = useRef();
   const imageDivRefs = useRef([])
+  const [imagesLoaded, setImagesLoaded] = useState(0);
+
+  const initializeAnimations = () => {
+    if(otherProjects.length > 0){
+      gsap.from(titleRef.current, {
+        y: 50,  
+        opacity: 0,
+        duration: 1, 
+  
+        scrollTrigger:{
+          trigger: titleRef.current,
+          start: "top 95%",
+        }
+      })
+  
+      imageDivRefs.current.forEach((imagediv, index)=>{
+        if(imagediv){
+          gsap.to(imagediv, {
+            scrollTrigger: {
+              trigger: imagediv,
+              start: "top 95%", // When the top of the element reaches 80% of the viewport
+              onEnter: () => imagediv.classList.add('active'),
+              once: true, // Ensures the animation only happens once
+            }
+          });
+        }
+      })
+    }
+  }
 
   useEffect(()=>{
-    const ctx = gsap.context(()=>{
-      if(otherProjects.length > 0){
-        gsap.from(titleRef.current, {
-          y: 50,  
-          opacity: 0,
-          duration: 1, 
-    
-          scrollTrigger:{
-            trigger: titleRef.current,
-            start: "top 95%",
-          }
-        })
-    
-        imageDivRefs.current.forEach((imagediv, index)=>{
-          if(imagediv){
-            gsap.to(imagediv, {
-              scrollTrigger: {
-                trigger: imagediv,
-                start: "top 95%", // When the top of the element reaches 80% of the viewport
-                onEnter: () => imagediv.classList.add('active'),
-                once: true, // Ensures the animation only happens once
-              }
-            });
-          }
-        })
+      if(imagesLoaded === otherProjects.length){
+        setTimeout(()=>{
+          initializeAnimations();
+          ScrollTrigger.refresh();
+        }, 300)
       }
-    }, imageDivRefs)
 
-    return ()=>ctx.revert();
+      // Refresh ScrollTrigger on resize
+      window.addEventListener("resize", ScrollTrigger.refresh);
+      return () => window.removeEventListener("resize", ScrollTrigger.refresh);
     
-  }, [otherProjects])
+  }, [imagesLoaded])
+
+  const handleImageLoad = () => {
+    setImagesLoaded((prev) => prev + 1);
+  };
 
   return(
     <section className="section other_projects_section pb-0">
@@ -87,7 +101,7 @@ const OtherProjects = ()=>{
                   </Link>
                 </div>
                 <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
-                  <img src={item.thumbnail} alt="" className="img-fluid" />
+                  <img src={item.thumbnail} alt="" className="img-fluid" onLoad={handleImageLoad} />
                 </AnImage>
               </div>
             </Col>

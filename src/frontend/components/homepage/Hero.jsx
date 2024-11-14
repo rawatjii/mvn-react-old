@@ -61,14 +61,14 @@ const Hero = ()=>{
     <>
       <section ref={heroRef} className="section hero_section p-0">
         <div className="hero-img">
-          <img src={hero_img} alt="mvn-hero-image" className="img-fluid d-none d-md-block" fetchPriority="high" />
-          <img src={hero_img_sm} alt="mvn-hero-image" className="img-fluid d-md-none" fetchPriority="high" />
+          <img src={hero_img} alt="mvn-hero-image" className="img-fluid d-none d-md-block" fetchpriority="high" />
+          <img src={hero_img_sm} alt="mvn-hero-image" className="img-fluid d-md-none" fetchpriority="high" />
         </div>
         
         <div className="hero_content">
           <Container>
             {/* <div className="logo">
-              <img src={CONFIG.IMAGE_URL + 'logo_dark.webp'} alt="mvn-logo" className='img-fluid' fetchPriority='high' />
+              <img src={CONFIG.IMAGE_URL + 'logo_dark.webp'} alt="mvn-logo" className='img-fluid' fetchpriority='high' />
             </div> */}
             
             <div className="center">

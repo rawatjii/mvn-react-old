@@ -16,36 +16,44 @@ const OurTeam = ()=>{
   const contentRef = useRef();
 
   useEffect(()=>{
-    gsap.from(titleRef.current, {
-      y: 50,  
-      opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
-        trigger: titleRef.current,
-        start: "top 95%",
-      }
+    const ctx = gsap.context(()=>{
+      gsap.from(titleRef.current, {
+        y: 50,  
+        opacity: 0,
+        duration: 1, 
+  
+        scrollTrigger:{
+          trigger: titleRef.current,
+          start: "top 95%",
+        }
+      })
+  
+      gsap.from(contentRef.current, {
+        y: 50,  
+        opacity: 0,
+        duration: 1, 
+  
+        scrollTrigger:{
+          trigger: contentRef.current,
+          start: "top 95%",
+        }
+      })
+  
+      gsap.to(imageRef.current, {
+        scrollTrigger:{
+          trigger: imageRef.current,
+          start: "top 95%",
+          onEnter: () => {
+            if(imageRef.current){
+              imageRef.current.classList.add('active')
+            }
+          },
+          once: true, // Ensures the animation only happens once
+        }
+      })
     })
 
-    gsap.from(contentRef.current, {
-      y: 50,  
-      opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
-        trigger: contentRef.current,
-        start: "top 95%",
-      }
-    })
-
-    gsap.to(imageRef.current, {
-      scrollTrigger:{
-        trigger: imageRef.current,
-        start: "top 95%",
-        onEnter: () => imageRef.current.classList.add('active'),
-        once: true, // Ensures the animation only happens once
-      }
-    })
+    return ()=>ctx.revert();
   }, [])
 
   return(

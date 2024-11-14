@@ -52,27 +52,31 @@ const Testimonial = ()=>{
   const contentRef = useRef();
 
   useEffect(()=>{
-    gsap.from(titleRef.current, {
-      y: 50,  
-      opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
-        trigger: titleRef.current,
-        start: "top 95%",
-      }
+    const ctx = gsap.context(()=>{
+      gsap.from(titleRef.current, {
+        y: 50,  
+        opacity: 0,
+        duration: 1, 
+  
+        scrollTrigger:{
+          trigger: titleRef.current,
+          start: "top 95%",
+        }
+      })
+  
+      gsap.from(contentRef.current, {
+        y: 50,  
+        opacity: 0,
+        duration: 1, 
+  
+        scrollTrigger:{
+          trigger: contentRef.current,
+          start: "top 95%",
+        }
+      })
     })
 
-    gsap.from(contentRef.current, {
-      y: 50,  
-      opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
-        trigger: contentRef.current,
-        start: "top 95%",
-      }
-    })
+    return()=>ctx.revert();
 
   }, [])
 

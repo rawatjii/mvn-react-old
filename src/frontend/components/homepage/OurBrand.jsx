@@ -37,32 +37,36 @@ const OurBrand = ()=>{
   const dataRefs = useRef([]);
   
   useEffect(()=>{
-
-    gsap.from(titleRef.current, {
-      y: 50,  
-      opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
-        trigger: titleRef.current,
-        start: "top 95%",
-      }
+    const ctx = gsap.context(()=>{
+      gsap.from(titleRef.current, {
+        y: 50,  
+        opacity: 0,
+        duration: 1, 
+  
+        scrollTrigger:{
+          trigger: titleRef.current,
+          start: "top 95%",
+        }
+      })
+  
+      dataRefs.current.forEach((singleRef, index)=>{
+        if(singleRef){
+          gsap.from(singleRef, {
+            y: 20,  
+            opacity: 0,
+            duration: 0.6,
+  
+            scrollTrigger: {
+              trigger: singleRef,
+              start: "top 95%", // When the top of the element reaches 80% of the viewport
+            }
+          });
+        }
+      })
     })
+    
+    return ()=>ctx.revert();
 
-    dataRefs.current.forEach((singleRef, index)=>{
-      if(singleRef){
-        gsap.from(singleRef, {
-          y: 20,  
-          opacity: 0,
-          duration: 0.6,
-
-          scrollTrigger: {
-            trigger: singleRef,
-            start: "top 95%", // When the top of the element reaches 80% of the viewport
-          }
-        });
-      }
-    })
   }, [])
 
   return(

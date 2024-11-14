@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
@@ -6,8 +6,6 @@ import Button from '../../../common/Button/Button'
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import AnImage from "../../../common/animations/Image/Index";
-
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 import mvnMallImg from '../../assets/images/projects/mvn-mall.webp';
 import mvnAerooneImg from '../../assets/images/projects/mvn-aeroone.webp';
@@ -43,40 +41,50 @@ const projectsData = [
 const Projects = () => {
   const imageDivRefs = useRef([]);
   const titleRef = useRef();
+  const [imagesLoaded, setImagesLoaded] = useState(0);
 
-  useEffect(()=>{
-    const ctx = gsap.context(()=>{
-      if(projectsData.length > 0){
-        gsap.from(titleRef.current, {
-          y: 50,  
-          opacity: 0,
-          duration: 1, 
-    
-          scrollTrigger:{
-            trigger: titleRef.current,
+  const initializeAnimations = () => {
+    gsap.from(titleRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+      scrollTrigger: {
+        trigger: titleRef.current,
+        start: "top 95%",
+        once: true,
+      },
+    });
+
+    imageDivRefs.current.forEach((imagediv) => {
+      if (imagediv) {
+        gsap.to(imagediv, {
+          scrollTrigger: {
+            trigger: imagediv,
             start: "top 95%",
             once: true,
-          }
-        })
-    
-        imageDivRefs.current.forEach((imagediv, index) => {
-          if (imagediv) {
-            gsap.to(imagediv, {
-              scrollTrigger: {
-                trigger: imagediv,
-                start: "top 95%", 
-                once: true,
-                onEnter: () => imagediv.classList.add('active'),
-              },
-              clearProps: 'all',
-            });
-          }
-        })
+            onEnter: () => imagediv.classList.add('active'),
+          },
+          clearProps: 'all',
+        });
       }
-    }, imageDivRefs)
+    });
+  };
 
-    return ()=>ctx.revert();
-  }, [projectsData]);
+  useEffect(() => {
+    if (imagesLoaded === projectsData.length) {
+      setTimeout(() => {
+        initializeAnimations();
+        ScrollTrigger.refresh();
+      }, 300);
+    }
+
+    window.addEventListener("resize", ScrollTrigger.refresh);
+    return () => window.removeEventListener("resize", ScrollTrigger.refresh);
+  }, [imagesLoaded]);
+
+  const handleImageLoad = () => {
+    setImagesLoaded((prev) => prev + 1);
+  };
 
   return (
     <section className="section projects_section pb-0">
@@ -91,7 +99,7 @@ const Projects = () => {
                   <h3 className="sec_title">Explore <span>Our Projects</span></h3>
                   <div className="single">
                   <AnImage key={index} ref={(el) => (imageDivRefs.current[index] = el)} height={100} >
-                      <img src={item.feature_image} alt={item.name} className="img-fluid thumbnail" />
+                      <img src={item.feature_image} alt={item.name} className="img-fluid thumbnail" onLoad={handleImageLoad} />
                     </AnImage>
                     <div className="content">
                       <div className="left">
@@ -118,8 +126,8 @@ const Projects = () => {
                 if(index > 0){
                   return (
                     <div key={index} className="single">
-                      <AnImage ref={(el) => (imageDivRefs.current[index] = el)} height={100} >
-                        <img src={item.feature_image} alt={item.name} className="img-fluid thumbnail" />
+                      <AnImage ref={(el) => (imageDivRefs.current[index] = el)} height={100} > 
+                        <img src={item.feature_image} alt={item.name} className="img-fluid thumbnail" onLoad={handleImageLoad} />
                       </AnImage>
                       <div className="content">
                         <div className="left">
