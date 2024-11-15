@@ -3,13 +3,15 @@ import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination } from 'swiper/modules';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 // Import Swiper styles
 import 'swiper/css';
+import 'swiper/css/pagination';
 
-import quoteIcon from '../../assets/images/icons/quote.svg';
+import quoteIcon from '../../assets/images/icons/quote.png';
 import testiImg1 from '../../assets/images/testimonials/naina.png';
 import testiImg2 from '../../assets/images/testimonials/prabhat.png';
 import testiImg3 from '../../assets/images/testimonials/prashant.png';
@@ -94,22 +96,24 @@ const Testimonial = ()=>{
           className="testimonial_carousel"
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
+          pagination={true}
+          modules={[Pagination]}
         >
           {testimonialData.map((item, index)=>(
             <SwiperSlide key={index}>
               <div className="single">
-                <div className="image">
+                {/* <div className="image">
                   <LazyLoad>
                     <img src={item.image} alt="mvn user image" className="img-fluid user_image" />
                   </LazyLoad>
-                </div>
+                </div> */}
 
                 <div className="content">
                   <img src={quoteIcon} alt="mvn quotes icon" className="img-fluid quote_icon" />
                   <h4 className="title">{item.title}</h4>
                   <p className="msg">{item.msg}</p>
 
-                  <h4 className="name">{item.name}</h4>
+                  {/* <h4 className="name">{item.name}</h4> */}
                 </div>
               </div>
             </SwiperSlide>

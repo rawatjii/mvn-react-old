@@ -7,6 +7,7 @@ import * as CONFIG from 'root/config/config'
 
 import hero_img from '../../../frontend/assets/images/hero/hero_img.webp';
 import hero_img_sm from '../../../frontend/assets/images/hero/hero_img_sm.webp';
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -14,6 +15,7 @@ const Hero = ()=>{
   const titleRef = useRef();
   const desRef = useRef();
   const heroRef = useRef();
+  const btnRef = useRef();
 
   useEffect(()=>{
     // logo animation
@@ -42,18 +44,16 @@ const Hero = ()=>{
       }
     })
 
-    // gsap.to(heroRef.current, {
-    //   opacity: 0,   // Animation duration in seconds
-    //   // ease: "power2" // Easing function for a smooth effect
+    gsap.from(btnRef.current, {
+      y: 50,  
+      opacity: 0,
+      duration: 1, 
 
-    //   scrollTrigger:{
-    //     trigger: heroRef.current,
-    //     start: "top 0",
-    //     end: `+=500`,
-    //     scrub: true,
-    //     pin:true,
-    //   }
-    // })
+      scrollTrigger:{
+        trigger: btnRef.current,
+        start: "top 95%",
+      }
+    })
 
   }, [])
 
@@ -73,7 +73,9 @@ const Hero = ()=>{
             
             <div className="center">
               <h1 className="hero_title" ref={titleRef}>40+ years of delivering trust and projects on time</h1>
-              <h5 className="hero_desc" ref={desRef}>MVN Group is one of the best entities focused on Education and Real Estate. As per The Hindustan Times-C Fore Top Schools Survey, the leading newspaper of India, MVN is known as the first educational group to be Ranked no.1 for Eight years in Academic Performance.</h5>
+              <h4 className="hero_desc" ref={desRef}>MVN Group is one of the best entities focused on Education and Real Estate. As per The Hindustan Times-C Fore Top Schools Survey, the leading newspaper of India, MVN is known as the first educational group to be Ranked no.1 for Eight years in Academic Performance.</h4>
+
+              <Link to={`${import.meta.env.VITE_APP_URL}about-us`} ref={btnRef} className="btn btn_style2">Know More</Link>
             </div>
 
             {/* <div className="bottom">

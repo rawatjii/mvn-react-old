@@ -6,7 +6,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import LazyLoad from "react-lazyload";
 
 import bg from '../../assets/images/about/building_bg.png';
-import about_img from '../../assets/images/about/about_img.png';
+import about_img from '../../assets/images/about/about_img.webp';
 import AnImage from "../../../common/animations/Image/Index";
 
 gsap.registerPlugin(ScrollTrigger);
