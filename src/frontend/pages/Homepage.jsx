@@ -13,15 +13,16 @@ const Typology = React.lazy(()=>import('../components/homepage/Typology'));
 const Overview = React.lazy(()=>import('../components/homepage/Overview'));
 
 import { Suspense } from "react";
+import TestOverview from "../components/homepage/TestOverview";
 
 const Homepage = ()=>{  
   return(
     <>
       <Hero />
 
-      {/* <Suspense fallback="Loading">
+      <Suspense fallback="Loading">
         <ScrollVideo />
-      </Suspense> */}
+      </Suspense>
 
       {/* <Suspense fallback="Loading">
         <Typology />
@@ -30,6 +31,8 @@ const Homepage = ()=>{
       {/* <Suspense fallback="Loading">
         <Overview />
       </Suspense> */}
+
+      {/* <TestOverview /> */}
 
         <Projects />
 

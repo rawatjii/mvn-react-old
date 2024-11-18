@@ -8,6 +8,7 @@ import store from './store/store.js'
 import Layout from './frontend/components/Layout.jsx';
 const Homepage = React.lazy(()=>import('./frontend/pages/Homepage.jsx'));
 const AboutUs = React.lazy(()=>import('./frontend/pages/AboutUs.jsx'));
+const MicroPage = React.lazy(()=>import('./frontend/pages/Micro.jsx'));
 const ContactPage = React.lazy(()=>import('./frontend/pages/ContactUs.jsx'));
 
 // admin
@@ -44,6 +45,15 @@ const router = createBrowserRouter([
         <Suspense fallback={<InitialLoading />}>
           <Layout>
             <AboutUs />
+          </Layout>
+        </Suspense>
+      },
+      {
+        path:'micro',
+        element:
+        <Suspense fallback={<InitialLoading />}>
+          <Layout>
+            <MicroPage />
           </Layout>
         </Suspense>
       },
