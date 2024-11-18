@@ -8,13 +8,13 @@ gsap.registerPlugin(ScrollTrigger);
 const PeacockSection = () => {
   const containerRef = useRef(null);
   const [images, setImages] = useState([]);
-  const totalFrames = 120;
+  const totalFrames = 183;
   const frameRefs = useRef([]);
 
   useEffect(() => {
     // Preload images
     const loadedImages = [];
-    for (let i = 1; i <= 120; i++) {
+    for (let i = 1; i <= 183; i++) {
       const img = new Image();
       img.src = `assets/images/peacock/${i}.jpg`; // Update with the correct path for your frames
       loadedImages.push(img);
