@@ -15,6 +15,7 @@ import Video3 from "../components/MicroPage/Video3";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
 
 const MicroPage = ({ data }) => {  
+console.log(data.masterBedroom);
 
   return (
     <>
@@ -24,7 +25,7 @@ const MicroPage = ({ data }) => {
         {data.video1.isVdo === true && <PeacockSection data={data} />}
         {data.video2.isVdo === true && <Video2 data={data} />}
         {data.video3.isVdo === true && <Video3 data={data} />}
-        {data.video3.isVdo === true && <MasterBedroom data={data} />}
+        {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
