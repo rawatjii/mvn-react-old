@@ -7,7 +7,7 @@ import SecTitle from "../../../common/SecTitle/Index";
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const PeacockSection = ({data}) => {
+const Video3 = ({data}) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
@@ -82,7 +82,7 @@ const PeacockSection = ({data}) => {
 
   }, [images, totalFrames]);
 
-  const {title, desc} = data.video1
+  const {title, desc} = data.video3
 
   return (
     <div className="section peacock_section pb-0">
@@ -113,4 +113,4 @@ const PeacockSection = ({data}) => {
   );
 };
 
-export default PeacockSection;
+export default Video3;

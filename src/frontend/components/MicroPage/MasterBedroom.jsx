@@ -4,10 +4,12 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 
+import diamondIcon from '../../assets/images/icons/diamond_light.png'
+
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const PeacockSection = ({data}) => {
+const MasterBedroom = ({data}) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
@@ -82,10 +84,10 @@ const PeacockSection = ({data}) => {
 
   }, [images, totalFrames]);
 
-  const {title, desc} = data.video1
+  const {title, desc} = data.masterBedroom
 
   return (
-    <div className="section peacock_section pb-0">
+    <div className="section master_bedroom_section pb-0">
       <div ref={containerRef} className="frames_content">
         {images.map((img, index) => (
           <img
@@ -99,18 +101,24 @@ const PeacockSection = ({data}) => {
         ))}
       </div>
 
-      <div className="content">
-        <Container>
-          <SecTitle className="text-center color style1">
-            <h4 ref={titleRef} className="title">{title}</h4>
-          </SecTitle>
-
-          {desc && <p className="desc">{desc}</p>}
-          
-        </Container>
+      <div className="divider">
+        <img src={diamondIcon} alt="mvn-diamond-icon" className="img-fluid icon" />
+        <img src={diamondIcon} alt="mvn-diamond-icon" className="img-fluid icon" />
+        <img src={diamondIcon} alt="mvn-diamond-icon" className="img-fluid icon" />
       </div>
+
+      <Container>
+        <div className="content">
+            <SecTitle className="text-center color style1">
+              <h4 ref={titleRef} className="title">{title}</h4>
+            </SecTitle>
+
+            {desc && <p className="desc">{desc}</p>}
+            
+        </div>
+      </Container>
     </div>
   );
 };
 
-export default PeacockSection;
+export default MasterBedroom;

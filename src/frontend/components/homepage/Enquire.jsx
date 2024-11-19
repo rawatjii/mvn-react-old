@@ -64,7 +64,7 @@ const Enquire = ()=>{
 
         <p ref={contentRef}>Every query gets answered. You got questions, We got answers.</p>
 
-        <Link ref={btnRef} className="btn btn_style2">Know More</Link>
+        {/* <Link ref={btnRef} className="btn btn_style2">Know More</Link> */}
       </Container>
     </section>
   )

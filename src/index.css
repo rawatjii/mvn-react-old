@@ -339,6 +339,7 @@ a{
     .title{
       color:var(--theme_primary_color);
       font-size: 18px;
+      line-height: 30px;
       letter-spacing: 1px;
       margin:0;
       
@@ -1214,7 +1215,7 @@ a{
     max-width: 70%;
     margin: auto;
     line-height: 20px;
-    margin-bottom: 24px;
+    margin-bottom: 0px;
     font-size: 14px;
   }
 
@@ -2282,6 +2283,50 @@ footer{
         visibility: visible;
       }
     } */
+  }
+
+  /* master_bedroom_section */
+
+  .master_bedroom_section{
+
+    .frames_content{
+      height: 100vh;
+
+      img{
+        height: 100%;
+        object-fit: cover;
+        width: 100%;
+      }
+    }
+
+    .divider{
+      padding: 20px 0;
+      text-align: center;
+
+      .icon{
+        width: 17px;
+        margin: 0 4px;
+      }
+    }
+
+    .content{
+
+      background:var(--color2);
+      padding: 30px 20px;
+
+      .title{
+
+        margin-bottom:20px;
+      }
+
+      .desc{
+
+        text-align: center;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin: 0;
+      }
+    }
   }
 
 
