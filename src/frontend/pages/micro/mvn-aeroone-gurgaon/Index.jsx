@@ -29,6 +29,7 @@ const data = {
   masterBedroom: {
     title: "MASTER BEDROOM",
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
+    isVdo: false
   },
 };
 
