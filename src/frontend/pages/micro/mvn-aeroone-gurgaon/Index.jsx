@@ -23,6 +23,17 @@ const data = {
   masterBedroom:{
     title:'MASTER BEDROOM',
     desc:'If You Think You Know What Lavishness Means It\'s Time You Got A New Perspective',
+  },
+  highlights:[
+    'Power backup for common facilities.',
+    'Italian/Imported Marble flooring.',
+    'Television points in living and bedrooms.',
+    'Telephone points in living and master bedroom.',
+    'Split AC provision in living and bedrooms.',
+    'Premium emulsion paint finish.'
+  ],
+  walkthrough:{
+    desc:'IF YOU THINK YOU\'VE EXPERIENCED TRUE LUXURY IT\'S TIME TO RAISE YOUR EXPECTATION',
   }
 }
 

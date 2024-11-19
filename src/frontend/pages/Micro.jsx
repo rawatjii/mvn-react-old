@@ -13,6 +13,7 @@ import PeacockSection from "../components/MicroPage/PeacockSection";
 import Video2 from "../components/MicroPage/Video2";
 import Video3 from "../components/MicroPage/Video3";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
+import Walkthrough from "../components/MicroPage/Walkthrough";
 
 
 
@@ -26,7 +27,8 @@ const MicroPage = ({data})=>{
         <Video2  data={data} />
         <Video3  data={data} />
         <MasterBedroom data={data} />
-        <MicroHighlights />
+        <Walkthrough data={data} />
+        <MicroHighlights data={data} />
         <MicroPrice />
         <MicroAmenities />
         <MicroMasterPlan />
