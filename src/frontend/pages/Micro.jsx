@@ -11,12 +11,14 @@ import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import PeacockSection from "../components/MicroPage/PeacockSection";
 
-const MicroPage = ()=>{
+
+
+const MicroPage = ({data})=>{
   return(
     <>
       <Suspense fallback={<p>Loading...</p>}>
-        <MicroHero />
-        <MicroOverview />
+        <MicroHero data={data} />
+        <MicroOverview data={data} />
         <PeacockSection />
         <MicroHighlights />
         <MicroPrice />
