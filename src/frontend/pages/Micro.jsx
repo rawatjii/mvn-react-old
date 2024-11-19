@@ -14,29 +14,17 @@ import Video2 from "../components/MicroPage/Video2";
 import Video3 from "../components/MicroPage/Video3";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
 
-
-
-const MicroPage = ({ data }) => {
-  console.log('data vdo', data.video1);
+const MicroPage = ({ data }) => {  
 
   return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
         <MicroHero data={data} />
         <MicroOverview data={data} />
-        {
-          data.video1.isVdo === true &&
-          <PeacockSection data={data} />
-        }
-        {
-          data.video2.isVdo === true &&
-          <Video2 data={data} />
-        }
-        {
-          data.video3.isVdo === true &&
-          <Video3 data={data} />
-        }
-        <MasterBedroom data={data} />
+        {data.video1.isVdo === true && <PeacockSection data={data} />}
+        {data.video2.isVdo === true && <Video2 data={data} />}
+        {data.video3.isVdo === true && <Video3 data={data} />}
+        {data.video3.isVdo === true && <MasterBedroom data={data} />}
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
@@ -51,24 +39,20 @@ const MicroPage = ({ data }) => {
           </div>
         </div>
 
-
-
         <MicroLocationMap />
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-6 px-0">
-            <Enquire />
+              <Enquire />
             </div>
             <div className="col-sm-6 px-0">
-            <EnquireForm />
+              <EnquireForm />
             </div>
           </div>
         </div>
-        
-        
       </Suspense>
     </>
-  )
-}
+  );
+};
 
-export default MicroPage
+export default MicroPage;
