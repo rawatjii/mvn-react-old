@@ -1,16 +1,22 @@
 import React from "react";
 import Container from 'react-bootstrap/Container';
 import LazyLoad from 'react-lazyload';
+// import hero_img from '../../../frontend/assets/images/micro_hero/hero_img.webp'
 
-import hero_img from '../../../frontend/assets/images/micro_hero/hero_img.webp'
+const MicroHero = ({ data }) => {
+  console.log(data.micro_hero_section);
 
-const MicroHero = ()=>{
-  return(
+  return (
     <>
       <section className="section micro_hero_section p-0">
-        <div className="hero-img">
-            <img src={hero_img} alt="mvn-hero-image" className="img-fluid" fetchPriority="high" />
-        </div>
+        {
+          data.micro_hero_section && Array.isArray(data.micro_hero_section) && data.micro_hero_section.map((imgs, index) => (
+            <div key={index} className="hero-img">
+              <img src={imgs.imgDesk} alt={`mvn-hero-image-${index}`} className="img-fluid d_lg_block" fetchPriority="high" />
+              <img src={imgs.imgMb} alt={`mvn-hero-image-sm-${index}`} className="img-fluid d_sm_block" fetchPriority="high" />
+            </div>
+          ))
+        }
 
         {/* <div className="hero_content">
           <Container>
@@ -23,7 +29,7 @@ const MicroHero = ()=>{
             </div>
           </Container>
         </div> */}
-        
+
       </section>
     </>
   )
