@@ -339,6 +339,7 @@ a{
     .title{
       color:var(--theme_primary_color);
       font-size: 18px;
+      line-height: 30px;
       letter-spacing: 1px;
       margin:0;
       

@@ -10,6 +10,8 @@ import MicroLocationMap from "../components/MicroPage/LocationMap";
 import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import PeacockSection from "../components/MicroPage/PeacockSection";
+import Video2 from "../components/MicroPage/Video2";
+import Video3 from "../components/MicroPage/Video3";
 
 
 
@@ -19,7 +21,9 @@ const MicroPage = ({data})=>{
       <Suspense fallback={<p>Loading...</p>}>
         <MicroHero data={data} />
         <MicroOverview data={data} />
-        <PeacockSection />
+        <PeacockSection data={data} />
+        <Video2  data={data} />
+        <Video3  data={data} />
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
