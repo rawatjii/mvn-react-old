@@ -4,7 +4,8 @@ import LazyLoad from 'react-lazyload';
 // import hero_img from '../../../frontend/assets/images/micro_hero/hero_img.webp'
 
 const MicroHero = ({ data }) => {
-  console.log(data.micro_hero_section);
+  console.log(data.bannerHighLight);
+
 
   return (
     <>
@@ -16,6 +17,19 @@ const MicroHero = ({ data }) => {
               <img src={imgs.imgMb} alt={`mvn-hero-image-sm-${index}`} className="img-fluid d_sm_block" fetchPriority="high" />
             </div>
           ))
+        }
+        {
+          data.bannerHighLight &&  <div className="hero_content">
+          <Container>
+            <div className="content">
+              <h5 className="starting_price">
+                <small>Starting At</small>
+                ₹ 4.51 Cr*
+              </h5>
+              <p className="typo">2 & 3 BHK Luxury Apartments</p>
+            </div>
+          </Container>
+        </div>
         }
 
         {/* <div className="hero_content">
