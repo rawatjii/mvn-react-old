@@ -6,10 +6,10 @@ import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_im
 const data = {
   micro_hero_section: [{ imgMb: hero_img_mb, imgDesk: hero_img_desk }],
   overview: {
-    title: "MVN Aero One",
-    location: "Gurgaon",
-    extra: "ASCEND TO THE PINNACLE OF SOPHISTICATION",
-    desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
+    title: "MVN AERO ONE",
+    location: "BANGALORE",
+    extra: "At MVN, we are fired by an indomitable will to shape the future. We commenced our corporate journey in 1983 and have since evolved into a contemporary business entity with interests in education and real estate.",
+    desc: "Our first educational venture Modern Vidya Niketan School was conceived in 1983. It is today one of the most respected and acclaimed schools in its category. Several other institutions in the NCR region bear our name and are considered the ideal learning grounds for budding destinies.",
   },
   video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
