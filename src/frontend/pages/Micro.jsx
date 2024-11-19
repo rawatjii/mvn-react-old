@@ -16,15 +16,26 @@ import MasterBedroom from "../components/MicroPage/MasterBedroom";
 
 
 
-const MicroPage = ({data})=>{
-  return(
+const MicroPage = ({ data }) => {
+  console.log('data vdo', data.video1);
+
+  return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
         <MicroHero data={data} />
         <MicroOverview data={data} />
-        <PeacockSection data={data} />
-        <Video2  data={data} />
-        <Video3  data={data} />
+        {
+          data.video1.isVdo === true &&
+          <PeacockSection data={data} />
+        }
+        {
+          data.video2.isVdo === true &&
+          <Video2 data={data} />
+        }
+        {
+          data.video3.isVdo === true &&
+          <Video3 data={data} />
+        }
         <MasterBedroom data={data} />
         <MicroHighlights />
         <MicroPrice />
