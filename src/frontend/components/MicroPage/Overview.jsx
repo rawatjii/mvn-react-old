@@ -3,7 +3,9 @@ import { Container } from "react-bootstrap";
 import Button from '../../../common/Button/Button';
 
 const MicroOverview = ({data})=>{
-  const {title, location, extra, desc} = data.overview
+
+  const {title, location, extra, desc} = data.overview;
+  console.log('data',data);
 
   return(
     <section className="section micro_overview text-center pb-0">

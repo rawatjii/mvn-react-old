@@ -40,11 +40,32 @@ const MicroPage = ({ data }) => {
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
-        <MicroMasterPlan />
-        <MicroFloorPlan />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6">
+              <MicroMasterPlan />
+            </div>
+            <div className="col-sm-6">
+              <MicroFloorPlan />
+            </div>
+          </div>
+        </div>
+
+
+
         <MicroLocationMap />
-        <Enquire />
-        <EnquireForm />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-sm-6 px-0">
+            <Enquire />
+            </div>
+            <div className="col-sm-6 px-0">
+            <EnquireForm />
+            </div>
+          </div>
+        </div>
+        
+        
       </Suspense>
     </>
   )
