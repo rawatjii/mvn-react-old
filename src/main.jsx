@@ -27,6 +27,8 @@ import PageNotFound from './common/PageNotFound/Index.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import './awaneesh.css'
+import AeroOneBangalore from './frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx'
 
 const router = createBrowserRouter([
   {
@@ -55,6 +57,15 @@ const router = createBrowserRouter([
         <Suspense fallback={<InitialLoading />}>
           <Layout>
             <AeroOneGurgaon />
+          </Layout>
+        </Suspense>
+      },
+      {
+        path:'aeroone-bangalore',
+        element:
+        <Suspense fallback={<InitialLoading />}>
+          <Layout>
+            <AeroOneBangalore />
           </Layout>
         </Suspense>
       },

@@ -118,6 +118,9 @@ h1,h2,h3,h4{
   /* font-weight: 500; */
 }
 
+.d_lg_block{display: block;}
+.d_sm_block{display: none;}
+
 ::placeholder{
   font-family: var(--roboto_font);
 }
@@ -2181,6 +2184,8 @@ footer{
 /* start responsive */
 
 @media(max-width:767px){
+  .d_lg_block{display: none;}
+  .d_sm_block{display: block;}
   p, li{
     font-size:14px;
   }
