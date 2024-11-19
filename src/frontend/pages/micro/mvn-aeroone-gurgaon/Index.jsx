@@ -11,6 +11,7 @@ const data = {
 }
 
 const AeroOneGurgaon = ()=>{
+  
   return(
     <MicroPage data={data} />
   )

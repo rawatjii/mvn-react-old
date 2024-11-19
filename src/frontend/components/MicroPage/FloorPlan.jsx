@@ -101,7 +101,9 @@ const MicroFloorPlan = ()=>{
   return(
     <section className="section floor_plan_section">
       
-
+      <SecTitle className="text-center color style1">
+          <h4 ref={titleRef} className="title">Floor Plan</h4>
+        </SecTitle>
       <Container>
         <Accordion defaultActiveKey={0} className="floor_plan_data">
           {floorPlanData.map((item, index)=>(

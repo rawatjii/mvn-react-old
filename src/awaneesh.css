@@ -78,9 +78,97 @@
 .floor_plan_section{
     padding: 60px 0;
 }
-.floor_plan_data{
+
+.floor_plan_section .container{
     margin-top: 40px;
 }
+.floor_plan_section .title{
+    color: var(--theme_primary_color);
+}
+
+
+.section.peacock_section .content{
+    text-align: center;
+    margin-top: 30px;
+}
+
+.desk_price_card{
+    padding: 35px 30px;
+    background: rgb(11 11 11 / 89%);
+    border-radius: 8px;
+}
+.desk_price_card .price{
+    font-size: 34px;
+}
+.desk_price_card .price span {
+    color: var(--theme_primary_color);
+    font-size: 22px;    
+}
+.desk_price_card .typo{
+    text-transform: uppercase;
+    font-size: 16px;
+    letter-spacing: 0.5px;
+    border-bottom: 1px solid var(--theme_primary_color);
+    padding-bottom: 12px;
+    margin-bottom: 15px;
+}
+
+.desk_price_card .sizes {
+    display: flex;
+    justify-content: space-between;
+}
+.desk_price_card .sizes .size {
+    margin: 0;
+}
+.desk_price_card .sizes .size span {
+        color: var(--theme_primary_color);
+    }
+
+.price_section .swiper-button-prev, .price_section .swiper-button-next{
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+
+.price_section .swiper-button-prev:after, .price_section .swiper-button-next:after{
+    font-size: 20px;
+}
+.price_section .swiper-horizontal{
+    padding-bottom: 60px;
+}
+.price_section .swiper-button-prev{
+    bottom: 10px;
+        top: initial;
+        right: 50px;
+        left: initial;
+}
+.price_section .swiper-button-next{
+    bottom: 10px;
+    top: initial;
+    right: 0px;
+    left: initial;
+}
+.sec_title {
+    margin-bottom: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 }

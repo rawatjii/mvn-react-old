@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useState } from "react"
 import { Container } from "react-bootstrap"
 import SecTitle from "../../../common/SecTitle/Index"
 import { gsap } from 'gsap';
@@ -7,6 +7,10 @@ import Button from "../../../common/Button/Button";
 
 import bgImg from '../../assets/images/price/bg.webp';
 import LazyLoad from "react-lazyload";
+import { Swiper, SwiperSlide } from "swiper/react";
+import 'swiper/css'
+import 'swiper/css/navigation'
+import { Navigation } from "swiper/modules";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -33,6 +37,20 @@ const MicroPrice = ()=>{
   const typoRefs = useRef([]);
   const priceRefs = useRef([]);
   const sizeRefs = useRef([]);
+
+  const [windowWidth, setWindowWidth] = useState(window.innerWidth);
+
+  useEffect(() => {
+    const handleResize = () => setWindowWidth(window.innerWidth);
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
+
+
+
 
   // for animation
 
@@ -105,7 +123,39 @@ const MicroPrice = ()=>{
           <h4 ref={titleRef} className="title">Price List</h4>
         </SecTitle>
 
-        <ul className="price_content">
+        {
+          windowWidth > 768 ?
+          <>
+            <Swiper
+              spaceBetween={50}
+              slidesPerView={2}
+              navigation={true} 
+              modules={[Navigation]}
+
+            >
+              {
+                data && data.map((item)=>(
+                  <SwiperSlide key={`price${item.index}`}>
+                    <div className="desk_price_content">
+                      <div className="desk_price_card">
+                        <h5 className="typo">{item.type}</h5>
+                        <h3 className="price"><span>₹</span> {item.price}</h3>
+                        <div className="sizes">
+                          <p className="size"><span>Size:</span> {item.size}</p>
+                          <Button className="btn_style1">Enquire Now</Button>
+                        </div>
+                      </div>
+                    </div>
+                  </SwiperSlide>
+                ))
+              }
+            </Swiper>
+  
+  
+            
+          </>
+          :
+          <ul className="price_content">
           {data.map((item, index)=>(
             <li key={index}>
               <h5 ref={(el)=>(typoRefs.current[index]=el)} className="typo">{item.type}</h5>
@@ -117,6 +167,9 @@ const MicroPrice = ()=>{
             </li>
           ))}
         </ul>
+        }
+
+        
       </Container>
     </section>
   )
