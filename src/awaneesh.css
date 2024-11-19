@@ -36,9 +36,9 @@
     align-items: center;
     justify-content: space-between;
 }
-.location_map_section .location_points li:last-child{
+/* .location_map_section .location_points li:not(:last-child){
     margin-bottom: 0;
-}
+} */
 .location_map_section .location_points li{
     position: relative;
 }
@@ -52,6 +52,17 @@
     top: -60px;
     left: 30px;
 
+}
+.location_map_section {
+    & .locationMapContent {
+        & .location_points {
+            & li {
+                &:not(:last-child) {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
 }
 .top_road{
     top: 8px !important;
@@ -152,6 +163,10 @@
     margin-bottom: 30px;
 }
 
+.peacock_section .frames_content img{
+    margin-left: auto;
+    margin-right: auto;
+}
 
 
 
