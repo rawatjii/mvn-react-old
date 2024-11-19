@@ -1,10 +1,14 @@
 import React from "react";
 import MicroPage from "../../Micro";
-import hero_img_mb from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
-import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
+import hero_img_mb from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_mobile.jpg";
+import hero_img_desk from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_desk.jpg";
 
 const data = {
   micro_hero_section: [{ imgMb: hero_img_mb, imgDesk: hero_img_desk }],
+  bannerHighLight: {
+    isshow: true,
+    
+  },
   overview: {
     title: "MVN AERO ONE",
     location: "BANGALORE",
