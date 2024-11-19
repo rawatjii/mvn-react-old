@@ -19,6 +19,10 @@ const data = {
   video3:{
     title:'ELEVATED LIVING',
     desc:'OUR 13.5FT HIGH CEILINGS WILL SET A HIGHER STANDARD OF SPACE UTILISATION IN HARMONY WITH DESIGN AESTHETICS & SOPHISTICATION',
+  },
+  masterBedroom:{
+    title:'MASTER BEDROOM',
+    desc:'If You Think You Know What Lavishness Means It\'s Time You Got A New Perspective',
   }
 }
 
