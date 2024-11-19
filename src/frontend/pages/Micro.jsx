@@ -11,8 +11,8 @@ import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import PeacockSection from "../components/MicroPage/PeacockSection";
 
-const MicroPage = ()=>{
-  return(
+const MicroPage = () => {
+  return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
         <MicroHero />
@@ -21,11 +21,32 @@ const MicroPage = ()=>{
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
-        <MicroMasterPlan />
-        <MicroFloorPlan />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6">
+              <MicroMasterPlan />
+            </div>
+            <div className="col-sm-6">
+              <MicroFloorPlan />
+            </div>
+          </div>
+        </div>
+
+
+
         <MicroLocationMap />
-        <Enquire />
-        <EnquireForm />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-sm-6 px-0">
+            <Enquire />
+            </div>
+            <div className="col-sm-6 px-0">
+            <EnquireForm />
+            </div>
+          </div>
+        </div>
+        
+        
       </Suspense>
     </>
   )

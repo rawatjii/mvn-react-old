@@ -26,6 +26,7 @@ import PageNotFound from './common/PageNotFound/Index.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css';
+import './awaneesh.css'
 
 const router = createBrowserRouter([
   {

@@ -1,0 +1,86 @@
+@media (min-width: 768px) {
+.hero-img img{
+    width: 100%;
+}
+.content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.content li{
+    max-width: 45%;
+    width: 100%;
+
+}
+.price_content{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.price_content li{
+    max-width: 30%;
+    width: 100%;
+}
+.locationMapContent .thumbnail img{
+    width: 100%;
+}
+.left_road{
+    display: none;
+}
+
+.location_map_section .location_points{
+    margin-top: 30px !important;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.location_map_section .location_points li:last-child{
+    margin-bottom: 0;
+}
+.location_map_section .location_points li{
+    position: relative;
+}
+.location_map_section .location_points li:after{
+    position: absolute;
+    content: '';
+    width: 5px;
+    height: 60px;
+    background-color: transparent;
+    border-left: 1px dashed var(--theme_primary_color);
+    top: -60px;
+    left: 30px;
+
+}
+.top_road{
+    top: 8px !important;
+}
+.enquire_form, .enquire_section{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 !important;
+}
+
+.enquire_section  .container{
+   padding: 80px 40px;
+   margin: 90px;
+   background-color: black;
+}
+.enquire_form  .container{
+   padding: 80px 40px;
+   margin: 0px 90px;
+   background-color: black;
+}
+
+.floor_plan_section{
+    padding: 60px 0;
+}
+.floor_plan_data{
+    margin-top: 40px;
+}
+
+
+}

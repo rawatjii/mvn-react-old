@@ -100,6 +100,8 @@ const MicroFloorPlan = ()=>{
 
   return(
     <section className="section floor_plan_section">
+      
+
       <Container>
         <Accordion defaultActiveKey={0} className="floor_plan_data">
           {floorPlanData.map((item, index)=>(
