@@ -13,9 +13,9 @@ import PeacockSection from "../components/MicroPage/PeacockSection";
 import Video2 from "../components/MicroPage/Video2";
 import Video3 from "../components/MicroPage/Video3";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
+import LargeElevationSection from '../components/MicroPage/LargeElevationSection'
 
-const MicroPage = ({ data }) => {  
-console.log(data.masterBedroom);
+const MicroPage = ({ data }) => {
 
   return (
     <>
@@ -26,6 +26,7 @@ console.log(data.masterBedroom);
         {data.video2.isVdo === true && <Video2 data={data} />}
         {data.video3.isVdo === true && <Video3 data={data} />}
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
+        {data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />

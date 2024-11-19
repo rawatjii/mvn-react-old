@@ -2,6 +2,7 @@ import React from "react";
 import MicroPage from "../../Micro";
 import hero_img_mb from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
 import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
+import './aeroGuragaon.css'
 
 const data = {
   micro_hero_section: [{ imgMb: hero_img_mb, imgDesk: hero_img_desk }],
@@ -31,6 +32,10 @@ const data = {
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
     isVdo: false
   },
+  LargeElevationSection: {
+    title: "an epitome of contemporary elegance",
+    isAllow: true
+  }
 };
 
 const AeroOneGurgaon = () => {
