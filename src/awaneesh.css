@@ -1,3 +1,32 @@
+.slide_iframe{
+    width: 100%;
+    height: 300px;
+}
+.enquiry_btn{
+    position: absolute;
+    top: 50%;
+    transform: rotate(90deg) translateY(-50%);
+    right: -50px;
+}
+.mail_enqiry_icon{
+    width: 16px;
+    transform: rotate(-90deg);
+}
+.btn_enquire, .btn_enquire:hover{
+    background-color: var(--theme_primary_color);
+    color: #000000;
+    padding: 6px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: 500;
+    font-size: 16px;
+    gap: 5px;
+    text-transform: uppercase;
+} 
+
+
 @media (min-width: 768px) {
 /* .hero-img img{
     width: 100%;
@@ -168,6 +197,17 @@
     margin-right: auto;
 }
 
+.hero_content .content{
+    flex-direction: column;
+    justify-content: start;
+}
+.hero_content .content .starting_price{
+    margin-right: auto;
+}
+.slide_iframe{
+    width: 100%;
+    height: 650px;
+}
 
 
 
@@ -176,6 +216,51 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.slider_ppt_container{
+    display: flex;
+}
+.slider_list{
+    width: 20%;
+}
+.slider_preview{
+    width: 80%;
+    padding-left: 16px;
+}
 
 
 
@@ -187,3 +272,4 @@
 
 
 }
+
