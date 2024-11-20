@@ -2180,6 +2180,20 @@ footer{
   }
 }
 
+/* render_section */
+
+.render_section{
+
+  .sec_title{
+    margin-bottom:20px;
+  }
+
+  .single{
+
+    margin:7px 0;
+  }
+}
+
 
 /* start responsive */
 

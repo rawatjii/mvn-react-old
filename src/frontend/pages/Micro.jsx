@@ -15,6 +15,7 @@ import Video3 from "../components/MicroPage/Video3";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
 import Walkthrough from "../components/MicroPage/Walkthrough";
 import LargeElevationSection from '../components/MicroPage/LargeElevationSection'
+import Renders from "../components/MicroPage/Renders";
 
 const MicroPage = ({ data }) => {
 
@@ -29,6 +30,7 @@ const MicroPage = ({ data }) => {
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
         {data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
         <Walkthrough data={data} />
+        <Renders data={data} />
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
