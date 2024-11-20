@@ -28,6 +28,7 @@ const MicroPage = ({ data }) => {
         {data.video3.isVdo === true && <Video3 data={data} />}
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
         {data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
+        <Walkthrough data={data} />
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
