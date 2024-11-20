@@ -17,17 +17,17 @@ gsap.registerPlugin(ScrollTrigger);
 const brandData = [
   {
     title: 'Commitment',
-    para: 'MVN develops and heightens competencies that show..',
+    para: `MVN develops and heightens competencies that show a realtor's dedication to code of Ethics & Standards of Practice.`,
     icon: commitmentIcon
   },
   {
     title: 'Excellence',
-    para: 'We deliver our clients with quality services and aim to..',
+    para: `We deliver our clients with quality services and aim to exceed expectations in everything we offer.`,
     icon: excellenceIcon
   },
   {
     title: 'Customized Solutions',
-    para: 'We offer customer-focused solutions with a high level..',
+    para: `We offer customer-focused solutions with a high level of accountability, and offer the highest level of honesty and expertise.`,
     icon: customizedIcon
   }
 ];
