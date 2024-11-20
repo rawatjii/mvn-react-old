@@ -1,0 +1,177 @@
+
+.desktop-view{display:block;}
+.mobile-view{display:none;}
+section.overview_section.desktop-view .home-about-content{text-align:center;width:45%;text-transform:uppercase;margin:0 auto;padding-top:100px;padding-bottom:100px}
+section.overview_section.desktop-view .home-about-content p{font-size:14px;width:93%;line-height:34px;letter-spacing:2px;margin:0 auto}
+section.overview_section.desktop-view .hero_title{margin-bottom:39px;font-size:28px;letter-spacing:3px;line-height:51px}
+section.scrollSlider-Content-2.desktop-view {margin-top: 100px;}
+.our_brand_section .brand_content {background:unset;border-radius:20px;padding:35px 25px}
+
+
+@media screen and (min-width: 767px) {
+
+    .navbar {
+        & .navbar-toggler {
+            .navbar-toggler-icon {
+                filter: invert(1);
+            }
+        }
+    }
+
+    .container { max-width: 88%; }
+    .projects_section .px_8.left_col.col-6 { display: grid;align-content: space-between; }
+    .projects_section {& .left_col .single {.lazyload-wrapper, .an_img {height: 480px!important; }} }
+    .projects_section {.plane_icon {display:none;}}
+    .projects_section {.sec_title {  font-size: 50px; margin-bottom: 43px; letter-spacing: 46px; display: grid; gap: 20px 0px; padding-top: 21%;}}
+
+    .projects_section {
+        .sec_title {
+            text-transform: uppercase;
+            font-size: 48px;
+            margin-bottom: 35px;
+            height: 63px;
+            letter-spacing: 40px;
+        }
+      }
+      .projects_section {
+        & .sec_title {
+            span {
+                display: block;
+                font-size: 25px;
+                letter-spacing: 10px;
+            }
+        }
+      }
+
+    h4.title { font-size: 26px!important;  }
+    .other_projects_section .other-project-img { height: 476px;object-fit: cover;}
+    .other_projects_section { .sec_title {margin-bottom: 60px;}}
+    .other_projects_section { .sec_title {margin-bottom: 60px;}}
+    .other_projects_section .single {display: flex;flex-direction: column-reverse;}
+    .other_projects_section .single .top {background-color: #131313; padding: 15px; }
+    .journey_section .journey_content .plane {display: none;}
+    .journey_section .journey_content .single { border: none;height: 238px; }
+    .journey_section .journey_content::before {display: none;}
+    .journey_section .journey_content{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:22px}
+    .journey_section .journey_content .single{width:31.3%;text-align:center;background-color:#131313;border-radius:10px;padding:0}
+    .journey_section .journey_content .single .title{text-align:right; position: absolute;bottom: 0;right: 0;}
+    .journey_section .single{padding:0!important;padding:30px!important}
+    .journey_section .single.right{padding:0!important;padding:30px!important}
+    .journey_section .count{position:absolute;top:0;right:0;font-size:30px}
+    .journey_section .title{text-transform:uppercase;letter-spacing:1px;font-size:18px}
+    .journey_section .journey_content .single .top .icon {position: absolute; top: -10px; left: -15px; width: 100px;}
+    .journey_section .data { height: 100%;}
+
+    .testimonial_section  .swiper-slide { height: 33vh;}
+    .testimonial_section { & .testimonial_carousel {.single { height: 100%;}}}
+    .testimonial_section .single {width: fit-content; margin: 0px auto; }
+    .our_brand_section .brand_content .single{width:fit-content;margin:0 auto;background:#131313;border-radius:20px;padding:25px 20px}
+    .our_brand_section .brand_content .content h4.title{font-size:18px!important}
+    .our_team_section p {font-size: 27px;  letter-spacing: 3px;line-height: 34px; width: 64%; font-weight: 200;margin: 0px auto;}
+    .our_brand_section {.brand_bg { position: absolute; left: 0; z-index: -1;top: 0; height: 100%;object-fit: cover;width: 100%;opacity: unset; }}
+    .our_brand_section .brand_content::after{position:absolute;content:'';top:41%;left:calc(40% - 1px);display:block;height:29%;width:1px;border-right:2px dashed  #c0ab50;z-index:-1}
+    .our_brand_section .brand_content::before{position:absolute;content:'';top:41%;right:calc(40% - 1px);display:block;height:29%;width:1px;border-right:2px dashed  #c0ab50;z-index:-1}
+    .our_brand_section .brand_content .row { gap: 20px 0px; }
+    .testimonial_section { .sec_title { margin-bottom: 60px;}}
+    .our_brand_section .brand_content {padding-top: 0px;}
+    .journey_section .journey_content .single::before{content:"";position:absolute;top:-22px;left:-22px;width:180px;height:180px;background-color:#000;border-radius:50%;z-index:1}
+    .journey_section .data{position:relative;z-index:2}
+    .journey_section .journey_content{width:80%;margin:0 auto}
+    .journey_section {& .journey_content {& .single { &.right {margin-left: unset; }}}}
+
+
+
+
+
+
+}
+
+
+
+
+@media(max-width:767px){
+
+
+    .desktop-view{display:none!important;}
+    .mobile-view{display:block!important;}
+
+    .navbar{
+        position:fixed;
+        width: 100%;
+        padding: 15px 5px;
+        z-index: 99;
+        transition:all 0.3s ease-in-out;
+      
+        .navbar-brand{
+          padding:0;
+          margin:0;
+      
+          img{
+            max-width:60px;
+            transition:all 0.3s ease-in-out;
+          }
+        }
+      
+        &.fixed{
+          background:#000;
+          padding: 10px 5px;
+      
+          img{
+            max-width: 55px;
+          }
+        }
+
+
+    .projects_section{
+
+         .sec_title{
+          text-transform: uppercase;
+          font-size: 32px;
+          margin-bottom: 35px;
+          height: 63px;
+          letter-spacing: 3px;
+      
+          span{
+            display:block;
+            font-size:20px;
+            letter-spacing: 1px;
+          }
+         }
+        }
+
+        .our_brand_section {
+            .brand_content {
+                background: #131313;
+                border-radius: 20px;
+                padding: 35px 25px;
+            }
+        }
+
+        .our_brand_section {
+            .brand_bg {
+                position: absolute;
+                left: 0;
+                z-index: -1;
+                top: 0;
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
+                opacity: 0.2;
+            }
+        }
+
+        .journey_section {
+          & .journey_content {
+              & .single {
+                  &.right {
+                      /* left: 100%; */
+                      /* position: relative; */
+                      /* text-align: left; */
+                      padding: 10px 0px 5px 20px;
+                      margin-left: auto;
+                  }
+              }
+          }
+      }
+
+}

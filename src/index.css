@@ -580,7 +580,6 @@ a{
   }
 
   &.fixed{
-    background:#000;
     padding: 10px 5px;
 
     img{
@@ -982,7 +981,7 @@ a{
         gap: 10px;
 
         .icon{
-          width:30px;
+          width:60px;
         }
 
         .count{
@@ -991,7 +990,7 @@ a{
           color:var(--theme_primary_color)
         }
       }
-
+/* 
       &.right{
         /* left:100%; */
         position:relative;
@@ -1002,7 +1001,7 @@ a{
         .top{
           flex-direction: row-reverse;
         }
-      }
+      } */
 
       .title{
         font-weight: 400;
@@ -1068,8 +1067,8 @@ a{
       display: flex;
 
       .icon{
-        height: 40px;
-        width: 40px;
+        height: 60px;
+        width: 60px;
         margin-right: 20px;
         border-radius: 8px;
         background: #fff;
@@ -1078,7 +1077,7 @@ a{
         justify-content: center;
 
         img{
-          width:32px;
+          width:40px;
         }
       }
 
@@ -2263,3 +2262,15 @@ footer{
 
 
 }
+
+
+
+
+
+
+
+/* This Code writing By Savan */
+
+
+
+/* This Code writing By Savan End*/
