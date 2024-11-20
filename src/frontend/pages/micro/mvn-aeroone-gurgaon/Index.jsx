@@ -56,28 +56,65 @@ const data = {
     title: "an epitome of contemporary elegance",
     isAllow: true,
   },
-  renders:[
+  renders: [
     {
-      src:CONFIG.IMAGE_URL + 'renders/1_desktop.webp',
-      mobile_thumb:CONFIG.IMAGE_URL + 'renders/1_mobile.webp',
+      src: CONFIG.IMAGE_URL + 'renders/1_desktop.webp',
+      mobile_thumb: CONFIG.IMAGE_URL + 'renders/1_mobile.webp',
     },
     {
-      src:CONFIG.IMAGE_URL + 'renders/2_desktop.webp',
-      mobile_thumb:CONFIG.IMAGE_URL + 'renders/2_mobile.webp',
+      src: CONFIG.IMAGE_URL + 'renders/2_desktop.webp',
+      mobile_thumb: CONFIG.IMAGE_URL + 'renders/2_mobile.webp',
     },
     {
-      src:CONFIG.IMAGE_URL + 'renders/3_desktop.webp',
-      mobile_thumb:CONFIG.IMAGE_URL + 'renders/3_mobile.webp',
+      src: CONFIG.IMAGE_URL + 'renders/3_desktop.webp',
+      mobile_thumb: CONFIG.IMAGE_URL + 'renders/3_mobile.webp',
     },
     {
-      src:CONFIG.IMAGE_URL + 'renders/4_desktop.webp',
-      mobile_thumb:CONFIG.IMAGE_URL + 'renders/4_mobile.webp',
+      src: CONFIG.IMAGE_URL + 'renders/4_desktop.webp',
+      mobile_thumb: CONFIG.IMAGE_URL + 'renders/4_mobile.webp',
     },
     {
-      src:CONFIG.IMAGE_URL + 'renders/5_desktop.webp',
-      mobile_thumb:CONFIG.IMAGE_URL + 'renders/5_mobile.webp',
+      src: CONFIG.IMAGE_URL + 'renders/5_desktop.webp',
+      mobile_thumb: CONFIG.IMAGE_URL + 'renders/5_mobile.webp',
     }
-  ]
+  ],
+  menities_section: [
+    {
+      title: 'Infinity Pool',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/pool.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/poolSm.webp',
+      }
+    },
+    {
+      title: 'THE STUDY',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/study.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/studySm.webp',
+      }
+    },
+    {
+      title: 'MODERN ROOFTOP CLUBHOUSE',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
+      }
+    },
+    {
+      title: 'double height balcony',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/balcony.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/balconySm.webp',
+      }
+    },
+    {
+      title: 'living area',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+      }
+    },
+  ],
 };
 
 const AeroOneGurgaon = () => {
