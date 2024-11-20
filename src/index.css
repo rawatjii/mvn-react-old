@@ -992,21 +992,11 @@ a{
         .count{
           margin:0;
           line-height: initial;
-          color:var(--theme_primary_color)
+          color:var(--theme_primary_color);
+          font-family: 'Tinos';
         }
       }
-/* 
-      &.right{
-        /* left:100%; */
-        position:relative;
-        text-align: left;
-        padding: 10px 0px 5px 20px;
-        margin-left:auto;
 
-        .top{
-          flex-direction: row-reverse;
-        }
-      } */
 
       .title{
         font-weight: 400;

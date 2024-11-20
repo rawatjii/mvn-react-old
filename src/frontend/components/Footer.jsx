@@ -105,12 +105,14 @@ const Footer = ()=>{
           </ul>
         </div>
 
-        <div className="disclaimer text-center">
-          <Link to="">Disclaimer & Privacy Policy</Link>
-        </div>
+        <div className="flex-bottom-border">
+          <div className="disclaimer text-center">
+            <Link to="">Disclaimer & Privacy Policy</Link>
+          </div>
 
-        <div className="copyright">
-        2024-MVN Group. All Right Reserved <span>Curated by: <Link to="#">GTF Technologies</Link></span>
+          <div className="copyright">
+          2024-MVN Group. All Right Reserved <span>Curated by: <Link to="#">GTF Technologies</Link></span>
+          </div>
         </div>
 
       </Container>
