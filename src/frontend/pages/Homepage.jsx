@@ -45,10 +45,13 @@ const Homepage = ()=>{
         <OurBrand />
 
         <Testimonial />
-
+        
+        <div className="flex-footer-form">
+          
         <Enquire />
 
-        <EnquireForm />
+          <EnquireForm />
+        </div>
     </>
   )
 }

@@ -100,7 +100,7 @@ const OurBrand = () => {
         <div className="brand_content">
           <Row>
             {brandData?.map((item, index) => (
-              <Col key={index} xs={12} className="single_col">
+              <Col key={index} xs={12} md={4} lg={4} className="single_col">
                 <div ref={(el) => (dataRefs.current[index] = el)} className="single">
                   <div className="icon">
                     <img src={item.icon} alt="mvn brand icon" className="img-fluid" />
