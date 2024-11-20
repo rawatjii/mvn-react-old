@@ -136,7 +136,7 @@ const MicroLocationMap = ()=>{
             <span className="left_road"></span>
             <span className="top_road"></span>
             {locationData.map((item,index)=>(
-              <li>
+              <li key={index}>
                 <h3 className="distance">{item.distance}</h3>
                 <p>{item.title}</p>
               </li>

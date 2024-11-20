@@ -107,7 +107,7 @@ const MicroFloorPlan = ()=>{
       <Container>
         <Accordion defaultActiveKey={0} className="floor_plan_data">
           {floorPlanData.map((item, index)=>(
-            <Accordion.Item eventKey={index}>
+            <Accordion.Item key={index} eventKey={index}>
               <Accordion.Header>{item.title}</Accordion.Header>
               <Accordion.Body>
                 <img src={item.thumbnail} alt="mvn-floor-plan" className="img-fluid" />
