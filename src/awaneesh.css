@@ -26,11 +26,44 @@
     text-transform: uppercase;
 } 
 
+.overview_card{
+    background-color: #131313;
+    padding: 40px 20px;
+}
+.micro_overview{
+    margin-top: -100px;
+}
+.diamond_img_strip{
+    position: relative;
+    width: 100%;
+    height: 2px;
+    background-color: var(--theme_primary_color);
+    margin-bottom: 40px;
+
+}
+.diamond_img_strip img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40px;
+    background-color: #131313;
+    padding: 5px;
+    z-index: 99;
+}
+
 
 @media (min-width: 768px) {
 /* .hero-img img{
     width: 100%;
 } */
+ .overview_card{
+    padding: 40px;
+ }
+
+.overview_card p{
+    text-align: center !important;
+}
 .content{
     display: flex;
     align-items: center;
@@ -139,6 +172,7 @@
 }
 .desk_price_card .price{
     font-size: 34px;
+    margin-bottom: 20px;
 }
 .desk_price_card .price span {
     color: var(--theme_primary_color);
@@ -149,8 +183,8 @@
     font-size: 16px;
     letter-spacing: 0.5px;
     border-bottom: 1px solid var(--theme_primary_color);
-    padding-bottom: 12px;
-    margin-bottom: 15px;
+    padding-bottom: 16px;
+    margin-bottom: 20px;
 }
 
 .desk_price_card .sizes {
@@ -159,11 +193,17 @@
 }
 .desk_price_card .sizes .size {
     margin: 0;
+    letter-spacing: 1px;
+}
+.desk_price_card .sizes button {
+    letter-spacing: 1px;
 }
 .desk_price_card .sizes .size span {
         color: var(--theme_primary_color);
     }
-
+    .price_section{
+        overflow: hidden;
+    }
 .price_section .swiper-button-prev, .price_section .swiper-button-next{
     width: 40px;
     height: 40px;
@@ -209,9 +249,37 @@
     height: 650px;
 }
 
-
-
-
+.highlights_section {
+    & .content {
+        & li {
+            .data {
+                font-size: 16px;
+                letter-spacing: 2px;
+                font-weight: 300;
+            }
+        }
+    }
+}
+.highlights_section {
+    & .content {
+        & li {
+            & .data {
+                .count {
+                    font-size: 32px;
+                    margin-bottom: -16px;
+                    font-weight: 500;
+                }
+            }
+        }
+    }
+}
+.highlights_section {
+    & .content {
+        li {
+            padding: 12px;
+        }
+    }
+}
 
 
 
