@@ -129,7 +129,7 @@ const MicroLocationMap = ()=>{
           <img src={location_map_sm} alt="mvn-master-plan" className="img-fluid" />
         </div>
 
-        <Container>
+        <Container className="desktop_fluid_container">
           <h4 className="title">Location Advantage</h4>
 
           <ul className="location_points">
