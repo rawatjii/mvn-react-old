@@ -11,39 +11,50 @@ import LazyLoad from "react-lazyload";
 
 // Import Swiper styles
 import 'swiper/css';
-
-// import images
-
-import swimmingPool from '../../assets/images/amenities/swimming-pool.webp'
 import chevronLeft from '../../assets/images/icons/chevron_left.svg'
 import chevronRight from '../../assets/images/icons/chevron_right.svg'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const data = [
-  { 
-    thumbnail:swimmingPool,
-     title:'Infinity Pool',
-  },
-  { 
-    thumbnail:swimmingPool,
-     title:'Infinity Pool',
-  },
-  { 
-    thumbnail:swimmingPool,
-     title:'Infinity Pool',
-  },
-  { 
-    thumbnail:swimmingPool,
-     title:'Infinity Pool',
-  },
-  { 
-    thumbnail:swimmingPool,
-     title:'Infinity Pool',
-  },
-]
+// const data = [
+//   {
+//     title: 'Infinity Pool',
+//     images: {
+//       lg: pool,
+//       mb: poolSm
+//     }
+//   },
+//   {
+//     title: 'THE STUDY',
+//     images: {
+//       lg: study,
+//       mb: studySm
+//     }
+//   },
+//   {
+//     title: 'MODERN ROOFTOP CLUBHOUSE',
+//     images: {
+//       lg: clubhouse,
+//       mb: clubhouseSm
+//     }
+//   },
+//   {
+//     title: 'double height balcony',
+//     images: {
+//       lg: balcony,
+//       mb: balconySm
+//     }
+//   },
+//   {
+//     title: 'living area',
+//     images: {
+//       lg: living,
+//       mb: livingSm
+//     }
+//   },
+// ]
 
-const MicroAmenities = ()=>{
+const MicroAmenities = ({ data }) => {
   const titleRef = useRef();
   const typoRefs = useRef([]);
   const priceRefs = useRef([]);
@@ -55,24 +66,24 @@ const MicroAmenities = ()=>{
 
   // for animation
 
-  useEffect(()=>{
+  useEffect(() => {
     gsap.from(titleRef.current, {
-      y: 50,  
+      y: 50,
       opacity: 0,
-      duration: 1, 
+      duration: 1,
 
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: titleRef.current,
         start: "top 95%",
       }
     })
 
     gsap.from(sliderRef.current, {
-      y: 50,  
+      y: 50,
       opacity: 0,
-      duration: 1, 
+      duration: 1,
 
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: sliderRef.current,
         start: "top 95%",
       }
@@ -81,9 +92,9 @@ const MicroAmenities = ()=>{
     typoRefs.current.forEach((singleRef, index) => {
       if (singleRef) {
         gsap.from(singleRef, {
-          y: 20,  
+          y: 20,
           opacity: 0,
-          duration: 0.5,  
+          duration: 0.5,
 
           scrollTrigger: {
             trigger: singleRef,
@@ -96,9 +107,9 @@ const MicroAmenities = ()=>{
     priceRefs.current.forEach((singleRef, index) => {
       if (singleRef) {
         gsap.from(singleRef, {
-          y: 20,  
+          y: 20,
           opacity: 0,
-          duration: 0.5,  
+          duration: 0.5,
 
           scrollTrigger: {
             trigger: singleRef,
@@ -111,9 +122,9 @@ const MicroAmenities = ()=>{
     sizeRefs.current.forEach((singleRef, index) => {
       if (singleRef) {
         gsap.from(singleRef, {
-          y: 10,  
+          y: 10,
           opacity: 0,
-          duration: 0.5,  
+          duration: 0.5,
 
           scrollTrigger: {
             trigger: singleRef,
@@ -139,7 +150,7 @@ const MicroAmenities = ()=>{
     setIsEnd(swiper.isEnd);
   };
 
-  return(
+  return (
     <section className="section amenities_section pb-0">
 
       <Container>
@@ -148,41 +159,43 @@ const MicroAmenities = ()=>{
         </SecTitle>
       </Container>
 
-        <Swiper
-          ref={sliderRef}
-          onSwiper={(swiper)=>{
-            swiperRef.current = swiper;
-            setIsBeginning(swiper.isBeginning);
-            setIsEnd(swiper.isEnd);
-          }}
-          onSlideChange={handleSlideChange}
-          spaceBetween={10}
-          slidesPerView={1}
-          className="amenity_carousel"
-        >
-          {data.map((item, index)=>(
-            <SwiperSlide key={index}>
-              <div className="single">
-                <div className="image">
-                  <LazyLoad>
-                    <img src={item.thumbnail} alt="mvn amenity thumbnail" className="img-fluid thumbnail" />
-                  </LazyLoad>
-                </div>
-                <h3 className="title">{item.title}</h3>
-
+      <Swiper
+        ref={sliderRef}
+        onSwiper={(swiper) => {
+          swiperRef.current = swiper;
+          setIsBeginning(swiper.isBeginning);
+          setIsEnd(swiper.isEnd);
+        }}
+        onSlideChange={handleSlideChange}
+        spaceBetween={10}
+        slidesPerView={1}
+        className="amenity_carousel"
+      >
+        {data.map((item, index) => (
+          <SwiperSlide key={index}>
+            <div className="single">
+              <div className="image">
+                <LazyLoad>
+                  <img src={item.images.lg} alt="mvn amenity thumbnail" className="img-fluid d_lg_block thumbnail" />
+                  <img src={item.images.mb} alt="mvn amenity thumbnail" className="img-fluid d_sm_block thumbnail" />
+                  {/* <img src={item.images.mb} alt="mvn amenity thumbnail" className="img-fluid thumbnail" /> */}
+                </LazyLoad>
               </div>
-            </SwiperSlide>
-          ))}
+              <h3 className="title">{item.title}</h3>
 
-          <div className="slider_btns">
-            <button className={`prev ${isBeginning ? 'disabled':''}`} onClick={handlePrev}>
-              <img src={chevronLeft} alt="mvn-chevron-left" className="img-fluid icon" />
-            </button>
-            <button className={`next ${isEnd ? 'disabled':''}`} onClick={handleNext}>
-              <img src={chevronRight} alt="mvn-chevron-right" className="img-fluid icon" />
-            </button>
-          </div>
-        </Swiper>
+            </div>
+          </SwiperSlide>
+        ))}
+
+        <div className="slider_btns">
+          <button className={`prev ${isBeginning ? 'disabled' : ''}`} onClick={handlePrev}>
+            <img src={chevronLeft} alt="mvn-chevron-left" className="img-fluid icon" />
+          </button>
+          <button className={`next ${isEnd ? 'disabled' : ''}`} onClick={handleNext}>
+            <img src={chevronRight} alt="mvn-chevron-right" className="img-fluid icon" />
+          </button>
+        </div>
+      </Swiper>
     </section>
   )
 }
