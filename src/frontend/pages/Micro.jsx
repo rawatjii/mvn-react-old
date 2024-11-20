@@ -13,6 +13,7 @@ import PeacockSection from "../components/MicroPage/PeacockSection";
 import Video2 from "../components/MicroPage/Video2";
 import Video3 from "../components/MicroPage/Video3";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
+import Slides from "../components/MicroPage/Slides";
 
 const MicroPage = ({ data }) => {  
 console.log(data.masterBedroom);
@@ -39,8 +40,11 @@ console.log(data.masterBedroom);
             </div>
           </div>
         </div>
-
         <MicroLocationMap />
+        {
+          data.Slides && data.Slides.isshow === true && <Slides/>
+        }
+        
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-6 px-0">

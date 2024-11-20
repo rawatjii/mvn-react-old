@@ -35,10 +35,19 @@ const data = {
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
     isVdo: false,
   },
+  Slides: {
+    isshow: true,
+  },
+  enquiryBTN:{
+    isshow:true,
+    mail: "info@example.in",
+  }
 };
 
 const AeroOneBangalore = () => {
-  return <MicroPage data={data} />;
+  return (
+    <MicroPage data={data} />
+  )
 };
 
 export default AeroOneBangalore;
