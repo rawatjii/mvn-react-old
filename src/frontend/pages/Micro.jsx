@@ -10,25 +10,52 @@ import MicroLocationMap from "../components/MicroPage/LocationMap";
 import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import PeacockSection from "../components/MicroPage/PeacockSection";
+import Video2 from "../components/MicroPage/Video2";
+import Video3 from "../components/MicroPage/Video3";
+import MasterBedroom from "../components/MicroPage/MasterBedroom";
+import Walkthrough from "../components/MicroPage/Walkthrough";
+import LargeElevationSection from '../components/MicroPage/LargeElevationSection'
 
-const MicroPage = ()=>{
-  return(
+const MicroPage = ({ data }) => {
+
+  return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
-        <MicroHero />
-        <MicroOverview />
-        <PeacockSection />
+        <MicroHero data={data} />
+        <MicroOverview data={data} />
+        {data.video1.isVdo === true && <PeacockSection data={data} />}
+        {data.video2.isVdo === true && <Video2 data={data} />}
+        {data.video3.isVdo === true && <Video3 data={data} />}
+        {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
+        {data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
-        <MicroMasterPlan />
-        <MicroFloorPlan />
+        <div className="container">
+          <div className="row">
+            <div className="col-sm-6">
+              <MicroMasterPlan />
+            </div>
+            <div className="col-sm-6">
+              <MicroFloorPlan />
+            </div>
+          </div>
+        </div>
+
         <MicroLocationMap />
-        <Enquire />
-        <EnquireForm />
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col-sm-6 px-0">
+              <Enquire />
+            </div>
+            <div className="col-sm-6 px-0">
+              <EnquireForm />
+            </div>
+          </div>
+        </div>
       </Suspense>
     </>
-  )
-}
+  );
+};
 
-export default MicroPage
+export default MicroPage;

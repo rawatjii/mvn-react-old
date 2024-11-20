@@ -93,7 +93,7 @@ const MicroMasterPlan = ()=>{
     <section className="section master_plan_section pb-0">
       <Container>
         <SecTitle className="text-center color style1">
-          <h4 ref={titleRef} className="title">Master Plan</h4>
+          <h4 className="title">Master Plan</h4>
         </SecTitle>
 
         <div className="masterPlanImg" onClick={()=>setIsMasterPlanOpen(true)}>

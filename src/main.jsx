@@ -9,6 +9,7 @@ import Layout from './frontend/components/Layout.jsx';
 const Homepage = React.lazy(()=>import('./frontend/pages/Homepage.jsx'));
 const AboutUs = React.lazy(()=>import('./frontend/pages/AboutUs.jsx'));
 const MicroPage = React.lazy(()=>import('./frontend/pages/Micro.jsx'));
+const AeroOneGurgaon = React.lazy(()=>import('./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx')); 
 const ContactPage = React.lazy(()=>import('./frontend/pages/ContactUs.jsx'));
 
 // admin
@@ -28,6 +29,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css';
 import './savan.css';
+import './awaneesh.css'
+import AeroOneBangalore from './frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx'
 
 const router = createBrowserRouter([
   {
@@ -47,6 +50,24 @@ const router = createBrowserRouter([
         <Suspense fallback={<InitialLoading />}>
           <Layout>
             <AboutUs />
+          </Layout>
+        </Suspense>
+      },
+      {
+        path:'aeroone-gurgaon',
+        element:
+        <Suspense fallback={<InitialLoading />}>
+          <Layout>
+            <AeroOneGurgaon />
+          </Layout>
+        </Suspense>
+      },
+      {
+        path:'aeroone-bangalore',
+        element:
+        <Suspense fallback={<InitialLoading />}>
+          <Layout>
+            <AeroOneBangalore />
           </Layout>
         </Suspense>
       },

@@ -1,22 +1,41 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { Container } from "react-bootstrap";
+import SecTitle from "../../../common/SecTitle/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const PeacockSection = () => {
+const PeacockSection = ({data}) => {
   const containerRef = useRef(null);
+  const titleRef = useRef();
   const [images, setImages] = useState([]);
   const totalFrames = 183;
   const frameRefs = useRef([]);
 
+  // for animation
+
+  useEffect(()=>{
+    gsap.from(titleRef.current, {
+      y: 50,  
+      opacity: 0,
+      duration: 1, 
+
+      scrollTrigger:{
+        trigger: titleRef.current,
+        start: "top 95%",
+      }
+    })
+  }, [])
+
   useEffect(() => {
     // Preload images
     const loadedImages = [];
+
     for (let i = 1; i <= 183; i++) {
       const img = new Image();
-      img.src = `assets/images/peacock/${i}.jpg`; // Update with the correct path for your frames
+      img.src = `assets/images/peacock/${i}.webp`; // Update with the correct path for your frames
       loadedImages.push(img);
     }
     setImages(loadedImages);
@@ -63,9 +82,11 @@ const PeacockSection = () => {
 
   }, [images, totalFrames]);
 
+  const {title, desc} = data.video1
+
   return (
-    <div className="section peacock_section">
-      <div ref={containerRef} className="content">
+    <div className="section peacock_section pb-0">
+      <div ref={containerRef} className="frames_content">
         {images.map((img, index) => (
           <img
             key={index}
@@ -76,6 +97,17 @@ const PeacockSection = () => {
             style={{ display: index === 0 ? "block" : "none" }}
           />
         ))}
+      </div>
+
+      <div className="content">
+        <Container>
+          <SecTitle className="text-center color style1">
+            <h4 ref={titleRef} className="title">{title}</h4>
+          </SecTitle>
+
+          {desc && <p className="desc">{desc}</p>}
+          
+        </Container>
       </div>
     </div>
   );
