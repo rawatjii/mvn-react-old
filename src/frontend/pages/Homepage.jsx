@@ -20,9 +20,9 @@ const Homepage = ()=>{
     <>
       <Hero />
 
-      <Suspense fallback="Loading">
+      {/* <Suspense fallback="Loading">
         <ScrollVideo />
-      </Suspense>
+      </Suspense> */}
 
       {/* <Suspense fallback="Loading">
         <Typology />
