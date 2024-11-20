@@ -3,6 +3,8 @@ import Container from 'react-bootstrap/Container';
 import LazyLoad from 'react-lazyload';
 // import hero_img from '../../../frontend/assets/images/micro_hero/hero_img.webp'
 
+import ImgMail from '../../assets/images/icons/email.png'
+
 const MicroHero = ({ data }) => {
   console.log(data.bannerHighLight);
 
@@ -29,6 +31,16 @@ const MicroHero = ({ data }) => {
               <p className="typo">2 & 3 BHK Luxury Apartments</p>
             </div>
           </Container>
+        </div>
+        }
+
+
+        {
+          data.enquiryBTN && data.enquiryBTN.isshow === true && <div className="enquiry_btn">
+          <a href={`mailto:${data.enquiryBTN.mail}`} className="btn btn_enquire">
+            <img src={ImgMail} className="img-fluid mail_enqiry_icon" alt="" />
+            Enquire Now
+          </a>
         </div>
         }
 

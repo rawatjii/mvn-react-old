@@ -6,6 +6,8 @@ import twitterIcon from '../assets/images/icons/social/twitter.png';
 import googlePlus from '../assets/images/icons/social/google-plus.png';
 import fbIcon from '../assets/images/icons/social/fb.png';
 import instaIcon from '../assets/images/icons/social/instagram.png';
+import BtnIcon from '../assets/images/icons/send.png';
+// import FormBgImg from '../assets/images/icons/form-bg.png';
 
 const Footer = ()=>{
   return(
@@ -77,6 +79,12 @@ const Footer = ()=>{
         </div>
 
         <div className="social_links text-center">
+        <h5 className="title">Subscribe Now</h5>
+        <form action="">
+          <input type="email" maxlength="50" required placeholder="Your Email Id: Example@gmail.com" />
+          <button class="bt"><img src={BtnIcon} alt="" className="img-fluid btn-arrow-img" /> </button>
+        </form>
+
           <ul>
             <li>
               <a href="" className="icon">
@@ -105,12 +113,14 @@ const Footer = ()=>{
           </ul>
         </div>
 
-        <div className="disclaimer text-center">
-          <Link to="">Disclaimer & Privacy Policy</Link>
-        </div>
+        <div className="flex-bottom-border">
+          <div className="disclaimer text-center">
+            <Link to="">Disclaimer & Privacy Policy</Link>
+          </div>
 
-        <div className="copyright">
-        2024-MVN Group. All Right Reserved <span>Curated by: <Link to="#">GTF Technologies</Link></span>
+          <div className="copyright">
+          2024-MVN Group. All Right Reserved <span>Curated by: <Link to="#">GTF Technologies</Link></span>
+          </div>
         </div>
 
       </Container>

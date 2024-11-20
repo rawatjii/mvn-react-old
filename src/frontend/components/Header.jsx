@@ -67,7 +67,7 @@ const Header = ()=>{
         <Container>
           <Navbar.Brand ref={logoRef}  className="logo">
             <Link to="/mvn/" onClick={()=>toggleMenu('close')}>
-              <img src={CONFIG.IMAGE_URL + 'logo_dark.webp'} alt="mvn-logo" className='img-fluid d-none d-md-block' fetchpriority='high' />
+              <img src={CONFIG.IMAGE_URL + 'logo_white.webp'} alt="mvn-logo" className='img-fluid d-none d-md-block' fetchpriority='high' />
               <img src={CONFIG.IMAGE_URL + 'logo_white.webp'} alt="mvn-logo" className='img-fluid d-md-none' fetchpriority='high' />
             </Link>
           </Navbar.Brand>

@@ -26,8 +26,11 @@ import InitialLoading from './frontend/skeleton/Initial/Index.jsx'
 import PageNotFound from './common/PageNotFound/Index.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './index.css';
+
 import './awaneesh.css'
+import './savan.css';
 import AeroOneBangalore from './frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx'
 
 const router = createBrowserRouter([

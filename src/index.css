@@ -585,7 +585,6 @@ a{
   }
 
   &.fixed{
-    background:#000;
     padding: 10px 5px;
 
     img{
@@ -987,27 +986,17 @@ a{
         gap: 10px;
 
         .icon{
-          width:30px;
+          width:60px;
         }
 
         .count{
           margin:0;
           line-height: initial;
-          color:var(--theme_primary_color)
+          color:var(--theme_primary_color);
+          font-family: 'Tinos';
         }
       }
 
-      &.right{
-        /* left:100%; */
-        position:relative;
-        text-align: left;
-        padding: 10px 0px 5px 20px;
-        margin-left:auto;
-
-        .top{
-          flex-direction: row-reverse;
-        }
-      }
 
       .title{
         font-weight: 400;
@@ -1073,8 +1062,8 @@ a{
       display: flex;
 
       .icon{
-        height: 40px;
-        width: 40px;
+        height: 60px;
+        width: 60px;
         margin-right: 20px;
         border-radius: 8px;
         background: #fff;
@@ -1083,7 +1072,7 @@ a{
         justify-content: center;
 
         img{
-          width:32px;
+          width:40px;
         }
       }
 
@@ -2419,3 +2408,15 @@ footer{
   }
 
 }
+
+
+
+
+
+
+
+/* This Code writing By Savan */
+
+
+
+/* This Code writing By Savan End*/

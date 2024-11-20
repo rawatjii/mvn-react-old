@@ -28,9 +28,9 @@ const Homepage = ()=>{
         <Typology />
       </Suspense> */}
 
-      {/* <Suspense fallback="Loading">
+       <Suspense fallback="Loading">
         <Overview />
-      </Suspense> */}
+      </Suspense>
 
       {/* <TestOverview /> */}
 
@@ -45,10 +45,13 @@ const Homepage = ()=>{
         <OurBrand />
 
         <Testimonial />
-
+        
+        <div className="flex-footer-form">
+          
         <Enquire />
 
-        <EnquireForm />
+          <EnquireForm />
+        </div>
     </>
   )
 }
