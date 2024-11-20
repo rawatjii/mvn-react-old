@@ -5,12 +5,15 @@ import { Container } from "react-bootstrap";
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import expIcon from '../../assets/images/icons/journey/experience.png';
-import citiesIcon from '../../assets/images/icons/journey/cities.png';
-import completeProjectsIcon from '../../assets/images/icons/journey/complete-projects.png';
-import ongoingProjectsIcon from '../../assets/images/icons/journey/ongoing-projects.png';
-import millionSqftIcon from '../../assets/images/icons/journey/sqft.png';
-import deliveryIcon from '../../assets/images/icons/journey/delivery.png'
+// import expIcon from '../../assets/images/icons/journey/experience.png';
+import citiesIcon from '../../assets/images/icons/journey/new-icons/icon-2.png';
+import completeProjectsIcon from '../../assets/images/icons/journey/new-icons/icon-3.png';
+import ongoingProjectsIcon from '../../assets/images/icons/journey/new-icons/icon-4.png';
+import millionSqftIcon from '../../assets/images/icons/journey/new-icons/icon-5.png';
+import deliveryIcon from '../../assets/images/icons/journey/new-icons/icon-6.png'
+import expIcon from '../../assets/images/icons/journey/new-icons/icon-1.png';
+
+
 // import planeIcon from '../../assets/images/icons/plane.jpg';
 import diamondIcon from '../../assets/images/icons/diamond.png';
 
