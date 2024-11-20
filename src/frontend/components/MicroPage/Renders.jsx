@@ -4,6 +4,10 @@ import SecTitle from "../../../common/SecTitle/Index";
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import * as CONFIG from '../../../config/config'
+
 import "yet-another-react-lightbox/styles.css";
 
 const Renders = ({data})=>{
@@ -19,7 +23,7 @@ const Renders = ({data})=>{
           <h4  className="title">Renders</h4>
         </SecTitle>
 
-        <Row>
+        {/* <Row>
           {renders.map((render, index)=>(
             <Col as={Col} xs={12}>
               <div className="single"  onClick={()=>setIndex(index)}>
@@ -27,7 +31,45 @@ const Renders = ({data})=>{
               </div>
             </Col>
           ))}
-        </Row>
+        </Row> */}
+
+        <div className="content">
+          {/* <div className="preview">
+              <img src={CONFIG.IMAGE_URL + 'renders/1_mobile.webp'} alt="mvn-render-preview-image" className="img-fluid" />
+          </div> */}
+
+          <Swiper
+            ref={contentRef}
+            spaceBetween={30}
+            slidesPerView={1}
+            className="testimonial_carousel"
+            pagination={{ clickable: true }}
+            modules={[Pagination]}
+            breakpoints={{
+              768: {
+                slidesPerView: 3, // 3 items for desktop
+                spaceBetween: 50,
+              },
+              0: {
+                slidesPerView: 1, // 1 item for mobile
+                spaceBetween: 20,
+              },
+            }}
+          >
+            {testimonialData.map((item, index) => (
+              <SwiperSlide key={index}>
+                <div className="single">
+                  <div className="content">
+                    <img src={quoteIcon} alt="mvn quotes icon" className="img-fluid quote_icon" />
+                    <h4 className="title">{item.title}</h4>
+                    <p className="msg">{item.msg}</p>
+                    <p className="testimonial-name">{item.name}</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
 
       </Container>
 

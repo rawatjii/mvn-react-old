@@ -7,7 +7,9 @@ import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_im
 import "./aeroGuragaon.css";
 
 const data = {
-  micro_hero_section: [{ imgMb: hero_img_mb, imgDesk: hero_img_desk }],
+  // micro_hero_section: [
+  //   { imgMb: hero_img_mb, imgDesk: hero_img_desk }
+  // ],
   overview: {
     title: "MVN Aero One",
     location: "Gurgaon",
