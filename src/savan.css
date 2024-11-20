@@ -124,6 +124,7 @@ footer form{position:relative;margin-bottom:30px}
   footer .social_links.text-center input[type="email"] { width: 100%;}
 
 
+
 }
 
 
@@ -250,5 +251,6 @@ footer form{position:relative;margin-bottom:30px}
     }
 }
     
+footer .social_links.text-center input[type="email"] { width: 100%;}
 
 }
