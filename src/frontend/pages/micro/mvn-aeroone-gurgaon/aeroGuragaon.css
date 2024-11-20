@@ -1,10 +1,11 @@
-.large-elevation{background: var(--color2); position: relative;}
+.large-elevation{background: var(--color2); position: relative; overflow: hidden;}
 .large-elevation .container_elevation{padding: 0;}
 .large-elevation .top_div{padding: 50px 15px 74px 15px;}
 .large-elevation .title{font-size: 25px; line-height: 38px; letter-spacing: 1px;}
-.large-elevation .abs_img{position: absolute; z-index: 1; right: 0; bottom: 0; width: 97%;}
+.large-elevation .abs_img{position: absolute; z-index: 1; right: 0; top: 0; display: flex; justify-content: end; width: 80%;}
 /* .large-elevation .abs_img .abs_img_in{width: 80%;} */
 
 @media (min-width:768px) {
-    /* .large-elevation{max-height: 100vh;}    */
+    .large-elevation .top_div{padding: 105px 0 139px 116px;}
+    .large-elevation .title {font-size: 31px;line-height: 55px;max-width: 511px;}
 }
