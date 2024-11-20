@@ -16,6 +16,7 @@ import MasterBedroom from "../components/MicroPage/MasterBedroom";
 import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
 import LargeElevationSection from '../components/MicroPage/LargeElevationSection'
+import Renders from "../components/MicroPage/Renders";
 
 const MicroPage = ({ data }) => {
 

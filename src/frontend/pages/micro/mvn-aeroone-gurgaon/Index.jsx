@@ -52,7 +52,7 @@ const data = {
   },
   LargeElevationSection: {
     title: "an epitome of contemporary elegance",
-    isAllow: false,
+    isAllow: true,
   },
   renders:[
     {
