@@ -7,10 +7,11 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { FreeMode, Navigation, Thumbs } from "swiper/modules";
 
-// import "swiper/css";
-// import "swiper/css/free-mode";
-// import "swiper/css/navigation";
-// import "swiper/css/thumbs";
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/free-mode";
+import "swiper/css/navigation";
+import "swiper/css/thumbs";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -20,21 +21,39 @@ const Renders = ({ data }) => {
   const swiperRef = useRef(null);
 
   useEffect(() => {
-    const scrollAnimation = ScrollTrigger.create({
-      trigger: ".render_section_in", // Pin based on this section
-      start: "top top", // Pin when the top of the section reaches the top of the viewport
-      end: `+=${window.innerHeight * 3}`, // Unpin when we scroll past the section (adjust height as needed)
-      pin: true, // Pin the section
-      scrub: true,
-      markers: true, // Enable markers for debugging
+    const section = sectionRef.current;
+    const slides = section.querySelectorAll(".renders_swiper .swiper-slide");
+
+    const scrollTimeline = gsap.timeline({
+      scrollTrigger: {
+        trigger: section,
+        start: "top top",
+        end: "+=200%", // Adjust the scroll distance
+        pin: true,
+        scrub: true,
+        markers: true, // Enable markers for debugging
+      },
+    });
+
+    // Animate each slide based on scroll progress
+    slides.forEach((slide, index) => {
+      scrollTimeline.to(
+        slide,
+        {
+          xPercent: -100 * index, // Move slides horizontally
+          ease: "none",
+        },
+        index * 0.2 // Stagger animations
+      );
     });
 
     return () => {
-      scrollAnimation.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
   }, []);
+
   return (
-    <section className="section render_section">
+    <section className="section render_section" ref={sectionRef}>
       <div className="render_section_in">
         <div className="content">
           <Container>

@@ -23,7 +23,7 @@ const MicroPage = ({ data }) => {
   return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
-        <MicroHero data={data} />
+        {/* <MicroHero data={data} /> */}
         <MicroOverview data={data} />
         {data.LargeElevationSection && data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
         {data.video1.isVdo === true && <PeacockSection data={data} />}
