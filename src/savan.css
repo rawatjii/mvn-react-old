@@ -121,7 +121,7 @@ footer form{position:relative;margin-bottom:30px}
     footer {padding-top: 50px;margin-top: 50px;}
     .enquire_form, .enquire_section {height:unset!important;}
     .our_brand_section {& .brand_content { .single_col:not(:last-child) {  margin-bottom: 25px; }}}
-  footer .social_links.text-center input[type="email"] { width: 100%;}
+
 
 
 
