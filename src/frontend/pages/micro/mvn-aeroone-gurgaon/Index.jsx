@@ -15,17 +15,17 @@ const data = {
   video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
     // desc:'Our 13.5ft High Ceilings Will Set A Higher Standard Of Space Utilisation In Harmony With Design Aesthetics & Sophistication.',
-    isVdo: false,
+    isVdo: true,
   },
   video2: {
     title: "ESCAPE TO EXCLUSIVITY",
     desc: "Dive into your own private pool with a grand view, just a few steps away from your living room",
-    isVdo: false,
+    isVdo: true,
   },
   video3: {
     title: "ELEVATED LIVING",
     desc: "OUR 13.5FT HIGH CEILINGS WILL SET A HIGHER STANDARD OF SPACE UTILISATION IN HARMONY WITH DESIGN AESTHETICS & SOPHISTICATION",
-    isVdo: false,
+    isVdo: true,
   },
   masterBedroom: {
     title: "MASTER BEDROOM",
@@ -44,7 +44,7 @@ const data = {
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: false,
+      isVdo: true,
     },
   },
   LargeElevationSection: {
