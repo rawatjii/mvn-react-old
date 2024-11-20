@@ -13,7 +13,7 @@ const MasterBedroom = ({data}) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
-  const totalFrames = 183;
+  const totalFrames = 182;
   const frameRefs = useRef([]);
 
   // for animation
@@ -35,9 +35,9 @@ const MasterBedroom = ({data}) => {
     // Preload images
     const loadedImages = [];
 
-    for (let i = 1; i <= 183; i++) {
+    for (let i = 1; i <= 182; i++) {
       const img = new Image();
-      img.src = `assets/images/peacock/${i}.webp`; // Update with the correct path for your frames
+      img.src = `assets/videos/master-bedroom/mobile/${i}.webp`; // Update with the correct path for your frames
       loadedImages.push(img);
     }
     setImages(loadedImages);
@@ -50,7 +50,7 @@ const MasterBedroom = ({data}) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: 'top top',
-      end: `+=${window.innerHeight * 2}`, // Extend scroll distance to fit more frames
+      end: `+=${window.innerHeight * 5}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {

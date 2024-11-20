@@ -26,7 +26,9 @@ import InitialLoading from './frontend/skeleton/Initial/Index.jsx'
 import PageNotFound from './common/PageNotFound/Index.jsx'
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+
 import './index.css';
+import './savan.css';
 import './awaneesh.css'
 import AeroOneBangalore from './frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx'
 

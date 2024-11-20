@@ -28,9 +28,9 @@ const Homepage = ()=>{
         <Typology />
       </Suspense> */}
 
-      {/* <Suspense fallback="Loading">
+       <Suspense fallback="Loading">
         <Overview />
-      </Suspense> */}
+      </Suspense>
 
       {/* <TestOverview /> */}
 
