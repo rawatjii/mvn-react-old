@@ -1085,9 +1085,9 @@ a{
         }
 
         p{
-          white-space: nowrap;
+          /* white-space: nowrap;
           text-overflow: ellipsis;
-          overflow: hidden;
+          overflow: hidden; */
           font-size: 14px;
           color: #b1b1b1;
           margin-bottom: 3px;

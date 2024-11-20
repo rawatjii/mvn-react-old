@@ -1,160 +1,83 @@
 import React, { useEffect, useRef, useState } from "react";
 import SecTitle from "../../../common/SecTitle/Index";
 import { Container } from "react-bootstrap";
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
-
-// import expIcon from '../../assets/images/icons/journey/experience.png';
-import citiesIcon from '../../assets/images/icons/journey/new-icons/icon-2.png';
-import completeProjectsIcon from '../../assets/images/icons/journey/new-icons/icon-3.png';
-import ongoingProjectsIcon from '../../assets/images/icons/journey/new-icons/icon-4.png';
-import millionSqftIcon from '../../assets/images/icons/journey/new-icons/icon-5.png';
-import deliveryIcon from '../../assets/images/icons/journey/new-icons/icon-6.png'
-import expIcon from '../../assets/images/icons/journey/new-icons/icon-1.png';
-
-
-// import planeIcon from '../../assets/images/icons/plane.jpg';
-import diamondIcon from '../../assets/images/icons/diamond.png';
+import diamondIcon from "../../assets/images/icons/diamond.png";
+import expIcon from "../../assets/images/icons/journey/new-icons/icon-1.png";
+import citiesIcon from "../../assets/images/icons/journey/new-icons/icon-2.png";
+import completeProjectsIcon from "../../assets/images/icons/journey/new-icons/icon-3.png";
+import ongoingProjectsIcon from "../../assets/images/icons/journey/new-icons/icon-4.png";
+import millionSqftIcon from "../../assets/images/icons/journey/new-icons/icon-5.png";
+import deliveryIcon from "../../assets/images/icons/journey/new-icons/icon-6.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const journeyData = [
-  {
-    icon:expIcon,
-    title:'Years Experience',
-    value:'40+'
-  },
-  {
-    icon:citiesIcon,
-    title:'Cities',
-    value:'20'
-  },
-  {
-    icon:completeProjectsIcon,
-    title:'Completed Projects',
-    value:'9'
-  },
-  {
-    icon:ongoingProjectsIcon,
-    title:'Ongoing Projects',
-    value:'4'
-  },
-  {
-    icon:millionSqftIcon,
-    title:'Million Square Feet',
-    value:'2.3'
-  },
-  {
-    icon:deliveryIcon,
-    title:'On time Delivery',
-    value:'100%'
-  }
-]
+  { icon: expIcon, title: "Years Experience", value: "40+" },
+  { icon: citiesIcon, title: "Cities", value: "20" },
+  { icon: completeProjectsIcon, title: "Completed Projects", value: "9" },
+  { icon: ongoingProjectsIcon, title: "Ongoing Projects", value: "4" },
+  { icon: millionSqftIcon, title: "Million Square Feet", value: "2.3" },
+  { icon: deliveryIcon, title: "On time Delivery", value: "100%" },
+];
 
-const OurJourney = ()=>{
-
+const OurJourney = () => {
   const titleRef = useRef();
   const contentRef = useRef([]);
-  const planeRef = useRef();
   const journeyRef = useRef();
   const [imagesLoaded, setImagesLoaded] = useState(0);
 
-  const initializeAnimations = ()=>{
-    let isClassAdded = false;
-
+  const initializeAnimations = () => {
+    // Title Animation
     gsap.from(titleRef.current, {
-      y: 50,  
+      y: 50,
       opacity: 0,
       duration: 1,
-
-      scrollTrigger:{
+      scrollTrigger: {
         trigger: titleRef.current,
         start: "top 95%",
-      }
-    })
+      },
+    });
 
-    contentRef.current.forEach((conRef, index)=>{
-      if(conRef){
+    // List Items Animation
+    contentRef.current.forEach((conRef) => {
+      if (conRef) {
         gsap.from(conRef, {
-          y: 10,  
+          y: 10,
           opacity: 0,
           duration: 0.5,
-
-          scrollTrigger:{
+          scrollTrigger: {
             trigger: conRef,
             start: "top 95%",
-          }
-        })
+          },
+        });
       }
-    })
+    });
+  };
 
-    // ScrollTrigger.create({
-    //   trigger: journeyRef.current,
-    //   start: "top 50%",  // Add class when the top of journey_content reaches 50% of the viewport
-    //   onEnter: () => {
-    //     if (planeRef.current && !isClassAdded) {
-    //       planeRef.current.classList.add("rotated");
-    //       isClassAdded = true;
-    //     }
-    //   },
-    //   onUpdate: (self) => {
-    //     if (planeRef.current) {  // Check if planeRef.current exists
-    //       // If scrolling back up, remove the class (before reaching the end)
-    //       if (self.direction === -1 && isClassAdded) {  // -1 means scrolling up
-    //         planeRef.current.classList.remove("rotated");
-    //         isClassAdded = false;
-    //       }
-      
-    //       if (self.direction === 1 && !isClassAdded) {
-    //         planeRef.current.classList.add("rotated");
-    //         isClassAdded = true;
-    //       }
-    //     }
-    //   },
-    //   onLeave: () => {
-    //     // Remove the class when scrolling past the end of journey_content
-    //     if (planeRef.current) {
-    //       planeRef.current.classList.remove("rotated");
-    //       isClassAdded = false;
-    //     }
-    //   }
-    // });
-    
-
-    // Animation 2: Pin the plane at the center and release at the end
-    // gsap.to(planeRef.current, {
-    //   yPercent: -50,  // Center vertically
-    //   scrollTrigger: {
-    //     trigger: ".journey_content",
-    //     start: "top 50%",  // Fix position when journey_content reaches 50%
-    //     end: "bottom 50%",  // Release when journey_content ends
-    //     pin: planeRef.current,
-    //     pinSpacing: false,
-    //     scrub: true
-    //   }
-    // });
-  }
-
-  useEffect(()=>{
-    if(imagesLoaded === journeyData.length){
-      setTimeout(()=>{
+  useEffect(() => {
+    if (imagesLoaded === journeyData.length) {
+      setTimeout(() => {
         initializeAnimations();
         ScrollTrigger.refresh();
-      }, 300)
+      }, 300);
     }
 
-    window.addEventListener('resize',ScrollTrigger.refresh())
+    const handleResize = () => {
+      ScrollTrigger.refresh();
+    };
 
-    return()=>window.removeEventListener('resize',ScrollTrigger.refresh())
-    
-  }, [imagesLoaded])
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [imagesLoaded]);
 
-  const handleImageLoad = ()=>{
+  const handleImageLoad = () => {
     setImagesLoaded((prev) => prev + 1);
-  }
+  };
 
-  return(
+  return (
     <section className="section journey_section pb-0">
       <Container>
         <SecTitle className="text-center color style2">
@@ -168,11 +91,16 @@ const OurJourney = ()=>{
           <div className="plane">
             <img src={diamondIcon} alt="mvn plan icon" className="img-fluid diamond_icon" />
           </div>
-          {journeyData?.map((item, index)=>(
-            <li className={'single ' + (index % 2 != 0 ? 'right' : '')} key={index}>
-              <div className="data" ref={(el)=>(contentRef.current[index] = el)}>
+          {journeyData?.map((item, index) => (
+            <li className={"single " + (index % 2 !== 0 ? "right" : "")} key={index}>
+              <div className="data" ref={(el) => (contentRef.current[index] = el)}>
                 <div className="top">
-                  <img src={item.icon} alt="mvn journey icon" className="img-fluid icon" onLoad={handleImageLoad} />
+                  <img
+                    src={item.icon}
+                    alt="mvn journey icon"
+                    className="img-fluid icon"
+                    onLoad={handleImageLoad}
+                  />
                   <p className="count">{item.value}</p>
                 </div>
                 <p className="title">{item.title}</p>
@@ -182,7 +110,7 @@ const OurJourney = ()=>{
         </ul>
       </Container>
     </section>
-  )
-}
+  );
+};
 
-export default OurJourney
+export default OurJourney;
