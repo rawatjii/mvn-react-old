@@ -15,10 +15,9 @@ import Video3 from "../components/MicroPage/Video3";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
 import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
-import LargeElevationSection from '../components/MicroPage/LargeElevationSection'
+import LargeElevationSection from "../components/MicroPage/LargeElevationSection";
 
 const MicroPage = ({ data }) => {
-
   return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
@@ -28,8 +27,11 @@ const MicroPage = ({ data }) => {
         {data.video2.isVdo === true && <Video2 data={data} />}
         {data.video3.isVdo === true && <Video3 data={data} />}
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
-        {data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
-        <Walkthrough data={data} />
+        {data.LargeElevationSection &&
+          data.LargeElevationSection.isAllow === true && (
+            <LargeElevationSection data={data.LargeElevationSection} />
+          )}
+        {/* {data.Walkthrough && <Walkthrough data={data} />} */}
         <MicroHighlights />
         <MicroPrice />
         <MicroAmenities />
@@ -44,10 +46,8 @@ const MicroPage = ({ data }) => {
           </div>
         </div>
         <MicroLocationMap />
-        {
-          data.Slides && data.Slides.isshow === true && <Slides/>
-        }
-        
+        {data.Slides && data.Slides.isshow === true && <Slides />}
+
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-6 px-0">
