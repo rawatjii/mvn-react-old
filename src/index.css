@@ -2256,7 +2256,20 @@ footer{
 
   /* micro page */
 
+  .micro_hero_section{
 
+    .frames_content{
+      height: 100vh;
+      
+
+      img{
+        height: 100%;
+        object-fit: cover;
+        width:100%;
+      }
+
+    }
+  }
 
   /* peacock section */
 

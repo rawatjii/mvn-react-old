@@ -20,7 +20,7 @@ const MicroHero = ({ data }) => {
 
     for (let i = 1; i <= 226; i++) {
       const img = new Image();
-      img.src = `assets/images/micro/hero/${i}.jpg`; // Update with the correct path for your frames
+      img.src = `assets/images/micro/hero/${i}.webp`; // Update with the correct path for your frames
       loadedImages.push(img);
     }
     setImages(loadedImages);
