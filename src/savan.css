@@ -6,11 +6,18 @@ section.overview_section.desktop-view .home-about-content p{font-size:14px;width
 section.overview_section.desktop-view .hero_title{margin-bottom:39px;font-size:28px;letter-spacing:3px;line-height:51px}
 section.scrollSlider-Content-2.desktop-view {margin-top: 100px;}
 .our_brand_section .brand_content {background:unset;border-radius:20px;padding:35px 25px}
-.our_brand_section .brand_content .single .content {
-  display: grid;
-}
+.our_brand_section .brand_content .single .content {display: grid;}
 footer .social_links.text-center input[type="email"]:focus{outline:none;border:none;}
 footer .social_links h5.title {text-align: right}
+
+.testimonial-name { color: var(--theme_primary_color);margin-top: 10px; font-size: 14px;}
+.single .content {h4.title {font-size: 24px !important;}}
+.enquire_section {.sec_title { margin-bottom: 25px;}}
+
+footer form{position:relative;margin-bottom:30px}
+    footer .social_links.text-center input[type="email"]{border:none;padding:9px;border-radius:50px;width:81%;font-size:14px}
+    footer .social_links.text-center button.bt{position:absolute;top:0;right:0;height:100%;border:none;border-radius:50px;background-color:#f4d966;color:#000;padding:8px 30px}
+    footer .social_links.text-center button.bt .btn-arrow-img { width: auto;  height: 22px;}
 
 @media screen and (min-width: 767px) {
 
@@ -24,9 +31,9 @@ footer .social_links h5.title {text-align: right}
 
     .container { max-width: 88%; }
     .projects_section .px_8.left_col.col-6 { display: grid;align-content: space-between; }
-    .projects_section {& .left_col .single {.lazyload-wrapper, .an_img {height: 480px!important; }} }
+    .projects_section {& .left_col .single {.lazyload-wrapper, .an_img {height: 791px!important; }} }
     .projects_section {.plane_icon {display:none;}}
-    .projects_section {.sec_title {  font-size: 50px; margin-bottom: 43px; letter-spacing: 46px; display: grid; gap: 20px 0px; padding-top: 21%;}}
+    .projects_section {.sec_title {  font-size: 50px; margin-bottom: 43px; letter-spacing: 46px; display: grid; gap: 20px 0px; ;}}
 
     .projects_section {
         .sec_title {
@@ -73,8 +80,8 @@ footer .social_links h5.title {text-align: right}
     .our_brand_section .brand_content .content h4.title{font-size:18px!important}
     .our_team_section p {font-size: 27px;  letter-spacing: 3px;line-height: 34px; width: 64%; font-weight: 200;margin: 0px auto;}
     .our_brand_section {.brand_bg { position: absolute; left: 0; z-index: -1;top: 0; height: 100%;object-fit: cover;width: 100%;opacity: unset; }}
-    .our_brand_section .brand_content::after{position:absolute;content:'';top:41%;left:calc(40% - 1px);display:block;height:29%;width:1px;border-right:2px dashed  #c0ab50;z-index:-1}
-    .our_brand_section .brand_content::before{position:absolute;content:'';top:41%;right:calc(40% - 1px);display:block;height:29%;width:1px;border-right:2px dashed  #c0ab50;z-index:-1}
+    .our_brand_section .brand_content::after{position:absolute;content:'';top:41%;left:calc(36% - 1px);display:block;height:22%;width:1px;border-right:2px dashed #c0ab50;z-index:-1;transform:rotate(90deg)}
+    .our_brand_section .brand_content::before{position:absolute;content:'';top:38%;right:calc(35% - 1px);display:block;height:30%;width:1px;border-right:2px dashed #c0ab50;z-index:-1;transform:rotate(90deg)}
     .our_brand_section .brand_content .row { gap: 20px 0px; }
     .testimonial_section { .sec_title { margin-bottom: 60px;}}
     .our_brand_section .brand_content {padding-top: 0px;}
@@ -104,19 +111,17 @@ footer .social_links h5.title {text-align: right}
     footer {& .contact_details { & li { a { color: #dbd6d6; font-size: 14px;}}}}
     footer p {font-size: 14px;color: #dbd6d6;}
     footer {& .social_links {  & ul {   display: flex;  justify-content: end; } }}
-    footer form{position:relative;margin-bottom:30px}
-    footer .social_links.text-center input[type="email"]{border:none;padding:9px;border-radius:50px;width:81%;font-size:14px}
-    footer .social_links.text-center button.bt{position:absolute;top:0;right:0;height:100%;border:none;border-radius:50px;background-color:#f4d966;color:#000;padding:8px 30px}
-    footer .social_links.text-center button.bt .btn-arrow-img { width: auto;  height: 22px;}
+    
     .flex-footer-form{display:flex;flex-wrap:wrap}
     .flex-footer-form section.section.enquire_section{width:50%}
     .flex-footer-form section.section.enquire_form{width:50%}
     .enquire_form .container {padding: 50px 40px!important; margin: 0px 180px!important;}
     .enquire_section {.enquire_bg {  position: absolute; z-index: 0;  height: 100%;width: 100%;object-fit: cover; left: 0; top: 0;  opacity: 0.2; z-index: -1;}}
     .enquire_section .container {padding: 170px 40px!important;  margin: 120px!important;  background-color: #000000;  display: block;}
-    footer {padding-top: 50px;}margin-top: 50px;}
+    footer {padding-top: 50px;margin-top: 50px;}
     .enquire_form, .enquire_section {height:unset!important;}
-    
+    .our_brand_section {& .brand_content { .single_col:not(:last-child) {  margin-bottom: 25px; }}}
+  footer .social_links.text-center input[type="email"] { width: 100%;}
 
 
 }

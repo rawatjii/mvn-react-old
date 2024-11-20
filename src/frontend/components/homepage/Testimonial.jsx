@@ -108,6 +108,7 @@ const Testimonial = () => {
                   <img src={quoteIcon} alt="mvn quotes icon" className="img-fluid quote_icon" />
                   <h4 className="title">{item.title}</h4>
                   <p className="msg">{item.msg}</p>
+                  <p className="testimonial-name">{item.name}</p>
                 </div>
               </div>
             </SwiperSlide>
