@@ -1085,9 +1085,9 @@ a{
         }
 
         p{
-          white-space: nowrap;
+          /* white-space: nowrap;
           text-overflow: ellipsis;
-          overflow: hidden;
+          overflow: hidden; */
           font-size: 14px;
           color: #b1b1b1;
           margin-bottom: 3px;
@@ -2169,9 +2169,37 @@ footer{
   }
 }
 
+/* render_section */
+
+.render_section{
+
+  .sec_title{
+    margin-bottom:20px;
+  }
+
+  .single{
+
+    margin:7px 0;
+  }
+}
+
 
 /* start responsive */
-
+/* by bhupendra */
+@media(min-width:768px){
+  .desktop_fluid_container{max-width: 100%;}
+  .location_map_section {
+    .locationMapContent {
+        .location_points {
+          padding-left: 15px;
+            .top_road {
+                left: 0;
+                border-left: 1px dashed var(--theme_primary_color);
+            }
+        }
+    }
+}
+}
 @media(max-width:767px){
   .d_lg_block{display: none;}
   .d_sm_block{display: block;}

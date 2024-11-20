@@ -1,7 +1,9 @@
 import React from "react";
 import MicroPage from "../../Micro";
+import * as CONFIG from '../../../../config/config';
 import hero_img_mb from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
 import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
+
 import "./aeroGuragaon.css";
 
 const data = {
@@ -52,6 +54,28 @@ const data = {
     title: "an epitome of contemporary elegance",
     isAllow: false,
   },
+  renders:[
+    {
+      src:CONFIG.IMAGE_URL + 'renders/1_desktop.webp',
+      mobile_thumb:CONFIG.IMAGE_URL + 'renders/1_mobile.webp',
+    },
+    {
+      src:CONFIG.IMAGE_URL + 'renders/2_desktop.webp',
+      mobile_thumb:CONFIG.IMAGE_URL + 'renders/2_mobile.webp',
+    },
+    {
+      src:CONFIG.IMAGE_URL + 'renders/3_desktop.webp',
+      mobile_thumb:CONFIG.IMAGE_URL + 'renders/3_mobile.webp',
+    },
+    {
+      src:CONFIG.IMAGE_URL + 'renders/4_desktop.webp',
+      mobile_thumb:CONFIG.IMAGE_URL + 'renders/4_mobile.webp',
+    },
+    {
+      src:CONFIG.IMAGE_URL + 'renders/5_desktop.webp',
+      mobile_thumb:CONFIG.IMAGE_URL + 'renders/5_mobile.webp',
+    }
+  ]
 };
 
 const AeroOneGurgaon = () => {

@@ -109,7 +109,7 @@ const OurBrand = () => {
                   <div className="content">
                     <h4 className="title">{item.title}</h4>
                     <p>{item.para}</p>
-                    <Link to="#" className="link">Read More</Link>
+                    {/* <Link to="#" className="link">Read More</Link> */}
                   </div>
                 </div>
               </Col>
