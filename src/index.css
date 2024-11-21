@@ -1577,12 +1577,12 @@ footer{
     text-transform: uppercase;
     text-align: center;
     color:#dcc35c;
-    font-size: 11px;
+    font-size: 15px;
     letter-spacing: 1px;
     margin-bottom: 0;
     
     span{
-      font-size:16px;
+      font-size:18px;
     }
   }
   .contact_details{
@@ -1590,7 +1590,7 @@ footer{
     li{
       text-align: center;
       color:#fff;
-      font-size:16px;
+      font-size:18px;
       margin:15px 0;
       display:block;
       position:relative;
@@ -1601,7 +1601,7 @@ footer{
       a{
         text-align: center;
         color:#fff;
-        font-size:16px;
+        font-size:18px;
       }
       .icon{
         position: absolute;
