@@ -352,6 +352,13 @@
             border-bottom: 1px dashed rgb(244 217 102 / 25%);
         }
     }
+    padding: 100px 0px;
+}
+.price_section{
+    padding: 100px 0px !important;
+}
+.amenities_section{
+    padding: 100px 0px !important   ;
 }
 
 
@@ -370,9 +377,9 @@
 }
 
 
-.section{
+/* .section{
     padding: 100px 0px;
-}
+} */
 
 .career_page .enquire_form .container{
     margin: 0px 90px;
