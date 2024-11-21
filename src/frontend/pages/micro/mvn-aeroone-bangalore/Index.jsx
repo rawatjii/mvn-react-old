@@ -4,10 +4,15 @@ import hero_img_mb from "../../../../frontend/assets/images/micro/aeroone_bangal
 import hero_img_desk from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_desk.jpg";
 
 const data = {
-  micro_hero_section: [{ imgMb: hero_img_mb, imgDesk: hero_img_desk, isVdo: false, }],
+  micro_hero_section: 
+  {
+    isVdo: false,
+    images:[{ imgMb: hero_img_mb, imgDesk: hero_img_desk, }],
+    bannerHighLight:true,
+    enquiryBTN:true 
+  },
   bannerHighLight: {
     isshow: true,
-    
   },
   overview: {
     title: "MVN AERO ONE",
