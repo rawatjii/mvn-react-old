@@ -15,18 +15,12 @@ export default function LargeElevation({ data }) {
 
     const sectionRef = React.useRef(null);
 
+    // console.log(data.images);
+
+
     useEffect(() => {
-
-        // ScrollTrigger.create({
-        //     trigger: sectionRef.current,
-        //     start: 'top top',
-        //     end: () => '+=' + sectionRef.current.offsetHeight,
-        //     pin: true,
-        //     scrub: 0.5,
-        // });
-
         gsap.to(".bottom_img_div", {
-            y: -80,
+            // y: -80,
             scrollTrigger: {
                 trigger: ".large-elevation",
                 start: "top bottom",
@@ -34,10 +28,17 @@ export default function LargeElevation({ data }) {
                 scrub: true,
             },
         });
-
         gsap.to(".abs_img", {
-            // y: -80,
-            width: "70%",
+            y: 222,
+            scrollTrigger: {
+                trigger: ".large-elevation",
+                start: "top bottom",
+                end: "top top",
+                scrub: true,
+            },
+        });
+        gsap.to(".abs_img1", {
+            y: 375,
             scrollTrigger: {
                 trigger: ".large-elevation",
                 start: "top bottom",
@@ -68,7 +69,7 @@ export default function LargeElevation({ data }) {
                     <div className='full_img'>
                         <img src={bgImgDesk} alt={data.title} className="img-fluid img_in d_lg_block" />
                     </div>
-                    <div className='abs_img'>
+                    <div className='abs_img abs_img1'>
                         <img src={absDesk} alt={data.title} className="img-fluid abs_img_in d_lg_block" />
                     </div>
                 </div>

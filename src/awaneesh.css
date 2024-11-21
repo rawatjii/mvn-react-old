@@ -57,6 +57,13 @@
 /* .hero-img img{
     width: 100%;
 } */
+
+.navbar {
+    &.fixed {
+        background-color: #000;
+        box-shadow: 0px 0px 4px #ffffff29;
+    }
+}
  .overview_card{
     padding: 40px;
  }
@@ -282,8 +289,14 @@
 }
 
 
+.micro_footer .enquire_form, .micro_footer .enquire_section{
+    height: 100% !important;
+}
 
 
+.micro_footer .enquire_form .container{
+    margin: 0px 140px!important;
+}
 
 
 
