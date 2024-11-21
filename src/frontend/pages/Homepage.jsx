@@ -11,18 +11,31 @@ import EnquireForm from '../components/homepage/EnquireForm';
 const ScrollVideo = React.lazy(()=>import('../components/homepage/ScrollVideo'));
 const Typology = React.lazy(()=>import('../components/homepage/Typology'));
 const Overview = React.lazy(()=>import('../components/homepage/Overview'));
+import HomepageVideo from "../components/MicroPage/HomepageVideo";
 
 import { Suspense } from "react";
-import TestOverview from "../components/homepage/TestOverview";
+// import TestOverview from "../components/homepage/TestOverview";
+// import Header from "../components/Header/Header";
+
+
 
 const Homepage = ()=>{  
+  const dataa={
+    title:"asdfasf",
+     des:"sfsafa"
+
+  }
   return(
     <>
-      <Hero />
+    <HomepageVideo data={dataa} />
+      {/* <Hero /> */}
+      {/* <Suspense fallback="Loading">
+        <Header />
+      </Suspense> */}
 
       {/* <Suspense fallback="Loading">
         <ScrollVideo />
-      </Suspense> */}
+      </Suspense>  */}
 
       {/* <Suspense fallback="Loading">
         <Typology />
