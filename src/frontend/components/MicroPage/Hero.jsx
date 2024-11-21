@@ -71,18 +71,22 @@ const MicroHero = ({ data }) => {
   return (
     <>
       <section className="section micro_hero_section p-0">
-        <div ref={containerRef} className="frames_content">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              ref={(el) => (frameRefs.current[index] = el)}
-              src={img.src}
-              alt={`Frame ${index}`}
-              className="frame"
-              style={{ display: index === 0 ? "block" : "none" }}
-            />
-          ))}
-        </div>
+
+        {data.isVdo && (
+          <div ref={containerRef} className="frames_content">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                ref={(el) => (frameRefs.current[index] = el)}
+                src={img.src}
+                alt={`Frame ${index}`}
+                className="frame"
+                style={{ display: index === 0 ? "block" : "none" }}
+              />
+            ))}
+          </div>
+        )}
+
         {
           data.micro_hero_section && Array.isArray(data.micro_hero_section) && data.micro_hero_section.map((imgs, index) => (
             <div key={index} className="hero-img">
