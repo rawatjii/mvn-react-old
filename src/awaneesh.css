@@ -66,7 +66,9 @@
     text-align: center;
 }
 
-
+.enquire_form .container{
+    margin: 0 !important;
+}
 
 
 
@@ -384,7 +386,9 @@
 .career_page .enquire_form .container{
     margin: 0px 90px;
 }
-
+.micro_overview .btn{
+    margin-top: 45px;
+}
 
 
 
@@ -432,10 +436,15 @@
                 font-size: 24px;
                 border: 1px dashed var(--theme_primary_color);
                 display: inline-block;
-                padding: 2px 4px;
+                padding: 3px 6px;
                 border-radius: 3px;
-                letter-spacing: 1px;
+                letter-spacing: 2px;
                 margin-bottom: 5px;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 300;
+                letter-spacing: 1px;
             }
         }
     }
