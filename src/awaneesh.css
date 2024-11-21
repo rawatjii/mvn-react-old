@@ -591,9 +591,35 @@ h4.title {
         }
     }
 }
-
-
-
+.micro_hero_section {
+    & .hero_content {
+        & .content {
+            & .typo {
+                font-size:  24px;
+            }
+        }
+    }
+}
+.micro_hero_section {
+    & .hero_content {
+        & .content {
+            & .starting_price {
+                font-size: 32px;
+            }
+        }
+    }
+}
+.micro_hero_section {
+    & .hero_content {
+        & .content {
+            & .starting_price {
+                small {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
 
 
 
