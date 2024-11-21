@@ -134,6 +134,10 @@ footer form{position:relative;margin-bottom:30px}
     .philosophy_section .content{justify-content:center;align-items:baseline;justify-content:space-between}
     .timeline_section{padding-bottom:60px!important}
     .page-header-main-heading { max-width: 18%; padding-top: 40px;}
+    .philosophy_section .content li:last-child{margin:0 auto}
+    .philosophy_section .content li li:last-child{margin:unset}
+    section.section.about_overview.pb-0  .about_bg { display: none;}
+
 
 }
 
@@ -372,6 +376,11 @@ footer .social_links.text-center input[type="email"] { width: 100%;}
     }
   }
 
+  .enquire_form .container {
+    padding: 0px 40px !important;
+    margin: 0px 0px !important;
+}
+section.section.about_overview.pb-0  .about_bg {display: block;}
 
 
 
