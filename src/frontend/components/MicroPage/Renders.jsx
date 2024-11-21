@@ -1,119 +1,101 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
-import SecTitle from "../../../common/SecTitle/Index";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
-
-// Import Swiper styles
-import "swiper/css";
-import "swiper/css/free-mode";
-import "swiper/css/navigation";
-import "swiper/css/thumbs";
-
 gsap.registerPlugin(ScrollTrigger);
 
-const Renders = ({ data }) => {
-  const [thumbsSwiper, setThumbsSwiper] = useState(null);
+const Renders = () => {
   const sectionRef = useRef(null);
-  const swiperRef = useRef(null);
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const slides = [
+    {
+      title: "Slide 1",
+      content: "This is the first slide.",
+      thumbnail: "https://swiperjs.com/demos/images/nature-1.jpg",
+    },
+    {
+      title: "Slide 2",
+      content: "This is the second slide.",
+      thumbnail: "https://swiperjs.com/demos/images/nature-2.jpg",
+    },
+    {
+      title: "Slide 3",
+      content: "This is the third slide.",
+      thumbnail: "https://swiperjs.com/demos/images/nature-3.jpg",
+    },
+  ];
 
   useEffect(() => {
     const section = sectionRef.current;
-    const slides = section.querySelectorAll(".renders_swiper .swiper-slide");
+    const totalSlides = slides.length;
 
-    const scrollTimeline = gsap.timeline({
-      scrollTrigger: {
-        trigger: section,
-        start: "top top",
-        end: "+=200%", // Adjust the scroll distance
-        pin: true,
-        scrub: true,
-        markers: true, // Enable markers for debugging
+    // ScrollTrigger for the pinned section
+    ScrollTrigger.create({
+      trigger: section,
+      start: "top top",
+      end: `+=${section.offsetHeight * totalSlides}`,
+      pin: true,
+      scrub: true,
+      // markers: true, // Enable for debugging
+      onUpdate: (self) => {
+        // Calculate the active slide index based on progress
+        const index = Math.floor(self.progress * totalSlides);
+        setActiveIndex(index);
       },
-    });
-
-    // Animate each slide based on scroll progress
-    slides.forEach((slide, index) => {
-      scrollTimeline.to(
-        slide,
-        {
-          xPercent: -100 * index, // Move slides horizontally
-          ease: "none",
-        },
-        index * 0.2 // Stagger animations
-      );
     });
 
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [slides.length]);
 
   return (
-    <section className="section render_section" ref={sectionRef}>
-      <div className="render_section_in">
-        <div className="content">
-          <Container>
-            <SecTitle className="text-center color style1">
-              <h4 className="title">Renders</h4>
-            </SecTitle>
+    <section className="render_section" ref={sectionRef}>
+      <Container className="topContainer">
+        <h4 className="text-center">Renders</h4>
+        <div className="slider-container">
+          {/* Large Slides */}
+          <div className="slides">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`slide ${index === activeIndex ? "active" : ""}`}
+              >
+                <h1>{slide.title}</h1>
+                <p>{slide.content}</p>
+              </div>
+            ))}
+          </div>
 
-            <div className="data">
-              <Swiper
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
+          {/* Thumbnails */}
+          <div className="thumbnails">
+            {slides.map((slide, index) => (
+              <div
+                key={index}
+                className={`thumbnail ${index === activeIndex ? "active" : ""}`}
+                onClick={() => {
+                  gsap.to(window, {
+                    scrollTo: {
+                      y: sectionRef.current.offsetTop + index * window.innerHeight,
+                    },
+                    duration: 1,
+                  });
+                  setActiveIndex(index);
                 }}
-                spaceBetween={10}
-                navigation={true}
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="renders_swiper"
-                ref={swiperRef}
               >
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </SwiperSlide>
-              </Swiper>
-
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView={2}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="renders_swiper_thumbs"
-              >
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </SwiperSlide>
-              </Swiper>
-            </div>
-          </Container>
+                <div className="thum_in w-100">
+                  <div className="rounded_div">
+                    <img className="rounded_img" src={slide.thumbnail} alt={`Thumbnail ${index + 1}`} />
+                  </div>
+                  <span>{slide.title}</span>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      </div>
+      </Container>
     </section>
   );
 };

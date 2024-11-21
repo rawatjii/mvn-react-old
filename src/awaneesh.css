@@ -87,11 +87,45 @@
     font-size: 14px;
     font-weight: 500;
 }
+.highlightbg{
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
 
 
 
 
+/* media center css starts here */
 
+.media-news-page{background:#131313 ;border-radius: 20px;padding: 10px;}
+.media-news-page .media-news-page-box{display: flex;justify-content: space-between;align-items: center;}
+.media-news-page .media-news-page-box .news-page-content{padding-left: 15px;display: flex;flex-direction: column;align-items: start;justify-content: space-between;gap: 6px;}
+.media-news-page .media-news-page-box .news-page-content .news-date {color: var(--theme_primary_color);margin-bottom: 5px;font-size: 10px;letter-spacing: 1px;font-weight: 300;}
+.media-news-page .media-news-page-box .news-page-content .news-title {color: #fff;font-size: 13px;margin-bottom: 5px;letter-spacing: 1px;font-weight: 400;line-height: 21px;}
+.media-news-page .media-news-page-box .news-page-content .btn.btn_style-news {color: var(--theme_primary_color);font-weight: 300;font-size: 12px;letter-spacing: 1px;padding: 0;}
+
+.media-press-release .press-release-content h4{color: var(--theme_primary_color);font-weight: 300;font-size: 24px;letter-spacing: 1px;}
+.media-press-release .press-release-content p {letter-spacing: 1px;font-size: 16px;font-weight: 300;line-height: 22px;}
+
+.media_center  img.supportIcon{
+    filter: invert(0) !important;
+}
+
+.media_content_heading{
+    font-size: 20px;
+    line-height: 28px;
+    letter-spacing: 1px;
+    font-weight: 400;
+    color: #fff;
+    margin-bottom: 20px;
+}
+.media-event-content{
+    margin-bottom: 40px;
+}
+
+
+/* media center css ends here */
 
 
 
@@ -135,7 +169,8 @@
     }
 }
  .overview_card{
-    padding: 40px;
+    padding: 100px;
+    border-radius: 8px;
  }
 
 .overview_card p{
@@ -334,7 +369,7 @@
         & li {
             .data {
                 font-size: 20px;
-                letter-spacing: 2px;
+                letter-spacing: 0.8px;
                 font-weight: 300;
             }
         }
@@ -434,7 +469,15 @@
 }
 
 
+h4.title {
+    font-size: 36px !important;
+    padding-bottom: 48px;
+}
 
+.enquire_form h4.title, .enquire_section h4.title{
+    font-size: 26px !important;
+    padding-bottom: initial;
+}
 
 
 

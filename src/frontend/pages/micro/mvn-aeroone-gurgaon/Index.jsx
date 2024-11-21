@@ -7,9 +7,13 @@ import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_im
 import "./aeroGuragaon.css";
 
 const data = {
-  // micro_hero_section: [
-  //   { imgMb: hero_img_mb, imgDesk: hero_img_desk }
-  // ],
+  micro_hero_section: 
+  {
+    isVdo: true,
+    images:false,
+    bannerHighLight:false,
+    enquiryBTN:false 
+  },
   overview: {
     title: "MVN Aero One",
     location: "Gurgaon",
@@ -19,12 +23,12 @@ const data = {
   video1: { 
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
     // desc:'Our 13.5ft High Ceilings Will Set A Higher Standard Of Space Utilisation In Harmony With Design Aesthetics & Sophistication.',
-    isVdo: false,
+    isVdo: true,
   },
   video2: {
     title: "ESCAPE TO EXCLUSIVITY",
     desc: "Dive into your own private pool with a grand view, just a few steps away from your living room",
-    isVdo: false,
+    isVdo: true,
   },
   video3: {
     title: "ELEVATED LIVING",
@@ -34,7 +38,7 @@ const data = {
   masterBedroom: {
     title: "MASTER BEDROOM",
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-    isVdo: false,
+    isVdo: true,
   },
   highlights: [
     "Power backup for common facilities.",
@@ -49,12 +53,12 @@ const data = {
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: false,
+      isVdo: true,
     },
   },
   LargeElevationSection: {
     title: "an epitome of contemporary elegance",
-    isAllow: false,
+    isAllow: true,
   },
   renders: [
     {
@@ -105,6 +109,13 @@ const data = {
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/balcony.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/balconySm.webp',
+      }
+    },
+    {
+      title: 'living area',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
       }
     },
     {
