@@ -30,7 +30,8 @@ const MicroPage = ({ data }) => {
         {data.video2.isVdo === true && <Video2 data={data} />}
         {data.video3.isVdo === true && <Video3 data={data} />}
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
-        {data.Walkthrough && data.Walkthrough.isAllow === true && <Walkthrough data={data.Walkthrough} />}        
+        <Walkthrough data={data.Walkthrough} />
+        {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
         {data.renders && <Renders data={data} />}
        
         {data.highlightbg && data.highlightbg.isshow ? (
