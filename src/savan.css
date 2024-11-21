@@ -128,7 +128,7 @@ footer form{position:relative;margin-bottom:30px}
     .enquire_section {.enquire_bg { left: 0;   top: 0; opacity:1; }z-index:1;}
 
     section.section.micro_banner::after { content: "";  position: absolute;top: 124%; left: 50%; width: 600px; height: 600px;border-radius: 50%; background-color: #010000; transform: translate(-50%, -50%);}
-    .sec_title.text-center.color.style1.mb_30 {position: absolute;top: -125px;left: 50%;transform: translate(-50%, -50%);z-index: 2;}
+    section.section.about_overview.pb-0 .sec_title.text-center.color.style1.mb_30 {position: absolute;top: -125px;left: 50%;transform: translate(-50%, -50%);z-index: 2;}
     .about_overview {.content_col {padding-bottom: 50px;padding-top: 50px;}}
 
 }

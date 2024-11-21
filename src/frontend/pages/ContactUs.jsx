@@ -3,6 +3,8 @@ import MicroBanner from "../components/MicroBanner/Index";
 const ContactPage = React.lazy(()=>import('../components/contact/Index'));
 
 import bannerBg from '../assets/images/contact/banner_bg.webp';
+import Enquire from '../components/homepage/Enquire';
+import EnquireForm from '../components/homepage/EnquireForm';
 
 const ContactUs = ()=>{
   const breadcrumbs = {
@@ -25,6 +27,12 @@ const ContactUs = ()=>{
         <div className="micro_data">
             <Suspense fallback="loading">
               <ContactPage />
+              <div className="flex-footer-form">
+          
+          <Enquire />
+  
+            <EnquireForm />
+          </div>
             </Suspense>
         </div>
       </div>

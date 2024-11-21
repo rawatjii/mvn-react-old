@@ -13,12 +13,12 @@ const Footer = ()=>{
   return(
     <footer>
       <Container>
-        <div classNameName="important_links text-center">
-          <h5 classNameName="title">
+        <div className="important_links text-center">
+          <h5 className="title">
             Important Links
           </h5>
 
-          <ul classNameName="">
+          <ul className="">
             <li>
               <NavLink to='#'>Home</NavLink>
             </li>
@@ -58,8 +58,8 @@ const Footer = ()=>{
           </ul>
         </div>
 
-        <div classNameName="contact_details text-center">
-          <h5 classNameName="title">
+        <div className="contact_details text-center">
+          <h5 className="title">
             Contact Details
           </h5>
 
@@ -78,47 +78,47 @@ const Footer = ()=>{
           </ul>
         </div>
 
-        <div classNameName="social_links text-center">
-        <h5 classNameName="title">Subscribe Now</h5>
+        <div className="social_links text-center">
+        <h5 className="title">Subscribe Now</h5>
         <form action="">
           <input type="email" maxLength="50" required placeholder="Your Email Id: Example@gmail.com" />
-          <button className="bt"><img src={BtnIcon} alt="" classNameName="img-fluid btn-arrow-img" /> </button>
+          <button className="bt"><img src={BtnIcon} alt="" className="img-fluid btn-arrow-img" /> </button>
         </form>
 
           <ul>
             <li>
-              <a href="" classNameName="icon">
-                <img src={twitterIcon} alt="mvn-twitter-icon" classNameName="img-fluid " />
+              <a href="" className="icon">
+                <img src={twitterIcon} alt="mvn-twitter-icon" className="img-fluid " />
               </a>
             </li>
 
             <li>
-              <a href="" classNameName="icon">
-                <img src={googlePlus} alt="mvn-google-plus-icon" classNameName="img-fluid" />
+              <a href="" className="icon">
+                <img src={googlePlus} alt="mvn-google-plus-icon" className="img-fluid" />
               </a>
             </li>
 
             <li>
-              <a href="" classNameName="icon">
-                <img src={fbIcon} alt="mvn-fb-icon" classNameName="img-fluid" />
+              <a href="" className="icon">
+                <img src={fbIcon} alt="mvn-fb-icon" className="img-fluid" />
               </a>
             </li>
 
             <li>
-              <a href="" classNameName="icon">
-                <img src={instaIcon} alt="mvn-insta-icon" classNameName="img-fluid" />
+              <a href="" className="icon">
+                <img src={instaIcon} alt="mvn-insta-icon" className="img-fluid" />
               </a>
             </li>
 
           </ul>
         </div>
 
-        <div classNameName="flex-bottom-border">
-          <div classNameName="disclaimer text-center">
+        <div className="flex-bottom-border">
+          <div className="disclaimer text-center">
             <Link to="">Disclaimer & Privacy Policy</Link>
           </div>
 
-          <div classNameName="copyright">
+          <div className="copyright">
           2024-MVN Group. All Right Reserved <span>Curated by: <Link to="#">GTF Technologies</Link></span>
           </div>
         </div>
