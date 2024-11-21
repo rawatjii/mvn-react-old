@@ -7,12 +7,11 @@ import CustomCard from "../Card";
 const MicroOverview = ({data})=>{
 
   const {title, location, extra, desc} = data.overview;
-  console.log('data',data);
-  console.log('desc',typeof desc);
 
   return(
     <section className="section micro_overview text-center pb-0">
       <Container>
+<<<<<<< HEAD
         <div className="overview_card">
           <div className="diamond_img_strip">
             <img src={diamondIMG} className="img-fluid" alt="image" />
@@ -34,6 +33,9 @@ const MicroOverview = ({data})=>{
 
         {/* <CustomCard data={data} /> */}
         
+=======
+        <CustomCard title={title} location={location} extra={extra} desc={desc} />
+>>>>>>> 3110a41f67cb4a01bf70f66e271fc80c18039aa4
       </Container>
 
       <Button className="btn_style4">Download Brochure</Button>
