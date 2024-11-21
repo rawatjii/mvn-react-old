@@ -118,6 +118,13 @@ const data = {
         mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
       }
     },
+    {
+      title: 'living area',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+      }
+    },
   ],
 };
 
