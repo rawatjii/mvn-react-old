@@ -126,12 +126,53 @@
 
 
 /* media center css ends here */
+.video-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust to your desired width */
+    max-width: 600px; /* Optional: Limit the width */
+  }
+  
+  .custom-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer; /* Optional: Indicate clickable video */
+  }
+  
+  .play-pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .play-pause-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .media_enquiry_form_card .enquire_form {
+    border: none;
+  }
 
-
-
-
-
-
+.media_enquiry_form_card .enquire_form .container{
+    background-color: #131313;
+    padding: 85px 50px !important;
+    border-radius: 8px;
+}
 
 
 

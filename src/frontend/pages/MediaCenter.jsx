@@ -10,6 +10,7 @@ import McVideoPoster from '../assets/videos/media/poster.png'
 import rightArrow from '../assets/images/mediacenter/right-arrow.png'
 import newsIMG from '../assets/images/mediacenter/news-1.png'
 import EnquireForm from '../components/homepage/EnquireForm'
+import Video from '../components/Video'
 
 
 function MediaCenter() {
@@ -143,13 +144,13 @@ function MediaCenter() {
                                 <div className="col-sm-4" key={`event-${index}`}>
                                     <div className="media-event-content mb_15">
                                         <h5 className="media_content_heading">Lorem ipsum dolor sit amet, consectetur </h5>
-                                        <video poster={item.poster} className='img-fluid' controls="controls" autoplay="false" >
-                                            <source src={item.video} type='video/mp4'  />
-                                        </video>
+                                        <Video videoSrc={item.video} videoPoster={item.poster}  />
                                     </div>
                                 </div>
                                     ))
                                 }
+
+                                
 
 
                         
@@ -157,8 +158,10 @@ function MediaCenter() {
                 </div>
             </section>
             <div className="row justify-content-center">
-                <div className="col-sm-5">
+                <div className="col-sm-6">
+                    <div className="media_enquiry_form_card">
                     <EnquireForm/>
+                    </div>
                 </div>
             </div>
         </div>
