@@ -3,6 +3,7 @@ import MicroPage from "../../Micro";
 import * as CONFIG from '../../../../config/config';
 import hero_img_mb from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_mobile.jpg";
 import hero_img_desk from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_desk.jpg";
+import highlightbgIMG from '../../../assets/images/bg/112.jpg'
 
 const data = {
   micro_hero_section: 
@@ -90,7 +91,9 @@ const data = {
         mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
       }
     },
+    
   ],
+  highlightbg: highlightbgIMG
   
 };
 

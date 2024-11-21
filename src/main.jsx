@@ -35,6 +35,7 @@ import AeroOneBangalore from './frontend/pages/micro/mvn-aeroone-bangalore/Index
 import Career from './frontend/pages/Career.jsx'
 
 import './awaneesh.css'
+import MediaCenter from './frontend/pages/MediaCenter.jsx'
 
 const router = createBrowserRouter([
   {
@@ -96,6 +97,13 @@ const router = createBrowserRouter([
         element:
         <Suspense fallback={<InitialLoading />}>
           <Layout><Career /></Layout>
+        </Suspense>
+      },
+      {
+        path:'media-center',
+        element:
+        <Suspense fallback={<InitialLoading />}>
+          <Layout><MediaCenter /></Layout>
         </Suspense>
       },
       {
