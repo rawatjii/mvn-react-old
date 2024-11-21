@@ -100,6 +100,9 @@ const data = {
   
 };
 
+console.log(data.menities_section[0].images.lg);
+
+
 const AeroOneBangalore = () => {
   return (
     <MicroPage data={data} />

@@ -98,14 +98,37 @@
 
 /* media center css starts here */
 
-.media-news-page{background:#131313 ;border-radius: 20px;padding: 10px;}
-.media-news-page .media-news-page-box{display: flex;justify-content: space-between;align-items: center;}
-.media-news-page .media-news-page-box .news-page-content{padding-left: 15px;display: flex;flex-direction: column;align-items: start;justify-content: space-between;gap: 6px;}
-.media-news-page .media-news-page-box .news-page-content .news-date {color: var(--theme_primary_color);margin-bottom: 5px;font-size: 10px;letter-spacing: 1px;font-weight: 300;}
-.media-news-page .media-news-page-box .news-page-content .news-title {color: #fff;font-size: 13px;margin-bottom: 5px;letter-spacing: 1px;font-weight: 400;line-height: 21px;}
-.media-news-page .media-news-page-box .news-page-content .btn.btn_style-news {color: var(--theme_primary_color);font-weight: 300;font-size: 12px;letter-spacing: 1px;padding: 0;}
-
-.media-press-release .press-release-content h4{color: var(--theme_primary_color);font-weight: 300;font-size: 24px;letter-spacing: 1px;}
+.media-news-page{background:#131313 ;border-radius: 8px;;}
+.media-news-page .media-news-page-box{display: flex;justify-content: space-between;align-items: center; flex-direction: column;}
+.media-news-page-img{
+    width: 100%;
+}
+.media-news-page-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.news-page-content{
+    padding: 30px !important;
+}
+.media-news-page .media-news-page-box .news-page-content{padding-left: 15px;display: flex;flex-direction: column;align-items: start;justify-content: space-between;gap: 16px;}
+.media-news-page .media-news-page-box .news-page-content .news-date {color: var(--theme_primary_color);margin-bottom: 5px;font-size: 14px;letter-spacing: 1px;font-weight: 300;}
+.media-news-page .media-news-page-box .news-page-content .news-title {color: #fff;font-size: 16px;margin-bottom: 5px;letter-spacing: 1px;font-weight: 400;line-height: 21px;}
+.media-news-page .media-news-page-box .news-page-content .btn.btn_style-news {color: var(--theme_primary_color);
+    font-weight: 300;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding: 0;
+    border-top: 1px solid var(--theme_primary_color);
+    border-radius: 0;
+    width: 100%;
+    padding: 14px;}
+.press-release-content{
+    background-color: #131313   ;
+    padding: 40px;
+    border-radius: 8px;
+}
+.media-press-release .press-release-content h4{color: var(--theme_primary_color);font-weight: 300;font-size: 32px;letter-spacing: 1px; border-bottom: 1px solid #ffffff1c; padding-bottom: 20px; margin-bottom: 20px;}
 .media-press-release .press-release-content p {letter-spacing: 1px;font-size: 16px;font-weight: 300;line-height: 22px;}
 
 .media_center  img.supportIcon{
@@ -118,20 +141,65 @@
     letter-spacing: 1px;
     font-weight: 400;
     color: #fff;
-    margin-bottom: 20px;
+    padding: 20px 10px;
 }
 .media-event-content{
-    margin-bottom: 40px;
+    background-color: #131313;
+    border-radius: 8px 8px 0px 0px;
+}
+.media_center .row{
+    row-gap: 16px;
 }
 
 
 /* media center css ends here */
+.video-container {
+    position: relative;
+    display: inline-block;
+    width: 100%; /* Adjust to your desired width */
+    max-width: 600px; /* Optional: Limit the width */
+  }
+  
+  .custom-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    cursor: pointer; /* Optional: Indicate clickable video */
+  }
+  
+  .play-pause-btn {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    font-size: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 2;
+    opacity: 1;
+    transition: opacity 0.3s ease;
+  }
+  
+  .play-pause-btn:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  .media_enquiry_form_card .enquire_form {
+    border: none;
+  }
 
-
-
-
-
-
+/* .media_enquiry_form_card .enquire_form .container{
+    background-color: #131313;
+    padding: 85px 50px !important;
+    border-radius: 8px;
+} */
 
 
 
@@ -523,9 +591,35 @@ h4.title {
         }
     }
 }
-
-
-
+.micro_hero_section {
+    & .hero_content {
+        & .content {
+            & .typo {
+                font-size:  24px;
+            }
+        }
+    }
+}
+.micro_hero_section {
+    & .hero_content {
+        & .content {
+            & .starting_price {
+                font-size: 32px;
+            }
+        }
+    }
+}
+.micro_hero_section {
+    & .hero_content {
+        & .content {
+            & .starting_price {
+                small {
+                    font-size: 18px;
+                }
+            }
+        }
+    }
+}
 
 
 
