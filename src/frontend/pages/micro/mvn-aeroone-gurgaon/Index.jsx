@@ -8,7 +8,7 @@ import "./aeroGuragaon.css";
 
 const data = {
   micro_hero_section: [
-    { imgMb: hero_img_mb, imgDesk: hero_img_desk, isVdo: false, }
+    {isVdo: true, }
   ],
   overview: {
     title: "MVN Aero One",
