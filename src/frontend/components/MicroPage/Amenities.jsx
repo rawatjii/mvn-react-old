@@ -56,6 +56,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MicroAmenities = ({ data }) => {
   const titleRef = useRef();
+  const mainTitleRef = useRef();
   const typoRefs = useRef([]);
   const priceRefs = useRef([]);
   const sizeRefs = useRef([]);
@@ -74,6 +75,17 @@ const MicroAmenities = ({ data }) => {
 
       scrollTrigger: {
         trigger: titleRef.current,
+        start: "top 95%",
+      }
+    })
+
+    gsap.from(mainTitleRef.current, {
+      y: 50,
+      opacity: 0,
+      duration: 1,
+
+      scrollTrigger: {
+        trigger: mainTitleRef.current,
         start: "top 95%",
       }
     })
@@ -154,12 +166,27 @@ const MicroAmenities = ({ data }) => {
     <section className="section amenities_section pb-0">
 
       <Container>
-        <SecTitle className="text-center color style1">
+        <SecTitle className="text-center color style1 line">
           <h4 ref={titleRef} className="title">Amenities</h4>
+          <h2 ref={mainTitleRef} className="main">Keys To <span>Happiness</span></h2>
         </SecTitle>
+
+        <div class="amenities_wrapper">
+          {data.map((item, index)=>(
+            <div class={`single_box box${index + 1}`}>
+              <div className="thumb">
+                <img src={item.images.mb} alt="perfectio gallery image" class="img-fluid" />
+              </div>
+              <div className="txt">
+                <h4>{item.title}</h4>
+              </div>
+            </div>
+          ))}
+          
+        </div>
       </Container>
 
-      <Swiper
+      {/*<Swiper
         ref={sliderRef}
         onSwiper={(swiper) => {
           swiperRef.current = swiper;
@@ -178,7 +205,7 @@ const MicroAmenities = ({ data }) => {
                 <LazyLoad>
                   <img src={item.images.lg} alt="mvn amenity thumbnail" className="img-fluid d_lg_block thumbnail" />
                   <img src={item.images.mb} alt="mvn amenity thumbnail" className="img-fluid d_sm_block thumbnail" />
-                  {/* <img src={item.images.mb} alt="mvn amenity thumbnail" className="img-fluid thumbnail" /> */}
+                  /~ <img src={item.images.mb} alt="mvn amenity thumbnail" className="img-fluid thumbnail" /> ~/
                 </LazyLoad>
               </div>
               <h3 className="title">{item.title}</h3>
@@ -195,7 +222,7 @@ const MicroAmenities = ({ data }) => {
             <img src={chevronRight} alt="mvn-chevron-right" className="img-fluid icon" />
           </button>
         </div>
-      </Swiper>
+      </Swiper>*/}
     </section>
   )
 }
