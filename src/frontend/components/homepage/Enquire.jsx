@@ -1,60 +1,72 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import SecTitle from "../../../common/SecTitle/Index";
 import { Link } from "react-router-dom";
 import { Container } from "react-bootstrap";
-import { gsap } from 'gsap';
-import ScrollTrigger from 'gsap/ScrollTrigger';
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
-import enquireBg from '../../assets/images/enquire/bg_sm.webp';
+import MobileenquireBg from "../../assets/images/enquire/bg_sm.webp";
+import DesktopenquireBg from "../../assets/images/enquire/form-bg.png";
 import LazyLoad from "react-lazyload";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Enquire = ()=>{
+const Enquire = () => {
   const titleRef = useRef();
   const contentRef = useRef();
   const btnRef = useRef();
+  const [imageSrc, setImageSrc] = useState(DesktopenquireBg);
 
-  useEffect(()=>{
+  useEffect(() => {
+    // Set the correct image on mount and window resize
+    const updateImageSrc = () => {
+      setImageSrc(window.innerWidth <= 768 ? MobileenquireBg : DesktopenquireBg);
+    };
+
+    updateImageSrc(); // Initial check
+    window.addEventListener("resize", updateImageSrc); // Listen for window resize
+
+    return () => {
+      window.removeEventListener("resize", updateImageSrc); // Cleanup on unmount
+    };
+  }, []);
+
+  useEffect(() => {
     gsap.from(titleRef.current, {
-      y: 50,  
+      y: 50,
       opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
+      duration: 1,
+      scrollTrigger: {
         trigger: titleRef.current,
         start: "top 95%",
-      }
-    })
+      },
+    });
 
     gsap.from(contentRef.current, {
-      y: 50,  
+      y: 50,
       opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
+      duration: 1,
+      scrollTrigger: {
         trigger: contentRef.current,
         start: "top 95%",
-      }
-    })
+      },
+    });
 
     gsap.from(btnRef.current, {
-      y: 50,  
+      y: 50,
       opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
+      duration: 1,
+      scrollTrigger: {
         trigger: btnRef.current,
         start: "top 95%",
-      }
-    })
+      },
+    });
+  }, []);
 
-  }, [])
-
-  return(
+  return (
     <section className="section enquire_section">
       <LazyLoad>
-        <img src={enquireBg} alt="mvn-enquire-bg" className="img-fluid enquire_bg" />
+        <img src={imageSrc} alt="mvn-enquire-bg" className="img-fluid enquire_bg" />
       </LazyLoad>
 
       <Container>
@@ -67,7 +79,7 @@ const Enquire = ()=>{
         {/* <Link ref={btnRef} className="btn btn_style2">Know More</Link> */}
       </Container>
     </section>
-  )
-}
+  );
+};
 
 export default Enquire;
