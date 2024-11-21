@@ -34,7 +34,7 @@ const data = {
   masterBedroom: {
     title: "MASTER BEDROOM",
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-    isVdo: false,
+    isVdo: true,
   },
   highlights: [
     "Power backup for common facilities.",
@@ -49,12 +49,12 @@ const data = {
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: false,
+      isVdo: true,
     },
   },
   LargeElevationSection: {
     title: "an epitome of contemporary elegance",
-    isAllow: false,
+    isAllow: true,
   },
   renders: [
     {
