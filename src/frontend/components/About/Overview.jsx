@@ -74,7 +74,7 @@ const Overview = () => {
         <Container>
 
 
-          <SecTitle className="text-center color style1 mb_30">
+          <SecTitle className="text-center color style1 mb_30 page-header-main-heading">
             <h4 ref={titleRef} className="title">Building spaces <span>that help you grow</span></h4>
           </SecTitle>
 
