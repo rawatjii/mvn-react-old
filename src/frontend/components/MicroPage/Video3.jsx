@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Container } from "react-bootstrap";
-// import { Player } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SecTitle from "../../../common/SecTitle/Index";
