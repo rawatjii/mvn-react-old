@@ -59,7 +59,12 @@
     filter: invert(0) !important;
 }
 
-
+.career_page .row_gap{
+    gap: 30px 0px;
+}
+.job_description_content .title{
+    text-align: center;
+}
 
 
 
@@ -359,9 +364,6 @@
     margin: 0px 140px!important;
 }
 
-.career_page .row_gap{
-    gap: 30px 0px;
-}
 
 .job_description{
     padding: 0px 100px;

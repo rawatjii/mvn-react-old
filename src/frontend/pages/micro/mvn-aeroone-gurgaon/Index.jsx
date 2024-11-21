@@ -7,25 +7,24 @@ import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_im
 import "./aeroGuragaon.css";
 
 const data = {
-  micro_hero_section: {isVdo: true, images:false, bannerHighLight:false, enquiryBTN:false },
+  // micro_hero_section: [
+  //   { imgMb: hero_img_mb, imgDesk: hero_img_desk }
+  // ],
   overview: {
     title: "MVN Aero One",
     location: "Gurgaon",
     extra: "ASCEND TO THE PINNACLE OF SOPHISTICATION",
-    desc: [
-      "Luxury Reimagined. Elegance Redefined.",
-      "Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other."
-    ],
+    desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
   },
   video1: { 
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
     // desc:'Our 13.5ft High Ceilings Will Set A Higher Standard Of Space Utilisation In Harmony With Design Aesthetics & Sophistication.',
-    isVdo: true,
+    isVdo: false,
   },
   video2: {
     title: "ESCAPE TO EXCLUSIVITY",
     desc: "Dive into your own private pool with a grand view, just a few steps away from your living room",
-    isVdo: true,
+    isVdo: false,
   },
   video3: {
     title: "ELEVATED LIVING",
@@ -35,7 +34,7 @@ const data = {
   masterBedroom: {
     title: "MASTER BEDROOM",
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-    isVdo: true,
+    isVdo: false,
   },
   highlights: [
     "Power backup for common facilities.",
@@ -50,12 +49,12 @@ const data = {
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: true,
+      isVdo: false,
     },
   },
   LargeElevationSection: {
     title: "an epitome of contemporary elegance",
-    isAllow: true,
+    isAllow: false,
   },
   renders: [
     {

@@ -32,7 +32,7 @@ const MicroOverview = ({data})=>{
 
         </div>
 
-        <CustomCard data={data} />
+        {/* <CustomCard data={data} /> */}
         
       </Container>
 
