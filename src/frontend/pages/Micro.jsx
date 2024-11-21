@@ -31,7 +31,7 @@ const MicroPage = ({ data }) => {
         {data.video3.isVdo === true && <Video3 data={data} />}
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
         {data.Walkthrough && data.Walkthrough.isAllow === true && <Walkthrough data={data.Walkthrough} />}        
-        {/* {data.renders && <Renders data={data} />} */}
+        {data.renders && <Renders data={data} />}
         <MicroHighlights />
         <MicroPrice />
         {data.menities_section && <MicroAmenities data={data.menities_section} />}
