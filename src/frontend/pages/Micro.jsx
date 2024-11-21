@@ -39,6 +39,8 @@ const MicroPage = ({ data }) => {
           </div> : <MicroHighlights />
         }
         
+        {/* {data.renders && <Renders data={data} />} */}
+        <MicroHighlights />
         <MicroPrice />
         {data.menities_section && <MicroAmenities data={data.menities_section} />}
         <div className="container">

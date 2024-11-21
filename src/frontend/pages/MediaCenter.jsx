@@ -7,6 +7,9 @@ import SecTitle from '../../common/SecTitle/Index'
 import mediaIcon from '../assets/images/icons/media/media.png'
 import McVideo from '../assets/videos/media/video.mp4'
 import McVideoPoster from '../assets/videos/media/poster.png'
+import rightArrow from '../assets/images/mediacenter/right-arrow.png'
+import newsIMG from '../assets/images/mediacenter/news-1.png'
+
 
 function MediaCenter() {
     const breadcrumbs = {
@@ -59,12 +62,12 @@ function MediaCenter() {
                             <div className="media-news-page mb_20">
                                 <div className="media-news-page-box">
                                     <div className="media-news-page-img">
-                                        <img src="images/news-1.png" alt="" />
+                                        <img src={newsIMG} alt="" />
                                     </div>
                                     <div className="news-page-content">
                                         <p className="news-date">25 September, 2025</p>
                                         <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src="images/right-arrow.png" alt="" /></a>
+                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -73,12 +76,12 @@ function MediaCenter() {
                             <div className="media-news-page mb_20">
                                 <div className="media-news-page-box">
                                     <div className="media-news-page-img">
-                                        <img src="images/news-1.png" alt="" />
+                                        <img src={newsIMG} alt="" />
                                     </div>
                                     <div className="news-page-content">
                                         <p className="news-date">25 September, 2025</p>
                                         <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src="images/right-arrow.png" alt="" /></a>
+                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -87,12 +90,12 @@ function MediaCenter() {
                             <div className="media-news-page mb_20">
                                 <div className="media-news-page-box">
                                     <div className="media-news-page-img">
-                                        <img src="images/news-1.png" alt="" />
+                                        <img src={newsIMG} alt="" />
                                     </div>
                                     <div className="news-page-content">
                                         <p className="news-date">25 September, 2025</p>
                                         <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src="images/right-arrow.png" alt="" /></a>
+                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
                                     </div>
                                 </div>
                             </div>
@@ -108,19 +111,19 @@ function MediaCenter() {
                     </div>
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="press-release-content mb_15">
+                            <div className="press-release-content mb_20">
                                 <h4>Simply Dummy Text</h4>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <div className="press-release-content mb_15">
+                            <div className="press-release-content mb_20">
                                 <h4>Simply Dummy Text</h4>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <div className="press-release-content mb_15">
+                            <div className="press-release-content mb_20">
                                 <h4>Simply Dummy Text</h4>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
