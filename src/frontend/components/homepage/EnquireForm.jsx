@@ -8,7 +8,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
-const EnquireForm = ()=>{
+const EnquireForm = ({career})=>{
   const titleRef = useRef();
   const formRef = useRef();
 
@@ -73,6 +73,29 @@ const EnquireForm = ()=>{
                 placeholder="Your Phone:"
               />
             </Form.Group>
+            {
+              career && career === true && (
+                <>
+                  <Form.Group className="form-group" as={Col} xs="12">
+                    <Form.Control
+                      type="text"
+                      name="designation"
+                      placeholder="Designation"
+                    />
+                  </Form.Group>
+                  <Form.Group className="form-group" as={Col} xs="12">
+                    <Form.Control
+                      type="text"
+                      name="experience"
+                      placeholder="Experience"
+                    />
+                  </Form.Group>
+                </>
+              )
+            }
+
+
+
 
             <Form.Group className="form-group" as={Col} xs="12">
               <Form.Control
@@ -81,6 +104,19 @@ const EnquireForm = ()=>{
                 placeholder="Your Message:"
               />
             </Form.Group>
+            {
+              career && career === true && (
+                <>
+                  <Form.Group className="form-group" as={Col} xs="12">
+                    <Form.Control
+                      type="file"
+                      name="resume"
+                      placeholder="Your Resume"
+                    />
+                  </Form.Group>
+                </>
+              )
+            }
 
           </Row>
           

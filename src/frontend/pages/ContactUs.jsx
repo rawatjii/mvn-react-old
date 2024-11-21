@@ -27,12 +27,12 @@ const ContactUs = ()=>{
         <div className="micro_data">
             <Suspense fallback="loading">
               <ContactPage />
-              <div className="flex-footer-form">
-          
-          <Enquire />
-  
-            <EnquireForm />
-          </div>
+                <div className="flex-footer-form">
+              
+                <Enquire />
+      
+                <EnquireForm />
+              </div>
             </Suspense>
         </div>
       </div>
