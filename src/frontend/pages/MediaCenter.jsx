@@ -11,6 +11,7 @@ import rightArrow from '../assets/images/mediacenter/right-arrow.png'
 import newsIMG from '../assets/images/mediacenter/news-1.png'
 import EnquireForm from '../components/homepage/EnquireForm'
 import Video from '../components/Video'
+import Enquire from '../components/homepage/Enquire'
 
 
 function MediaCenter() {
@@ -61,7 +62,7 @@ function MediaCenter() {
                 <div className="container">
                     <div className="row">
                         <div className="col-md-4">
-                            <div className="media-news-page mb_20">
+                            <div className="media-news-page">
                                 <div className="media-news-page-box">
                                     <div className="media-news-page-img">
                                         <img src={newsIMG} alt="" />
@@ -75,7 +76,7 @@ function MediaCenter() {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="media-news-page mb_20">
+                            <div className="media-news-page ">
                                 <div className="media-news-page-box">
                                     <div className="media-news-page-img">
                                         <img src={newsIMG} alt="" />
@@ -89,7 +90,7 @@ function MediaCenter() {
                             </div>
                         </div>
                         <div className="col-md-4">
-                            <div className="media-news-page mb_20">
+                            <div className="media-news-page ">
                                 <div className="media-news-page-box">
                                     <div className="media-news-page-img">
                                         <img src={newsIMG} alt="" />
@@ -113,19 +114,19 @@ function MediaCenter() {
                     </div>
                     <div className="row">
                         <div className="col-md-12">
-                            <div className="press-release-content mb_20">
+                            <div className="press-release-content ">
                                 <h4>Simply Dummy Text</h4>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <div className="press-release-content mb_20">
+                            <div className="press-release-content ">
                                 <h4>Simply Dummy Text</h4>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
                         </div>
                         <div className="col-md-12">
-                            <div className="press-release-content mb_20">
+                            <div className="press-release-content ">
                                 <h4>Simply Dummy Text</h4>
                                 <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                             </div>
@@ -133,7 +134,7 @@ function MediaCenter() {
                     </div>
                 </div>
             </section>
-            <section className="section media-events pb-0">
+            <section className="section media-events ">
                 <div className="container">
                     <div className="sec_title text-center color style1 mb_30">
                         <h4 className="title">OUR EVENTS</h4>
@@ -142,7 +143,7 @@ function MediaCenter() {
                         {
                             ourEvents && ourEvents.map((item, index) => (
                                 <div className="col-sm-4" key={`event-${index}`}>
-                                    <div className="media-event-content mb_15">
+                                    <div className="media-event-content">
                                         <h5 className="media_content_heading">Lorem ipsum dolor sit amet, consectetur </h5>
                                         <Video videoSrc={item.video} videoPoster={item.poster}  />
                                     </div>
@@ -157,10 +158,15 @@ function MediaCenter() {
                     </div>
                 </div>
             </section>
-            <div className="row justify-content-center">
-                <div className="col-sm-6">
-                    <div className="media_enquiry_form_card">
-                    <EnquireForm/>
+            <div className="container-fluid">
+                <div className="row align-items-center">
+                    <div className="col-sm-6">
+                        <Enquire/>
+                    </div>
+                    <div className="col-sm-6">
+                        <div className="media_enquiry_form_card">
+                        <EnquireForm/>
+                        </div>
                     </div>
                 </div>
             </div>
