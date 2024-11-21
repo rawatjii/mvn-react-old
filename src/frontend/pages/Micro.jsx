@@ -32,7 +32,13 @@ const MicroPage = ({ data }) => {
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
         {data.Walkthrough && data.Walkthrough.isAllow === true && <Walkthrough data={data.Walkthrough} />}        
         {data.renders && <Renders data={data} />}
-        <MicroHighlights />
+        {
+          data.highlightbg ? 
+          <div style={{backgroundImage: `url(${data.highlightbg})`}} className="highlightbg">
+              <MicroHighlights />
+          </div> : <MicroHighlights />
+        }
+        
         <MicroPrice />
         {data.menities_section && <MicroAmenities data={data.menities_section} />}
         <div className="container">
