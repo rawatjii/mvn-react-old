@@ -128,8 +128,14 @@ footer form{position:relative;margin-bottom:30px}
     .enquire_section {.enquire_bg { left: 0;   top: 0; opacity:1; }z-index:1;}
 
     section.section.micro_banner::after { content: "";  position: absolute;top: 124%; left: 50%; width: 600px; height: 600px;border-radius: 50%; background-color: #010000; transform: translate(-50%, -50%);}
-    section.section.about_overview.pb-0 .sec_title.text-center.color.style1.mb_30 {position: absolute;top: -125px;left: 50%;transform: translate(-50%, -50%);z-index: 2;}
+    .page-header-main-heading {position: absolute;top: -125px;left: 50%;transform: translate(-50%, -50%);z-index: 2;}
     .about_overview {.content_col {padding-bottom: 50px;padding-top: 50px;}}
+    .philosophy_section .content{justify-content:center;align-items:baseline;justify-content:space-between}
+    .timeline_section{padding-bottom:60px!important}
+    .page-header-main-heading {
+      max-width: 18%;
+      padding-top: 70px;
+  }
 
 }
 
@@ -278,8 +284,8 @@ footer .social_links.text-center input[type="email"] { width: 100%;}
     }
   
     .micro_data{
-      border-top-left-radius: 1000px;
-      border-top-right-radius: 1000px;
+      border-top-left-radius: 1000px!important;
+      border-top-right-radius: 1000px!important;
       padding-top: 20px;
       overflow: hidden;
       background: #000;
