@@ -29,9 +29,12 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import './index.css';
 
-import './awaneesh.css'
+
 import './savan.css';
 import AeroOneBangalore from './frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx'
+import Career from './frontend/pages/Career.jsx'
+
+import './awaneesh.css'
 
 const router = createBrowserRouter([
   {
@@ -86,6 +89,13 @@ const router = createBrowserRouter([
         element:
         <Suspense fallback={<InitialLoading />}>
           <Layout><ContactPage /></Layout>
+        </Suspense>
+      },
+      {
+        path:'career',
+        element:
+        <Suspense fallback={<InitialLoading />}>
+          <Layout><Career /></Layout>
         </Suspense>
       },
       {
