@@ -49,6 +49,7 @@ const data = {
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
+    isshow: true,
     desc: "IF YOU THINK YOU'VE EXPERIENCED TRUE LUXURY IT'S TIME TO RAISE YOUR EXPECTATION",
     masterBedroom: {
       title: "MASTER BEDROOM",
