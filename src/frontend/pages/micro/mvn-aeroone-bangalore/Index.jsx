@@ -93,7 +93,10 @@ const data = {
     },
     
   ],
-  highlightbg: highlightbgIMG
+  highlightbg: {
+    isshow: true,
+    img: highlightbgIMG
+  }
   
 };
 

@@ -17,7 +17,7 @@ const Walkthrough = ({data}) => {
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
   
-  const {title, desc} = data.walkthrough
+  // const {title, desc} = data.walkthrough
 
   const handlePlayPause = () => {
     if (isPlaying) {
@@ -67,7 +67,7 @@ const Walkthrough = ({data}) => {
             <h4 ref={titleRef} className="title">{title}</h4>
           </SecTitle> */}
 
-          {desc && <p className="desc">{desc}</p>}
+          {/* {desc && <p className="desc">{desc}</p>} */}
           
         </Container>
       </div>
