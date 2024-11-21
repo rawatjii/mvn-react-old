@@ -8,9 +8,10 @@ const ContactPage = ()=>{
     return(
         <section className="section contact-us-section ">
             <Container>
-                <img src={supportIcon} alt="mvn-support-icon" className="img-fluid supportIcon" />
+           
 
-                <SecTitle className="text-center color style1 mb_30">
+                <SecTitle className="text-center color style1 mb_30 page-header-main-heading">
+                <img src={supportIcon} alt="mvn-support-icon" className="img-fluid supportIcon" />
                     <h4 className="title">Call or Visit us at One of our locations</h4>
                 </SecTitle>
 

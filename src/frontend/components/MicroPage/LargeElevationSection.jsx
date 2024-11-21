@@ -7,6 +7,7 @@ import absDesk from '../../assets/images/aero-gurgaon/largeAbs1.png'
 import absMob from '../../assets/images/aero-gurgaon/largeAbs1Sm.png'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import CustomCard from '../../components/Card'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -49,32 +50,43 @@ export default function LargeElevation({ data }) {
     }, []);
     return (
         <div className='large-elevation' ref={sectionRef}>
-            <Container fluid className='container_elevation'>
-                <div className='top_div'>
-                    <h3 className='title text-uppercase'>{data.title}</h3>
+            <Container>
+                <div className='container_elevation'>
+                    <div className='top_div'>
+                        <h3 className='title text-uppercase'>{data.title}</h3>
+                    </div>
                 </div>
-                {/* mb view */}
-                <div className='bottom_img_div d_sm_block'>
-                    {/* <LazyLoad> */}
-                    <div className='full_img'>
-                        <img src={bgImgMB} alt={data.title} className="img-fluid img_in" />
-                    </div>
-                    <div className='abs_img'>
-                        <img src={absMob} alt={data.title} className="img-fluid abs_img_in" />
-                    </div>
-                    {/* </LazyLoad> */}
+            </Container>
+
+            {/* mb view */}
+            <div className='bottom_img_div d_sm_block'>
+                {/* <LazyLoad> */}
+                <div className='full_img'>
+                    <img src={bgImgMB} alt={data.title} className="img-fluid img_in" />
                 </div>
-                {/* desk view */}
-                <div className='bottom_img_div d_lg_block'>
-                    <div className='full_img'>
-                        <img src={bgImgDesk} alt={data.title} className="img-fluid img_in d_lg_block" />
-                    </div>
-                    <div className='abs_img abs_img1'>
-                        <img src={absDesk} alt={data.title} className="img-fluid abs_img_in d_lg_block" />
-                    </div>
+                <div className='abs_img'>
+                    <img src={absMob} alt={data.title} className="img-fluid abs_img_in" />
+                </div>
+                {/* </LazyLoad> */}
+            </div>
+            {/* desk view */}
+            <div className='bottom_img_div d_lg_block'>
+                <div className='full_img'>
+                    <img src={bgImgDesk} alt={data.title} className="img-fluid img_in d_lg_block" />
+                </div>
+                <div className='abs_img abs_img1'>
+                    <img src={absDesk} alt={data.title} className="img-fluid abs_img_in d_lg_block" />
+                </div>
+            </div>
+           
+            <Container >
+                <div className='about'>
+                    <CustomCard extra="THIS ARCHITECTURAL MASTERPIECE SEAMLESSLY BLENDS CUTTING-EDGE DESIGN WITH NEW-AGE SOPHISTICATION. EVERY CURVE, EVERY DETAIL, IS METICULOUSLY CRAFTED TO ELEVATE YOUR LIVING EXPERIENCE. EMBRACE A  RESIDENCE WHERE INNOVATION MEETS BEAUTY, CREATING A LANDMARK OF LUXURIOUS URBAN LIVING. YOUR NEW HOME AWAITS."  />
                 </div>
 
             </Container>
+
+            
         </div>
     )
 }

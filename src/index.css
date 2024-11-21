@@ -1604,13 +1604,13 @@ footer {
   .detail_title {
     text-transform: uppercase;
     text-align: center;
-    color: #dcc35c;
-    font-size: 11px;
+    color:#dcc35c;
+    font-size: 15px;
     letter-spacing: 1px;
     margin-bottom: 0;
-
-    span {
-      font-size: 16px;
+    
+    span{
+      font-size:18px;
     }
   }
 
@@ -1619,11 +1619,11 @@ footer {
 
     li {
       text-align: center;
-      color: #fff;
-      font-size: 16px;
-      margin: 15px 0;
-      display: block;
-      position: relative;
+      color:#fff;
+      font-size:18px;
+      margin:15px 0;
+      display:block;
+      position:relative;
       height: 48px;
       display: flex;
       align-items: center;
@@ -1631,8 +1631,8 @@ footer {
 
       a {
         text-align: center;
-        color: #fff;
-        font-size: 16px;
+        color:#fff;
+        font-size:18px;
       }
 
       .icon {
@@ -1840,11 +1840,12 @@ footer {
     line-height: 30px;
   }
 
-  p {
+  .desc{
 
-    margin-top: 20px;
-    font-size: 16px;
-    text-align: justify;
+    margin: 0;
+    font-size: 15px;
+    margin-bottom:4px;
+    text-align: center;
     font-weight: 300;
     letter-spacing: 1px;
   }

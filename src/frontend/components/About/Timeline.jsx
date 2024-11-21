@@ -12,7 +12,7 @@ import gopalInstitute from '../../assets/images/timeline/gopalsharma-institute-o
 import mvnSchoolPalwal from '../../assets/images/timeline/mvn-school-palwal.webp';
 import mvnSchoolKhambi from '../../assets/images/timeline/mvn-school-khambi.webp';
 import mvnUniversityPalwal from '../../assets/images/timeline/mvn-university-palwal.webp';
-import planeIcon from '../../assets/images/icons/plane2.webp';
+// import planeIcon from '../../assets/images/icons/plane2.webp';
 
 import timelineBg from '../../assets/images/timeline/bg.webp'
 import LazyLoad from "react-lazyload";
@@ -189,9 +189,9 @@ const Timeline = () => {
         </SecTitle>
 
         <ul ref={timelineRef} className="timeline_content">
-          <div ref={planeRef} className="plane">
+          {/* <div ref={planeRef} className="plane">
             <img src={planeIcon} alt="mvn plan icon" className="img-fluid plan_icon" />
-          </div>
+          </div> */}
 
           {data.map((item, index) => (
             <li key={index} className={`single ${index % 2 !== 0 ? 'right' : ''}`}>

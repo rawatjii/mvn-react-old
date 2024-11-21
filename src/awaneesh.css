@@ -52,6 +52,76 @@
     z-index: 99;
 }
 
+.career_page .section{
+    padding-bottom: 0; 
+}
+.career_page img.img-fluid.supportIcon{
+    filter: invert(0) !important;
+}
+
+.career_page .row_gap{
+    gap: 30px 0px;
+}
+.job_description_content .title{
+    text-align: center;
+}
+
+.enquire_form .container{
+    margin: 0 !important;
+}
+.masterPlanImg img{
+    filter:  blur(5px);
+}
+.masterPlanImg{
+    position: relative;
+
+}
+.btn_master{
+    text-transform: uppercase;
+    background-color: var(--theme_primary_color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 @media (min-width: 768px) {
 /* .hero-img img{
@@ -172,23 +242,24 @@
     margin-top: 30px;
 }
 
-.desk_price_card{
-    padding: 35px 30px;
-    background: rgb(11 11 11 / 89%);
+.desk_price_card {
+    padding: 55px 45px;
+    background: rgb(11 11 11 / 95%);
     border-radius: 8px;
 }
 .desk_price_card .price{
-    font-size: 34px;
+    font-size: 40px;
     margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 .desk_price_card .price span {
     color: var(--theme_primary_color);
-    font-size: 22px;    
+    font-size: 42px;    
 }
 .desk_price_card .typo{
     text-transform: uppercase;
-    font-size: 16px;
-    letter-spacing: 0.5px;
+    font-size: 18px;
+    letter-spacing: 1.5px;
     border-bottom: 1px solid var(--theme_primary_color);
     padding-bottom: 16px;
     margin-bottom: 20px;
@@ -200,10 +271,12 @@
 }
 .desk_price_card .sizes .size {
     margin: 0;
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 .desk_price_card .sizes button {
-    letter-spacing: 1px;
+    letter-spacing: 2px;
+    font-size: 20px;
 }
 .desk_price_card .sizes .size span {
         color: var(--theme_primary_color);
@@ -212,7 +285,7 @@
         overflow: hidden;
     }
 .price_section .swiper-button-prev, .price_section .swiper-button-next{
-    width: 40px;
+    width: 30px;
     height: 40px;
     color: #ffffff;
 }
@@ -226,7 +299,7 @@
 .price_section .swiper-button-prev{
     bottom: 10px;
         top: initial;
-        right: 50px;
+        right: 20px;
         left: initial;
 }
 .price_section .swiper-button-next{
@@ -260,7 +333,7 @@
     & .content {
         & li {
             .data {
-                font-size: 16px;
+                font-size: 20px;
                 letter-spacing: 2px;
                 font-weight: 300;
             }
@@ -283,9 +356,28 @@
 .highlights_section {
     & .content {
         li {
-            padding: 12px;
+            padding: 20px;
         }
     }
+}
+.highlights_section {
+    & .content {
+        border-bottom: none;
+    }
+}
+.highlights_section {
+    & .content {
+        li:nth-child(5), li:nth-child(6) {
+            border-bottom: 1px dashed rgb(244 217 102 / 25%);
+        }
+    }
+    padding: 100px 0px;
+}
+.price_section{
+    padding: 100px 0px !important;
+}
+.amenities_section{
+    padding: 100px 0px !important   ;
 }
 
 
@@ -299,23 +391,21 @@
 }
 
 
+.job_description{
+    padding: 0px 100px;
+}
 
 
+/* .section{
+    padding: 100px 0px;
+} */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.career_page .enquire_form .container{
+    margin: 0px 90px;
+}
+.micro_overview .btn{
+    margin-top: 45px;
+}
 
 
 
@@ -345,6 +435,51 @@
 
 
 
+
+
+
+
+
+
+
+
+
+.location_map_section {
+    & .locationMapContent {
+        & .location_points {
+            .distance {
+                color: var(--theme_primary_color);
+                text-transform: uppercase;
+                font-size: 24px;
+                border: 1px dashed var(--theme_primary_color);
+                display: inline-block;
+                padding: 3px 6px;
+                border-radius: 3px;
+                letter-spacing: 2px;
+                margin-bottom: 5px;
+            }
+            p{
+                font-size: 18px;
+                font-weight: 300;
+                letter-spacing: 1px;
+            }
+        }
+    }
+}
+.floor_plan_section {
+    & .accordion-header {
+        button {
+            background: #212121;
+            box-shadow: none;
+            color: var(--theme_primary_color);
+            text-transform: uppercase;
+            font-size: 20px;
+            letter-spacing: 1.5px;
+            padding: 18px 24px;
+            border-radius: 4px !important;
+        }
+    }
+}
 
 
 

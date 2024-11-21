@@ -1,43 +1,64 @@
-import React, { Suspense } from "react";
+import React, { useState, useEffect, Suspense } from "react";
 import MicroBanner from "../components/MicroBanner/Index";
-const ContactPage = React.lazy(()=>import('../components/contact/Index'));
 
-import bannerBg from '../assets/images/contact/banner_bg.webp';
+const ContactPage = React.lazy(() => import('../components/contact/Index'));
+
+import MobilebannerBg from '../assets/images/contact/head-banner_bg.webp';
+import DesktopbannerBg from '../assets/images/contact/head-banner_bg-2.webp';
 import Enquire from '../components/homepage/Enquire';
 import EnquireForm from '../components/homepage/EnquireForm';
 
-const ContactUs = ()=>{
-  const breadcrumbs = {
-    title:'Contact Us',
-    links:[
-      {
-        name:'Home',
-        link:'/'
-      },
-      {
-        name:'Contact Us'
-      }
-    ]
-  }
+const ContactUs = () => {
+  const [bannerBg, setBannerBg] = useState(DesktopbannerBg);
 
-  return(
+  const breadcrumbs = {
+    title: 'Contact Us',
+    links: [
+      { name: 'Home', link: '/' },
+      { name: 'Contact Us' }
+    ]
+  };
+
+  // Update background image dynamically based on screen width
+  useEffect(() => {
+    const updateBackground = () => {
+      if (window.innerWidth <= 768) {
+        setBannerBg(MobilebannerBg);
+      } else {
+        setBannerBg(DesktopbannerBg);
+      }
+    };
+
+    // Initial check
+    updateBackground();
+
+    // Add event listener for screen resize
+    window.addEventListener('resize', updateBackground);
+
+    // Cleanup event listener
+    return () => {
+      window.removeEventListener('resize', updateBackground);
+    };
+  }, []);
+
+  return (
     <>
-      <MicroBanner bg={bannerBg} data={breadcrumbs}/>
+      <MicroBanner bg={bannerBg} data={breadcrumbs} />
       <div className="micro_content">
         <div className="micro_data">
             <Suspense fallback="loading">
               <ContactPage />
-              <div className="flex-footer-form">
-          
-          <Enquire />
-  
-            <EnquireForm />
-          </div>
+                <div className="flex-footer-form">
+              
+                <Enquire />
+      
+                <EnquireForm />
+              </div>
             </Suspense>
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default ContactUs
+export default ContactUs;
