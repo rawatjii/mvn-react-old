@@ -47,19 +47,19 @@ function Career() {
                 </Container>
             </section>
             <div className="container py-5">
-                <div className="row align-items-center row_gap">
-                    <div className="col-sm-6">
+                <div className="row align-items-center justify-content-center row_gap">
+                    <div className="col-sm-8">
                         <div className='job_description_img'>
                             <img src={careerIMG} className='img-fluid' alt="" />
                         </div>
                     </div>
-                    <div className="col-sm-6">
+                    <div className="col-sm-8">
                         <div className="job_description_content">
-                        <SecTitle className="color style1 mb-3 ">
+                        <SecTitle className="color style1 mb-3  text-center">
                             <h4 className="title  mb-4">Why Work With Us?</h4>
                             <p className='extra mb-0'>Our purpose is to ‘Enhance quality of life through the spaces we create’. The well-being of all our stakeholders, is thus at the core of our operating philosophy.</p>
                         </SecTitle>
-                            <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
+                            <p className='text-center'>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</p>
                         </div>
                     </div>
                 </div>
