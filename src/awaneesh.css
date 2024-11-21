@@ -69,7 +69,24 @@
 .enquire_form .container{
     margin: 0 !important;
 }
+.masterPlanImg img{
+    filter:  blur(5px);
+}
+.masterPlanImg{
+    position: relative;
 
+}
+.btn_master{
+    text-transform: uppercase;
+    background-color: var(--theme_primary_color);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 99;
+    font-size: 14px;
+    font-weight: 500;
+}
 
 
 

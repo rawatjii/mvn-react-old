@@ -98,6 +98,7 @@ const MicroMasterPlan = ()=>{
 
         <div className="masterPlanImg" onClick={()=>setIsMasterPlanOpen(true)}>
           <img src={masterPlanImg} alt="mvn-master-plan" className="img-fluid" />
+          <button className="btn btn_master">view more</button>
         </div>
 
       </Container>
