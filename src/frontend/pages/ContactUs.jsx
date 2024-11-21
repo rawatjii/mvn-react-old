@@ -46,13 +46,15 @@ const ContactUs = () => {
       <MicroBanner bg={bannerBg} data={breadcrumbs} />
       <div className="micro_content">
         <div className="micro_data">
-          <Suspense fallback="Loading...">
-            <ContactPage />
-            <div className="flex-footer-form">
-              <Enquire />
-              <EnquireForm />
-            </div>
-          </Suspense>
+            <Suspense fallback="loading">
+              <ContactPage />
+                <div className="flex-footer-form">
+              
+                <Enquire />
+      
+                <EnquireForm />
+              </div>
+            </Suspense>
         </div>
       </div>
     </>

@@ -72,7 +72,7 @@ const MicroHero = ({ data }) => {
     <>
       <section className="section micro_hero_section p-0">
 
-        {data.isVdo && (
+        {data.micro_hero_section.isVdo && (
           <div ref={containerRef} className="frames_content">
             {images.map((img, index) => (
               <img
@@ -88,7 +88,7 @@ const MicroHero = ({ data }) => {
         )}
 
         {
-          data.micro_hero_section && Array.isArray(data.micro_hero_section) && data.micro_hero_section.map((imgs, index) => (
+          data.micro_hero_section.images && Array.isArray(data.micro_hero_section.images) && data.micro_hero_section.images.map((imgs, index) => (
             <div key={index} className="hero-img">
               <img src={imgs.imgDesk} alt={`mvn-hero-image-${index}`} className="img-fluid d_lg_block" fetchPriority="high" />
               <img src={imgs.imgMb} alt={`mvn-hero-image-sm-${index}`} className="img-fluid d_sm_block" fetchPriority="high" />
@@ -96,7 +96,7 @@ const MicroHero = ({ data }) => {
           ))
         }
         {
-          data.bannerHighLight &&  <div className="hero_content">
+          data.micro_hero_section.bannerHighLight &&  <div className="hero_content">
           <Container>
             <div className="content">
               <h5 className="starting_price">
@@ -111,8 +111,8 @@ const MicroHero = ({ data }) => {
 
 
         {
-          data.enquiryBTN && data.enquiryBTN.isshow === true && <div className="enquiry_btn">
-          <a href={`mailto:${data.enquiryBTN.mail}`} className="btn btn_enquire">
+          data.micro_hero_section.enquiryBTN && data.micro_hero_section.enquiryBTN.isshow === true && <div className="enquiry_btn">
+          <a href={`mailto:${data.micro_hero_section.enquiryBTN.mail}`} className="btn btn_enquire">
             <img src={ImgMail} className="img-fluid mail_enqiry_icon" alt="" />
             Enquire Now
           </a>

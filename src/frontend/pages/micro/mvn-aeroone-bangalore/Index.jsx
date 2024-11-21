@@ -1,13 +1,22 @@
 import React from "react";
 import MicroPage from "../../Micro";
+import * as CONFIG from '../../../../config/config';
 import hero_img_mb from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_mobile.jpg";
 import hero_img_desk from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_desk.jpg";
 
 const data = {
-  micro_hero_section: [{ imgMb: hero_img_mb, imgDesk: hero_img_desk, isVdo: false, }],
+  micro_hero_section: 
+  {
+    isVdo: false,
+    images:[{ imgMb: hero_img_mb, imgDesk: hero_img_desk, }],
+    bannerHighLight:true,
+    enquiryBTN:{
+      isshow: true,
+      mail: `info@example.com`
+    } 
+  },
   bannerHighLight: {
     isshow: true,
-    
   },
   overview: {
     title: "MVN AERO ONE",
@@ -44,7 +53,45 @@ const data = {
   enquiryBTN:{
     isshow:true,
     mail: "info@example.in",
-  }
+  },
+  menities_section: [
+    {
+      title: 'Infinity Pool',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/pool.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/poolSm.webp',
+      }
+    },
+    {
+      title: 'THE STUDY',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/study.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/studySm.webp',
+      }
+    },
+    {
+      title: 'MODERN ROOFTOP CLUBHOUSE',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
+      }
+    },
+    {
+      title: 'double height balcony',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/balcony.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/balconySm.webp',
+      }
+    },
+    {
+      title: 'living area',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+      }
+    },
+  ],
+  
 };
 
 const AeroOneBangalore = () => {

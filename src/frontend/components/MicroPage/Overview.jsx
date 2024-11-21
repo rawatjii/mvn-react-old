@@ -7,8 +7,6 @@ import CustomCard from "../Card";
 const MicroOverview = ({data})=>{
 
   const {title, location, extra, desc} = data.overview;
-  console.log('data',data);
-  console.log('desc',typeof desc);
 
   return(
     <section className="section micro_overview text-center pb-0">
@@ -32,7 +30,7 @@ const MicroOverview = ({data})=>{
 
         </div>
 
-        <CustomCard data={data} />
+        {/* <CustomCard data={data} /> */}
         
       </Container>
 
