@@ -202,6 +202,7 @@ img.img-fluid.headpage-icon {width: auto;height: 65px;margin-bottom: 20px;}
   .projects_section {& .left_col .single { .lazyload-wrapper, .an_img { height: 584px !important;}}}
   .projects_section {.sec_title { height: unset!important; }}
   .projects_section { .sec_title {  text-transform: uppercase;  font-size: 41px; margin-bottom: 30px; height: 63px; letter-spacing: 35px;}}
+  footer .important_links ul li { width: 46%;}
 
 
 }
