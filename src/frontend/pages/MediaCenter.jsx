@@ -9,6 +9,7 @@ import McVideo from '../assets/videos/media/video.mp4'
 import McVideoPoster from '../assets/videos/media/poster.png'
 import rightArrow from '../assets/images/mediacenter/right-arrow.png'
 import newsIMG from '../assets/images/mediacenter/news-1.png'
+import EnquireForm from '../components/homepage/EnquireForm'
 
 
 function MediaCenter() {
@@ -155,6 +156,11 @@ function MediaCenter() {
                     </div>
                 </div>
             </section>
+            <div className="row justify-content-center">
+                <div className="col-sm-5">
+                    <EnquireForm/>
+                </div>
+            </div>
         </div>
     )
 }
