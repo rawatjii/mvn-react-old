@@ -138,6 +138,8 @@ footer form{position:relative;margin-bottom:30px}
     .philosophy_section .content li li:last-child{margin:unset}
     section.section.about_overview.pb-0  .about_bg { display: none;}
 
+    ul.timeline_content  .content {  display: block;}
+  
 
 }
 
