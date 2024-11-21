@@ -127,6 +127,71 @@ const data = {
       }
     },
   ],
+  highlight:{
+    isshow: true,
+    title: "Highlight",
+    point:[
+      'Power backup for common facilities.',
+    'Italian/Imported Marble flooring.',
+    'Television points in living and bedrooms.',
+    'Telephone points in living and master bedroom.',
+    'Split AC provision in living and bedrooms.',
+    'Premium emulsion paint finish.',
+    ]
+  },
+  locationAdvantage: {
+    isshow: true,
+    title: "Location Advantage",
+    mapIMG: CONFIG.IMAGE_URL + 'aero-bangalore/location.jpg',
+    locationData : [
+      {
+        distance:'15 Min',
+        title:'Kempegowda Intl. Airport',
+      },
+      {
+        distance:'12 Min',
+        title:'K.I.Airport Halt (Railway Station)',
+      },
+      {
+        distance:'05 Min',
+        title:'Sports Village',
+      },
+      {
+        distance:'06 Min',
+        title:'Mini Vidhana Soudha',
+      },
+      {
+        distance:'02 Min',
+        title:'Anjaneya Temple',
+      },
+      {
+        distance:'11 Min',
+        title:'KIADB Aerospace SEZ',
+      },
+    ]
+  },
+  floorPlan:{
+
+    floorPlanData : [
+      {
+        title:'1 BHK Floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
+      },
+      {
+        title:'2 BHK Panoramic floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
+      },
+      {
+        title:'2 BHK Luxury floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
+      },
+      {
+        title:'3 BHK Luxury floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
+      },
+      
+    ]
+  }
 };
 
 const AeroOneGurgaon = () => {
