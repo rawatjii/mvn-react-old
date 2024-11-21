@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from "react";
 import { Container } from "react-bootstrap";
-// import { Player } from "@lottiefiles/react-lottie-player";
+import { Player } from "@lottiefiles/react-lottie-player";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import SecTitle from "../../../common/SecTitle/Index";
@@ -62,7 +62,6 @@ const Video3 = ({ data }) => {
 
       <div className="content">
         <Container>
-          111
           <SecTitle className="text-center color style1">
             <h4 ref={titleRef} className="title">{title}</h4>
           </SecTitle>

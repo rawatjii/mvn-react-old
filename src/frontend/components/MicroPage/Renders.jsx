@@ -5,13 +5,14 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
 import { Swiper, SwiperSlide } from "swiper/react";
-import { FreeMode, Navigation, Thumbs } from "swiper/modules";
+import { FreeMode, EffectFade, Navigation, Thumbs } from "swiper/modules";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/free-mode";
 import "swiper/css/navigation";
 import "swiper/css/thumbs";
+import 'swiper/css/effect-fade';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -35,13 +36,17 @@ const Renders = ({ data }) => {
       },
     });
 
-    // Animate each slide based on scroll progress
+    // Animate each slide based on scroll progress and update thumbsSwiper
     slides.forEach((slide, index) => {
       scrollTimeline.to(
-        slide,
+        swiperRef.current.swiper,
         {
-          xPercent: -100 * index, // Move slides horizontally
-          ease: "none",
+          onUpdate: () => {
+            swiperRef.current.swiper.slideTo(index);
+            if (thumbsSwiper) {
+              thumbsSwiper.slideTo(index);
+            }
+          },
         },
         index * 0.2 // Stagger animations
       );
@@ -50,68 +55,88 @@ const Renders = ({ data }) => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [thumbsSwiper]);
 
   return (
-    <section className="section render_section" ref={sectionRef}>
-      <div className="render_section_in">
+    <section className="section render_section" >
+      <div className="render_section_in" ref={sectionRef}>
         <div className="content">
           <Container>
-            <SecTitle className="text-center color style1">
-              <h4 className="title">Renders</h4>
-            </SecTitle>
-
-            <div className="data">
-              <Swiper
-                style={{
-                  "--swiper-navigation-color": "#fff",
-                  "--swiper-pagination-color": "#fff",
-                }}
-                spaceBetween={10}
-                navigation={true}
-                thumbs={{ swiper: thumbsSwiper }}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="renders_swiper"
-                ref={swiperRef}
-              >
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </SwiperSlide>
-              </Swiper>
-
-              <Swiper
-                onSwiper={setThumbsSwiper}
-                spaceBetween={10}
-                slidesPerView={2}
-                freeMode={true}
-                watchSlidesProgress={true}
-                modules={[FreeMode, Navigation, Thumbs]}
-                className="renders_swiper_thumbs"
-              >
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
-                </SwiperSlide>
-                <SwiperSlide>
-                  <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
-                </SwiperSlide>
-              </Swiper>
-            </div>
+            <h4 className="title text-center">Renders</h4>
           </Container>
+          <div className="data">
+            <Swiper
+              style={{
+                "--swiper-navigation-color": "#fff",
+                "--swiper-pagination-color": "#fff",
+              }}
+              spaceBetween={10}
+              // navigation={true}
+              thumbs={{ swiper: thumbsSwiper }}
+              modules={[FreeMode, EffectFade, Navigation, Thumbs]}
+              className="renders_swiper"
+              effect={'fade'}
+              ref={swiperRef}
+            >
+              <SwiperSlide>
+                <div className="content_div">
+                  <h1>slide 1</h1>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content_div">
+                  <h1>slide 2</h1>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className="content_div">
+                  <h1>slide 3</h1>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+
+            <Swiper
+              onSwiper={setThumbsSwiper}
+              spaceBetween={10}
+              slidesPerView={2}
+              freeMode={true}
+              watchSlidesProgress={true}
+              modules={[FreeMode, Navigation, Thumbs]}
+              className="renders_swiper_thumbs"
+            >
+              <SwiperSlide className="thum_slide">
+                <div className="slide_thum">
+                  <div className="rounded_img">
+                    <img className="slide_thum_in" src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                  </div>
+                  <div className="thum_content">
+                    <span className="title_thum">Landscape</span>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="thum_slide">
+                <div className="slide_thum">
+                  <div className="rounded_img">
+                    <img className="slide_thum_in" src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                  </div>
+                  <div className="thum_content">
+                    <span className="title_thum">Elevation </span>
+                  </div>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide className="thum_slide">
+                <div className="slide_thum">
+                  <div className="rounded_img">
+                    <img className="slide_thum_in" src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                  </div>
+                  <div className="thum_content">
+                    <span className="title_thum">Apartment</span>
+                  </div>
+                </div>
+              </SwiperSlide>
+            </Swiper>
+          </div>
+
         </div>
       </div>
     </section>
