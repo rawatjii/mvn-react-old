@@ -101,9 +101,9 @@
 .media-news-page{background:#131313 ;border-radius: 20px;padding: 10px;}
 .media-news-page .media-news-page-box{display: flex;justify-content: space-between;align-items: center;}
 .media-news-page .media-news-page-box .news-page-content{padding-left: 15px;display: flex;flex-direction: column;align-items: start;justify-content: space-between;gap: 6px;}
-.media-news-page .media-news-page-box .news-page-content .news-date {color: var(--theme_primary_color);margin-bottom: 5px;font-size: 10px;letter-spacing: 1px;font-weight: 300;}
-.media-news-page .media-news-page-box .news-page-content .news-title {color: #fff;font-size: 13px;margin-bottom: 5px;letter-spacing: 1px;font-weight: 400;line-height: 21px;}
-.media-news-page .media-news-page-box .news-page-content .btn.btn_style-news {color: var(--theme_primary_color);font-weight: 300;font-size: 12px;letter-spacing: 1px;padding: 0;}
+.media-news-page .media-news-page-box .news-page-content .news-date {color: var(--theme_primary_color);margin-bottom: 5px;font-size: 14px;letter-spacing: 1px;font-weight: 300;}
+.media-news-page .media-news-page-box .news-page-content .news-title {color: #fff;font-size: 16px;margin-bottom: 5px;letter-spacing: 1px;font-weight: 400;line-height: 21px;}
+.media-news-page .media-news-page-box .news-page-content .btn.btn_style-news {color: var(--theme_primary_color);font-weight: 300;font-size: 14px;letter-spacing: 1px;padding: 0;}
 
 .media-press-release .press-release-content h4{color: var(--theme_primary_color);font-weight: 300;font-size: 24px;letter-spacing: 1px;}
 .media-press-release .press-release-content p {letter-spacing: 1px;font-size: 16px;font-weight: 300;line-height: 22px;}

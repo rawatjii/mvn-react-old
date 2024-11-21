@@ -22,7 +22,7 @@ function MediaCenter() {
             link:'/'
           },
           {
-            name:'media-center'
+            name:'Media Center'
           }
         ]
       }
