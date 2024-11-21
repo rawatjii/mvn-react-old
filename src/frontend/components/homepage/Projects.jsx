@@ -11,7 +11,7 @@ import mvnMallImg from "../../assets/images/projects/mvn-mall.webp";
 import mvnAerooneImg from "../../assets/images/projects/mvn-aeroone.webp";
 import mvnAerooneBangaloreImg from "../../assets/images/projects/mvn-aeroone-bangalore.webp";
 import mvnMallImgDesktop from "../../assets/images/projects/project-img-3.jpg";
-import mvnAerooneImgDesktop from "../../assets/images/projects/mvn-aeroone-img.webp";
+import mvnAerooneImgDesktop from "../../assets/images/projects/mvn-aeroone-img-desktop.webp";
 import mvnAerooneBangaloreImgDesktop from "../../assets/images/projects/project-img-1.jpg";
 import arrowIcon from "../../assets/images/icons/arrow.png";
 import btn_arrow from "../../assets/images/icons/btn_arrow.png";
