@@ -9,6 +9,8 @@ import bg from "../../assets/images/about/building_bg.png";
 import Desktopabout_img from "../../assets/images/about/desktopabout_img.webp";
 import Mobileabout_img from "../../assets/images/about/mobileabout_img.webp";
 import AnImage from "../../../common/animations/Image/Index";
+import OverviewIcon from "../../assets/images/icons/team.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,13 +81,14 @@ const Overview = () => {
 
   return (
     <section className="section about_overview pb-0">
-      <div className="content_col position-relative">
+      <div className="content_col position-relative page-header-main-heading">
         <LazyLoad>
           <img src={bg} alt="mvn-about-bg" className="img-fluid about_bg" />
         </LazyLoad>
 
         <Container>
-          <SecTitle className="text-center color style1 mb_30 page-header-main-heading">
+          <SecTitle className="text-center color style1 mb_30">
+            <img src={OverviewIcon} alt="" className="img-fluid headpage-icon"/>
             <h4 ref={titleRef} className="title">
               Building spaces <span>that help you grow</span>
             </h4>

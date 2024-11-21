@@ -13,7 +13,7 @@ import mvnSchoolPalwal from '../../assets/images/timeline/mvn-school-palwal.webp
 import mvnSchoolKhambi from '../../assets/images/timeline/mvn-school-khambi.webp';
 import mvnUniversityPalwal from '../../assets/images/timeline/mvn-university-palwal.webp';
 // import planeIcon from '../../assets/images/icons/plane2.webp';
-
+import diamondIcon from "../../assets/images/icons/diamond.png";
 import timelineBg from '../../assets/images/timeline/bg.webp'
 import LazyLoad from "react-lazyload";
 
@@ -192,7 +192,7 @@ const Timeline = () => {
           {/* <div ref={planeRef} className="plane">
             <img src={planeIcon} alt="mvn plan icon" className="img-fluid plan_icon" />
           </div> */}
-
+          <img src={diamondIcon} alt="" className="img-fluid diamond-img"/>
           {data.map((item, index) => (
             <li key={index} className={`single ${index % 2 !== 0 ? 'right' : ''}`}>
               <div ref={(el) => (imageRefs.current[index] = el)} className="thumbnail">

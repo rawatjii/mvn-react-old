@@ -5,9 +5,9 @@ import Philosophy from "../components/About/Philosophy";
 import Timeline from "../components/About/Timeline";
 import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
-
 import Mobilemicro_bg from '../assets/images/about/about-head-bg-mobile.jpg';
 import Desktopmicro_bg from '../assets/images/about/about-head-bg-desktop.jpg';
+import OurTeam from "../components/About/Ourteam";
 
 const AboutUs = () => {
   const [microBg, setMicroBg] = useState(Desktopmicro_bg);
@@ -50,6 +50,7 @@ const AboutUs = () => {
           <AboutOverview />
           <Philosophy />
           <Timeline />
+          <OurTeam />
           <div className="flex-footer-form">
             <Enquire />
             <EnquireForm />
