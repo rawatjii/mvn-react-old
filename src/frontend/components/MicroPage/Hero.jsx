@@ -97,7 +97,7 @@ const MicroHero = ({ data }) => {
         }
         {
           data.micro_hero_section.bannerHighLight &&  <div className="hero_content">
-          <Container>
+          <Container>x
             <div className="content">
               <h5 className="starting_price">
                 <small>Starting At</small>
