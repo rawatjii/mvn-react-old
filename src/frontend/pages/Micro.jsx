@@ -45,17 +45,17 @@ const MicroPage = ({ data }) => {
         {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
         {/* {data.renders && <Renders data={data} />} */}
         {data.highlightbg && data.highlightbg.isshow ? (
-            <div
-              style={{ backgroundImage: `url(${data.highlightbg.img})` }}
-              className="highlightbg"
-            >
-              <MicroHighlights data={data.highlight} />
-            </div>
-          ) : (
+          <div
+            style={{ backgroundImage: `url(${data.highlightbg.img})` }}
+            className="highlightbg"
+          >
             <MicroHighlights data={data.highlight} />
-          )
+          </div>
+        ) : (
+          <MicroHighlights data={data.highlight} />
+        )
         }
-        
+
         {/* {data.renders && <Renders data={data} />} */}
         {/* <MicroHighlights /> */}
         <MicroPrice />

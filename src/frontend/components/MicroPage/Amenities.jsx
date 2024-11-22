@@ -1,10 +1,11 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Amenities() {
+  const [sectionRendered, setSectionRendered] = useState(false);
   const sectionsRef = useRef([]);
 
   useEffect(() => {
@@ -25,7 +26,7 @@ export default function Amenities() {
             backgroundPosition: () => `50% ${window.innerHeight * (1 - getRatio(section))}px`,
             ease: 'none',
             scrollTrigger: {
-              trigger: section,
+              trigger: sectionRendered ? section : document.getElementsByClassName('parallax')[i],
               start: () => (i === 0 ? 'top top' : 'top bottom'),
               end: 'bottom top',
               scrub: true,
@@ -35,30 +36,31 @@ export default function Amenities() {
         );
       }
     });
+    setSectionRendered(true)
     return () => {
       ScrollTrigger.getAll().forEach(trigger => trigger.kill());
     };
-  }, []);
+  }, [sectionRendered]);
 
   return (
     <div className="main_am">
-      <section ref={(el) => (sectionsRef.current[0] = el)}>
+      <section className='parallax' ref={(el) => (sectionsRef.current[0] = el)}>
         <div className="bg"></div>
         <h1>Simple parallax sections</h1>
       </section>
-      <section ref={(el) => (sectionsRef.current[1] = el)}>
+      <section className='parallax' ref={(el) => (sectionsRef.current[1] = el)}>
         <div className="bg"></div>
         <h1>Hey look, a title</h1>
       </section>
-      <section ref={(el) => (sectionsRef.current[2] = el)}>
+      <section className='parallax' ref={(el) => (sectionsRef.current[2] = el)}>
         <div className="bg"></div>
         <h1>They just keep coming</h1>
       </section>
-      <section ref={(el) => (sectionsRef.current[3] = el)}>
+      <section className='parallax' ref={(el) => (sectionsRef.current[3] = el)}>
         <div className="bg"></div>
         <h1>So smooth though</h1>
       </section>
-      <section ref={(el) => (sectionsRef.current[4] = el)}>
+      <section className='parallax' ref={(el) => (sectionsRef.current[4] = el)}>
         <div className="bg"></div>
         <h1>Nice, right?</h1>
       </section>
