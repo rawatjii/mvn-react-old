@@ -7,12 +7,12 @@ import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_im
 import "./aeroGuragaon.css";
 
 const data = {
-  micro_hero_section: 
+  micro_hero_section:
   {
     isVdo: true,
-    images:false,
-    bannerHighLight:false,
-    enquiryBTN:false 
+    images: false,
+    bannerHighLight: false,
+    enquiryBTN: false
   },
   overview: {
     title: "MVN Aero One",
@@ -20,7 +20,7 @@ const data = {
     extra: "ASCEND TO THE PINNACLE OF SOPHISTICATION",
     desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
   },
-  video1: { 
+  video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
     // desc:'Our 13.5ft High Ceilings Will Set A Higher Standard Of Space Utilisation In Harmony With Design Aesthetics & Sophistication.',
     isVdo: true,
@@ -49,6 +49,7 @@ const data = {
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
+    isshow: true,
     desc: "IF YOU THINK YOU'VE EXPERIENCED TRUE LUXURY IT'S TIME TO RAISE YOUR EXPECTATION",
     masterBedroom: {
       title: "MASTER BEDROOM",
@@ -84,17 +85,17 @@ const data = {
   ],
   menities_section: [
     {
-      title: 'Infinity Pool',
+      title: 'Spa',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/pool.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/poolSm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/spa.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/spaSm.webp',
       }
     },
     {
-      title: 'THE STUDY',
+      title: 'Mini Theater',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/study.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/studySm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
       }
     },
     {
@@ -105,24 +106,24 @@ const data = {
       }
     },
     {
-      title: 'double height balcony',
+      title: 'Business Centre',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/balcony.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/balconySm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
       }
     },
     {
-      title: 'living area',
+      title: 'Library',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/librarySm.webp',
       }
     },
     {
-      title: 'living area',
+      title: 'Gym Area',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
       }
     },
   ],

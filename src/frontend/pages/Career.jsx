@@ -21,7 +21,7 @@ function Career() {
             link:'/'
           },
           {
-            name:'career'
+            name:'Career'
           }
         ]
       }
