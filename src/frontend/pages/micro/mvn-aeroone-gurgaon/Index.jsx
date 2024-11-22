@@ -37,12 +37,12 @@ const data = {
   video3: {
     title: "ELEVATED LIVING",
     desc: "OUR 13.5FT HIGH CEILINGS WILL SET A HIGHER STANDARD OF SPACE UTILISATION IN HARMONY WITH DESIGN AESTHETICS & SOPHISTICATION",
-    isVdo: false,
+    isVdo: true,
   },
   masterBedroom: {
     title: "MASTER BEDROOM",
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-    isVdo: false,
+    isVdo: true,
   },
   highlights: [
     "Power backup for common facilities.",
@@ -53,12 +53,12 @@ const data = {
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
-    isshow: true,
+    isshow: false,
     desc: "IF YOU THINK YOU'VE EXPERIENCED TRUE LUXURY IT'S TIME TO RAISE YOUR EXPECTATION",
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: true,
+      isVdo: false,
     },
   },
   LargeElevationSection: {
@@ -96,27 +96,6 @@ const data = {
       }
     },
     {
-      title: 'Mini Theater',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
-      }
-    },
-    {
-      title: 'MODERN ROOFTOP CLUBHOUSE',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
-      }
-    },
-    {
-      title: 'Business Centre',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
-      }
-    },
-    {
       title: 'Library',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
@@ -128,6 +107,28 @@ const data = {
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
+      }
+    },
+    {
+      title: 'Mini Theater',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
+      }
+    },    
+    {
+      title: 'Business Centre',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
+      }
+    },   
+    
+    {
+      title: 'MODERN ROOFTOP CLUBHOUSE',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
       }
     },
   ],

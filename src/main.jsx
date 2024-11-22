@@ -31,12 +31,14 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import "./index.css";
 
-import "./savan.css";
+
 import AeroOneBangalore from "./frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx";
 import Career from "./frontend/pages/Career.jsx";
 
 import "./awaneesh.css";
 import MediaCenter from "./frontend/pages/MediaCenter.jsx";
+
+import "./savan.css";
 
 const router = createBrowserRouter([
   {

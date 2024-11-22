@@ -70,7 +70,7 @@ const Enquire = () => {
       </LazyLoad>
 
       <Container>
-        <SecTitle className="text-center color style1">
+        <SecTitle className="text-center color style1 excited-to-meet-us">
           <h4 ref={titleRef} className="title">Excited To Meet Us?</h4>
         </SecTitle>
 
