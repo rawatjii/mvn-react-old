@@ -191,7 +191,8 @@ function Career() {
                                 <h2>Craft your career with us</h2>
                             </div>
                             <div className="right">
-                                <button className="now-more"><a href="/all-jobs">All Jobs</a></button>
+                                <p className='mb-0'>Send your CV to  </p>
+                                <a href="mailto:careers@mvninfrastructure.com" className='jobmail'> careers@mvninfrastructure.com</a>
                             </div>
                         </div>
                     </div>
