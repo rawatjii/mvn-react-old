@@ -36,20 +36,21 @@ const MicroPage = ({ data }) => {
         {data.living_room_video && data.living_room_video.isVdo === true && <LivingRoomVideo data={data} />}
         {data.video3 && data.video3.isVdo === true && <Video3 data={data} />}
 
-        <Location />
+        {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
 
-        {/* {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
-        {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
-        {
-          data.Walkthrough && data.Walkthrough.isshow === true && <Walkthrough data={data.Walkthrough} />
-        }
+        {data.walkthrough.isshow === true && <Walkthrough data={data} />}
+
+        {/* {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
+
+{/* <Location /> */}
+        
         {/* <Location /> */}
 
-        {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
+        {/* {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
         
 
-        {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}        
-        {/* {data.renders && <Renders data={data} />} */}
+        {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
+        {data.renders && <Renders data={data} />}
         {data.highlightbg && data.highlightbg.isshow ? (
           <div
             style={{ backgroundImage: `url(${data.highlightbg.img})` }}
