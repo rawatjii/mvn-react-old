@@ -42,10 +42,10 @@ const MicroPage = ({ data }) => {
               style={{ backgroundImage: `url(${data.highlightbg.img})` }}
               className="highlightbg"
             >
-              <MicroHighlights />
+              <MicroHighlights data={data.highlight} />
             </div>
           ) : (
-            <MicroHighlights />
+            <MicroHighlights data={data.highlight} />
           )
         }
         
@@ -59,11 +59,16 @@ const MicroPage = ({ data }) => {
               <MicroMasterPlan />
             </div>
             <div className="col-sm-6">
-              <MicroFloorPlan />
+              <MicroFloorPlan data={data.floorPlan} />
             </div>
           </div>
         </div>
-        <MicroLocationMap />
+
+
+
+
+
+        <MicroLocationMap data={data.locationAdvantage} />
         {
           data.Slides && data.Slides.isshow === true && <Slides />
         }

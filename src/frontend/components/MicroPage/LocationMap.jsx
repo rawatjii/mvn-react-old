@@ -4,11 +4,9 @@ import SecTitle from "../../../common/SecTitle/Index"
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import LazyLoad from "react-lazyload";
 
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
-import Accordion from 'react-bootstrap/Accordion';
 
 // Import Swiper styles
 import 'swiper/css';
@@ -19,40 +17,45 @@ import location_map_sm from '../../assets/images/location-advantage/location_map
 gsap.registerPlugin(ScrollTrigger);
 
 
-const locationMapImg = [{src: location_map_sm}]
-const locationData = [
-  {
-    distance:'15 Min',
-    title:'Kempegowda Intl. Airport',
-  },
-  {
-    distance:'12 Min',
-    title:'Devanahalli Trumpet Flyover',
-  },
-  {
-    distance:'06 Min',
-    title:'Mini Vidhana Soudha',
-  },
-  {
-    distance:'12 Min',
-    title:'K.I.Airport Halt',
-  },
-  {
-    distance:'13 Min',
-    title:'Proposed Metro Line',
-  },
-  {
-    distance:'05 Min',
-    title:'Sports Village',
-  },
-]
 
-const MicroLocationMap = ()=>{
+// const locationData = [
+//   {
+//     distance:'15 Min',
+//     title:'Kempegowda Intl. Airport',
+//   },
+//   {
+//     distance:'12 Min',
+//     title:'Devanahalli Trumpet Flyover',
+//   },
+//   {
+//     distance:'06 Min',
+//     title:'Mini Vidhana Soudha',
+//   },
+//   {
+//     distance:'12 Min',
+//     title:'K.I.Airport Halt',
+//   },
+//   {
+//     distance:'13 Min',
+//     title:'Proposed Metro Line',
+//   },
+//   {
+//     distance:'05 Min',
+//     title:'Sports Village',
+//   },
+// ]
+
+const MicroLocationMap = ({data})=>{
   const titleRef = useRef();
   const typoRefs = useRef([]);
   const priceRefs = useRef([]);
   const sizeRefs = useRef([]);
   const [isLocationMapOpen, setIsLocationMapOpen] = useState(false);
+
+  const locationMapImg = [{src: data.mapIMG}]
+  
+  console.log(data.mapIMG);
+  
 
   // for animation
 
@@ -126,16 +129,16 @@ const MicroLocationMap = ()=>{
 
       <div className="locationMapContent">
         <div className="thumbnail" onClick={()=>setIsLocationMapOpen(true)}>
-          <img src={location_map_sm} alt="mvn-master-plan" className="img-fluid" />
+          <img src={data.mapIMG} alt="mvn-master-plan" className="img-fluid" />
         </div>
 
         <Container className="desktop_fluid_container">
-          <h4 className="title">Location Advantage</h4>
+          <h4 className="title">{data.title}</h4>
 
           <ul className="location_points">
             <span className="left_road"></span>
             <span className="top_road"></span>
-            {locationData.map((item,index)=>(
+            {data.locationData.map((item,index)=>(
               <li key={index}>
                 <h3 className="distance">{item.distance}</h3>
                 <p>{item.title}</p>
