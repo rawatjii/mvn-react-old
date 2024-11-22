@@ -64,6 +64,13 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
 
 section.section.our_brand_section .brand_bg.brand_bg-2{position:absolute;height:unset;width:49%;opacity:unset!important;z-index:3;bottom:0;top:unset}
 section.section.our_brand_section .container{position:relative;z-index:3}
+footer .subscribe .form-control{height:50px;background-color:rgba(255,255,255,0.1);border:0;border-radius:100px}
+footer .box .subscribe button{background-color: var(--theme_primary_color);color:#000;border:none;border-radius:100px;padding:0 15px;width:220px;margin-left:-80px;font-family:"InriaSerif-Regular";letter-spacing:.2px}
+footer .box.searchbox-input-box{display:flex;justify-content:flex-end;width:100%}
+footer .subscribe{display:flex;justify-content:flex-end}
+footer .social_links.text-center ul{justify-content:unset!important;gap:0 20px}
+footer .footer-bottom-border.container { border-bottom: 1px solid #ffffff1a; padding-bottom: 10px;}
+
 
 @media screen and (min-width: 767px) {
 
@@ -138,7 +145,7 @@ section.section.our_brand_section .container{position:relative;z-index:3}
   
     .our_brand_section .brand_content .single .content{display:grid}
     .our_brand_section .brand_content .single {width: fit-content; margin: 0 auto;  padding: 33px 45px;  margin: 24px;}
-    footer .container{display:flex;flex-wrap:wrap}
+   
     footer .important_links{width:33.3%; text-align:left!important;border-right: 1px solid #616161;border-top:none;}
     footer .contact_details{width:33.3%;border-top:none;border-right: 1px solid #616161;}
     footer .social_links{width:33.3%;border-top:none;}
@@ -164,7 +171,7 @@ section.section.our_brand_section .container{position:relative;z-index:3}
     .enquire_form .container {padding: 50px 40px!important; margin: 0px 180px!important;}
     .enquire_section {.enquire_bg {  position: absolute; z-index: 0;  height: 100%;width: 100%;object-fit: cover; left: 0; top: 0;  opacity: 0.2; z-index: -1;}}
     .enquire_section .container {padding: 170px 40px!important;  margin: 120px!important;  background-color: #000000;  display: block;position: relative;z-index:1;}
-    footer {padding-top: 50px;margin-top: 50px;}
+    footer {padding-top: 25px;margin-top: 50px;}
     .enquire_form, .enquire_section {height:unset!important;}
     .our_brand_section {& .brand_content { .single_col:not(:last-child) {  margin-bottom: 25px; }}}
 
@@ -242,6 +249,23 @@ footer .flex-bottom-border{display:block;width:100%;text-align:center}
 footer .disclaimer{width:100%!important;text-align:center!important}
 footer .copyright{width:100%;text-align:center;}
 
+footer { & .copyright {  span {  display: inline;  }}}
+
+
+
+footer {& .copyright {span a {color: var(--theme_primary_color);}}}
+footer {& .copyright {span { display: inline;}}}
+
+
+.box.searchbox-input-box {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.subscribe {
+  display: flex;
+  justify-content: flex-end;
+}
 
 @media(max-width:1600px){
 
