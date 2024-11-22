@@ -6,11 +6,14 @@ import LazyLoad from "react-lazyload";
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import commitmentIcon from '../../assets/images/icons/brand/commitment.jpg';
-import excellenceIcon from '../../assets/images/icons/brand/excellence.jpg';
-import customizedIcon from '../../assets/images/icons/brand/customized.jpg';
-import MobilebrandBG from '../../assets/images/brand/bg_sm.webp';
-import DesktopbrandBG from '../../assets/images/brand/bg-sm-2.png';
+import commitmentIcon from '../../assets/images/icons/brand/handshake.gif';
+import excellenceIcon from '../../assets/images/icons/brand/growth.gif';
+import customizedIcon from '../../assets/images/icons/brand/hand.gif';
+import MobilebrandBG from '../../assets/images/icons/brand/our-brand-ethos-bg.jpg';
+import DesktopbrandBG from '../../assets/images/icons/brand/our-brand-ethos-bg.jpg';
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
+import LeftSideBanner from "../../assets/images/icons/brand/our-brand-ethos-bg-2.png";
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -92,28 +95,48 @@ const OurBrand = () => {
         />
       </LazyLoad>
 
+      <LazyLoad>
+        <img
+          src={LeftSideBanner}
+          alt="mvn brand-bg"
+          className="brand_bg brand_bg-2"
+        />
+      </LazyLoad>
+
+
       <Container>
         <SecTitle className="text-center color style1">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Our Brand Ethos</h4>
         </SecTitle>
 
         <div className="brand_content">
           <Row>
+          <div className="inner-ethos">
             {brandData?.map((item, index) => (
-              <Col key={index} xs={12} md={4} lg={4} className="single_col">
-                <div ref={(el) => (dataRefs.current[index] = el)} className="single">
+
+
+
+
+         
+                <div key={index}   className="box">
+                <div ref={(el) => (dataRefs.current[index] = el)} className="box-flex">
                   <div className="icon">
                     <img src={item.icon} alt="mvn brand icon" className="img-fluid" />
                   </div>
-
-                  <div className="content">
-                    <h4 className="title">{item.title}</h4>
-                    <p>{item.para}</p>
-                    {/* <Link to="#" className="link">Read More</Link> */}
+                    <div className="content">
+                      <h4 className="title">{item.title}</h4>
+                      <p>{item.para}</p>
+                    </div>
                   </div>
                 </div>
-              </Col>
+           
+
+
+
             ))}
+               </div>
+
           </Row>
         </div>
       </Container>

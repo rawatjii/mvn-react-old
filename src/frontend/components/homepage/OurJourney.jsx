@@ -6,12 +6,13 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 
 // Import icons
 import diamondIcon from "../../assets/images/icons/diamond.png";
-import expIcon from "../../assets/images/icons/journey/new-icons/icon-1.png";
-import citiesIcon from "../../assets/images/icons/journey/new-icons/icon-2.png";
-import completeProjectsIcon from "../../assets/images/icons/journey/new-icons/icon-3.png";
-import ongoingProjectsIcon from "../../assets/images/icons/journey/new-icons/icon-4.png";
-import millionSqftIcon from "../../assets/images/icons/journey/new-icons/icon-5.png";
-import deliveryIcon from "../../assets/images/icons/journey/new-icons/icon-6.png";
+import expIcon from "../../assets/images/icons/journey/new-icons/Helmet-.gif";
+import citiesIcon from "../../assets/images/icons/journey/new-icons/building.gif";
+import completeProjectsIcon from "../../assets/images/icons/journey/new-icons/handshake.gif";
+import ongoingProjectsIcon from "../../assets/images/icons/journey/new-icons/crane.gif";
+import millionSqftIcon from "../../assets/images/icons/journey/new-icons/ruler.gif";
+import deliveryIcon from "../../assets/images/icons/journey/new-icons/calendar.gif";
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 // Register ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -119,6 +120,7 @@ const OurJourney = () => {
     <section className="section journey_section pb-0">
       <Container>
         <SecTitle className="text-center color style2">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">
             <span>Our Infrastructure </span>
             Real Estate Journey
