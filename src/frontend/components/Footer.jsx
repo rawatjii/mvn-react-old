@@ -8,6 +8,8 @@ import fbIcon from '../assets/images/icons/social/fb.png';
 import instaIcon from '../assets/images/icons/social/instagram.png';
 import BtnIcon from '../assets/images/icons/send.png';
 // import FormBgImg from '../assets/images/icons/form-bg.png';
+import FooterMiddleLogo from '../assets/images/logomvn.png';
+
 
 const Footer = ()=>{
   return(
@@ -63,85 +65,34 @@ const Footer = ()=>{
         </Row>
       </Container>
       <Container>
-        <div className="important_links text-center">
-          <h5 className="title">
-            Important Links
-          </h5>
+        <div className="flex-row"> 
+            <div className="custom-col">
 
-          <ul className="">
-            <li>
-              <NavLink to='#'>Home</NavLink>
-            </li>
+            <div class="box">
+              <h4>Contact Details</h4>
+              <p><span>Meet:</span> MVN Athens Gurugram Sector 5, Gurugram, Haryana 122102</p>
+              <p><span>Talk:</span> +91 88267 93148</p>
+              <p><span>Write:</span> info@mvngroup.in</p>
+            </div>
+            </div>
+            <div className="custom-col">
+                <img src alt="" className=""/>
+            </div>
+            <div className="custom-col">
 
-            <li>
-              <NavLink to='#'>About Us</NavLink>
-            </li>
+              <div className="flex-bottom-border">
+                  <div className="disclaimer text-center">
+                    <Link to="">Disclaimer & Privacy Policy</Link>
+                  </div>
 
-            <li>
-              <NavLink to='#'>Real Estate</NavLink>
-            </li>
+                  <div className="copyright">
+                  2024-MVN Group. All Right Reserved <span>Curated by: <Link to="#">GTF Technologies</Link></span>
+                  </div>
+              </div>
 
-            <li>
-              <NavLink to='https://www.mvneducation.com/'>Education</NavLink>
-            </li>
-
-            <li>
-              <NavLink to='#'>Contact Us</NavLink>
-            </li>
-
-            <li>
-              <NavLink to='#'>Blogs</NavLink>
-            </li>
-
-            <li>
-              <NavLink to='#'>Career</NavLink>
-            </li>
-
-            <li>
-              <NavLink to='#'>Gallery</NavLink>
-            </li>
-
-            <li>
-              <NavLink to='#'>CSR</NavLink>
-            </li>
-
-          </ul>
+            </div>
         </div>
-
-        <div className="contact_details text-center">
-          <h5 className="title">
-            Contact Details
-          </h5>
-
-          <ul>
-            <li>
-              <p>Bangalore- MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157</p>
-              <p>Gurugram- MVN Athens Gurugram Sector 5, Gurugram, Haryana-122102</p>
-              <p>Faridabad- Sihi Gate Road, Tigaon Rd, Shiv Colony, Ballabhgarh, Faridabad, Haryana-121004</p>
-            </li>
-            <li>
-              {/* <a href="tel:">(+91) 8826793148</a>, */}
-              <a href="tel:">(+91) 88267 93148</a>
-            </li>
-            <li>
-              <a href="mailto:">info@mvngroup.com</a>,
-              <a href="mailto:">support@mvngroup.com</a>
-            </li>
-          </ul>
-        </div>
-
-
-
-        <div className="flex-bottom-border">
-          <div className="disclaimer text-center">
-            <Link to="">Disclaimer & Privacy Policy</Link>
-          </div>
-
-          <div className="copyright">
-          2024-MVN Group. All Right Reserved <span>Curated by: <Link to="#">GTF Technologies</Link></span>
-          </div>
-        </div>
-
+       
       </Container>
       
     </footer>

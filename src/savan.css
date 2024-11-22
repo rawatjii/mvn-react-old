@@ -146,7 +146,7 @@ footer .footer-bottom-border.container { border-bottom: 1px solid #ffffff1a; pad
     .our_brand_section .brand_content .single .content{display:grid}
     .our_brand_section .brand_content .single {width: fit-content; margin: 0 auto;  padding: 33px 45px;  margin: 24px;}
    
-    footer .important_links{width:33.3%; text-align:left!important;border-right: 1px solid #616161;border-top:none;}
+    footer .important_links{width:33.3%; text-align:left!important;border-top:none;}
     footer .contact_details{width:33.3%;border-top:none;border-right: 1px solid #616161;}
     footer .social_links{width:33.3%;border-top:none;}
     footer .disclaimer{width:50%;border-top:none;text-align: left !important;}
@@ -266,6 +266,12 @@ footer {& .copyright {span { display: inline;}}}
   display: flex;
   justify-content: flex-end;
 }
+
+.our_team_section {.sec_title {margin-bottom: 60px;}}
+
+footer .flex-row {display: flex;flex-wrap: wrap;width: 100%;justify-content: space-between;}
+footer .flex-row .custom-col {width: 33%;}
+
 
 @media(max-width:1600px){
 
