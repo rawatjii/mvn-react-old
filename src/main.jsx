@@ -39,6 +39,7 @@ import "./awaneesh.css";
 import MediaCenter from "./frontend/pages/MediaCenter.jsx";
 
 import "./savan.css";
+import Blog from "./frontend/pages/Blog.jsx";
 
 const router = createBrowserRouter([
   {
@@ -121,6 +122,16 @@ const router = createBrowserRouter([
           <Suspense fallback={<InitialLoading />}>
             <Layout>
               <MediaCenter />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "blogs",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <Blog />
             </Layout>
           </Suspense>
         ),

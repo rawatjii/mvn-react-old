@@ -116,7 +116,7 @@ function Career() {
 
                             <div className="grid-left-right">
                                 <div className="img-left-right">
-                                    <div className="item animated wow fadeIn">
+                                    <div className="item ">
                                         <img className="blank-img" src={BlankIMG} width="100%" />
                                         <div className="content-right-img">
                                             <div className="gd-inner h-100 d-grid align-items-center">
@@ -142,7 +142,7 @@ function Career() {
                         <div className="grid-right">
                             <div className="grid-left-right">
                                 <div className="img-left-right">
-                                    <div className="item animated wow fadeIn">
+                                    <div className="item ">
                                         <img className="blank-img" src={BlankIMG} width="100%" />
                                         <div className="content-right-img">
                                             <div className="gd-inner h-100 d-grid align-items-center">
