@@ -61,43 +61,43 @@ const data = {
     {
       title: 'Billiards',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/pool.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/poolSm.webp',
+        lg: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/Billiards.webp',
+        mb: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/BilliardsSm.webp',
       }
     },
     {
       title: 'Gym',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/study.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/studySm.webp',
+        lg: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/Gym.webp',
+        mb: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/GymSm.webp',
       }
     },
     {
       title: 'Hot Tub Lake View',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
+        lg: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/HotTubLakeView.webp',
+        mb: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/HotTubLakeViewSm.webp',
       }
     },
     {
       title: 'Party lawn',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/balcony.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/balconySm.webp',
+        lg: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/Partylawn.webp',
+        mb: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/PartylawnSm.webp',
       }
     },
     {
       title: 'Croquet view',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+        lg: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/Croquetview.webp',
+        mb: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/CroquetviewSm.webp',
       }
     },
     {
       title: 'Outdoor cinema',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+        lg: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/Outdoorcinema.webp',
+        mb: CONFIG.IMAGE_URL + 'aero-bangalore/amenities/OutdoorcinemaSm.webp',
       }
     },
     
@@ -171,12 +171,20 @@ const data = {
       },
       
     ]
+  },
+  rera:{
+    isshow: true,
+    raraDetails:[
+      `RERA Registration no : PRM/KA/RERA/1250/303/PR/201222/003761`,
+      `Tower no 4 RERA Registration no : PRM/KA/RERA/1250/303/PR/140923/006259`,
+      `Tower no 5 and Tower 6 RERA Registration No : PRM/KA/RERA/1250/303/PR/141223/006472`
+    ]
+    
   }
   
   
 };
 
-console.log(data.menities_section[0].images.lg);
 
 
 const AeroOneBangalore = () => {

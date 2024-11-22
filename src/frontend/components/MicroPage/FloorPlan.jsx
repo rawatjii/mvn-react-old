@@ -97,7 +97,7 @@ const MicroFloorPlan = ({data})=>{
       }
     })
   }, [])
-  console.log(data.floorPlanData);
+  
   
 
 

@@ -1,61 +1,61 @@
 import React, { useEffect, useRef, useState } from "react";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 
-// Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const PeacockSection = ({data}) => {
+const PeacockSection = ({ data }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
-  const totalFrames = 183;
   const frameRefs = useRef([]);
+  const [isMobile, setIsMobile] = useState(false);
 
-  // for animation
+  const totalFramesDesktop = 379;
+  const totalFramesMobile = 379;
 
-  useEffect(()=>{
-    gsap.from(titleRef.current, {
-      y: 50,  
-      opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
-        trigger: titleRef.current,
-        start: "top 95%",
-      }
-    })
-  }, [])
-
+  // Detect screen size
   useEffect(() => {
-    // Preload images
-    const loadedImages = [];
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => {
+      window.removeEventListener("resize", checkMobile);
+    };
+  }, []);
 
-    for (let i = 1; i <= 183; i++) {
+  // Load images
+  useEffect(() => {
+    const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
+    const imagePath = isMobile ? "assets/images/peacock/mobile/" : "assets/images/peacock/desktop/";
+
+    const loadedImages = [];
+    for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `assets/images/peacock/${i}.webp`; // Update with the correct path for your frames
+      img.src = `${imagePath}${i}.webp`; // Adjust the path accordingly
       loadedImages.push(img);
     }
     setImages(loadedImages);
-  }, []);
+  }, [isMobile]);
 
+  // GSAP Animation
   useEffect(() => {
-    if (images.length !== totalFrames) return; // Wait until all images are loaded
+    if (images.length === 0) return;
 
-    // Image sequence animation
+    const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
+
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: 'top top',
-      end: `+=${window.innerHeight * 2}`, // Extend scroll distance to fit more frames
+      start: "top top",
+      end: `+=${window.innerHeight * 8}`,
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-        
-        // Only start changing frames after a scroll progress threshold
-        // First condition: Only start changing frames after a scroll progress threshold
         if (self.progress > 0.1) {
           frameRefs.current.forEach((img, index) => {
             if (img) img.style.display = index === frameIndex ? "block" : "none";
@@ -63,26 +63,23 @@ const PeacockSection = ({data}) => {
         }
       },
       onLeaveBack: () => {
-        // Reset to first frame when scrolling back to the start smoothly
         frameRefs.current.forEach((img, index) => {
           if (img) img.style.display = index === 0 ? "block" : "none";
         });
       },
       onLeave: () => {
-        // Reset to last frame when scrolling to the end smoothly
         frameRefs.current.forEach((img, index) => {
           if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
         });
-      }
+      },
     });
 
     return () => {
       scrollAnimation.kill();
     };
+  }, [images, isMobile]);
 
-  }, [images, totalFrames]);
-
-  const {title, desc} = data.video1
+  const { title, desc } = data.video1;
 
   return (
     <div className="section peacock_section pb-0">
@@ -106,7 +103,6 @@ const PeacockSection = ({data}) => {
           </SecTitle>
 
           {desc && <p className="desc">{desc}</p>}
-          
         </Container>
       </div>
     </div>
