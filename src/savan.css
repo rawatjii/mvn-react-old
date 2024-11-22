@@ -194,6 +194,10 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
     section.overview_section.desktop-view .home-about-content {width: 55%;margin: 0 auto;padding-top: 60px; padding-bottom: 60px;}
     section.overview_section.desktop-view .hero_title {  margin-bottom: 39px; font-size: 24px;letter-spacing: 1px; line-height: 39px;}
     section.overview_section.desktop-view .home-about-content p { font-size: 14px; width: 99%;line-height: 26px;  letter-spacing: 1px; margin: 0 auto; color: #c1c2c1;}
+    .testimonial_section .swiper-slide {height: 44vh;}
+    .excited-to-meet-us  .title::after { display: none;}
+  .swiper-slide .single{ border-top: 5px solid rgba(244, 217, 102, 0.5);}
+
 
 
 
@@ -201,6 +205,9 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
 }
 
 
+.our_team_section p{font-size:14px;width:50%;line-height:26px;letter-spacing:1px;margin:0 auto;color:#c1c2c1;font-weight:unset}
+.our_brand_section .brand_content .single h4.title::after{display:none}
+section.section.our_brand_section .brand_content{padding-bottom:0!important}
 
 
 @media(max-width:1600px){
@@ -219,6 +226,10 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
   h4.title{position:relative;width:fit-content;margin:0 auto!important;display:block}
 h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70px;height:70px;top:-17px;left:-25px;border-radius:100px;z-index:-1}
 .sec_title.text-center.color.style2{text-align:center}
+.excited-to-meet-us  .title::after { display: none;}
+
+
+
   
 
 
