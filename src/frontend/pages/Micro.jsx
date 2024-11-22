@@ -29,17 +29,9 @@ const MicroPage = ({ data }) => {
           data.rera && data.rera.isshow === true && <Rera data={data.rera} />
         }
         {data.LargeElevationSection && data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
-
-        {data.LargeElevationSection &&
-          data.LargeElevationSection.isAllow === true && (
-            <LargeElevationSection data={data.LargeElevationSection} />
-          )}
-
-          
         {data.video1.isVdo === true && <PeacockSection data={data} />}
         {data.video2.isVdo === true && <Video2 data={data} />}
         {data.video3.isVdo === true && <Video3 data={data} />}
-
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
         {
           data.Walkthrough && data.Walkthrough.isshow === true && <Walkthrough data={data.Walkthrough} />
