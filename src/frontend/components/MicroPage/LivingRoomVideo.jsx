@@ -16,65 +16,79 @@ const LivingRoomVideo = ({ data }) => {
 
   const { title, desc } = data.living_room_video;
 
-  // useEffect(() => {
-  //   const section = sectionRef.current;
-  //   const video = videoRef.current;
-
-  //   // Function to disable scrolling
-  //   const disableScrolling = () => {
-  //     document.body.style.overflow = "hidden";
-  //   };
-
-  //   // Function to enable scrolling
-  //   const enableScrolling = () => {
-  //     document.body.style.overflow = "";
-  //   };
-
-  //   // Play video when the section becomes active
-  //   const playVideo = () => {
-  //     video.play().catch((error) => {
-  //       console.error("Video playback failed", error);
-  //     });
-  //   };
-
-  //   // Pause video when the section is left
-  //   const pauseVideo = () => {
-  //     video.pause();
-  //   };
-
-  //   // Handle when video ends
-  //   const handleVideoEnd = () => {
-  //     enableScrolling(); // Allow scrolling
-  //     ScrollTrigger.refresh(); // Refresh ScrollTrigger to release the pinned section
-  //   };
-
-  //   // ScrollTrigger setup
-  //   const scrollTriggerInstance = ScrollTrigger.create({
-  //     trigger: section,
-  //     start: "top top",
-  //     end: () => `+=${video.duration * 1000}`, // Pin until the video ends
-  //     pin: true,
-  //     scrub: false, // No scroll-based scrubbing
-  //     onEnter: () => {
-  //       disableScrolling(); // Lock scrolling
-  //       playVideo();
-  //     },
-  //     onLeaveBack: () => {
-  //       enableScrolling(); // Allow scrolling when scrolling up
-  //       pauseVideo();
-  //     },
-  //   });
-
-  //   // Event listener for when the video ends
-  //   video.addEventListener("ended", handleVideoEnd);
-
-  //   return () => {
-  //     // Cleanup
-  //     enableScrolling();
-  //     video.removeEventListener("ended", handleVideoEnd);
-  //     scrollTriggerInstance.kill();
-  //   };
-  // }, []);
+  useEffect(() => {
+    const section = sectionRef.current;
+    const video = videoRef.current;
+  
+    let scrollTriggerInstance;
+  
+    const disableScrolling = () => {
+      document.body.style.overflow = "hidden";
+    };
+  
+    const enableScrolling = () => {
+      document.body.style.overflow = "";
+    };
+  
+    const playVideo = () => {
+      video.play().catch((error) => {
+        console.error("Video playback failed", error);
+      });
+    };
+  
+    const pauseVideo = () => {
+      video.pause();
+    };
+  
+    const handleVideoEnd = () => {
+      enableScrolling(); // Allow scrolling
+      if (scrollTriggerInstance) {
+        scrollTriggerInstance.kill(); // Kill the current ScrollTrigger instance
+      }
+      ScrollTrigger.refresh(); // Refresh all ScrollTriggers to fix issues below
+    };
+  
+    const setupScrollTrigger = () => {
+      scrollTriggerInstance = ScrollTrigger.create({
+        trigger: section,
+        start: "top top",
+        end: () => `+=${video.duration * window.innerHeight}`, // Dynamically adjust based on video duration
+        pin: true,
+        scrub: false,
+        onEnter: () => {
+          disableScrolling();
+          playVideo();
+        },
+        onLeaveBack: () => {
+          enableScrolling();
+          pauseVideo();
+        },
+        onLeave: () => {
+          enableScrolling();
+          pauseVideo();
+        },
+      });
+  
+      // Add event listener for video end
+      video.addEventListener("ended", handleVideoEnd);
+    };
+  
+    // Wait for video metadata to load
+    video.addEventListener("loadedmetadata", () => {
+      setupScrollTrigger();
+    });
+  
+    return () => {
+      // Cleanup
+      enableScrolling();
+      if (scrollTriggerInstance) scrollTriggerInstance.kill();
+      video.removeEventListener("ended", handleVideoEnd);
+      video.removeEventListener("loadedmetadata", setupScrollTrigger);
+    };
+  }, []);
+  
+  
+  
 
   return (
     <div className="section living_room_video_section pb-0" ref={sectionRef}>
@@ -85,7 +99,7 @@ const LivingRoomVideo = ({ data }) => {
         muted
         autoPlay={false}
         playsInline
-        preload="auto"
+        preload="metadata"
       />
 
     <Container >
