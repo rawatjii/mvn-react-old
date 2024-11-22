@@ -1,7 +1,7 @@
 import Navbar from "react-bootstrap/Navbar";
 import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import * as CONFIG from "root/config/config";
 import { useEffect, useRef, useState } from "react";
 
@@ -9,25 +9,36 @@ import { gsap } from "gsap";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isMicro, setIsMicro] = useState(false);
   const menusRef = useRef();
   const headerRef = useRef();
   const logoRef = useRef();
   const toggleRef = useRef();
 
+  const {pathname} = useLocation();
+
   useEffect(() => {
+    if(pathname.includes('aeroone-gurgaon')){
+      setIsMicro(true)
+    }
+
+
     const handleScroll = () => {
-      if (window.location.pathname === "/mvn/") {
+      if (pathname === "/mvn/") {
         if (window.scrollY > 2960) {
           setScrolled(true);
         } else {
           setScrolled(false);
         }
       } else {
-        if (window.scrollY > 50) {
-          setScrolled(true);
-        } else {
-          setScrolled(false);
+        if(isMicro){
+          if (window.scrollY > 50) {
+            setScrolled(true);
+          } else {
+            setScrolled(false);
+          }
         }
+        
       }
       // if (window.scrollY > 50) {
       //   setScrolled(true);
@@ -73,7 +84,7 @@ const Header = () => {
 
   return (
     <>
-      <Navbar expand="false" className={`${scrolled ? "fixed" : ""}`}>
+      <Navbar ref={headerRef} expand="false" className={`${scrolled ? "fixed" : ""} ${isMicro ? 'micro_nav' : null}`}>
         <Container>
           <Navbar.Brand ref={logoRef} className="logo">
             <Link to="/mvn/" onClick={() => toggleMenu("close")}>
@@ -96,7 +107,9 @@ const Header = () => {
             ref={toggleRef}
             aria-controls="basic-navbar-nav"
             onClick={() => toggleMenu("show")}
-          />
+          >
+            <span className="icon"></span>
+          </Navbar.Toggle>
 
           <div id="basic-navbar-nav" className="navbar_collapse" ref={menusRef}>
             <Container>

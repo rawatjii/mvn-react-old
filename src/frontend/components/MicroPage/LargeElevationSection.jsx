@@ -34,9 +34,9 @@ export default function LargeElevation({ data }) {
             y: 222,
             scrollTrigger: {
                 trigger: ".large-elevation",
-                start: "top bottom",
+                start: "top 80%",
                 end: "top top",
-                scrub: true,
+                scrub: 0.2,
             },
         });
         gsap.to(".abs_img1", {
@@ -46,7 +46,7 @@ export default function LargeElevation({ data }) {
                 start: "top bottom",
                 end: "top top",
                 scrub: true,
-                markers:true
+                markers:false
             },
         });
 

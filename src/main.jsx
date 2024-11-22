@@ -125,6 +125,7 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      
       {
         path: "*",
         element: <PageNotFound />,

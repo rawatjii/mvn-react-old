@@ -17,7 +17,9 @@ import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
 import LargeElevationSection from "../components/MicroPage/LargeElevationSection";
 import Renders from "../components/MicroPage/Renders";
+import Location from "../components/MicroPage/Location";
 import Rera from "../components/MicroPage/Rera";
+import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
 
 const MicroPage = ({ data }) => {
   return (
@@ -30,28 +32,32 @@ const MicroPage = ({ data }) => {
         }
         {data.LargeElevationSection && data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
         {data.video1.isVdo === true && <PeacockSection data={data} />}
-        {data.video2.isVdo === true && <Video2 data={data} />}
+        {/* {data.video2.isVdo === true && <Video2 data={data} />} */}
+        {data.living_room_video.isVdo === true && <LivingRoomVideo data={data} />}
         {data.video3.isVdo === true && <Video3 data={data} />}
+
+        <Location />
+
+        {/* {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
         {
           data.Walkthrough && data.Walkthrough.isshow === true && <Walkthrough data={data.Walkthrough} />
         }
 
         {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
-        {data.renders && <Renders data={data} />}
-
+        {/* {data.renders && <Renders data={data} />} */}
         {data.highlightbg && data.highlightbg.isshow ? (
-            <div
-              style={{ backgroundImage: `url(${data.highlightbg.img})` }}
-              className="highlightbg"
-            >
-              <MicroHighlights data={data.highlight} />
-            </div>
-          ) : (
+          <div
+            style={{ backgroundImage: `url(${data.highlightbg.img})` }}
+            className="highlightbg"
+          >
             <MicroHighlights data={data.highlight} />
-          )
+          </div>
+        ) : (
+          <MicroHighlights data={data.highlight} />
+        )
         }
-        
+
         {/* {data.renders && <Renders data={data} />} */}
         {/* <MicroHighlights /> */}
         <MicroPrice />

@@ -3,6 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
+import CustomCard from "../Card";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -96,7 +97,17 @@ const PeacockSection = ({ data }) => {
         ))}
       </div>
 
-      <div className="content">
+      <Container >
+        <div className='about'>
+            <CustomCard
+              title="Experience The Bliss Of Endless Vistas" 
+              desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."  
+            />
+        </div>
+
+    </Container>
+
+      {/* <div className="content">
         <Container>
           <SecTitle className="text-center color style1">
             <h4 ref={titleRef} className="title">{title}</h4>
@@ -104,7 +115,7 @@ const PeacockSection = ({ data }) => {
 
           {desc && <p className="desc">{desc}</p>}
         </Container>
-      </div>
+      </div> */}
     </div>
   );
 };

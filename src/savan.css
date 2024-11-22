@@ -288,7 +288,7 @@ h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70
           margin:0;
       
           img{
-            max-width:60px;
+            max-width:50px;
             transition:all 0.3s ease-in-out;
           }
         }
