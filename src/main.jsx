@@ -9,9 +9,8 @@ import Layout from "./frontend/components/Layout.jsx";
 const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
 const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
 const MicroPage = React.lazy(() => import("./frontend/pages/Micro.jsx"));
-const AeroOneGurgaon = React.lazy(() =>
-  import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx")
-);
+const AeroOneGurgaon = React.lazy(() =>import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
+const AeroOneGurgaon1 = React.lazy(() =>import("./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx"));
 const ContactPage = React.lazy(() => import("./frontend/pages/ContactUs.jsx"));
 
 // admin
@@ -72,6 +71,16 @@ const router = createBrowserRouter([
           <Suspense fallback={<InitialLoading />}>
             <Layout>
               <AeroOneGurgaon />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "aeroone-gurgaon1",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <AeroOneGurgaon1 />
             </Layout>
           </Suspense>
         ),

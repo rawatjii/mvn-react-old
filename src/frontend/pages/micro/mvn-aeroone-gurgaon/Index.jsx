@@ -46,7 +46,7 @@ const data = {
   },
   masterBedroom: {
     title: "MASTER BEDROOM",
-    desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
+    desc: "Retreat to a master bedroom that redefines comfort and luxury. Designed for relaxation and rest, it’s a sanctuary of style, where every element exudes tranquility and elegance.",
     isVdo: true,
   },
   highlights: [
@@ -58,12 +58,12 @@ const data = {
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
-    isshow: false,
+    isshow: true,
     desc: "IF YOU THINK YOU'VE EXPERIENCED TRUE LUXURY IT'S TIME TO RAISE YOUR EXPECTATION",
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: false,
+      isVdo: true,
     },
   },
   LargeElevationSection: {

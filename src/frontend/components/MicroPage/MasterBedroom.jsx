@@ -3,8 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
-
-import diamondIcon from '../../assets/images/icons/diamond_light.png'
+import CustomCard from "../Card";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -13,7 +12,7 @@ const MasterBedroom = ({data}) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
-  const totalFrames = 182;
+  const totalFrames = 183;
   const frameRefs = useRef([]);
 
   // for animation
@@ -35,7 +34,7 @@ const MasterBedroom = ({data}) => {
     // Preload images
     const loadedImages = [];
 
-    for (let i = 1; i <= 182; i++) {
+    for (let i = 1; i <= 183; i++) {
       const img = new Image();
       img.src = `assets/videos/master-bedroom/mobile/${i}.webp`; // Update with the correct path for your frames
       loadedImages.push(img);
@@ -50,7 +49,7 @@ const MasterBedroom = ({data}) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: 'top top',
-      end: `+=${window.innerHeight * 5}`, // Extend scroll distance to fit more frames
+      end: `+=${window.innerHeight * 8}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
@@ -87,7 +86,7 @@ const MasterBedroom = ({data}) => {
   const {title, desc} = data.masterBedroom
 
   return (
-    <div className="section master_bedroom_section pb-0">
+    <div className="section peacock_section pb-0">
       <div ref={containerRef} className="frames_content">
         {images.map((img, index) => (
           <img
@@ -101,22 +100,15 @@ const MasterBedroom = ({data}) => {
         ))}
       </div>
 
-      <div className="divider">
-        <img src={diamondIcon} alt="mvn-diamond-icon" className="img-fluid icon" />
-        <img src={diamondIcon} alt="mvn-diamond-icon" className="img-fluid icon" />
-        <img src={diamondIcon} alt="mvn-diamond-icon" className="img-fluid icon" />
-      </div>
-
-      <Container>
-        <div className="content">
-            <SecTitle className="text-center color style1">
-              <h4 ref={titleRef} className="title">{title}</h4>
-            </SecTitle>
-
-            {desc && <p className="desc">{desc}</p>}
-            
+      <Container >
+        <div className='about'>
+            <CustomCard
+              title={title}
+              desc={desc}  
+            />
         </div>
-      </Container>
+
+    </Container>
     </div>
   );
 };

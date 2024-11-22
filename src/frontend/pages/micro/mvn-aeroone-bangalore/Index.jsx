@@ -40,6 +40,11 @@ const data = {
     desc: "Dive into your own private pool with a grand view, just a few steps away from your living room",
     isVdo: false,
   },
+  living_room_video:{
+    title: "ESCAPE TO EXCLUSIVITY",
+    desc: "Experience the elegance of a sliding door that seamlessly connects your living space to the outdoors, transforming the ambiance with every glide.",
+    isVdo: false,
+  },
   video3: {
     title: "ELEVATED LIVING",
     desc: "OUR 13.5FT HIGH CEILINGS WILL SET A HIGHER STANDARD OF SPACE UTILISATION IN HARMONY WITH DESIGN AESTHETICS & SOPHISTICATION",

@@ -43,8 +43,12 @@ const MicroPage = ({ data }) => {
         {
           data.Walkthrough && data.Walkthrough.isshow === true && <Walkthrough data={data.Walkthrough} />
         }
+        {/* <Location /> */}
 
-        {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
+        {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
+        
+
+        {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}        
         {/* {data.renders && <Renders data={data} />} */}
         {data.highlightbg && data.highlightbg.isshow ? (
           <div

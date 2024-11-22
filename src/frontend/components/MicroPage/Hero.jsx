@@ -18,7 +18,12 @@ const MicroHero = ({ data }) => {
     const isMobile = window.innerWidth <= 768;
 
     // Set total frames dynamically
-    const frameCount = isMobile ? 275 : 177;
+    let frameCount = 0;
+    if(data.micro_hero_section.client){
+      frameCount = isMobile ? 72 : 177;
+    }else{
+      frameCount = isMobile ? 275 : 177;
+    }
     setTotalFrames(frameCount);
   }, []);
 
@@ -27,9 +32,17 @@ const MicroHero = ({ data }) => {
     if (totalFrames === 0) return;
 
     const isMobile = window.innerWidth <= 768;
-    const folderPath = isMobile
+    let folderPath = null;
+    if(data.micro_hero_section.client){
+      folderPath = isMobile
+      ? "assets/images/micro/hero/client/"
+      : "assets/images/micro/hero/client/";
+    }else{
+      folderPath = isMobile
       ? "assets/images/micro/hero/mobile/"
       : "assets/images/micro/hero/desktop/";
+    }
+    
 
     // Preload images
     const loadedImages = [];
