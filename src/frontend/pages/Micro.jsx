@@ -30,7 +30,10 @@ const MicroPage = ({ data }) => {
         {data.video2.isVdo === true && <Video2 data={data} />}
         {data.video3.isVdo === true && <Video3 data={data} />}
         {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
-        <Walkthrough data={data.Walkthrough} />
+        {
+          data.Walkthrough && data.Walkthrough.isshow === true && <Walkthrough data={data.Walkthrough} />
+        }
+
         {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
         {data.renders && <Renders data={data} />}
        
@@ -39,10 +42,10 @@ const MicroPage = ({ data }) => {
               style={{ backgroundImage: `url(${data.highlightbg.img})` }}
               className="highlightbg"
             >
-              <MicroHighlights />
+              <MicroHighlights data={data.highlight} />
             </div>
           ) : (
-            <MicroHighlights />
+            <MicroHighlights data={data.highlight} />
           )
         }
         
@@ -56,11 +59,16 @@ const MicroPage = ({ data }) => {
               <MicroMasterPlan />
             </div>
             <div className="col-sm-6">
-              <MicroFloorPlan />
+              <MicroFloorPlan data={data.floorPlan} />
             </div>
           </div>
         </div>
-        <MicroLocationMap />
+
+
+
+
+
+        <MicroLocationMap data={data.locationAdvantage} />
         {
           data.Slides && data.Slides.isshow === true && <Slides />
         }

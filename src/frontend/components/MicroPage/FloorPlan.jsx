@@ -4,7 +4,6 @@ import SecTitle from "../../../common/SecTitle/Index"
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
-import LazyLoad from "react-lazyload";
 
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
@@ -18,23 +17,25 @@ import floorPlanImg from '../../assets/images/floor-plan/floor-plan.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const floorPlanData = [
-  {
-    title:'2 BHK floor Plan',
-    thumbnail:floorPlanImg,
-  },
-  {
-    title:'3 BHK Floor Plan',
-    thumbnail:floorPlanImg,
-  }
-]
+// const floorPlanData = [
+//   {
+//     title:'2 BHK floor Plan',
+//     thumbnail:floorPlanImg,
+//   },
+//   {
+//     title:'3 BHK Floor Plan',
+//     thumbnail:floorPlanImg,
+//   }
+// ]
 
-const MicroFloorPlan = ()=>{
+const MicroFloorPlan = ({data})=>{
   const titleRef = useRef();
   const typoRefs = useRef([]);
   const priceRefs = useRef([]);
   const sizeRefs = useRef([]);
   const [isMasterPlanOpen, setIsMasterPlanOpen] = useState(false);
+
+  const {floorPlanData} = data  
 
   // for animation
 
@@ -96,6 +97,8 @@ const MicroFloorPlan = ()=>{
       }
     })
   }, [])
+  console.log(data.floorPlanData);
+  
 
 
   return(

@@ -7,12 +7,12 @@ import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_im
 import "./aeroGuragaon.css";
 
 const data = {
-  micro_hero_section: 
+  micro_hero_section:
   {
     isVdo: true,
-    images:false,
-    bannerHighLight:false,
-    enquiryBTN:false 
+    images: false,
+    bannerHighLight: false,
+    enquiryBTN: false
   },
   overview: {
     title: "MVN Aero One",
@@ -24,7 +24,7 @@ const data = {
       'Step into a world of unparalleled luxury, where every detail blends sophistication with style. Relish in tailored interiors, exceptional amenities, and panoramic views. Transform your lifestyle with an extraordinary living experience beyond compare.',
     ],
   },
-  video1: { 
+  video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
     // desc:'Our 13.5ft High Ceilings Will Set A Higher Standard Of Space Utilisation In Harmony With Design Aesthetics & Sophistication.',
     isVdo: true,
@@ -53,6 +53,7 @@ const data = {
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
+    isshow: true,
     desc: "IF YOU THINK YOU'VE EXPERIENCED TRUE LUXURY IT'S TIME TO RAISE YOUR EXPECTATION",
     masterBedroom: {
       title: "MASTER BEDROOM",
@@ -88,17 +89,17 @@ const data = {
   ],
   menities_section: [
     {
-      title: 'Infinity Pool',
+      title: 'Spa',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/pool.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/poolSm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/spa.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/spaSm.webp',
       }
     },
     {
-      title: 'THE STUDY',
+      title: 'Mini Theater',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/study.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/studySm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
       }
     },
     {
@@ -109,27 +110,92 @@ const data = {
       }
     },
     {
-      title: 'double height balcony',
+      title: 'Business Centre',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/balcony.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/balconySm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
       }
     },
     {
-      title: 'living area',
+      title: 'Library',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/librarySm.webp',
       }
     },
     {
-      title: 'living area',
+      title: 'Gym Area',
       images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+        lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
       }
     },
   ],
+  highlight:{
+    isshow: true,
+    title: "Highlight",
+    point:[
+      'Power backup for common facilities.',
+    'Italian/Imported Marble flooring.',
+    'Television points in living and bedrooms.',
+    'Telephone points in living and master bedroom.',
+    'Split AC provision in living and bedrooms.',
+    'Premium emulsion paint finish.',
+    ]
+  },
+  locationAdvantage: {
+    isshow: true,
+    title: "Location Advantage",
+    mapIMG: CONFIG.IMAGE_URL + 'aero-bangalore/location.jpg',
+    locationData : [
+      {
+        distance:'15 Min',
+        title:'Kempegowda Intl. Airport',
+      },
+      {
+        distance:'12 Min',
+        title:'K.I.Airport Halt (Railway Station)',
+      },
+      {
+        distance:'05 Min',
+        title:'Sports Village',
+      },
+      {
+        distance:'06 Min',
+        title:'Mini Vidhana Soudha',
+      },
+      {
+        distance:'02 Min',
+        title:'Anjaneya Temple',
+      },
+      {
+        distance:'11 Min',
+        title:'KIADB Aerospace SEZ',
+      },
+    ]
+  },
+  floorPlan:{
+
+    floorPlanData : [
+      {
+        title:'1 BHK Floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
+      },
+      {
+        title:'2 BHK Panoramic floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
+      },
+      {
+        title:'2 BHK Luxury floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
+      },
+      {
+        title:'3 BHK Luxury floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
+      },
+      
+    ]
+  }
 };
 
 const AeroOneGurgaon = () => {

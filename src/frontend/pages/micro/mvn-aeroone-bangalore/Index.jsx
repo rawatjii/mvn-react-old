@@ -5,6 +5,7 @@ import hero_img_mb from "../../../../frontend/assets/images/micro/aeroone_bangal
 import hero_img_desk from "../../../../frontend/assets/images/micro/aeroone_bangalore/hero_desk.jpg";
 import highlightbgIMG from '../../../assets/images/bg/112.jpg'
 
+
 const data = {
   micro_hero_section: 
   {
@@ -24,8 +25,9 @@ const data = {
     location: "BANGALORE",
     extra: "",
     desc:[
-      'At MVN, we are fired by an indomitable will to shape the future. We commenced our corporate journey in 1983 and have since evolved into a contemporary business entity with interests in education and real estate.',
-      'Our first educational venture Modern Vidya Niketan School was conceived in 1983. It is today one of the most respected and acclaimed schools in its category. Several other institutions in the NCR region bear our name and are considered the ideal learning grounds for budding destinies.'
+      'There’s a lot to look forward to with MVN Aero One. When we conceptualized the project, we asked ourselves what the urban resident was missing. And rather than merely fill up the blanks in his/her life, we chose to enhance our offerings. Aero one offers luxury apartments in Bangalore at the best location, with ample living space, and delight-a-moment amenities which makes a complete life within.',
+      'Aero one is taking shape in pristine Devanahalli, which has benefited from the presence of the Kempegowda International Airport. The airport has spurred numerous infrastructural auxiliary developments. Coupled with connectivity to NH 44, Hebbal, and access to the Central Business District of Bangalore, this is one location that offers more potential for growth.',
+      'Aero One, gives you an option to opt for 2 & 3 BHK luxury apartments in Banglore that suits the need of every family member. The project being close to the Special Agricultural Zone abuts the International Airport, offering scenic views that last a lifetime.'
     ]
   },
   video1: {
@@ -57,35 +59,42 @@ const data = {
   },
   menities_section: [
     {
-      title: 'Infinity Pool',
+      title: 'Billiards',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/pool.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/poolSm.webp',
       }
     },
     {
-      title: 'THE STUDY',
+      title: 'Gym',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/study.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/studySm.webp',
       }
     },
     {
-      title: 'MODERN ROOFTOP CLUBHOUSE',
+      title: 'Hot Tub Lake View',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
       }
     },
     {
-      title: 'double height balcony',
+      title: 'Party lawn',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/balcony.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/balconySm.webp',
       }
     },
     {
-      title: 'living area',
+      title: 'Croquet view',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
+      }
+    },
+    {
+      title: 'Outdoor cinema',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/living.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/livingSm.webp',
@@ -96,9 +105,79 @@ const data = {
   highlightbg: {
     isshow: true,
     img: highlightbgIMG
+  },
+  highlight:{
+    isshow: true,
+    title: "Specifications",
+    desc: [
+      `MVN Aero One is advancing with the motto of No compromise with quality, integrating premium-quality materials around every inch of the facility making it rank among the top apartments in Bangalore. The perfect balance of open and enclosed spaces in the apartments of MVN Aero One has made its place among the best residential projects in Bangalore, offering luxurious flats in Devanahalli.`,
+    ],
+    point:[
+      "RCC Structure with Aluminum shuttering.",
+      "Two Basements, Ground Floor/ Stilt Floor, 13 Full Upper Floors & Partial 14th Floor.",
+      "Compliance to seismic zone II.",
+      "Walls – RCC / Block work/ Brick work.",
+    ]
+  },
+  locationAdvantage: {
+    isshow: true,
+    title: "Location Advantage",
+    mapIMG: CONFIG.IMAGE_URL + 'aero-bangalore/location.jpg',
+    locationData : [
+      {
+        distance:'15 Min',
+        title:'Kempegowda Intl. Airport',
+      },
+      {
+        distance:'12 Min',
+        title:'K.I.Airport Halt (Railway Station)',
+      },
+      {
+        distance:'05 Min',
+        title:'Sports Village',
+      },
+      {
+        distance:'06 Min',
+        title:'Mini Vidhana Soudha',
+      },
+      {
+        distance:'02 Min',
+        title:'Anjaneya Temple',
+      },
+      {
+        distance:'11 Min',
+        title:'KIADB Aerospace SEZ',
+      },
+    ]
+  },
+  floorPlan:{
+
+    floorPlanData : [
+      {
+        title:'1 BHK Floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
+      },
+      {
+        title:'2 BHK Panoramic floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
+      },
+      {
+        title:'2 BHK Luxury floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
+      },
+      {
+        title:'3 BHK Luxury floor Plan',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
+      },
+      
+    ]
   }
   
+  
 };
+
+console.log(data.menities_section[0].images.lg);
+
 
 const AeroOneBangalore = () => {
   return (
