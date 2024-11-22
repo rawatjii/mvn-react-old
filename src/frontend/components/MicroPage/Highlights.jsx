@@ -16,7 +16,7 @@ gsap.registerPlugin(ScrollTrigger);
 // ]
 
 const MicroHighlights = ({data})=>{
-  console.log(data);
+  
   
   const titleRef = useRef();
   const datasRef = useRef([]);
