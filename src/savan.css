@@ -58,6 +58,13 @@ img.img-fluid.headpage-icon {width: auto;height: 65px;margin-bottom: 20px;}
 
 h4.title { font-size: 24px!important;padding-bottom: 30px;}
 
+.brand_bg {
+  opacity: 0.15!important;
+}
+
+section.section.our_brand_section .brand_bg.brand_bg-2{position:absolute;height:unset;width:49%;opacity:unset!important;z-index:3;bottom:0;top:unset}
+section.section.our_brand_section .container{position:relative;z-index:3}
+
 @media screen and (min-width: 767px) {
 
     .navbar {
@@ -119,8 +126,7 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
     .our_brand_section .brand_content .content h4.title{font-size:18px!important}
     .our_team_section p {font-size: 27px;  letter-spacing: 3px;line-height: 34px; width: 64%; font-weight: 200;margin: 0px auto;}
     .our_brand_section {.brand_bg { position: absolute; left: 0; z-index: -1;top: 0; height: 100%;object-fit: cover;width: 100%;opacity: unset; }}
-    .our_brand_section .brand_content::after{position:absolute;content:'';top:41%;left:calc(36% - 1px);display:block;height:22%;width:1px;border-right:2px dashed #c0ab50;z-index:-1;transform:rotate(90deg)}
-    .our_brand_section .brand_content::before{position:absolute;content:'';top:38%;right:calc(35% - 1px);display:block;height:30%;width:1px;border-right:2px dashed #c0ab50;z-index:-1;transform:rotate(90deg)}
+
     .our_brand_section .brand_content .row { gap: 20px 0px; }
     .testimonial_section { .sec_title { margin-bottom: 60px;}}
     .our_brand_section .brand_content {padding-top: 0px;}
@@ -131,6 +137,7 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
     .journey_content .single {position: relative;}
   
     .our_brand_section .brand_content .single .content{display:grid}
+    .our_brand_section .brand_content .single {width: fit-content; margin: 0 auto;  padding: 33px 45px;  margin: 24px;}
     footer .container{display:flex;flex-wrap:wrap}
     footer .important_links{width:33.3%; text-align:left!important;border-right: 1px solid #616161;border-top:none;}
     footer .contact_details{width:33.3%;border-top:none;border-right: 1px solid #616161;}
@@ -141,7 +148,7 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
     footer .important_links ul li {width: 47%;}
     footer .title { margin-bottom: 32px;}
     footer .flex-bottom-border{display:flex;align-items:center;flex-wrap:wrap;justify-content:space-between;width:100%;  margin-top: 50px;
-      padding-bottom: 50px;}
+      padding-bottom: 30px;}
     footer .contact_details ul{display:grid;gap:19px 0;color:#fff;width: 75%;
       margin: 0px auto;}
     footer{position:relative}
@@ -196,18 +203,44 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
     section.overview_section.desktop-view .home-about-content p { font-size: 14px; width: 99%;line-height: 26px;  letter-spacing: 1px; margin: 0 auto; color: #c1c2c1;}
     .testimonial_section .swiper-slide {height: 44vh;}
     .excited-to-meet-us  .title::after { display: none;}
-  .swiper-slide .single{ border-top: 5px solid rgba(244, 217, 102, 0.5);}
+    .swiper-slide .single{ border-top: 5px solid rgba(244, 217, 102, 0.5);}
+    .our_brand_section { & .brand_content {  .single { display: grid;  justify-content: center; text-align: center;  width: 100% !important; }}}
+    .our_brand_section {& .brand_content {& .single { .content {  width: 100%;text-align: center; }}}
+    .our_brand_section {& .brand_content {  & .single { .icon {height: 60px; width: 60px;margin-right: 20px;  border-radius: 8px; background: transparent; display: flex;    align-items: center;justify-content: center;margin: 0px auto;  margin-bottom: 10px; } } }}}
 
-
-
-
+    .enquire_section .container { padding: 140px 40px !important;margin: 70px !important;}
 
 }
 
 
+.headingIcon {width: auto; height: 51px; margin: 0px auto;margin-bottom: 15px;}
+
 .our_team_section p{font-size:14px;width:50%;line-height:26px;letter-spacing:1px;margin:0 auto;color:#c1c2c1;font-weight:unset}
 .our_brand_section .brand_content .single h4.title::after{display:none}
 section.section.our_brand_section .brand_content{padding-bottom:0!important}
+
+.our_team_section {.sec_title { margin-bottom: 40px;}}
+.our_brand_section .inner-ethos { width: 48%; margin-left: auto;}
+.our_brand_section .inner-ethos .box{display:flex;background-color:#222;border-left:2px solid var(--golden);margin-bottom:20px}
+.our_brand_section .inner-ethos .box .content h4.title::after {display: none;}
+.our_brand_section .inner-ethos .box .content h4.title::after{display:none}
+.our_brand_section .box-flex{display:flex;flex-wrap:wrap;justify-content:space-between;padding:25px;border-left:1px solid #f4d966}
+.our_brand_section .icon{width:15%}
+.our_brand_section .content{width:80%;text-align:left!important}
+.our_brand_section h4.title{margin:unset!important;margin-bottom:10px!important;padding-bottom:0}
+.our_brand_section p{margin-bottom:0}
+.our_brand_section .brand_content .content h4.title {color: #e6cc60;font-size: 23px!important;}
+.our_brand_section p{font-size:14px;line-height:26px;letter-spacing:1px;margin:0 auto;color:#c1c2c1;font-weight:unset}
+
+
+section.section.enquire_section p {unicode-bidi: unset;font-weight: 100;letter-spacing: 1px;color: #adadad;}
+.our_brand_section .icon .img-fluid {width: auto;height: 70px;}
+footer { background-color: #111;}
+section.section.our_brand_section  .sec_title.text-center.color.style1 {width: fit-content; margin: 0px auto;margin-bottom: 50px;}
+.testimonial_section { padding-top: 80px; padding-bottom: 70px;}
+footer .flex-bottom-border{display:block;width:100%;text-align:center}
+footer .disclaimer{width:100%!important;text-align:center!important}
+footer .copyright{width:100%;text-align:center;}
 
 
 @media(max-width:1600px){
@@ -228,7 +261,7 @@ h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70
 .sec_title.text-center.color.style2{text-align:center}
 .excited-to-meet-us  .title::after { display: none;}
 
-
+.our_team_section p {margin-top: 40px;}
 
   
 

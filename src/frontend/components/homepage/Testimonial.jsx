@@ -16,6 +16,7 @@ import testiImg1 from '../../assets/images/testimonials/naina.png';
 import testiImg2 from '../../assets/images/testimonials/prabhat.png';
 import testiImg3 from '../../assets/images/testimonials/prashant.png';
 import testiImg4 from '../../assets/images/testimonials/vikas.png';
+// import testiImg4 from '../../assets/images/testimonials/vikas.png';
 
 const testimonialData = [
   { 

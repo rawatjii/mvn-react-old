@@ -6,7 +6,7 @@ import Col from 'react-bootstrap/Col';
 import bg from '../../assets/images/overview/bg.webp';
 import buildingImg from '../../assets/images/overview/building.webp';
 import buildingImgBanner from '../../assets/images/overview/home-about.webp';
-
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 
 
@@ -61,6 +61,7 @@ const Overview = () => {
               </Col> */}
               <Col xs={12} md={12} className="about-content">
                  <div className="home-about-content">
+                  <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                  <h4 className="hero_title">40+ years of delivering trust and projects on time</h4>
                   <p>
                   MVN Group is one of the best entities focused on Education and Real Estate. As per The Hindustan Times-C Fore Top Schools Survey, the leading newspaper of India, MVN is known as the first educational group to be Ranked no.1 for Eight years in Academic Performance.
