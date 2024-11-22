@@ -56,9 +56,9 @@ const Overview = () => {
     <>
     <section className="overview_section desktop-view"> 
           <Row>
-              <Col xs={12} md={12} className="about-box">
+              {/* <Col xs={12} md={12} className="about-box">
                   <img src={buildingImgBanner} alt="" className="img-fluid"/>
-              </Col>
+              </Col> */}
               <Col xs={12} md={12} className="about-content">
                  <div className="home-about-content">
                  <h4 className="hero_title">40+ years of delivering trust and projects on time</h4>

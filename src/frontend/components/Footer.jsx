@@ -32,7 +32,7 @@ const Footer = ()=>{
             </li>
 
             <li>
-              <NavLink to='#'>Education</NavLink>
+              <NavLink to='https://www.mvneducation.com/'>Education</NavLink>
             </li>
 
             <li>
@@ -65,10 +65,12 @@ const Footer = ()=>{
 
           <ul>
             <li>
-              <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
+              <p>Bangalore- MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157</p>
+              <p>Gurugram- MVN Athens Gurugram Sector 5, Gurugram, Haryana-122102</p>
+              <p>Faridabad- Sihi Gate Road, Tigaon Rd, Shiv Colony, Ballabhgarh, Faridabad, Haryana-121004</p>
             </li>
             <li>
-              <a href="tel:">(+91) 88267 93148</a>,
+              {/* <a href="tel:">(+91) 8826793148</a>, */}
               <a href="tel:">(+91) 88267 93148</a>
             </li>
             <li>
