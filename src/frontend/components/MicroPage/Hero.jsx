@@ -18,7 +18,7 @@ const MicroHero = ({ data }) => {
     const isMobile = window.innerWidth <= 768;
 
     // Set total frames dynamically
-    const frameCount = isMobile ? 226 : 177;
+    const frameCount = isMobile ? 275 : 177;
     setTotalFrames(frameCount);
   }, []);
 

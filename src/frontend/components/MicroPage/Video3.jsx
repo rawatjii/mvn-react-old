@@ -11,7 +11,7 @@ const Video3 = ({data}) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
-  const totalFrames = 200;
+  const totalFrames = 316;
   const frameRefs = useRef([]);
 
   // for animation
@@ -33,9 +33,9 @@ const Video3 = ({data}) => {
     // Preload images
     const loadedImages = [];
 
-    for (let i = 1; i <= 200; i++) {
+    for (let i = 1; i <= 316; i++) {
       const img = new Image();
-      img.src = `assets/videos/party/mobile/${i}.jpg`; // Update with the correct path for your frames
+      img.src = `assets/videos/party/mobile/${i}.webp`; // Update with the correct path for your frames
       loadedImages.push(img);
     }
     setImages(loadedImages);
@@ -48,7 +48,7 @@ const Video3 = ({data}) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: 'top top',
-      end: `+=${window.innerHeight * 3}`, // Extend scroll distance to fit more frames
+      end: `+=${window.innerHeight * 8}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {

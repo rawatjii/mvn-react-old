@@ -10,39 +10,63 @@ import "swiper/css";
 import "swiper/css/navigation";
 import SecTitle from "../../../common/SecTitle/Index";
 
-// Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger);
 
 const Location = () => {
   const titleRef = useRef();
   const swiperRef = useRef(null);
   const sectionRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0); // To track the active slide index
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [sectionRendered, setSectionRendered] = useState(false);
+
+
+  const pageData = [
+    {
+      title: 'Entertainment',
+      imgSrc: 'entertainment.jpg'
+    },
+    {
+      title: 'shopping',
+      imgSrc: 'shopping.jpg'
+    },
+    {
+      title: 'sports',
+      imgSrc: 'sports.jpg'
+    },
+    {
+      title: 'office',
+      imgSrc: 'office.jpg'
+    },
+    {
+      title: 'cinema',
+      imgSrc: 'cinema.jpg'
+    },
+  ]
 
   useEffect(() => {
     const swiperInstance = swiperRef.current.swiper;
 
-    // GSAP ScrollTrigger to pin and control the animation
+
     ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top top",
-      end: "+=1000", // Adjust based on scroll distance needed
+      end: "+=1000",
       pin: true,
       scrub: 1,
       onUpdate: (self) => {
-        const progress = self.progress; // Progress is from 0 to 1
+        const progress = self.progress;
         const totalSlides = swiperInstance.slides.length - 1;
         const targetSlide = Math.floor(progress * totalSlides);
 
-        // Change to the corresponding slide based on scroll progress
         swiperInstance.slideTo(targetSlide);
       },
       onLeave: () => {
-        swiperInstance.slideTo(swiperInstance.slides.length - 1); // Ensure it ends on the last slide
+        swiperInstance.slideTo(swiperInstance.slides.length - 1);
       }
     });
 
-    // Handle slide change to update the active index
+    setSectionRendered(true)
+
     swiperInstance.on("slideChange", () => {
       setActiveIndex(swiperInstance.activeIndex);
     });
@@ -61,60 +85,70 @@ const Location = () => {
 
       {/* Images */}
       <div className="image_col">
-        {[
-          "entertainment.jpg",
-          "shopping.jpg",
-          "sports.jpg",
-          "office.jpg",
-          "cinema.jpg",
-          "test.jpg",
-        ].map((image, index) => (
+        {pageData && pageData.map((image, index) => (
           <li
             key={index}
             style={{
-              display: index === activeIndex ? "block" : "none", // Show only the active image
+              display: index === activeIndex ? "block" : "none",
             }}
           >
-            <img src={`${CONFIG.IMAGE_URL}micro/location/${image}`} alt="" />
+            <img src={`${CONFIG.IMAGE_URL}micro/location/${image.imgSrc}`} alt="" />
           </li>
         ))}
       </div>
 
       {/* Swiper */}
       <Swiper
-        slidesPerView={5}
+        slidesPerView={2}
         spaceBetween={30}
         centeredSlides={true}
         className="mySwiper"
         modules={[Navigation]}
         ref={swiperRef}
+        breakpoints={{
+
+          640: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+          },
+          768: {
+            slidesPerView: 3,
+            spaceBetween: 25,
+          },
+          1024: {
+            slidesPerView: 5,
+            spaceBetween: 30,
+          },
+        }}
       >
-        <SwiperSlide>
-          <div className="content">
-            <h4 className="title">Entertainment</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="content">
-            <h4 className="title">Luxury Shopping</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="content">
-            <h4 className="title">Sports</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="content">
-            <h4 className="title">Office</h4>
-          </div>
-        </SwiperSlide>
-        <SwiperSlide>
-          <div className="content">
-            <h4 className="title">Cinemas</h4>
-          </div>
-        </SwiperSlide>
+
+        {
+          pageData && pageData.map((data, index) => (
+            <SwiperSlide>
+              <div className="content">
+                <p className="km_text">Km</p>
+                <h4 className="title">{data.title}</h4>
+              </div>
+            </SwiperSlide>
+          ))
+        }
       </Swiper>
+      {/* <span className="abs_number"
+        style={{
+          backgroundImage: `url(${CONFIG.IMAGE_URL}micro/location/${pageData[activeIndex].imgSrc})`,
+          backgroundSize: "cover", // Ensures the background image covers the element
+          backgroundPosition: "center", // Centers the image within the element
+          backgroundRepeat: "no-repeat", // Prevents the image from repeating
+        }}
+      >0
+      </span> */}
+      <span className="abs_number">
+        <img
+          className="zero_img"
+          src={`${CONFIG.IMAGE_URL}micro/location/okm.png`}
+          alt="0 km"
+        />
+      </span>
     </section>
   );
 };

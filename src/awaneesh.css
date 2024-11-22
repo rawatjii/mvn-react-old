@@ -28,10 +28,13 @@
 
 .overview_card{
     background-color: #131313;
-    padding: 40px 20px;
+    padding: 60px 40px 40px;
+    border-radius: 8px;
+    margin-top: -40px;
+    position: relative;
 }
 .micro_overview{
-    margin-top: -100px;
+    margin-top: -70px;
 }
 .diamond_img_strip{
     position: relative;
