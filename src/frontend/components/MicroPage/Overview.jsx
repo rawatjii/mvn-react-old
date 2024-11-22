@@ -28,6 +28,8 @@ const MicroOverview = ({data})=>{
             )):  <p>{desc}</p>
           }
 
+          <span className="bar"></span>
+
         </div>
 
         {/* <CustomCard data={data} /> */}

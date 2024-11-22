@@ -227,7 +227,7 @@ img.img-fluid.headpage-icon {width: auto;height: 65px;margin-bottom: 20px;}
           margin:0;
       
           img{
-            max-width:60px;
+            max-width:50px;
             transition:all 0.3s ease-in-out;
           }
         }
