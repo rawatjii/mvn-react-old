@@ -201,8 +201,32 @@
     border-radius: 8px;
 } */
 
-
-
+/* .rera_agent{
+    background-color: #131313;
+    border-radius: 8px;
+    padding: 40px;
+}
+.rera_agent h3{
+    color: var(--theme_primary_color);
+    font-size: 20px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 28px;
+}
+.rera_agent p{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 22px;
+} */
+.single_rera_content p{
+    color: #fff;
+    font-size: 16px;
+    letter-spacing: 1px;
+    font-weight: 300;
+    line-height: 22px;
+}
 
 
 
@@ -282,7 +306,7 @@
 .location_map_section .location_points{
     margin-top: 30px !important;
     display: flex;
-    align-items: center;
+    align-items: start;
     justify-content: space-between;
 }
 /* .location_map_section .location_points li:not(:last-child){
@@ -299,13 +323,19 @@
     background-color: transparent;
     border-left: 1px dashed var(--theme_primary_color);
     top: -60px;
-    left: 30px;
+    left: 50%;
+    transform: translateX(-50%);
 
 }
 .location_map_section {
     & .locationMapContent {
         & .location_points {
+
             & li {
+                width: 16%;
+                text-align: center;
+
+
                 &:not(:last-child) {
                     margin-bottom: 0px;
                 }
@@ -313,6 +343,37 @@
         }
     }
 }
+
+.location_map_section {
+    & .locationMapContent {
+        & .location_points {
+            .top_road {
+                width: 400%;
+                left: -100%;
+            }
+        }
+    }
+}
+.location_map_section {
+    & .locationMapContent {
+        .title {
+            margin-top: -31px;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .top_road{
     top: 8px !important;
 }

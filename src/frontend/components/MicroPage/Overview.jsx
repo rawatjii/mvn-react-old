@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap";
 import Button from '../../../common/Button/Button';
 import diamondIMG from '../../assets/images/icons/diamond.png'
 import CustomCard from "../Card";
+import Rera from "./Rera";
 
 const MicroOverview = ({data})=>{
 
@@ -27,12 +28,15 @@ const MicroOverview = ({data})=>{
               <p className="desc" key={`desc-${i}`}>{el}</p>  
             )):  <p>{desc}</p>
           }
+          
 
           <span className="bar"></span>
 
         </div>
 
         {/* <CustomCard data={data} /> */}
+
+        
         
       </Container>
 

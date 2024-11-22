@@ -54,7 +54,6 @@ const MicroLocationMap = ({data})=>{
 
   const locationMapImg = [{src: data.mapIMG}]
   
-  console.log(data.mapIMG);
   
 
   // for animation
