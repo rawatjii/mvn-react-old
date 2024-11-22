@@ -15,21 +15,22 @@ gsap.registerPlugin(ScrollTrigger);
 export default function LargeElevation({ data }) {
 
     const sectionRef = React.useRef(null);
+    const desktopRef = React.useRef();
 
     // console.log(data.images);
 
 
     useEffect(() => {
-        gsap.to(".bottom_img_div", {
-            // y: -80,
-            scrollTrigger: {
-                trigger: ".large-elevation",
-                start: "top bottom",
-                end: "bottom top",
-                scrub: true,
-            },
-        });
-        gsap.to(".abs_img", {
+        // gsap.to(".bottom_img_div", {
+        //     // y: -80,
+        //     scrollTrigger: {
+        //         trigger: ".large-elevation",
+        //         start: "top bottom",
+        //         end: "bottom top",
+        //         scrub: true,
+        //     },
+        // });
+        gsap.to(".abs_img_m", {
             y: 222,
             scrollTrigger: {
                 trigger: ".large-elevation",
@@ -39,14 +40,19 @@ export default function LargeElevation({ data }) {
             },
         });
         gsap.to(".abs_img1", {
-            y: 375,
+            y: 400,
             scrollTrigger: {
-                trigger: ".large-elevation",
+                trigger: desktopRef.current,
                 start: "top bottom",
-                end: "bottom top",
+                end: "top top",
                 scrub: true,
+                markers:true
             },
         });
+
+         // Ensure triggers refresh
+            ScrollTrigger.addEventListener("refresh", () => console.log("Triggers refreshed"));
+            ScrollTrigger.refresh();
     }, []);
     return (
         <div className='large-elevation' ref={sectionRef}>
@@ -60,17 +66,17 @@ export default function LargeElevation({ data }) {
 
             {/* mb view */}
             <div className='bottom_img_div d_sm_block'>
-                {/* <LazyLoad> */}
                 <div className='full_img'>
                     <img src={bgImgMB} alt={data.title} className="img-fluid img_in" />
                 </div>
-                <div className='abs_img'>
+                <div className='abs_img abs_img_m'>
                     <img src={absMob} alt={data.title} className="img-fluid abs_img_in" />
                 </div>
-                {/* </LazyLoad> */}
             </div>
+
+
             {/* desk view */}
-            <div className='bottom_img_div d_lg_block'>
+            <div className='bottom_img_div d_lg_block' ref={desktopRef}>
                 <div className='full_img'>
                     <img src={bgImgDesk} alt={data.title} className="img-fluid img_in d_lg_block" />
                 </div>

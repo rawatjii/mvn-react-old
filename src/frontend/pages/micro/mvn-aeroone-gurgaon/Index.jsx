@@ -17,8 +17,12 @@ const data = {
   overview: {
     title: "MVN Aero One",
     location: "Gurgaon",
-    extra: "ASCEND TO THE PINNACLE OF SOPHISTICATION",
-    desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
+    extra: "ASCEND TO UNRIVALED HEIGHTS OF PURE SOPHISTICATION",
+    // desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
+    desc: [
+      'Luxury Reimagined. Elegance Reborn.',
+      'Step into a world of unparalleled luxury, where every detail blends sophistication with style. Relish in tailored interiors, exceptional amenities, and panoramic views. Transform your lifestyle with an extraordinary living experience beyond compare.',
+    ],
   },
   video1: { 
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
@@ -33,12 +37,12 @@ const data = {
   video3: {
     title: "ELEVATED LIVING",
     desc: "OUR 13.5FT HIGH CEILINGS WILL SET A HIGHER STANDARD OF SPACE UTILISATION IN HARMONY WITH DESIGN AESTHETICS & SOPHISTICATION",
-    isVdo: true,
+    isVdo: false,
   },
   masterBedroom: {
     title: "MASTER BEDROOM",
     desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-    isVdo: true,
+    isVdo: false,
   },
   highlights: [
     "Power backup for common facilities.",
