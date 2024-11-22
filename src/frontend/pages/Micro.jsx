@@ -44,16 +44,17 @@ const MicroPage = ({ data }) => {
         {data.renders && <Renders data={data} />}
 
         {data.highlightbg && data.highlightbg.isshow ? (
-          <div
-            style={{ backgroundImage: `url(${data.highlightbg.img})` }}
-            className="highlightbg"
-          >
-            <MicroHighlights />
-          </div>
-        ) : (
-          <MicroHighlights />
-        )}
-
+            <div
+              style={{ backgroundImage: `url(${data.highlightbg.img})` }}
+              className="highlightbg"
+            >
+              <MicroHighlights data={data.highlight} />
+            </div>
+          ) : (
+            <MicroHighlights data={data.highlight} />
+          )
+        }
+        
         {/* {data.renders && <Renders data={data} />} */}
         {/* <MicroHighlights /> */}
         <MicroPrice />
@@ -66,12 +67,19 @@ const MicroPage = ({ data }) => {
               <MicroMasterPlan />
             </div>
             <div className="col-sm-6">
-              <MicroFloorPlan />
+              <MicroFloorPlan data={data.floorPlan} />
             </div>
           </div>
         </div>
-        <MicroLocationMap />
-        {data.Slides && data.Slides.isshow === true && <Slides />}
+
+
+
+
+
+        <MicroLocationMap data={data.locationAdvantage} />
+        {
+          data.Slides && data.Slides.isshow === true && <Slides />
+        }
 
         <div className="container-fluid micro_footer">
           <div className="row ">
