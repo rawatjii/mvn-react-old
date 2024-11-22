@@ -104,6 +104,7 @@
   --theme_primary_txt_dark: #0c8f78;
   --color1: #343434;
   --color2: #131313;
+  --color3:#c3c3c3
 }
 
 body {
@@ -1921,7 +1922,32 @@ footer {
 
 .overview_card {
 
-  .bar {
+  .pr_name{
+
+    text-transform: uppercase;
+    font-size: 22px;
+    display: inline-block;
+    letter-spacing: 1.8px;
+    margin-bottom: 10px;
+    text-align: center;
+    line-height: 32px;
+    width: 100%;
+  }
+
+  .desc{
+
+    margin: 0;
+    font-size: 15px;
+    margin-bottom: 4px;
+    text-align: center;
+    font-weight: 300;
+    letter-spacing: 1px;
+    letter-spacing: 0.8px;
+    line-height: 28px;
+    color: #c3c3c3;
+  }
+
+  .bar{
     height: 1px;
     width: 80px;
     background: #3d3d3d;
@@ -2438,6 +2464,15 @@ footer {
   }
 }
 
+/* living_room_video_section */
+
+.living_room_video_section{
+
+  video{
+    width:100%
+  }
+}
+
 
 /* start responsive */
 /* by bhupendra */
@@ -2539,6 +2574,7 @@ footer {
   /* micro page */
 
   .micro_hero_section {
+    overflow:hidden;
 
     .frames_content {
       height: 100vh;
@@ -2579,7 +2615,11 @@ footer {
 
   .overview_card {
 
-    .bar {
+    .desc{
+      line-height: 22px;
+    }
+
+    .bar{
       margin: 35px auto 0;
       width: 60px;
     }

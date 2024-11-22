@@ -26,7 +26,7 @@ const data = {
   },
   video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
-    // desc:'Our 13.5ft High Ceilings Will Set A Higher Standard Of Space Utilisation In Harmony With Design Aesthetics & Sophistication.',
+    desc:'Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings.',
     isVdo: true,
   },
   video2: {
@@ -34,9 +34,14 @@ const data = {
     desc: "Dive into your own private pool with a grand view, just a few steps away from your living room",
     isVdo: true,
   },
+  living_room_video:{
+    title: "ESCAPE TO EXCLUSIVITY",
+    desc: "Experience the elegance of a sliding door that seamlessly connects your living space to the outdoors, transforming the ambiance with every glide.",
+    isVdo: true,
+  },
   video3: {
     title: "ELEVATED LIVING",
-    desc: "OUR 13.5FT HIGH CEILINGS WILL SET A HIGHER STANDARD OF SPACE UTILISATION IN HARMONY WITH DESIGN AESTHETICS & SOPHISTICATION",
+    desc: "Turn your living room into the ultimate celebration hub, where lively gatherings and stylish soirées come alive, creating lasting memories and joyful moments. ",
     isVdo: true,
   },
   masterBedroom: {
@@ -53,12 +58,12 @@ const data = {
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
-    isshow: true,
+    isshow: false,
     desc: "IF YOU THINK YOU'VE EXPERIENCED TRUE LUXURY IT'S TIME TO RAISE YOUR EXPECTATION",
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: true,
+      isVdo: false,
     },
   },
   LargeElevationSection: {
