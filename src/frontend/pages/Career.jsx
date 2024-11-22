@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react'
 import MicroBanner from '../components/MicroBanner/Index'
 
-import careerbg from '../assets/images/career/careerbg.png'
+import careerbg from '../assets/images/career/tables-chairs-office.png'
 import ContactPage from '../components/contact/Index'
 import Enquire from '../components/homepage/Enquire'
 import EnquireForm from '../components/homepage/EnquireForm'
@@ -99,10 +99,12 @@ function Career() {
                                         </div>
                                     </div>
                                     <div className="half">
-                                        <div className="content-half">
+                                        <div className="content-half h-100">
+                                            <div>
                                             <h2>Work Environment</h2>
                                             <p>At MVN, we cultivate a culture of collaboration, innovation, and inclusivity, where every individual’s voice is valued and every contribution matters. We believe in fostering a positive, dynamic work environment that encourages personal and professional growth.
                                             </p>
+                                            </div>
 
                                         </div>
                                         <div className="arrow-g">
@@ -117,10 +119,12 @@ function Career() {
                                     <div className="item animated wow fadeIn">
                                         <img className="blank-img" src={BlankIMG} width="100%" />
                                         <div className="content-right-img">
-                                            <div className="gd-inner">
+                                            <div className="gd-inner h-100 d-grid align-items-center">
+                                                <div>
                                                 <h2>Employee Growth</h2>
                                                 <p>We are committed to the continuous development of our people, providing opportunities for learning, mentorship, and skill enhancement. Our focus is on empowering employees to reach their fullest potential, both personally and professionally.
                                                 </p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="overlay right-overlay">
@@ -141,10 +145,12 @@ function Career() {
                                     <div className="item animated wow fadeIn">
                                         <img className="blank-img" src={BlankIMG} width="100%" />
                                         <div className="content-right-img">
-                                            <div className="gd-inner">
+                                            <div className="gd-inner h-100 d-grid align-items-center">
+                                                <div>
                                                 <h2>Rewards & Recognition</h2>
                                                 <p>We celebrate achievements and milestones, ensuring our employees’ hard work and dedication are recognized and rewarded. Through tailored incentives and acknowledgment, we motivate our team to strive for excellence.
                                                 </p>
+                                                </div>
                                             </div>
                                         </div>
                                         <div className="overlay right-overlay">
@@ -165,9 +171,11 @@ function Career() {
                                         </div>
                                     </div>
                                     <div className="half">
-                                        <div className="content-half">
+                                        <div className="content-half h-100">
+                                            <div>
                                             <h2>Life At MVN</h2>
                                             <p>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being</p>
+                                            </div>
                                         </div>
                                         <div className="arrow-g">
                                             <img src={leftArrow} />
