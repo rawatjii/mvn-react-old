@@ -17,6 +17,7 @@ import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
 import LargeElevationSection from '../components/MicroPage/LargeElevationSection'
 import Renders from "../components/MicroPage/Renders";
+import Rera from "../components/MicroPage/Rera";
 
 const MicroPage = ({ data }) => {
 
@@ -25,6 +26,9 @@ const MicroPage = ({ data }) => {
       <Suspense fallback={<p>Loading...</p>}>
         <MicroHero data={data} />
         <MicroOverview data={data} />
+        {
+          data.rera && data.rera.isshow === true && <Rera data={data.rera} />
+        }
         {data.LargeElevationSection && data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
         {data.video1.isVdo === true && <PeacockSection data={data} />}
         {data.video2.isVdo === true && <Video2 data={data} />}
