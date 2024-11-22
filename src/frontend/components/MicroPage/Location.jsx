@@ -1,14 +1,17 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation } from "swiper/modules";
+import { Scrollbar, Pagination } from "swiper/modules";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as CONFIG from "../../../config/config";
+import SecTitle from "../../../common/SecTitle/Index";
 
 import "swiper/css";
-import "swiper/css/navigation";
-import SecTitle from "../../../common/SecTitle/Index";
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import 'swiper/css/navigation';
+
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -79,7 +82,7 @@ const Location = () => {
     >
       <Container>
         <SecTitle className="text-center color style1">
-          <h4 ref={titleRef} className="title">Location Section</h4>
+          <h4 ref={titleRef} className="title">No Pollution Zone</h4>
         </SecTitle>
       </Container>
 
@@ -99,25 +102,30 @@ const Location = () => {
 
       {/* Swiper */}
       <Swiper
-        slidesPerView={2}
-        spaceBetween={30}
+        // slidesPerView={1}
+        // spaceBetween={30}
         centeredSlides={true}
         className="mySwiper"
-        modules={[Navigation]}
         ref={swiperRef}
+        scrollbar={{
+          hide: false,
+        }}
+        pagination={{
+          type: 'fraction',
+        }}
+        modules={[Scrollbar, Pagination]}
         breakpoints={{
-
           640: {
             slidesPerView: 2,
-            spaceBetween: 20,
+            spaceBetween: 0,
           },
           768: {
             slidesPerView: 3,
-            spaceBetween: 25,
+            spaceBetween: 0,
           },
           1024: {
             slidesPerView: 5,
-            spaceBetween: 30,
+            spaceBetween: 0,
           },
         }}
       >

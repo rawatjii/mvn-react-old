@@ -1,5 +1,5 @@
 import React from "react";
-import { Container } from "react-bootstrap";
+import { Container, Row, Col } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 
 import twitterIcon from '../assets/images/icons/social/twitter.png';
@@ -12,6 +12,56 @@ import BtnIcon from '../assets/images/icons/send.png';
 const Footer = ()=>{
   return(
     <footer>
+      <Container className="footer-bottom-border">
+        <Row>
+          <Col xs={6} md={6} lg={6}>
+
+          <div className="social_links text-center">
+            {/* <h5 className="title">Subscribe Now</h5>
+            <form action="">
+              <input type="email" maxLength="50" required placeholder="Your Email Id: Example@gmail.com" />
+              <button className="bt"><img src={BtnIcon} alt="" className="img-fluid btn-arrow-img" /> </button>
+            </form> */}
+
+              <ul>
+                <li>
+                  <a href="" className="icon">
+                    <img src={twitterIcon} alt="mvn-twitter-icon" className="img-fluid " />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="" className="icon">
+                    <img src={googlePlus} alt="mvn-google-plus-icon" className="img-fluid" />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="" className="icon">
+                    <img src={fbIcon} alt="mvn-fb-icon" className="img-fluid" />
+                  </a>
+                </li>
+
+                <li>
+                  <a href="" className="icon">
+                    <img src={instaIcon} alt="mvn-insta-icon" className="img-fluid" />
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+
+          </Col>
+          <Col xs={6} md={6} lg={6}>
+          <div class="box searchbox-input-box">
+              <div class="subscribe">
+                <input class="form-control" type="text" placeholder="Your Email" name=""/>
+                <button>Subscribe Now</button>
+              </div>
+            </div>
+          </Col>
+        </Row>
+      </Container>
       <Container>
         <div className="important_links text-center">
           <h5 className="title">
@@ -80,40 +130,7 @@ const Footer = ()=>{
           </ul>
         </div>
 
-        <div className="social_links text-center">
-        <h5 className="title">Subscribe Now</h5>
-        <form action="">
-          <input type="email" maxLength="50" required placeholder="Your Email Id: Example@gmail.com" />
-          <button className="bt"><img src={BtnIcon} alt="" className="img-fluid btn-arrow-img" /> </button>
-        </form>
 
-          <ul>
-            <li>
-              <a href="" className="icon">
-                <img src={twitterIcon} alt="mvn-twitter-icon" className="img-fluid " />
-              </a>
-            </li>
-
-            <li>
-              <a href="" className="icon">
-                <img src={googlePlus} alt="mvn-google-plus-icon" className="img-fluid" />
-              </a>
-            </li>
-
-            <li>
-              <a href="" className="icon">
-                <img src={fbIcon} alt="mvn-fb-icon" className="img-fluid" />
-              </a>
-            </li>
-
-            <li>
-              <a href="" className="icon">
-                <img src={instaIcon} alt="mvn-insta-icon" className="img-fluid" />
-              </a>
-            </li>
-
-          </ul>
-        </div>
 
         <div className="flex-bottom-border">
           <div className="disclaimer text-center">
