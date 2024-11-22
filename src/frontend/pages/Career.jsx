@@ -13,9 +13,9 @@ import careerIMG from '../assets/images/career/career.png'
 
 import leftArrow from '../assets/images/career/left-arrow.png'
 import CultureImg from '../assets/images/career/image.jpg'
-import peopleDevelopmentImg from '../assets/images/career/image.jpg'
-import RewardsImg from '../assets/images/career/image.jpg'
-import ligemvnImg from '../assets/images/career/image.jpg'
+import peopleDevelopmentImg from '../assets/images/career/peaple-d.png'
+import RewardsImg from '../assets/images/career/rewards.png'
+import ligemvnImg from '../assets/images/career/lifeatmvn.png'
 import BlankIMG from '../assets/images/career/bg.png'
 
 
@@ -83,7 +83,7 @@ function Career() {
 
                     <div className="container">
                         <div className="heading">
-                            <h1>Human Resource</h1>
+                            <h1>Talent Management</h1>
                             <p>Our Human Resource team is dedicated to attracting, nurturing, and retaining top talent, ensuring the right people are in the right roles to drive the company forward. We prioritize skill, passion, and commitment to our shared goals.
                             </p>
                         </div>
@@ -100,7 +100,7 @@ function Career() {
                                     </div>
                                     <div className="half">
                                         <div className="content-half">
-                                            <h2>Culture</h2>
+                                            <h2>Work Environment</h2>
                                             <p>At MVN, we cultivate a culture of collaboration, innovation, and inclusivity, where every individual’s voice is valued and every contribution matters. We believe in fostering a positive, dynamic work environment that encourages personal and professional growth.
                                             </p>
 
@@ -118,7 +118,7 @@ function Career() {
                                         <img className="blank-img" src={BlankIMG} width="100%" />
                                         <div className="content-right-img">
                                             <div className="gd-inner">
-                                                <h2>People Development</h2>
+                                                <h2>Employee Growth</h2>
                                                 <p>We are committed to the continuous development of our people, providing opportunities for learning, mentorship, and skill enhancement. Our focus is on empowering employees to reach their fullest potential, both personally and professionally.
                                                 </p>
                                             </div>
@@ -167,8 +167,7 @@ function Career() {
                                     <div className="half">
                                         <div className="content-half">
                                             <h2>Life At MVN</h2>
-                                            <p>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being.
-                                            </p>
+                                            <p>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being</p>
                                         </div>
                                         <div className="arrow-g">
                                             <img src={leftArrow} />
@@ -186,14 +185,18 @@ function Career() {
                 <section className="oppotunities">
                     <div className="container">
                         <div className="inn-oppor">
-                            <div className="left">
+                            <div className="left text-center mx-auto">
 
-                                <h2>Craft your career with us</h2>
+                                <h2>Shape Your Future with MVN</h2>
+                                <p>At MVN, your career isn’t just a job—it’s a journey of growth, learning, and limitless opportunities. We empower individuals to explore their potential, embrace challenges, and achieve excellence in a dynamic and supportive environment. Join us to build a rewarding future where your ideas and ambitions find their true place.</p>
+                                <div className="job_mail">
+                                        <p className='mb-0'>Send your CV to  </p>
+                                        <a href="mailto:careers@mvninfrastructure.com" className='jobmail'> careers@mvninfrastructure.com</a>
+                                    </div>
                             </div>
-                            <div className="right">
-                                <p className='mb-0'>Send your CV to  </p>
-                                <a href="mailto:careers@mvninfrastructure.com" className='jobmail'> careers@mvninfrastructure.com</a>
-                            </div>
+                            {/* <div className="right">
+                                
+                            </div> */}
                         </div>
                     </div>
                 </section>
@@ -207,6 +210,7 @@ function Career() {
                                         <h4 className="title  mb-4">Apply Here for Jobs</h4>
                                         <p>Join MVN Group for exciting career opportunities. We value excellence, innovation, and dedication, and we provide a dynamic, inclusive work environment for your growth. Apply now to make a meaningful impact and contribute to a future defined by quality and innovation.</p>
                                     </SecTitle>
+                                    
                                 </div>
                             </div>
                             <div className="col-sm-6">
