@@ -18,6 +18,7 @@ import mvnSportsAcademyMobile from '../../assets/images/other-projects/mvn-sport
 import mvnSchoolDesktop from '../../assets/images/other-projects/mvn-school-desktop.webp';
 import mvnUniversityDesktop from '../../assets/images/other-projects/mvn-university-desktop.webp'
 import mvnSportsAcademyDesktop from '../../assets/images/other-projects/mvn-sports-academy-desktop.webp'
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 const otherProjects = [
   {
@@ -98,6 +99,7 @@ const OtherProjects = () => {
     <section className="section other_projects_section pb-0">
       <Container>
         <SecTitle className="text-center color style1">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Other Verticals</h4>
         </SecTitle>
 

@@ -13,6 +13,7 @@ const Typology = React.lazy(()=>import('../components/homepage/Typology'));
 const Overview = React.lazy(()=>import('../components/homepage/Overview'));
 import HomepageVideo from "../components/MicroPage/HomepageVideo";
 
+
 import { Suspense } from "react";
 // import TestOverview from "../components/homepage/TestOverview";
 // import Header from "../components/Header/Header";

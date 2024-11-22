@@ -7,6 +7,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import AnImage from "../../../common/animations/Image/Index";
 
 import teamImg from '../../assets/images/team/team.webp'
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -60,6 +61,7 @@ const OurTeam = ()=>{
     <section className="section our_team_section">
     <Container>
       <SecTitle className="text-center color style1">
+      <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
         <h4 ref={titleRef} className="title">People Behind</h4>
       </SecTitle>
     </Container>
