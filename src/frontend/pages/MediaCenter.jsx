@@ -16,42 +16,42 @@ import Enquire from '../components/homepage/Enquire'
 
 function MediaCenter() {
     const breadcrumbs = {
-        title:'Media Center',
-        links:[
-          {
-            name:'Home',
-            link:'/'
-          },
-          {
-            name:'Media Center'
-          }
+        title: 'Media Center',
+        links: [
+            {
+                name: 'Home',
+                link: '/'
+            },
+            {
+                name: 'Media Center'
+            }
         ]
-      }
+    }
 
-      const ourEvents = [
+    const ourEvents = [
         {
-            id : 1,
-            poster : McVideoPoster,
-            video : McVideo
+            id: 1,
+            poster: McVideoPoster,
+            video: McVideo
         },
         {
-            id : 2,
-            poster : McVideoPoster,
-            video : McVideo
+            id: 2,
+            poster: McVideoPoster,
+            video: McVideo
         },
         {
-            id : 3,
-            poster : McVideoPoster,
-            video : McVideo
+            id: 3,
+            poster: McVideoPoster,
+            video: McVideo
         }
-      ]
+    ]
 
 
     return (
         <div className='media_center'>
-        <MicroBanner bg={mediaBG}  data={breadcrumbs}/>
+            <MicroBanner bg={mediaBG} data={breadcrumbs} />
             <section className="section media-news-section pb-0">
-            <Container className='text-center'>
+                <Container className='text-center'>
                     <img src={mediaIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" />
 
                     <SecTitle className="text-center color style1 mb_30">
@@ -61,49 +61,58 @@ function MediaCenter() {
                 </Container>
                 <div className="container">
                     <div className="row">
-                        <div className="col-md-4">
-                            <div className="media-news-page">
-                                <div className="media-news-page-box">
-                                    <div className="media-news-page-img">
-                                        <img src={newsIMG} alt="" />
+                        <div className="col-sm-6">
+                            <div className="row">
+                                
+                                <div className="col-md-6">
+                                    <div className="media-news-page ">
+                                        <div className="media-news-page-box">
+                                            <div className="media-news-page-img">
+                                                <img src={newsIMG} alt="" />
+                                            </div>
+                                            <div className="news-page-content">
+                                                <p className="news-date">25 September, 2025</p>
+                                                <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
+                                                <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
+                                            </div>
+                                        </div>
                                     </div>
-                                    <div className="news-page-content">
-                                        <p className="news-date">25 September, 2025</p>
-                                        <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
+                                </div>
+                                <div className="col-md-6">
+                                    <div className="media-news-page ">
+                                        <div className="media-news-page-box">
+                                            <div className="media-news-page-img">
+                                                <img src={newsIMG} alt="" />
+                                            </div>
+                                            <div className="news-page-content">
+                                                <p className="news-date">25 September, 2025</p>
+                                                <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
+                                                <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                        <div className="col-md-4">
-                            <div className="media-news-page ">
-                                <div className="media-news-page-box">
-                                    <div className="media-news-page-img">
-                                        <img src={newsIMG} alt="" />
-                                    </div>
-                                    <div className="news-page-content">
-                                        <p className="news-date">25 September, 2025</p>
-                                        <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
-                                    </div>
+                        <div className="col-sm-6">
+                            
+                        <article className="awa_card awa_shadow">
+                            <div>
+                                <img src={newsIMG} alt="image" />
+                            </div>
+
+                            <div>
+                                <p><strong>Lorem ipsum dolor sit dolor sit amet, conse ctetur adipis icing elit...</strong></p>
+                                <div className='awa_posted'>
+                                
+                                <span className='text-capitalize'>posted date</span> - <time>10 min ago</time>
                                 </div>
                             </div>
-                        </div>
-                        <div className="col-md-4">
-                            <div className="media-news-page ">
-                                <div className="media-news-page-box">
-                                    <div className="media-news-page-img">
-                                        <img src={newsIMG} alt="" />
-                                    </div>
-                                    <div className="news-page-content">
-                                        <p className="news-date">25 September, 2025</p>
-                                        <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                        <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
-                                    </div>
-                                </div>
-                            </div>
+                        </article>
+
                         </div>
                     </div>
+
 
                 </div>
             </section>
@@ -145,27 +154,27 @@ function MediaCenter() {
                                 <div className="col-sm-4" key={`event-${index}`}>
                                     <div className="media-event-content">
                                         <h5 className="media_content_heading">Lorem ipsum dolor sit amet, consectetur </h5>
-                                        <Video videoSrc={item.video} videoPoster={item.poster}  />
+                                        <Video videoSrc={item.video} videoPoster={item.poster} />
                                     </div>
                                 </div>
-                                    ))
-                                }
-
-                                
+                            ))
+                        }
 
 
-                        
+
+
+
                     </div>
                 </div>
             </section>
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-sm-6">
-                        <Enquire/>
+                        <Enquire />
                     </div>
                     <div className="col-sm-6">
                         <div className="media_enquiry_form_card">
-                        <EnquireForm/>
+                            <EnquireForm />
                         </div>
                     </div>
                 </div>
