@@ -96,27 +96,6 @@ const data = {
       }
     },
     {
-      title: 'Mini Theater',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
-      }
-    },
-    {
-      title: 'MODERN ROOFTOP CLUBHOUSE',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
-      }
-    },
-    {
-      title: 'Business Centre',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
-      }
-    },
-    {
       title: 'Library',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
@@ -128,6 +107,28 @@ const data = {
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
+      }
+    },
+    {
+      title: 'Mini Theater',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
+      }
+    },    
+    {
+      title: 'Business Centre',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
+      }
+    },   
+    
+    {
+      title: 'MODERN ROOFTOP CLUBHOUSE',
+      images: {
+        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
+        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
       }
     },
   ],

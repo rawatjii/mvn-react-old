@@ -44,7 +44,6 @@ const MicroPage = ({ data }) => {
 
         {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
         {/* {data.renders && <Renders data={data} />} */}
-
         {data.highlightbg && data.highlightbg.isshow ? (
             <div
               style={{ backgroundImage: `url(${data.highlightbg.img})` }}
