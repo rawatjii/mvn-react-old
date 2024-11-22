@@ -53,12 +53,12 @@ const data = {
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
-    isshow: true,
+    isshow: false,
     desc: "IF YOU THINK YOU'VE EXPERIENCED TRUE LUXURY IT'S TIME TO RAISE YOUR EXPECTATION",
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: true,
+      isVdo: false,
     },
   },
   LargeElevationSection: {

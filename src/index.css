@@ -2392,7 +2392,7 @@ footer {
 
         .content{
 
-          
+
         }
       }
     }
@@ -2498,6 +2498,7 @@ footer {
   /* micro page */
 
   .micro_hero_section {
+    overflow:hidden;
 
     .frames_content {
       height: 100vh;
