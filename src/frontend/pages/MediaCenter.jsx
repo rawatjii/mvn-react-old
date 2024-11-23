@@ -20,20 +20,28 @@ import newsIMG4 from '../assets/images/mediacenter/news-img-4.jpeg'
 import newsIMG5 from '../assets/images/mediacenter/news-img-5.jpeg'
 import newsIMG6 from '../assets/images/mediacenter/news-img-6.jpeg'
 
-
 import mediaGalleryImg1 from '../assets/images/projects/project-img-1.jpg'
 import mediaGalleryImg2 from '../assets/images/projects/project-img-2.jpg'
 import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
 
-
 import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
 import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
 
+import pressReleaseImg1 from '../assets/images/mediacenter/press-relase-img-1.jpg'
+import pressReleaseImg2 from '../assets/images/mediacenter/press-relase-img-2.jpg'
+import pressReleaseImg3 from '../assets/images/mediacenter/press-relase-img-3.jpg'
+import pressReleaseImg4 from '../assets/images/mediacenter/press-relase-img-4.jpg'
+
+import pressReleasePdf1 from '../assets/images/mediacenter/theprint.pdf'
+import pressReleasePdf2 from '../assets/images/mediacenter/daily24x7news.pdf'
+import pressReleasePdf3 from '../assets/images/mediacenter/edukida.pdf'
+import pressReleasePdf4 from '../assets/images/mediacenter/mediabulletins.pdf'
 
 import EnquireForm from '../components/homepage/EnquireForm'
 import Video from '../components/Video'
 import Enquire from '../components/homepage/Enquire'
 import GallerySlider from '../components/GallerySlider'
+import PressRelease from '../components/PressRelease';
 import pdfICON from '../assets/images/icons/pdf.png'
 
 
@@ -153,6 +161,30 @@ function MediaCenter() {
             url: 'https://news.webindia123.com/news/articles/Business/20241010/4244271.html'
         }
     ]
+
+    const pressReleaseData = [
+        {
+            thumbnail: pressReleaseImg1,
+            pdf: pressReleasePdf1,
+            title: "Press Release 1",
+        },
+        {
+            thumbnail: pressReleaseImg2,
+            pdf: pressReleasePdf2,
+            title: "Press Release 2",
+        },
+        {
+            thumbnail: pressReleaseImg3,
+            pdf: pressReleasePdf3,
+            title: "Press Release 3",
+        },
+        // {
+        //     thumbnail: pressReleaseImg4,
+        //     pdf: pressReleasePdf4,
+        //     title: "Press Release 4",
+        // },
+
+    ];
 
 
 
@@ -343,6 +375,17 @@ function MediaCenter() {
                         </div>
                     </div> */}
                 </div>
+            </section>
+
+            <section className='section press-releases-container'>
+            <div className='container'>
+            <SecTitle className="text-center color style1 mb_30">
+                        <h4 className="title">Press Releases</h4>
+                    </SecTitle>
+        
+            <PressRelease data={pressReleaseData} slidesPerView={3} spaceBetween={20} />
+            </div>
+    
             </section>
             <section className='section media-gallery'>
                 <div className="container">
