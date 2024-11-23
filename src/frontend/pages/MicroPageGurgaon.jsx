@@ -39,9 +39,9 @@ const MicroPageGurgaon = ({ data }) => {
         <Renders data={data} />  {/*no isssue*/}
         <MicroHighlights data={data.highlight} />  {/*no isssue*/}
         <MicroPrice />  {/*no isssue*/}
-        {/* <MicroAmenities data={data.menities_section} /> */}
-        {/* <MicroFloorPlan data={data.floorPlan} /> */}
-        {/* <MicroLocationMap data={data.locationAdvantage} /> */}
+        <MicroAmenities data={data.menities_section} />
+        <MicroFloorPlan data={data.floorPlan} />
+        <MicroLocationMap data={data.locationAdvantage} />
         {/* <Slides /> */}
         <div className="container-fluid micro_footer">
           <div className="row ">

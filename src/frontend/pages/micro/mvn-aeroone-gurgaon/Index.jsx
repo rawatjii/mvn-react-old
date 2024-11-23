@@ -64,7 +64,7 @@ const data = {
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      
+
     },
   },
   LargeElevationSection: {
@@ -153,31 +153,38 @@ const data = {
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
-    mapIMG: CONFIG.IMAGE_URL + 'aero-bangalore/location.jpg',
+    mapIMG: CONFIG.IMAGE_URL + 'gurgaon-micro/gurgaon-aero-one-map-mb.jpg',
+    //     yasho bhoomi
+    // indira gandhi international airport
+    // diplomatic enclave
+    // palam vihar 
+    // gurgaon railway station
+    // dlf cyber city 
+    // world global city
     locationData: [
       {
-        distance: '15 Min',
-        title: 'Kempegowda Intl. Airport',
+        distance: 'near by',
+        title: 'yasho bhoomi',
       },
       {
-        distance: '12 Min',
-        title: 'K.I.Airport Halt (Railway Station)',
+        distance: 'near by',
+        title: 'indira gandhi international airport',
       },
       {
-        distance: '05 Min',
-        title: 'Sports Village',
+        distance: 'near by',
+        title: 'diplomatic enclave',
       },
       {
-        distance: '06 Min',
-        title: 'Mini Vidhana Soudha',
+        distance: 'near by',
+        title: 'gurgaon railway station',
       },
       {
-        distance: '02 Min',
-        title: 'Anjaneya Temple',
+        distance: 'near by',
+        title: 'dlf cyber city',
       },
       {
-        distance: '11 Min',
-        title: 'KIADB Aerospace SEZ',
+        distance: 'near by',
+        title: 'world global city',
       },
     ]
   },
