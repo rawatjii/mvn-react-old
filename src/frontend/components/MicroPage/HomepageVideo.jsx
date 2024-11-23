@@ -10,17 +10,22 @@ gsap.registerPlugin(ScrollTrigger);
 const HomepageVideo = ({ data }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
+  const [totalFrames, seTotalFrames] = useState(292);
+
+
+
   const [images, setImages] = useState([]);
   const [imagePath, setImagePath] = useState(
     "assets/videos/cloud-elevation/video-desktop"
   );
-  const totalFrames = 177;
   const frameRefs = useRef([]);
 
   // Handle screen size and update image path
   useEffect(() => {
     const updateImagePath = () => {
       if (window.innerWidth <= 768) {
+        seTotalFrames(275)
+
         setImagePath("assets/videos/cloud-elevation/video-mobile");
       } else {
         setImagePath("assets/videos/cloud-elevation/video-desktop");
