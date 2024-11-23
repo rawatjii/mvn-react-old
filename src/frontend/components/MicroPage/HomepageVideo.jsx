@@ -14,7 +14,7 @@ const HomepageVideo = ({ data }) => {
   const [imagePath, setImagePath] = useState(
     "assets/videos/cloud-elevation/video-desktop"
   );
-  const totalFrames = 177;
+  const totalFrames = 292;
   const frameRefs = useRef([]);
 
   // Handle screen size and update image path

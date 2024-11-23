@@ -1394,9 +1394,9 @@ footer {
         }
 
         a {
-          background: #fff;
-          height: 24px;
-          width: 24px;
+          background: #f4d966;
+          height: 30px;
+          width: 30px;
           display: flex;
           align-items: center;
           justify-content: center;
