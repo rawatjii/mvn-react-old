@@ -15,18 +15,21 @@ const Renders = () => {
 
   const slides = [
     {
-      title: "Slide 1",
+      title: "Landscape",
       content: "This is the first slide.",
+      imgSrc: renderImg1,
       thumbnail: "https://swiperjs.com/demos/images/nature-1.jpg",
     },
     {
-      title: "Slide 2",
+      title: "elevation",
       content: "This is the second slide.",
+      imgSrc: renderImg2,
       thumbnail: "https://swiperjs.com/demos/images/nature-2.jpg",
     },
     {
-      title: "Slide 3",
+      title: "apartment",
       content: "This is the third slide.",
+      imgSrc: renderImg3,
       thumbnail: "https://swiperjs.com/demos/images/nature-3.jpg",
     },
   ];
@@ -58,7 +61,7 @@ const Renders = () => {
   return (
     <section className="render_section" ref={sectionRef}>
       <Container className="topContainer">
-        <h4 className="text-center mainhead">Landscape</h4>
+        {/* <h4 className="text-center mainhead">Landscape</h4> */}
         <div className="slider-container">
           {/* Large Slides */}
           <div className="slides">
@@ -67,18 +70,19 @@ const Renders = () => {
                 key={index}
                 className={`slide ${index === activeIndex ? "active" : ""}`}
               >
+                <h4 className="text-center mainhead">{slide.title}</h4>
                 <div className="renders-images">
                   {/* <div className="images img3">
                     <img className="w-100 img-fluid" src={renderImg2} alt="" />
                   </div> */}
                   <div className="images img2">
-                    <img className="w-100 img-fluid" src={renderImg2} alt="" />
+                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
                   </div>
                   <div className="images img1">
-                    <img className="w-100 img-fluid" src={renderImg1} alt="" />
+                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
                   </div>
                   <div className="images img2">
-                    <img className="w-100 img-fluid" src={renderImg3} alt="" />
+                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
                   </div>
                   {/* <div className="images img3">
                     <img className="w-100 img-fluid" src={renderImg3} alt="" />
