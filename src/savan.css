@@ -64,12 +64,15 @@ h4.title { font-size: 24px!important;padding-bottom: 30px;}
 
 section.section.our_brand_section .brand_bg.brand_bg-2{position:absolute;height:unset;width:49%;opacity:unset!important;z-index:3;bottom:0;top:unset}
 section.section.our_brand_section .container{position:relative;z-index:3}
-footer .subscribe .form-control{height:50px;background-color:rgba(255,255,255,0.1);border:0;border-radius:100px}
+footer .subscribe .form-control{height:40px;background-color:rgba(255,255,255,0.1);border:0;border-radius:100px}
 footer .box .subscribe button{background-color: var(--theme_primary_color);color:#000;border:none;border-radius:100px;padding:0 15px;width:220px;margin-left:-80px;font-family:"InriaSerif-Regular";letter-spacing:.2px}
 footer .box.searchbox-input-box{display:flex;justify-content:flex-end;width:100%}
 footer .subscribe{display:flex;justify-content:flex-end}
 footer .social_links.text-center ul{justify-content:unset!important;gap:0 20px}
 footer .footer-bottom-border.container { border-bottom: 1px solid #ffffff1a; padding-bottom: 10px;}
+footer  .footer-bottom-border.container .row {align-items: center;}
+.projects_section { .plane_icon { position: absolute;   z-index: -1; top: 6%;left: 8%; width: 8%;  opacity: 1; transform: rotate(90deg);}}
+.projects_section { .sec_title {   margin-right: 28%;}}
 
 
 @media screen and (min-width: 767px) {
@@ -216,6 +219,8 @@ footer .footer-bottom-border.container { border-bottom: 1px solid #ffffff1a; pad
     .our_brand_section {& .brand_content {  & .single { .icon {height: 60px; width: 60px;margin-right: 20px;  border-radius: 8px; background: transparent; display: flex;    align-items: center;justify-content: center;margin: 0px auto;  margin-bottom: 10px; } } }}}
 
     .enquire_section .container { padding: 140px 40px !important;margin: 70px !important;}
+    footer {padding-top: 10px; margin-top: 50px;}
+    .projects_section {.sec_title { font-size: 34px;  margin-bottom: 30px; height: 63px;letter-spacing: 10px; margin-left: auto; }}
 
 }
 
@@ -271,6 +276,50 @@ footer {& .copyright {span { display: inline;}}}
 
 footer .flex-row {display: flex;flex-wrap: wrap;width: 100%;justify-content: space-between;}
 footer .flex-row .custom-col {width: 33%;}
+footer .footerM{width:110px;margin:0 auto;text-align:center;display:block}
+footer .footer-bottom-border.container{margin-bottom:53px}
+footer p{display:flex;padding-bottom:15px;align-items:baseline;line-height:28px}
+footer .flex-row .custom-col span{margin-right:10px;font-size:16px;letter-spacing:.4px;vertical-align:baseline;color:var(--theme_primary_color)}
+footer{position:relative}
+footer .about_bg{position:absolute;top:0;left:0;width:100%;height:100%;}
+footer .footer-bottom-border{position:relative;z-index:3;}
+footer .container{position:relative;z-index:3}
+footer .about_bg{opacity:.1}
+footer .container{position:relative;z-index:3}
+footer .about_bg{opacity:.1}
+footer .main-pera{display:flex;justify-content:center;gap:0 6px}
+footer .main-pera a b{color:var(--theme_primary_color)}
+footer .main-pera a{color:var(--theme_primary_color)}
+footer .main-pera{display:flex;justify-content:center;gap:0 6px;margin-bottom:0;line-height:unset}
+footer .inner-box{display:flex;flex-wrap:wrap;justify-content:space-between;width: 75%;margin-left: auto;}
+footer .footer-menu ul{gap:7px 30px;display:grid}
+footer .footer-menu ul li a{color:#7b7b7b;font-size:15px}
+footer .border-top-footer{width:100%;border-top:1px solid #ffffff29;padding-top:27px;padding-bottom:10px}
+footer .border-top-footer{width:100%;border-top:1px solid #ffffff29;padding-top:27px;padding-bottom:10px}
+footer .footer-second-heading{margin-bottom:30px;font-size:20px;color:var(--theme_primary_color)}
+footer .inner-box{display:flex;flex-wrap:wrap;justify-content:space-between}
+footer .border-top-footer{width:100%;border-top:1px solid #ffffff29;padding-top:27px;padding-bottom:10px}
+footer .address-details, footer .phone-details, footer .mail-details{line-height:unset;padding-bottom:0;margin-bottom:20px}
+footer .flex-row { margin-bottom: 50px;}
+footer .custom-col.flex-middel-col {display: flex;align-items: center;}
+footer .box.office-details-box {width: 100%;}
+.journey_section .about_bg{position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;opacity:.12}
+section.section.other_projects_section.pb-0 {padding-top: 20px;}
+.testimonial_carousel .single .testimonial-pic{width:60px;margin-bottom:20px;margin-top:10px;border:1px solid #fff;border-radius:50%;height:60px;object-fit:contain}
+.flex-name-pic{display:flex;align-items:center;justify-content:space-between;width:100%}
+.testimonial_section {& .testimonial_carousel {  .single {  height: 350px; }}}
+.testimonial_section .content{height:100%}
+.testimonial_section .flex-content-box{height:80%}
+.testimonial_section .flex-heading-row {display: flex;align-items: center;margin-bottom: 15px;}
+.testimonial_section {padding-top: 80px; padding-bottom: 100px;}
+footer {padding-top: 10px; margin-top: 50px;}
+.projects_section .mx_-8.row{gap:0 0;justify-content:space-between}
+.projects_section .px_8.left_col.col-6{width:49.5%}
+.projects_section .px_8.right_col.col-6{display:grid;gap:10px 0}
+.navbar { & .navbar-toggler {  .icon {  width: 80%;}}}
+.projects_section  .sec_title  span {color: var(--theme_primary_color); font-size: 24px !important; padding-bottom: 30px!important; letter-spacing: 1px!important;}
+
+
 
 
 @media(max-width:1600px){
@@ -287,14 +336,13 @@ footer .flex-row .custom-col {width: 33%;}
   .other_projects_section .sec_title.text-center.color.style1 {margin-bottom: 15px;}
   h4.title { font-size: 24px!important;padding-bottom: 30px;}
   h4.title{position:relative;width:fit-content;margin:0 auto!important;display:block}
-h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70px;height:70px;top:-17px;left:-25px;border-radius:100px;z-index:-1}
-.sec_title.text-center.color.style2{text-align:center}
-.excited-to-meet-us  .title::after { display: none;}
-
-.our_team_section p {margin-top: 40px;}
+  h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70px;height:70px;top:-17px;left:-25px;border-radius:100px;z-index:-1}
+  .sec_title.text-center.color.style2{text-align:center}
+  .excited-to-meet-us  .title::after { display: none;}
+  .our_team_section p {margin-top: 40px;}
+  .projects_section { .sec_title {  text-transform: uppercase;  font-size: 37px;  margin-bottom: 0;height: 63px; letter-spacing: 12px;}}
 
   
-
 
 }
 

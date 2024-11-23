@@ -106,10 +106,17 @@ const Testimonial = () => {
             <SwiperSlide key={index}>
               <div className="single">
                 <div className="content">
-                  <img src={quoteIcon} alt="mvn quotes icon" className="img-fluid quote_icon" />
-                  <h4 className="title">{item.title}</h4>
+                 <div className="flex-content-box">
+                   <div className="flex-heading-row">
+                   <img src={quoteIcon} alt="mvn quotes icon" className="img-fluid quote_icon" />
+                   <h4 className="title">{item.title}</h4>
+                   </div>
                   <p className="msg">{item.msg}</p>
-                  <p className="testimonial-name">{item.name}</p>
+                 </div>
+                  <div className="flex-name-pic">
+                    <img src={item.image} alt="mvn quotes icon" className="img-fluid testimonial-pic" />
+                    <p className="testimonial-name">{item.name}</p>
+                  </div>
                 </div>
               </div>
             </SwiperSlide>

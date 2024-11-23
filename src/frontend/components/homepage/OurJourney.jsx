@@ -3,6 +3,7 @@ import SecTitle from "../../../common/SecTitle/Index";
 import { Container } from "react-bootstrap";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import LazyLoad from "react-lazyload";
 
 // Import icons
 import diamondIcon from "../../assets/images/icons/diamond.png";
@@ -13,6 +14,7 @@ import ongoingProjectsIcon from "../../assets/images/icons/journey/new-icons/cra
 import millionSqftIcon from "../../assets/images/icons/journey/new-icons/ruler.gif";
 import deliveryIcon from "../../assets/images/icons/journey/new-icons/calendar.gif";
 import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
+import FooterBgImg from "../../assets/images/our-story-bg.jpg"; // Corrected path
 
 // Register ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
@@ -118,9 +120,13 @@ const OurJourney = () => {
 
   return (
     <section className="section journey_section pb-0">
+      <LazyLoad height={200}>
+        <img src={FooterBgImg} alt="mvn-about-bg" className="img-fluid about_bg" />
+      </LazyLoad>
+
       <Container>
         <SecTitle className="text-center color style2">
-        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
+          <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">
             <span>Our Infrastructure </span>
             Real Estate Journey
