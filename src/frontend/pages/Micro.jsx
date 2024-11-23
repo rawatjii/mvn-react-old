@@ -85,9 +85,7 @@ const MicroPage = ({ data }) => {
 
 
         <MicroLocationMap data={data.locationAdvantage} />
-        {
-          data.Slides && data.Slides.isshow === true && <Slides />
-        }
+        {data.Slides && data.Slides.isshow === true && <Slides data={data.Slides} />}
 
         <div className="container-fluid micro_footer">
           <div className="row ">

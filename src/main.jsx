@@ -9,9 +9,10 @@ import Layout from "./frontend/components/Layout.jsx";
 const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
 const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
 const MicroPage = React.lazy(() => import("./frontend/pages/Micro.jsx"));
-const AeroOneGurgaon = React.lazy(() =>import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
-const AeroOneGurgaon1 = React.lazy(() =>import("./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx"));
+const AeroOneGurgaon = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
+const AeroOneGurgaon1 = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx"));
 const ContactPage = React.lazy(() => import("./frontend/pages/ContactUs.jsx"));
+const ThankYou = React.lazy(() => import("./frontend/pages/ThankYou.jsx"));
 
 // admin
 
@@ -126,6 +127,16 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "thanks",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <ThankYou />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
         path: "media-center",
         element: (
           <Suspense fallback={<InitialLoading />}>
@@ -145,7 +156,7 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
-      
+
       {
         path: "*",
         element: <PageNotFound />,

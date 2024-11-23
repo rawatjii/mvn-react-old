@@ -53,6 +53,7 @@ const MicroPageGurgaon = ({ data }) => {
 
       {heroLoaded && (
         <>
+          <MicroHero data={data} /> {/*no isssue*/}
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} /> {/*no isssue*/}
           <PeacockSection data={data} /> {/*no isssue*/}
@@ -67,9 +68,9 @@ const MicroPageGurgaon = ({ data }) => {
           <Renders data={data} />  {/*no isssue*/}
           <MicroHighlights data={data.highlight} />  {/*no isssue*/}
           <MicroPrice />  {/*no isssue*/}
-          {/* <MicroAmenities data={data.menities_section} /> */}
-          {/* <MicroFloorPlan data={data.floorPlan} /> */}
-          {/* <MicroLocationMap data={data.locationAdvantage} /> */}
+          <MicroAmenities data={data.menities_section} />
+          <MicroFloorPlan data={data.floorPlan} />
+          <MicroLocationMap data={data.locationAdvantage} />
           {/* <Slides /> */}
           <div className="container-fluid micro_footer">
             <div className="row ">

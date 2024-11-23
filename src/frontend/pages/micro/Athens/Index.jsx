@@ -187,7 +187,10 @@ const data = {
   },
   noPluutionZone:{
     isAllow:false
-  }  
+  },
+  walkthrough:{
+    isshow:false
+  }
   
 };
 

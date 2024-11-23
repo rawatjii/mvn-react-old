@@ -222,6 +222,11 @@ footer  .footer-bottom-border.container .row {align-items: center;}
     footer {padding-top: 10px; margin-top: 50px;}
     .projects_section {.sec_title { font-size: 34px;  margin-bottom: 30px; height: 63px;letter-spacing: 10px; margin-left: auto; }}
 
+    .philosophy_section .content h4.title { margin: unset!important;   width: 100%; margin-bottom: 22px!important;}
+    .philosophy_section .content h4.title::after {display: none;}
+
+
+
 }
 
 
@@ -293,7 +298,7 @@ footer .main-pera a{color:var(--theme_primary_color)}
 footer .main-pera{display:flex;justify-content:center;gap:0 6px;margin-bottom:0;line-height:unset}
 footer .inner-box{display:flex;flex-wrap:wrap;justify-content:space-between;width: 75%;margin-left: auto;}
 footer .footer-menu ul{gap:7px 30px;display:grid}
-footer .footer-menu ul li a{color:#7b7b7b;font-size:15px}
+footer .footer-menu ul li a{color:#c7c7c7;font-size:15px}
 footer .border-top-footer{width:100%;border-top:1px solid #ffffff29;padding-top:27px;padding-bottom:10px}
 footer .border-top-footer{width:100%;border-top:1px solid #ffffff29;padding-top:27px;padding-bottom:10px}
 footer .footer-second-heading{margin-bottom:30px;font-size:20px;color:var(--theme_primary_color)}
@@ -344,6 +349,10 @@ footer {padding-top: 10px; margin-top: 50px;}
 
   
 
+}
+
+footer .address-details, footer .phone-details, footer .mail-details {
+  color: #c7c7c7;
 }
 
 
@@ -576,5 +585,48 @@ section.our-team-section .col-lg-4.col-md-4.col-12 .ourteamCard {max-width: 100%
 .profile-pic img.img-fluid {width: 100%;}
 .our-team-section .ourteamCard { margin-bottom: 1px; width: 100%;}
 
+.section.peacock_section.pb-0.homeScroll-video {padding-top: 0px;}
 
+.projects_section {& .left_col .single {.lazyload-wrapper, .an_img { height: 280px !important; }}}
+
+.projects_section .sec_title span {font-size: 16px !important; padding-bottom: 20px !important;letter-spacing: 1px !important;}
+.projects_section {.sec_title { font-size: 22px;  margin-bottom: 0;height: 63px;letter-spacing: 3px; margin-top: 85px;} }
+.projects_section {.plane_icon {  position: absolute;   z-index: -1; top: 9%;left: 8%;width: 24%;  opacity: 1;transform: rotate(180deg); }}
+.projects_section {.sec_title { font-size: 17px; margin-bottom: 0;  height: 63px;letter-spacing: 3px; margin-top: 124px;}}
+.projects_section .sec_title span {font-size: 15px !important;padding-bottom: 20px !important;letter-spacing: 1px !important;padding-top: 8px;}
+h4.title {font-size: 18px !important;padding-bottom: 30px;}
+.our_brand_section .inner-ethos { width: 100%; margin-left: auto;}
+.our_brand_section .brand_content .content h4.title {font-size: 18px !important;}
+.our_brand_section .box-flex {padding: 15px;}
+.our_brand_section .icon .img-fluid {height: 47px;}
+section.section.our_brand_section .brand_bg.brand_bg-2 { display: none;}
+section.section.our_team_section { padding-bottom: 17px;}
+.our_team_section p {width: 100%;}
+.testimonial_section { padding-top: 40px; padding-bottom: 40px;}
+section.section.testimonial_section .swiper-slide {background-color: unset;}
+.testimonial_section {& .testimonial_carousel {.single {padding: 20px 20px; }}}
+.single .content {h4.title { font-size: 20px !important;}}
+.testimonial_section .flex-content-box {height: auto;padding-bottom: 10px;}
+footer .custom-col.flex-middel-col {display: none;}
+footer .flex-row .custom-col {width: 100%;}
+footer .inner-box {width: 100%;}
+footer .main-pera { display: block;}
+p.main-pera {  font-size: 13px;}
+section.section.enquire_section p {color: #dbcfcf; font-weight: 100;font-family: 'Futura_Bt_medium';font-size: 17px;}
+.modal-body p { font-size: 14px; letter-spacing: 0.5px; color: #d1d1d1;}
+.modal-body {padding: 15px;}
+.modal-body {border-radius: 15px; outline: 1px dashed #f4d9667a;outline-offset: -6px;}
+.philosophy_section .content p {font-size: 14px; letter-spacing: 1px; text-align: center; color: #cec7c7;}
+.philosophy_section .content h4.title::after{display:none};
+.philosophy_section  .content h4.title { margin-bottom: 25px!important;}
+.philosophy_section {& .content {  .title {  margin-bottom: 20px !important; }}}
+.philosophy_section li { text-align: center;}
+.philosophy_section {.content  ul {display: grid;justify-content: center;gap: 5px 0px;}}
+
+}
+
+.projects_section {
+  .plane_icon {
+      display: block;
+  }
 }

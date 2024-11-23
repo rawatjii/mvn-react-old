@@ -22,7 +22,7 @@ const Footer = () => {
 
       <Container className="footer-bottom-border">
         <Row>
-          <Col xs={6} md={6} lg={6}>
+          <Col xs={12} md={6} lg={6}>
 
             <div className="social_links text-center">
               <ul>
@@ -49,7 +49,7 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col xs={6} md={6} lg={6}>
+          <Col xs={12} md={6} lg={6}>
             <div className="box searchbox-input-box">
               <div className="subscribe">
                 <input className="form-control" type="text" placeholder="Your Email" name="" />
