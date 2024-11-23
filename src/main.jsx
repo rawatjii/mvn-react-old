@@ -9,9 +9,10 @@ import Layout from "./frontend/components/Layout.jsx";
 const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
 const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
 const MicroPage = React.lazy(() => import("./frontend/pages/Micro.jsx"));
-const AeroOneGurgaon = React.lazy(() =>import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
-const AeroOneGurgaon1 = React.lazy(() =>import("./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx"));
+const AeroOneGurgaon = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
+const AeroOneGurgaon1 = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx"));
 const ContactPage = React.lazy(() => import("./frontend/pages/ContactUs.jsx"));
+const ThankYou = React.lazy(() => import("./frontend/pages/ThankYou.jsx"));
 
 // admin
 
@@ -33,7 +34,6 @@ import "./index.css";
 
 import AeroOneBangalore from "./frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx";
 import Career from "./frontend/pages/Career.jsx";
-import Athens from "./frontend/pages/micro/Athens/Index.jsx";
 
 import "./awaneesh.css";
 import MediaCenter from "./frontend/pages/MediaCenter.jsx";
@@ -87,16 +87,6 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "athens",
-        element: (
-          <Suspense fallback={<InitialLoading />}>
-            <Layout>
-              <Athens />
-            </Layout>
-          </Suspense>
-        ),
-      },
-      {
         path: "aeroone-bangalore",
         element: (
           <Suspense fallback={<InitialLoading />}>
@@ -137,6 +127,16 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "thanks",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <ThankYou />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
         path: "media-center",
         element: (
           <Suspense fallback={<InitialLoading />}>
@@ -156,7 +156,7 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
-      
+
       {
         path: "*",
         element: <PageNotFound />,

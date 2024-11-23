@@ -5,6 +5,7 @@ import hero_img_mb from "../../../../frontend/assets/images/micro_hero/hero_img.
 import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
 
 import "./aeroGuragaon.css";
+import MicroPageGurgaon1 from "../../MicroPageGurgaon1";
 
 const data = {
   micro_hero_section:
@@ -17,7 +18,7 @@ const data = {
   },
   overview: {
     title: "MVN Aero One",
-    location: "Gurgaon",
+    location: "Gurugram",
     extra: "ASCEND TO UNRIVALED HEIGHTS OF PURE SOPHISTICATION",
     // desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
     desc: [
@@ -153,31 +154,38 @@ const data = {
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
-    mapIMG: CONFIG.IMAGE_URL + 'aero-bangalore/location.jpg',
-    locationData : [
+    mapIMG: CONFIG.IMAGE_URL + 'gurgaon-micro/gurgaon-aero-one-map-mb.jpg',
+    //     yasho bhoomi
+    // indira gandhi international airport
+    // diplomatic enclave
+    // palam vihar 
+    // gurgaon railway station
+    // dlf cyber city 
+    // world global city
+    locationData: [
       {
-        distance:'15 Min',
-        title:'Kempegowda Intl. Airport',
+        distance: 'near by',
+        title: 'yasho bhoomi',
       },
       {
-        distance:'12 Min',
-        title:'K.I.Airport Halt (Railway Station)',
+        distance: 'near by',
+        title: 'indira gandhi international airport',
       },
       {
-        distance:'05 Min',
-        title:'Sports Village',
+        distance: 'near by',
+        title: 'diplomatic enclave',
       },
       {
-        distance:'06 Min',
-        title:'Mini Vidhana Soudha',
+        distance: 'near by',
+        title: 'gurgaon railway station',
       },
       {
-        distance:'02 Min',
-        title:'Anjaneya Temple',
+        distance: 'near by',
+        title: 'dlf cyber city',
       },
       {
-        distance:'11 Min',
-        title:'KIADB Aerospace SEZ',
+        distance: 'near by',
+        title: 'world global city',
       },
     ]
   },
@@ -206,7 +214,7 @@ const data = {
 };
 
 const AeroOneGurgaon = () => {
-  return <MicroPage data={data} />;
+  return <MicroPageGurgaon1 data={data} />;
 };
 
 export default AeroOneGurgaon;

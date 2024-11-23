@@ -3,6 +3,10 @@ import { Container } from "react-bootstrap";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
+import renderImg1 from '../../assets/images/render-images/1.png'
+import renderImg2 from '../../assets/images/render-images/2.png'
+import renderImg3 from '../../assets/images/render-images/3.png'
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Renders = () => {
@@ -11,18 +15,21 @@ const Renders = () => {
 
   const slides = [
     {
-      title: "Slide 1",
+      title: "Landscape",
       content: "This is the first slide.",
+      imgSrc: renderImg1,
       thumbnail: "https://swiperjs.com/demos/images/nature-1.jpg",
     },
     {
-      title: "Slide 2",
+      title: "elevation",
       content: "This is the second slide.",
+      imgSrc: renderImg2,
       thumbnail: "https://swiperjs.com/demos/images/nature-2.jpg",
     },
     {
-      title: "Slide 3",
+      title: "apartment",
       content: "This is the third slide.",
+      imgSrc: renderImg3,
       thumbnail: "https://swiperjs.com/demos/images/nature-3.jpg",
     },
   ];
@@ -54,7 +61,7 @@ const Renders = () => {
   return (
     <section className="render_section" ref={sectionRef}>
       <Container className="topContainer">
-        <h4 className="text-center">Renders</h4>
+        {/* <h4 className="text-center mainhead">Landscape</h4> */}
         <div className="slider-container">
           {/* Large Slides */}
           <div className="slides">
@@ -63,8 +70,24 @@ const Renders = () => {
                 key={index}
                 className={`slide ${index === activeIndex ? "active" : ""}`}
               >
-                <h1>{slide.title}</h1>
-                <p>{slide.content}</p>
+                <h4 className="text-center mainhead">{slide.title}</h4>
+                <div className="renders-images">
+                  {/* <div className="images img3">
+                    <img className="w-100 img-fluid" src={renderImg2} alt="" />
+                  </div> */}
+                  <div className="images img2">
+                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
+                  </div>
+                  <div className="images img1">
+                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
+                  </div>
+                  <div className="images img2">
+                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
+                  </div>
+                  {/* <div className="images img3">
+                    <img className="w-100 img-fluid" src={renderImg3} alt="" />
+                  </div> */}
+                </div>
               </div>
             ))}
           </div>
