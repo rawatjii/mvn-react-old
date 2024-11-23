@@ -15,9 +15,7 @@ const HomepageVideo = ({ data }) => {
 
 
   const [images, setImages] = useState([]);
-  const [imagePath, setImagePath] = useState(
-    "assets/videos/cloud-elevation/video-desktop"
-  );
+  const [imagePath, setImagePath] = useState("assets/images/micro/hero/mobile");
   const frameRefs = useRef([]);
 
   // Handle screen size and update image path
@@ -26,7 +24,7 @@ const HomepageVideo = ({ data }) => {
       if (window.innerWidth <= 768) {
         seTotalFrames(275)
 
-        setImagePath("assets/videos/cloud-elevation/video-mobile");
+        setImagePath("assets/images/micro/hero/mobile");
       } else {
         setImagePath("assets/videos/cloud-elevation/video-desktop");
       }
@@ -57,8 +55,9 @@ const HomepageVideo = ({ data }) => {
     const loadedImages = [];
 
     for (let i = 1; i <= totalFrames; i++) {
+      debugger
       const img = new Image();
-      img.src = `${imagePath}/${i}.jpg`;
+      img.src = `${imagePath}/${i}.webp`;
       loadedImages.push(img);
     }
     setImages(loadedImages);

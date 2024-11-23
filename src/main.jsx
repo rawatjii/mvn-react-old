@@ -44,7 +44,7 @@ import Blog from "./frontend/pages/Blog.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "mvn",
+    path: "/",
     // element:<Layout />,
     children: [
       {
@@ -175,7 +175,7 @@ const router = createBrowserRouter([
     ],
   },
   {
-    path: "mvn/admin",
+    path: "/admin",
     element: <AdminLayout />,
     children: [
       {
