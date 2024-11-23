@@ -68,9 +68,9 @@ const Renders = () => {
                 className={`slide ${index === activeIndex ? "active" : ""}`}
               >
                 <div className="renders-images">
-                  <div className="images img3">
+                  {/* <div className="images img3">
                     <img className="w-100 img-fluid" src={renderImg2} alt="" />
-                  </div>
+                  </div> */}
                   <div className="images img2">
                     <img className="w-100 img-fluid" src={renderImg2} alt="" />
                   </div>
@@ -80,9 +80,9 @@ const Renders = () => {
                   <div className="images img2">
                     <img className="w-100 img-fluid" src={renderImg3} alt="" />
                   </div>
-                  <div className="images img3">
+                  {/* <div className="images img3">
                     <img className="w-100 img-fluid" src={renderImg3} alt="" />
-                  </div>
+                  </div> */}
                 </div>
               </div>
             ))}
