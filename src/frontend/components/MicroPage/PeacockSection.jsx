@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 import CustomCard from "../Card";
+import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,7 +46,7 @@ const PeacockSection = ({ data }) => {
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
-          setLoading(true); // All images loaded, hide loader
+          setLoading(false); // All images loaded, hide loader
         }
       };
 
@@ -98,9 +99,7 @@ const PeacockSection = ({ data }) => {
 
       {/* Show loader if still loading */}
       {loading && (
-        <div className="loader">
-          <p>Loading...</p> {/* Replace with your custom loader design */}
-        </div>
+        <PeacockLoader />
       )}
 
       {!loading && (
