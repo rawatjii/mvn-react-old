@@ -1,0 +1,48 @@
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import 'swiper/css/navigation';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
+import { Navigation } from 'swiper/modules';
+
+function GallerySlider({data, slidesPerView, spaceBetween, navigation}) {
+    const [open, setOpen] = useState(false);
+    const [currentIndex, setCurrentIndex] = useState(0);
+  
+    const images = data
+  
+    return (
+      <div className="gallery_slider">
+        
+        
+        <Swiper spaceBetween={spaceBetween || 20} slidesPerView={slidesPerView || 3} navigation={navigation || false} modules={[ Navigation]}>
+          {images.map((image, index) => (
+            <SwiperSlide key={index}>
+              <img
+                src={image.src}
+                alt={image.alt}
+                style={{ width: "100%", cursor: "pointer" }}
+                onClick={() => {
+                  setCurrentIndex(index);
+                  setOpen(true);
+                }}
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+  
+  
+        {open && (
+          <Lightbox
+            open={open}
+            close={() => setOpen(false)}
+            slides={images}
+            index={currentIndex}
+          />
+        )}
+      </div>
+    );
+}
+
+export default GallerySlider
