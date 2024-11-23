@@ -5,6 +5,7 @@ import hero_img_mb from "../../../../frontend/assets/images/micro_hero/hero_img.
 import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
 
 import "./aeroGuragaon.css";
+import MicroPageGurgaon from "../../MicroPageGurgaon";
 
 const data = {
   micro_hero_section:
@@ -26,7 +27,7 @@ const data = {
   },
   video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
-    desc:'Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings.',
+    desc: 'Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings.',
     isVdo: true,
   },
   video2: {
@@ -34,7 +35,7 @@ const data = {
     desc: "Dive into your own private pool with a grand view, just a few steps away from your living room",
     isVdo: true,
   },
-  living_room_video:{
+  living_room_video: {
     title: "ESCAPE TO EXCLUSIVITY",
     desc: "Experience the elegance of a sliding door that seamlessly connects your living space to the outdoors, transforming the ambiance with every glide.",
     isVdo: true,
@@ -63,7 +64,7 @@ const data = {
     masterBedroom: {
       title: "MASTER BEDROOM",
       desc: "If You Think You Know What Lavishness Means It's Time You Got A New Perspective",
-      isVdo: true,
+      
     },
   },
   LargeElevationSection: {
@@ -120,15 +121,15 @@ const data = {
         lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
       }
-    },    
+    },
     {
       title: 'Business Centre',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
       }
-    },   
-    
+    },
+
     {
       title: 'MODERN ROOFTOP CLUBHOUSE',
       images: {
@@ -137,75 +138,75 @@ const data = {
       }
     },
   ],
-  highlight:{
+  highlight: {
     isshow: true,
     title: "Highlight",
-    point:[
+    point: [
       'Power backup for common facilities.',
-    'Italian/Imported Marble flooring.',
-    'Television points in living and bedrooms.',
-    'Telephone points in living and master bedroom.',
-    'Split AC provision in living and bedrooms.',
-    'Premium emulsion paint finish.',
+      'Italian/Imported Marble flooring.',
+      'Television points in living and bedrooms.',
+      'Telephone points in living and master bedroom.',
+      'Split AC provision in living and bedrooms.',
+      'Premium emulsion paint finish.',
     ]
   },
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
     mapIMG: CONFIG.IMAGE_URL + 'aero-bangalore/location.jpg',
-    locationData : [
+    locationData: [
       {
-        distance:'15 Min',
-        title:'Kempegowda Intl. Airport',
+        distance: '15 Min',
+        title: 'Kempegowda Intl. Airport',
       },
       {
-        distance:'12 Min',
-        title:'K.I.Airport Halt (Railway Station)',
+        distance: '12 Min',
+        title: 'K.I.Airport Halt (Railway Station)',
       },
       {
-        distance:'05 Min',
-        title:'Sports Village',
+        distance: '05 Min',
+        title: 'Sports Village',
       },
       {
-        distance:'06 Min',
-        title:'Mini Vidhana Soudha',
+        distance: '06 Min',
+        title: 'Mini Vidhana Soudha',
       },
       {
-        distance:'02 Min',
-        title:'Anjaneya Temple',
+        distance: '02 Min',
+        title: 'Anjaneya Temple',
       },
       {
-        distance:'11 Min',
-        title:'KIADB Aerospace SEZ',
+        distance: '11 Min',
+        title: 'KIADB Aerospace SEZ',
       },
     ]
   },
-  floorPlan:{
+  floorPlan: {
 
-    floorPlanData : [
+    floorPlanData: [
       {
-        title:'1 BHK Floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
+        title: '1 BHK Floor Plan',
+        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
       },
       {
-        title:'2 BHK Panoramic floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
+        title: '2 BHK Panoramic floor Plan',
+        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
       },
       {
-        title:'2 BHK Luxury floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
+        title: '2 BHK Luxury floor Plan',
+        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
       },
       {
-        title:'3 BHK Luxury floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
+        title: '3 BHK Luxury floor Plan',
+        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
       },
-      
+
     ]
   }
 };
 
 const AeroOneGurgaon = () => {
-  return <MicroPage data={data} />;
+  return <MicroPageGurgaon data={data} />
 };
 
 export default AeroOneGurgaon;
