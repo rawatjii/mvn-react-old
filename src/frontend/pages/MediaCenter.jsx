@@ -251,7 +251,7 @@ function MediaCenter() {
                 <div className="container">
                     <div className="sec_title text-center color style1 mb_30">
                         <h4 className="title">Press Center</h4>
-                        <p>Pioneering new trends in the market, MVN Group has an array of ongoing and planned projects at strategic locations in Delhi NCR, Sonepat, Panipat, Udaipur and Visakhapatnam incorporating a mix of Townships, Residential, Commercial, SEZ, Hospitality and Education</p>
+                        <p>Welcome to the Press Release section of MVN, where innovation, milestones, and achievements take center stage. Stay informed about our latest ventures, industry contributions, and community impact, as we continue to redefine the future. From pioneering in real estate to shaping the future of education, we’re committed to excellence every step of the way.</p>
                     </div>
                     <section class="press-release" id="press-center">
 
