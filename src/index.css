@@ -2307,7 +2307,7 @@ footer {
 
     .thumbnail {
       margin-top: 30px;
-      margin-bottom: 35px;
+      /* margin-bottom: 35px; */
       border-top: 4px solid var(--theme_primary_color);
       border-bottom: 4px solid var(--theme_primary_color);
     }
@@ -2324,6 +2324,8 @@ footer {
       font-size: 16px;
       margin-top: -20px;
       position: relative;
+      top: -23px;
+  
     }
 
     .location_points {
@@ -2331,7 +2333,7 @@ footer {
       padding-left: 70px;
       padding-top: 80px;
       position: relative;
-      margin-top: -20px;
+      margin-top: -42px;
 
       .left_road {
 
