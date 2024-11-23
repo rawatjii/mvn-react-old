@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
 import Container from "react-bootstrap/Container";
-import LazyLoad from "react-lazyload";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImgMail from "../../assets/images/icons/email.png";
@@ -9,6 +8,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const MicroHero = ({ data }) => {
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true); // Loader state
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
   const [totalFrames, setTotalFrames] = useState(0);
@@ -19,13 +19,13 @@ const MicroHero = ({ data }) => {
 
     // Set total frames dynamically
     let frameCount = 0;
-    if(data.micro_hero_section.client){
+    if (data.micro_hero_section.client) {
       frameCount = isMobile ? 72 : 177;
-    }else{
+    } else {
       frameCount = isMobile ? 275 : 177;
     }
     setTotalFrames(frameCount);
-  }, []);
+  }, [data]);
 
   useEffect(() => {
     // Only preload images once totalFrames is set
@@ -33,30 +33,40 @@ const MicroHero = ({ data }) => {
 
     const isMobile = window.innerWidth <= 768;
     let folderPath = null;
-    if(data.micro_hero_section.client){
+    if (data.micro_hero_section.client) {
       folderPath = isMobile
-      ? "assets/images/micro/hero/client/"
-      : "assets/images/micro/hero/client/";
-    }else{
+        ? "assets/images/micro/hero/client/"
+        : "assets/images/micro/hero/client/";
+    } else {
       folderPath = isMobile
-      ? "assets/images/micro/hero/mobile/"
-      : "assets/images/micro/hero/desktop/";
+        ? "assets/images/micro/hero/mobile/"
+        : "assets/images/micro/hero/desktop/";
     }
-    
 
     // Preload images
     const loadedImages = [];
+    let loadedCount = 0;
+
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
       img.src = `${folderPath}${i}.webp`;
+
+      // Track when each image loads
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalFrames) {
+          setImages(loadedImages); // Set images after all are loaded
+          setLoading(false); // Hide loader
+        }
+      };
+
       loadedImages.push(img);
     }
-    setImages(loadedImages);
-  }, [totalFrames]);
+  }, [totalFrames, data]);
 
   useEffect(() => {
-    // Wait until all images are loaded before initializing ScrollTrigger
-    if (images.length !== totalFrames) return;
+    // Reinitialize ScrollTrigger only after all images are loaded
+    if (loading || images.length !== totalFrames) return;
 
     // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
@@ -90,11 +100,14 @@ const MicroHero = ({ data }) => {
     return () => {
       scrollAnimation.kill();
     };
-  }, [images, totalFrames]);
+  }, [loading, images, totalFrames]);
 
   return (
     <section className="section micro_hero_section p-0">
-      {data.micro_hero_section.isVdo && (
+      {/* Show Loader */}
+      {loading && <div className="loader">Loading...</div>}
+
+      {!loading && data.micro_hero_section.isVdo && (
         <div ref={containerRef} className="frames_content">
           {images.map((img, index) => (
             <img
@@ -109,7 +122,8 @@ const MicroHero = ({ data }) => {
         </div>
       )}
 
-      {data.micro_hero_section.images &&
+      {!loading &&
+        data.micro_hero_section.images &&
         Array.isArray(data.micro_hero_section.images) &&
         data.micro_hero_section.images.map((imgs, index) => (
           <div key={index} className="hero-img">
@@ -128,7 +142,7 @@ const MicroHero = ({ data }) => {
           </div>
         ))}
 
-      {data.micro_hero_section.bannerHighLight && (
+      {!loading && data.micro_hero_section.bannerHighLight && (
         <div className="hero_content">
           <Container>
             <div className="content">
@@ -142,7 +156,8 @@ const MicroHero = ({ data }) => {
         </div>
       )}
 
-      {data.micro_hero_section.enquiryBTN &&
+      {!loading &&
+        data.micro_hero_section.enquiryBTN &&
         data.micro_hero_section.enquiryBTN.isshow === true && (
           <div className="enquiry_btn">
             <a

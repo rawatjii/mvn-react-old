@@ -12,7 +12,8 @@ const data = {
     isVdo: true,
     images: false,
     bannerHighLight: false,
-    enquiryBTN: false
+    enquiryBTN: false,
+    animationPath:'https://mvnmall.com/data.json'
   },
   overview: {
     title: "MVN Aero One",

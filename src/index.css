@@ -2515,6 +2515,19 @@ footer {
   }
 }
 
+.loader {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  color: #000;
+  background: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 8px;
+  z-index: 9999;
+}
+
 
 /* start responsive */
 /* by bhupendra */
