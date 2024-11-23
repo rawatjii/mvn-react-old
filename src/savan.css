@@ -378,6 +378,9 @@ footer .footer-bottom-border.container .row {
   }
 }
 
+.section.media-press-release p {
+  text-transform: math-auto;
+}
 
 
 @media screen and (min-width: 767px) {
