@@ -73,9 +73,9 @@ const Footer = () => {
             <img src={FooterMiddleLogo} alt="" className="footerM" />
           </div>
           <div className="custom-col">
-            <div class="box footer-links-box">
-              <div class="inner-box">
-                <div class="footer-menu">
+            <div className="box footer-links-box">
+              <div className="inner-box">
+                <div className="footer-menu">
                 <h4 className="footer-second-heading">Important Links</h4>
                   <ul>
                     <li><a href="#">Home</a></li>
@@ -85,7 +85,7 @@ const Footer = () => {
                     <li><a href="#">Contact Us</a></li>
                   </ul>
                 </div>
-                <div class="footer-menu">
+                <div className="footer-menu">
                   <h4 className="footer-second-heading">More Links</h4>
                   <ul>
                     <li><a href="#">Blogs</a></li>
@@ -102,7 +102,7 @@ const Footer = () => {
         </div>
         <Col  xs={12} md={12} lg={12} className="text-center">
         <div className="border-top-footer">
-        <p class="main-pera"><i class="fa fa-copyright" aria-hidden="true"></i> 2024 - MVN Group. All Right Reserved.
+        <p className="main-pera"><i className="fa fa-copyright" aria-hidden="true"></i> 2024 - MVN Group. All Right Reserved.
         |<a href="http://gtftechnologies.com/" target="blank"> Curated by: <b>GTF Technologies</b></a></p>
         </div>
         </Col>
