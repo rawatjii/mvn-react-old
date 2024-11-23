@@ -2262,8 +2262,9 @@ footer {
 /* floor_plan_section */
 
 .floor_plan_section {
-  padding-top: 15px;
+  padding-top: 50px;
   padding-bottom: 0;
+  .sec_title {margin-bottom: 25px;}
 
   .accordion-item {
     border: none;

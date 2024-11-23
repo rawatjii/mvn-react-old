@@ -53,7 +53,6 @@ const MicroPageGurgaon = ({ data }) => {
 
       {heroLoaded && (
         <>
-          <MicroHero data={data} /> {/*no isssue*/}
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} /> {/*no isssue*/}
           <PeacockSection data={data} /> {/*no isssue*/}
