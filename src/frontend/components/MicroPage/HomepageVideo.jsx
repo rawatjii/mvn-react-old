@@ -55,7 +55,6 @@ const HomepageVideo = ({ data }) => {
     const loadedImages = [];
 
     for (let i = 1; i <= totalFrames; i++) {
-      debugger
       const img = new Image();
       img.src = `${imagePath}/${i}.webp`;
       loadedImages.push(img);
