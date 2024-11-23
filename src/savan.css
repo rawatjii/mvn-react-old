@@ -1105,6 +1105,20 @@ footer .footer-bottom-border.container .row {
     .media-news_offline {  padding: 33px 15%;}
     .awa_card p {font-size: 15px;}
 
+    .projects_section {.plane_icon {   display: block; }}
+
+
+}
+.projects_section {
+  .plane_icon {
+      position: absolute;
+      z-index: -1;
+      top: 6%;
+      left: 6%;
+      width: 8%;
+      opacity: 1;
+      transform: rotate(00deg);
+  }
 }
 
 .media_content_heading {font-size: 17px;font-weight: unset;}
@@ -2049,6 +2063,7 @@ section#press-center{padding-top:25px}
 section.section.media-gallery .swiper-slide img {object-fit: cover;margin-bottom: 36px;}
 section#press-center { padding-bottom: 25px;}
 section.section.media-gallery {padding-bottom: 20px;}
+.projects_section { .plane_icon {   position: absolute;  z-index: -1; top: 9%; left: 5%;  width: 22%;  opacity: 0.4; transform: rotate(0deg); }}
 
 
 
