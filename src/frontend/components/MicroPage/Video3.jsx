@@ -3,6 +3,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
+import CustomCard from "../Card";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -99,16 +100,15 @@ const Video3 = ({data}) => {
         ))}
       </div>
 
-      <div className="content">
-        <Container>
-          <SecTitle className="text-center color style1">
-            <h4 ref={titleRef} className="title">{title}</h4>
-          </SecTitle>
+      <Container >
+        <div className='about'>
+            <CustomCard
+              title={title}
+              desc={desc}  
+            />
+        </div>
 
-          {desc && <p className="desc">{desc}</p>}
-          
-        </Container>
-      </div>
+    </Container>
     </div>
   );
 };
