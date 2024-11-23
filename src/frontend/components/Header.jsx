@@ -24,7 +24,7 @@ const Header = () => {
 
 
     const handleScroll = () => {
-      if (pathname === "/mvn/") {
+      if (pathname === "/") {
         if (window.scrollY > 2960) {
           setScrolled(true);
         } else {
@@ -87,7 +87,7 @@ const Header = () => {
       <Navbar ref={headerRef} expand="false" className={`${scrolled ? "fixed" : ""} ${isMicro ? 'micro_nav' : null}`}>
         <Container>
           <Navbar.Brand ref={logoRef} className="logo">
-            <Link to="/mvn/" onClick={() => toggleMenu("close")}>
+            <Link to="/" onClick={() => toggleMenu("close")}>
               <img
                 src={CONFIG.IMAGE_URL + "logo_white.webp"}
                 alt="mvn-logo"
@@ -115,7 +115,7 @@ const Header = () => {
             <Container>
               <div className="header">
                 <Navbar.Brand className="logo">
-                  <Link to="/mvn/" onClick={() => toggleMenu("close")}>
+                  <Link to="/" onClick={() => toggleMenu("close")}>
                     <img
                       src={CONFIG.IMAGE_URL + "logo.png"}
                       alt="mvn-logo"
@@ -132,14 +132,14 @@ const Header = () => {
 
               <ul className="menus">
                 <li className="nav-link">
-                  <NavLink to="/mvn/" onClick={() => toggleMenu("close")}>
+                  <NavLink to="/" onClick={() => toggleMenu("close")}>
                     Home
                   </NavLink>
                 </li>
 
                 <li className="nav-link">
                   <NavLink
-                    to="/mvn/about-us"
+                    to="/about-us"
                     onClick={() => toggleMenu("close")}
                   >
                     About Us
@@ -178,7 +178,7 @@ const Header = () => {
                 </li>
 
                 <li className="nav-link">
-                  <NavLink to={"/mvn/education/"}  onClick={() => toggleMenu("close")}>Education</NavLink>
+                  <NavLink to={"/education/"}  onClick={() => toggleMenu("close")}>Education</NavLink>
                   <ul className="sub_menu">
                     <li className="nav-link">
                       <label htmlFor="school">School</label>
@@ -203,20 +203,20 @@ const Header = () => {
                 </li>
 
                 <li className="nav-link">
-                  <NavLink to={"/mvn/media-center/"}  onClick={() => toggleMenu("close")}>Media Center</NavLink>
+                  <NavLink to={"/media-center/"}  onClick={() => toggleMenu("close")}>Media Center</NavLink>
                 </li>
 
                 <li className="nav-link">
-                  <NavLink to={"/mvn/blogs/"}  onClick={() => toggleMenu("close")}>Blogs</NavLink>
+                  <NavLink to={"/blogs/"}  onClick={() => toggleMenu("close")}>Blogs</NavLink>
                 </li>
 
                 <li className="nav-link">
-                  <NavLink to={"/mvn/career/"}  onClick={() => toggleMenu("close")}>Career</NavLink>
+                  <NavLink to={"/career/"}  onClick={() => toggleMenu("close")}>Career</NavLink>
                 </li>
 
                 <li className="nav-link">
                   <NavLink
-                    to="/mvn/contact-us"
+                    to="/contact-us"
                     onClick={() => toggleMenu("close")}
                   >
                     Contact Us
