@@ -6,12 +6,40 @@ import ImgMail from "../../assets/images/icons/email.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const MicroHero = ({ data }) => {
+const MicroHero = ({ data, onLoadComplete }) => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true); // Loader state
+  const [totalFrames, setTotalFrames] = useState(0);
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
-  const [totalFrames, setTotalFrames] = useState(0);
+  const mouseScrollRef = useRef()
+
+  // useEffect(() => {
+  //   if (!mouseScrollRef.current || !containerRef.current) return;
+  
+  //   const scrollTriggerInstance = ScrollTrigger.create({
+  //     trigger: containerRef.current, // Target the hero section
+  //     start: "top top", // When the hero section starts
+  //     end: "bottom top", // When the hero section leaves the viewport
+  //     onUpdate: (self) => {
+  //       const scrollDownButton = mouseScrollRef.current;
+  //       if (self.progress > 0.1) {
+  //         // Hide button when scrolling beyond 10% of the hero section
+  //         scrollDownButton.style.opacity = 0;
+  //         scrollDownButton.style.pointerEvents = "none"; // Disable interactions
+  //       } else {
+  //         // Show button while in the top 10% of the hero section
+  //         scrollDownButton.style.opacity = 1;
+  //         scrollDownButton.style.pointerEvents = "auto";
+  //       }
+  //     },
+  //   });
+  
+  //   return () => {
+  //     scrollTriggerInstance.kill();
+  //   };
+  // }, []);
+
 
   useEffect(() => {
     // Determine if it's mobile or desktop
@@ -20,7 +48,7 @@ const MicroHero = ({ data }) => {
     // Set total frames dynamically
     let frameCount = 0;
     if (data.micro_hero_section.client) {
-      frameCount = isMobile ? 72 : 177;
+      frameCount = isMobile ? 200 : 177;
     } else {
       frameCount = isMobile ? 275 : 177;
     }
@@ -57,6 +85,7 @@ const MicroHero = ({ data }) => {
         if (loadedCount === totalFrames) {
           setImages(loadedImages); // Set images after all are loaded
           setLoading(false); // Hide loader
+          onLoadComplete(); // Notify parent that loading is complete
         }
       };
 
@@ -105,7 +134,6 @@ const MicroHero = ({ data }) => {
   return (
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
-      {loading && <div className="loader">Loading...</div>}
 
       {!loading && data.micro_hero_section.isVdo && (
         <div ref={containerRef} className="frames_content">
@@ -173,6 +201,18 @@ const MicroHero = ({ data }) => {
             </a>
           </div>
         )}
+
+      {/* <div ref={mouseScrollRef} className="mouse_scroll">
+        <div className="mouse">
+          <div className="wheel"></div>
+        </div>
+
+        <div>
+          <span className="m_scroll_arrows unu"></span>
+          <span className="m_scroll_arrows doi"></span>
+          <span className="m_scroll_arrows trei"></span>
+        </div>
+      </div> */}
     </section>
   );
 };
