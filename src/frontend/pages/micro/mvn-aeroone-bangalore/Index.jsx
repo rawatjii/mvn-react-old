@@ -183,10 +183,14 @@ const data = {
       `RERA Registration no : PRM/KA/RERA/1250/303/PR/201222/003761`,
       `Tower no 4 RERA Registration no : PRM/KA/RERA/1250/303/PR/140923/006259`,
       `Tower no 5 and Tower 6 RERA Registration No : PRM/KA/RERA/1250/303/PR/141223/006472`
-    ]
-    
+    ]    
+  },
+  noPluutionZone:{
+    isAllow:false
+  },
+  walkthrough:{
+    isshow:false
   }
-  
   
 };
 
