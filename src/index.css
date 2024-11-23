@@ -3003,22 +3003,22 @@ footer {
         flex: 1;
       }
 
-      .images.img1 {
-        height: auto;
-        width: auto;
-        flex: 2;
-      }
-
-      .images.img2 {
+      .images:nth-child(1n) {
         height: auto;
         width: auto;
         flex: 1.4;
       }
 
-      .images.img3 {
+      .images:nth-child(2n) {
         height: auto;
         width: auto;
-        flex: 0.8;
+        flex: 2.3;
+      }
+
+      .images:nth-child(3n) {
+        height: auto;
+        width: auto;
+        flex: 1.4;
       }
     }
   }
@@ -3077,6 +3077,8 @@ footer {
 
     img {
       transform: scale(0);
+      width: 80px;
+      height: 80PX;
     }
 
     &.active img {
@@ -3084,8 +3086,7 @@ footer {
       border-radius: 100%;
       transform: scale(1);
       transition: all 0.3s ease;
-      width: 80px;
-      height: 100%;
+     
     }
 
     .rounded_div {
@@ -3162,6 +3163,7 @@ footer {
       top: 50%;
       left: 50%;
       transform: translateX(-50%);
+      text-transform: capitalize;
 
     }
   }

@@ -28,18 +28,21 @@ const projectsData = [
     desktop: mvnAerooneImgDesktop,
     name: "Mvn Aeroone",
     location: "Gurgaon",
+    link:'aeroone-gurgaon1'
   },
   {
     mobile: mvnMallImg,
     desktop: mvnMallImgDesktop,
     name: "Mvn Mall",
     location: "Gurgaon",
+    link:'athens'
   },
   {
     mobile: mvnAerooneBangaloreImg,
     desktop: mvnAerooneBangaloreImgDesktop,
     name: "Mvn Aeroone",
     location: "Bangalore",
+    link:'aeroone-bangalore'
   },
 ];
 
@@ -122,7 +125,7 @@ const Projects = () => {
 
                     </Col> */}
                     <Col key={index} xs={6} className="px_8 left_col">
-                    <h3 className="sec_title">
+                      <h3 className="sec_title">
                         Explore <span>Our Projects</span>
                       </h3>
                       <div className="single">
@@ -130,12 +133,14 @@ const Projects = () => {
                           ref={(el) => (imageDivRefs.current[index] = el)}
                           height={100}
                         >
-                          <img
-                            src={isMobile ? item.mobile : item.desktop}
-                            alt={item.name}
-                            className="img-fluid thumbnail"
-                            onLoad={handleImageLoad}
-                          />
+                          <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>
+                            <img
+                              src={isMobile ? item.mobile : item.desktop}
+                              alt={item.name}
+                              className="img-fluid thumbnail"
+                              onLoad={handleImageLoad}
+                              />
+                            </Link>
                         </AnImage>
                         <div className="content">
                           <div className="left">
@@ -144,7 +149,7 @@ const Projects = () => {
                           </div>
 
                           <div className="right">
-                            <Link to="#">
+                            <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>                            
                               <img
                                 src={arrowIcon}
                                 alt="mvn-arrow-icon"
@@ -171,12 +176,14 @@ const Projects = () => {
                         ref={(el) => (imageDivRefs.current[index] = el)}
                         height={100}
                       >
+                       <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>                       
                         <img
-                          src={isMobile ? item.mobile : item.desktop}
-                          alt={item.name}
-                          className="img-fluid thumbnail"
-                          onLoad={handleImageLoad}
-                        />
+                            src={isMobile ? item.mobile : item.desktop}
+                            alt={item.name}
+                            className="img-fluid thumbnail"
+                            onLoad={handleImageLoad}
+                          />
+                       </Link>
                       </AnImage>
                       <div className="content">
                         <div className="left">
@@ -185,7 +192,7 @@ const Projects = () => {
                         </div>
 
                         <div className="right">
-                          <Link to="#">
+                          <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>
                             <img
                               src={arrowIcon}
                               alt="mvn-arrow-icon"

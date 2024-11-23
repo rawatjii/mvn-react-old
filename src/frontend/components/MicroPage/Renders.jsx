@@ -2,10 +2,11 @@ import React, { useEffect, useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
+import * as CONFIG from "../../../config/config";
 
-import renderImg1 from '../../assets/images/render-images/1.png'
-import renderImg2 from '../../assets/images/render-images/2.png'
-import renderImg3 from '../../assets/images/render-images/3.png'
+// import renderImg1 from '../../assets/images/render-images/1.png'
+// import renderImg2 from '../../assets/images/render-images/2.png'
+// import renderImg3 from '../../assets/images/render-images/3.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -17,20 +18,62 @@ const Renders = () => {
     {
       title: "Landscape",
       content: "This is the first slide.",
-      imgSrc: renderImg1,
-      thumbnail: "https://swiperjs.com/demos/images/nature-1.jpg",
+      images: [
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
+        },
+      ],
+      // imgSrc: renderImg1,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
     },
     {
       title: "elevation",
-      content: "This is the second slide.",
-      imgSrc: renderImg2,
-      thumbnail: "https://swiperjs.com/demos/images/nature-2.jpg",
+      content: "This is the first slide.",
+      images: [
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/elevation1.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/elevation1.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/elevation2.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/elevation2.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/elevation3.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/elevation3.jpg`,
+        },
+      ],
+      // imgSrc: renderImg1,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
     },
     {
       title: "apartment",
-      content: "This is the third slide.",
-      imgSrc: renderImg3,
-      thumbnail: "https://swiperjs.com/demos/images/nature-3.jpg",
+      content: "This is the first slide.",
+      images: [
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
+          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
+        },
+      ],
+      // imgSrc: renderImg1,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
     },
   ];
 
@@ -72,21 +115,15 @@ const Renders = () => {
               >
                 <h4 className="text-center mainhead">{slide.title}</h4>
                 <div className="renders-images">
-                  {/* <div className="images img3">
-                    <img className="w-100 img-fluid" src={renderImg2} alt="" />
-                  </div> */}
-                  <div className="images img2">
-                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
-                  </div>
-                  <div className="images img1">
-                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
-                  </div>
-                  <div className="images img2">
-                    <img className="w-100 img-fluid" src={slide.imgSrc} alt="" />
-                  </div>
-                  {/* <div className="images img3">
-                    <img className="w-100 img-fluid" src={renderImg3} alt="" />
-                  </div> */}
+                  {slide.images.map((image, imgIndex) => (
+                    <div key={imgIndex} className={`images img${imgIndex + 0}`}>
+                      <img
+                        className="w-100 img-fluid"
+                        src={image.lg}
+                        alt={`${slide.title} Image ${imgIndex + 1}`}
+                      />
+                    </div>
+                  ))}
                 </div>
               </div>
             ))}
@@ -101,7 +138,9 @@ const Renders = () => {
                 onClick={() => {
                   gsap.to(window, {
                     scrollTo: {
-                      y: sectionRef.current.offsetTop + index * window.innerHeight,
+                      y:
+                        sectionRef.current.offsetTop +
+                        index * window.innerHeight,
                     },
                     duration: 1,
                   });
@@ -110,7 +149,11 @@ const Renders = () => {
               >
                 <div className="thum_in w-100">
                   <div className="rounded_div">
-                    <img className="rounded_img" src={slide.thumbnail} alt={`Thumbnail ${index + 1}`} />
+                    <img
+                      className="rounded_img"
+                      src={slide.thumbnail}
+                      alt={`Thumbnail ${index + 1}`}
+                    />
                   </div>
                   <span>{slide.title}</span>
                 </div>
