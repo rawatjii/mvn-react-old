@@ -224,11 +224,34 @@ footer  .footer-bottom-border.container .row {align-items: center;}
 
     .philosophy_section .content h4.title { margin: unset!important;   width: 100%; margin-bottom: 22px!important;}
     .philosophy_section .content h4.title::after {display: none;}
+    .philosophy_section .content li:last-child {margin: unset; }
+    .philosophy_section  .content li li {max-width: 100%!important;width: 100%!important;}
+    .philosophy_section .content h4.title { margin-bottom: 22px !important; letter-spacing: 1.2px;}
+    .philosophy_section {.content {border-radius: 8px; padding: 50px 60px;  border: 1px solid rgb(244 217 102 / 15%);}}
+    .philosophy_section .content li{max-width:calc(33.3% - 50px)!important;width:calc(33.3% - 50px)!important}
+    .philosophy_section ul.content{justify-content:space-between;width:100%;display:flex}
+    .philosophy_section .content li:last-child{margin:unset}
+    .philosophy_section .content li li{max-width:100%!important;width:100%!important}
+    .philosophy_section .content li p { color: #d5d5d5;}
+    .philosophy_section .content li li { color: #d5d5d5;}
+    .awa_posted a {font-size: 14px; margin-top: 5px;}
+    .awa_card div:last-child {  flex-basis: 65%; padding: 20px 20px;}
+    .media-news_online {padding: 30px 13%;height: 100%;}
+    .gallery_slider .swiper-horizontal {padding-bottom: 120px;}
+    .gallery_slider .swiper-button-prev:after, .gallery_slider .swiper-button-next:after {font-size: 14px;}
+    .media-press-release p {font-size: 14px; line-height: 26px;letter-spacing: 1px; margin: 0 auto; color: #c1c2c1; font-weight: unset;}
+    section.section.media-gallery {padding-top: 0px;}
+    section.section.media-gallery { padding-top: 30px; }
+    section#press-center { padding-top: 40px;    padding-bottom: 50px;}
+    section.section.media-press-release.pb-0 { padding-top: 100px;}
+    section.section.media-press-release.pb-0 h4.title {margin-bottom: 30px!important;display: block;}
 
-
+    .media-news_offline {  padding: 33px 15%;}
+    .awa_card p {font-size: 15px;}
 
 }
 
+.media_content_heading { font-size: 17px; }
 
 .headingIcon {width: auto; height: 51px; margin: 0px auto;margin-bottom: 15px;}
 

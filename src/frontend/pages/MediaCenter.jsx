@@ -9,7 +9,22 @@ import mediaIcon from '../assets/images/icons/media/media.png'
 import McVideo from '../assets/videos/media/video.mp4'
 import McVideoPoster from '../assets/videos/media/poster.png'
 import rightArrow from '../assets/images/mediacenter/right-arrow.png'
-import newsIMG from '../assets/images/mediacenter/news-1.png'
+import newsIMG from '../assets/images/mediacenter/newsdrum-logo.jpg'
+// import newsIMG from '../assets/images/mediacenter/news-1.png'
+import aninewsIMG from '../assets/images/mediacenter/aninews.png'
+import webindiaIMG from '../assets/images/mediacenter/webindia-logo.png'
+import newsIMG1 from '../assets/images/mediacenter/news-img-1.jpeg'
+import newsIMG2 from '../assets/images/mediacenter/news-img-2.jpeg'
+import newsIMG3 from '../assets/images/mediacenter/news-img-3.jpeg'
+import newsIMG4 from '../assets/images/mediacenter/news-img-4.jpeg'
+import newsIMG5 from '../assets/images/mediacenter/news-img-5.jpeg'
+import newsIMG6 from '../assets/images/mediacenter/news-img-6.jpeg'
+
+
+import mediaGalleryImg1 from '../assets/images/projects/project-img-1.jpg'
+import mediaGalleryImg2 from '../assets/images/projects/project-img-2.jpg'
+import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
+
 import EnquireForm from '../components/homepage/EnquireForm'
 import Video from '../components/Video'
 import Enquire from '../components/homepage/Enquire'
@@ -52,60 +67,56 @@ function MediaCenter() {
         }
     ]
     const newsImages = [
-        { src: "https://via.placeholder.com/800x600", alt: "Image 1" },
-        { src: "https://via.placeholder.com/800x1000", alt: "Image 2" },
-        { src: "https://via.placeholder.com/800x600", alt: "Image 3" },
-        { src: "https://via.placeholder.com/800x600", alt: "Image 4" },
+        { src: newsIMG1, alt: "Image 1" },
+        { src: newsIMG2, alt: "Image 2" },
+        { src: newsIMG3, alt: "Image 3" },
+        { src: newsIMG4 , alt: "Image 4" },
+        { src: newsIMG5 , alt: "Image 5" },
+        { src: newsIMG6 , alt: "Image 6" },
     ]
+
     const ourGallery = [
         {
-            src: "https://via.placeholder.com/800x600",
+            src: mediaGalleryImg1,
             alt: "Image 1"
         },
         {
-            src: "https://via.placeholder.com/800x1000",
+            src: mediaGalleryImg2,
             alt: "Image 2"
         },
         {
-            src: "https://via.placeholder.com/800x600",
+            src: mediaGalleryImg3,
             alt: "Image 3"
         },
         {
-            src: "https://via.placeholder.com/800x600",
+            src: mediaGalleryImg1,
             alt: "Image 4"
         },
         {
-            src: "https://via.placeholder.com/800x600",
+            src: mediaGalleryImg2,
             alt: "Image 5"
         },
         {
-            src: "https://via.placeholder.com/800x600",
+            src: mediaGalleryImg3,
             alt: "Image 6"
-        },
-        {
-            src: "https://via.placeholder.com/800x600",
-            alt: "Image 7"
-        },
-        {
-            src: "https://via.placeholder.com/800x600",
-            alt: "Image 8"
         }
+      
     ]
 
     const pressCenter = [
         {
             id: 1,
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatum.',
+            title: 'Spokesperson Photo',
             PDF: '#'
         },
         {
             id: 2,
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatum.',
+            title: 'Spokesperson Profile',
             PDF: '#'
         },
         {
             id: 3,
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatum.',
+            title: 'Company Profile',
             PDF: '#'
         }
     ]
@@ -114,24 +125,24 @@ function MediaCenter() {
     const onlineNews = [
         {
             id: 1,
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatum.',
+            title: 'MVN Aero One pre-leases 3 lakh sq ft to co-working operator Spring House in Gurugram',
             img: newsIMG,
-            postedDate: '25 Sep, 2025   ',
-            url: '#'
+            postedDate: '29 Jun 2024   ',
+            url: 'https://www.newsdrum.in/business/mvn-aero-one-pre-leases-3-lakh-sq-ft-to-co-working-operator-spring-house-in-gurugram-4786427'
         },
         {
             id: 2,
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatum.',
-            img: newsIMG,
-            postedDate: '25 Sep, 2025   ',
-            url: '#'
+            title: `MVN Infrastructure Celebrates MVN Mall's New Office Opening with Traditional Hawan Ceremony`,
+            img: aninewsIMG,
+            postedDate: '11 Sep 2024',
+            url: 'https://www.aninews.in/news/business/mvn-infrastructure-celebrates-mvn-malls-new-office-opening-with-traditional-hawan-ceremony20240911182559/'
         },
         {
             id: 3,
-            title: 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae, voluptatum.',
-            img: newsIMG,
-            postedDate: '25 Sep, 2025   ',
-            url: '#'
+            title: `Press Releases: MVN Infrastructure Marks Navratri with a Vibrant Mata Ki Chowki Celebration`,
+            img: webindiaIMG,
+            postedDate: 'October 10, 2024',
+            url: 'https://news.webindia123.com/news/articles/Business/20241010/4244271.html'
         }
     ]
 
