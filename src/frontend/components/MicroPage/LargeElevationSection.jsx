@@ -1,10 +1,10 @@
 import React, { useEffect, useRef } from 'react'
 import { Container } from 'react-bootstrap'
 // import LazyLoad from 'react-lazyload'
-import bgImgMB from '../../assets/images/aero-gurgaon/largeBg1Sm.jpg'
+import bgImgMB from '../../assets/images/aero-gurgaon/largeBg1Sm.webp'
 import bgImgDesk from '../../assets/images/aero-gurgaon/largeBg1.png'
 import absDesk from '../../assets/images/aero-gurgaon/largeAbs1.png'
-import absMob from '../../assets/images/aero-gurgaon/largeAbs1Sm.png'
+import absMob from '../../assets/images/aero-gurgaon/largeAbs1.png'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CustomCard from '../../components/Card'
