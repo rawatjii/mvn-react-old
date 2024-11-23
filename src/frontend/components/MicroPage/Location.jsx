@@ -26,7 +26,7 @@ const Location = () => {
   const pageData = [
     {
       title: 'Entertainment',
-      imgSrc: 'entertainment.jpg'
+      imgSrc: 'interiormall.jpg'
     },
     {
       title: 'shopping',
@@ -34,7 +34,7 @@ const Location = () => {
     },
     {
       title: 'sports',
-      imgSrc: 'sports.jpg'
+      imgSrc: 'game.jpg'
     },
     {
       title: 'office',
@@ -95,7 +95,7 @@ const Location = () => {
               display: index === activeIndex ? "block" : "none",
             }}
           >
-            <img src={`${CONFIG.IMAGE_URL}micro/location/${image.imgSrc}`} alt="" />
+            <img src={`${CONFIG.IMAGE_URL}/no-pollution/${image.imgSrc}`} alt="" />
           </li>
         ))}
       </div>
