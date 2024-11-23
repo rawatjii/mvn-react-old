@@ -25,6 +25,11 @@ import mediaGalleryImg1 from '../assets/images/projects/project-img-1.jpg'
 import mediaGalleryImg2 from '../assets/images/projects/project-img-2.jpg'
 import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
 
+
+import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
+import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
+
+
 import EnquireForm from '../components/homepage/EnquireForm'
 import Video from '../components/Video'
 import Enquire from '../components/homepage/Enquire'
@@ -52,18 +57,21 @@ function MediaCenter() {
     const ourEvents = [
         {
             id: 1,
-            poster: McVideoPoster,
-            video: McVideo
+            poster: eventGalleryImg1,
+            video: McVideo,
+            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
         },
         {
             id: 2,
-            poster: McVideoPoster,
-            video: McVideo
+            poster: eventGalleryImg2,
+            video: McVideo,
+            eventHeading: `MVN Infrastructure Celebrates MVN Mall's New Office Opening with Traditional Hawan Ceremony`,
         },
         {
             id: 3,
-            poster: McVideoPoster,
-            video: McVideo
+            poster: eventGalleryImg1,
+            video: McVideo,
+            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
         }
     ]
     const newsImages = [
@@ -243,7 +251,7 @@ function MediaCenter() {
                 <div className="container">
                     <div className="sec_title text-center color style1 mb_30">
                         <h4 className="title">Press Center</h4>
-                        <p>Pioneering new trends in the market, Ambience Group has an array of ongoing and planned projects at strategic locations in Delhi NCR, Sonepat, Panipat, Udaipur and Visakhapatnam incorporating a mix of Townships, Residential, Commercial, SEZ, Hospitality and Education</p>
+                        <p>Welcome to the Press Release section of MVN, where innovation, milestones, and achievements take center stage. Stay informed about our latest ventures, industry contributions, and community impact, as we continue to redefine the future. From pioneering in real estate to shaping the future of education, we’re committed to excellence every step of the way.</p>
                     </div>
                     <section class="press-release" id="press-center">
 
@@ -254,7 +262,7 @@ function MediaCenter() {
                                         <div class="inner-logo-sec">
 
                                             <div class="box box-g">
-                                                <h4>Ambience Logo with Tagline</h4>
+                                                <h4>MVN Group Logo with Tagline</h4>
                                                 <div class="inner-box">
                                                     <div class="logo">
                                                         <img src={mvnLOGO} alt="logo"
@@ -356,7 +364,7 @@ function MediaCenter() {
                                     <div className="media-event-content">
 
                                         <Video videoSrc={item.video} videoPoster={item.poster} />
-                                        <h5 className="media_content_heading">Lorem ipsum dolor sit amet, consectetur </h5>
+                                        <h5 className="media_content_heading">{item.eventHeading} </h5>
                                     </div>
                                 </div>
                             ))
