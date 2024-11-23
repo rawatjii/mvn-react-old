@@ -15,10 +15,10 @@ const Header = () => {
   const logoRef = useRef();
   const toggleRef = useRef();
 
-  const {pathname} = useLocation();
+  const { pathname } = useLocation();
 
   useEffect(() => {
-    if(pathname.includes('aeroone-gurgaon')){
+    if (pathname.includes('aeroone-gurgaon')) {
       setIsMicro(true)
     }
 
@@ -31,14 +31,14 @@ const Header = () => {
           setScrolled(false);
         }
       } else {
-        if(isMicro){
+        if (isMicro) {
           if (window.scrollY > 50) {
             setScrolled(true);
           } else {
             setScrolled(false);
           }
         }
-        
+
       }
       // if (window.scrollY > 50) {
       //   setScrolled(true);
@@ -178,14 +178,14 @@ const Header = () => {
                 </li>
 
                 <li className="nav-link">
-                  <NavLink>Education</NavLink>
+                  <NavLink to={"/mvn/education/"}>Education</NavLink>
                   <ul className="sub_menu">
                     <li className="nav-link">
                       <label htmlFor="school">School</label>
-                      <NavLink>MVN School, Sec-17, Faridabad</NavLink>
-                      <NavLink>MVN School, Palwal, Faridabad</NavLink>
-                      <NavLink>MVN School, Aravali Hills, Faridabad</NavLink>
-                      <NavLink>
+                      <NavLink to={"https://www.mvneducation.com/sector-17/"} target="_blank">MVN School, Sec-17, Faridabad</NavLink>
+                      <NavLink to={"https://www.mvnpalwal.com/"} target="_blank">MVN School, Palwal, Faridabad</NavLink>
+                      <NavLink to={"https://www.mvneducation.com/mvn-aravali/"} target="_blank">MVN School, Aravali Hills, Faridabad</NavLink>
+                      <NavLink to={"https://www.mvn88.com/"} target="_blank">
                         MVN School, Sector 88, Greater Faridabad
                       </NavLink>
                     </li>
@@ -197,21 +197,21 @@ const Header = () => {
 
                     <li className="nav-link">
                       <label htmlFor="Sports-Academy">Sports Academy</label>
-                      <NavLink>MVN 88</NavLink>
+                      <NavLink to={"https://www.mvn88.com/"} target="_blank">MVN 88</NavLink>
                     </li>
                   </ul>
                 </li>
 
                 <li className="nav-link">
-                  <NavLink>Media Center</NavLink>
+                  <NavLink to={"/mvn/media-center/"}>Media Center</NavLink>
                 </li>
 
                 <li className="nav-link">
-                  <NavLink>Blogs</NavLink>
+                  <NavLink to={"/mvn/blogs/"}>Blogs</NavLink>
                 </li>
 
                 <li className="nav-link">
-                  <NavLink>Career</NavLink>
+                  <NavLink to={"/mvn/career/"}>Career</NavLink>
                 </li>
 
                 <li className="nav-link">
