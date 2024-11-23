@@ -36,7 +36,7 @@ const MicroPage = ({ data }) => {
         {data.living_room_video && data.living_room_video.isVdo === true && <LivingRoomVideo data={data} />}
         {data.video3 && data.video3.isVdo === true && <Video3 data={data} />}
 
-        <Location />
+        {data.noPluutionZone.isAllow && <Location />}
 
         {/* {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
         {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
