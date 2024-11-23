@@ -36,10 +36,9 @@ const MicroPage = ({ data }) => {
         {data.living_room_video && data.living_room_video.isVdo === true && <LivingRoomVideo data={data} />}
         {data.video3 && data.video3.isVdo === true && <Video3 data={data} />}
 
-        {data.noPluutionZone.isAllow && <Location />}
-        {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
+        {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
 
-        {data.walkthrough.isshow === true && <Walkthrough data={data} />}
+        {data.walkthrough && data.walkthrough.isshow === true && <Walkthrough data={data} />}
 
         {/* {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
 
@@ -86,9 +85,7 @@ const MicroPage = ({ data }) => {
 
 
         <MicroLocationMap data={data.locationAdvantage} />
-        {
-          data.Slides && data.Slides.isshow === true && <Slides />
-        }
+        {data.Slides && data.Slides.isshow === true && <Slides data={data.Slides} />}
 
         <div className="container-fluid micro_footer">
           <div className="row ">
