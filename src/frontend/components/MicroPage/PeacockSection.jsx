@@ -13,6 +13,7 @@ const PeacockSection = ({ data }) => {
   const [images, setImages] = useState([]);
   const frameRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(false);
+  const [loading, setLoading] = useState(true); // State to track loading
 
   const totalFramesDesktop = 379;
   const totalFramesMobile = 379;
@@ -35,9 +36,19 @@ const PeacockSection = ({ data }) => {
     const imagePath = isMobile ? "assets/images/peacock/mobile/" : "assets/images/peacock/desktop/";
 
     const loadedImages = [];
+    let loadedCount = 0;
+
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
       img.src = `${imagePath}${i}.webp`; // Adjust the path accordingly
+
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalFrames) {
+          setLoading(true); // All images loaded, hide loader
+        }
+      };
+
       loadedImages.push(img);
     }
     setImages(loadedImages);
@@ -45,7 +56,7 @@ const PeacockSection = ({ data }) => {
 
   // GSAP Animation
   useEffect(() => {
-    if (images.length === 0) return;
+    if (images.length === 0 || loading) return;
 
     const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
 
@@ -78,34 +89,48 @@ const PeacockSection = ({ data }) => {
     return () => {
       scrollAnimation.kill();
     };
-  }, [images, isMobile]);
+  }, [images, isMobile, loading]);
 
   const { title, desc } = data.video1;
 
   return (
     <div className="section peacock_section pb-0">
-      <div ref={containerRef} className="frames_content">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            ref={(el) => (frameRefs.current[index] = el)}
-            src={img.src}
-            alt={`Frame ${index}`}
-            className="frame"
-            style={{ display: index === 0 ? "block" : "none" }}
-          />
-        ))}
-      </div>
 
-      <Container >
-        <div className='about'>
-            <CustomCard
-              title="Experience The Bliss Of Endless Vistas" 
-              desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."  
-            />
+      {/* Show loader if still loading */}
+      {loading && (
+        <div className="loader">
+          <p>Loading...</p> {/* Replace with your custom loader design */}
         </div>
+      )}
 
-    </Container>
+      {!loading && (
+        <>
+          <div ref={containerRef} className="frames_content">
+            {images.map((img, index) => (
+              <img
+                key={index}
+                ref={(el) => (frameRefs.current[index] = el)}
+                src={img.src}
+                alt={`Frame ${index}`}
+                className="frame"
+                style={{ display: index === 0 ? "block" : "none" }}
+              />
+            ))}
+          </div>
+
+          <Container >
+            <div className='about'>
+                <CustomCard
+                  title="Experience The Bliss Of Endless Vistas" 
+                  desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."  
+                />
+            </div>
+
+          </Container>
+        </>
+      )}
+
+      
 
       {/* <div className="content">
         <Container>
