@@ -54,7 +54,7 @@ const Overview = () => {
 
   return (
     <>
-    <section className="overview_section desktop-view"> 
+    <section className="overview_section"> 
           <Row>
               {/* <Col xs={12} md={12} className="about-box">
                   <img src={buildingImgBanner} alt="" className="img-fluid"/>

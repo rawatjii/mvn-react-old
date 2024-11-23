@@ -1,96 +1,103 @@
 import React, { useEffect, useRef, useState } from "react";
+import Container from "react-bootstrap/Container";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Container } from "react-bootstrap";
-import SecTitle from "../../../common/SecTitle/Index";
+import ImgMail from "../../assets/images/icons/email.png";
+import GurgaonLoader from "../../../common/Loader/micro/gurgaon/Index";
 
-// Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const HomepageVideo = ({ data }) => {
-  const containerRef = useRef(null);
-  const titleRef = useRef();
-  const [totalFrames, seTotalFrames] = useState(292);
-
-
-
   const [images, setImages] = useState([]);
-  const [imagePath, setImagePath] = useState("assets/images/micro/hero/mobile");
+  const [loading, setLoading] = useState(true); // Loader state
+  const [totalFrames, setTotalFrames] = useState(0);
+  const containerRef = useRef(null);
   const frameRefs = useRef([]);
+  const mouseScrollRef = useRef()
 
-  // Handle screen size and update image path
   useEffect(() => {
-    const updateImagePath = () => {
-      if (window.innerWidth <= 768) {
-        seTotalFrames(275)
-
-        setImagePath("assets/images/micro/hero/mobile");
-      } else {
-        setImagePath("assets/videos/cloud-elevation/video-desktop");
-      }
+    if (loading) {
+      // Add overflow: hidden to the body when heroLoaded is false
+      document.body.style.overflow = "hidden";
+    } else {
+      // Remove overflow: hidden when heroLoaded is true
+      document.body.style.overflow = "";
+    }
+  
+    // Cleanup function to reset the body overflow if the component unmounts
+    return () => {
+      document.body.style.overflow = "";
     };
+  }, [loading]);
 
-    // Set initial path and add resize listener
-    updateImagePath();
-    window.addEventListener("resize", updateImagePath);
-
-    return () => window.removeEventListener("resize", updateImagePath);
-  }, []);
-
-  // Animation for the title
   useEffect(() => {
-    gsap.from(titleRef.current, {
-      y: 50,
-      opacity: 0,
-      duration: 1,
-      scrollTrigger: {
-        trigger: titleRef.current,
-        start: "top 95%",
-      },
-    });
-  }, []);
+    // Determine if it's mobile or desktop
+    const isMobile = window.innerWidth <= 768;
 
-  // Preload images
+    // Set total frames dynamically
+    let frameCount = isMobile ? 275 : 292;
+    setTotalFrames(frameCount);
+  }, [data]);
+
   useEffect(() => {
+    // Only preload images once totalFrames is set
+    if (totalFrames === 0) return;
+
+    const isMobile = window.innerWidth <= 768;
+    let folderPath = isMobile
+    ? "assets/images/micro/hero/mobile/"
+    : "assets/images/micro/hero/desktop/";
+
+    // Preload images
     const loadedImages = [];
+    let loadedCount = 0;
 
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `${imagePath}/${i}.webp`;
+      img.src = `${folderPath}${i}.webp`;
+
+      // Track when each image loads
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalFrames) {
+          setImages(loadedImages); // Set images after all are loaded
+          setLoading(false); // Hide loader
+        }
+      };
+
       loadedImages.push(img);
     }
-    setImages(loadedImages);
-  }, [imagePath]);
+  }, [totalFrames, data]);
 
-  // Image sequence animation
   useEffect(() => {
-    if (images.length !== totalFrames) return;
+    // Reinitialize ScrollTrigger only after all images are loaded
+    if (loading || images.length !== totalFrames) return;
 
+    // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 3}`,
+      end: `+=${window.innerHeight * 2}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
 
-        if (self.progress > 0.1) {
-          frameRefs.current.forEach((img, index) => {
-            if (img)
-              img.style.display = index === frameIndex ? "block" : "none";
-          });
-        }
-      },
-      onLeaveBack: () => {
+        // Ensure frames update correctly
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === 0 ? "block" : "none";
+          if (img) img.style.display = index === frameIndex ? "block" : "none";
         });
       },
       onLeave: () => {
+        // Ensure the last frame stays visible when scrolling ends
         frameRefs.current.forEach((img, index) => {
-          if (img)
-            img.style.display = index === totalFrames - 1 ? "block" : "none";
+          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+        });
+      },
+      onLeaveBack: () => {
+        // Ensure the first frame stays visible when scrolling back to the top
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === 0 ? "block" : "none";
         });
       },
     });
@@ -98,37 +105,31 @@ const HomepageVideo = ({ data }) => {
     return () => {
       scrollAnimation.kill();
     };
-  }, [images, totalFrames]);
-
-  const { title, desc } = data;
+  }, [loading, images, totalFrames]);
 
   return (
-    <div className="section peacock_section pb-0 homeScroll-video">
-      <div ref={containerRef} className="frames_content">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            ref={(el) => (frameRefs.current[index] = el)}
-            src={img.src}
-            alt={`Frame ${index}`}
-            className="frame"
-            style={{ display: index === 0 ? "block" : "none" }}
-            id={index === totalFrames - 1 ? "demo" : undefined} // Add demo ID to last frame
-          />
-        ))}
-      </div>
-      {/* 
-      <div className="content">
-        <Container>
-          <SecTitle className="text-center color style1">
-            <h4 ref={titleRef} className="title">{title}</h4>
-          </SecTitle>
+    <section className="section micro_hero_section p-0">
+      {/* Show Loader */}
+      {loading && (
+        <GurgaonLoader />
+      )}
 
-          {desc && <p className="desc">{desc}</p>}
-        </Container>
-      </div>
-      */}
-    </div>
+      {!loading && (
+        <div ref={containerRef} className="frames_content">
+          {images.map((img, index) => (
+            <img
+              key={index}
+              ref={(el) => (frameRefs.current[index] = el)}
+              src={img.src}
+              alt={`Frame ${index}`}
+              className="frame"
+              style={{ display: index === 0 ? "block" : "none" }}
+            />
+          ))}
+        </div>
+      )}
+
+    </section>
   );
 };
 
