@@ -52,7 +52,8 @@ function Video({videoSrc, videoPoster}) {
         ref={videoRef}
         className="custom-video"
         src={videoSrc}
-        onClick={handlePlayPause} // Allow clicking the video to play/pause
+        onClick={handlePlayPause}
+        poster={videoPoster}
       ></video>
       {showButton && (
         <button className="play-pause-btn" onClick={handlePlayPause}>

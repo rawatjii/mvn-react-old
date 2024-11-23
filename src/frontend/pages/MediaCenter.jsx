@@ -25,6 +25,11 @@ import mediaGalleryImg1 from '../assets/images/projects/project-img-1.jpg'
 import mediaGalleryImg2 from '../assets/images/projects/project-img-2.jpg'
 import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
 
+
+import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
+import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
+
+
 import EnquireForm from '../components/homepage/EnquireForm'
 import Video from '../components/Video'
 import Enquire from '../components/homepage/Enquire'
@@ -52,18 +57,21 @@ function MediaCenter() {
     const ourEvents = [
         {
             id: 1,
-            poster: McVideoPoster,
-            video: McVideo
+            poster: eventGalleryImg1,
+            video: McVideo,
+            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
         },
         {
             id: 2,
-            poster: McVideoPoster,
-            video: McVideo
+            poster: eventGalleryImg2,
+            video: McVideo,
+            eventHeading: `MVN Infrastructure Celebrates MVN Mall's New Office Opening with Traditional Hawan Ceremony`,
         },
         {
             id: 3,
-            poster: McVideoPoster,
-            video: McVideo
+            poster: eventGalleryImg1,
+            video: McVideo,
+            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
         }
     ]
     const newsImages = [
@@ -356,7 +364,7 @@ function MediaCenter() {
                                     <div className="media-event-content">
 
                                         <Video videoSrc={item.video} videoPoster={item.poster} />
-                                        <h5 className="media_content_heading">Lorem ipsum dolor sit amet, consectetur </h5>
+                                        <h5 className="media_content_heading">{item.eventHeading} </h5>
                                     </div>
                                 </div>
                             ))
