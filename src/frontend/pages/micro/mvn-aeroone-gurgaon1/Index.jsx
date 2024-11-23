@@ -5,6 +5,7 @@ import hero_img_mb from "../../../../frontend/assets/images/micro_hero/hero_img.
 import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
 
 import "./aeroGuragaon.css";
+import MicroPageGurgaon1 from "../../MicroPageGurgaon1";
 
 const data = {
   micro_hero_section:
@@ -17,7 +18,7 @@ const data = {
   },
   overview: {
     title: "MVN Aero One",
-    location: "Gurgaon",
+    location: "Gurugram",
     extra: "ASCEND TO UNRIVALED HEIGHTS OF PURE SOPHISTICATION",
     // desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
     desc: [
@@ -206,7 +207,7 @@ const data = {
 };
 
 const AeroOneGurgaon = () => {
-  return <MicroPage data={data} />;
+  return <MicroPageGurgaon1 data={data} />;
 };
 
 export default AeroOneGurgaon;

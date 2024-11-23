@@ -33,7 +33,6 @@ import "./index.css";
 
 import AeroOneBangalore from "./frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx";
 import Career from "./frontend/pages/Career.jsx";
-import Athens from "./frontend/pages/micro/Athens/Index.jsx";
 
 import "./awaneesh.css";
 import MediaCenter from "./frontend/pages/MediaCenter.jsx";
@@ -82,16 +81,6 @@ const router = createBrowserRouter([
           <Suspense fallback={<InitialLoading />}>
             <Layout>
               <AeroOneGurgaon1 />
-            </Layout>
-          </Suspense>
-        ),
-      },
-      {
-        path: "athens",
-        element: (
-          <Suspense fallback={<InitialLoading />}>
-            <Layout>
-              <Athens />
             </Layout>
           </Suspense>
         ),

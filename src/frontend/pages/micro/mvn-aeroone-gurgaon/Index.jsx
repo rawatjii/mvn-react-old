@@ -1,11 +1,12 @@
-import React from "react";
+import React, { Suspense } from "react";
 import MicroPage from "../../Micro";
 import * as CONFIG from '../../../../config/config';
 import hero_img_mb from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
 import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_img.webp";
 
 import "./aeroGuragaon.css";
-import MicroPageGurgaon from "../../MicroPageGurgaon";
+import MicroPageGurgaon from '../../MicroPageGurgaon';
+// const MicroPageGurgaon = React.lazy(()=>import('../../MicroPageGurgaon'));
 
 const data = {
   micro_hero_section:
@@ -18,7 +19,7 @@ const data = {
   },
   overview: {
     title: "MVN Aero One",
-    location: "Gurgaon",
+    location: "Gurugram",
     extra: "ASCEND TO UNRIVALED HEIGHTS OF PURE SOPHISTICATION",
     // desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
     desc: [
@@ -207,7 +208,9 @@ const data = {
 };
 
 const AeroOneGurgaon = () => {
-  return <MicroPageGurgaon data={data} />
+  return (
+    <MicroPageGurgaon data={data} />
+  )
 };
 
 export default AeroOneGurgaon;

@@ -1859,6 +1859,47 @@ footer {
 
 
   }
+
+  .mouse_scroll{
+
+    position: fixed;
+    top:80vh;
+
+    .mouse{
+
+      border-radius: 14px;
+      transform: none;
+      border: 2px solid white;
+      height: 36px;
+      width: 22px;
+
+      .wheel{
+
+        -webkit-animation: mouse-wheel 0.6s linear infinite;
+        -moz-animation: mouse-wheel 0.6s linear infinite;
+        animation: mouse-wheel 0.6s linear infinite;
+      }
+    }
+  }
+}
+
+@keyframes mouse-wheel {
+  0% {
+    top: 1px;
+  }
+
+  25% {
+      top: 2px;
+  }
+  50% {
+      top: 3px;
+  }
+  75% {
+      top: 2px;
+  }
+  100% {
+      top: 1px;
+  }
 }
 
 .micro_overview {
