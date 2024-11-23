@@ -2064,6 +2064,7 @@ section.section.media-gallery .swiper-slide img {object-fit: cover;margin-bottom
 section#press-center { padding-bottom: 25px;}
 section.section.media-gallery {padding-bottom: 20px;}
 .projects_section { .plane_icon {   position: absolute;  z-index: -1; top: 9%; left: 5%;  width: 22%;  opacity: 0.4; transform: rotate(0deg); }}
+.other_projects_section .other-project-img {height: 150px;border-radius: 10px;}
 
 
 
