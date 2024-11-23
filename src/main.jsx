@@ -12,6 +12,7 @@ const MicroPage = React.lazy(() => import("./frontend/pages/Micro.jsx"));
 const AeroOneGurgaon = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
 const AeroOneGurgaon1 = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx"));
 const Athens = React.lazy(() => import("./frontend/pages/micro/Athens/Index.jsx"));
+
 const ContactPage = React.lazy(() => import("./frontend/pages/ContactUs.jsx"));
 const ThankYou = React.lazy(() => import("./frontend/pages/ThankYou.jsx"));
 
