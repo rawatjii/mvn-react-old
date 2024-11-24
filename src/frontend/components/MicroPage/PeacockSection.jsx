@@ -29,7 +29,7 @@ const PeacockSection = ({ data }) => {
     return () => {
       window.removeEventListener("resize", checkMobile);
     };
-  }, []);
+  }, [data]);
 
   // Load images
   useEffect(() => {
@@ -53,12 +53,13 @@ const PeacockSection = ({ data }) => {
       loadedImages.push(img);
     }
     setImages(loadedImages);
-  }, [isMobile]);
+  }, [totalFramesMobile,data]);
 
   // GSAP Animation
   useEffect(() => {
     if (images.length === 0 || loading) return;
 
+    // Initialize ScrollTrigger animation
     const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
 
     const scrollAnimation = ScrollTrigger.create({
@@ -86,8 +87,12 @@ const PeacockSection = ({ data }) => {
         });
       },
     });
-
+  
+    // Refresh ScrollTrigger to account for loaded content
+    ScrollTrigger.refresh();
+  
     return () => {
+      // Clean up ScrollTrigger instance
       scrollAnimation.kill();
     };
   }, [images, isMobile, loading]);
