@@ -25,16 +25,19 @@ const otherProjects = [
     name: 'MVN School',
     Mobilethumbnail: mvnSchoolMobile,
     Desktophumbnail: mvnSchoolDesktop,
+    link:'https://www.mvneducation.com/sector-17/'
   },
   {
     name: 'MVN University',
     Mobilethumbnail: mvnUniversityMobile,
     Desktophumbnail: mvnUniversityDesktop,
+    link:'https://beta.mvn.in/mvn-university-haryana/'
   },
   {
     name: 'MVN Sports Academy',
     Mobilethumbnail: mvnSportsAcademyMobile,
     Desktophumbnail: mvnSportsAcademyDesktop,
+    link:'https://www.mvn88.com/exercise-sports-academy/'
   }
 ];
 
@@ -109,7 +112,7 @@ const OtherProjects = () => {
               <div className="single">
                 <div className="top">
                   <h4 className="name">{item.name}</h4>
-                  <Link>
+                  <Link to={item.link} target="_blank">
                     <img src={arrowIcon} alt="mvn arrow icon" className="img-fluid icon" />
                   </Link>
                 </div>

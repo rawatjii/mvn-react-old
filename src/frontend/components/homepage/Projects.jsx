@@ -35,7 +35,7 @@ const projectsData = [
     desktop: mvnMallImgDesktop,
     name: "Mvn Mall",
     location: "Gurgaon",
-    link:'athens'
+    link:'mvn-mall-gurgaon'
   },
   {
     mobile: mvnAerooneBangaloreImg,

@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import LazyLoad from "react-lazyload";
 
 import twitterIcon from '../assets/images/icons/social/twitter.png';
@@ -16,7 +16,7 @@ const Footer = () => {
   return (
     <footer>
 
-        <LazyLoad height={200}>
+        <LazyLoad >
               <img src={FooterBgImg} alt="mvn-about-bg" className="img-fluid about_bg" />
             </LazyLoad>
 
@@ -78,22 +78,46 @@ const Footer = () => {
                 <div className="footer-menu">
                 <h4 className="footer-second-heading">Important Links</h4>
                   <ul>
-                    <li><a href="#">Home</a></li>
-                    <li><a href="#">About us</a></li>
-                    <li><a href="#">Real Estate</a></li>
-                    <li><a href="#">Educations</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}`}>
+                        Home
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}about-us`}>
+                        About us
+                      </NavLink>
+                    </li>
+                    {/* <li>
+                      
+                      <a href="#">Real Estate</a>
+                    </li> */}
+                    {/* <li><a href="#">Educations</a></li> */}
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}contact-us`}>
+                        Contact Us
+                      </NavLink>
+                    </li>
                   </ul>
                 </div>
                 <div className="footer-menu">
                   <h4 className="footer-second-heading">More Links</h4>
                   <ul>
-                    <li><a href="#">Blogs</a></li>
-                    <li><a href="#">Career</a></li>
-                    <li><a href="#">gallery</a></li>
-                    <li><a href="#">Csr</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}blogs`}>Blogs</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}career`}>Career</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}csr`}>CSR</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}privacy-policy`}>Privacy Policy</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}disclaimer`}>Disclaimer</NavLink>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -101,9 +125,9 @@ const Footer = () => {
           </div>
         </div>
         <Col  xs={12} md={12} lg={12} className="text-center">
-        <div className="border-top-footer">
-        <p className="main-pera"><i className="fa fa-copyright" aria-hidden="true"></i> 2024 - MVN Group. All Right Reserved.
-        |<a href="http://gtftechnologies.com/" target="blank"> Curated by: <b>GTF Technologies</b></a></p>
+        <div className="border-top-footer bottom">
+          <p className="main-pera"><i className="fa fa-copyright" aria-hidden="true"></i> 2024 - MVN Group. All Right Reserved.</p>
+          <p><small><a href="http://gtftechnologies.com/" target="blank"> Curated by: <b>GTF Technologies</b></a></small></p>
         </div>
         </Col>
       </Container>

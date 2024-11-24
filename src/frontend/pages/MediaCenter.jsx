@@ -285,22 +285,22 @@ function MediaCenter() {
                         <h4 className="title">Press Center</h4>
                         <p>Welcome to the Press Release section of MVN, where innovation, milestones, and achievements take center stage. Stay informed about our latest ventures, industry contributions, and community impact, as we continue to redefine the future. From pioneering in real estate to shaping the future of education, we’re committed to excellence every step of the way.</p>
                     </div>
-                    <section class="press-release" id="press-center">
+                    <section className="press-release" id="press-center">
 
-                        <div class="">
-                            <div class="press-rel-sec">
-                                <div class="inner-press-re">
-                                    <div class="logo-sec">
-                                        <div class="inner-logo-sec">
+                        <div className="">
+                            <div className="press-rel-sec">
+                                <div className="inner-press-re">
+                                    <div className="logo-sec">
+                                        <div className="inner-logo-sec">
 
-                                            <div class="box box-g">
+                                            <div className="box box-g">
                                                 <h4>MVN Group Logo with Tagline</h4>
-                                                <div class="inner-box">
-                                                    <div class="logo">
+                                                <div className="inner-box">
+                                                    <div className="logo">
                                                         <img src={mvnLOGO} alt="logo"
                                                             width="100%" />
                                                     </div>
-                                                    <div class="type">
+                                                    <div className="type">
                                                         <ul>
                                                             <li><a
                                                                 href="javascript:void(0);">Jpeg</a>
@@ -321,11 +321,11 @@ function MediaCenter() {
                                         </div>
                                     </div>
 
-                                    <div class="content-sec">
-                                        <div class="inner-content-sec">
+                                    <div className="content-sec">
+                                        <div className="inner-content-sec">
 
 
-                                            <div class="document-list">
+                                            <div className="document-list">
                                                 <ul id="presslistitem">
 
                                                     {

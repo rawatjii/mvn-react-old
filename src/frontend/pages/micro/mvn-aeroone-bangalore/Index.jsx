@@ -127,7 +127,10 @@ const data = {
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
-    mapIMG: CONFIG.IMAGE_URL + 'aero-bangalore/location.jpg',
+    mapIMG: {
+      desktop:CONFIG.IMAGE_URL + 'aero-bangalore/location.webp',
+      mobile:CONFIG.IMAGE_URL + 'aero-bangalore/location_sm.webp'
+    },
     locationData : [
       {
         distance:'15 Min',

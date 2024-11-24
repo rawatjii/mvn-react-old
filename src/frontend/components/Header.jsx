@@ -117,7 +117,7 @@ const Header = () => {
             <Container>
               <div className="header">
                 <Navbar.Brand className="logo">
-                  <Link to="/" onClick={() => toggleMenu("close")}>
+                  <Link to={`${import.meta.env.VITE_APP_URL}`} onClick={() => toggleMenu("close")}>
                     <img
                       src={CONFIG.IMAGE_URL + "logo.png"}
                       alt="mvn-logo"
@@ -134,7 +134,7 @@ const Header = () => {
 
               <ul className="menus">
                 <li className="nav-link">
-                  <NavLink to="/" onClick={() => toggleMenu("close")}>
+                  <NavLink to={`${import.meta.env.VITE_APP_URL}`} onClick={() => toggleMenu("close")}>
                     Home
                   </NavLink>
                 </li>
@@ -154,7 +154,7 @@ const Header = () => {
                     <li className="nav-link">
                       <label htmlFor="gurgaon">Gurgaon</label>
                       <NavLink
-                        to={`${import.meta.env.VITE_APP_URL}athens`}
+                        to={`${import.meta.env.VITE_APP_URL}mvn-mall-gurgaon`}
                         className="new-launch"
                         onClick={() => toggleMenu("close")}
                       >
@@ -182,15 +182,15 @@ const Header = () => {
 
                     <li className="nav-link">
                       <label htmlFor="sohna">Sohna</label>
-                      <NavLink onClick={() => toggleMenu("close")}>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}mvn-athens-sohna`} onClick={() => toggleMenu("close")}>
                         MVN Athens
                       </NavLink>
-                      <NavLink>MVN Athens PH-2</NavLink>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}mvn-athens-ph2-sohna`} onClick={() => toggleMenu("close")}>MVN Athens PH-2</NavLink>
                     </li>
 
                     <li className="nav-link">
                       <label htmlFor="faridabad">Faridabad</label>
-                      <NavLink onClick={() => toggleMenu("close")}>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}mvn-athens-faridabad`} onClick={() => toggleMenu("close")}>
                         MVN Athens
                       </NavLink>
                     </li>
@@ -239,7 +239,7 @@ const Header = () => {
 
                     <li className="nav-link">
                       <label htmlFor="university">University</label>
-                      <NavLink onClick={() => toggleMenu("close")}>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}mvn-university-haryana`} onClick={() => toggleMenu("close")}>
                         MVN university Haryana
                       </NavLink>
                     </li>
@@ -247,7 +247,7 @@ const Header = () => {
                     <li className="nav-link">
                       <label htmlFor="Sports-Academy">Sports Academy</label>
                       <NavLink
-                        to={"https://www.mvn88.com/"}
+                        to={"https://www.mvn88.com/exercise-sports-academy/"}
                         target="_blank"
                         onClick={() => toggleMenu("close")}
                       >
@@ -259,7 +259,7 @@ const Header = () => {
 
                 <li className="nav-link">
                   <NavLink
-                    to={`${import.meta.env.VITE_APP_URL}media-center}`}
+                    to={`${import.meta.env.VITE_APP_URL}media-center`}
                     onClick={() => toggleMenu("close")}
                   >
                     Media Center

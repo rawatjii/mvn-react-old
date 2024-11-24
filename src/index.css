@@ -2571,6 +2571,42 @@ footer {
   z-index: 9999;
 }
 
+.upcoming_page{
+
+  padding: 150px 0 50px;
+  text-align: center;
+
+  h2{
+
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  p{
+    margin: 0;
+    letter-spacing: 2px;
+  }
+}
+
+footer{
+
+  .bottom{
+
+    p{
+      padding:0;
+    }
+
+    small{
+
+      margin: auto;
+    }
+
+    a{
+      color:#fff;
+    }
+  }
+}
+
 
 /* start responsive */
 /* by bhupendra */

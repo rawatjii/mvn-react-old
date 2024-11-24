@@ -36,12 +36,22 @@ import "./index.css";
 
 import AeroOneBangalore from "./frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx";
 import Career from "./frontend/pages/Career.jsx";
+import MediaCenter from "./frontend/pages/MediaCenter.jsx";
+import Blog from "./frontend/pages/Blog.jsx"; 
+import MvnMallGurgaon from "./frontend/pages/MvnMallGurgaon.jsx";
+import MvnAthensSohna from "./frontend/pages/MvnAthensSohna.jsx";
+import MvnAthensPh2Sohna from "./frontend/pages/MvnAthensPh2Sohna.jsx";
+import MvnAthensFaridabad from "./frontend/pages/MvnAthensFaridabad.jsx";
+import MvnUniversityHaryana from "./frontend/pages/MvnUniversityHaryana.jsx";
+import Gallery from './frontend/pages/Gallery.jsx'
+import Csr from './frontend/pages/Csr.jsx'
+import PrPolcy from './frontend/pages/PrPolcy.jsx';
+import Disclaimer from "./frontend/pages/Disclaimer.jsx";
+
 
 import "./awaneesh.css";
-import MediaCenter from "./frontend/pages/MediaCenter.jsx";
 
 import "./savan.css";
-import Blog from "./frontend/pages/Blog.jsx";
 
 const router = createBrowserRouter([
   {
@@ -164,6 +174,96 @@ const router = createBrowserRouter([
           <Suspense fallback={<InitialLoading />}>
             <Layout>
               <Blog />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "mvn-mall-gurgaon",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <MvnMallGurgaon />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "mvn-athens-sohna",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <MvnAthensSohna />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "mvn-athens-ph2-sohna",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <MvnAthensPh2Sohna />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "mvn-athens-faridabad",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <MvnAthensFaridabad />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "mvn-university-haryana",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <MvnUniversityHaryana />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "gallery",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <Gallery />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "csr",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <Csr />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "privacy-policy",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <PrPolcy />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
+        path: "disclaimer",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <Disclaimer />
             </Layout>
           </Suspense>
         ),

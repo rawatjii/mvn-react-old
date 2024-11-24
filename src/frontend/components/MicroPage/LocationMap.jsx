@@ -52,7 +52,7 @@ const MicroLocationMap = ({data})=>{
   const sizeRefs = useRef([]);
   const [isLocationMapOpen, setIsLocationMapOpen] = useState(false);
 
-  const locationMapImg = [{src: data.mapIMG}]
+  const locationMapImg = [{src: data.mapIMG.desktop}]
   
   
 
@@ -128,7 +128,8 @@ const MicroLocationMap = ({data})=>{
 
       <div className="locationMapContent">
         <div className="thumbnail" onClick={()=>setIsLocationMapOpen(true)}>
-          <img src={data.mapIMG} alt="mvn-master-plan" className="img-fluid" />
+          <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block" />
+          <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none" />
         </div>
 
         <Container className="desktop_fluid_container">
