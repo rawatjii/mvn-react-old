@@ -2164,6 +2164,6 @@ h4.hero_title {
   font-size: 24px;
   margin-bottom:20px;
 }
-
+.home-about-content{padding-left:40px;padding-right:40px;}
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
