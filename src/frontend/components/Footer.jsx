@@ -95,6 +95,11 @@ const Footer = () => {
                     {/* <li><a href="#">Educations</a></li> */}
                     <li>
                       <NavLink to={`${import.meta.env.VITE_APP_URL}contact-us`}>
+                      Education
+                      </NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}contact-us`}>
                         Contact Us
                       </NavLink>
                     </li>
