@@ -15,7 +15,7 @@ const LocationSec = () => {
               <img className="img-fluid w-100" src={MapImg} alt="" />
               <div className="map-bottom-content">
                 <p>Location Advantage</p>
-                <h4>The Location As Inviting As Its Allure</h4>
+                <h4>The Location Is Inviting As Its Allure</h4>
               </div>
             </div>
           </div>

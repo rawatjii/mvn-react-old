@@ -55,7 +55,7 @@ const MicroPageGurgaon = ({ data }) => {
 
       {heroLoaded && (
         <>
-          
+
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} /> {/*no isssue*/}
           <PeacockSection data={data} /> {/*no isssue*/}
@@ -68,7 +68,7 @@ const MicroPageGurgaon = ({ data }) => {
           {/* No polution zone location */}
           <Renders data={data} />  {/*no isssue*/}
           <MicroHighlights data={data.highlight} />  {/*no isssue*/}
-          <MicroPrice />  {/*no isssue*/}
+          {/* <MicroPrice />  */}
           <MicroAmenities data={data.amenities} />
           <MicroFloorPlan data={data.floorPlan} />
           <MicroLocationMap data={data.locationAdvantage} />

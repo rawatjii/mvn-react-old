@@ -5,7 +5,7 @@ import Philosophy from "../components/About/Philosophy";
 import Timeline from "../components/About/Timeline";
 import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
-import Mobilemicro_bg from '../assets/images/about/about-head-bg-mobile.jpg';
+import Mobilemicro_bg from '../assets/images/about/about-head-bg-desktop.webp';
 import Desktopmicro_bg from '../assets/images/about/about-head-bg-desktop.webp';
 import OurTeam from "../components/About/Ourteam";
 

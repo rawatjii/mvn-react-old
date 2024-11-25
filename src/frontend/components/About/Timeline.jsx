@@ -12,10 +12,20 @@ import gopalInstitute from '../../assets/images/timeline/gopalsharma-institute-o
 import mvnSchoolPalwal from '../../assets/images/timeline/mvn-school-palwal.webp';
 import mvnSchoolKhambi from '../../assets/images/timeline/mvn-school-khambi.webp';
 import mvnUniversityPalwal from '../../assets/images/timeline/mvn-university-palwal.webp';
+import mvninfrastructureathensSohna from '../../assets/images/timeline/mvninfrastructure-athens-sohna.webp';
+import mvnschoolSec88 from '../../assets/images/timeline/mvnschool-sec88.webp';
+import mvninfrastructureAthensSohna from '../../assets/images/timeline/mvn-infrastructure-athens-sohna-phase-two.webp';
+import mvnaerooneBangalore from '../../assets/images/timeline/mvn-aeroone-bangalore.webp';
+import mvninfrastructureathensPhaseThree from '../../assets/images/timeline/mvn-infrastructure-athens-sohna-phase-three.webp';
+
+
+
+
 // import planeIcon from '../../assets/images/icons/plane2.webp';
 import diamondIcon from "../../assets/images/icons/diamond.png";
 import timelineBg from '../../assets/images/timeline/bg.webp'
 import LazyLoad from "react-lazyload";
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 const data = [
   {
@@ -57,9 +67,40 @@ const data = [
   {
     img: mvnUniversityPalwal,
     year: '2012',
-    title: 'MVN University ',
+    title: 'MVN University',
     location: 'Haryana'
+  },
+  {
+    img: mvninfrastructureathensSohna,
+    year: '2014',
+    title: 'MVN Athens | Residential Apartments | Project by MVN Infrastructure Pvt Ltd ',
+    location: '(Phase-I), Gurugram'
+  },
+  {
+    img: mvnschoolSec88,
+    year: '2017',
+    title: 'MVN School',
+    location: 'Sector-88, Greater Faridabad'
+  },
+  {
+    img: mvninfrastructureAthensSohna,
+    year: '2019',
+    title: 'MVN Athens | Residential Apartments | Project by MVN Infrastructure Pvt Ltd',
+    location: '(Phase-II), Gurugram'
+  },
+  {
+    img: mvnaerooneBangalore,
+    year: '2021',
+    title: 'MVN Aero One | Luxury Residential Apartments | Project by MF Farmlands Pvt Ltd',
+    location: 'Bengaluru'
+  },
+  {
+    img: mvninfrastructureathensPhaseThree,
+    year: 'Coming Soon',
+    title: 'MVN Aero One | MVN Mall | Project by MVN Infrastructure Pvt Ltd.',
+    location: 'Gurugram'
   }
+
 ];
 
 gsap.registerPlugin(ScrollTrigger);
@@ -185,6 +226,7 @@ const Timeline = () => {
 
       <Container>
         <SecTitle className="text-center color style1 mb_30">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Our Timeline</h4>
         </SecTitle>
 

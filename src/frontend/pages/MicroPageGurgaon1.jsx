@@ -65,11 +65,6 @@ const MicroPageGurgaon1 = ({ data }) => {
           <div>
             <Video3 data={data} /> {/*no isssue*/}
           </div>
-          {/* No polution zone location */}
-
-          <div>
-            <Location /> {/*no isssue*/}
-          </div>
 
           <div>
             <MasterBedroom data={data} /> {/*no isssue*/}
@@ -81,16 +76,12 @@ const MicroPageGurgaon1 = ({ data }) => {
           <div>
             <Renders data={data} />  {/*no isssue*/}
           </div>
+          {/* No polution zone location */}
+
           <div>
             <MicroHighlights data={data.highlight} />  {/*no isssue*/}
           </div>
-
-          <div>
-            <MicroPrice />  {/*no isssue*/}
-          </div>
-          <div>
-            <MicroAmenities data={data.menities_section} />
-          </div>
+            <MicroAmenities data={data.amenities} />
           <div>
             <MicroFloorPlan data={data.floorPlan} />
           </div>
@@ -100,6 +91,13 @@ const MicroPageGurgaon1 = ({ data }) => {
           <div>
           <Typology  />
           </div>
+          <div>
+            <Location /> {/*no isssue*/}
+          </div>
+
+          {/* <div>
+            <MicroPrice /> 
+          </div> */}
           {/* <MicroAmenities data={data.menities_section} /> */}
           {/* <MicroFloorPlan data={data.floorPlan} /> */}
           {/* <MicroLocationMap data={data.locationAdvantage} /> */}

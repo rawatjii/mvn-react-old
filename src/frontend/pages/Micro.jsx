@@ -20,6 +20,8 @@ import Renders from "../components/MicroPage/Renders";
 import Location from "../components/MicroPage/Location";
 import Rera from "../components/MicroPage/Rera";
 import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
+import GallerySlider from "../components/GallerySlider";
+import SecTitle from "../../common/SecTitle/Index";
 
 const MicroPage = ({ data }) => {
   return (
@@ -72,7 +74,7 @@ const MicroPage = ({ data }) => {
         <div className="container">
           <div className="row">
             <div className="col-sm-6">
-              <MicroMasterPlan />
+              <MicroMasterPlan data={data.masterImage} />
             </div>
             <div className="col-sm-6">
               <MicroFloorPlan data={data.floorPlan} />
@@ -85,7 +87,19 @@ const MicroPage = ({ data }) => {
 
 
         <MicroLocationMap data={data.locationAdvantage} />
+        {
+          data.gallery && <div className="container py-5 my-5">
+            <SecTitle className="text-center color style1">
+              <h4  className="title">Gallery</h4>
+            </SecTitle>
+            {data.gallery && data.gallery.isshow === true && <GallerySlider data={data.gallery} slidesPerView={3} spaceBetween={20} navigation={true} />}
+          </div>
+
+        }
+
         {data.Slides && data.Slides.isshow === true && <Slides data={data.Slides} />}
+
+
 
         <div className="container-fluid micro_footer">
           <div className="row ">

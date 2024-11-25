@@ -14,18 +14,20 @@ import Accordion from 'react-bootstrap/Accordion';
 import 'swiper/css';
 import "yet-another-react-lightbox/styles.css";
 
-import masterPlanImg from '../../assets/images/master-plan/master_plan_img.png'
+// import masterPlanImg from '../../assets/images/master-plan/master_plan_img.png'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const masterPlanImage = [{src: masterPlanImg}]
 
-const MicroMasterPlan = ()=>{
+const MicroMasterPlan = ({data})=>{
   const titleRef = useRef();
   const typoRefs = useRef([]);
   const priceRefs = useRef([]);
   const sizeRefs = useRef([]);
   const [isMasterPlanOpen, setIsMasterPlanOpen] = useState(false);
+  console.log("data", data);
+  
+  const masterPlanImage = [{src: data}]
 
   // for animation
 
@@ -97,7 +99,7 @@ const MicroMasterPlan = ()=>{
         </SecTitle>
 
         <div className="masterPlanImg" onClick={()=>setIsMasterPlanOpen(true)}>
-          <img src={masterPlanImg} alt="mvn-master-plan" className="img-fluid" />
+          <img src={data} alt="mvn-master-plan" className="img-fluid" />
           <button className="btn btn_master">view more</button>
         </div>
 
