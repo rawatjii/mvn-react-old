@@ -5,6 +5,7 @@ import { Form } from "react-bootstrap";
 import Button from "../../../common/Button/Button";
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -45,6 +46,7 @@ const EnquireForm = ({career})=>{
     <section className="section enquire_form">
       <Container>
         <SecTitle className="text-center color style1">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">Enquire Now</h4>
         </SecTitle>
 

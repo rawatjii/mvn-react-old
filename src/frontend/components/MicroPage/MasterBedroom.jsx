@@ -1,62 +1,69 @@
 import React, { useEffect, useRef, useState } from "react";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 import CustomCard from "../Card";
+import MasterBedroomLoader from "../../../common/Loader/micro/masterBedroom/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const MasterBedroom = ({data}) => {
+const MasterBedroom = ({ data }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
+  const [isLoading, setIsLoading] = useState(true); // Loading state
   const totalFrames = 183;
   const frameRefs = useRef([]);
 
-  // for animation
-
-  useEffect(()=>{
+  // Title Animation
+  useEffect(() => {
     gsap.from(titleRef.current, {
-      y: 50,  
+      y: 50,
       opacity: 0,
-      duration: 1, 
-
-      scrollTrigger:{
+      duration: 1,
+      scrollTrigger: {
         trigger: titleRef.current,
         start: "top 95%",
-      }
-    })
-  }, [])
+      },
+    });
+  }, []);
 
   useEffect(() => {
     // Preload images
     const loadedImages = [];
+    let loadedCount = 0;
 
-    for (let i = 1; i <= 183; i++) {
+    for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `assets/videos/master-bedroom/mobile/${i}.webp`; // Update with the correct path for your frames
+      img.src = `assets/videos/master-bedroom/mobile/${i}.webp`;
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalFrames) {
+          setIsLoading(false); // All images are loaded
+        }
+      };
       loadedImages.push(img);
     }
     setImages(loadedImages);
   }, []);
 
   useEffect(() => {
-    if (images.length !== totalFrames) return; // Wait until all images are loaded
+    if (isLoading || images.length !== totalFrames) return;
+
+    // Refresh ScrollTrigger after loader is hidden
+    setTimeout(() => ScrollTrigger.refresh(), 0);
 
     // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: 'top top',
+      start: "top top",
       end: `+=${window.innerHeight * 8}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-        
-        // Only start changing frames after a scroll progress threshold
-        // First condition: Only start changing frames after a scroll progress threshold
         if (self.progress > 0.1) {
           frameRefs.current.forEach((img, index) => {
             if (img) img.style.display = index === frameIndex ? "block" : "none";
@@ -64,51 +71,57 @@ const MasterBedroom = ({data}) => {
         }
       },
       onLeaveBack: () => {
-        // Reset to first frame when scrolling back to the start smoothly
         frameRefs.current.forEach((img, index) => {
           if (img) img.style.display = index === 0 ? "block" : "none";
         });
       },
       onLeave: () => {
-        // Reset to last frame when scrolling to the end smoothly
         frameRefs.current.forEach((img, index) => {
           if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
         });
-      }
+      },
     });
 
     return () => {
       scrollAnimation.kill();
     };
+  }, [images, isLoading, totalFrames]);
 
-  }, [images, totalFrames]);
-
-  const {title, desc} = data.masterBedroom
+  const { title, desc } = data.masterBedroom;
 
   return (
-    <div className="section peacock_section pb-0">
-      <div ref={containerRef} className="frames_content">
-        {images.map((img, index) => (
-          <img
-            key={index}
-            ref={(el) => (frameRefs.current[index] = el)}
-            src={img.src}
-            alt={`Frame ${index}`}
-            className="frame"
-            style={{ display: index === 0 ? "block" : "none" }}
-          />
-        ))}
-      </div>
-
-      <Container >
-        <div className='about'>
-            <CustomCard
-              title={title}
-              desc={desc}  
-            />
-        </div>
-
-    </Container>
+    <div className="section peacock_section master_bedroom pb-0">
+      {isLoading && <MasterBedroomLoader />}
+      {!isLoading && (
+        <>
+          <div
+            ref={containerRef}
+            className="frames_content"
+          >
+            {images.map((img, index) => (
+              <img
+                key={index}
+                ref={(el) => (frameRefs.current[index] = el)}
+                src={img.src}
+                alt={`Frame ${index}`}
+                className="frame"
+                style={{
+                  position: "absolute",
+                  top: 0,
+                  left: 0,
+                  width: "100%",
+                  display: index === 0 ? "block" : "none",
+                }}
+              />
+            ))}
+          </div>
+          <Container>
+            <div className="about">
+              <CustomCard title={title} desc={desc} />
+            </div>
+          </Container>
+        </>
+      )}
     </div>
   );
 };

@@ -32,7 +32,7 @@ const Renders = () => {
           md: `${CONFIG.IMAGE_URL}renders/apartment/3.jpg`,
         },
       ],
-      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/2Lg.jpg`,
     },
     {
       title: "Elevation",
@@ -51,7 +51,7 @@ const Renders = () => {
           md: `${CONFIG.IMAGE_URL}renders/elevation/3.jpg`,
         },
       ],
-      thumbnail: `${CONFIG.IMAGE_URL}/renders/elevation/1Lg.jpg`,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/elevation/2Lg.jpg`,
     },
     {
       title: "Landscape",
@@ -62,7 +62,7 @@ const Renders = () => {
           md: `${CONFIG.IMAGE_URL}renders/landscape/1.jpg`,
         }
       ],
-      thumbnail: `${CONFIG.IMAGE_URL}/renders/landscape/1Lg.jpg`,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/landscape/1.jpg`,
     },
   ];
 
@@ -103,7 +103,12 @@ const Renders = () => {
                   {slide.images.map((image, imgIndex) => (
                     <div key={imgIndex} className={`images img${imgIndex + 0}`}>
                       <img
-                        className="w-100 img-fluid"
+                        className="w-100 img-fluid d_sm_block"
+                        src={image.md}
+                        alt={`${slide.title} Image ${imgIndex + 1}`}
+                      />
+                      <img
+                        className="w-100 img-fluid d_lg_block"
                         src={image.md}
                         alt={`${slide.title} Image ${imgIndex + 1}`}
                       />
