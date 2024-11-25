@@ -492,6 +492,8 @@ section.section.experience-section {position: relative;    border-bottom: 1px so
 .map-image-section .map-bottom-content h4{font-size: 21px;width: 70%;line-height: 36px;color: #e7e7e7;letter-spacing: 2px;font-weight: 300;margin-left: auto;}
 /* MVN Mall End*/
 
+
+
 @media screen and (min-width: 767px) {
   .navbar {
     & .navbar-toggler {
@@ -1779,6 +1781,8 @@ footer {
     .page-header-main-heading {
       max-width: 85%;
     }
+
+    
   }
 
   .projects_section {
