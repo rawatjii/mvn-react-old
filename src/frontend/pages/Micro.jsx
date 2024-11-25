@@ -28,17 +28,17 @@ const MicroPage = ({ data }) => {
         <MicroHero data={data} />
         <MicroOverview data={data} />
         {
-          data?.rera && data.rera?.isshow === true && <Rera data={data.rera} />
+          data.rera && data.rera.isshow === true && <Rera data={data.rera} />
         }
-        {data?.LargeElevationSection && data.LargeElevationSection?.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
-        {data?.video1 && data.video1.isVdo === true && <PeacockSection data={data} />}
-     
-        {data?.living_room_video && data.living_room_video?.isVdo === true && <LivingRoomVideo data={data} />}
-        {data?.video3 && data.video3.isVdo === true && <Video3 data={data} />}
+        {data.LargeElevationSection && data.LargeElevationSection.isAllow === true && <LargeElevationSection data={data.LargeElevationSection} />}
+        {data.video1 && data.video1.isVdo === true && <PeacockSection data={data} />}
+        {/* {data.video2.isVdo === true && <Video2 data={data} />} */}
+        {data.living_room_video && data.living_room_video.isVdo === true && <LivingRoomVideo data={data} />}
+        {data.video3 && data.video3.isVdo === true && <Video3 data={data} />}
 
-        {data?.masterBedroom && data.masterBedroom?.isVdo === true && <MasterBedroom data={data} />}
+        {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
 
-        {data?.walkthrough && data.walkthrough?.isshow === true && <Walkthrough data={data} />}
+        {data.walkthrough && data.walkthrough.isshow === true && <Walkthrough data={data} />}
 
         {/* {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
 
@@ -51,7 +51,7 @@ const MicroPage = ({ data }) => {
 
         {/* {data.Walkthrough && <Walkthrough data={data.Walkthrough} />}         */}
         {/* {data.renders && <Renders data={data} />} */}
-        {data?.highlightbg && data.highlightbg?.isshow ? (
+        {data.highlightbg && data.highlightbg.isshow ? (
           <div
             style={{ backgroundImage: `url(${data.highlightbg.img})` }}
             className="highlightbg"
@@ -66,8 +66,8 @@ const MicroPage = ({ data }) => {
         {/* {data.renders && <Renders data={data} />} */}
         {/* <MicroHighlights /> */}
         <MicroPrice />
-        {data?.menities_section && (
-          <MicroAmenities data={data.menities_section} />
+        {data.amenities && (
+          <MicroAmenities data={data.amenities} />
         )}
         <div className="container">
           <div className="row">
@@ -85,7 +85,7 @@ const MicroPage = ({ data }) => {
 
 
         <MicroLocationMap data={data.locationAdvantage} />
-        {data?.Slides && data.Slides?.isshow === true && <Slides data={data.Slides} />}
+        {data.Slides && data.Slides.isshow === true && <Slides data={data.Slides} />}
 
         <div className="container-fluid micro_footer">
           <div className="row ">

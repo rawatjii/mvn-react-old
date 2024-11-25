@@ -95,6 +95,17 @@ const data = {
       mobile_thumb: CONFIG.IMAGE_URL + 'renders/5_mobile.webp',
     }
   ],
+  amenities : [
+    { name: 'Gym', imgSrc: 'gymSm.webp' },
+    { name: 'Library', imgSrc: 'librarySm.webp' },
+    { name: 'Business Center', imgSrc: 'businessSm.webp' },
+    { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp' },
+    { name: `theater`, imgSrc: 'theaterSm.webp' },
+    { name: `Business Centre`, imgSrc: 'theaterSm.webp' },
+    { name: 'spa', imgSrc: 'spa.webp' },
+    { name: 'club house', imgSrc: 'clubhouse.webp' },  
+  ],
+
   menities_section: [
     {
       title: 'Spa',
@@ -140,6 +151,7 @@ const data = {
       }
     },
   ],
+
   highlight: {
     isshow: true,
     title: "Highlight",

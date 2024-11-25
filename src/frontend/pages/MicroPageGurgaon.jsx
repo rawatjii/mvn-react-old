@@ -67,7 +67,7 @@ const MicroPageGurgaon = ({ data }) => {
           <Renders data={data} />  {/*no isssue*/}
           <MicroHighlights data={data.highlight} />  {/*no isssue*/}
           <MicroPrice />  {/*no isssue*/}
-          <MicroAmenities data={data.menities_section} />
+          <MicroAmenities data={data.amenities} />
           <MicroFloorPlan data={data.floorPlan} />
           <MicroLocationMap data={data.locationAdvantage} />
           {/* <Slides /> */}
