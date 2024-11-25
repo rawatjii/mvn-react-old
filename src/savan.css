@@ -2237,6 +2237,12 @@ ul.our-values-ul-icon{display:flex!important;flex-wrap:wrap}
 .philosophy_section .flex-li-row-2 { margin-top: 50px;}
 .philosophy_section {.content ul {  display: grid;justify-content: center;gap: 34px 0px;}}
 .philosophy_section .content li p {text-align: justify; text-align-last: center;}
+.testimonial_section {padding-top: 49px !important;padding-bottom: 185px !important;}
+.enquire_section {.enquire_bg { opacity: 1;}}
+.testimonial_section {padding-top: 49px !important;padding-bottom: 100px !important;}
+.testimonial_section {& .testimonial_carousel { .swiper-pagination { position: relative; margin-top: 9px;bottom: 40px;}}}
+.testimonial_section .swiper-button-next { left: 60%;}
+.testimonial_section .swiper-button-prev { left: 33%;}
 
 
 }
