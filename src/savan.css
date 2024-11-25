@@ -2165,5 +2165,10 @@ h4.hero_title {
   margin-bottom:20px;
 }
 .home-about-content{padding-left:40px;padding-right:40px;}
+.home-about-content {
+  text-align: center;
+  padding-top: 40px;
+  padding-bottom: 40px;
+}
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
