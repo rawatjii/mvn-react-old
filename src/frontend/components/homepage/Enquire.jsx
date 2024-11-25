@@ -5,8 +5,8 @@ import { Container } from "react-bootstrap";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 
-import MobileenquireBg from "../../assets/images/enquire/bg_sm.webp";
-import DesktopenquireBg from "../../assets/images/enquire/form-bg.png";
+import MobileenquireBg from "../../assets/images/enquire/form-bg.webp";
+import DesktopenquireBg from "../../assets/images/enquire/form-bg.webp";
 import LazyLoad from "react-lazyload";
 
 gsap.registerPlugin(ScrollTrigger);

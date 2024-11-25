@@ -1,4 +1,4 @@
-import React, { StrictMode, Suspense, useEffect } from "react";
+import React, { StrictMode, Suspense, useEffect,lazy } from "react";
 import { createRoot } from "react-dom/client";
 import App from "./App.jsx";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
@@ -39,10 +39,14 @@ import Career from "./frontend/pages/Career.jsx";
 import MediaCenter from "./frontend/pages/MediaCenter.jsx";
 import Blog from "./frontend/pages/Blog.jsx"; 
 import MvnMallGurgaon from "./frontend/pages/MvnMallGurgaon.jsx";
-import MvnAthensSohna from "./frontend/pages/MvnAthensSohna.jsx";
-import MvnAthensPh2Sohna from "./frontend/pages/MvnAthensPh2Sohna.jsx";
-import MvnAthensFaridabad from "./frontend/pages/MvnAthensFaridabad.jsx";
-import MvnUniversityHaryana from "./frontend/pages/MvnUniversityHaryana.jsx";
+const MvnAthensSohna = lazy(() => import("./frontend/pages/MvnAthensSohna.jsx"));
+const MvnAthensPh2Sohna = lazy(() => import("./frontend/pages/MvnAthensPh2Sohna.jsx"));
+const MvnAthensFaridabad = lazy(() => import("./frontend/pages/MvnAthensFaridabad.jsx"));
+const MvnUniversityHaryana = lazy(() => import("./frontend/pages/MvnUniversityHaryana.jsx"));
+
+
+
+
 import Gallery from './frontend/pages/Gallery.jsx'
 import Csr from './frontend/pages/Csr.jsx'
 import PrPolcy from './frontend/pages/PrPolcy.jsx';

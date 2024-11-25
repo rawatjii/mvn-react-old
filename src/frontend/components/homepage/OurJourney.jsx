@@ -14,7 +14,7 @@ import ongoingProjectsIcon from "../../assets/images/icons/journey/new-icons/cra
 import millionSqftIcon from "../../assets/images/icons/journey/new-icons/ruler.gif";
 import deliveryIcon from "../../assets/images/icons/journey/new-icons/calendar.gif";
 import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
-import FooterBgImg from "../../assets/images/our-story-bg.jpg"; // Corrected path
+import FooterBgImg from "../../assets/images/our-story-bg.webp"; // Corrected path
 
 // Register ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);

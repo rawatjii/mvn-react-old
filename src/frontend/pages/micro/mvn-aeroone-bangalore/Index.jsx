@@ -133,28 +133,28 @@ const data = {
     },
     locationData : [
       {
-        distance:'15 Min',
-        title:'Kempegowda Intl. Airport',
-      },
-      {
-        distance:'12 Min',
-        title:'K.I.Airport Halt (Railway Station)',
-      },
-      {
-        distance:'05 Min',
-        title:'Sports Village',
-      },
-      {
         distance:'06 Min',
-        title:'Mini Vidhana Soudha',
+        title:'Mini Vidhana Soudha Devanahalli',
       },
       {
-        distance:'02 Min',
-        title:'Anjaneya Temple',
+        distance:'40 Min',
+        title:'Nandi hills Nandi Hills Road ',
       },
       {
         distance:'11 Min',
-        title:'KIADB Aerospace SEZ',
+        title:'Timbre Drive-In Cinema Bellary Road ',
+      },
+      {
+        distance:'03 Min',
+        title:'Anjaneya Temple Devanahalli ',
+      },
+      {
+        distance:'15 Min',
+        title:'Kempegowda Intl. Airport Devanahalli ',
+      },
+      {
+        distance:'04 Min',
+        title:'Mar Thoma Church Devanahalli ',
       },
     ]
   },
