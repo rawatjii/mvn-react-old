@@ -2160,7 +2160,9 @@ section.section.media-gallery {padding-bottom: 20px;}
 .testimonial_section .flex-heading-row {display: flex;align-items: center;margin-bottom: 15px;height: 53px;padding-top: 14px;}
 .testimonial_carousel .single .testimonial-pic { width: 60px;margin-bottom: 5px; margin-top: 10px; height: 60px; object-fit: contain;}
 .testimonial_carousel .flex-name-pic {margin-top: 10px;}
-
+h4.hero_title {
+  font-size: 24px;
+}
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
