@@ -143,49 +143,50 @@ const data = {
     },
     locationData : [
       {
-        distance:'06 Min',
-        title:'Mini Vidhana Soudha Devanahalli',
+        distance:'03 Min',
+        title:'Anjaneya Temple Devanahalli ',
       },
       {
-        distance:'40 Min',
-        title:'Nandi hills Nandi Hills Road ',
+        distance:'04 Min',
+        title:'Mar Thoma Church Devanahalli ',
+      },
+      {
+        distance:'06 Min',
+        title:'Mini Vidhana Soudha Devanahalli',
       },
       {
         distance:'11 Min',
         title:'Timbre Drive-In Cinema Bellary Road ',
       },
       {
-        distance:'03 Min',
-        title:'Anjaneya Temple Devanahalli ',
-      },
-      {
         distance:'15 Min',
         title:'Kempegowda Intl. Airport Devanahalli ',
       },
       {
-        distance:'04 Min',
-        title:'Mar Thoma Church Devanahalli ',
+        distance:'40 Min',
+        title:'Nandi hills Nandi Hills Road ',
       },
     ]
   },
   floorPlan:{
+    title: "Typology",
 
     floorPlanData : [
       {
-        title:'1 BHK Floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
+        title:'1 BHK',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/new/1BHK.webp',
       },
       {
-        title:'2 BHK Panoramic floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
+        title:'2 BHK Panoramic ',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/new/2bhk_para.webp',
       },
       {
-        title:'2 BHK Luxury floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
+        title:'2 BHK Luxury ',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/new/2BHK.webp',
       },
       {
-        title:'3 BHK Luxury floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
+        title:'3 BHK Luxury',
+        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/new/3BHK.jpg',
       },
       
     ]

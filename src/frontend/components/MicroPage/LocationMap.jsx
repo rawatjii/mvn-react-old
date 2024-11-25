@@ -127,9 +127,13 @@ const MicroLocationMap = ({data})=>{
       </Container>
 
       <div className="locationMapContent">
-        <div className="thumbnail" onClick={()=>setIsLocationMapOpen(true)}>
-          <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block" />
-          <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none" />
+        <div className="row justify-content-center">
+          <div className="col-sm-8">
+            <div className="thumbnail" onClick={()=>setIsLocationMapOpen(true)}>
+            <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block" />
+            <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none" />
+          </div>
+          </div>
         </div>
 
         <Container className="desktop_fluid_container">
