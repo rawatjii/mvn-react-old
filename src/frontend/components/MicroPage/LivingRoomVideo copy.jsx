@@ -5,56 +5,52 @@ import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 import * as CONFIG from "../../../config/config";
 import CustomCard from "../Card";
-import LivingRoomVideoLoader from "../../../common/Loader/micro/livingRoomVideo/Index";
 
-// Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
 const LivingRoomVideo = ({ data }) => {
-  const [loading, setLoading] = useState(true); 
+  const [loading, setLoading] = useState(true);
+  const [firstPlayEnded, setFirstPlayEnded] = useState(false); // To track if the video finished once
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
-  const titleRef = useRef();
 
   const { title, desc } = data.living_room_video;
 
   useEffect(() => {
     const section = sectionRef.current;
     const video = videoRef.current;
-  
+
     let scrollTriggerInstance;
-  
+
     const disableScrolling = () => {
       document.body.style.overflow = "hidden";
     };
-  
+
     const enableScrolling = () => {
       document.body.style.overflow = "";
     };
-  
+
     const playVideo = () => {
       video.play().catch((error) => {
         console.error("Video playback failed", error);
       });
     };
-  
+
     const pauseVideo = () => {
       video.pause();
     };
-  
+
     const handleVideoEnd = () => {
-      enableScrolling(); // Allow scrolling
-      if (scrollTriggerInstance) {
-        scrollTriggerInstance.kill(); // Kill the current ScrollTrigger instance
-      }
-      ScrollTrigger.refresh(); // Refresh all ScrollTriggers to fix issues below
+      setFirstPlayEnded(true); // Mark that the video has finished once
+      enableScrolling(); // Allow scrolling after video ends
+      video.loop = true; // Enable looping after the first playback
     };
-  
+
     const setupScrollTrigger = () => {
       scrollTriggerInstance = ScrollTrigger.create({
-        trigger: section,
+        trigger: video,
         start: "top top",
-        end: () => `+=${video.duration * window.innerHeight}`, // Dynamically adjust based on video duration
+        end: () => `+=${video.duration * window.innerHeight}`, // Adjust end based on video duration
         pin: true,
         scrub: false,
         onEnter: () => {
@@ -62,42 +58,46 @@ const LivingRoomVideo = ({ data }) => {
           playVideo();
         },
         onLeaveBack: () => {
-          enableScrolling();
           pauseVideo();
+        },
+        onEnterBack: () => {
+          if (!firstPlayEnded) {
+            disableScrolling();
+          }
+          playVideo();
         },
         onLeave: () => {
-          enableScrolling();
-          pauseVideo();
+          if (!firstPlayEnded) {
+            pauseVideo();
+          }
         },
       });
-  
-      // Add event listener for video end
+
       video.addEventListener("ended", handleVideoEnd);
     };
-  
-    // Wait for video metadata to load
+
     video.addEventListener("loadedmetadata", () => {
       setupScrollTrigger();
     });
-  
+
     return () => {
-      // Cleanup
       enableScrolling();
       if (scrollTriggerInstance) scrollTriggerInstance.kill();
       video.removeEventListener("ended", handleVideoEnd);
-      video.removeEventListener("loadedmetadata", setupScrollTrigger);
     };
-  }, []);
-  
+  }, [firstPlayEnded]);
+
   const handleVideoLoaded = () => {
     setLoading(false); // Hide the loader once the video has loaded
   };
 
   return (
-    <div className="section living_room_video_section py-0" ref={sectionRef}>
-
-      {loading && <LivingRoomVideoLoader />}
-
+    <div className="section living_room_video_section pb-0" ref={sectionRef}>
+      {loading && (
+        <div className="loader">
+          <div className="spinner">Loading...</div>
+        </div>
+      )}
 
       <video
         ref={videoRef}
@@ -107,22 +107,17 @@ const LivingRoomVideo = ({ data }) => {
         autoPlay={false}
         playsInline
         preload="metadata"
-        onLoadedData={handleVideoLoaded} // Trigger when video has loaded
-        style={{ visibility: loading ? "hidden" : "visible", opacity: loading ? 0 : 1 }} // Hide while loading
+        onLoadedData={handleVideoLoaded}
+        loop={false} // Initially, the video doesn't loop
       />
 
       {!loading && (
-        <Container >
-          <div className='about'>
-              <CustomCard
-                title={title}
-                desc={desc}
-              />
+        <Container>
+          <div className="about">
+            <CustomCard title={title} desc={desc} />
           </div>
-
         </Container>
       )}
-
     </div>
   );
 };
