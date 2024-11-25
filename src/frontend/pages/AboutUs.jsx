@@ -9,8 +9,8 @@ import Mobilemicro_bg from '../assets/images/about/about-head-bg-mobile.jpg';
 import Desktopmicro_bg from '../assets/images/about/about-head-bg-desktop.webp';
 import OurTeam from "../components/About/Ourteam";
 
-
 const AboutUs = () => {
+ 
   const [microBg, setMicroBg] = useState(Desktopmicro_bg);
 
   const breadcrumbs = {
