@@ -20,6 +20,7 @@ import Renders from "../components/MicroPage/Renders";
 import Location from "../components/MicroPage/Location";
 import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
 import GurgaonLoader from "../../common/Loader/micro/gurgaon/Index";
+import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
 
 const MicroPageGurgaon = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -58,7 +59,7 @@ const MicroPageGurgaon = ({ data }) => {
           <PeacockSection data={data} /> {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
-          <LivingRoomVideo data={data} /> {/*no isssue*/}
+          <LivingRoomVideoGurugram data={data}  />
           <Video3 data={data} /> {/*no isssue*/}
           {/* No polution zone location */}
           <Location /> {/*no isssue*/}
@@ -67,7 +68,7 @@ const MicroPageGurgaon = ({ data }) => {
           <Renders data={data} />  {/*no isssue*/}
           <MicroHighlights data={data.highlight} />  {/*no isssue*/}
           <MicroPrice />  {/*no isssue*/}
-          <MicroAmenities data={data.menities_section} />
+          <MicroAmenities data={data.amenities} />
           <MicroFloorPlan data={data.floorPlan} />
           <MicroLocationMap data={data.locationAdvantage} />
           {/* <Slides /> */}

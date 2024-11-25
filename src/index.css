@@ -2562,6 +2562,14 @@ footer {
   video {
     width: 100%
   }
+
+  &.design1{
+
+    .overview_card{
+
+      margin-top:30px;
+    }
+  }
 }
 
 .loader {

@@ -62,6 +62,16 @@ const data = {
     isshow:true,
     mail: "info@example.in",
   },
+  amenities : [
+    { name: 'infinity pool', imgSrc: 'aero-bangalore/amenities/infinity_pool.png' },
+    { name: 'Yoga', imgSrc: 'aero-bangalore/amenities/Yoga.png' },
+    { name: 'Billiards', imgSrc: 'aero-bangalore/amenities/Billiards.png' },
+    { name: 'Gym', imgSrc: 'aero-bangalore/amenities/Gym.png' },
+    { name: 'Party lawn', imgSrc: 'aero-bangalore/amenities/Party_lawn.png' },
+    { name: 'Croquet view', imgSrc: 'aero-bangalore/amenities/Croquet_View.png' },
+    { name: 'Outdoor cinema', imgSrc: 'aero-bangalore/amenities/Outdoor_cinema.png' },
+    { name: 'Hot Tub', imgSrc: 'aero-bangalore/amenities/Hot_Tub.png' },  
+  ],
   menities_section: [
     {
       title: 'Billiards',
