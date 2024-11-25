@@ -2783,6 +2783,7 @@ footer {
 
     .frames_content {
       height: 100vh;
+      position:relative;
 
 
       img {

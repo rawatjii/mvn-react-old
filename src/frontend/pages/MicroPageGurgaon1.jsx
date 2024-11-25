@@ -33,7 +33,7 @@ const MicroPageGurgaon1 = ({ data }) => {
       // Remove overflow: hidden when heroLoaded is true
       document.body.style.overflow = "";
     }
-  
+
     // Cleanup function to reset the body overflow if the component unmounts
     return () => {
       document.body.style.overflow = "";
@@ -58,18 +58,45 @@ const MicroPageGurgaon1 = ({ data }) => {
           <PeacockSection data={data} /> {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
-          <LivingRoomVideo data={data} /> {/*no isssue*/}
-          <Video3 data={data} /> {/*no isssue*/}
+          <div>
+            <LivingRoomVideo data={data} /> {/*no isssue*/}
+          </div>
+          <div>
+            <Video3 data={data} /> {/*no isssue*/}
+          </div>
           {/* No polution zone location */}
-          <Location /> {/*no isssue*/}
-          <MasterBedroom data={data} /> {/*no isssue*/}
-          <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
-          <Renders data={data} />  {/*no isssue*/}
-          <MicroHighlights data={data.highlight} />  {/*no isssue*/}
-          <MicroPrice />  {/*no isssue*/}
-          <MicroAmenities data={data.menities_section} />
-          <MicroFloorPlan data={data.floorPlan} />
-          <MicroLocationMap data={data.locationAdvantage} />
+
+          <div>
+            <Location /> {/*no isssue*/}
+          </div>
+
+          <div>
+            <MasterBedroom data={data} /> {/*no isssue*/}
+          </div>
+          <div>
+
+            <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
+          </div>
+          <div>
+            <Renders data={data} />  {/*no isssue*/}
+          </div>
+          <div>
+            <MicroHighlights data={data.highlight} />  {/*no isssue*/}
+          </div>
+
+          <div>
+            <MicroPrice />  {/*no isssue*/}
+          </div>
+          <div>
+            <MicroAmenities data={data.menities_section} />
+          </div>
+          <div>
+            <MicroFloorPlan data={data.floorPlan} />
+          </div>
+          <div>
+            <MicroLocationMap data={data.locationAdvantage} />
+
+          </div>
           {/* <MicroAmenities data={data.menities_section} /> */}
           {/* <MicroFloorPlan data={data.floorPlan} /> */}
           {/* <MicroLocationMap data={data.locationAdvantage} /> */}
@@ -86,8 +113,8 @@ const MicroPageGurgaon1 = ({ data }) => {
           </div>
         </>
       )}
-        
-        
+
+
     </>
   );
 };
