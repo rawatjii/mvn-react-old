@@ -10,7 +10,7 @@ function GallerySlider({ data, slidesPerView, spaceBetween, navigation }) {
     const [open, setOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const images = data;
+    const images = data.galleryData;
 
     console.log('images', images);
     
@@ -35,7 +35,7 @@ function GallerySlider({ data, slidesPerView, spaceBetween, navigation }) {
                     },
                 }}
             >
-                {images.map((image, index) => (
+                {images?.map((image, index) => (
                     <SwiperSlide key={index}>
                         <img
                             src={image.src}

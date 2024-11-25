@@ -82,15 +82,17 @@ function MediaCenter() {
             eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
         }
     ]
-    const newsImages = [
-        { src: newsIMG1, alt: "Image 1" },
-        { src: newsIMG2, alt: "Image 2" },
-        { src: newsIMG3, alt: "Image 3" },
-        { src: newsIMG4 , alt: "Image 4" },
-        { src: newsIMG5 , alt: "Image 5" },
-        { src: newsIMG6 , alt: "Image 6" },
-    ]
-
+    const newsImages = {
+        isshow:true,
+        galleryData:[
+            { src: newsIMG1, alt: "Image 1" },
+            { src: newsIMG2, alt: "Image 2" },
+            { src: newsIMG3, alt: "Image 3" },
+            { src: newsIMG4 , alt: "Image 4" },
+            { src: newsIMG5 , alt: "Image 5" },
+            { src: newsIMG6 , alt: "Image 6" },
+        ]
+    }
     
 
     const ourGallery = [
