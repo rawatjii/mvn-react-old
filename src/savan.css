@@ -1146,12 +1146,16 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
     ul.menus li.nav-link { text-align: center;}
 
   .render_section { .slides {.renders-images {gap: 0 26px;}} }
- div#basic-navbar-nav ul li a {font-size: 15px!important;letter-spacing: 1px;}
+  div#basic-navbar-nav ul li a {font-size: 15px!important;letter-spacing: 1px;}
  .navbar {& .navbar_collapse { & .menus {  & .sub_menu {.nav-link { margin-bottom: 5px; }} }}}
-  /* span.logo.navbar-brand {position: absolute;left: 50%;top: 40px;} */
-ul.social_links { justify-content: center; margin-top: 20px;}
+    /* span.logo.navbar-brand {position: absolute;left: 50%;top: 40px;} */
+  ul.social_links { justify-content: center; margin-top: 20px;}
+  ul.sub_menu li label {text-align: center;}
+  ul.menus {padding-top: 5%;}
+  a.new-launch { display: flex;gap: 0px 31px;}
 
-
+  .navbar { & .navbar_collapse { & .menus { & .sub_menu { a {  display: block; margin-bottom: 15px; } }}}}
+  .navbar {& .navbar_collapse {& .menus { .nav-link {  margin-bottom: 15px; }}}}
 
 }
 
