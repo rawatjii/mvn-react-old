@@ -449,7 +449,7 @@ footer .footer-bottom-border.container .row {
  .horizontal-scrolling-items__item {white-space: nowrap;font-size: 22px;font-family: var(--tinos_font);color: var(--theme_primary_color);letter-spacing: 1px;word-spacing: 2px;padding: 10px;}
 
  /* Overview section */
-.section{padding: 40px 0;}
+/* .section{padding: 40px 0;} */
 .overview-section .overview-image{position: relative;}
 .overview-section .overview-image::before{position: absolute;content: '';left: 0;top: 0;width: 100%;height: 100%;background-color: #0000008a;}
 .overview-section .overview-image .overview-image-content{position: absolute;top: 50%;left: 50%;width: auto;height: auto;content: '';transform: translate(-50%, -50%);display: flex;flex-direction: column;align-items: center;z-index: 99;gap: 20px;width: 80%;}
@@ -491,6 +491,8 @@ section.section.experience-section {position: relative;    border-bottom: 1px so
 .map-image-section .map-bottom-content p{font-size: 13px; letter-spacing: 2px; color: var(--theme_primary_color);}
 .map-image-section .map-bottom-content h4{font-size: 21px;width: 70%;line-height: 36px;color: #e7e7e7;letter-spacing: 2px;font-weight: 300;margin-left: auto;}
 /* MVN Mall End*/
+
+
 
 @media screen and (min-width: 767px) {
   .navbar {
@@ -1779,6 +1781,8 @@ footer {
     .page-header-main-heading {
       max-width: 85%;
     }
+
+    
   }
 
   .projects_section {

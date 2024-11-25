@@ -10,7 +10,10 @@ function GallerySlider({ data, slidesPerView, spaceBetween, navigation }) {
     const [open, setOpen] = useState(false);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const images = data;
+    const images = data.galleryData;
+
+    console.log('images', images);
+    
 
     return (
         <div className="gallery_slider">
