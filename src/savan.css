@@ -1175,6 +1175,10 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
     background-color: #edd363;
     opacity: 1 !important;
 }
+.testimonial_section {
+  padding-top: 50px !important;
+  padding-bottom: 128px !important;
+}
 
 }
 
