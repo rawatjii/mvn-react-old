@@ -178,7 +178,6 @@ h4 {
 }
 .container {
   width: 100%;
-  overflow-x: hidden;
   max-width: 100%;
 }
 .horizontal-scrolling-items {
@@ -641,4 +640,7 @@ section.section.experience-section {
     width: unset;
 }
 
+}
+.typology_section .img{
+  height:100px
 }

@@ -7,6 +7,13 @@ import LazyLoad from "react-lazyload";
 
 import planeIcon from '../../assets/images/icons/plane1.png';
 
+import ourValueIcon1 from '../../assets/images/about/growth.gif';
+import ourValueIcon2 from '../../assets/images/about/growth-2.gif';
+import ourValueIcon3 from '../../assets/images/about/Idea.gif';
+import ourValueIcon4 from '../../assets/images/about/Verified.gif';
+
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
+
 gsap.registerPlugin(ScrollTrigger);
 
 const Philosophy = () => {
@@ -74,17 +81,19 @@ const Philosophy = () => {
     <section className="section philosophy_section pb-0">
       <Container>
         <SecTitle className="text-center color style1 mb_30">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Our Philosophy</h4>
         </SecTitle>
 
         <ul className="content">
+          <div className="flex-li-row-1">
           <li>
             <h4 ref={(el) => miniTitleRefs.current[0] = el} className="title">
               <img src={planeIcon} alt="mvn-plan-icn" className="img-fluid icon" />
               Our Vision
             </h4>
             <p ref={(el) => desRefs.current[0] = el}>
-            We aim to set new standards in value across education, urban infrastructure, hospitality, and real estate – the key pillars of highly transformative and alluring urbanscapes.
+            We craft exceptional ecosystems that drive India’s growth, blending sustainability with global standards. From universities to urban spaces, we shape aspirations and achievements across India, from Khambi to Bengaluru.
             </p>
           </li>
 
@@ -97,19 +106,34 @@ const Philosophy = () => {
               We build exceptional ecosystems that serve India’s high-growth ambitions. As part of our mission, we are creating a legacy of world-class real estate offerings that are locally relevant and sustainable yet meet global standards. We are building universities, urban infrastructure, hotels, and homes with equal zest across ‘aspiring’ to ‘arrived’ India – from Khambi to Bengaluru.
             </p>
           </li>
-
+          </div>
+          <div className="flex-li-row-2">
           <li>
             <h4 ref={(el) => miniTitleRefs.current[2] = el} className="title">
               <img src={planeIcon} alt="mvn-plan-icn" className="img-fluid icon" />
               Our Values
             </h4>
-            <ul ref={(el) => desRefs.current[2] = el}>
-              <li>Enrich lives</li>
-              <li>Empower ambitions</li>
-              <li>Drive innovation</li>
-              <li>Inspire quality</li>
+            <ul ref={(el) => desRefs.current[2] = el} className="our-values-ul-icon">
+              <li>
+                <img src={ourValueIcon1} alt="" className="img-fluid values-ul-icon" />                
+                Enrich lives
+                </li>
+              <li>
+              <img src={ourValueIcon2} alt="" className="img-fluid values-ul-icon" />   
+                Empower ambitions
+                </li>
+              <li>
+              <img src={ourValueIcon3} alt="" className="img-fluid values-ul-icon" />   
+                Drive innovation
+                
+                </li>
+              <li>
+              <img src={ourValueIcon4} alt="" className="img-fluid values-ul-icon" />   
+                Inspire quality
+                </li>
             </ul>
           </li>
+          </div>
         </ul>
       </Container>
     </section>
