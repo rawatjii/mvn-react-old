@@ -1164,6 +1164,21 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
     padding-left:30px;
     padding-right:30px;
   }
+  .testimonial_section .swiper-button-next {
+    position: absolute;
+    bottom: 60px;
+    left: 64%;
+    top: unset;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #edd363;
+    opacity: 1 !important;
+}
+.testimonial_section {
+  padding-top: 50px !important;
+  padding-bottom: 128px !important;
+}
 
 }
 
