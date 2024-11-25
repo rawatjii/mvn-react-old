@@ -24,35 +24,14 @@ const Renders = () => {
           md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/2Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/2.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/3.jpg`,
         },
       ],
-      // imgSrc: renderImg1,
-      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
-    },
-    {
-      title: "Landscape",
-      content: "This is the first slide.",
-      images: [
-        {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
-        },
-        {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
-        },
-        {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
-        },
-      ],
-      // imgSrc: renderImg1,
       thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
     },
     {
@@ -60,20 +39,30 @@ const Renders = () => {
       content: "This is the first slide.",
       images: [
         {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/elevation/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/elevation/1.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/elevation/2Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/elevation/2.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
-          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/elevation/3Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/elevation/3.jpg`,
         },
       ],
-      // imgSrc: renderImg1,
-      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/elevation/1Lg.jpg`,
+    },
+    {
+      title: "Landscape",
+      content: "This is the first slide.",
+      images: [
+        {
+          lg: `${CONFIG.IMAGE_URL}renders/landscape/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/landscape/1.jpg`,
+        }
+      ],
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/landscape/1Lg.jpg`,
     },
   ];
 
