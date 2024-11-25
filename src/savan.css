@@ -1875,7 +1875,10 @@ section.section.press-releases-container  .swiper.swiper-initialized.swiper-hori
   .press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {
     top: 88%;
 }
-
+.press_release_slider .pressRelease-Img {height: 307px!important; object-fit: cover;object-position: left;}
+.press_release_slider .thumbnail {
+  width: 87%!important;
+}
 
  
 }
@@ -2243,6 +2246,7 @@ ul.our-values-ul-icon{display:flex!important;flex-wrap:wrap}
 .testimonial_section {& .testimonial_carousel { .swiper-pagination { position: relative; margin-top: 9px;bottom: 40px;}}}
 .testimonial_section .swiper-button-next { left: 60%;}
 .testimonial_section .swiper-button-prev { left: 33%;}
+
 
 
 }
