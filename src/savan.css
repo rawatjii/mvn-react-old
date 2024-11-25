@@ -1157,6 +1157,14 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
   .navbar { & .navbar_collapse { & .menus { & .sub_menu { a {  display: block; margin-bottom: 15px; } }}}}
   .navbar {& .navbar_collapse {& .menus { .nav-link {  margin-bottom: 15px; }}}}
 
+  .home-about-content {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left:30px;
+    padding-right:30px;
+  }
+
 }
 
 
