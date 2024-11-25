@@ -9,6 +9,7 @@ import MicroPageGurgaon from '../../MicroPageGurgaon';
 // const MicroPageGurgaon = React.lazy(()=>import('../../MicroPageGurgaon'));
 
 const data = {
+
   micro_hero_section:
   {
     isVdo: true,
@@ -44,7 +45,7 @@ const data = {
   },
   video3: {
     title: "ELEVATED LIVING",
-    desc: "Turn your living room into the ultimate celebration hub, where lively gatherings and stylish soirées come alive, creating lasting memories and joyful moments. ",
+    desc: "Turn your living room into the ultimate celebration hub, where lively gatherings and stylish stories come alive, creating lasting memories and joyful moments. ",
     isVdo: true,
   },
   masterBedroom: {
@@ -55,9 +56,9 @@ const data = {
   highlights: [
     "Power backup for common facilities.",
     "Italian/Imported Marble flooring.",
-    "Television points in living and bedrooms.",
-    "Telephone points in living and master bedroom.",
-    "Split AC provision in living and bedrooms.",
+    "Television points in living room and bedrooms.",
+    "Telephone points in living room and master bedroom.",
+    "Split AC provision in living room and bedrooms.",
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
@@ -96,14 +97,13 @@ const data = {
     }
   ],
   amenities : [
-    { name: 'Gym', imgSrc: 'gymSm.webp' },
-    { name: 'Library', imgSrc: 'librarySm.webp' },
-    { name: 'Business Center', imgSrc: 'businessSm.webp' },
-    { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp' },
-    { name: `theater`, imgSrc: 'theaterSm.webp' },
-    { name: `Business Centre`, imgSrc: 'theaterSm.webp' },
-    { name: 'spa', imgSrc: 'spa.webp' },
-    { name: 'club house', imgSrc: 'clubhouse.webp' },  
+    { name: 'club house', imgSrc: 'clubhouse.webp', desc:'A sanctuary of exclusivity, blending graceful leisure with moments that define timeless indulgence.' },  
+    { name: 'Gym', imgSrc: 'gymSm.webp', desc:'A space meticulously designed to redefine fitness, where every movement feels empowered amidst an ambiance of precision and poise.' },
+    { name: 'Library', imgSrc: 'librarySm.webp', desc:'A retreat for the connoisseur of knowledge, offering a curated realm of intellectual indulgence and quiet sophistication.' },
+    { name: 'Business Center', imgSrc: 'businessSm.webp', desc:'Crafted for the discerning professional, this is where ambition meets elegance in an environment of unparalleled refinement.' },
+    { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp', desc:'An imaginative wonderland where joy is boundless, and every detail is thoughtfully created for young dreamers to thrive.' },
+    { name: `theater`, imgSrc: 'theaterSm.webp', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
+    { name: 'spa', imgSrc: 'spa.webp', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
   ],
 
   menities_section: [
@@ -158,19 +158,17 @@ const data = {
     point: [
       'Power backup for common facilities.',
       'Italian/Imported Marble flooring.',
-      'Television points in living and bedrooms.',
-      'Telephone points in living and master bedroom.',
-      'Split AC provision in living and bedrooms.',
+      'Television points in living room and bedrooms.',
+      'Telephone points in living room and master bedroom.',
+      'Split AC provision in living room and bedrooms.',
       'Premium emulsion paint finish.',
     ]
   },
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
-    mapIMG: {
-      desktop:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp',
-      mobile:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp'
-    },
+    mapIMG:  CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp',
+    
     //     yasho bhoomi
     // indira gandhi international airport
     // diplomatic enclave

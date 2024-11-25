@@ -2413,6 +2413,26 @@ footer {
 }
 
 
+.location_modal{
+
+  .modal-content{
+    /* background:#fff; */
+  }
+
+  .close{
+    background:transparent;
+    border: none;
+    color: #fff;
+    text-align: right;
+    font-size: 28px;
+    font-weight: 100;
+  }
+
+  iframe{
+    height: 270px;
+  }
+}
+
 
 /* location_section */
 
@@ -2951,6 +2971,31 @@ footer {
 
   .location_map_section{
 
+    .thumbnail{
+      position:relative;
+
+      .location_btn{
+
+        padding: 8px 15px;
+        border: 1px solid var(--color1);
+        letter-spacing: 0.5px;
+        display: block;
+        text-decoration: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 10px;
+        text-transform: uppercase;
+        border-radius: 3px;
+
+        .yt_icon{
+
+          width: 18px;
+          margin-right: 8px;
+        }
+      }
+    }
+
     .desktop_fluid_container{
 
       padding-top: 60px;
@@ -3081,7 +3126,7 @@ footer {
       .images:nth-child(2n) {
         height: auto;
         width: auto;
-        flex: 2.3;
+        flex: 4;
       }
 
       .images:nth-child(3n) {
@@ -3122,7 +3167,7 @@ footer {
   .thumbnails {
     display: flex;
     gap: 10px;
-    margin-top: 0px;
+    margin-top: 30px;
     width: 100%;
   }
 
@@ -3252,9 +3297,10 @@ footer {
   section {
     position: relative;
     height: 100vh;
-    display: flex;
+    padding-top: 60px;
+    /* display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
   }
 
   .bg {
@@ -3274,12 +3320,31 @@ footer {
     background-position: unset !important;
   }
 
+  .content{
+
+    background:#fff;
+    margin: auto;
+    max-width: calc(100% - 50px);
+    text-align: center;
+    padding: 20px;
+    border-radius: 4px;
+  }
+
   .am-name {
-    text-shadow: 1px 1px 3px black;
+    /* text-shadow: 1px 1px 3px black; */
     z-index: 1;
     font-size: 24px;
     letter-spacing: 2px;
     text-transform: uppercase;
     color: var(--theme_primary_color);
   }
+
+  .desc{
+    margin:0;
+    color: #333;
+    line-height: 20px;
+    margin-top: 10px;
+  }
+
+
 }

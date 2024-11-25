@@ -4,7 +4,7 @@ import { Link, NavLink } from "react-router-dom";
 import LazyLoad from "react-lazyload";
 
 import twitterIcon from '../assets/images/icons/social/twitter.png';
-import googlePlus from '../assets/images/icons/social/google-plus.png';
+import linkedinIcon from '../assets/images/icons/social/linkedin.png';
 import fbIcon from '../assets/images/icons/social/fb.png';
 import instaIcon from '../assets/images/icons/social/instagram.png';
 import BtnIcon from '../assets/images/icons/send.png';
@@ -27,22 +27,22 @@ const Footer = () => {
             <div className="social_links text-center">
               <ul>
                 <li>
-                  <a href="" className="icon">
+                  <a href=" https://x.com/MVN_infra" className="icon">
                     <img src={twitterIcon} alt="mvn-twitter-icon" className="img-fluid " />
                   </a>
                 </li>
                 <li>
-                  <a href="" className="icon">
-                    <img src={googlePlus} alt="mvn-google-plus-icon" className="img-fluid" />
+                  <a href=" https://www.linkedin.com/company/mvn-infrastructure/" className="icon">
+                    <img src={linkedinIcon} alt="mvn-google-plus-icon" className="img-fluid" />
                   </a>
                 </li>
                 <li>
-                  <a href="" className="icon">
+                  <a href="https://www.facebook.com/officialmvninfra/" className="icon">
                     <img src={fbIcon} alt="mvn-fb-icon" className="img-fluid" />
                   </a>
                 </li>
                 <li>
-                  <a href="" className="icon">
+                  <a href=" https://www.instagram.com/mvn_infrastructure/" className="icon">
                     <img src={instaIcon} alt="mvn-insta-icon" className="img-fluid" />
                   </a>
                 </li>

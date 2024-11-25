@@ -26,19 +26,19 @@ const Location = () => {
   const pageData = [
     {
       title: 'Entertainment',
-      imgSrc: 'interiormall.jpg'
+      imgSrc: 'entertainment.webp'
     },
     {
       title: 'shopping',
-      imgSrc: 'shopping.jpg'
+      imgSrc: 'shopping.webp'
     },
     {
       title: 'sports',
-      imgSrc: 'game.jpg'
+      imgSrc: 'sports.webp'
     },
     {
       title: 'office',
-      imgSrc: 'office.jpg'
+      imgSrc: 'office.webp'
     },
     {
       title: 'cinema',

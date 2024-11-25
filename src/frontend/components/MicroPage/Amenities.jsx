@@ -5,17 +5,8 @@ import * as CONFIG from "../../../config/config";
 
 gsap.registerPlugin(ScrollTrigger);
 
-
-export default function Amenities({data}) {
-
-  const amenities = data
-
-  console.log('amenities', amenities);
-  
-
-
-
-
+export default function Amenities({ data }) {
+  const amenities = data;
   const sectionsRef = useRef([]);
 
   useEffect(() => {
@@ -25,8 +16,9 @@ export default function Amenities({data}) {
     sectionsRef.current.forEach((section, i) => {
       const bg = section.querySelector('.bg');
       if (bg) {
+        // Set background image dynamically
         bg.style.backgroundImage = `url(${CONFIG.IMAGE_URL}amenities/${amenities[i].imgSrc})`;
-        
+
         const defaultBgPos = i === 0 ? '50% 0' : `50% ${-window.innerHeight * getRatio(section)}px`;
 
         const trigger = gsap.fromTo(
@@ -48,10 +40,14 @@ export default function Amenities({data}) {
       }
     });
 
+    // Refresh ScrollTrigger to recalculate after animations are set up
+    ScrollTrigger.refresh();
+
+    // Cleanup on unmount
     return () => {
       triggers.forEach((trigger) => trigger.kill());
     };
-  }, []);
+  }, [amenities]);
 
   return (
     <div className="main_am">
@@ -65,7 +61,10 @@ export default function Amenities({data}) {
           ref={(el) => (sectionsRef.current[i] = el)}
         >
           <div className="bg"></div>
-          <span className='am-name'>{amenity.name}</span>
+          <div className="content">
+            <span className="am-name">{amenity.name}</span>
+            <p className='desc'>{amenity.desc}</p>
+          </div>
         </section>
       ))}
     </div>

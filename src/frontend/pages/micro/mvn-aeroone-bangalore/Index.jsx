@@ -21,13 +21,13 @@ const data = {
     isshow: true,
   },
   overview: {
-    title: "MVN AERO ONE",
+    title: "MVN Aero One",
     location: "BANGALORE",
     extra: "",
     desc:[
-      'There’s a lot to look forward to with MVN Aero One. When we conceptualized the project, we asked ourselves what the urban resident was missing. And rather than merely fill up the blanks in his/her life, we chose to enhance our offerings. Aero one offers luxury apartments in Bangalore at the best location, with ample living space, and delight-a-moment amenities which makes a complete life within.',
-      'Aero one is taking shape in pristine Devanahalli, which has benefited from the presence of the Kempegowda International Airport. The airport has spurred numerous infrastructural auxiliary developments. Coupled with connectivity to NH 44, Hebbal, and access to the Central Business District of Bangalore, this is one location that offers more potential for growth.',
-      'Aero One, gives you an option to opt for 2 & 3 BHK luxury apartments in Banglore that suits the need of every family member. The project being close to the Special Agricultural Zone abuts the International Airport, offering scenic views that last a lifetime.'
+      'There’s a lot to look forward to with MVN Aero One. When we conceptualized the project, we asked ourselves what the urban resident was missing. And rather than merely fill up the blanks in his/her life, we chose to enhance our offerings. Aero One offers luxury apartments in Bangalore at the best location, with ample living space, and delight-a-moment amenities that makes a complete life within.',
+      'Aero One is taking shape in pristine Devanahalli, which has benefited from the presence of the Kempegowda International Airport. The airport has spurred numerous infrastructural auxiliary developments. Coupled with connectivity to NH 44, Hebbal, and access to the Central Business District of Bangalore, this is one location that offers more potential for growth.',
+      'Aero One gives you an option to opt for 2 & 3 BHK luxury apartments in Banglore that suits the need of every family member. The project, being close to the Special Agricultural Zone, abuts the International Airport, offering scenic views that last a lifetime.'
     ]
   },
   video1: {
@@ -137,10 +137,7 @@ const data = {
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
-    mapIMG: {
-      desktop:CONFIG.IMAGE_URL + 'aero-bangalore/location.webp',
-      mobile:CONFIG.IMAGE_URL + 'aero-bangalore/location_sm.webp'
-    },
+    mapIMG:  CONFIG.IMAGE_URL + 'aero-bangalore/location.webp',
     locationData : [
       {
         distance:'03 Min',
