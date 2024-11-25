@@ -17,17 +17,17 @@ gsap.registerPlugin(ScrollTrigger);
 const data = [
     {
       type:'1 BHK Luxury Apartments',
-      price:'2.51 Cr*',
+      price:'',
       size:'1200 Sq.Ft.',
     },
     {
       type:'2 BHK Luxury Apartments',
-      price:'4.11 Cr*',
+      price:'',
       size:'800 Sq.Ft.',
     },
     {
       type:'3 BHK Luxury Apartments',
-      price:'7.49 Cr*',
+      price:'',
       size:'1600 Sq.Ft.',
     },
 ]
@@ -139,7 +139,9 @@ const MicroPrice = ()=>{
                     <div className="desk_price_content">
                       <div className="desk_price_card">
                         <h5 className="typo">{item.type}</h5>
-                        <h3 className="price"><span>₹</span> {item.price}</h3>
+                        {
+                          item.price && <h3 className="price"><span>₹</span> {item.price}</h3>
+                        }
                         <div className="sizes">
                           <p className="size"><span>Size:</span> {item.size}</p>
                           <Button className="btn_style1">Enquire Now</Button>

@@ -206,7 +206,7 @@ const data = {
     ]
   },
   floorPlan: {
-
+    title: 'Floor Plan',
     floorPlanData: [
       {
         title: '1 BHK Floor Plan',

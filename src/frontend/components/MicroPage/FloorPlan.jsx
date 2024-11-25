@@ -35,7 +35,7 @@ const MicroFloorPlan = ({data})=>{
   const sizeRefs = useRef([]);
   const [isMasterPlanOpen, setIsMasterPlanOpen] = useState(false);
 
-  const {floorPlanData} = data  
+  const {floorPlanData, title} = data  
 
   // for animation
 
@@ -105,7 +105,7 @@ const MicroFloorPlan = ({data})=>{
     <section className="section floor_plan_section">
       
       <SecTitle className="text-center color style1">
-          <h4 ref={titleRef} className="title">Floor Plan</h4>
+          <h4 ref={titleRef} className="title">{title}</h4>
         </SecTitle>
       <Container>
         <Accordion defaultActiveKey={0} className="floor_plan_data">
@@ -113,7 +113,7 @@ const MicroFloorPlan = ({data})=>{
             <Accordion.Item key={index} eventKey={index}>
               <Accordion.Header>{item.title}</Accordion.Header>
               <Accordion.Body>
-                <img src={item.thumbnail} alt="mvn-floor-plan" className="img-fluid" />
+                <img src={item.thumbnail} alt="mvn-floor-plan" className="img-fluid w-100" />
               </Accordion.Body>
             </Accordion.Item>
           ))}

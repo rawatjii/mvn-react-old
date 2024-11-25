@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
-import gsap from 'gsap';
-import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 import CustomCard from "../Card";
-import MasterBedroomLoader from '../../../common/Loader/micro/masterBedroom/Index';
+import MasterBedroomLoader from "../../../common/Loader/micro/masterBedroom/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -17,7 +17,7 @@ const MasterBedroom = ({ data }) => {
   const totalFrames = 183;
   const frameRefs = useRef([]);
 
-  // GSAP Animation for the title
+  // Title Animation
   useEffect(() => {
     gsap.from(titleRef.current, {
       y: 50,
@@ -26,22 +26,22 @@ const MasterBedroom = ({ data }) => {
       scrollTrigger: {
         trigger: titleRef.current,
         start: "top 95%",
-      }
+      },
     });
   }, []);
 
   useEffect(() => {
     // Preload images
     const loadedImages = [];
-    let loadedCount = 0; // Counter for loaded images
+    let loadedCount = 0;
 
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `assets/videos/master-bedroom/mobile/${i}.webp`; // Update with the correct path for your frames
+      img.src = `assets/videos/master-bedroom/mobile/${i}.webp`;
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
-          setIsLoading(false); // All images are loaded, hide the loader
+          setIsLoading(false); // All images are loaded
         }
       };
       loadedImages.push(img);
@@ -50,12 +50,15 @@ const MasterBedroom = ({ data }) => {
   }, []);
 
   useEffect(() => {
-    if (isLoading || images.length !== totalFrames) return; // Ensure images are fully loaded before initializing ScrollTrigger
+    if (isLoading || images.length !== totalFrames) return;
+
+    // Refresh ScrollTrigger after loader is hidden
+    setTimeout(() => ScrollTrigger.refresh(), 0);
 
     // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: 'top top',
+      start: "top top",
       end: `+=${window.innerHeight * 8}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
@@ -76,7 +79,7 @@ const MasterBedroom = ({ data }) => {
         frameRefs.current.forEach((img, index) => {
           if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
         });
-      }
+      },
     });
 
     return () => {
@@ -87,10 +90,8 @@ const MasterBedroom = ({ data }) => {
   const { title, desc } = data.masterBedroom;
 
   return (
-    <div className="section peacock_section pb-0">
-      {isLoading && (
-        <MasterBedroomLoader />
-      )}
+    <div className="section peacock_section master_bedroom pb-0">
+      {isLoading && <MasterBedroomLoader />}
       {!isLoading && (
         <>
           <div
@@ -116,10 +117,7 @@ const MasterBedroom = ({ data }) => {
           </div>
           <Container>
             <div className="about">
-              <CustomCard
-                title={title}
-                desc={desc}
-              />
+              <CustomCard title={title} desc={desc} />
             </div>
           </Container>
         </>

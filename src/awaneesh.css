@@ -779,6 +779,10 @@ border-bottom: 1px solid rgb(42 42 42 / 49%);text-decoration: none;letter-spacin
 .desk_price_card .sizes {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+}
+.desk_price_content{
+    width: 100%;
 }
 .desk_price_card .sizes .size {
     margin: 0;
@@ -1004,6 +1008,11 @@ h4.title {
             padding: 18px 24px;
             border-radius: 4px !important;
         }
+    }
+}
+.floor_plan_section {
+    .accordion-body {
+        padding: 0;
     }
 }
 .micro_hero_section {
