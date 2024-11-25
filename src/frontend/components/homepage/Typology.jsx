@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-
+import DIAMOND from  '../../../frontend/assets/images/icons/diamond.png' ;
 gsap.registerPlugin(ScrollTrigger);
 
 const Typology = () => {
@@ -11,13 +11,14 @@ const Typology = () => {
   const contentRefs = useRef([]);
   const isMobile = window.innerWidth <= 768;
 
-  let totalFrames = isMobile ? 289 : 385;
+  let totalFrames = isMobile ? 385 : 385;
   const [images, setImages] = useState([]);
-  const segments = [
-    { contentIndex: 0, startFrame: 0, endFrame: 50 },
-    { contentIndex: 1, startFrame: 51, endFrame: 200 },
-    { contentIndex: 2, startFrame: 201, endFrame: 285 },
+  let segments = [
+    { contentIndex: 0, startFrame: 0, endFrame: 94 },
+    { contentIndex: 1, startFrame: 95, endFrame: 240 },
+    { contentIndex: 2, startFrame: 241, endFrame: 385 },
   ];
+
 
   useEffect(() => {
     // Preload images
@@ -56,7 +57,7 @@ const Typology = () => {
 
         // Toggle content visibility
         contentRefs.current.forEach((el, i) => {
-          el.style.opacity = i === segment.contentIndex ? 1 : 0;
+          el.style.display = i === segment.contentIndex ? 'block' : 'none';
         });
       }
     });
@@ -68,8 +69,12 @@ const Typology = () => {
 
   return (
     <>
-      <section ref={containerRef} className="typology_section">
-        <h1>Typologies</h1>
+      <section ref={containerRef} className="section typology_section">
+        
+        <div className="sec_title text-center color style1">
+
+        <h4 className="title">Typologies</h4>
+        </div>
 
         {/* Images section */}
         <div className="images">
@@ -87,31 +92,36 @@ const Typology = () => {
 
         {/* Content boxes */}
         <div className="typology_content">
+          <div className="typology_diamond_btn">
+            <img src={DIAMOND} alt="" />
+            <img src={DIAMOND} alt="" />
+            <img src={DIAMOND} alt="" />
+          </div>
           <div
             ref={(el) => (contentRefs.current[0] = el)}
             className="content-box"
-            style={{ opacity: 1 }}
+            style={{ display: 'block' }}
           >
-            <h1>2 BHK</h1>
-            <p>Content for 2 BHK goes here.</p>
+            <h1>Typical Flats: A Symphony of Refined Luxury</h1>
+            <p>Spanning an expansive 5,850 sq. ft., these exquisite residences offer a captivating 270-degree panoramic view, seamlessly blending breathtaking vistas with unmatched sophistication. </p>
           </div>
 
           <div
             ref={(el) => (contentRefs.current[1] = el)}
             className="content-box"
-            style={{ opacity: 0 }}
+            style={{ display: 'none' }}
           >
-            <h1>3 BHK</h1>
-            <p>Content for 3 BHK goes here.</p>
+            <h1>Simplex Flats: A Masterpiece of Grandeur</h1>
+            <p>At an impressive 11,700 sq. ft., the simplex flats offer a commanding 360-degree panoramic vista, presenting a boundless world of elegance. This is where space, design, and nature converge in perfect harmony. </p>
           </div>
 
           <div
             ref={(el) => (contentRefs.current[2] = el)}
             className="content-box"
-            style={{ opacity: 0 }}
+            style={{ display: 'none' }}
           >
-            <h1>4 BHK</h1>
-            <p>Content for 4 BHK goes here.</p>
+            <h1> Duplex Penthouse: The Apex of Luxury Living</h1>
+            <p>Elevate your lifestyle to new heights with these extraordinary duplex flats, where two levels of unmatched luxury unfold before you. With impeccable attention to detail and a focus on privacy and exclusivity, these residences embody the pinnacle of sophisticated living, where only the most discerning will reside.</p>
           </div>
         </div>
       </section>

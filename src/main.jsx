@@ -22,6 +22,7 @@ import AdminLayout from "./admin/Layout.jsx";
 import Dashboard from "./admin/Dashboard.jsx";
 import Login from "./admin/Login.jsx";
 import JobApplications from "./admin/JobApplications.jsx";
+
 import ContactQuery from "./admin/ContactQuery.jsx";
 import ContactUs from "./admin/Contactus.jsx";
 import Blogs from "./admin/Blogs/Index.jsx";
@@ -52,6 +53,7 @@ import Disclaimer from "./frontend/pages/Disclaimer.jsx";
 import "./awaneesh.css";
 
 import "./savan.css";
+import './adarsh.css'
 
 const router = createBrowserRouter([
   {

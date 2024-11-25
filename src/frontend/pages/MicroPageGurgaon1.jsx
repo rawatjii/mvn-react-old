@@ -21,6 +21,7 @@ import Location from "../components/MicroPage/Location";
 import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
 import GurgaonLoader from "../../common/Loader/micro/gurgaon/Index";
 import GurgaonLoader1 from "../../common/Loader/micro/gurgaon1/Index";
+import Typology from "../components/homepage/Typology";
 
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -95,7 +96,9 @@ const MicroPageGurgaon1 = ({ data }) => {
           </div>
           <div>
             <MicroLocationMap data={data.locationAdvantage} />
-
+          </div>
+          <div>
+          <Typology  />
           </div>
           {/* <MicroAmenities data={data.menities_section} /> */}
           {/* <MicroFloorPlan data={data.floorPlan} /> */}

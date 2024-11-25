@@ -55,8 +55,7 @@ const MicroPageGurgaon = ({ data }) => {
 
       {heroLoaded && (
         <>
-          <Typology  />
-
+          
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} /> {/*no isssue*/}
           <PeacockSection data={data} /> {/*no isssue*/}
@@ -76,6 +75,8 @@ const MicroPageGurgaon = ({ data }) => {
 
 
           <Location /> {/*no isssue*/}
+<Typology  />
+
           {/* <Slides /> */}
           <div className="container-fluid micro_footer">
             <div className="row ">
