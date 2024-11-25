@@ -16,60 +16,60 @@ const Renders = () => {
 
   const slides = [
     {
+      title: "Apartment",
+      content: "This is the first slide.",
+      images: [
+        {
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+        },
+        {
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
+        },
+      ],
+      // imgSrc: renderImg1,
+      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+    },
+    {
       title: "Landscape",
       content: "This is the first slide.",
       images: [
         {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
-        },
-      ],
-      // imgSrc: renderImg1,
-      thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
-    },
-    {
-      title: "elevation",
-      content: "This is the first slide.",
-      images: [
-        {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/elevation1.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/elevation1.jpg`,
-        },
-        {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/elevation2.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/elevation2.jpg`,
-        },
-        {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/elevation3.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/elevation3.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
         },
       ],
       // imgSrc: renderImg1,
       thumbnail: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
     },
     {
-      title: "apartment",
+      title: "Elevation",
       content: "This is the first slide.",
       images: [
         {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa1.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa2.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
         },
         {
-          lg: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
-          md: `${CONFIG.IMAGE_URL}/renders/apartment/apa3.jpg`,
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1.jpg`,
         },
       ],
       // imgSrc: renderImg1,
@@ -81,16 +81,13 @@ const Renders = () => {
     const section = sectionRef.current;
     const totalSlides = slides.length;
 
-    // ScrollTrigger for the pinned section
     ScrollTrigger.create({
       trigger: section,
       start: "top top",
       end: `+=${section.offsetHeight * totalSlides}`,
       pin: true,
       scrub: true,
-      // markers: true, // Enable for debugging
       onUpdate: (self) => {
-        // Calculate the active slide index based on progress
         const index = Math.floor(self.progress * totalSlides);
         setActiveIndex(index);
       },
@@ -104,9 +101,8 @@ const Renders = () => {
   return (
     <section className="render_section" ref={sectionRef}>
       <Container className="topContainer">
-        {/* <h4 className="text-center mainhead">Landscape</h4> */}
         <div className="slider-container">
-          {/* Large Slides */}
+
           <div className="slides">
             {slides.map((slide, index) => (
               <div
@@ -119,7 +115,7 @@ const Renders = () => {
                     <div key={imgIndex} className={`images img${imgIndex + 0}`}>
                       <img
                         className="w-100 img-fluid"
-                        src={image.lg}
+                        src={image.md}
                         alt={`${slide.title} Image ${imgIndex + 1}`}
                       />
                     </div>
