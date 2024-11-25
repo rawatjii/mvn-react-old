@@ -5,29 +5,33 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
 const Typology = () => {
+
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
   const contentRefs = useRef([]);
-  const totalFrames = 68;
+  const isMobile = window.innerWidth <= 768;
+
+  let totalFrames = isMobile ? 289 : 385;
   const [images, setImages] = useState([]);
   const segments = [
-    { contentIndex: 0, startFrame: 0, endFrame: 22 },
-    { contentIndex: 1, startFrame: 23, endFrame: 44 },
-    { contentIndex: 2, startFrame: 45, endFrame: 66 },
+    { contentIndex: 0, startFrame: 0, endFrame: 50 },
+    { contentIndex: 1, startFrame: 51, endFrame: 200 },
+    { contentIndex: 2, startFrame: 201, endFrame: 285 },
   ];
 
   useEffect(() => {
     // Preload images
     const loadedImages = [];
-    for (let i = 2102; i <= 2169; i++) {
+    for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `assets/videos/typology/2bhk/building_view${i}.jpg`;
+      isMobile ? img.src = `assets/images/micro/aeroone-gurgaon/mobiles/${i}.webp` : img.src = `assets/images/micro/aeroone-gurgaon/desktop/${i}.webp` ;
       loadedImages.push(img);
     }
     setImages(loadedImages);
   }, []);
 
   useEffect(() => {
+    debugger;
     if (images.length !== totalFrames) return;
 
     // Setting up ScrollTrigger for image sequence
