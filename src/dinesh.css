@@ -444,7 +444,7 @@ footer .footer-bottom-border.container .row {
    from {transform: translateX(0)}
    to {transform: translateX(-50%)}
  }
- .container {width: 100%;overflow-x: hidden;max-width: 100%;}
+ .container {width: 100%;max-width: 100%;}
  .horizontal-scrolling-items {display: flex;background: #131313;font-size: 40px;width: 2600px;animation-name: infiniteScroll;animation-duration: 20s;animation-iteration-count: infinite;animation-timing-function: linear;}
  .horizontal-scrolling-items__item {white-space: nowrap;font-size: 22px;font-family: var(--tinos_font);color: var(--theme_primary_color);letter-spacing: 1px;word-spacing: 2px;padding: 10px;}
 

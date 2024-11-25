@@ -2946,6 +2946,26 @@ footer {
       }
     }
   }
+
+  /* location_map_section */
+
+  .location_map_section{
+
+    .desktop_fluid_container{
+
+      padding-top: 60px;
+
+      .title{
+
+        top:0;
+      }
+
+      .location_points{
+        margin-top:0;
+      }
+    }
+  }
+
 }
 
 .thanks-page {
@@ -3012,9 +3032,9 @@ footer {
     margin-bottom: 28px;
   }
 
-  .topContainer {
+  /* .topContainer {
     padding-top: 70px;
-  }
+  } */
 
   .slider-container {
     display: flex;
