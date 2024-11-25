@@ -7,7 +7,7 @@ import LazyLoad from "react-lazyload";
 
 import bg from "../../assets/images/about/building_bg.png";
 import Desktopabout_img from "../../assets/images/about/desktopabout_img.webp";
-import Mobileabout_img from "../../assets/images/about/mobileabout_img.webp";
+import Mobileabout_img from "../../assets/images/about/desktopabout_img.webp";
 import AnImage from "../../../common/animations/Image/Index";
 import OverviewIcon from "../../assets/images/icons/heading-icon-img.png";
 

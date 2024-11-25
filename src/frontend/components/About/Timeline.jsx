@@ -97,8 +97,8 @@ const data = [
   {
     img: mvninfrastructureathensPhaseThree,
     year: 'Coming Soon',
-    title: 'MVN Athens | Residential Apartments | Project by MVN Infrastructure Pvt Ltd.',
-    location: '(Phase-III), Gurugram'
+    title: 'MVN Aero One | MVN Mall | Project by MVN Infrastructure Pvt Ltd.',
+    location: 'Gurugram'
   }
 
 ];
