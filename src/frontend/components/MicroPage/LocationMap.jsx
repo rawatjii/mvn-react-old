@@ -3,16 +3,20 @@ import { Container } from "react-bootstrap"
 import SecTitle from "../../../common/SecTitle/Index"
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import Modal from 'react-bootstrap/Modal';
 
 
 import Lightbox from "yet-another-react-lightbox";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
+
+import * as CONFIG from '../../../config/config'
 
 // Import Swiper styles
 import 'swiper/css';
 import "yet-another-react-lightbox/styles.css";
 
 import location_map_sm from '../../assets/images/location-advantage/location_map_sm.webp'
+import Button from "../../../common/Button/Button";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -51,10 +55,14 @@ const MicroLocationMap = ({data})=>{
   const priceRefs = useRef([]);
   const sizeRefs = useRef([]);
   const [isLocationMapOpen, setIsLocationMapOpen] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const locationMapImg = [{src: data.mapIMG.desktop}]
   
-  
+  const handleClose = () => setShowModal(false);
+
+
+  const handleShow = () => setShowModal(true);
 
   // for animation
 
@@ -127,12 +135,22 @@ const MicroLocationMap = ({data})=>{
       </Container>
 
       <div className="locationMapContent">
+
         <div className="row justify-content-center">
           <div className="col-sm-8">
-            <div className="thumbnail" onClick={()=>setIsLocationMapOpen(true)}>
-            <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block" />
-            <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none" />
-          </div>
+            <div className="thumbnail">
+
+              <button className="location_btn"  onClick={handleShow}>
+                <img src={CONFIG.IMAGE_URL + 'icons/yt_color.png'} alt="youtube icon" className="img-fluid yt_icon" />
+                Location Video
+              </button>
+
+              
+              <div onClick={()=>setIsLocationMapOpen(true)}>
+                <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block" />
+                <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none" />
+              </div>
+            </div>
           </div>
         </div>
 
@@ -165,6 +183,12 @@ const MicroLocationMap = ({data})=>{
         buttonPrev: locationMapImg.length > 1 ? undefined : () => null,
         slide: locationMapImg.length > 1 ? undefined : () => null, 
       }} />
+
+
+      <Modal className="location_modal" show={showModal} onHide={handleClose}>
+        <span type="button" class="close" onClick={handleClose}>×</span>
+        <iframe src="https://www.youtube.com/embed/p4ArtUtsj-A?si=VsbM3Dvdk969-OHv" title="MVN Location Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen=""></iframe>
+      </Modal>
     </section>
   )
 }
