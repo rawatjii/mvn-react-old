@@ -2246,7 +2246,7 @@ ul.our-values-ul-icon{display:flex!important;flex-wrap:wrap}
 .testimonial_section {& .testimonial_carousel { .swiper-pagination { position: relative; margin-top: 9px;bottom: 40px;}}}
 .testimonial_section .swiper-button-next { left: 60%;}
 .testimonial_section .swiper-button-prev { left: 33%;}
-
+.press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {top: 94%;margin-left: 5px;}
 
 
 }
