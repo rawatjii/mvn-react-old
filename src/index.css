@@ -2413,6 +2413,24 @@ footer {
 }
 
 
+.location_modal{
+
+  .modal-content{
+    /* background:#fff; */
+  }
+
+  .close{
+    background:transparent;
+    border: none;
+    color: #fff;
+    text-align: right;
+  }
+
+  iframe{
+    height: 270px;
+  }
+}
+
 
 /* location_section */
 
@@ -2950,6 +2968,31 @@ footer {
   /* location_map_section */
 
   .location_map_section{
+
+    .thumbnail{
+      position:relative;
+
+      .location_btn{
+
+        padding: 8px 15px;
+        border: 1px solid var(--color1);
+        letter-spacing: 0.5px;
+        display: block;
+        text-decoration: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        font-size: 10px;
+        text-transform: uppercase;
+        border-radius: 3px;
+
+        .yt_icon{
+
+          width: 18px;
+          margin-right: 8px;
+        }
+      }
+    }
 
     .desktop_fluid_container{
 

@@ -31,7 +31,6 @@ const Typology = () => {
   }, []);
 
   useEffect(() => {
-    debugger;
     if (images.length !== totalFrames) return;
 
     // Setting up ScrollTrigger for image sequence

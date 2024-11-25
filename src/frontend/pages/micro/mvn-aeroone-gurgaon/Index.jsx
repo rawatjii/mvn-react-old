@@ -97,14 +97,13 @@ const data = {
     }
   ],
   amenities : [
+    { name: 'club house', imgSrc: 'clubhouse.webp' },  
     { name: 'Gym', imgSrc: 'gymSm.webp' },
     { name: 'Library', imgSrc: 'librarySm.webp' },
     { name: 'Business Center', imgSrc: 'businessSm.webp' },
     { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp' },
     { name: `theater`, imgSrc: 'theaterSm.webp' },
-    { name: `Business Centre`, imgSrc: 'theaterSm.webp' },
     { name: 'spa', imgSrc: 'spa.webp' },
-    { name: 'club house', imgSrc: 'clubhouse.webp' },  
   ],
 
   menities_section: [
