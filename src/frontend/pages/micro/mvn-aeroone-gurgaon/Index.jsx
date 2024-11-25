@@ -9,6 +9,7 @@ import MicroPageGurgaon from '../../MicroPageGurgaon';
 // const MicroPageGurgaon = React.lazy(()=>import('../../MicroPageGurgaon'));
 
 const data = {
+
   micro_hero_section:
   {
     isVdo: true,
