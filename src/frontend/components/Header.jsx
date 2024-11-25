@@ -133,6 +133,9 @@ const Header = () => {
               </div>
 
               <ul className="menus">
+
+              <li className="menuFlexBox">
+                <ul>
                 <li className="nav-link">
                   <NavLink to={`${import.meta.env.VITE_APP_URL}`} onClick={() => toggleMenu("close")}>
                     Home
@@ -147,8 +150,46 @@ const Header = () => {
                     About Us
                   </NavLink>
                 </li>
+                <li className="nav-link">
+                  <NavLink
+                    to={`${import.meta.env.VITE_APP_URL}media-center`}
+                    onClick={() => toggleMenu("close")}
+                  >
+                    Media Center
+                  </NavLink>
+                </li>
 
                 <li className="nav-link">
+                  <NavLink
+                    to={`${import.meta.env.VITE_APP_URL}blogs/`}
+                    onClick={() => toggleMenu("close")}
+                  >
+                    Blogs
+                  </NavLink>
+                </li>
+
+                <li className="nav-link">
+                  <NavLink
+                    to={`${import.meta.env.VITE_APP_URL}career/`}
+                    onClick={() => toggleMenu("close")}
+                  >
+                    Career
+                  </NavLink>
+                </li>
+
+                <li className="nav-link">
+                  <NavLink
+                    to={`${import.meta.env.VITE_APP_URL}contact-us`}
+                    onClick={() => toggleMenu("close")}
+                  >
+                    Contact Us
+                  </NavLink>
+                </li>
+                </ul>
+              </li>
+
+              <li className="menuFlexBox middle-menu">
+              <li className="nav-link">
                   <NavLink>Real Estate</NavLink>
                   <ul className="sub_menu">
                     <li className="nav-link">
@@ -197,6 +238,10 @@ const Header = () => {
                   </ul>
                 </li>
 
+              </li>
+
+                <li className="menuFlexBox">
+         
                 <li className="nav-link">
                   <NavLink
                     to={"/education/"}
@@ -256,42 +301,9 @@ const Header = () => {
                     </li>
                   </ul>
                 </li>
-
-                <li className="nav-link">
-                  <NavLink
-                    to={`${import.meta.env.VITE_APP_URL}media-center`}
-                    onClick={() => toggleMenu("close")}
-                  >
-                    Media Center
-                  </NavLink>
                 </li>
 
-                <li className="nav-link">
-                  <NavLink
-                    to={`${import.meta.env.VITE_APP_URL}blogs/`}
-                    onClick={() => toggleMenu("close")}
-                  >
-                    Blogs
-                  </NavLink>
-                </li>
-
-                <li className="nav-link">
-                  <NavLink
-                    to={`${import.meta.env.VITE_APP_URL}career/`}
-                    onClick={() => toggleMenu("close")}
-                  >
-                    Career
-                  </NavLink>
-                </li>
-
-                <li className="nav-link">
-                  <NavLink
-                    to={`${import.meta.env.VITE_APP_URL}contact-us`}
-                    onClick={() => toggleMenu("close")}
-                  >
-                    Contact Us
-                  </NavLink>
-                </li>
+                
 
                 <ul className="sub_menu">
                   <li>
