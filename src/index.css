@@ -1860,12 +1860,12 @@ footer {
 
   }
 
-  .mouse_scroll{
+  .mouse_scroll {
 
     position: fixed;
-    top:80vh;
+    top: 80vh;
 
-    .mouse{
+    .mouse {
 
       border-radius: 14px;
       transform: none;
@@ -1873,7 +1873,7 @@ footer {
       height: 36px;
       width: 22px;
 
-      .wheel{
+      .wheel {
 
         -webkit-animation: mouse-wheel 0.6s linear infinite;
         -moz-animation: mouse-wheel 0.6s linear infinite;
@@ -1889,16 +1889,19 @@ footer {
   }
 
   25% {
-      top: 2px;
+    top: 2px;
   }
+
   50% {
-      top: 3px;
+    top: 3px;
   }
+
   75% {
-      top: 2px;
+    top: 2px;
   }
+
   100% {
-      top: 1px;
+    top: 1px;
   }
 }
 
@@ -2264,7 +2267,10 @@ footer {
 .floor_plan_section {
   padding-top: 50px;
   padding-bottom: 0;
-  .sec_title {margin-bottom: 25px;}
+
+  .sec_title {
+    margin-bottom: 25px;
+  }
 
   .accordion-item {
     border: none;
@@ -2326,7 +2332,7 @@ footer {
       margin-top: -20px;
       position: relative;
       top: -23px;
-  
+
     }
 
     .location_points {
@@ -2571,38 +2577,38 @@ footer {
   z-index: 9999;
 }
 
-.upcoming_page{
+.upcoming_page {
 
   padding: 150px 0 50px;
   text-align: center;
 
-  h2{
+  h2 {
 
     text-transform: uppercase;
     letter-spacing: 2px;
   }
 
-  p{
+  p {
     margin: 0;
     letter-spacing: 2px;
   }
 }
 
-footer{
+footer {
 
-  .bottom{
+  .bottom {
 
-    p{
-      padding:0;
+    p {
+      padding: 0;
     }
 
-    small{
+    small {
 
       margin: auto;
     }
 
-    a{
-      color:#fff;
+    a {
+      color: #fff;
     }
   }
 }
@@ -2627,8 +2633,6 @@ footer{
       }
     }
   }
-
-
 }
 
 @media(max-width:767px) {
@@ -3122,7 +3126,7 @@ footer{
       border-radius: 100%;
       transform: scale(1);
       transition: all 0.3s ease;
-     
+
     }
 
     .rounded_div {

@@ -1125,6 +1125,13 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
     .home-about-content{text-align:center;padding-left:150px;padding-right:150px}
     section.overview_section .headingIcon{width:auto;height:50px;margin:0 auto;margin-bottom:20px}
 
+
+    .render_section {
+      .slides {
+        .renders-images {gap: 0 26px;}
+      }
+    }
+
 }
 
 
