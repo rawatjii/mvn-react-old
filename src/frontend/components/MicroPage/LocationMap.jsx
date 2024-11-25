@@ -52,7 +52,10 @@ const MicroLocationMap = ({data})=>{
   const sizeRefs = useRef([]);
   const [isLocationMapOpen, setIsLocationMapOpen] = useState(false);
 
-  const locationMapImg = [{src: data.mapIMG.desktop}]
+  console.log("location map img", data.mapIMG);
+  
+
+  const locationMapImg = [{src: data.mapIMG}]
   
   
 
@@ -130,8 +133,8 @@ const MicroLocationMap = ({data})=>{
         <div className="row justify-content-center">
           <div className="col-sm-8">
             <div className="thumbnail" onClick={()=>setIsLocationMapOpen(true)}>
-            <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block" />
-            <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none" />
+            <img src={data.mapIMG} alt="mvn-master-plan" className="img-fluid d-none d-md-block" />
+            <img src={data.mapIMG} alt="mvn-master-plan" className="img-fluid d-md-none" />
           </div>
           </div>
         </div>

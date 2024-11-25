@@ -4,7 +4,7 @@ import SecTitle from '../../../common/SecTitle/Index'
 
 function Slides() {
   return (
-    <div className='py-5'>
+    <div className='py-5 my-5'>
 
         <Container>
             <SecTitle className="text-center color style1">

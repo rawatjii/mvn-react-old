@@ -179,7 +179,7 @@ function Career() {
                                         <div className="content-half h-100">
                                             <div>
                                                 <h2>Life At MVN</h2>
-                                                <p>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being</p>
+                                                <p>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being.</p>
                                             </div>
                                         </div>
                                         <div className="arrow-g">
