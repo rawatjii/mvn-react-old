@@ -52,7 +52,7 @@ function Blog() {
             <img src={BlogIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" />
 
             <SecTitle className="text-center color style1 mb_30">
-                <h4 className="title">Unlock New Perspectives with Engaging and Informative Blogs</h4>
+                <h4 className="title">Perspectives That Redefine: Welcome to Our Blogs</h4>
             </SecTitle>
 
         </Container>
