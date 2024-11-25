@@ -9,10 +9,10 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import commitmentIcon from '../../assets/images/icons/brand/handshake.gif';
 import excellenceIcon from '../../assets/images/icons/brand/growth.gif';
 import customizedIcon from '../../assets/images/icons/brand/hand.gif';
-import MobilebrandBG from '../../assets/images/icons/brand/our-brand-ethos-bg.jpg';
-import DesktopbrandBG from '../../assets/images/icons/brand/our-brand-ethos-bg.jpg';
+import MobilebrandBG from '../../assets/images/icons/brand/our-brand-ethos-bg.webp';
+import DesktopbrandBG from '../../assets/images/icons/brand/our-brand-ethos-bg.webp';
 import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
-import LeftSideBanner from "../../assets/images/icons/brand/our-brand-ethos-bg-2.png";
+import LeftSideBanner from "../../assets/images/icons/brand/our-brand-ethos-bg-2.webp";
 
 
 gsap.registerPlugin(ScrollTrigger);

@@ -27,14 +27,14 @@ const projectsData = [
     mobile: mvnAerooneImg,
     desktop: mvnAerooneImgDesktop,
     name: "Mvn Aeroone",
-    location: "Gurgaon",
+    location: "Gurugram",
     link:'aeroone-gurgaon1'
   },
   {
     mobile: mvnMallImg,
     desktop: mvnMallImgDesktop,
     name: "Mvn Mall",
-    location: "Gurgaon",
+    location: "Gurugram",
     link:'mvn-mall-gurgaon'
   },
   {

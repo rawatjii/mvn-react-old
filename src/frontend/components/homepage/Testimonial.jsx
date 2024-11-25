@@ -3,20 +3,21 @@ import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
-import { Pagination } from 'swiper/modules';
+import { Pagination, Navigation } from 'swiper/modules';
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
 
 // Import Swiper styles
 import 'swiper/css';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 
 import quoteIcon from '../../assets/images/icons/quote.png';
 import testiImg1 from '../../assets/images/testimonials/naina.png';
 import testiImg2 from '../../assets/images/testimonials/prabhat.png';
 import testiImg3 from '../../assets/images/testimonials/prashant.png';
 import testiImg4 from '../../assets/images/testimonials/vikas.png';
-// import testiImg4 from '../../assets/images/testimonials/vikas.png';
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 const testimonialData = [
   { 
@@ -80,7 +81,9 @@ const Testimonial = () => {
   return (
     <section className="section testimonial_section">
       <Container>
+      
         <SecTitle className="text-center color style1">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">What Client Says!</h4>
         </SecTitle>
 
@@ -90,7 +93,11 @@ const Testimonial = () => {
           slidesPerView={1}
           className="testimonial_carousel"
           pagination={{ clickable: true }}
-          modules={[Pagination]}
+          navigation={{
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+          }}
+          modules={[Pagination, Navigation]}
           breakpoints={{
             768: {
               slidesPerView: 3, // 3 items for desktop
@@ -122,6 +129,10 @@ const Testimonial = () => {
             </SwiperSlide>
           ))}
         </Swiper>
+
+        {/* Add navigation buttons */}
+        <div className="swiper-button-prev"></div>
+        <div className="swiper-button-next"></div>
       </Container>
     </section>
   );
