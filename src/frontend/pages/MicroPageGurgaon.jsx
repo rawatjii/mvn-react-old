@@ -61,9 +61,9 @@ const MicroPageGurgaon = ({ data }) => {
           {/* {<Video2 data={data} />}  */}
           <LivingRoomVideoGurugram data={data}  />
           <Video3 data={data} /> {/*no isssue*/}
+          <MasterBedroom data={data} /> {/*no isssue*/}
           {/* No polution zone location */}
           <Location /> {/*no isssue*/}
-          <MasterBedroom data={data} /> {/*no isssue*/}
           <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
           <Renders data={data} />  {/*no isssue*/}
           <MicroHighlights data={data.highlight} />  {/*no isssue*/}
