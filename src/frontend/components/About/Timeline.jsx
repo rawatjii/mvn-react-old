@@ -39,7 +39,7 @@ const data = [
   {
     img: gopalInstitute,
     year: '2008',
-    title: 'Gopal Sharma Institute of Engineering and Technology | Co.Edu',
+    title: 'MVN Athens, Faridabad | Luxury Apartments | Project by Gopal Global Developers Pvt Ltd',
     location: 'Palwal, Haryana'
   },
   {
@@ -58,7 +58,7 @@ const data = [
     img: mvnUniversityPalwal,
     year: '2012',
     title: 'MVN University ',
-    location: 'Haryana State '
+    location: 'Haryana'
   }
 ];
 

@@ -382,11 +382,19 @@ footer .footer-bottom-border.container .row {
   text-transform: math-auto;
 }
 
-.testimonial_section .swiper-button-prev{position:absolute;bottom:60px;left:48%;top:unset;width:40px;height:40px;border-radius:50%;background-color:#edd363;opacity:1!important}
-.testimonial_section .swiper-button-next{position:absolute;bottom:60px;left:52%;top:unset;width:40px;height:40px;border-radius:50%;background-color:#edd363;opacity:1!important}
+.testimonial_section .swiper-button-prev{position:absolute;bottom:60px;left:46%;top:unset;width:40px;height:40px;border-radius:50%;background-color:#edd363;opacity:1!important}
+.testimonial_section .swiper-button-next{position:absolute;bottom:60px;left:51%;top:unset;width:40px;height:40px;border-radius:50%;background-color:#edd363;opacity:1!important}
 .testimonial_section .swiper-button-prev::after, .testimonial_section .swiper-button-next::after{color:#fff;font-size:16px}
 .testimonial_section {padding-top: 50px!important;padding-bottom: 220px!important;}
 section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
+
+
+
+.testimonial_section {& .testimonial_carousel { .swiper-pagination {    position: relative; margin-top: 9px; bottom: -57px;}}}
+
+
+
+/* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
 
 
 @media screen and (min-width: 767px) {
@@ -1125,6 +1133,18 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
     .home-about-content{text-align:center;padding-left:150px;padding-right:150px}
     section.overview_section .headingIcon{width:auto;height:50px;margin:0 auto;margin-bottom:20px}
 
+    .our_team_section p {font-size: 15px!important;}
+    .menus .menuFlexBox{gap:10px;width:33%}
+    .menus .menus{display:flex;flex-wrap:wrap;justify-content:space-between}
+    .menus .sub_menu{width:100%}
+    ul.menus { display: flex;  flex-wrap: wrap;justify-content: space-between;}
+    .navbar {& .navbar_collapse {  & .menus {.sub_menu { background: transparent; }}}}
+    ul.menus li.menuFlexBox ul {display: grid;justify-content: center;}
+    .menuFlexBox.middle-menu { border-left: 1px solid #d6bf71; border-right: 1px solid #d6bf71;}
+    .navbar { & .navbar_collapse {.menus { height: unset;}}}
+    ul.menus a.active {text-align: center;width: 100%;}
+    ul.menus li.nav-link { text-align: center;}
+
 
     .render_section {
       .slides {
@@ -1134,6 +1154,8 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
 
 }
 
+
+/* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
 
 
 
@@ -1542,7 +1564,7 @@ footer .box.office-details-box {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: .20
+  opacity: .20;
 }
 
 section.section.other_projects_section.pb-0 {
@@ -1628,7 +1650,7 @@ footer {
 }
 
 footer .address-details, footer .phone-details, footer .mail-details {
-  color: #c7c7c7;
+  color: #9b9a9a;
 }
 
 
@@ -1657,6 +1679,7 @@ footer .address-details, footer .phone-details, footer .mail-details {
 .press_release_slider .thumbnail {width: 87%;}
 section.section.press-releases-container {padding-bottom: 0px;}
 section.section.press-releases-container  .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {padding-bottom: 70px;}
+
 
 
 @media(max-width:1600px) {
