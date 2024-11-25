@@ -1146,6 +1146,12 @@ section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
     ul.menus li.nav-link { text-align: center;}
 
 
+    .render_section {
+      .slides {
+        .renders-images {gap: 0 26px;}
+      }
+    }
+
 }
 
 

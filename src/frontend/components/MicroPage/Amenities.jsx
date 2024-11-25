@@ -5,20 +5,17 @@ import * as CONFIG from "../../../config/config";
 
 gsap.registerPlugin(ScrollTrigger);
 
-// Array of amenity data
-const amenities = [
-  { name: 'Gym', imgSrc: 'gymSm.webp' },
-  { name: 'Library', imgSrc: 'librarySm.webp' },
-  { name: 'Business Center', imgSrc: 'businessSm.webp' },
-  { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp' },
-  { name: `theater`, imgSrc: 'theaterSm.webp' },
-  { name: `Business Centre`, imgSrc: 'theaterSm.webp' },
-  { name: 'spa', imgSrc: 'spa.webp' },
-  { name: 'club house', imgSrc: 'clubhouse.webp' },
-  // { name: 'Swimming Pool', imgSrc: 'spa' },  
-];
 
-export default function Amenities() {
+export default function Amenities({data}) {
+
+  const amenities = data
+
+  console.log('amenities', amenities);
+  
+
+
+
+
   const sectionsRef = useRef([]);
 
   useEffect(() => {
