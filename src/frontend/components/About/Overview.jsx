@@ -101,8 +101,8 @@ const Overview = () => {
           </p>
 
           <p ref={(el) => (desRefs.current[1] = el)}>
-            Our first educational venture Modern Vidya Niketan School was conceived in 1983.
-            It is today one of the most respected and acclaimed schools in its category. Several
+            Our first educational venture, Modern Vidya Niketan School was conceived in 1983.
+            Today it is one of the most respected and acclaimed schools in the field. Several
             other institutions in the NCR region bear our name and are considered the ideal
             learning grounds for budding destinies. Not content to rest on our laurels, we are
             today forging ahead with strategic forays into urban infrastructure development, real

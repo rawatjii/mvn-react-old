@@ -84,7 +84,7 @@ const Philosophy = () => {
               Our Vision
             </h4>
             <p ref={(el) => desRefs.current[0] = el}>
-              At MVN, we are fired by an indomitable will to shape the future. We commenced our corporate journey in 1983 and have since evolved into a contemporary business entity with interests in education and real estate.
+            We aim to set new standards in value across education, urban infrastructure, hospitality, and real estate – the key pillars of highly transformative and alluring urbanscapes.
             </p>
           </li>
 

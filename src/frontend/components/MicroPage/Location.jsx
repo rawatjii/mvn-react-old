@@ -141,15 +141,8 @@ const Location = () => {
           ))
         }
       </Swiper>
-      {/* <span className="abs_number"
-        style={{
-          backgroundImage: `url(${CONFIG.IMAGE_URL}micro/location/${pageData[activeIndex].imgSrc})`,
-          backgroundSize: "cover", // Ensures the background image covers the element
-          backgroundPosition: "center", // Centers the image within the element
-          backgroundRepeat: "no-repeat", // Prevents the image from repeating
-        }}
-      >0
-      </span> */}
+
+      
       <span className="abs_number">
         <img
           className="zero_img"
