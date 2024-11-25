@@ -45,7 +45,7 @@ const data = {
   },
   video3: {
     title: "ELEVATED LIVING",
-    desc: "Turn your living room into the ultimate celebration hub, where lively gatherings and stylish soirées come alive, creating lasting memories and joyful moments. ",
+    desc: "Turn your living room into the ultimate celebration hub, where lively gatherings and stylish stories come alive, creating lasting memories and joyful moments. ",
     isVdo: true,
   },
   masterBedroom: {
@@ -56,9 +56,9 @@ const data = {
   highlights: [
     "Power backup for common facilities.",
     "Italian/Imported Marble flooring.",
-    "Television points in living and bedrooms.",
-    "Telephone points in living and master bedroom.",
-    "Split AC provision in living and bedrooms.",
+    "Television points in living room and bedrooms.",
+    "Telephone points in living room and master bedroom.",
+    "Split AC provision in living room and bedrooms.",
     "Premium emulsion paint finish.",
   ],
   walkthrough: {
@@ -158,19 +158,17 @@ const data = {
     point: [
       'Power backup for common facilities.',
       'Italian/Imported Marble flooring.',
-      'Television points in living and bedrooms.',
-      'Telephone points in living and master bedroom.',
-      'Split AC provision in living and bedrooms.',
+      'Television points in living room and bedrooms.',
+      'Telephone points in living room and master bedroom.',
+      'Split AC provision in living room and bedrooms.',
       'Premium emulsion paint finish.',
     ]
   },
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
-    mapIMG: {
-      desktop:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp',
-      mobile:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp'
-    },
+    mapIMG:  CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp',
+    
     //     yasho bhoomi
     // indira gandhi international airport
     // diplomatic enclave

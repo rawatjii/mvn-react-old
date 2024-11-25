@@ -6,6 +6,7 @@ import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ScrollToTop from '../../common/ScrollToTop';
 
 import { Outlet } from "react-router-dom";
 import { useEffect } from "react";
@@ -15,7 +16,7 @@ import { useEffect } from "react";
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Layout = ({children})=>{
-
+  ScrollToTop();
   useEffect(()=>{
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
