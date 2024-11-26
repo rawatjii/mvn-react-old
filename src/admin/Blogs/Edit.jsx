@@ -9,8 +9,6 @@ import Button from 'common/Button/Button'
  
 import * as CONFIG from 'root/config/config';
 
-
-
 const EditBlog = ()=>{
     const [isLoading, setIsLoading] = useState(false);
     const [data, setData] = useState({
