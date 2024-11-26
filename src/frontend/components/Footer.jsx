@@ -6,7 +6,8 @@ import LazyLoad from "react-lazyload";
 import twitterIcon from '../assets/images/icons/social/twitter.png';
 import linkedinIcon from '../assets/images/icons/social/linkedin.png';
 import fbIcon from '../assets/images/icons/social/fb.png';
-import instaIcon from '../assets/images/icons/social/instagram.png';
+import instaIcon from '../assets/images/icons/social/instagram-2.png';
+import YoutubeIcon from '../assets/images/icons/social/youtube.png';
 import BtnIcon from '../assets/images/icons/send.png';
 // import FormBgImg from '../assets/images/icons/form-bg.png';
 import FooterMiddleLogo from '../assets/images/logomvn.png';
@@ -44,6 +45,11 @@ const Footer = () => {
                 <li>
                   <a href=" https://www.instagram.com/mvn_infrastructure/" className="icon">
                     <img src={instaIcon} alt="mvn-insta-icon" className="img-fluid" />
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.youtube.com/@ekayamindia" className="icon">
+                    <img src={YoutubeIcon} alt="mvn-insta-icon" className="img-fluid" />
                   </a>
                 </li>
               </ul>
