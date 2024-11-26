@@ -492,20 +492,38 @@ section.section.experience-section {
   position: relative;
 }
 .overview-section {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../../assets/images/mvn-mall/overview_img1.jpg) no-repeat;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(../../assets/images/mvn-mall/overview_img1.jpg) no-repeat;
   position: relative;
   padding-left: 70px;
   background-size: cover;
   background-attachment: fixed;
- 
 }
 
-section.section.experience-section .carousel.slide  .carousel-inner {
+section.section.experience-section .carousel.slide .carousel-inner {
   overflow: unset;
 }
 
+.d-view{
+  display: block;
+}
+
+.m-view{
+  display: none;
+}
+
+.mvn_mall .container{
+  max-width: 100%;
+}
 
 /* Responsive Css  */
+
+@media (max-width: 1440px) {
+  .experience-section .exp-content {
+    top: 85%;
+  }
+}
+
 @media (min-width: 1280px) {
   .banner-img .mobile-img {
     width: 100%;
@@ -602,15 +620,14 @@ section.section.experience-section .carousel.slide  .carousel-inner {
   }
   .image-exp img.img-fluid.w-100 {
     object-fit: 0 38%;
-
   }
   .experience-section .exp-content {
     padding: 40px 60px;
     width: fit-content;
-    top: 71%;
+    top: 85%;
     left: 25%;
     border-radius: 10px;
-    width: 30%;
+    width: 35%;
   }
   .experience-section .diamond-icons {
     padding: 40px 0 0px;
@@ -734,7 +751,8 @@ section.section.experience-section .carousel.slide  .carousel-inner {
 
 @media (max-width: 768px) {
   .overview-content {
-    margin-top: 3rem;
+    margin-top: 6rem;
+    padding: 0;
   }
 
   .overview-image-content img {
@@ -744,7 +762,7 @@ section.section.experience-section .carousel.slide  .carousel-inner {
   }
 
   .overview-section .overview-image .overview-image-content {
-    top: 55%;
+    top: 100%;
   }
 
   .location-section .container {
@@ -752,11 +770,27 @@ section.section.experience-section .carousel.slide  .carousel-inner {
   }
 
   .experience-section .custom-indicators {
-    padding-top: 10rem;
+    padding-top: 7rem;
     justify-content: center;
     padding-right: 0;
   }
+
+  .d-view{
+    display: none;
+  }
+  
+  .m-view{
+    display: block;
+  }
+
+  .experience-section .exp-content h4{
+    font-size: 18px;
+  }
+
+  .overview-section{
+    padding-left: 0;
+  }
 }
-.typology_section .img{
-  height:100px
+.typology_section .img {
+  height: 100px;
 }

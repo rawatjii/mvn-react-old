@@ -4,8 +4,8 @@ import MvnLogo from "../../assets/images/mvn-mall/mvn-logo-icon.png";
 
 const OverviewSec = () => {
   return (
-    <section className="section overview-section">
-      {/* <div class="container"> */}
+    <section className="section overview-section mvn_mall">
+      <div class="container">
       <div className="overview-image">
         <img className="ovr-img" src={OverviewImg} alt="overview-img" />
         <div className="overview-image-content">
@@ -26,7 +26,7 @@ const OverviewSec = () => {
           ensuring a seamless and well-organized shopping experience.
         </p>
       </div>
-      {/* </div> */}
+      </div>
     </section>
   );
 };
