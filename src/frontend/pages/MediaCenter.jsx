@@ -30,12 +30,12 @@ import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
 import pressReleaseImg1 from '../assets/images/mediacenter/press-relase-img-1.jpg'
 import pressReleaseImg2 from '../assets/images/mediacenter/press-relase-img-2.jpg'
 import pressReleaseImg3 from '../assets/images/mediacenter/press-relase-img-3.jpg'
-import pressReleaseImg4 from '../assets/images/mediacenter/press-relase-img-4.jpg'
+// import pressReleaseImg4 from '../assets/images/mediacenter/press-relase-img-4.jpg'
 
 import pressReleasePdf1 from '../assets/images/mediacenter/theprint.pdf'
 import pressReleasePdf2 from '../assets/images/mediacenter/daily24x7news.pdf'
 import pressReleasePdf3 from '../assets/images/mediacenter/edukida.pdf'
-import pressReleasePdf4 from '../assets/images/mediacenter/mediabulletins.pdf'
+// import pressReleasePdf4 from '../assets/images/mediacenter/mediabulletins.pdf'
 
 import EnquireForm from '../components/homepage/EnquireForm'
 import Video from '../components/Video'
@@ -82,14 +82,18 @@ function MediaCenter() {
             eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
         }
     ]
-    const newsImages = [
-        { src: newsIMG1, alt: "Image 1" },
-        { src: newsIMG2, alt: "Image 2" },
-        { src: newsIMG3, alt: "Image 3" },
-        { src: newsIMG4 , alt: "Image 4" },
-        { src: newsIMG5 , alt: "Image 5" },
-        { src: newsIMG6 , alt: "Image 6" },
-    ]
+    const newsImages = {
+        isshow:true,
+        galleryData:[
+            { src: newsIMG1, alt: "Image 1" },
+            { src: newsIMG2, alt: "Image 2" },
+            { src: newsIMG3, alt: "Image 3" },
+            { src: newsIMG4 , alt: "Image 4" },
+            { src: newsIMG5 , alt: "Image 5" },
+            { src: newsIMG6 , alt: "Image 6" },
+        ]
+    }
+    
 
     const ourGallery = [
         {

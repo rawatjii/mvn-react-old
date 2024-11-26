@@ -35,7 +35,7 @@ function GallerySlider({ data, slidesPerView, spaceBetween, navigation }) {
                     },
                 }}
             >
-                {images.map((image, index) => (
+                {images?.map((image, index) => (
                     <SwiperSlide key={index}>
                         <img
                             src={image.src}
