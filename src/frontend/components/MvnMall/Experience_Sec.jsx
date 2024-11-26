@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import Diamond from "../../assets/images/mvn-mall/diamond.png";
 import HighlightedDiamond from "../../assets/images/mvn-mall/diamond-dark.png"; // Highlighted version
-import Exp_Img1 from "../../assets/images/mvn-mall/exp1.webp";
-import Exp_Img2 from "../../assets/images/mvn-mall/exp2.webp";
-import Exp_Img3 from "../../assets/images/mvn-mall/exp3.webp";
+import DExp_Img1 from "../../assets/images/mvn-mall/dexp1.jpg";
+import DExp_Img2 from "../../assets/images/mvn-mall/dexp2.jpg";
+import DExp_Img3 from "../../assets/images/mvn-mall/dexp3.jpg";
 import Carousel from "react-bootstrap/Carousel";
 
 const Experience_Sec = () => {
@@ -18,7 +18,6 @@ const Experience_Sec = () => {
       id:1,
       src: Diamond,
       activeSrc: HighlightedDiamond,
-      content: "A Culinary Experience Bigger Than Your Imagination",
       alt: "First slide thumbnail",
     },
     {
@@ -26,29 +25,30 @@ const Experience_Sec = () => {
       src: Diamond,
       activeSrc: HighlightedDiamond,
       alt: "Second slide thumbnail",
-      content: "HOSPITALITY BIGGER THAN YOUR IMAGINATION",
     },
     {
       id:3,
       src: Diamond,
       activeSrc: HighlightedDiamond,
       alt: "Third slide thumbnail",
-      content: "ENTERTAINMENT BIGGER THAN YOUR IMAGINATION",
     },
   ];
-
+  
   const imgSlid = [
     {
       id: 1,
-      imgSlide: Exp_Img1,
+      imgSlide: DExp_Img1,
+      content: "A Culinary Experience Bigger Than Your Imagination",
     },
     {
       id: 2,
-      imgSlide: Exp_Img2,
+      imgSlide: DExp_Img2,
+      content: "HOSPITALITY BIGGER THAN YOUR IMAGINATION",
     },
     {
       id: 3,
-      imgSlide: Exp_Img3,
+      imgSlide: DExp_Img3,
+      content: "ENTERTAINMENT BIGGER THAN YOUR IMAGINATION",
     },
   ];
 
@@ -69,7 +69,9 @@ const Experience_Sec = () => {
                 alt="First slide"
               />
             </div>
-            <Carousel.Caption></Carousel.Caption>
+            <div class="exp-content">
+              <h4>{item.content}</h4>
+            </div>
           </Carousel.Item>
         ))}
       </Carousel>
@@ -93,11 +95,11 @@ const Experience_Sec = () => {
                 objectFit: "cover",
               }}
             />
-            <div class="exp-content">
-              <h4>{thumbnail.content}</h4>
-            </div>
+            
           </>
         ))}
+
+      
       </div>
     </section>
   );

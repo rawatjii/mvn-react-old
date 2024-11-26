@@ -500,6 +500,11 @@ section.section.experience-section {
  
 }
 
+section.section.experience-section .carousel.slide  .carousel-inner {
+  overflow: unset;
+}
+
+
 /* Responsive Css  */
 @media (min-width: 1280px) {
   .banner-img .mobile-img {
@@ -596,9 +601,8 @@ section.section.experience-section {
     );
   }
   .image-exp img.img-fluid.w-100 {
-    height: 80vh;
-    object-fit: cover;
-    object-position: top;
+    object-fit: 0 38%;
+
   }
   .experience-section .exp-content {
     padding: 40px 60px;
@@ -698,11 +702,11 @@ section.section.experience-section {
     background-size: 650px;
   }
   .image-exp img.img-fluid.w-100 {
-    height: 70vh;
+    /* height: 70vh; */
   }
   .experience-section .exp-content {
     padding: 25px 57px;
-    top: 77%;
+    top: 90%;
     left: 25%;
     width: 33%;
   }
