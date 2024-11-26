@@ -8,8 +8,12 @@ import BlogIcon from "../assets/images/blogs/blogicon.png";
 
 import blogIMG from "../assets/images/blogs/blog-1.jpg";
 import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { setSelectedBlog } from "../../redux/blogsSlice";
 
 function Blog() {
+  const dispatch = useDispatch();
+
   const breadcrumbs = {
     title: "Blogs",
     links: [
@@ -78,6 +82,7 @@ function Blog() {
                         className="btn btn_style2"
                         onClick={() => {
                           localStorage.setItem("selectedBlog", i);
+                          dispatch(setSelectedBlog(i))
                         }}
                       >
                         View Details

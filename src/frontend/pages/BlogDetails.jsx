@@ -7,8 +7,10 @@ import SecTitle from "../../common/SecTitle/Index";
 import BlogIcon from "../assets/images/blogs/blogicon.png";
 
 import blogIMG from "../assets/images/blogs/blog-1.jpg";
+import { useSelector } from "react-redux";
 
 function BlogDetails() {
+  const selectedBlog = useSelector((state) => state.blogs.selectedBlog);
   const breadcrumbs = {
     title: "Blogs",
     links: [
@@ -21,7 +23,6 @@ function BlogDetails() {
       },
     ],
   };
-
   const blogData = [
     {
       title: "Sky Villas Across the Globe: A Benchmark in Opulence",
