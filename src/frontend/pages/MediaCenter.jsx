@@ -23,7 +23,8 @@ import newsIMG6 from '../assets/images/mediacenter/news-img-6.jpeg'
 import mediaGalleryImg1 from '../assets/images/projects/project-img-1.jpg'
 import mediaGalleryImg2 from '../assets/images/projects/project-img-2.jpg'
 import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
-
+import mediaGalleryImg4 from '../assets/images/projects/gallery-img-5.jpg'
+import mediaGalleryImg4 from '../assets/images/projects/gallery-img-6.jpg'
 // import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
 // import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
 import youtubeVideoBanner1 from '../assets/images/mediacenter/youtube-video-banner-1.jpg'
@@ -116,6 +117,14 @@ function MediaCenter() {
                 alt: "Image 3"
             },
             {
+                src: mediaGalleryImg4,
+                alt: "Image 4"
+            },
+            {
+                src: mediaGalleryImg5,
+                alt: "Image 5"
+            },
+            {
                 src: mediaGalleryImg1,
                 alt: "Image 4"
             },
@@ -125,6 +134,14 @@ function MediaCenter() {
             },
             {
                 src: mediaGalleryImg3,
+                alt: "Image 6"
+            },
+            {
+                src: mediaGalleryImg4,
+                alt: "Image 7"
+            },
+            {
+                src: mediaGalleryImg5,
                 alt: "Image 6"
             }
           
