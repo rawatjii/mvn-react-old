@@ -121,7 +121,7 @@ function BlogDetails() {
         ],
       },
       {
-        title: "dwarka-expressway-redefining-urban-connectivity-and-real-estate-dynamics",
+        title: "Dwarka Expressway Redefining Urban Connectivity And Real Estate Dynamics",
         slug:'dwarka-expressway-redefining-urban-connectivity-and-real-estate-dynamics',
         img: blogIMG,
         date: "16 April, 2021",
@@ -138,9 +138,9 @@ function BlogDetails() {
           },
           {
             heading: `The Connectivity Boost`,
-            description: `Dwarka Expressway connects Shiv Murti in Delhi to the Kherki Daula Toll Plaza in Gurugram, creating a seamless corridor between key urban hubs. Its strategic layout includes a 3.6 km shallow tunnel providing direct access to Terminal 3 of Indira Gandhi International Airport, dramatically reducing travel time for frequent flyers and international travellers. By offering an alternative route to the highly congested NH-48, the expressway has alleviated long-standing traffic woes in the regiom.`
-
-            `Its integration with essential infrastructures, such as the India International Convention Centre in Dwarka Sector 25, positions it as a critical link for business and leisure travellers. Furthermore, the Intelligent Transport System (ITS) ensures real-time traffic monitoring, making commutes safer and more efficient.`,
+            description: `Dwarka Expressway connects Shiv Murti in Delhi to the Kherki Daula Toll Plaza in Gurugram, creating a seamless corridor between key urban hubs. Its strategic layout includes a 3.6 km shallow tunnel providing direct access to Terminal 3 of Indira Gandhi International Airport, dramatically reducing travel time for frequent flyers and international travellers. By offering an alternative route to the highly congested NH-48, the expressway has alleviated long-standing traffic woes in the regiom.
+<br>
+            Its integration with essential infrastructures, such as the India International Convention Centre in Dwarka Sector 25, positions it as a critical link for business and leisure travellers. Furthermore, the Intelligent Transport System (ITS) ensures real-time traffic monitoring, making commutes safer and more efficient.`,
           },
           {
             heading: `An Engineering and Environmental Marvel`,
@@ -286,7 +286,7 @@ setSelectedBlog(result);
       </Container>
       <div className="container">
         <div className="row row-gap-3">
-         <div className="col-sm-12 col-md-6 col-lg-6">
+         <div className="col-sm-12 col-md-8 col-lg-8">
  
          <div className="w-100 p-3">
             <img
@@ -341,14 +341,14 @@ setSelectedBlog(result);
 
 
          </div>
-         <div className="col-sm-12 col-md-6 col-lg-6">
+         <div className="col-sm-12 col-md-4 col-lg-4">
 
 
          <h3>Related Blogs</h3>
           {blogData2 &&
             blogData2.map((el, i) => (
               <div
-                className="col-sm-12 col-md-6 col-lg-4 col-xl-3"
+                className="col-sm-12 col-md-4 col-lg-4 col-xl-4"
                 key={`blog-${i}`}
               >
                 <div className="blog-platter-box">
