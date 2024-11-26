@@ -2643,6 +2643,14 @@ footer {
 }
 
 
+.blog_page .microbanner_bg {
+  object-fit: cover;
+  position: absolute;
+  object-position: 10% 20%;
+}
+
+
+
 /* start responsive */
 /* by bhupendra */
 @media(min-width:768px) {
@@ -3061,8 +3069,6 @@ footer {
 }
 
 
-
-
 .render_section {
   position: relative;
   display: flex;
@@ -3283,6 +3289,7 @@ footer {
     }
   }
 }
+
 
 
 .main_am {

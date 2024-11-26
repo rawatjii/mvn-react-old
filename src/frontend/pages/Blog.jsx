@@ -1,6 +1,6 @@
 import React from "react";
 import MicroBanner from "../components/MicroBanner/Index";
-import Desktopmicro_bg from "../assets/images/blogs/blogBG.jpg";
+import Desktopmicro_bg from "../assets/images/blogs/1865.jpg";
 import { Container } from "react-bootstrap";
 import SecTitle from "../../common/SecTitle/Index";
 

@@ -4,7 +4,6 @@ import * as CONFIG from '../../../config/config';
 import './initialLoading.css';
 
 const InitialLoading = ()=>{
-    debugger;
     useEffect(()=>{
         document.querySelector('body').classList.add('in_loading');
 
