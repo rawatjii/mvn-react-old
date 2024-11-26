@@ -29,22 +29,53 @@ function Blog() {
 
   const blogData = [
     {
-      title: "How 2021 Will Be Favourable For You To Buy Your Dream Home",
+      title: "Sky Villas Across the Globe: A Benchmark in Opulence",
       img: blogIMG,
       date: "16 April, 2021",
       link: "",
+      content: [
+        `Internationally, sky villas are the hallmark of luxury. From
+              Dubai's iconic Burj Khalifa residences to New York's Billionaires'
+              Row penthouses, these homes offer exclusivity, world-class
+              interiors, and breathtaking vistas. In Singapore, sky villas in
+              Marina Bay Sands provide private infinity pools, concierge
+              services, and direct access to high-end shopping and
+              entertainment.`,
+        `Inspired by these global masterpieces, MVN's Sky Villas are
+              designed to reflect similar grandeur, ensuring every element
+              speaks of sophistication and class. With expansive layouts and
+              cutting-edge amenities, these villas redefine urban living in
+              India.`,
+      ],
     },
     {
-      title: "How 2021 Will Be Favourable For You To Buy Your Dream Home",
+      title: "Gurugram's Real Estate Evolution Meets International Luxury",
       img: blogIMG,
       date: "16 April, 2021",
       link: "",
+      content: [
+        `Gurugram has evolved into India's premier luxury real estate destination thanks to its rapid urbanization and proximity to Delhi and the airport. MVN's Sky Villas elevate this status further by introducing a concept that combines the aesthetics of global architecture with the practicality of Gurugram's cosmopolitan lifestyle.`,
+        `Imagine living in a home that merges the grandeur of New York's skyline views with the exclusivity of Dubai's luxury interiors—all located in the heart of Gurugram.`,
+      ],
     },
     {
-      title: "How 2021 Will Be Favourable For You To Buy Your Dream Home",
+      title: "Luxury at Unimaginable Heights: Features of MVN Sky Villas",
       img: blogIMG,
       date: "16 April, 2021",
       link: "",
+      content: [
+        `MVN's Sky Villas are not just homes; they're a statement of class. Here's what sets them apart:`,
+        {
+          type: "li",
+          list: [
+            `Expansive Living Spaces: Open-concept designs with floor-to-ceiling glass walls offering uninterrupted views of the city.`,
+            `Private Amenities: Dedicated elevators, private terraces, and rooftop pools ensure exclusivity.`,
+            `Premium Finishes: Imported marble flooring, smart home automation, and designer fixtures make every corner exquisite.`,
+            `World-Class Facilities: Residents will enjoy access to concierge services, a fitness center, landscaped gardens, and a sky lounge.`,
+          ],
+        },
+        `These elements ensure that MVN's Sky Villas are a notch above the rest, giving Gurugram a taste of global luxury.`,
+      ],
     },
   ];
 
