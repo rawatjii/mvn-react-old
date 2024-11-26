@@ -1,12 +1,14 @@
 import React from 'react'
 import MicroBanner from '../components/MicroBanner/Index'
-import Desktopmicro_bg from '../assets/images/blogs/blogBG.jpg'
+import Desktopmicro_bg from '../assets/images/blogs/1865.jpg'
 import { Container } from 'react-bootstrap'
 import SecTitle from '../../common/SecTitle/Index'
 
 import BlogIcon from '../assets/images/blogs/blogicon.png'
 
 import blogIMG from '../assets/images/blogs/blog-1.jpg'
+import headingIconImg from "../assets/images/icons/heading-icon-img.png";
+
 
 function Blog() {
     const breadcrumbs = {
@@ -49,9 +51,10 @@ function Blog() {
     <div className='blog_page'>
         <MicroBanner bg={Desktopmicro_bg} data={breadcrumbs} />
         <Container className='text-center py-5'>
-            <img src={BlogIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" />
+            {/* <img src={BlogIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" /> */}
 
             <SecTitle className="text-center color style1 mb_30">
+            <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                 <h4 className="title">Perspectives That Redefine: Welcome to Our Blogs</h4>
             </SecTitle>
 

@@ -5,7 +5,7 @@ import * as CONFIG from '../../config/config';
 import mediaBG from '../assets/images/media/mediacenter.png'
 import { Container } from 'react-bootstrap'
 import SecTitle from '../../common/SecTitle/Index'
-import mediaIcon from '../assets/images/icons/media/media.png'
+// import mediaIcon from '../assets/images/icons/media/media.png'
 import McVideo from '../assets/videos/media/video.mp4'
 import McVideoPoster from '../assets/videos/media/poster.png'
 import rightArrow from '../assets/images/mediacenter/right-arrow.png'
@@ -27,9 +27,9 @@ import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
 import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
 import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
 
-import pressReleaseImg1 from '../assets/images/mediacenter/press-relase-img-1.jpg'
-import pressReleaseImg2 from '../assets/images/mediacenter/press-relase-img-2.jpg'
-import pressReleaseImg3 from '../assets/images/mediacenter/press-relase-img-3.jpg'
+import pressReleaseImg1 from '../assets/images/mediacenter/theprint-thubmnail.jpg'
+import pressReleaseImg2 from '../assets/images/mediacenter/daily-news-logo.jpg'
+import pressReleaseImg3 from '../assets/images/mediacenter/edukida-logo.jpg'
 // import pressReleaseImg4 from '../assets/images/mediacenter/press-relase-img-4.jpg'
 
 import pressReleasePdf1 from '../assets/images/mediacenter/theprint.pdf'
@@ -43,6 +43,8 @@ import Enquire from '../components/homepage/Enquire'
 import GallerySlider from '../components/GallerySlider'
 import PressRelease from '../components/PressRelease';
 import pdfICON from '../assets/images/icons/pdf.png'
+
+import headingIconImg from "../assets/images/icons/heading-icon-img.png";
 
 
 function MediaCenter() {
@@ -68,18 +70,21 @@ function MediaCenter() {
             poster: eventGalleryImg1,
             video: McVideo,
             eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
+          
         },
         {
             id: 2,
             poster: eventGalleryImg2,
             video: McVideo,
             eventHeading: `MVN Infrastructure Celebrates MVN Mall's New Office Opening with Traditional Hawan Ceremony`,
+         
         },
         {
             id: 3,
             poster: eventGalleryImg1,
             video: McVideo,
             eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
+           
         }
     ]
     const newsImages = {
@@ -174,16 +179,22 @@ function MediaCenter() {
             thumbnail: pressReleaseImg1,
             pdf: pressReleasePdf1,
             title: "Press Release 1",
+            presscontent:"MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki",
+            EventDate:"10 October, 2024",
         },
         {
             thumbnail: pressReleaseImg2,
             pdf: pressReleasePdf2,
             title: "Press Release 2",
+            presscontent:"MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki",
+            EventDate:"10 October, 2024",
         },
         {
             thumbnail: pressReleaseImg3,
             pdf: pressReleasePdf3,
             title: "Press Release 3",
+            presscontent:"MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki",
+            EventDate:"10 October, 2024",
         },
         // {
         //     thumbnail: pressReleaseImg4,
@@ -200,9 +211,10 @@ function MediaCenter() {
             <MicroBanner bg={mediaBG} data={breadcrumbs} />
             <section className="section media-news-section pb-0">
                 <Container className='text-center'>
-                    <img src={mediaIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" />
+                    {/* <img src={mediaIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" /> */}
 
                     <SecTitle className="text-center color style1 mb_30">
+                    <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                         <h4 className="title">latest news</h4>
                     </SecTitle>
 
@@ -212,6 +224,7 @@ function MediaCenter() {
                         <div className="col-sm-6 px-md-0">
                             <div className="media-news_offline">
                                 <SecTitle className="text-center color style1 mb-0">
+                                <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                                     <h4 className="title">Offline Media News</h4>
                                 </SecTitle>
 
@@ -254,6 +267,7 @@ function MediaCenter() {
                         <div className="col-sm-6 px-md-0">
                             <div className="media-news_online">
                                 <SecTitle className="text-center color style1 mb-0">
+                                <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                                     <h4 className="title">Online Media News</h4>
                                 </SecTitle>
 
@@ -289,6 +303,7 @@ function MediaCenter() {
             <section className="section media-press-release pb-0">
                 <div className="container">
                     <div className="sec_title text-center color style1 mb_30">
+                    <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                         <h4 className="title">Press Center</h4>
                         <p>Welcome to the Press Release section of MVN, where innovation, milestones, and achievements take center stage. Stay informed about our latest ventures, industry contributions, and community impact, as we continue to redefine the future. From pioneering in real estate to shaping the future of education, we’re committed to excellence every step of the way.</p>
                     </div>
@@ -387,8 +402,11 @@ function MediaCenter() {
             <section className='section press-releases-container'>
             <div className='container'>
             <SecTitle className="text-center color style1 mb_30">
+            <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                         <h4 className="title">Press Releases</h4>
                     </SecTitle>
+
+
         
             <PressRelease data={pressReleaseData} slidesPerView={3} spaceBetween={20} />
             </div>

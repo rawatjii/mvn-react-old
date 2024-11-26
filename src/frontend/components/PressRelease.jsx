@@ -31,18 +31,28 @@ function PressRelease({ data, slidesPerView, spaceBetween }) {
                 }}
             >
                 {data.map((item, index) => (
-                    <SwiperSlide key={index}>
-                        <div className="thumbnail">
-                            <img
-                                src={item.thumbnail}
-                                alt={item.title}
-                                className="pressRelease-Img"
-                                style={{ width: "100%", cursor: "pointer" }}
-                                onClick={() => window.open(item.pdf, "_blank")}
-                            />
-                            {/* <p style={{ textAlign: "center", marginTop: "10px" }}>{item.title}</p> */}
-                        </div>
-                    </SwiperSlide>
+    
+
+                        <SwiperSlide key={index}>
+
+<article class="awa_card awa_shadow">
+    <div>
+        <img src={item.thumbnail} alt={item.title} className="pressRelease-Img" />
+        </div>
+    <div>
+        <p> {item.presscontent}</p>
+        <div className=" awa_posted d-flex justify-content-between align-items-center"><span class="text-capitalize"><time>{item.EventDate}   </time></span>
+            <p class="text-capitalize  " onClick={() => window.open(item.pdf, "_blank")}>View Details</p>
+        </div>
+    </div>
+</article>
+
+
+</SwiperSlide>
+
+
+
+             
                 ))}
             </Swiper>
         </div>
