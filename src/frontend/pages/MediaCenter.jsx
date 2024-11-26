@@ -88,40 +88,43 @@ function MediaCenter() {
             { src: newsIMG1, alt: "Image 1" },
             { src: newsIMG2, alt: "Image 2" },
             { src: newsIMG3, alt: "Image 3" },
-            { src: newsIMG4 , alt: "Image 4" },
-            { src: newsIMG5 , alt: "Image 5" },
-            { src: newsIMG6 , alt: "Image 6" },
+            { src: newsIMG4, alt: "Image 4" },
+            { src: newsIMG5, alt: "Image 5" },
+            { src: newsIMG6, alt: "Image 6" },
         ]
     }
     
-
-    const ourGallery = [
-        {
-            src: mediaGalleryImg1,
-            alt: "Image 1"
-        },
-        {
-            src: mediaGalleryImg2,
-            alt: "Image 2"
-        },
-        {
-            src: mediaGalleryImg3,
-            alt: "Image 3"
-        },
-        {
-            src: mediaGalleryImg1,
-            alt: "Image 4"
-        },
-        {
-            src: mediaGalleryImg2,
-            alt: "Image 5"
-        },
-        {
-            src: mediaGalleryImg3,
-            alt: "Image 6"
-        }
-      
-    ]
+    const ourGallery = {
+        isshow:true,
+        galleryData:[
+            {
+                src: mediaGalleryImg1,
+                alt: "Image 1"
+            },
+            {
+                src: mediaGalleryImg2,
+                alt: "Image 2"
+            },
+            {
+                src: mediaGalleryImg3,
+                alt: "Image 3"
+            },
+            {
+                src: mediaGalleryImg1,
+                alt: "Image 4"
+            },
+            {
+                src: mediaGalleryImg2,
+                alt: "Image 5"
+            },
+            {
+                src: mediaGalleryImg3,
+                alt: "Image 6"
+            }
+          
+        ]
+    }
+    
 
     const pressCenter = [
         {

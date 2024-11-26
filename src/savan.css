@@ -1185,8 +1185,8 @@ ul.content{align-items:center}
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left:30px;
-    padding-right:30px;
+    padding-left:250px;
+    padding-right:250px;
   }
   .testimonial_section .swiper-button-next {
     position: absolute;
@@ -1219,7 +1219,10 @@ ul.our-values-ul-icon{margin-top:30px;gap:30px 0!important}
 .philosophy_section ul.content .values-ul-icon{width:auto;height:60px;margin:0 auto;margin-bottom:30px;}
 .philosophy_section ul.content .flex-li-row-2 ul.our-values-ul-icon li{display:grid;justify-content:center;text-align:center}
 
-
+.testimonial_section .swiper-button-prev {bottom: 60px; left: 44%;}
+.testimonial_section .swiper-button-next { bottom: 60px; left: 53%; top: unset;}
+.testimonial_section { & .testimonial_carousel {.swiper-pagination {  position: relative; margin-top: 9px;   bottom: -20px; } }}
+.testimonial_section {& .testimonial_carousel { .swiper-pagination {   bottom: -20px; }}}
 
 }
 
@@ -2247,6 +2250,9 @@ ul.our-values-ul-icon{display:flex!important;flex-wrap:wrap}
 .testimonial_section .swiper-button-next { left: 60%;}
 .testimonial_section .swiper-button-prev { left: 33%;}
 .press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {top: 94%;margin-left: 5px;}
+.philosophy_section {.content {background: unset;border: none !important;border-radius: 24px;padding: 0;border: none;}}
+.about_overview { p {  text-align: justify; text-align-last: center;}}
+
 
 
 }
