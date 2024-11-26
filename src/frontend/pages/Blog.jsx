@@ -4,8 +4,8 @@ import Desktopmicro_bg from "../assets/images/blogs/1865.jpg";
 import { Container } from "react-bootstrap";
 import SecTitle from "../../common/SecTitle/Index";
 
-import BlogIcon from "../assets/images/blogs/blogicon.png";
-
+// import BlogIcon from "../assets/images/blogs/blogicon.png";
+import headingIconImg from "../assets/images/icons/heading-icon-img.png";
 import blogIMG from "../assets/images/blogs/blog-1.jpg";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -29,27 +29,21 @@ function Blog() {
 
   const blogData = [
     {
-      title: "Sky Villas Across the Globe: A Benchmark in Opulence",
+      title: "Sky Villas by MVN: Redefining Luxury Living in Gurugram",
+      slug: "Sky-Villas-by-MVN-Redefining-Luxury-Living-in-Gurugram",
+
       img: blogIMG,
       date: "16 April, 2021",
       link: "",
       content: [
-        `Internationally, sky villas are the hallmark of luxury. From
-              Dubai's iconic Burj Khalifa residences to New York's Billionaires'
-              Row penthouses, these homes offer exclusivity, world-class
-              interiors, and breathtaking vistas. In Singapore, sky villas in
-              Marina Bay Sands provide private infinity pools, concierge
-              services, and direct access to high-end shopping and
-              entertainment.`,
-        `Inspired by these global masterpieces, MVN's Sky Villas are
-              designed to reflect similar grandeur, ensuring every element
-              speaks of sophistication and class. With expansive layouts and
-              cutting-edge amenities, these villas redefine urban living in
-              India.`,
+        `Sky Villas—luxurious residences perched high above the city—are synonymous with opulence and exclusivity in major global cities like New York, Dubai, and Singapore. These architectural marvels, often occupying the highest floors of premium skyscrapers, offer panoramic views, unparalleled privacy, and amenities fit for royalty. Now, MVN is bringing this epitome of luxury to Gurugram, introducing a lifestyle never seen before in India's real estate market.
+`,
+        `Prepare to experience something extraordinary: Sky Villas by MVN, where the extravagance of international high-rise living meets the dynamism of Gurugram's skyline.`,
       ],
     },
     {
-      title: "Gurugram's Real Estate Evolution Meets International Luxury",
+      title: "Dwarka Expressway: Redefining Urban Connectivity and Real Estate Dynamics",
+      slug:'dwarka-expressway-redefining-urban-connectivity-and-real-estate-dynamics',
       img: blogIMG,
       date: "16 April, 2021",
       link: "",
@@ -60,6 +54,7 @@ function Blog() {
     },
     {
       title: "Luxury at Unimaginable Heights: Features of MVN Sky Villas",
+      slug:'luxury-at-unimaginable-heights-features-of-mvn-sky-villas',
       img: blogIMG,
       date: "16 April, 2021",
       link: "",
@@ -83,13 +78,14 @@ function Blog() {
     <div className="blog_page">
       <MicroBanner bg={Desktopmicro_bg} data={breadcrumbs} />
       <Container className="text-center py-5">
-        <img
+        {/* <img
           src={BlogIcon}
           alt="mvn-support-icon"
           className="img-fluid supportIcon mb-4"
-        />
+        /> */}
 
         <SecTitle className="text-center color style1 mb_30">
+        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
           <h4 className="title">
             Perspectives That Redefine: Welcome to Our Blogs
           </h4>
@@ -109,7 +105,7 @@ function Blog() {
                     <div className="blog-platter-detail-btn">
                       <p>{el.date}</p>
                       <Link
-                        to="/blogs/details"
+                        to={`/blogs/details/${el.slug}`}
                         className="btn btn_style2"
                         onClick={() => {
                           localStorage.setItem("selectedBlog", i);

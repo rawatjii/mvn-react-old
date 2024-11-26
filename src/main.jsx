@@ -182,7 +182,7 @@ const router = createBrowserRouter([
         ),
       },
       {
-        path: "blogs/details",
+        path: "blogs/details/:slug",
         element: (
           <Suspense fallback={<InitialLoading />}>
             <Layout>

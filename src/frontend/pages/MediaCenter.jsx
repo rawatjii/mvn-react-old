@@ -6,8 +6,8 @@ import mediaBG from '../assets/images/media/mediacenter.png'
 import { Container } from 'react-bootstrap'
 import SecTitle from '../../common/SecTitle/Index'
 // import mediaIcon from '../assets/images/icons/media/media.png'
-import McVideo from '../assets/videos/media/video.mp4'
-import McVideoPoster from '../assets/videos/media/poster.png'
+// import McVideo from '../assets/videos/media/video.mp4'
+// import McVideoPoster from '../assets/videos/media/poster.png'
 import rightArrow from '../assets/images/mediacenter/right-arrow.png'
 import newsIMG from '../assets/images/mediacenter/newsdrum-logo.jpg'
 // import newsIMG from '../assets/images/mediacenter/news-1.png'
@@ -24,13 +24,19 @@ import mediaGalleryImg1 from '../assets/images/projects/project-img-1.jpg'
 import mediaGalleryImg2 from '../assets/images/projects/project-img-2.jpg'
 import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
 
-import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
-import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
+// import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
+// import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
+import youtubeVideoBanner1 from '../assets/images/mediacenter/youtube-video-banner-1.jpg'
+import youtubeVideoBanner2 from '../assets/images/mediacenter/youtube-video-banner-2.jpg'
+import youtubeVideoBanner3 from '../assets/images/mediacenter/youtube-video-banner-3.jpg'
 
 import pressReleaseImg1 from '../assets/images/mediacenter/theprint-thubmnail.jpg'
 import pressReleaseImg2 from '../assets/images/mediacenter/daily-news-logo.jpg'
 import pressReleaseImg3 from '../assets/images/mediacenter/edukida-logo.jpg'
 // import pressReleaseImg4 from '../assets/images/mediacenter/press-relase-img-4.jpg'
+
+
+import playicon from '../assets/images/mediacenter/play-button.png'
 
 import pressReleasePdf1 from '../assets/images/mediacenter/theprint.pdf'
 import pressReleasePdf2 from '../assets/images/mediacenter/daily24x7news.pdf'
@@ -67,26 +73,21 @@ function MediaCenter() {
     const ourEvents = [
         {
             id: 1,
-            poster: eventGalleryImg1,
-            video: McVideo,
-            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
-          
+            IframeLink: "https://www.youtube.com/shorts/MeOZFGd_l1A",
+            videobanner:youtubeVideoBanner1,
         },
         {
             id: 2,
-            poster: eventGalleryImg2,
-            video: McVideo,
-            eventHeading: `MVN Infrastructure Celebrates MVN Mall's New Office Opening with Traditional Hawan Ceremony`,
-         
+            IframeLink: "https://www.youtube.com/shorts/mVNbupk5MRg",
+            videobanner:youtubeVideoBanner2,
         },
         {
             id: 3,
-            poster: eventGalleryImg1,
-            video: McVideo,
-            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
-           
+            IframeLink: "https://www.youtube.com/watch?v=n3UMMbpPMrU",
+            videobanner:youtubeVideoBanner3,
         }
-    ]
+    ];
+    
     const newsImages = {
         isshow:true,
         galleryData:[
@@ -420,31 +421,25 @@ function MediaCenter() {
                     <GallerySlider data={ourGallery} slidesPerView={3} spaceBetween={20} navigation={true} />
                 </div>
             </section>
-            <section className="section media-events ">
-                <div className="container">
-                    <div className="sec_title text-center color style1 mb_30">
-                        <h4 className="title">OUR EVENTS</h4>
-                    </div>
-                    <div className="row">
-                        {
-                            ourEvents && ourEvents.map((item, index) => (
-                                <div className="col-sm-4" key={`event-${index}`}>
-                                    <div className="media-event-content">
-
-                                        <Video videoSrc={item.video} videoPoster={item.poster} />
-                                        <h5 className="media_content_heading">{item.eventHeading} </h5>
-                                    </div>
-                                </div>
-                            ))
-                        }
-
-
-
-
-
+            <section className="section media-events">
+    <div className="container">
+        <div className="sec_title text-center color style1 mb_30">
+            <h4 className="title">OUR EVENTS</h4>
+        </div>
+        <div className="row">
+            {ourEvents && ourEvents.map((item, index) => (
+                <div className="col-sm-4" key={`event-${index}`}>
+                    <div className="media-event-content">
+                        <a href={item.IframeLink} target='_blank' rel="noopener noreferrer">
+                            <img src={item.videobanner} alt="" className='img-fluid event-video-banner'/>
+                        </a>
+                        <img src={playicon} alt="" className='img-fluid play-icon'/>
                     </div>
                 </div>
-            </section>
+            ))}
+        </div>
+    </div>
+</section>
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-sm-6">
