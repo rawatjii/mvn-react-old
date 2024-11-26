@@ -1782,6 +1782,14 @@ h4.title {
 
 @media(max-width:1600px) {
 
+  .media-event-content .event-video-banner {
+    width: 94%;
+    height: 352px;
+    object-fit: cover;
+    margin: 0px auto;
+    display: block;
+}
+
   .enquire_form .container {
     padding: 50px 40px !important;
     margin: 0px 115px !important;
