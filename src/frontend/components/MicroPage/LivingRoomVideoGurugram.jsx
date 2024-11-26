@@ -15,13 +15,34 @@ const LivingRoomVideoGurugram = ({ data }) => {
 
   const { title, desc } = data.living_room_video;
 
+  useEffect(()=>{
+    const section = sectionRef.current;
+    const video = videoRef.current;
+
+    let scrollTriggerInstance;
+
+    const setupScrollTrigger = ()=>{
+      scrollTriggerInstance = ScrollTrigger.create({
+        trigger: section,
+        start:"top top",
+        pin:true,
+        end:()=>`+=${video.duration * window.innerHeight}`, // Dynamically adjust based on video duration
+        scrub:false,
+      })
+    }
+
+    video.addEventListener("loadmetadata", ()=>{
+      setupScrollTrigger();
+    })
+
+  }, [])
+
   const handleVideoLoaded = () => {
     setLoading(false); // Hide the loader after the video is fully loaded
   };
 
   return (
     <div className="section living_room_video_section design1 pb-0" ref={sectionRef}>
-
       {/* Video */}
       <video
         ref={videoRef}
@@ -33,13 +54,11 @@ const LivingRoomVideoGurugram = ({ data }) => {
         playsInline
         preload="metadata"
       />
-
         <Container>
           <div className="about">
             <CustomCard title={title} desc={desc} />
           </div>
         </Container>
-        
     </div>
   );
 };
