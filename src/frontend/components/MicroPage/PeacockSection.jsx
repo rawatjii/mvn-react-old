@@ -100,7 +100,7 @@ const PeacockSection = ({ data }) => {
   const { title, desc } = data.video1;
 
   return (
-    <div className="section peacock_section">
+    <div className="section peacock_section pb-0">
 
       {/* Show loader if still loading */}
       {loading && (

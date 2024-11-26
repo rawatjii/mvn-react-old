@@ -167,7 +167,10 @@ const data = {
   locationAdvantage: {
     isshow: true,
     title: "Location Advantage",
-    mapIMG:  CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp',
+    mapIMG: {
+      desktop:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp',
+      mobile:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp'
+    },
     
     //     yasho bhoomi
     // indira gandhi international airport
