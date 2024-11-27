@@ -22,10 +22,10 @@ gsap.registerPlugin(ScrollTrigger);
 // Define the journey data
 const journeyData = [
   { icon: expIcon, title: "Years Experience", value: "40+" },
-  { icon: citiesIcon, title: "Cities", value: "20" },
+  { icon: citiesIcon, title: "Cities", value: "4" },
   { icon: completeProjectsIcon, value: "9", title: "Completed Projects" },
   { icon: ongoingProjectsIcon, value: "4", title: "Ongoing Projects" },
-  { icon: millionSqftIcon, title: "Million Square Feet", value: "2.3" },
+  { icon: millionSqftIcon, title: "Million Square Feet", value: "2.7" },
   { icon: deliveryIcon, title: "On-time Delivery", value: "100%" },
 ];
 
