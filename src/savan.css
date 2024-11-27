@@ -2313,7 +2313,7 @@ article.awa_card.awa_shadow p.text-capitalize { margin-right: 15px;}
 
 section.section.media-gallery {padding-top: 70px;}
 .media-news_online {padding-top: 50px;}
-.micro_hero_section { & .frames_content { img { height: 98%; object-fit: cover;width: 100%; }}}
+.micro_hero_section { & .frames_content { img { height: 97.8%; object-fit: cover;width: 100%; }}}
 
 
 }

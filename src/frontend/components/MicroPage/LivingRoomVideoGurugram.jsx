@@ -8,114 +8,114 @@ import * as CONFIG from "../../../config/config";
 gsap.registerPlugin(ScrollTrigger);
 
 const LivingRoomVideoGurugram = ({ data }) => {
+  const containerRef = useRef(null);
   const [loading, setLoading] = useState(true);
+  const [images, setImages] = useState([]);
   const [videoFinished, setVideoFinished] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+  const frameRefs = useRef([]);
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
 
   const { title, desc } = data.living_room_video;
 
+  const totalFramesDesktop = 379;
+  const totalFramesMobile = 126;
+
+  // Detect screen size
   useEffect(() => {
-    const section = sectionRef.current;
-    const video = videoRef.current;
-
-    let scrollTriggerInstance;
-
-    const disableScrolling = () => {
-      document.body.style.overflow = "hidden";
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
     };
-
-    const enableScrolling = () => {
-      document.body.style.overflow = "";
-    };
-
-    const playVideo = () => {
-      video.play().catch((error) => {
-        console.error("Video playback failed", error);
-      });
-    };
-
-    const handleVideoEnd = () => {
-      console.log("Video ended");
-      enableScrolling();
-      setVideoFinished(true); // Mark video as finished
-      playVideo(); // Restart video to enable looping
-    };
-
-    const setupScrollTrigger = () => {
-      scrollTriggerInstance = ScrollTrigger.create({
-        trigger: section,
-        start: "top top",
-        pin: true,
-        end: "bottom top",
-        scrub: false,
-        onEnter: () => {
-          console.log("ScrollTrigger entered");
-          if (!videoFinished) {
-            disableScrolling();
-            playVideo();
-          }
-        },
-        onUpdate:(self)=>{
-          console.log('self', self);
-          if(self.direction === 1 && !videoFinished){
-            // Prevent scrolling down
-            disableScrolling()
-          } else {
-            enableScrolling(); // Allow scrolling up
-          }
-        },
-        onLeaveBack: () => {
-          console.log("ScrollTrigger leave back");
-          enableScrolling();
-          // video.pause();
-        },
-        onLeave: () => {
-          console.log("ScrollTrigger leave");
-          enableScrolling();
-          // video.pause();
-        },
-      });
-    };
-
-    // Wait for video metadata to load before initializing ScrollTrigger
-    if (video.readyState >= 1) {
-      console.log("Video metadata already loaded");
-      setupScrollTrigger();
-    } else {
-      video.addEventListener("loadedmetadata", () => {
-        console.log("Video metadata loaded");
-        setupScrollTrigger();
-      });
-    }
-
-    // Add video ended listener
-    video.addEventListener("ended", handleVideoEnd);
-
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
     return () => {
-      if (scrollTriggerInstance) scrollTriggerInstance.kill();
-      video.removeEventListener("ended", handleVideoEnd);
-      video.removeEventListener("loadedmetadata", setupScrollTrigger);
+      window.removeEventListener("resize", checkMobile);
     };
-  }, [videoFinished]);
+  }, []); // Dependency array doesn't include data to ensure it's initialized once.
 
-  const handleVideoLoaded = () => {
-    setLoading(false); // Hide loader after the video is fully loaded
-  };
+  // Load images
+  useEffect(() => {
+    if (isMobile === null) return; // Wait until `isMobile` is determined.
+
+    const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
+    const imagePath = isMobile ? "assets/videos/living-room/mobile/" : "assets/videos/living-room/desktop/";
+
+    const loadedImages = [];
+    let loadedCount = 0;
+
+    for (let i = 1; i <= totalFrames; i++) {
+      const img = new Image();
+      img.src = `${imagePath}${i}.webp`;
+
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalFrames) {
+          setLoading(false); // All images loaded, hide loader.
+        }
+      };
+
+      loadedImages.push(img);
+    }
+    setImages(loadedImages);
+  }, [isMobile]); // Depend on `isMobile` to reload images when the state changes.
+
+  // GSAP Animation
+  useEffect(() => {
+    if (images.length === 0 || loading) return;
+
+    // Initialize ScrollTrigger animation
+    const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
+
+    const scrollAnimation = ScrollTrigger.create({
+      trigger: sectionRef.current,
+      start: "top 20%",
+      end: `+=${window.innerHeight * 4}`,
+      pin: true,
+      scrub: 0.005,
+      onUpdate: (self) => {
+        const frameIndex = Math.floor(self.progress * (totalFrames - 1));
+        if (self.progress > 0.1) {
+          frameRefs.current.forEach((img, index) => {
+            if (img) img.style.display = index === frameIndex ? "block" : "none";
+          });
+        }
+      },
+      onLeaveBack: () => {
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === 0 ? "block" : "none";
+        });
+      },
+      onLeave: () => {
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+        });
+      },
+    });
+  
+    // Refresh ScrollTrigger to account for loaded content
+    ScrollTrigger.refresh();
+  
+    return () => {
+      // Clean up ScrollTrigger instance
+      scrollAnimation.kill();
+    };
+  }, [images, isMobile, loading]);
 
   return (
-    <div className="section living_room_video_section design1 pb-0" ref={sectionRef}>
-      <video
-        ref={videoRef}
-        src={`${CONFIG.VIDEO_URL}living-room/desktop.mp4`}
-        type="video/mp4"
-        muted
-        autoPlay={false}
-        playsInline
-        preload="metadata"
-        loop={videoFinished} // Dynamically set loop based on state
-        onLoadedMetadata={handleVideoLoaded}
-      />
+    <div className="section living_room_video_section design1 pb-0" ref={sectionRef} id="livingRoomSlidingDoor">
+      <div ref={containerRef} className="frames_content">
+        {images.map((img, index) => (
+          <img
+            key={index}
+            ref={(el) => (frameRefs.current[index] = el)}
+            src={img.src}
+            alt={`Frame ${index}`}
+            className="frame"
+            style={{ display: index === 0 ? "block" : "none" }}
+          />
+        ))}
+      </div>
       <Container>
         <div className="about">
           <CustomCard title={title} desc={desc} />

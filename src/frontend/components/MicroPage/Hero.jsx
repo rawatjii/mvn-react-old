@@ -48,9 +48,9 @@ const MicroHero = ({ data, onLoadComplete }) => {
     // Set total frames dynamically
     let frameCount = 0;
     if (data.micro_hero_section.client) {
-      frameCount = isMobile ? 93 : 177;
+      frameCount = isMobile ? 93 : 93;
     } else {
-      frameCount = isMobile ? 275 : 177;
+      frameCount = isMobile ? 274 : 292;
     }
     setTotalFrames(frameCount);
   }, [data]);
@@ -88,15 +88,15 @@ const MicroHero = ({ data, onLoadComplete }) => {
           onLoadComplete(); // Notify parent that loading is complete
         }
       };
-
+      
       loadedImages.push(img);
     }
   }, [totalFrames, data]);
-
+  
   useEffect(() => {
     // Reinitialize ScrollTrigger only after all images are loaded
     if (loading || images.length !== totalFrames) return;
-
+    
     // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
@@ -106,7 +106,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
       scrub: 0.005,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-
+        
         // Ensure frames update correctly
         frameRefs.current.forEach((img, index) => {
           if (img) img.style.display = index === frameIndex ? "block" : "none";
@@ -125,7 +125,8 @@ const MicroHero = ({ data, onLoadComplete }) => {
         });
       },
     });
-
+    console.log('hero section')
+    
     return () => {
       scrollAnimation.kill();
     };
