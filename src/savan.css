@@ -1935,6 +1935,66 @@ section.section.other_projects_section.pb-0 {
   padding-bottom: 40px!important;
 }
 
+.main_am {
+  .content {
+      background: #000;
+      margin: auto;
+      max-width: calc(100% - 0px);
+      text-align: center;
+      padding: 20px;
+      border-radius: 0;
+      color: #fff;
+  }
+}
+.main_am {
+  .desc {
+      margin: 0;
+      color: #ffffff;
+      line-height: 20px;
+      margin-top: 10px;
+  }
+}
+
+
+.main_am .content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.amenities-container{display:none;}
+.main_am .content {
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.navbar .call_btn img {
+  width: 14px;
+}
+.navbar .call_btn {
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #8b8b8b;
+  border-radius: 100%;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.about_overview p {color: #cec7c7;}
+.career_page .career_para{margin-bottom:20px;}
+
+
+.blog_page .blog-deatail-page-description {text-align: justify;}
+.blog_page .col-sm-12.col-md-4.col-lg-4 .row { display: flex;  justify-content: center; text-align: center;}
+.blog_page h3 { font-size: 24px; margin-bottom: 20px;}
+.blog-platter-detail {padding: 15px;}
+.blog-platter-box {margin-bottom: 30px;}
+
+
 @media(max-width:767px) {
 
 
@@ -2314,56 +2374,11 @@ article.awa_card.awa_shadow p.text-capitalize { margin-right: 15px;}
 section.section.media-gallery {padding-top: 70px;}
 .media-news_online {padding-top: 50px;}
 .micro_hero_section { & .frames_content { img { height: 97.8%; object-fit: cover;width: 100%; }}}
+.grid-left-right .content-right-img h2 { color: var(--theme_primary_color); font-size: 22px;}
 
+p.text-center.career_para, .about_overview p {color: #cec7c7;}
+.oppotunities .title, .inner-sec .half .content-half h2, .grid-left-right .content-right-img h2 { font-size: 18px !important; padding-bottom: 8px;}
+.career_page .career_para {color: #cec7c7;}
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
-
-
-.main_am {
-  .content {
-      background: #000;
-      margin: auto;
-      max-width: calc(100% - 0px);
-      text-align: center;
-      padding: 20px;
-      border-radius: 0;
-      color: #fff;
-  }
-}
-.main_am {
-  .desc {
-      margin: 0;
-      color: #ffffff;
-      line-height: 20px;
-      margin-top: 10px;
-  }
-}
-
-
-.main_am .content {
-  position: absolute;
-  top: 0;
-  width: 100%;
-}
-
-.amenities-container{display:none;}
-.main_am .content {
-  padding-top: 40px;
-  padding-bottom: 50px;
-}
-
-.navbar .call_btn img {
-  width: 14px;
-}
-.navbar .call_btn {
-  margin-right: 20px;
-  height: 30px;
-  width: 30px;
-  border: 1px solid #8b8b8b;
-  border-radius: 100%;
-  display: flex
-;
-  align-items: center;
-  justify-content: center;
-}

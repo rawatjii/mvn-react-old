@@ -66,6 +66,7 @@ const additionalContent = [
 gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
+debugger;
   const titleRef = useRef();
   const imageDivRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
@@ -75,7 +76,7 @@ const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
     if (otherProjects.length > 0) {
       gsap.from(titleRef.current, {
         y: 50,
-        opacity: 0,
+        opacity: 1,
         duration: 1,
         scrollTrigger: {
           trigger: titleRef.current,
@@ -130,8 +131,8 @@ const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
         </SecTitle>
 
         <Row>
-          {data?.map((item, index) => (
-            <Col key={index} xs={12} md={mobContent} lg={mobContent} className="single_col">
+          {otherProjects?.map((item, index) => (
+            <Col key={index} xs={12} md={4} lg={4} className="single_col">
               <div className="single">
                 <div className="top">
                   <h4 className="name">{item.name}</h4>
@@ -152,7 +153,7 @@ const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
 
                 <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
                   <img
-                    src={isMobile ? item.Mobilethumbnail : item.Desktophumbnail}
+                    src={isMobile ? item.thumbnails.mobile : item.thumbnails.desktop}
                     alt=""
                     className="img-fluid other-project-img"
                     onLoad={handleImageLoad}
