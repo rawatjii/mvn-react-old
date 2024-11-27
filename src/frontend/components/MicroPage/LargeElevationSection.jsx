@@ -55,7 +55,7 @@ export default function LargeElevation({ data }) {
             ScrollTrigger.refresh();
     }, []);
     return (
-        <div className='large-elevation' ref={sectionRef}>
+        <div className='large-elevation' ref={sectionRef} id='largeElevationSection'>
             <Container>
                 <div className='container_elevation'>
                     <div className='top_div'>

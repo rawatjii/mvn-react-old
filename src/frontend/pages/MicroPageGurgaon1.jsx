@@ -26,7 +26,7 @@ import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGuru
 import SecSliding from "../components/MicroPage/SecSliding";
 
 const MicroPageGurgaon1 = ({ data }) => {
-  const [heroLoaded, setHeroLoaded] = useState(true);
+  const [heroLoaded, setHeroLoaded] = useState(false);
 
   
 
@@ -48,12 +48,12 @@ const MicroPageGurgaon1 = ({ data }) => {
   return (
     <>
       {/* Show Loader until hero section is loaded */}
-      {/* {!heroLoaded && (
+      {!heroLoaded && (
         <GurgaonLoader1 />
-      )} */}
+      )}
 
       {/* Render Hero Section */}
-      {/* <MicroHero data={data} onLoadComplete={() => setHeroLoaded(true)} /> */}
+      <MicroHero data={data} onLoadComplete={() => setHeroLoaded(true)} />
 
       {/* Render other components only after Hero Section is loaded */}
 

@@ -26,6 +26,10 @@ const data = {
       'Step into a world of unparalleled luxury, where every detail blends sophistication with style. Relish in tailored interiors, exceptional amenities, and panoramic views. Transform your lifestyle with an extraordinary living experience beyond compare.',
     ],
   },
+  LargeElevationSection: {
+    title: "an epitome of contemporary elegance",
+    isAllow: true,
+  },
   video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
     desc:'Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings.',
@@ -291,28 +295,28 @@ const data = {
     // world global city
     locationData: [
       {
-        distance: 'near by',
-        title: 'Yasho Bhoomi',
+        distance: '2.9 kms',
+        title: 'World global city',
       },
       {
-        distance: 'near by',
-        title: 'Indira Gandhi international airport',
-      },
-      {
-        distance: 'near by',
-        title: 'Diplomatic enclave 2',
-      },
-      {
-        distance: 'near by',
-        title: 'Gurgaon Railway station',
-      },
-      {
-        distance: 'near by',
+        distance: '10.5 kms',
         title: 'Cyber City 2',
       },
       {
-        distance: 'near by',
-        title: 'world global city',
+        distance: '10.5 kms',
+        title: 'Gurgaon Railway station',
+      },
+      {
+        distance: '18 kms',
+        title: 'Yasho Bhoomi',
+      },
+      {
+        distance: '20 kms',
+        title: 'Diplomatic enclave 2',
+      },
+      {
+        distance: '29.7 kms',
+        title: 'IGI Airport',
       },
     ]
   },
