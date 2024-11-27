@@ -103,7 +103,7 @@ const LivingRoomVideoGurugram = ({ data }) => {
   }, [images, isMobile, loading]);
 
   return (
-    <div className="section living_room_video_section design1 pb-0" ref={sectionRef}>
+    <div className="section living_room_video_section design1 pb-0" ref={sectionRef} id="livingRoomSlidingDoor">
       <div ref={containerRef} className="frames_content">
         {images.map((img, index) => (
           <img
