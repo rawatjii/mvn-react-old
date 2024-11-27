@@ -15,6 +15,7 @@ import 'swiper/css';
 import "yet-another-react-lightbox/styles.css";
 
 import floorPlanImg from '../../assets/images/floor-plan/floor-plan.png'
+import CustomModal from "../../../common/Modal";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,8 +37,17 @@ const MicroFloorPlan = ({data})=>{
   const sizeRefs = useRef([]);
   const [isMasterPlanOpen, setIsMasterPlanOpen] = useState(false);
   const [index, setIndex] = React.useState(-1);
+  const [isShowModal, setIsShowModal] = useState(false)
 
   const {floorPlanData, title} = data  
+
+  const showModal = ()=>{
+    setIsShowModal(true)
+  }
+
+  const isHideModal = ()=>{
+    setIsShowModal(false)
+  }
 
   // for animation
 
@@ -115,7 +125,7 @@ const MicroFloorPlan = ({data})=>{
                 <Swiper pagination={true} className="mySwiper">
                   {item.thumbnail.map((image, index)=>(
                     <SwiperSlide>
-                      <img src={image.src} alt="" onClick={()=>setIndex(index)} />
+                      <img src={image.src} alt="" onClick={showModal} />
                     </SwiperSlide>
                   ))}
                   
@@ -126,6 +136,8 @@ const MicroFloorPlan = ({data})=>{
         </Accordion>
 
       </Container>
+
+      <CustomModal show={isShowModal} hide={isHideModal} />
 
       <Lightbox 
         open={index >= 0}

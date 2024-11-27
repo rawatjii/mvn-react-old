@@ -10,7 +10,8 @@ const Walkthrough = ()=>{
         <div className='about'>
             <CustomCard
               title="Walkthrough" 
-              desc="Take a guided virtual tour through our stunning spaces with a walkthrough video that brings your future home to life. Every detail is showcased, allowing you to experience the design, luxury, and lifestyle that await you."  
+              desc="Take a guided virtual tour through our stunning spaces with a walkthrough video that brings your future home to life. Every detail is showcased, allowing you to experience the design, luxury, and lifestyle that await you." 
+              extraTxt="Exclusive entrance and exit for the residents."
             />
         </div>
 

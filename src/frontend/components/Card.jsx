@@ -1,7 +1,7 @@
 import React from "react";
 import diamondIMG from '../assets/images/icons/diamond.png';
 
-const CustomCard = ({className, title, location, extra, desc})=>{
+const CustomCard = ({className, title, location, extra, desc, extraTxt})=>{
   
   return(
     <div className={`overview_card ${className}`}>
@@ -23,6 +23,7 @@ const CustomCard = ({className, title, location, extra, desc})=>{
           <p className="desc" key={`desc-${i}`}>{el}</p>  
         )):  <p  className="desc">{desc}</p>
       }
+      {extraTxt && <h4 className="extraTxt">{extraTxt}</h4>}
 
     </div>
   )
