@@ -2352,3 +2352,18 @@ section.section.media-gallery {padding-top: 70px;}
   padding-top: 40px;
   padding-bottom: 50px;
 }
+
+.navbar .call_btn img {
+  width: 14px;
+}
+.navbar .call_btn {
+  margin-right: 20px;
+  height: 30px;
+  width: 30px;
+  border: 1px solid #8b8b8b;
+  border-radius: 100%;
+  display: flex
+;
+  align-items: center;
+  justify-content: center;
+}
