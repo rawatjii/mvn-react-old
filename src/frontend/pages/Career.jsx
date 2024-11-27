@@ -19,6 +19,9 @@ import ligemvnImg from '../assets/images/career/lifeatmvn.webp'
 import BlankIMG from '../assets/images/career/bg.png'
 import LazyLoad from 'react-lazyload'
 import '../../dinesh.css'
+import headingIconImg from "../assets/images/icons/heading-icon-img.png";
+import CareerImg from "../assets/images/career/career-img.jpg";
+
 
 
 function Career() {
@@ -43,7 +46,7 @@ function Career() {
 
     return (
         <div className='career_page'>
-            <MicroBanner bg={careerbg} data={breadcrumbs} />
+            <MicroBanner bg={CareerImg} data={breadcrumbs} />
 
             <div className="micro_content">
                 <div className="micro_data">
@@ -53,7 +56,7 @@ function Career() {
 
                             <Container>
                                 <SecTitle className="text-center color style1 mb_30">
-                                    <img src={supportIcon} alt="" className="img-fluid headpage-icon" />
+                                    <img src={headingIconImg} alt="" className="img-fluid headpage-icon" />
                                     <h4 ref={titleRef} className="title">
                                         Talent Management
                                     </h4>

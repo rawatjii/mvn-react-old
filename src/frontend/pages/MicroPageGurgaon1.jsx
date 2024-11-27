@@ -33,6 +33,8 @@ import Renders1 from "../components/MicroPage/Renders1";
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
 
+  
+
   useEffect(() => {
     if (!heroLoaded) {
       // Add overflow: hidden to the body when heroLoaded is false
@@ -43,33 +45,31 @@ const MicroPageGurgaon1 = ({ data }) => {
     }
 
     // Cleanup function to reset the body overflow if the component unmounts
-    return () => (document.body.style.overflow = "");
+    return () => {
+      document.body.style.overflow = "";
+    };
   }, [heroLoaded]);
 
   return (
     <>
       {/* Show Loader until hero section is loaded */}
-      {!heroLoaded && <GurgaonLoader1 />}
+      {!heroLoaded && (
+        <GurgaonLoader1 />
+      )}
 
       {/* Render Hero Section */}
-      <MicroHero
-        data={data}
-        onLoadComplete={() => {
-          setHeroLoaded(true);
-        }}
-      />
+      <MicroHero data={data} onLoadComplete={() => setHeroLoaded(true)} />
 
       {/* Render other components only after Hero Section is loaded */}
 
       {heroLoaded && (
-        <>  
+        <>
           <MicroOverview data={data} /> {/*no isssue*/}
-          <LargeElevationSection data={data.LargeElevationSection} /> {/*no isssue*/}
           <PeacockSection data={data} /> {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
           <div>
-            <LivingRoomVideoGurugram data={data} />
+            <LivingRoomVideoGurugram  data={data} />
             {/* <LivingRoomVideo data={data} /> */}
           </div>
           <div>
@@ -80,6 +80,7 @@ const MicroPageGurgaon1 = ({ data }) => {
             <MasterBedroom data={data} /> {/*no isssue*/}
           </div>
           <div>
+
             <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
           </div>
           {/*<div>
@@ -92,14 +93,19 @@ const MicroPageGurgaon1 = ({ data }) => {
               <SecSliding key={index} data={render} />
             ))}
           </div> */}
+          <div>
+            {data?.renders.map((render, index)=>(
+              <SecSliding key={index} data={render} />
+            ))}
+            
+          </div>
           {/* No polution zone location */}
 
-          <div>{/* <MicroHighlights data={data.highlight} />  */}</div>
-          <MicroAmenities data={data.amenities} />
           <div>
             {/* <MicroHighlights data={data.highlight} />  */}
           </div>
             {/* <MicroAmenities1 data={data.amenities} /> */}
+            <MicroAmenities data={data.amenities} />
           <div>
           <Typology  />
           </div>
@@ -132,6 +138,8 @@ const MicroPageGurgaon1 = ({ data }) => {
           </div>
         </>
       )}
+
+
     </>
   );
 };

@@ -29,7 +29,7 @@ const Homepage = ()=>{
   }
   return(
     <>
-    <HomepageVideo data={dataa} />
+  <HomepageVideo data={dataa} />
       {/* <Hero /> */}
       {/* <Suspense fallback="Loading">
         <Header />
