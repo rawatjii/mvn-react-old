@@ -61,7 +61,7 @@ setSelectedBlog(result);
         <div className="row row-gap-3">
          <div className="col-sm-12 col-md-8 col-lg-8">
  
-         <div className="w-100 p-3">
+         <div className="w-100 px-3">
             <img
               src={selectedBlog?.img}
               alt=""
