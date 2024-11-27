@@ -69,7 +69,7 @@ const LivingRoomVideoGurugram = ({ data }) => {
 
     const scrollAnimation = ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: "top 20%",
+      start: "top top",
       end: `+=${window.innerHeight * 4}`,
       pin: true,
       scrub: 0.005,
@@ -104,6 +104,7 @@ const LivingRoomVideoGurugram = ({ data }) => {
 
   return (
     <div className="section living_room_video_section design1 pb-0" ref={sectionRef} id="livingRoomSlidingDoor">
+      <CustomCard className="style2" title={title} />
       <div ref={containerRef} className="frames_content">
         {images.map((img, index) => (
           <img

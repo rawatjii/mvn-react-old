@@ -8,6 +8,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Header.css";
 
 import { gsap } from "gsap";
+import Button from "../../common/Button/Button";
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -20,6 +21,7 @@ const Header = () => {
   const headerRef = useRef();
   const logoRef = useRef();
   const toggleRef = useRef();
+  const callBtnRef = useRef();
 
   const { pathname } = useLocation();
 
@@ -72,6 +74,15 @@ const Header = () => {
       delay: 0.4,
       // ease: "power2" // Easing function for a smooth effect
     });
+
+    // menu toggle animation
+    gsap.from(callBtnRef.current, {
+      y: 15, // Move 50px from the bottom
+      opacity: 0, // Start with 0 opacity (invisible)
+      duration: 0.6, // Animation duration in seconds
+      delay: 0.4,
+      // ease: "power2" // Easing function for a smooth effect
+    });
   }, []);
 
   const toggleMenu = (value) => {
@@ -100,7 +111,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand ref={logoRef} className="logo">
-            <Link to="/" onClick={() => toggleMenu("close")}>
+            <Link onClick={() => toggleMenu("close")}>
               <img
                 src={CONFIG.IMAGE_URL + "logo_white.webp"}
                 alt="mvn-logo"
@@ -116,13 +127,18 @@ const Header = () => {
             </Link>
           </Navbar.Brand>
 
-          <Navbar.Toggle
-            ref={toggleRef}
-            aria-controls="basic-navbar-nav"
-            onClick={() => toggleMenu("show")}
-          >
-            <span className="icon"></span>
-          </Navbar.Toggle>
+          <div className="right">
+            <a href="javascript:void(0)" className="call_btn" ref={callBtnRef}>
+              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="" />
+            </a>
+            <Navbar.Toggle
+              ref={toggleRef}
+              aria-controls="basic-navbar-nav"
+              onClick={() => toggleMenu("show")}
+            >
+              <span className="icon"></span>
+            </Navbar.Toggle>
+          </div>
 
           <div id="basic-navbar-nav" className="navbar_collapse" ref={menusRef}>
             <Container>

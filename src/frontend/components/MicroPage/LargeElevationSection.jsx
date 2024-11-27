@@ -5,6 +5,7 @@ import bgImgMB from '../../assets/images/aero-gurgaon/largeBg1Sm.webp'
 import bgImgDesk from '../../assets/images/aero-gurgaon/largeBg1.png'
 import absDesk from '../../assets/images/aero-gurgaon/largeAbs1.png'
 import absMob from '../../assets/images/aero-gurgaon/largeAbs1.png'
+import building_sm from '../../assets/images/aero-gurgaon/building_sm.webp'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import CustomCard from '../../components/Card'
@@ -70,7 +71,7 @@ export default function LargeElevation({ data }) {
                     <img src={bgImgMB} alt={data.title} className="img-fluid img_in" />
                 </div>
                 <div className='abs_img abs_img_m'>
-                    <img src={absMob} alt={data.title} className="img-fluid abs_img_in" />
+                    <img src={building_sm} alt={data.title} className="img-fluid abs_img_in" />
                 </div>
             </div>
 

@@ -65,6 +65,7 @@ const MicroPageGurgaon1 = ({ data }) => {
       {heroLoaded && (
         <>
           <MicroOverview data={data} /> {/*no isssue*/}
+          <LargeElevationSection data={data.LargeElevationSection} />
           <PeacockSection data={data} /> {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
@@ -93,12 +94,12 @@ const MicroPageGurgaon1 = ({ data }) => {
               <SecSliding key={index} data={render} />
             ))}
           </div> */}
-          <div>
+          {/* <div>
             {data?.renders.map((render, index)=>(
               <SecSliding key={index} data={render} />
             ))}
             
-          </div>
+          </div> */}
           {/* No polution zone location */}
 
           <div>

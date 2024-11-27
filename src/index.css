@@ -2579,7 +2579,7 @@ footer {
 /* living_room_video_section */
 
 .section.living_room_video_section {
-  padding-top:100px;
+  padding-top:80px;
 
   .frames_content{
 
@@ -2598,6 +2598,11 @@ footer {
     .overview_card{
 
       margin-top:30px;
+
+      &.style2{
+
+        background:transparent;
+      }
     }
   }
 }
@@ -2791,6 +2796,12 @@ footer {
 
   .navbar {
 
+    .right{
+
+      display: flex;
+      align-items: center;
+    }
+
     .navbar-toggler {
       width: 30px;
 
@@ -2808,6 +2819,22 @@ footer {
           bottom: -8px;
         }
 
+      }
+    }
+
+    .call_btn{
+      margin-right: 20px;
+      height: 30px;
+      width: 30px;
+      border: 1px solid #8b8b8b;
+      border-radius: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      img{
+
+        width:14px;
       }
     }
   }
