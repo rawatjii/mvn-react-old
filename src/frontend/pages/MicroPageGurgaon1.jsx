@@ -29,8 +29,6 @@ import Testing from "../components/MicroPage/Testing";
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
 
-  
-
   useEffect(() => {
     if (!heroLoaded) {
       // Add overflow: hidden to the body when heroLoaded is false
@@ -41,20 +39,21 @@ const MicroPageGurgaon1 = ({ data }) => {
     }
 
     // Cleanup function to reset the body overflow if the component unmounts
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => (document.body.style.overflow = "");
   }, [heroLoaded]);
 
   return (
     <>
       {/* Show Loader until hero section is loaded */}
-      {!heroLoaded && (
-        <GurgaonLoader1 />
-      )}
+      {!heroLoaded && <GurgaonLoader1 />}
 
       {/* Render Hero Section */}
-      <MicroHero data={data} onLoadComplete={() => setHeroLoaded(true)} />
+      <MicroHero
+        data={data}
+        onLoadComplete={() => {
+          setHeroLoaded(true);
+        }}
+      />
 
       {/* Render other components only after Hero Section is loaded */}
 
@@ -67,7 +66,7 @@ const MicroPageGurgaon1 = ({ data }) => {
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
           <div>
-            <LivingRoomVideoGurugram  data={data} />
+            <LivingRoomVideoGurugram data={data} />
             {/* <LivingRoomVideo data={data} /> */}
           </div>
           <div>
@@ -78,26 +77,22 @@ const MicroPageGurgaon1 = ({ data }) => {
             <MasterBedroom data={data} /> {/*no isssue*/}
           </div>
           <div>
-
             <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
           </div>
           {/*<div>
             <Renders data={data} />  /~no isssue~/
           </div>*/}
           <div>
-            {data?.renders.map((render, index)=>(
+            {data?.renders.map((render, index) => (
               <SecSliding key={index} data={render} />
             ))}
-            
           </div>
           {/* No polution zone location */}
 
+          <div>{/* <MicroHighlights data={data.highlight} />  */}</div>
+          <MicroAmenities data={data.amenities} />
           <div>
-            {/* <MicroHighlights data={data.highlight} />  */}
-          </div>
-            <MicroAmenities data={data.amenities} />
-          <div>
-          <Typology  />
+            <Typology />
           </div>
           <div>
             <MicroFloorPlan data={data.floorPlan} />
@@ -128,8 +123,6 @@ const MicroPageGurgaon1 = ({ data }) => {
           </div>
         </>
       )}
-
-
     </>
   );
 };
