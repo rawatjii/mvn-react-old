@@ -13,7 +13,7 @@ const Video3 = ({ data }) => {
   const titleRef = useRef();
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true); // Track loading state
-  const totalFrames = 316;
+  const totalFrames = 696;
   const frameRefs = useRef([]);
   const loadedCount = useRef(0); // Track number of loaded images
 
