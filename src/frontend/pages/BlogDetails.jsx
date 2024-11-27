@@ -1,6 +1,6 @@
 import React,{useState,useEffect } from "react";
 import MicroBanner from "../components/MicroBanner/Index";
-import Desktopmicro_bg from "../assets/images/blogs/blogBG.jpg";
+import Desktopmicro_bg from "../assets/images/blogs/blog.jpg";
 import { Container,  } from "react-bootstrap";
 import { Link } from "react-router-dom";
 import { useParams } from "react-router-dom";
@@ -61,7 +61,7 @@ setSelectedBlog(result);
         <div className="row row-gap-3">
          <div className="col-sm-12 col-md-8 col-lg-8">
  
-         <div className="w-100 px-3">
+         <div className="">
             <img
               src={selectedBlog?.img}
               alt=""
