@@ -7,6 +7,7 @@ import SecTitle from "../../common/SecTitle/Index";
 // import BlogIcon from "../assets/images/blogs/blogicon.png";
 import headingIconImg from "../assets/images/icons/heading-icon-img.png";
 import blogIMG from "../assets/images/blogs/blog-1.jpg";
+import blogIMG2 from "../assets/images/blogs/1588.jpg";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSelectedBlog } from "../../redux/blogsSlice";
@@ -29,22 +30,20 @@ function Blog() {
 
   const blogData = [
     {
-      title: "Sky Villas by MVN: Redefining Luxury Living in Gurugram",
+      title: "MVN AeroOne Gurugram by MVN: Redefining Luxury Living in Gurugram",
       slug: "Sky-Villas-by-MVN-Redefining-Luxury-Living-in-Gurugram",
 
       img: blogIMG,
-      date: "16 April, 2021",
+      date: "16 October, 2024",
       link: "",
       content: [
-        `Sky Villas—luxurious residences perched high above the city—are synonymous with opulence and exclusivity in major global cities like New York, Dubai, and Singapore. These architectural marvels, often occupying the highest floors of premium skyscrapers, offer panoramic views, unparalleled privacy, and amenities fit for royalty. Now, MVN is bringing this epitome of luxury to Gurugram, introducing a lifestyle never seen before in India's real estate market.
-`,
-        `Prepare to experience something extraordinary: Sky Villas by MVN, where the extravagance of international high-rise living meets the dynamism of Gurugram's skyline.`,
+        `MVN AeroOne Gurugram—luxurious residences perched high above the city—are synonymous with opulence and exclusivity in major global cities like New York, Dubai, and Singapore. These architectural marvels, often occupying the highest floors of premium skyscrapers, offer panoramic views, unparalleled privacy, and amenities fit for royalty. Now, MVN is bringing this epitome of luxury to Gurugram, introducing a lifestyle never seen before in India's real estate market.`,
       ],
     },
     {
       title: "Dwarka Expressway: Redefining Urban Connectivity and Real Estate Dynamics",
       slug:'dwarka-expressway-redefining-urban-connectivity-and-real-estate-dynamics',
-      img: blogIMG,
+      img: blogIMG2,
       date: "16 April, 2021",
       link: "",
       content: [
