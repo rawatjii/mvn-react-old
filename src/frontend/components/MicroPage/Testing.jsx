@@ -1,10 +1,11 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import * as CONFIG from '../../../config/config'
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Testing = () => {
+const RendersSliding = () => {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
@@ -15,7 +16,7 @@ const Testing = () => {
       defaults: { ease: "none", duration: 1 },
       scrollTrigger: {
         trigger: wrapper,
-        start: "top 20%",
+        start: "top 70px",
         end: "+=600%",
         pin: true,
         scrub: true,
@@ -33,7 +34,7 @@ const Testing = () => {
       tl.to(
         body,
         {
-          height: 400, // Fixed height
+          height: 700, // Fixed height
           onStart: () => item.classList.add("active"),
           onReverseComplete: () => item.classList.remove("active"),
         },
@@ -44,7 +45,7 @@ const Testing = () => {
       if (hasChild) {
         const cardsContainer = body.querySelector(".cards-container");
         const scrollHeight = cardsContainer.scrollHeight;
-        const containerHeight = 400; // Fixed accordion content height
+        const containerHeight = 700; // Fixed accordion content height
 
         // Animate the cards vertically
         tl.to(
@@ -78,48 +79,86 @@ const Testing = () => {
   }, []);
 
   return (
-    <div className="test_wrapper wrapper center" ref={wrapperRef}>
+    <div className="renders_section wrapper center" ref={wrapperRef}>
       <div className="accordion">
         <div className="accordion-item">
-          <div className="accordion-header">
-            <h3>Item One</h3>
-          </div>
-          <div className="accordion-body">
-            <div className="content">
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
-                cupiditate minus quisquam eligendi sed veritatis aut.
-              </p>
-              <p>
-                Corporis ad ducimus quo consequatur ex in placeat, omnis vero,
-                laborum nemo velit autem perspiciatis.
-              </p>
+          <div className="accordion-header main_am">
+            <div className="sec_title text-center color style1">
+              <h4 className="title">Landscape</h4>
             </div>
-          </div>
-        </div>
-
-        <div className="accordion-item">
-          <div className="accordion-header">
-            <h3>Item Two</h3>
           </div>
           <div className="accordion-body" data-haschild="true">
             <div className="content">
               <div className="vertical center">
                 <div className="cards-container">
-                  <div className="card center gradient-green">Card 1</div>
-                  <div className="card center gradient-blue">Card 2</div>
-                  <div className="card center gradient-purple">Card 3</div>
-                  <div className="card center gradient-orange">Card 4</div>
-                  <div className="card center gradient-green-2">Card 5</div>
-                  <div className="card center gradient-blue-2">Card 6</div>
+                  <div className="card center gradient-green">
+                    <img src={CONFIG.IMAGE_URL + 'renders/landscape/1.webp'} alt="" />
+                  </div>
+                  <div className="card center gradient-blue">
+                    <img src={CONFIG.IMAGE_URL + 'renders/landscape/2.webp'} alt="" />
+                  </div>
+                  <div className="card center gradient-purple">
+                    <img src={CONFIG.IMAGE_URL + 'renders/landscape/3.webp'} alt="" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+
+        <div className="accordion-item">
+          <div className="accordion-header main_am">
+            <div className="sec_title text-center color style1">
+              <h4 className="title">Elevation</h4>
+            </div>
+          </div>
+          <div className="accordion-body" data-haschild="true">
+            <div className="content">
+              <div className="vertical center">
+                <div className="cards-container">
+                  <div className="card center gradient-green">
+                    <img src={CONFIG.IMAGE_URL + 'renders/elevation/1.webp'} alt="" />
+                  </div>
+                  <div className="card center gradient-blue">
+                    <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" />
+                  </div>
+                  <div className="card center gradient-purple">
+                    <img src={CONFIG.IMAGE_URL + 'renders/elevation/3.webp'} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div className="accordion-item">
+          <div className="accordion-header main_am">
+            <div className="sec_title text-center color style1">
+              <h4 className="title">Apartment</h4>
+            </div>
+          </div>
+          <div className="accordion-body" data-haschild="true">
+            <div className="content">
+              <div className="vertical center">
+                <div className="cards-container">
+                  <div className="card center gradient-green">
+                    <img src={CONFIG.IMAGE_URL + 'renders/apartment/1.webp'} alt="" />
+                  </div>
+                  <div className="card center gradient-blue">
+                    <img src={CONFIG.IMAGE_URL + 'renders/apartment/2.webp'} alt="" />
+                  </div>
+                  <div className="card center gradient-purple">
+                    <img src={CONFIG.IMAGE_URL + 'renders/apartment/3.webp'} alt="" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
       </div>
     </div>
   );
 };
 
-export default Testing;
+export default RendersSliding;

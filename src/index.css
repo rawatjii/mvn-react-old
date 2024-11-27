@@ -529,7 +529,7 @@ a {
 }
 
 .mt_50 {
-  margin-top: 50px;
+  margin-top: 50px!important;
 }
 
 .mt_60 {
@@ -2660,13 +2660,51 @@ footer {
 .media-event-content .play-icon{position:absolute;top:50%;width:auto;height:62px;left:50%;transform:translate(-50%,-50%)}
 .media-event-content{position:relative}
 
-.test_wrapper{
+.renders_section{
 
-  .card{
-    margin:10px;
-    background:gray;
-    height:200px;
-  }  
+  .main_am{
+    padding-top: 40px;
+  }
+
+  .sec_title{
+    margin-bottom: 30px;
+  }
+
+  .accordion{
+
+    background:transparent;
+
+    .accordion-item{
+
+      background:transparent;
+      border: none;
+
+      .accordion-body{
+
+        padding:0;
+
+        .card{
+          margin:15px 20px; 
+          background:gray;
+          height:200px;
+      
+          img{
+            height:100%;
+            position:relative;
+            width:100%;
+          }
+        }  
+      }
+    }
+  }
+
+  .accordion-body {
+    overflow: hidden;
+    height: 0;
+    transition: height 0.3s ease; 
+  }
+
+  
 
   .horizontal center{
 
@@ -2675,26 +2713,41 @@ footer {
   }
 }
 
-.accordion-body {
-  overflow: hidden; /* Hide cards outside the visible area */
-  height: 0; /* Starts closed */
-  transition: height 0.3s ease; /* Smooth open/close animation */
+.renders1_section{
+
+  .cards-container{
+    padding:0 10px;
+
+    .card{
+
+      margin-bottom:20px;
+      border: none;
+      border-radius: 5px;
+      overflow: hidden;
+    }
+  }
+}
+
+/*.accordion-body {
+  overflow: hidden; /~ Hide cards outside the visible area ~/
+  height: 0; /~ Starts closed ~/
+  transition: height 0.3s ease; /~ Smooth open/close animation ~/
 }
 
 .cards-container {
   display: flex;
-  flex-direction: column; /* Stack cards vertically */
+  flex-direction: column; /~ Stack cards vertically ~/
   gap: 10px;
   position: relative;
 }
 
 .card {
-  height: 100px; /* Card height */
+  height: 100px; /~ Card height ~/
   background: #ccc;
   display: flex;
   align-items: center;
   justify-content: center;
-}
+}*/
 
 
 

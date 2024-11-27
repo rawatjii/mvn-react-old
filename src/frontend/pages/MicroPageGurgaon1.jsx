@@ -27,6 +27,8 @@ import SecSliding from "../components/MicroPage/SecSliding";
 import MicroAmenities1 from "../components/MicroPage/Amenities1";
 
 import Testing from "../components/MicroPage/Testing";
+import RendersSliding from "../components/MicroPage/Testing";
+import Renders1 from "../components/MicroPage/Renders1";
 
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -60,8 +62,7 @@ const MicroPageGurgaon1 = ({ data }) => {
       {/* Render other components only after Hero Section is loaded */}
 
       {heroLoaded && (
-        <>
-            <Testing />  
+        <>  
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} /> {/*no isssue*/}
           <PeacockSection data={data} /> {/*no isssue*/}
@@ -84,25 +85,23 @@ const MicroPageGurgaon1 = ({ data }) => {
           {/*<div>
             <Renders data={data} />  /~no isssue~/
           </div>*/}
-          <div>
+          
+          <Renders1 />
+          {/* <div>
             {data?.renders.map((render, index) => (
               <SecSliding key={index} data={render} />
             ))}
-          </div>
+          </div> */}
           {/* No polution zone location */}
 
           <div>{/* <MicroHighlights data={data.highlight} />  */}</div>
           <MicroAmenities data={data.amenities} />
           <div>
-<<<<<<< HEAD
             {/* <MicroHighlights data={data.highlight} />  */}
           </div>
-            <MicroAmenities1 data={data.amenities} />
+            {/* <MicroAmenities1 data={data.amenities} /> */}
           <div>
           <Typology  />
-=======
-            <Typology />
->>>>>>> bf42049e0908450a8dedc574020635e355f5e7f7
           </div>
           <div>
             <MicroFloorPlan data={data.floorPlan} />
