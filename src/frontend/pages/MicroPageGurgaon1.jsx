@@ -24,6 +24,11 @@ import GurgaonLoader1 from "../../common/Loader/micro/gurgaon1/Index";
 import Typology from "../components/homepage/Typology";
 import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
 import SecSliding from "../components/MicroPage/SecSliding";
+import MicroAmenities1 from "../components/MicroPage/Amenities1";
+
+import Testing from "../components/MicroPage/Testing";
+import RendersSliding from "../components/MicroPage/Testing";
+import Renders1 from "../components/MicroPage/Renders1";
 
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -60,6 +65,7 @@ const MicroPageGurgaon1 = ({ data }) => {
       {heroLoaded && (
         <>
           <MicroOverview data={data} /> {/*no isssue*/}
+          <LargeElevationSection data={data.LargeElevationSection} />
           <PeacockSection data={data} /> {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
@@ -81,17 +87,25 @@ const MicroPageGurgaon1 = ({ data }) => {
           {/*<div>
             <Renders data={data} />  /~no isssue~/
           </div>*/}
-          <div>
+          
+          <Renders1 />
+          {/* <div>
+            {data?.renders.map((render, index) => (
+              <SecSliding key={index} data={render} />
+            ))}
+          </div> */}
+          {/* <div>
             {data?.renders.map((render, index)=>(
               <SecSliding key={index} data={render} />
             ))}
             
-          </div>
+          </div> */}
           {/* No polution zone location */}
 
           <div>
             {/* <MicroHighlights data={data.highlight} />  */}
           </div>
+            {/* <MicroAmenities1 data={data.amenities} /> */}
             <MicroAmenities data={data.amenities} />
           <div>
           <Typology  />

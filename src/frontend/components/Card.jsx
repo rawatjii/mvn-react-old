@@ -1,10 +1,10 @@
 import React from "react";
 import diamondIMG from '../assets/images/icons/diamond.png';
 
-const CustomCard = ({title, location, extra, desc})=>{
+const CustomCard = ({className, title, location, extra, desc})=>{
   
   return(
-    <div className="overview_card">
+    <div className={`overview_card ${className}`}>
       <div className="diamond_img_strip">
         <img src={diamondIMG} className="img-fluid" alt="image" />
       </div>
