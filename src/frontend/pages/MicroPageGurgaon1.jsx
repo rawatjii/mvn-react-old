@@ -24,6 +24,7 @@ import GurgaonLoader1 from "../../common/Loader/micro/gurgaon1/Index";
 import Typology from "../components/homepage/Typology";
 import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
 import SecSliding from "../components/MicroPage/SecSliding";
+import Testing from "../components/MicroPage/Testing";
 
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -58,8 +59,10 @@ const MicroPageGurgaon1 = ({ data }) => {
 
       {heroLoaded && (
         <>
-          <MicroOverview data={data} />
-          <PeacockSection data={data} />
+            <Testing />  
+          <MicroOverview data={data} /> {/*no isssue*/}
+          <LargeElevationSection data={data.LargeElevationSection} /> {/*no isssue*/}
+          <PeacockSection data={data} /> {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
           <div>

@@ -2581,6 +2581,14 @@ footer {
 .section.living_room_video_section {
   padding-top:100px;
 
+  .frames_content{
+
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+
   video {
     width: 100%
   }
@@ -2651,6 +2659,15 @@ footer {
 }
 .media-event-content .play-icon{position:absolute;top:50%;width:auto;height:62px;left:50%;transform:translate(-50%,-50%)}
 .media-event-content{position:relative}
+
+.test_wrapper{
+
+  .card{
+    margin:10px;
+    background:gray;
+    height:500px;
+  }  
+}
 
 
 /* start responsive */

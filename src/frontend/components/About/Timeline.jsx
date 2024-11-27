@@ -16,8 +16,8 @@ import mvninfrastructureathensSohna from '../../assets/images/timeline/mvninfras
 import mvnschoolSec88 from '../../assets/images/timeline/mvnschool-sec88.webp';
 import mvninfrastructureAthensSohna from '../../assets/images/timeline/mvn-infrastructure-athens-sohna-phase-two.webp';
 import mvnaerooneBangalore from '../../assets/images/timeline/mvn-aeroone-bangalore.webp';
-import mvninfrastructureathensPhaseThree from '../../assets/images/timeline/mvn-infrastructure-athens-sohna-phase-three.webp';
-
+import mvnaeroonebengaluru from '../../assets/images/timeline/mvn-aeroone-bengaluru.webp';
+import mvnschoolsportsacademy from '../../assets/images/timeline/mvn-school-sports-academy.webp';
 
 
 
@@ -95,10 +95,16 @@ const data = [
     location: 'Bengaluru'
   },
   {
-    img: mvninfrastructureathensPhaseThree,
-    year: 'Coming Soon',
-    title: 'MVN Aero One | MVN Mall | Project by MVN Infrastructure Pvt Ltd.',
-    location: 'Gurugram'
+    img: mvnaeroonebengaluru,
+    year: '2023',
+    title: 'MVN Aeroone | Luxury Apartments',
+    location: '(Phase ii) Bengaluru'},
+
+  {
+    img: mvnschoolsportsacademy,
+    year: '2023',
+    title: 'MVN School Sports Academy',
+    location: 'Sector - 88, Greater Faridabad'
   }
 
 ];
