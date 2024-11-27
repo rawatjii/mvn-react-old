@@ -2,6 +2,9 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import DIAMOND from  '../../../frontend/assets/images/icons/diamond.png' ;
+import typo1 from '../../assets/images/typologies/1.png';
+import typo2 from '../../assets/images/typologies/2.png';
+import typo3 from '../../assets/images/typologies/3.png';
 gsap.registerPlugin(ScrollTrigger);
 
 const Typology = () => {
@@ -25,7 +28,7 @@ const Typology = () => {
     const loadedImages = [];
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      isMobile ? img.src = `assets/images/micro/aeroone-gurgaon/mobiles/${i}.webp` : img.src = `assets/images/micro/aeroone-gurgaon/desktop/${i}.webp` ;
+      isMobile ? img.src = `assets/images/micro/aeroone-gurgaon/mobiles/${i}.webp` : img.src = `assets/images/micro/aeroone-gurgaon/mobiles/${i}.webp` ;
       loadedImages.push(img);
     }
     setImages(loadedImages);
@@ -96,6 +99,10 @@ const Typology = () => {
 
         {/* Content boxes */}
         <div className="typology_content">
+          <div className="typology-before-line">
+
+          
+          
           <div className="typology_diamond_btn">
             <img src={DIAMOND} alt="" />
             <img src={DIAMOND} alt="" />
@@ -127,7 +134,16 @@ const Typology = () => {
             <h1>Penthouse</h1>
             <p>Elevate your lifestyle to new heights with these extraordinary duplex flats, where two levels of unmatched luxury unfold before you. With impeccable attention to detail and a focus on privacy and exclusivity, these residences embody the pinnacle of sophisticated living, where only the most discerning will reside.</p>
           </div>
+          </div>
         </div>
+
+        <div className="desktop-view-typo-images">
+            <div className="typologies-images">
+              <img className="image-1" src={typo1} alt="" />
+              <img className="image-2" src={typo2} alt="" />
+              <img className="image-3" src={typo3} alt="" />
+            </div>
+          </div>
       </section>
     </>
   );
