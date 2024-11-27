@@ -3,6 +3,7 @@ import { Container } from "react-bootstrap"
 import SecTitle from "../../../common/SecTitle/Index"
 import { gsap } from 'gsap';
 import ScrollTrigger from 'gsap/ScrollTrigger';
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 
 import Lightbox from "yet-another-react-lightbox";
@@ -34,6 +35,7 @@ const MicroFloorPlan = ({data})=>{
   const priceRefs = useRef([]);
   const sizeRefs = useRef([]);
   const [isMasterPlanOpen, setIsMasterPlanOpen] = useState(false);
+  const [index, setIndex] = React.useState(-1);
 
   const {floorPlanData, title} = data  
 
@@ -98,9 +100,6 @@ const MicroFloorPlan = ({data})=>{
     })
   }, [])
   
-  
-
-
   return(
     <section className="section floor_plan_section">
       
@@ -113,7 +112,14 @@ const MicroFloorPlan = ({data})=>{
             <Accordion.Item key={index} eventKey={index}>
               <Accordion.Header>{item.title}</Accordion.Header>
               <Accordion.Body>
-                <img src={item.thumbnail} alt="mvn-floor-plan" className="img-fluid w-100" />
+                <Swiper pagination={true} className="mySwiper">
+                  {item.thumbnail.map((image, index)=>(
+                    <SwiperSlide>
+                      <img src={image.src} alt="" onClick={()=>setIndex(index)} />
+                    </SwiperSlide>
+                  ))}
+                  
+                </Swiper>
               </Accordion.Body>
             </Accordion.Item>
           ))}
@@ -122,9 +128,9 @@ const MicroFloorPlan = ({data})=>{
       </Container>
 
       <Lightbox 
-        open={isMasterPlanOpen}
-        close={() => setIsMasterPlanOpen(false)}
-        slides={floorPlanData}
+        open={index >= 0}
+        close={() => setIndex(-1)}
+        slides={floorPlanData.thumbnail}
         plugins={[Zoom]}
         carousel={{
           finite: floorPlanData.length <= 1,  // Prevent looping if there’s only one image

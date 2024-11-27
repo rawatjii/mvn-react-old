@@ -48,7 +48,7 @@ const Video3 = ({ data }) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 8}`, // Extend scroll distance to fit more frames
+      end: `+=${window.innerHeight * 4}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
