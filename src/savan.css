@@ -2318,3 +2318,33 @@ section.section.media-gallery {padding-top: 70px;}
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
+
+
+.main_am {
+  .content {
+      background: #000;
+      margin: auto;
+      max-width: calc(100% - 0px);
+      text-align: center;
+      padding: 20px;
+      border-radius: 0;
+      color: #fff;
+  }
+}
+.main_am {
+  .desc {
+      margin: 0;
+      color: #ffffff;
+      line-height: 20px;
+      margin-top: 10px;
+  }
+}
+
+
+.main_am .content {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.amenities-container{display:none;}
