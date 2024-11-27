@@ -2257,4 +2257,16 @@ footer {
   }
   .micro_data {
   }
+  .grid-left-right .img-hov {
+    position: relative !important;
+    display: block;
+  }
+  .grid-left-right .overlay {
+    position: unset;
+  }
+  .oppotunities.padding {
+    /* padding-bottom: 0; */
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 }
