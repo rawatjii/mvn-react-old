@@ -11,6 +11,7 @@ import "swiper/css";
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import 'swiper/css/navigation';
+import CustomCard from "../Card";
 
 
 gsap.registerPlugin(ScrollTrigger);
@@ -76,7 +77,8 @@ const Location = () => {
   }, []);
 
   return (
-    <section
+    <div>
+      <section
       className="section location_section"
       ref={sectionRef}
     >
@@ -151,6 +153,9 @@ const Location = () => {
         />
       </span>
     </section>
+
+<CustomCard className="style2" desc="Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave." />
+    </div>
   );
 };
 
