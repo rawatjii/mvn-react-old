@@ -2407,6 +2407,7 @@ footer {
       p {
         margin: 0;
         font-size: 16px;
+        text-transform: capitalize;
       }
     }
   }
@@ -3317,7 +3318,7 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    /* opacity: 0.5; */
   }
 
   .parallax:first-child {

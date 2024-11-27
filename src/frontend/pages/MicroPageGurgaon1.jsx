@@ -90,7 +90,7 @@ const MicroPageGurgaon1 = ({ data }) => {
           {/* No polution zone location */}
 
           <div>
-            <MicroHighlights data={data.highlight} />  {/*no isssue*/}
+            {/* <MicroHighlights data={data.highlight} />  */}
           </div>
             <MicroAmenities data={data.amenities} />
           <div>

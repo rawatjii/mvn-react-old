@@ -1790,6 +1790,7 @@ h4.title {
 
 
 
+
 @media(max-width:1600px) {
 
   .media-event-content .event-video-banner {
@@ -1930,7 +1931,9 @@ h4.title {
  
 }
 /*---------------------------- Media Query 1600 Max END--------------------------------------- */
-
+section.section.other_projects_section.pb-0 {
+  padding-bottom: 40px!important;
+}
 
 @media(max-width:767px) {
 
@@ -2309,10 +2312,8 @@ article.awa_card.awa_shadow p.text-capitalize { margin-right: 15px;}
 .press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {margin-left: 33%;}
 
 section.section.media-gallery {padding-top: 70px;}
-.media-news_online {
-  padding-top: 50px;
-}
-
+.media-news_online {padding-top: 50px;}
+.micro_hero_section { & .frames_content { img { height: 98%; object-fit: cover;width: 100%; }}}
 
 
 }

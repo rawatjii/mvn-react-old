@@ -3,7 +3,7 @@ import { Container, Row, Col } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import LazyLoad from "react-lazyload";
 
-import twitterIcon from '../assets/images/icons/social/twitter.png';
+// import twitterIcon from '../assets/images/icons/social/twitter.png';
 import linkedinIcon from '../assets/images/icons/social/linkedin.png';
 import fbIcon from '../assets/images/icons/social/fb.png';
 import instaIcon from '../assets/images/icons/social/instagram-2.png';
@@ -27,11 +27,11 @@ const Footer = () => {
 
             <div className="social_links text-center">
               <ul>
-                <li>
+                {/* <li>
                   <a href=" https://x.com/MVN_infra" className="icon">
                     <img src={twitterIcon} alt="mvn-twitter-icon" className="img-fluid " />
                   </a>
-                </li>
+                </li> */}
                 <li>
                   <a href=" https://www.linkedin.com/company/mvn-infrastructure/" className="icon">
                     <img src={linkedinIcon} alt="mvn-google-plus-icon" className="img-fluid" />
@@ -70,7 +70,7 @@ const Footer = () => {
           <div className="custom-col">
             <div className="box office-details-box">
               <h4 className="footer-second-heading">Contact Details</h4>
-              <p className="address-details"><span>Meet:</span> MVN Group, 2nd Floor, Sadahalli Gate, Bangalore - 562157, MVN Athens Gurugram Sector 5, Gurugram, Haryana-122102, Faridabad- Sihi Gate Road, Ballabhgarh, Faridabad, Haryana-121004</p>
+              <p className="address-details"><span>Meet:</span> MVN AeroOne Dwarka Expressway, 22Km Milestone, Sector-37D, Gurugram, Pin-122103 | CIN:ACA-4678 | PAN:ABWFM8415E</p>
               <p className="phone-details"><span>Talk:</span> +91 88267 93148</p>
               <p className="mail-details"><span>Write:</span> info@mvngroup.in</p>
             </div>

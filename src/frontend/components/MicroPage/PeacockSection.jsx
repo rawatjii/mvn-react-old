@@ -67,7 +67,7 @@ const PeacockSection = ({ data }) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 8}`,
+      end: `+=${window.innerHeight * 4}`,
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {

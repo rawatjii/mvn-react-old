@@ -13,7 +13,7 @@ const Video3 = ({ data }) => {
   const titleRef = useRef();
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true); // Track loading state
-  const totalFrames = 316;
+  const totalFrames = 696;
   const frameRefs = useRef([]);
   const loadedCount = useRef(0); // Track number of loaded images
 
@@ -48,7 +48,7 @@ const Video3 = ({ data }) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 8}`, // Extend scroll distance to fit more frames
+      end: `+=${window.innerHeight * 4}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
