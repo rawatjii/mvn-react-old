@@ -2581,6 +2581,14 @@ footer {
 .section.living_room_video_section {
   padding-top:100px;
 
+  .frames_content{
+
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+
   video {
     width: 100%
   }
