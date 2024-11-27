@@ -72,81 +72,196 @@ const data = {
   //   title: "an epitome of contemporary elegance",
   //   isAllow: true,
   // },
+  // renders: [
+  //   {
+  //     src: CONFIG.IMAGE_URL + 'renders/1_desktop.webp',
+  //     mobile_thumb: CONFIG.IMAGE_URL + 'renders/1_mobile.webp',
+  //   },
+  //   {
+  //     src: CONFIG.IMAGE_URL + 'renders/2_desktop.webp',
+  //     mobile_thumb: CONFIG.IMAGE_URL + 'renders/2_mobile.webp',
+  //   },
+  //   {
+  //     src: CONFIG.IMAGE_URL + 'renders/3_desktop.webp',
+  //     mobile_thumb: CONFIG.IMAGE_URL + 'renders/3_mobile.webp',
+  //   },
+  //   {
+  //     src: CONFIG.IMAGE_URL + 'renders/4_desktop.webp',
+  //     mobile_thumb: CONFIG.IMAGE_URL + 'renders/4_mobile.webp',
+  //   },
+  //   {
+  //     src: CONFIG.IMAGE_URL + 'renders/5_desktop.webp',
+  //     mobile_thumb: CONFIG.IMAGE_URL + 'renders/5_mobile.webp',
+  //   }
+  // ],
   renders: [
     {
-      src: CONFIG.IMAGE_URL + 'renders/1_desktop.webp',
-      mobile_thumb: CONFIG.IMAGE_URL + 'renders/1_mobile.webp',
+      title: 'Apartment',
+      data:[
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/1.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/1_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/2.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/2_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/3_sm.webp`,
+        }
+      ],
     },
     {
-      src: CONFIG.IMAGE_URL + 'renders/2_desktop.webp',
-      mobile_thumb: CONFIG.IMAGE_URL + 'renders/2_mobile.webp',
-    },
+      title: 'Elevation',
+      data:[
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/elevation/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/elevation/1.jpg`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/elevation/2Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/elevation/2.jpg`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/elevation/3Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/elevation/3.jpg`,
+        }
+      ],
+    },  
     {
-      src: CONFIG.IMAGE_URL + 'renders/3_desktop.webp',
-      mobile_thumb: CONFIG.IMAGE_URL + 'renders/3_mobile.webp',
-    },
-    {
-      src: CONFIG.IMAGE_URL + 'renders/4_desktop.webp',
-      mobile_thumb: CONFIG.IMAGE_URL + 'renders/4_mobile.webp',
-    },
-    {
-      src: CONFIG.IMAGE_URL + 'renders/5_desktop.webp',
-      mobile_thumb: CONFIG.IMAGE_URL + 'renders/5_mobile.webp',
-    }
+      title: 'Landscape',
+      data:[
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/landscape/1Lg.jpg`,
+          md: `${CONFIG.IMAGE_URL}renders/landscape/1.jpg`,
+        },
+      ],
+      
+    },  
   ],
   amenities : [
-    { name: 'club house', imgSrc: 'clubhouse.webp', desc:'A sanctuary of exclusivity, blending graceful leisure with moments that define timeless indulgence.' },  
+    { name: 'club house', imgSrc: 'clubhouseSm.webp', desc:'A sanctuary of exclusivity, blending graceful leisure with moments that define timeless indulgence.' },  
     { name: 'Gym', imgSrc: 'gymSm.webp', desc:'A space meticulously designed to redefine fitness, where every movement feels empowered amidst an ambiance of precision and poise.' },
     { name: 'Library', imgSrc: 'librarySm.webp', desc:'A retreat for the connoisseur of knowledge, offering a curated realm of intellectual indulgence and quiet sophistication.' },
     { name: 'Business Center', imgSrc: 'businessSm.webp', desc:'Crafted for the discerning professional, this is where ambition meets elegance in an environment of unparalleled refinement.' },
     { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp', desc:'An imaginative wonderland where joy is boundless, and every detail is thoughtfully created for young dreamers to thrive.' },
     { name: `theater`, imgSrc: 'theaterSm.webp', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
-    { name: 'spa', imgSrc: 'spa.webp', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
+    { name: 'spa', imgSrc: 'spaSm.webp', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
   ],
-  menities_section: [
+  amenities_section: [
     {
       title: 'Spa',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/spa.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/spaSm.webp',
+      data:{
+        content:{},
+        images: [
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/spa.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/spaSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/spa.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/spaSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/spa.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/spaSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/spa.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/spaSm.webp',
+          }
+        ]
       }
+      
     },
     {
       title: 'Library',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/librarySm.webp',
+      data:{
+        content:{},
+        images: [
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/librarySm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/librarySm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/library.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/librarySm.webp',
+          }
+        ]
       }
     },
     {
       title: 'Gym Area',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
+      data:{
+        content:{},
+        images: [
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/gym.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/gymSm.webp',
+          }
+        ]
       }
     },
     {
       title: 'Mini Theater',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
+      data:{
+        content:{},
+        images: [
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',
+          }
+        ]
       }
     },    
     {
       title: 'Business Centre',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
+      data:{
+        content:{},
+        images: [
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
+          },
+          {
+            lg: CONFIG.IMAGE_URL + 'amenities/business.webp',
+            mb: CONFIG.IMAGE_URL + 'amenities/businessSm.webp',
+          }
+        ]
       }
     },   
-    
-    {
-      title: 'MODERN ROOFTOP CLUBHOUSE',
-      images: {
-        lg: CONFIG.IMAGE_URL + 'amenities/clubhouse.webp',
-        mb: CONFIG.IMAGE_URL + 'amenities/clubhouseSm.webp',
-      }
-    },
   ],
   highlight:{
     isshow: true,
@@ -177,23 +292,23 @@ const data = {
     locationData: [
       {
         distance: 'near by',
-        title: 'yasho bhoomi',
+        title: 'Yasho Bhoomi',
       },
       {
         distance: 'near by',
-        title: 'indira gandhi international airport',
+        title: 'Indira Gandhi international airport',
       },
       {
         distance: 'near by',
-        title: 'diplomatic enclave',
+        title: 'Diplomatic enclave 2',
       },
       {
         distance: 'near by',
-        title: 'gurgaon railway station',
+        title: 'Gurgaon Railway station',
       },
       {
         distance: 'near by',
-        title: 'dlf cyber city',
+        title: 'Cyber City 2',
       },
       {
         distance: 'near by',
@@ -202,25 +317,47 @@ const data = {
     ]
   },
   floorPlan:{
-
+    title:'Floor Plan',
     floorPlanData : [
       {
-        title:'1 BHK Floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
+        title:'Penthouse',
+        thumbnail:[
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/1.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/1.webp',
+          },
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/2.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/2.webp',
+          }
+        ]
       },
       {
-        title:'2 BHK Panoramic floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
+        title:'360 Panoramic Apartment',
+        thumbnail:[
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/360/1.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/360/1.webp',
+          }
+        ]
       },
       {
-        title:'2 BHK Luxury floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
+        title:'270 Panoramic Apartment',
+        thumbnail:[
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/1.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/1.webp',
+          },
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/2.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/2.webp',
+          },
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/3.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/3.webp',
+          }
+        ]
       },
-      {
-        title:'3 BHK Luxury floor Plan',
-        thumbnail:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
-      },
-      
     ]
   }
 };

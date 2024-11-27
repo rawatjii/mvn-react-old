@@ -13,6 +13,8 @@
         display: flex;
         align-items: center;
         justify-content: center;
+        transition: 10s linear;
+        transition-delay: 2s;
     
         .logo{
     

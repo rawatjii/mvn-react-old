@@ -17,7 +17,7 @@ const PeacockSection = ({ data }) => {
   const [loading, setLoading] = useState(true); // State to track loading
 
   const totalFramesDesktop = 379;
-  const totalFramesMobile = 379;
+  const totalFramesMobile = 256;
 
   // Detect screen size
   useEffect(() => {
@@ -29,10 +29,12 @@ const PeacockSection = ({ data }) => {
     return () => {
       window.removeEventListener("resize", checkMobile);
     };
-  }, [data]);
+  }, []); // Dependency array doesn't include data to ensure it's initialized once.
 
   // Load images
   useEffect(() => {
+    if (isMobile === null) return; // Wait until `isMobile` is determined.
+
     const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
     const imagePath = isMobile ? "assets/images/peacock/mobile/" : "assets/images/peacock/desktop/";
 
@@ -41,19 +43,19 @@ const PeacockSection = ({ data }) => {
 
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `${imagePath}${i}.webp`; // Adjust the path accordingly
+      img.src = `${imagePath}${i}.webp`;
 
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
-          setLoading(false); // All images loaded, hide loader
+          setLoading(false); // All images loaded, hide loader.
         }
       };
 
       loadedImages.push(img);
     }
     setImages(loadedImages);
-  }, [totalFramesMobile,data]);
+  }, [isMobile]); // Depend on `isMobile` to reload images when the state changes.
 
   // GSAP Animation
   useEffect(() => {
@@ -65,7 +67,7 @@ const PeacockSection = ({ data }) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 8}`,
+      end: `+=${window.innerHeight * 4}`,
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {

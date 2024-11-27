@@ -1185,8 +1185,8 @@ ul.content{align-items:center}
     text-align: center;
     padding-top: 40px;
     padding-bottom: 40px;
-    padding-left:30px;
-    padding-right:30px;
+    padding-left:250px;
+    padding-right:250px;
   }
   .testimonial_section .swiper-button-next {
     position: absolute;
@@ -1219,10 +1219,28 @@ ul.our-values-ul-icon{margin-top:30px;gap:30px 0!important}
 .philosophy_section ul.content .values-ul-icon{width:auto;height:60px;margin:0 auto;margin-bottom:30px;}
 .philosophy_section ul.content .flex-li-row-2 ul.our-values-ul-icon li{display:grid;justify-content:center;text-align:center}
 
+.testimonial_section .swiper-button-prev {bottom: 60px; left: 44%;}
+.testimonial_section .swiper-button-next { bottom: 60px; left: 53%; top: unset;}
+.testimonial_section { & .testimonial_carousel {.swiper-pagination {  position: relative; margin-top: 9px;   bottom: -20px; } }}
+.testimonial_section {& .testimonial_carousel { .swiper-pagination {   bottom: -20px; }}}
+section.section.media-press-release.pb-0 h4.title {
+  margin-bottom: 30px !important;
+  display: block;
+  width: fit-content;
+  margin: 0px auto;
+}
+
 
 
 }
 
+.media-event-content .event-video-banner {
+  width: 94%;
+  height: 436px;
+  object-fit: cover;
+  margin: 0px auto;
+  display: block;
+}
 
 /* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
 
@@ -1744,14 +1762,44 @@ footer .address-details, footer .phone-details, footer .mail-details {
 }
 
 .press-releases-container  .swiper-horizontal {padding-bottom: 120px;}
-.press_release_slider .pressRelease-Img {height: 380px; object-fit: cover;}
+/* .press_release_slider .pressRelease-Img {height: 380px; object-fit: cover;} */
 .press_release_slider .thumbnail {width: 87%;}
 section.section.press-releases-container {padding-bottom: 0px;}
 section.section.press-releases-container  .swiper.swiper-initialized.swiper-horizontal.swiper-backface-hidden {padding-bottom: 70px;}
+article.awa_card.awa_shadow p {text-align: left;}
+article.awa_card.awa_shadow p.text-capitalize { color: var(--theme_primary_color);cursor: pointer;}
+
+h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70px;height:70px;top:-17px;left:-25px;border-radius:100px;z-index:-1}
+.sec_title.text-center.color.style1{position:relative;width:fit-content;margin:0 auto;margin-bottom:40px}
+.sec_title.text-center.color.style2{width:fit-content;margin:0 auto;margin-bottom:40px}
+.testimonial_section .flex-content-box::after {display:none;}
+h4.title {
+  font-size: 24px !important;
+  padding-bottom: 30px;
+  position: relative;
+}
+/* Adarsh */
+
+.blog_page .blog-detail-page-heading {
+  font-size: 28px;
+  letter-spacing: 1px;
+  padding: 15px 0;
+}
+.blog_page .blog-deatail-page-description{    font-size: 14px;line-height: 26px;font-weight: 300;letter-spacing: 1px;}
+
+
 
 
 
 @media(max-width:1600px) {
+
+  .media-event-content .event-video-banner {
+    width: 94%;
+    height: 352px;
+    object-fit: cover;
+    margin: 0px auto;
+    display: block;
+}
 
   .enquire_form .container {
     padding: 50px 40px !important;
@@ -1875,7 +1923,7 @@ section.section.press-releases-container  .swiper.swiper-initialized.swiper-hori
   .press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {
     top: 88%;
 }
-.press_release_slider .pressRelease-Img {height: 307px!important; object-fit: cover;object-position: left;}
+/* .press_release_slider .pressRelease-Img {height: 307px!important; object-fit: cover;object-position: left;} */
 .press_release_slider .thumbnail {
   width: 87%!important;
 }
@@ -1883,7 +1931,9 @@ section.section.press-releases-container  .swiper.swiper-initialized.swiper-hori
  
 }
 /*---------------------------- Media Query 1600 Max END--------------------------------------- */
-
+section.section.other_projects_section.pb-0 {
+  padding-bottom: 40px!important;
+}
 
 @media(max-width:767px) {
 
@@ -2247,6 +2297,23 @@ ul.our-values-ul-icon{display:flex!important;flex-wrap:wrap}
 .testimonial_section .swiper-button-next { left: 60%;}
 .testimonial_section .swiper-button-prev { left: 33%;}
 .press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {top: 94%;margin-left: 5px;}
+.philosophy_section {.content {background: unset;border: none !important;border-radius: 24px;padding: 0;border: none;}}
+.about_overview { p {  text-align: justify; text-align-last: center;}}
+.press_release_slider   .swiper-slide img { height: auto; }
+article.awa_card.awa_shadow p.text-capitalize {font-size: 14px;}
+.press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {top: 88%;margin-left: 5px;}
+article.awa_card.awa_shadow p.text-capitalize { margin-right: 15px;}
+.press_release_slider .media_center .row { row-gap: 10px;}
+.press_release_slider .enquire_form {.form-group { margin-bottom: 0px;}}
+.press-releases-container .swiper-button-next:after, .press-releases-container .swiper-rtl .swiper-button-prev:after {font-size: 12px;}
+.press-releases-container .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {font-size: 12px;}
+.gallery_slider .swiper-button-prev:after, .gallery_slider .swiper-button-next:after { font-size: 12px;}
+.press-releases-container .swiper-button-next {right: 40%;}
+.press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {margin-left: 33%;}
+
+section.section.media-gallery {padding-top: 70px;}
+.media-news_online {padding-top: 50px;}
+.micro_hero_section { & .frames_content { img { height: 98%; object-fit: cover;width: 100%; }}}
 
 
 }

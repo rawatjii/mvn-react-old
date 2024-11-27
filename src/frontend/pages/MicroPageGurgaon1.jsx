@@ -23,9 +23,12 @@ import GurgaonLoader from "../../common/Loader/micro/gurgaon/Index";
 import GurgaonLoader1 from "../../common/Loader/micro/gurgaon1/Index";
 import Typology from "../components/homepage/Typology";
 import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
+import SecSliding from "../components/MicroPage/SecSliding";
 
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
+
+  
 
   useEffect(() => {
     if (!heroLoaded) {
@@ -75,23 +78,29 @@ const MicroPageGurgaon1 = ({ data }) => {
 
             <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
           </div>
+          {/*<div>
+            <Renders data={data} />  /~no isssue~/
+          </div>*/}
           <div>
-            <Renders data={data} />  {/*no isssue*/}
+            {data?.renders.map((render, index)=>(
+              <SecSliding key={index} data={render} />
+            ))}
+            
           </div>
           {/* No polution zone location */}
 
           <div>
-            <MicroHighlights data={data.highlight} />  {/*no isssue*/}
+            {/* <MicroHighlights data={data.highlight} />  */}
           </div>
             <MicroAmenities data={data.amenities} />
+          <div>
+          <Typology  />
+          </div>
           <div>
             <MicroFloorPlan data={data.floorPlan} />
           </div>
           <div>
             <MicroLocationMap data={data.locationAdvantage} />
-          </div>
-          <div>
-          <Typology  />
           </div>
           <div>
             <Location /> {/*no isssue*/}

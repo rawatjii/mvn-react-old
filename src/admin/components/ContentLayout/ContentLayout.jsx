@@ -39,7 +39,6 @@ const ContentLayout = (props)=>{
 
     const toggleSubMenusHandler = (e, menu)=>{
       e.stopPropagation();
-      // debugger
       setIsSubMenuOpen(true)
       setMenuClasses('test test1')
       dispatch(setCurrentPage(menu))

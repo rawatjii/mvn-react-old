@@ -9,6 +9,8 @@ gsap.registerPlugin(ScrollTrigger);
 
 const HomepageVideo = ({ data }) => {
   const [images, setImages] = useState([]);
+  const [mobile, setMobile] = useState(false);
+
   const [loading, setLoading] = useState(true); // Loader state
   const [totalFrames, setTotalFrames] = useState(0);
   const containerRef = useRef(null);
@@ -33,9 +35,12 @@ const HomepageVideo = ({ data }) => {
   useEffect(() => {
     // Determine if it's mobile or desktop
     const isMobile = window.innerWidth <= 768;
+    if(isMobile){
+      setMobile(true);
+    }
 
     // Set total frames dynamically
-    let frameCount = isMobile ? 275 : 292;
+    let frameCount = isMobile ? 274 : 292;
     setTotalFrames(frameCount);
   }, [data]);
 
@@ -111,12 +116,12 @@ const HomepageVideo = ({ data }) => {
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
       {loading && (
-        <GurgaonLoader />
+        <GurgaonLoader  mobile={mobile} />
       )}
 
       {!loading && (
         <div ref={containerRef} className="frames_content">
-          {images.map((img, index) => (
+          {images?.map((img, index) => (
             <img
               key={index}
               ref={(el) => (frameRefs.current[index] = el)}

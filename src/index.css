@@ -2407,6 +2407,7 @@ footer {
       p {
         margin: 0;
         font-size: 16px;
+        text-transform: capitalize;
       }
     }
   }
@@ -2643,6 +2644,15 @@ footer {
 }
 
 
+.blog_page .microbanner_bg {
+  object-fit: cover;
+  position: absolute;
+  object-position: 10% 20%;
+}
+.media-event-content .play-icon{position:absolute;top:50%;width:auto;height:62px;left:50%;transform:translate(-50%,-50%)}
+.media-event-content{position:relative}
+
+
 /* start responsive */
 /* by bhupendra */
 @media(min-width:768px) {
@@ -2677,11 +2687,6 @@ footer {
   li {
     font-size: 14px;
   }
-
-
-
-
-
 
 
   /* header */
@@ -3061,8 +3066,6 @@ footer {
 }
 
 
-
-
 .render_section {
   position: relative;
   display: flex;
@@ -3285,6 +3288,7 @@ footer {
 }
 
 
+
 .main_am {
   padding-top: 90px;
 
@@ -3314,7 +3318,7 @@ footer {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    opacity: 0.5;
+    /* opacity: 0.5; */
   }
 
   .parallax:first-child {
@@ -3332,20 +3336,10 @@ footer {
   }
 
   .am-name {
-    /* text-shadow: 1px 1px 3px black; */
-    z-index: 1;
-    font-size: 24px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
-    color: var(--theme_primary_color);
-  }
-
-  .desc{
-    margin:0;
-    color: #333;
-    line-height: 20px;
-    margin-top: 10px;
-  }
-
+    /* text-shadow: 1px 1px 3px black; */ z-index: 1;font-size: 24px;  letter-spacing: 2px;  text-transform: uppercase;color: var(--theme_primary_color);}
+  .desc{margin:0; color: #333;  line-height: 20px; margin-top: 10px;}
+  .media-event-content .event-video-banner {width: 94%;height: 303px;}
+  .media-event-content .play-icon { height: 48px;}
+  .media-event-content a {display: block;}
 
 }

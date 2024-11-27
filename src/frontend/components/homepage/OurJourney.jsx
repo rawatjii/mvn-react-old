@@ -19,22 +19,18 @@ import FooterBgImg from "../../assets/images/our-story-bg.webp"; // Corrected pa
 // Register ScrollTrigger plugin with GSAP
 gsap.registerPlugin(ScrollTrigger);
 
-// Define the journey data
-const journeyData = [
-  { icon: expIcon, title: "Years Experience", value: "40+" },
-  { icon: citiesIcon, title: "Cities", value: "20" },
-  { icon: completeProjectsIcon, value: "9", title: "Completed Projects" },
-  { icon: ongoingProjectsIcon, value: "4", title: "Ongoing Projects" },
-  { icon: millionSqftIcon, title: "Million Square Feet", value: "2.3" },
-  { icon: deliveryIcon, title: "On-time Delivery", value: "100%" },
-];
-
 const OurJourney = () => {
   const titleRef = useRef();
   const contentRef = useRef([]);
   const journeyRef = useRef();
-  const [imagesLoaded, setImagesLoaded] = useState(0);
-  const [animationsInitialized, setAnimationsInitialized] = useState(false); // Track if animations have been initialized
+  const [journeyData] = useState([
+    { icon: expIcon, title: "Years Experience", value: "40+" },
+    { icon: citiesIcon, title: "Cities", value: "04" },
+    { icon: completeProjectsIcon, value: "09", title: "Completed Projects" },
+    { icon: ongoingProjectsIcon, value: "04", title: "Ongoing Projects" },
+    { icon: millionSqftIcon, title: "Million Square Feet", value: "7.2" },
+    { icon: deliveryIcon, title: "On-time Delivery", value: "100%" }, // Updated to include %
+  ]);
 
   // Function to initialize animations
   const initializeAnimations = () => {
@@ -64,7 +60,7 @@ const OurJourney = () => {
       }
     });
 
-    // Counter animation with float numbers
+    // Counter animation with % handling
     ScrollTrigger.create({
       trigger: journeyRef.current,
       start: "top 80%", // Start animation when section comes into view
@@ -75,48 +71,52 @@ const OurJourney = () => {
           { innerText: 0 },
           {
             innerText: (i) => journeyData[i].value,
-            duration: 3,
+            duration: 5,
             ease: "power1.in",
             snap: { innerText: 0.1 },
-            stagger: 0.5,
+            stagger: 0.1,
             modifiers: {
               innerText: (value) => {
-                // Check if the value contains a decimal point
                 const numericValue = parseFloat(value);
+                const isPercentage = journeyData.some(
+                  (data) => data.value === value && value.includes("%")
+                );
+
+                if (isPercentage) {
+                  // Append % if the value includes %
+                  return numericValue.toFixed(0) + "%";
+                }
+
+                // Handle float or integer formatting
                 return numericValue % 1 !== 0
-                  ? numericValue.toFixed(1) // Show 1 decimal place if it's a float
-                  : numericValue.toString(); // Otherwise, keep the original value
+                  ? numericValue.toFixed(1)
+                  : numericValue.toString();
               },
             },
+            onComplete: () => updateStaticValues(), // Static update after animation
           }
         );
       },
     });
-
-    setAnimationsInitialized(true); // Mark animations as initialized
   };
 
-  // Effect to initialize animations after images are loaded
-  useEffect(() => {
-    if (imagesLoaded === journeyData.length && !animationsInitialized) {
-      setTimeout(() => {
-        initializeAnimations();
-        ScrollTrigger.refresh();
-      }, 300);
-    }
+  // Function to statically update values
+  const updateStaticValues = () => {
+    const items = document.querySelectorAll(".count");
+    items.forEach((item, index) => {
+      item.innerText = journeyData[index].value;
+    });
+  };
 
+  useEffect(() => {
+    initializeAnimations();
     const handleResize = () => {
       ScrollTrigger.refresh();
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
-  }, [imagesLoaded, animationsInitialized]); // Add animationsInitialized to dependencies
-
-  // Function to handle image loading
-  const handleImageLoad = () => {
-    setImagesLoaded((prev) => prev + 1);
-  };
+  }, []); // Initialize on mount
 
   return (
     <section className="section journey_section pb-0">
@@ -155,13 +155,8 @@ const OurJourney = () => {
                     src={item.icon}
                     alt="mvn journey icon"
                     className="img-fluid icon"
-                    onLoad={handleImageLoad}
                   />
-                  <p className="count">
-                    {parseFloat(item.value) % 1 !== 0
-                      ? parseFloat(item.value).toFixed(1)
-                      : item.value}
-                  </p>
+                  <p className="count">0</p> {/* Start with 0 */}
                 </div>
                 <p className="title">{item.title}</p>
               </div>
@@ -173,5 +168,4 @@ const OurJourney = () => {
   );
 };
 
-// Export the component as default
 export default OurJourney;

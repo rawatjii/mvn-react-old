@@ -39,6 +39,7 @@ import AeroOneBangalore from "./frontend/pages/micro/mvn-aeroone-bangalore/Index
 import Career from "./frontend/pages/Career.jsx";
 import MediaCenter from "./frontend/pages/MediaCenter.jsx";
 import Blog from "./frontend/pages/Blog.jsx"; 
+import BlogDetails from "./frontend/pages/BlogDetails.jsx"; 
 import MvnMallGurgaon from "./frontend/pages/MvnMallGurgaon.jsx";
 import MvnAthensSohna from "./frontend/pages/MvnAthensSohna.jsx";
 import MvnAthensPh2Sohna from "./frontend/pages/MvnAthensPh2Sohna.jsx";
@@ -181,6 +182,16 @@ const router = createBrowserRouter([
         ),
       },
       {
+        path: "blogs/details/:slug",
+        element: (
+          <Suspense fallback={<InitialLoading />}>
+            <Layout>
+              <BlogDetails />
+            </Layout>
+          </Suspense>
+        ),
+      },
+      {
         path: "mvn-mall-gurgaon",
         element: (
           <Suspense fallback={<InitialLoading />}>
@@ -270,7 +281,6 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
-
       {
         path: "*",
         element: <PageNotFound />,

@@ -30,13 +30,13 @@ const Header = () => {
           setScrolled(false);
         }
       } else {
-        if (isMicro) {
+     
+
           if (window.scrollY > 50) {
             setScrolled(true);
           } else {
             setScrolled(false);
           }
-        }
       }
       // if (window.scrollY > 50) {
       //   setScrolled(true);

@@ -5,9 +5,9 @@ import * as CONFIG from '../../config/config';
 import mediaBG from '../assets/images/media/mediacenter.png'
 import { Container } from 'react-bootstrap'
 import SecTitle from '../../common/SecTitle/Index'
-import mediaIcon from '../assets/images/icons/media/media.png'
-import McVideo from '../assets/videos/media/video.mp4'
-import McVideoPoster from '../assets/videos/media/poster.png'
+// import mediaIcon from '../assets/images/icons/media/media.png'
+// import McVideo from '../assets/videos/media/video.mp4'
+// import McVideoPoster from '../assets/videos/media/poster.png'
 import rightArrow from '../assets/images/mediacenter/right-arrow.png'
 import newsIMG from '../assets/images/mediacenter/newsdrum-logo.jpg'
 // import newsIMG from '../assets/images/mediacenter/news-1.png'
@@ -23,14 +23,21 @@ import newsIMG6 from '../assets/images/mediacenter/news-img-6.jpeg'
 import mediaGalleryImg1 from '../assets/images/projects/project-img-1.jpg'
 import mediaGalleryImg2 from '../assets/images/projects/project-img-2.jpg'
 import mediaGalleryImg3 from '../assets/images/projects/project-img-3.jpg'
+import mediaGalleryImg4 from '../assets/images/projects/gallery-img-5.jpg'
+import mediaGalleryImg5 from '../assets/images/projects/gallery-img-6.jpg'
+// import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
+// import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
+import youtubeVideoBanner1 from '../assets/images/mediacenter/youtube-video-banner-1.jpg'
+import youtubeVideoBanner2 from '../assets/images/mediacenter/youtube-video-banner-2.jpg'
+import youtubeVideoBanner3 from '../assets/images/mediacenter/youtube-video-banner-3.jpg'
 
-import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
-import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
-
-import pressReleaseImg1 from '../assets/images/mediacenter/press-relase-img-1.jpg'
-import pressReleaseImg2 from '../assets/images/mediacenter/press-relase-img-2.jpg'
-import pressReleaseImg3 from '../assets/images/mediacenter/press-relase-img-3.jpg'
+import pressReleaseImg1 from '../assets/images/mediacenter/theprint-thubmnail.jpg'
+import pressReleaseImg2 from '../assets/images/mediacenter/daily-news-logo.jpg'
+import pressReleaseImg3 from '../assets/images/mediacenter/edukida-logo.jpg'
 // import pressReleaseImg4 from '../assets/images/mediacenter/press-relase-img-4.jpg'
+
+
+import playicon from '../assets/images/mediacenter/play-button.png'
 
 import pressReleasePdf1 from '../assets/images/mediacenter/theprint.pdf'
 import pressReleasePdf2 from '../assets/images/mediacenter/daily24x7news.pdf'
@@ -43,6 +50,8 @@ import Enquire from '../components/homepage/Enquire'
 import GallerySlider from '../components/GallerySlider'
 import PressRelease from '../components/PressRelease';
 import pdfICON from '../assets/images/icons/pdf.png'
+
+import headingIconImg from "../assets/images/icons/heading-icon-img.png";
 
 
 function MediaCenter() {
@@ -65,63 +74,80 @@ function MediaCenter() {
     const ourEvents = [
         {
             id: 1,
-            poster: eventGalleryImg1,
-            video: McVideo,
-            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
+            IframeLink: "https://www.youtube.com/shorts/MeOZFGd_l1A",
+            videobanner:youtubeVideoBanner1,
         },
         {
             id: 2,
-            poster: eventGalleryImg2,
-            video: McVideo,
-            eventHeading: `MVN Infrastructure Celebrates MVN Mall's New Office Opening with Traditional Hawan Ceremony`,
+            IframeLink: "https://www.youtube.com/shorts/mVNbupk5MRg",
+            videobanner:youtubeVideoBanner2,
         },
         {
             id: 3,
-            poster: eventGalleryImg1,
-            video: McVideo,
-            eventHeading: `MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki`,
+            IframeLink: "https://www.youtube.com/watch?v=n3UMMbpPMrU",
+            videobanner:youtubeVideoBanner3,
         }
-    ]
+    ];
+    
     const newsImages = {
         isshow:true,
         galleryData:[
             { src: newsIMG1, alt: "Image 1" },
             { src: newsIMG2, alt: "Image 2" },
             { src: newsIMG3, alt: "Image 3" },
-            { src: newsIMG4 , alt: "Image 4" },
-            { src: newsIMG5 , alt: "Image 5" },
-            { src: newsIMG6 , alt: "Image 6" },
+            { src: newsIMG4, alt: "Image 4" },
+            { src: newsIMG5, alt: "Image 5" },
+            { src: newsIMG6, alt: "Image 6" },
         ]
     }
     
-
-    const ourGallery = [
-        {
-            src: mediaGalleryImg1,
-            alt: "Image 1"
-        },
-        {
-            src: mediaGalleryImg2,
-            alt: "Image 2"
-        },
-        {
-            src: mediaGalleryImg3,
-            alt: "Image 3"
-        },
-        {
-            src: mediaGalleryImg1,
-            alt: "Image 4"
-        },
-        {
-            src: mediaGalleryImg2,
-            alt: "Image 5"
-        },
-        {
-            src: mediaGalleryImg3,
-            alt: "Image 6"
-        }
-      
-    ]
+    const ourGallery = {
+        isshow:true,
+        galleryData:[
+            {
+                src: mediaGalleryImg1,
+                alt: "Image 1"
+            },
+            {
+                src: mediaGalleryImg2,
+                alt: "Image 2"
+            },
+            {
+                src: mediaGalleryImg3,
+                alt: "Image 3"
+            },
+            {
+                src: mediaGalleryImg4,
+                alt: "Image 4"
+            },
+            {
+                src: mediaGalleryImg5,
+                alt: "Image 5"
+            },
+            {
+                src: mediaGalleryImg1,
+                alt: "Image 4"
+            },
+            {
+                src: mediaGalleryImg2,
+                alt: "Image 5"
+            },
+            {
+                src: mediaGalleryImg3,
+                alt: "Image 6"
+            },
+            {
+                src: mediaGalleryImg4,
+                alt: "Image 7"
+            },
+            {
+                src: mediaGalleryImg5,
+                alt: "Image 6"
+            }
+          
+        ]
+    }
+    
 
     const pressCenter = [
         {
@@ -171,16 +197,22 @@ function MediaCenter() {
             thumbnail: pressReleaseImg1,
             pdf: pressReleasePdf1,
             title: "Press Release 1",
+            presscontent:"MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki",
+            EventDate:"10 October, 2024",
         },
         {
             thumbnail: pressReleaseImg2,
             pdf: pressReleasePdf2,
             title: "Press Release 2",
+            presscontent:"MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki",
+            EventDate:"10 October, 2024",
         },
         {
             thumbnail: pressReleaseImg3,
             pdf: pressReleasePdf3,
             title: "Press Release 3",
+            presscontent:"MVN Infrastructure Celebrates Navratri with a Joyous Mata Ki Chowki",
+            EventDate:"10 October, 2024",
         },
         // {
         //     thumbnail: pressReleaseImg4,
@@ -197,9 +229,10 @@ function MediaCenter() {
             <MicroBanner bg={mediaBG} data={breadcrumbs} />
             <section className="section media-news-section pb-0">
                 <Container className='text-center'>
-                    <img src={mediaIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" />
+                    {/* <img src={mediaIcon} alt="mvn-support-icon" className="img-fluid supportIcon mb-4" /> */}
 
                     <SecTitle className="text-center color style1 mb_30">
+                    <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                         <h4 className="title">latest news</h4>
                     </SecTitle>
 
@@ -209,6 +242,7 @@ function MediaCenter() {
                         <div className="col-sm-6 px-md-0">
                             <div className="media-news_offline">
                                 <SecTitle className="text-center color style1 mb-0">
+                                <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                                     <h4 className="title">Offline Media News</h4>
                                 </SecTitle>
 
@@ -251,6 +285,7 @@ function MediaCenter() {
                         <div className="col-sm-6 px-md-0">
                             <div className="media-news_online">
                                 <SecTitle className="text-center color style1 mb-0">
+                                <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                                     <h4 className="title">Online Media News</h4>
                                 </SecTitle>
 
@@ -286,6 +321,7 @@ function MediaCenter() {
             <section className="section media-press-release pb-0">
                 <div className="container">
                     <div className="sec_title text-center color style1 mb_30">
+                    <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                         <h4 className="title">Press Center</h4>
                         <p>Welcome to the Press Release section of MVN, where innovation, milestones, and achievements take center stage. Stay informed about our latest ventures, industry contributions, and community impact, as we continue to redefine the future. From pioneering in real estate to shaping the future of education, we’re committed to excellence every step of the way.</p>
                     </div>
@@ -384,8 +420,11 @@ function MediaCenter() {
             <section className='section press-releases-container'>
             <div className='container'>
             <SecTitle className="text-center color style1 mb_30">
+            <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                         <h4 className="title">Press Releases</h4>
                     </SecTitle>
+
+
         
             <PressRelease data={pressReleaseData} slidesPerView={3} spaceBetween={20} />
             </div>
@@ -399,31 +438,25 @@ function MediaCenter() {
                     <GallerySlider data={ourGallery} slidesPerView={3} spaceBetween={20} navigation={true} />
                 </div>
             </section>
-            <section className="section media-events ">
-                <div className="container">
-                    <div className="sec_title text-center color style1 mb_30">
-                        <h4 className="title">OUR EVENTS</h4>
-                    </div>
-                    <div className="row">
-                        {
-                            ourEvents && ourEvents.map((item, index) => (
-                                <div className="col-sm-4" key={`event-${index}`}>
-                                    <div className="media-event-content">
-
-                                        <Video videoSrc={item.video} videoPoster={item.poster} />
-                                        <h5 className="media_content_heading">{item.eventHeading} </h5>
-                                    </div>
-                                </div>
-                            ))
-                        }
-
-
-
-
-
+            <section className="section media-events">
+    <div className="container">
+        <div className="sec_title text-center color style1 mb_30">
+            <h4 className="title">OUR EVENTS</h4>
+        </div>
+        <div className="row">
+            {ourEvents && ourEvents.map((item, index) => (
+                <div className="col-sm-4" key={`event-${index}`}>
+                    <div className="media-event-content">
+                        <a href={item.IframeLink} target='_blank' rel="noopener noreferrer">
+                            <img src={item.videobanner} alt="" className='img-fluid event-video-banner'/>
+                        </a>
+                        <img src={playicon} alt="" className='img-fluid play-icon'/>
                     </div>
                 </div>
-            </section>
+            ))}
+        </div>
+    </div>
+</section>
             <div className="container-fluid">
                 <div className="row align-items-center">
                     <div className="col-sm-6">
