@@ -206,26 +206,48 @@ const data = {
       },
     ]
   },
-  floorPlan: {
-    title: 'Floor Plan',
-    floorPlanData: [
+  floorPlan:{
+    title:'Floor Plan',
+    floorPlanData : [
       {
-        title: '1 BHK Floor Plan',
-        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/1-BHK.jpg',
+        title:'Penthouse',
+        thumbnail:[
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/1.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/1.webp',
+          },
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/2.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/penthouse/2.webp',
+          }
+        ]
       },
       {
-        title: '2 BHK Panoramic floor Plan',
-        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Panoramic-Flats.jpg',
+        title:'360 Panoramic Apartment',
+        thumbnail:[
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/360/1.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/360/1.webp',
+          }
+        ]
       },
       {
-        title: '2 BHK Luxury floor Plan',
-        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/2-BHK-Luxury.jpg',
+        title:'270 Panoramic Apartment',
+        thumbnail:[
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/1.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/1.webp',
+          },
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/2.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/2.webp',
+          },
+          {
+            src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/3.webp',
+            mobile:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/3.webp',
+          }
+        ]
       },
-      {
-        title: '3 BHK Luxury floor Plan',
-        thumbnail: CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/3-BHK-Luxury.jpg',
-      },
-
     ]
   }
 };

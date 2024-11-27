@@ -2581,6 +2581,14 @@ footer {
 .section.living_room_video_section {
   padding-top:100px;
 
+  .frames_content{
+
+    img{
+      width:100%;
+      height:auto;
+    }
+  }
+
   video {
     width: 100%
   }
@@ -2651,6 +2659,43 @@ footer {
 }
 .media-event-content .play-icon{position:absolute;top:50%;width:auto;height:62px;left:50%;transform:translate(-50%,-50%)}
 .media-event-content{position:relative}
+
+.test_wrapper{
+
+  .card{
+    margin:10px;
+    background:gray;
+    height:200px;
+  }  
+
+  .horizontal center{
+
+    height:500px;
+    overflow:auto;
+  }
+}
+
+.accordion-body {
+  overflow: hidden; /* Hide cards outside the visible area */
+  height: 0; /* Starts closed */
+  transition: height 0.3s ease; /* Smooth open/close animation */
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  gap: 10px;
+  position: relative;
+}
+
+.card {
+  height: 100px; /* Card height */
+  background: #ccc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 
 
 /* start responsive */
