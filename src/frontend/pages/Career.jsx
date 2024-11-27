@@ -195,7 +195,7 @@ function Career() {
                 </section>
 
 
-                <section className="oppotunities">
+                <section className="oppotunities padding">
                     <div className="container">
                         <div className="inn_oppor">
                             <div className="left text-center mx-auto">

@@ -33,7 +33,7 @@ const ContactPage = ()=>{
                         <span className="icon">
                             <img src={CONFIG.IMAGE_URL + 'icons/location.png'} alt="mvn envelope icon" className="img-fluid" />
                         </span>
-                        MVN Athens Gurugram Sector 5, Gurugram, Haryana 122102
+                        MVN AeroOne Dwarka Expressway, 22Km Milestone, Sector-37D, Gurugram, Pin-122103 | CIN:ACA-4678 | PAN:ABWFM8415E
                     </li>
                 </ul>
             </Container>

@@ -26,6 +26,10 @@ const data = {
       'Step into a world of unparalleled luxury, where every detail blends sophistication with style. Relish in tailored interiors, exceptional amenities, and panoramic views. Transform your lifestyle with an extraordinary living experience beyond compare.',
     ],
   },
+  LargeElevationSection: {
+    title: "an epitome of contemporary elegance",
+    isAllow: true,
+  },
   video1: {
     title: "EXPERIENCE THE BLISS OF ENDLESS VISTAS",
     desc:'Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings.',
