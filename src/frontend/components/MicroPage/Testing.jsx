@@ -1,100 +1,110 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
-import Accordion from 'react-bootstrap/Accordion';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Testing = ()=>{
-
+const Testing = () => {
   const wrapperRef = useRef(null);
 
   useEffect(() => {
     const wrapper = wrapperRef.current;
-    const items = gsap.utils.toArray(wrapper.querySelectorAll(".item"));
+    const items = gsap.utils.toArray(wrapper.querySelectorAll(".accordion-item"));
 
     const tl = gsap.timeline({
       defaults: { ease: "none", duration: 1 },
       scrollTrigger: {
         trigger: wrapper,
-        start: "top top",
+        start: "top 20%",
         end: "+=600%",
         pin: true,
         scrub: true,
-        markers: true
-      }
+        markers: true,
+      },
     });
 
     tl.to({}, { duration: 0.15 }); // Small delay at the start
 
     items.forEach((item) => {
-      const body = item.querySelector(".body");
+      const body = item.querySelector(".accordion-body");
       const hasChild = body.dataset.haschild;
 
-      // Expand body
+      // Expand the accordion body
       tl.to(
         body,
         {
-          height: "auto"
+          height: 400, // Fixed height
+          onStart: () => item.classList.add("active"),
+          onReverseComplete: () => item.classList.remove("active"),
         },
         "+=0.5"
       );
 
-      // Handle horizontal scroll if body has child
+      // Scroll cards vertically if the body has child elements
       if (hasChild) {
         const cardsContainer = body.querySelector(".cards-container");
+        const scrollHeight = cardsContainer.scrollHeight;
+        const containerHeight = 400; // Fixed accordion content height
+
+        // Animate the cards vertically
         tl.to(
           cardsContainer,
           {
-            x: cardsContainer.clientWidth - cardsContainer.scrollWidth,
-            duration: 4
+            y: -(scrollHeight - containerHeight), // Scroll to bring the last card into view
+            duration: 4, // Adjust the duration as needed
           },
-          "+=0.35"
+          "+=0.2"
         );
       }
 
-      // Collapse body
+      // Collapse the accordion body
       tl.to(
         body,
         {
-          height: 0
+          height: 0,
+          onComplete: () => item.classList.remove("active"),
         },
-        "+=0.5"
+        "-=0.3"
       );
     });
 
     tl.to({}, { duration: 0.25 }); // Small delay at the end
-  }, []);
 
+    // Cleanup GSAP instances when the component unmounts
+    return () => {
+      tl.kill();
+      ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
+    };
+  }, []);
 
   return (
     <div className="test_wrapper wrapper center" ref={wrapperRef}>
-      <Accordion defaultActiveKey="0">
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>Item One</Accordion.Header>
-          <Accordion.Body>
+      <div className="accordion">
+        <div className="accordion-item">
+          <div className="accordion-header">
+            <h3>Item One</h3>
+          </div>
+          <div className="accordion-body">
             <div className="content">
               <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Maxime
-                cupiditate minus quisquam eligendi sed veritatis aut
-                perspiciatis delectus quo. Sapiente aspernatur nisi optio
-                doloremque beatae odit error, alias quam! Veritatis.
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Maxime
+                cupiditate minus quisquam eligendi sed veritatis aut.
               </p>
               <p>
                 Corporis ad ducimus quo consequatur ex in placeat, omnis vero,
-                laborum nemo velit autem perspiciatis non voluptatem vitae
-                exercitationem, saepe consectetur est quia odit quod dolor
-                aspernatur explicabo! Ad, quibusdam?
+                laborum nemo velit autem perspiciatis.
               </p>
             </div>
-          </Accordion.Body>
-        </Accordion.Item>
+          </div>
+        </div>
 
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>Item Two</Accordion.Header>
-          <Accordion.Body  data-haschild="true">
+        <div className="accordion-item">
+          <div className="accordion-header">
+            <h3>Item Two</h3>
+          </div>
+          <div className="accordion-body" data-haschild="true">
             <div className="content">
-              <div className="horizontal center">
+              <div className="vertical center">
                 <div className="cards-container">
                   <div className="card center gradient-green">Card 1</div>
                   <div className="card center gradient-blue">Card 2</div>
@@ -105,12 +115,11 @@ const Testing = ()=>{
                 </div>
               </div>
             </div>
-          </Accordion.Body>
-        </Accordion.Item>
-
-      </Accordion>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default Testing;

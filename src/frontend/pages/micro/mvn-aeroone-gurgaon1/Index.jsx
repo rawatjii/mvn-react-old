@@ -295,28 +295,28 @@ const data = {
     // world global city
     locationData: [
       {
-        distance: 'near by',
-        title: 'Yasho Bhoomi',
+        distance: '2.9 kms',
+        title: 'World global city',
       },
       {
-        distance: 'near by',
-        title: 'Indira Gandhi international airport',
-      },
-      {
-        distance: 'near by',
-        title: 'Diplomatic enclave 2',
-      },
-      {
-        distance: 'near by',
-        title: 'Gurgaon Railway station',
-      },
-      {
-        distance: 'near by',
+        distance: '10.5 kms',
         title: 'Cyber City 2',
       },
       {
-        distance: 'near by',
-        title: 'world global city',
+        distance: '10.5 kms',
+        title: 'Gurgaon Railway station',
+      },
+      {
+        distance: '18 kms',
+        title: 'Yasho Bhoomi',
+      },
+      {
+        distance: '20 kms',
+        title: 'Diplomatic enclave 2',
+      },
+      {
+        distance: '29.7 kms',
+        title: 'IGI Airport',
       },
     ]
   },
