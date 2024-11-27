@@ -9,14 +9,14 @@ const Typology = () => {
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
   const contentRefs = useRef([]);
+  const [images, setImages] = useState([]);
   const isMobile = window.innerWidth <= 768;
 
-  let totalFrames = isMobile ? 385 : 385;
-  const [images, setImages] = useState([]);
+  let totalFrames = isMobile ? 327 : 385;
   let segments = [
-    { contentIndex: 0, startFrame: 0, endFrame: 94 },
-    { contentIndex: 1, startFrame: 95, endFrame: 240 },
-    { contentIndex: 2, startFrame: 241, endFrame: 385 },
+    { contentIndex: 0, startFrame: 0, endFrame: 125 },
+    { contentIndex: 1, startFrame: 126, endFrame: 172 },
+    { contentIndex: 2, startFrame: 173, endFrame: 327 },
   ];
 
 
@@ -46,18 +46,22 @@ const Typology = () => {
           Math.floor(self.progress * segments.length),
           segments.length - 1
         );
+      
         const segment = segments[segmentIndex];
         const segmentProgress = (self.progress - segmentIndex / segments.length) * segments.length;
-        const frameIndex = segment.startFrame + Math.floor(segmentProgress * (segment.endFrame - segment.startFrame));
-
+        const frameIndex = Math.min(
+          segment.startFrame + Math.floor(segmentProgress * (segment.endFrame - segment.startFrame)),
+          totalFrames - 1 // Ensure frameIndex doesn't exceed totalFrames
+        );
+      
         // Show the current frame and hide others
         frameRefs.current.forEach((img, index) => {
           img.style.display = index === frameIndex ? "block" : "none";
         });
-
+      
         // Toggle content visibility
         contentRefs.current.forEach((el, i) => {
-          el.style.display = i === segment.contentIndex ? 'block' : 'none';
+          el.style.display = i === segment.contentIndex ? "block" : "none";
         });
       }
     });
@@ -102,7 +106,7 @@ const Typology = () => {
             className="content-box"
             style={{ display: 'block' }}
           >
-            <h1>Typical Flats: A Symphony of Refined Luxury</h1>
+            <h1>270 degree Panoramic Apartment</h1>
             <p>Spanning an expansive 5,850 sq. ft., these exquisite residences offer a captivating 270-degree panoramic view, seamlessly blending breathtaking vistas with unmatched sophistication. </p>
           </div>
 
@@ -111,7 +115,7 @@ const Typology = () => {
             className="content-box"
             style={{ display: 'none' }}
           >
-            <h1>Simplex Flats: A Masterpiece of Grandeur</h1>
+            <h1>360 degree Panoramic Apartment</h1>
             <p>At an impressive 11,700 sq. ft., the simplex flats offer a commanding 360-degree panoramic vista, presenting a boundless world of elegance. This is where space, design, and nature converge in perfect harmony. </p>
           </div>
 
@@ -120,7 +124,7 @@ const Typology = () => {
             className="content-box"
             style={{ display: 'none' }}
           >
-            <h1> Duplex Penthouse: The Apex of Luxury Living</h1>
+            <h1>Penthouse</h1>
             <p>Elevate your lifestyle to new heights with these extraordinary duplex flats, where two levels of unmatched luxury unfold before you. With impeccable attention to detail and a focus on privacy and exclusivity, these residences embody the pinnacle of sophisticated living, where only the most discerning will reside.</p>
           </div>
         </div>
