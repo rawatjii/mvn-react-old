@@ -1,0 +1,12 @@
+.watermark{
+  position:absolute;
+  right: 10px;
+  bottom: 5px;
+  z-index: 1;
+  color: #fff;
+  font-size: 11px;
+
+  &.left{
+    left:10px;
+  }
+}

@@ -11,6 +11,7 @@ import mvnSportsAcademyMobile from "../../assets/images/other-projects/mvn-sport
 import mvnSchoolDesktop from "../../assets/images/other-projects/mvn-school-desktop.webp";
 import mvnUniversityDesktop from "../../assets/images/other-projects/mvn-university-desktop.webp";
 import mvnSportsAcademyDesktop from "../../assets/images/other-projects/mvn-sports-academy-desktop.webp";
+import Watermark from "../../../common/watermark/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -97,7 +98,9 @@ export default function Amenities({ data }) {
             className="parallax"
             ref={(el) => (sectionsRef.current[i] = el)}
           >
-            <div className="bg"></div>
+            <div className="bg">
+            <Watermark />
+            </div>
             <div className="content">
               <span className="am-name">{amenity.name}</span>
               <p className="desc">{amenity.desc}</p>
