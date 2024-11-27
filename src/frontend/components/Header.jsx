@@ -145,7 +145,6 @@ const Header = () => {
               <div className="header">
                 <Navbar.Brand className="logo">
                   <Link
-                    to={`${import.meta.env.VITE_APP_URL}`}
                     onClick={() => toggleMenu("close")}
                   >
                     <img
@@ -186,9 +185,7 @@ const Header = () => {
                               <li className="nav-link">
                                 <label htmlFor="gurgaon">Gurgaon</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-mall-gurgaon`}
+                                  to="https://mvnmall.com/" target="_blank"
                                   className="new-launch"
                                   onClick={() => toggleMenu("close")}
                                 >
@@ -211,9 +208,7 @@ const Header = () => {
                               <li className="nav-link">
                                 <label htmlFor="bangalore">Bangalore</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }aeroone-bangalore`}
+                                  to="https://www.mvnaeroone.com/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
                                   MVN Aero One
@@ -223,17 +218,13 @@ const Header = () => {
                               <li className="nav-link">
                                 <label htmlFor="sohna">Sohna</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-athens-sohna`}
+                                  to="https://www.mvn.in/athens-gurugram/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
                                   MVN Athens
                                 </NavLink>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-athens-ph2-sohna`}
+                                  to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
                                   MVN Athens PH-2
@@ -243,9 +234,7 @@ const Header = () => {
                               <li className="nav-link">
                                 <label htmlFor="faridabad">Faridabad</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-athens-faridabad`}
+                                  to="https://www.mvn.in/athens-faridabad/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
                                   MVN Athens
@@ -766,80 +755,13 @@ const Header = () => {
                   )}
                 </> */}
 
-                <li className="menuFlexBox">
-                  <li className="nav-link">
-                    <NavLink
-                      to={"/education/"}
-                      onClick={() => toggleMenu("close")}
-                    >
-                      Education
-                    </NavLink>
-                    <ul className="sub_menu">
-                      <li className="nav-link">
-                        {/* <label htmlFor="school">School</label> */}
-                        <label htmlFor="school">MVN School</label>
-                        {/* <NavLink
-                          to={"https://www.mvneducation.com/sector-17/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Sec-17, Faridabad
-                        </NavLink>
-                        <NavLink
-                          to={"https://www.mvnpalwal.com/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Palwal, Faridabad
-                        </NavLink>
-                        <NavLink
-                          to={"https://www.mvneducation.com/mvn-aravali/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Aravali Hills, Faridabad
-                        </NavLink>
-                        <NavLink
-                          to={"https://www.mvn88.com/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Sector 88, Greater Faridabad
-                        </NavLink> */}
-                      </li>
-
-                      {/* <li className="nav-link">
-                        <label htmlFor="university">University</label>
-                        <NavLink
-                          to={`${
-                            import.meta.env.VITE_APP_URL
-                          }mvn-university-haryana`}
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN university Haryana
-                        </NavLink>
-                      </li>
-
-                      <li className="nav-link">
-                        <label htmlFor="Sports-Academy">Sports Academy</label>
-                        <NavLink
-                          to={"https://www.mvn88.com/exercise-sports-academy/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN 88
-                        </NavLink>
-                      </li> */}
-                    </ul>
-                  </li>
-                </li>
 
                 <ul className="sub_menu">
                   <li>
                     <label htmlFor="school">Social Media</label>
                     <ul className="social_links">
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.facebook.com/officialmvninfra/" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/fb.png"}`}
                             alt="mvn-fb-icon"
@@ -847,7 +769,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.instagram.com/mvn_infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/instagram.png"}`}
                             alt="mvn-insta-icon"
@@ -855,7 +777,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.linkedin.com/company/mvn-infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/linkedin.png"}`}
                             alt="mvn-linkedin-icon"
@@ -863,7 +785,7 @@ const Header = () => {
                         </Link>
                       </li>
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.youtube.com/@MVNInfrastructures" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/youtube.png"}`}
                             alt="mvn-youtube-icon"
