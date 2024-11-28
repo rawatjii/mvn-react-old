@@ -55,14 +55,14 @@ const Footer = () => {
               </ul>
             </div>
           </Col>
-          <Col xs={12} md={6} lg={6}>
+          {/* <Col xs={12} md={6} lg={6}>
             <div className="box searchbox-input-box">
               <div className="subscribe">
                 <input className="form-control" type="text" placeholder="Your Email" name="" />
                 <button>Subscribe Now</button>
               </div>
             </div>
-          </Col>
+          </Col> */}
         </Row>
       </Container>
       <Container>
@@ -99,21 +99,14 @@ const Footer = () => {
                       <a href="#">Real Estate</a>
                     </li> */}
                     {/* <li><a href="#">Educations</a></li> */}
-                    <li>
+                    {/* <li>
                       <NavLink to={`${import.meta.env.VITE_APP_URL}contact-us`}>
                       Education
                       </NavLink>
-                    </li>
+                    </li> */}
                     <li>
-                      <NavLink to={`${import.meta.env.VITE_APP_URL}contact-us`}>
-                        Contact Us
-                      </NavLink>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}media-center`}>Media Center</NavLink>
                     </li>
-                  </ul>
-                </div>
-                <div className="footer-menu">
-                  <h4 className="footer-second-heading">More Links</h4>
-                  <ul>
                     <li>
                       <NavLink to={`${import.meta.env.VITE_APP_URL}blogs`}>Blogs</NavLink>
                     </li>
@@ -128,6 +121,39 @@ const Footer = () => {
                     </li>
                     <li>
                       <NavLink to={`${import.meta.env.VITE_APP_URL}disclaimer`}>Disclaimer</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}contact-us`}>
+                        Contact Us
+                      </NavLink>
+                    </li>
+                  </ul>
+                </div>
+
+                <div className="footer-menu">
+                  <h4 className="footer-second-heading">Projects</h4>
+                  <ul>
+                    <li>
+                      <label htmlFor="">Gurgaon</label>
+                      <NavLink to='https://mvnmall.com/' target="_blank">MVN Mall</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}aeroone-gurgaon1`}>MVN Aero One</NavLink>
+                    </li>
+                    <li>
+                      <label htmlFor="">Bangalore</label>
+                      <NavLink to="https://www.mvnaeroone.com/" target="_blank">MVN</NavLink>
+                    </li>
+                    <li>
+                      <label htmlFor="">Sohna</label>
+                      <NavLink to="https://www.mvn.in/athens-gurugram/" target="_blank">MVN Athens</NavLink>
+                    </li>
+                    <li>
+                      <NavLink to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank">MVN Athens PH-2</NavLink>
+                    </li>
+                    <li>
+                      <label htmlFor="">Faridabad</label>
+                      <NavLink to="https://www.mvn.in/athens-faridabad/" target="_blank">MVN Athens</NavLink>
                     </li>
                   </ul>
                 </div>

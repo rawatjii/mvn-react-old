@@ -210,14 +210,14 @@ const Projects = () => {
             </Col>
           </Row>
 
-          <Button className="btn_style1">
+          {/* <Button className="btn_style1">
             <span className="txt">View All Projects</span>
             <img
               src={btn_arrow}
               alt="mvn button arrow icon"
               className="img-fluid"
             />
-          </Button>
+          </Button> */}
         </Container>
       </section>
     </>

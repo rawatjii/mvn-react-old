@@ -1698,8 +1698,19 @@ footer .footer-menu ul {
   display: grid;
 }
 
+footer .footer-menu ul li label{
+  display: block;
+  text-transform: uppercase;
+  font-size: 10px;
+  color: var(--theme_primary_color);
+  font-family: var(--futura_bt_medium);
+  letter-spacing: 1.5px;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
 footer .footer-menu ul li a {
-  color: #7b7b7b;
+  color: #cbcbcb;
   font-size: 15px;
 }
 

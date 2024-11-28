@@ -189,7 +189,7 @@ const data = {
     { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp', desc:'An imaginative wonderland where joy is boundless, and every detail is thoughtfully created for young dreamers to thrive.' },
     { name: `theatre`, imgSrc: 'theaterSm.webp', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
     { name: 'spa', imgSrc: 'spaSm.webp', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
-    { name: 'Entry & Exit', imgSrc: 'no_image.jpg', desc:'Exclusive entrance and exit for the residents.' },
+    { name: 'Entry & Exit', imgSrc: 'entryexit_sm.webp', desc:'Exclusive entrance and exit for the residents.' },
   ],
   amenities_section: [
     {
