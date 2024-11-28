@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -95,7 +95,7 @@ const MicroFloorPlan = ({ data }) => {
             start: "top 95%",
           },
         });
-      }
+      }4
     });
   }, []);
 
@@ -113,13 +113,38 @@ const MicroFloorPlan = ({ data }) => {
               <div key={index} className="accordion-item open">
                 <h2 className="accordion-header">{item.title}</h2>
                 <div className="accordion-body">
-                  <Swiper pagination={true} className="mySwiper">
-                    {item.thumbnail.map((image, index) => (
-                      <SwiperSlide key={index}>
-                        <img src={image.src} alt="" onClick={showModal} />
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+                <Swiper pagination={true} className="mySwiper">
+                  {item.thumbnail.map((image, index) => (
+                    <SwiperSlide>
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          position: "relative",
+                        }}
+                      >
+                        <img src={image.src} alt="" />
+                        <div
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            background: '#00000030'
+                          }}
+                        >
+                          <Button type="submit" className="btn_style3" onClick={showModal}>
+                            View Layouts
+                          </Button>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
                 </div>
               </div>
             ))}
@@ -130,13 +155,38 @@ const MicroFloorPlan = ({ data }) => {
               <Accordion.Item key={index} eventKey={index}>
                 <Accordion.Header>{item.title}</Accordion.Header>
                 <Accordion.Body>
-                  <Swiper pagination={true} className="mySwiper">
-                    {item.thumbnail.map((image, index) => (
-                      <SwiperSlide key={index}>
-                        <img src={image.src} alt="" onClick={showModal} />
-                      </SwiperSlide>
-                    ))}
-                  </Swiper>
+                <Swiper pagination={true} className="mySwiper">
+                  {item.thumbnail.map((image, index) => (
+                    <SwiperSlide>
+                      <div
+                        style={{
+                          width: "100%",
+                          height: "100%",
+                          position: "relative",
+                        }}
+                      >
+                        <img src={image.src} alt="" />
+                        <div
+                          style={{
+                            position: "absolute",
+                            top: 0,
+                            left: 0,
+                            width: "100%",
+                            height: "100%",
+                            display: "flex",
+                            alignItems: "center",
+                            justifyContent: "center",
+                            background: '#00000030'
+                          }}
+                        >
+                          <Button type="submit" className="btn_style3" onClick={showModal}>
+                            View Layouts
+                          </Button>
+                        </div>
+                      </div>
+                    </SwiperSlide>
+                  ))}
+                </Swiper>
                 </Accordion.Body>
               </Accordion.Item>
             ))}
