@@ -19,7 +19,7 @@ const LivingRoomVideoGurugram = ({ data }) => {
 
   const { title, desc } = data.living_room_video;
 
-  const totalFramesDesktop = 379;
+  const totalFramesDesktop = 126;
   const totalFramesMobile = 126;
 
   // Detect screen size

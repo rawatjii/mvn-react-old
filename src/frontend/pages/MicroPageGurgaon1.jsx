@@ -110,7 +110,11 @@ const MicroPageGurgaon1 = ({ data }) => {
         <>
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} />
-          <PeacockSection data={data} /> {/*no isssue*/}
+          {
+            window.innerWidth <= 768 ? <PeacockSection data={data} /> :
+            <p style={{fontSize:200,color: 'white'}}>Peacock</p>
+          }
+           {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
           <div>

@@ -14,7 +14,7 @@ const Video3 = ({ data }) => {
   const titleRef = useRef();
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true); // Track loading state
-  const totalFrames = 696;
+  const totalFrames = window.innerWidth <= 768 ? 696 : 77;
   const frameRefs = useRef([]);
   const loadedCount = useRef(0); // Track number of loaded images
 
@@ -26,7 +26,7 @@ const Video3 = ({ data }) => {
 
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `assets/videos/party/mobile/${i}.webp`; // Update with the correct path for your frames
+      img.src = window.innerWidth <= 768 ? `assets/videos/party/mobile/${i}.webp` : `assets/videos/party/desktop/${i}.webp`; // Update with the correct path for your frames
 
       img.onload = () => {
         loadedCount.current += 1;
