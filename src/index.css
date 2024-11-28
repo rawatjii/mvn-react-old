@@ -3194,6 +3194,13 @@ footer {
     }
   }
 
+  /* typology_section */
+
+  section.typology_section{
+
+    padding-top:100px;
+  }
+
 }
 
 .thanks-page {
