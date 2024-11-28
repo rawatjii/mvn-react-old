@@ -39,6 +39,7 @@ import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from './../components/MicroPage/MicroElevation';
 import MicroApartment from './../components/MicroPage/MicroApartment';
 import Footer from '../components/Footer'
+import living_area_cam_peacock from '../../../public/assets/images/peacock/livingarea_cam_peacock.webp'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const MicroPageGurgaon1 = ({ data }) => {
@@ -113,7 +114,7 @@ const MicroPageGurgaon1 = ({ data }) => {
           <LargeElevationSection data={data.LargeElevationSection} />
           {
             window.innerWidth <= 768 ? <PeacockSection data={data} /> :
-            <p style={{fontSize:200,color: 'white'}}>Peacock</p>
+            <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
           }
            {/*no isssue*/}
           {/*no isssue*/}
