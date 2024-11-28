@@ -148,7 +148,7 @@ const MicroPageGurgaon1 = ({ data }) => {
             <MicroApartment />
           </div>
 
-          <Renders1 />
+          {/* <Renders1 /> */}
           {/* <div>
             {data?.renders.map((render, index) => (
               <SecSliding key={index} data={render} />

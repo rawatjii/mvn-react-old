@@ -10,7 +10,6 @@ import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 gsap.registerPlugin(ScrollTrigger);
 
 const EnquireForm = ({ career, projectName }) => {
-  debugger;
   const titleRef = useRef();
   const formRef = useRef();
 

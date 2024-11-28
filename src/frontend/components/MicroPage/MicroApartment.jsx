@@ -12,7 +12,7 @@ export default function MicroApartment({ data }) {
   console.log('page data',data);
 
   return (
-    <div className="section renders1_section wrapper center">
+    <div className="section renders1_section wrapper center pb-0">
 
         
 

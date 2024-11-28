@@ -1770,7 +1770,7 @@ article.awa_card.awa_shadow p {text-align: left;}
 article.awa_card.awa_shadow p.text-capitalize { color: var(--theme_primary_color);cursor: pointer;}
 
 h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70px;height:70px;top:-17px;left:-25px;border-radius:100px;z-index:-1}
-.sec_title.text-center.color.style1{position:relative;width:fit-content;margin:0 auto;margin-bottom:40px}
+.sec_title.text-center.color.style1{position:relative;width:fit-content;margin:0 auto;margin-top: 0 !important;margin-bottom:40px}
 .sec_title.text-center.color.style2{width:fit-content;margin:0 auto;margin-bottom:40px}
 .testimonial_section .flex-content-box::after {display:none;}
 h4.title {
