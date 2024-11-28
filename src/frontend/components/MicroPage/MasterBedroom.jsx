@@ -99,7 +99,7 @@ const MasterBedroom = ({ data }) => {
             ref={containerRef}
             className="frames_content"
           >
-            <Watermark className="style1" />
+            <Watermark className="style3 left" />
             {images.map((img, index) => (
               <img
                 key={index}

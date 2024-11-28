@@ -2845,6 +2845,11 @@ footer {
     font-size: 14px;
   }
 
+  .section{
+
+    padding: 90px 0 40px;
+  }
+
 
   /* header */
 
@@ -3084,7 +3089,7 @@ footer {
   /* walkthrough_section */
 
   .walkthrough_section {
-    padding-bottom: 15px;
+    padding-bottom: 0;
 
     /* .frames_content{
       height: 100vh;

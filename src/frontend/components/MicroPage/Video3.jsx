@@ -102,7 +102,7 @@ const Video3 = ({ data }) => {
         <>
           <div ref={containerRef} className="frames_content">
             
-          <Watermark className="style1" />
+          <Watermark className="style2" />
             {images.map((img, index) => (
               <img
                 key={index}
