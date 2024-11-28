@@ -259,7 +259,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => { scrollToSection("microOverview");toggleMenu("close");}}
                                 >
-                                  OverView
+                                  Overview
                                 </a>
                                 <a
                                 

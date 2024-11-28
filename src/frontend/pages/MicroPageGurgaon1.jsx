@@ -38,6 +38,7 @@ import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
 import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from './../components/MicroPage/MicroElevation';
 import MicroApartment from './../components/MicroPage/MicroApartment';
+import Footer from '../components/Footer'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const MicroPageGurgaon1 = ({ data }) => {
@@ -202,7 +203,9 @@ const MicroPageGurgaon1 = ({ data }) => {
         </>
       )}
 
-</div>
+      <Footer />
+
+  </div>
 </div>
     </>
   );
