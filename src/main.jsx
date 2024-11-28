@@ -55,6 +55,8 @@ import "./awaneesh.css";
 
 import "./savan.css";
 import './adarsh.css'
+import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
+import { data } from "./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx";
 
 const router = createBrowserRouter([
   {
@@ -95,9 +97,9 @@ const router = createBrowserRouter([
         path: "aeroone-gurgaon1",
         element: (
           <Suspense fallback={<InitialLoading />}>
-            <Layout>
-              <AeroOneGurgaon1 />
-            </Layout>
+          
+              <MicroPageGurgaon1 data={data} />
+           
           </Suspense>
         ),
       },

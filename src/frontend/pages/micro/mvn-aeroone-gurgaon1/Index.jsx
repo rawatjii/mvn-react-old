@@ -7,7 +7,7 @@ import hero_img_desk from "../../../../frontend/assets/images/micro_hero/hero_im
 import "./aeroGuragaon.css";
 import MicroPageGurgaon1 from "../../MicroPageGurgaon1";
 
-const data = {
+export const data = {
   micro_hero_section:
   {
     isVdo: true,

@@ -17,7 +17,7 @@ import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
 import LargeElevationSection from "../components/MicroPage/LargeElevationSection";
 import Renders from "../components/MicroPage/Renders";
-import Location from "../components/MicroPage/Location";
+import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
 import Rera from "../components/MicroPage/Rera";
 import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
 import GallerySlider from "../components/GallerySlider";
@@ -44,9 +44,9 @@ const MicroPage = ({ data }) => {
 
         {/* {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
 
-{/* <Location /> */}
+{/* <NoPolutionZone /> */}
         
-        {/* <Location /> */}
+        {/* <NoPolutionZone /> */}
 
         {/* {data.masterBedroom.isVdo === true && <MasterBedroom data={data} />} */}
         

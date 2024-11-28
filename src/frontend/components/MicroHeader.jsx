@@ -9,7 +9,7 @@ import "./Header.css";
 
 import { gsap } from "gsap";
 
-const NewHeader = ({ scrollToSection }) => {
+const MicroHeader = ({ scrollToSection }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMicro, setIsMicro] = useState(false);
 
@@ -257,7 +257,7 @@ const NewHeader = ({ scrollToSection }) => {
                                   OverView
                                 </a>
                                 <a
-                                  href={`#peacockSection`}
+                                
                                   className="new-launch"
                                   onClick={() => {scrollToSection("Walkthrough");toggleMenu("close");}}
                                 >
@@ -266,61 +266,56 @@ const NewHeader = ({ scrollToSection }) => {
                                 <a
                                  
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("Landscape");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("MicroLandscape");toggleMenu("close");}}
                                 >
                                   Landscape
                                 </a>
                                 <a
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("Elevation");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("MicroElevation");toggleMenu("close");}}
                                 >
                                   Elevation
                                 </a>
-                                <a
-                                  className="new-launch"
-                                  onClick={() => {scrollToSection("GrandEntrance");toggleMenu("close");}}
-                                >
-                                  Grand Entrance
-                                </a>
+                              
                                 <a
                               
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("Apartment");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
                                 >
                                   Apartment
                                 </a>
                                 <a
                            
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("Amenities");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("MicroAmenities");toggleMenu("close");}}
                                 >
                                   Amenities
                                 </a>
                                 <a
                                  
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("Typologies");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("MicroTypology");toggleMenu("close");}}
                                 >
                                   Typologies
                                 </a>
                                 <a
                                
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("FloorPlans");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("MicroFloorPlan");toggleMenu("close");}}
                                 >
                                   Floor Plans
                                 </a>
                                 <a
                                  
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("Location");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("MicroLocationMap");toggleMenu("close");}}
                                 >
-                                  Location
+                                  Location Map
                                 </a>
                                 <a
                                  
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("NoPollutionZone");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("NoPolutionZone");toggleMenu("close");}}
                                 >
                                   No Pollution Zone
                                 </a>
@@ -891,4 +886,4 @@ const NewHeader = ({ scrollToSection }) => {
   );
 };
 
-export default NewHeader;
+export default MicroHeader;
