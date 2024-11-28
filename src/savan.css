@@ -1993,6 +1993,9 @@ section.section.other_projects_section.pb-0 {
 .blog_page h3 { font-size: 24px; margin-bottom: 20px;}
 .blog-platter-detail {padding: 15px;}
 .blog-platter-box {margin-bottom: 30px;}
+nav.null.navbar.navbar-expand-false.navbar-light .right {width: 150px; display: flex;align-items: center; margin-left: auto;justify-content: end;}
+.navbar .call_btn { height: 40px;width: 40px;}
+
 
 
 @media(max-width:767px) {
