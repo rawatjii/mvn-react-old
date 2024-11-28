@@ -66,7 +66,6 @@ const additionalContent = [
 gsap.registerPlugin(ScrollTrigger);
 
 const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
-debugger;
   const titleRef = useRef();
   const imageDivRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);

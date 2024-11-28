@@ -40,7 +40,6 @@ function BlogDetails() {
 useEffect(() => {
   // Side effect code here
 const result=findBlogBySlug(slug);
-debugger;
 setSelectedBlog(result);
 }, [slug]);
 

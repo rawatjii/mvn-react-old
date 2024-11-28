@@ -28,21 +28,21 @@ const projectsData = [
     desktop: mvnAerooneImgDesktop,
     name: "Mvn Aeroone",
     location: "Gurugram",
-    link:'aeroone-gurgaon1'
+    link:"https://beta.mvn.in/aeroone-gurgaon1"
   },
   {
     mobile: mvnMallImg,
     desktop: mvnMallImgDesktop,
     name: "Mvn Mall",
     location: "Gurugram",
-    link:'mvn-mall-gurgaon'
+    link:'https://mvnmall.com/'
   },
   {
     mobile: mvnAerooneBangaloreImg,
     desktop: mvnAerooneBangaloreImgDesktop,
-    name: "Mvn Aeroone",
+    name: "Mvn",
     location: "Bangalore",
-    link:'aeroone-bangalore'
+    link:'https://www.mvnaeroone.com/'
   },
 ];
 
@@ -133,7 +133,7 @@ const Projects = () => {
                           ref={(el) => (imageDivRefs.current[index] = el)}
                           height={100}
                         >
-                          <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>
+                          <Link to={item.link}>
                             <img
                               src={isMobile ? item.mobile : item.desktop}
                               alt={item.name}
@@ -149,7 +149,7 @@ const Projects = () => {
                           </div>
 
                           <div className="right">
-                            <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>                            
+                            <Link to={item.link}>                            
                               <img
                                 src={arrowIcon}
                                 alt="mvn-arrow-icon"
@@ -176,7 +176,7 @@ const Projects = () => {
                         ref={(el) => (imageDivRefs.current[index] = el)}
                         height={100}
                       >
-                       <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>                       
+                       <Link to={item.link} target="_blank">                       
                         <img
                             src={isMobile ? item.mobile : item.desktop}
                             alt={item.name}
@@ -192,7 +192,7 @@ const Projects = () => {
                         </div>
 
                         <div className="right">
-                          <Link to={`${import.meta.env.VITE_APP_URL + item.link}`}>
+                          <Link to={item.link} target="_blank">
                             <img
                               src={arrowIcon}
                               alt="mvn-arrow-icon"
