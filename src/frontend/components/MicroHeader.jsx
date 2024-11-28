@@ -20,6 +20,7 @@ const MicroHeader = ({ scrollToSection }) => {
   const headerRef = useRef();
   const logoRef = useRef();
   const toggleRef = useRef();
+  const callBtnRef = useRef();
 
   const { pathname } = useLocation();
 
@@ -100,7 +101,7 @@ const MicroHeader = ({ scrollToSection }) => {
       >
         <Container>
           <Navbar.Brand ref={logoRef} className="logo">
-            <Link to="/" onClick={() => toggleMenu("close")}>
+            <Link onClick={() => toggleMenu("close")}>
               <img
                 src={CONFIG.IMAGE_URL + "logo_white.webp"}
                 alt="mvn-logo"
@@ -116,20 +117,24 @@ const MicroHeader = ({ scrollToSection }) => {
             </Link>
           </Navbar.Brand>
 
-          <Navbar.Toggle
-            ref={toggleRef}
-            aria-controls="basic-navbar-nav"
-            onClick={() => toggleMenu("show")}
-          >
-            <span className="icon"></span>
-          </Navbar.Toggle>
+          <div className="right">
+            <a href="tel:+918062525105" className="call_btn" ref={callBtnRef}>
+              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="" />
+            </a>
+            <Navbar.Toggle
+              ref={toggleRef}
+              aria-controls="basic-navbar-nav"
+              onClick={() => toggleMenu("show")}
+            >
+              <span className="icon"></span>
+            </Navbar.Toggle>
+          </div>
 
           <div id="basic-navbar-nav" className="navbar_collapse" ref={menusRef}>
             <Container>
               <div className="header">
                 <Navbar.Brand className="logo">
                   <Link
-                    to={`${import.meta.env.VITE_APP_URL}`}
                     onClick={() => toggleMenu("close")}
                   >
                     <img
@@ -165,7 +170,7 @@ const MicroHeader = ({ scrollToSection }) => {
                       ) && (
                         <li className="menuFlexBox middle-menu">
                           <li className="nav-link">
-                            <NavLink>Real Estate</NavLink>
+                            <NavLink>Projects</NavLink>
                             <ul className="sub_menu">
                               <li className="nav-link">
                                 <label htmlFor="gurgaon">Gurgaon</label>
@@ -244,7 +249,7 @@ const MicroHeader = ({ scrollToSection }) => {
                       window.location.pathname === "/aeroone-gurgaon1" && (
                         <li className="menuFlexBox middle-menu">
                           <li className="nav-link">
-                            <NavLink>Real Estate</NavLink>
+                            <NavLink>Projects</NavLink>
                             <ul className="sub_menu">
                               <li className="nav-link">
                                 <label htmlFor="gurgaon">
@@ -254,7 +259,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => { scrollToSection("microOverview");toggleMenu("close");}}
                                 >
-                                  OverView
+                                  Overview
                                 </a>
                                 <a
                                 
@@ -327,7 +332,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   }
                                   style={{ cursor: "pointer" }}
                                 >
-                                  Other Projects -
+                                  Other Projects +
                                 </h4>
                                 <div
                                   className={
@@ -343,9 +348,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   <li className="nav-link">
                                     <label htmlFor="gurgaon">Gurgaon</label>
                                     <NavLink
-                                      to={`${
-                                        import.meta.env.VITE_APP_URL
-                                      }mvn-mall-gurgaon`}
+                                      to="https://mvnmall.com/" target="_blank"
                                       className="new-launch"
                                       onClick={() => toggleMenu("close")}
                                     >
@@ -353,44 +356,28 @@ const MicroHeader = ({ scrollToSection }) => {
                                       <span className="status">New Launch</span>
                                     </NavLink>
 
-                                    <NavLink
-                                      to={`${
-                                        import.meta.env.VITE_APP_URL
-                                      }aeroone-gurgaon1`}
-                                      className="new-launch"
-                                      onClick={() => toggleMenu("close")}
-                                    >
-                                      MVN Aero One{" "}
-                                      <span className="status">New Launch</span>
-                                    </NavLink>
                                   </li>
 
                                   <li className="nav-link">
                                     <label htmlFor="bangalore">Bangalore</label>
                                     <NavLink
-                                      to={`${
-                                        import.meta.env.VITE_APP_URL
-                                      }aeroone-bangalore`}
+                                      to="https://www.mvnaeroone.com/" target="_blank"
                                       onClick={() => toggleMenu("close")}
                                     >
-                                      MVN Aero One
+                                      MVN 
                                     </NavLink>
                                   </li>
 
                                   <li className="nav-link">
                                     <label htmlFor="sohna">Sohna</label>
                                     <NavLink
-                                      to={`${
-                                        import.meta.env.VITE_APP_URL
-                                      }mvn-athens-sohna`}
+                                      to="https://www.mvn.in/athens-gurugram/" target="_blank"
                                       onClick={() => toggleMenu("close")}
                                     >
                                       MVN Athens
                                     </NavLink>
                                     <NavLink
-                                      to={`${
-                                        import.meta.env.VITE_APP_URL
-                                      }mvn-athens-ph2-sohna`}
+                                      to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank"
                                       onClick={() => toggleMenu("close")}
                                     >
                                       MVN Athens PH-2
@@ -400,9 +387,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   <li className="nav-link">
                                     <label htmlFor="faridabad">Faridabad</label>
                                     <NavLink
-                                      to={`${
-                                        import.meta.env.VITE_APP_URL
-                                      }mvn-athens-faridabad`}
+                                       to="https://www.mvn.in/athens-faridabad/" target="_blank"
                                       onClick={() => toggleMenu("close")}
                                     >
                                       MVN Athens
@@ -465,14 +450,12 @@ const MicroHeader = ({ scrollToSection }) => {
                   ) && (
                     <li className="menuFlexBox middle-menu">
                       <li className="nav-link">
-                        <NavLink>Real Estate</NavLink>
+                        <NavLink>Projects</NavLink>
                         <ul className="sub_menu">
                           <li className="nav-link">
                             <label htmlFor="gurgaon">Gurgaon</label>
                             <NavLink
-                              to={`${
-                                import.meta.env.VITE_APP_URL
-                              }mvn-mall-gurgaon`}
+                              to="https://mvnmall.com/" target="_blank"
                               className="new-launch"
                               onClick={() => toggleMenu("close")}
                             >
@@ -495,29 +478,23 @@ const MicroHeader = ({ scrollToSection }) => {
                           <li className="nav-link">
                             <label htmlFor="bangalore">Bangalore</label>
                             <NavLink
-                              to={`${
-                                import.meta.env.VITE_APP_URL
-                              }aeroone-bangalore`}
+                             to="https://www.mvnaeroone.com/" target="_blank"
                               onClick={() => toggleMenu("close")}
                             >
-                              MVN Aero One
+                              MVN
                             </NavLink>
                           </li>
 
                           <li className="nav-link">
                             <label htmlFor="sohna">Sohna</label>
                             <NavLink
-                              to={`${
-                                import.meta.env.VITE_APP_URL
-                              }mvn-athens-sohna`}
+                              to="https://www.mvn.in/athens-gurugram/" target="_blank"
                               onClick={() => toggleMenu("close")}
                             >
                               MVN Athens
                             </NavLink>
                             <NavLink
-                              to={`${
-                                import.meta.env.VITE_APP_URL
-                              }mvn-athens-ph2-sohna`}
+                              to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank"
                               onClick={() => toggleMenu("close")}
                             >
                               MVN Athens PH-2
@@ -527,9 +504,7 @@ const MicroHeader = ({ scrollToSection }) => {
                           <li className="nav-link">
                             <label htmlFor="faridabad">Faridabad</label>
                             <NavLink
-                              to={`${
-                                import.meta.env.VITE_APP_URL
-                              }mvn-athens-faridabad`}
+                              to="https://www.mvn.in/athens-faridabad/" target="_blank"
                               onClick={() => toggleMenu("close")}
                             >
                               MVN Athens
@@ -618,9 +593,7 @@ const MicroHeader = ({ scrollToSection }) => {
                               <li className="nav-link">
                                 <label htmlFor="gurgaon">Gurgaon</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-mall-gurgaon`}
+                                  to="https://mvnmall.com/" target="_blank"
                                   className="new-launch"
                                   onClick={() => toggleMenu("close")}
                                 >
@@ -770,80 +743,13 @@ const MicroHeader = ({ scrollToSection }) => {
                   )}
                 </> */}
 
-                <li className="menuFlexBox">
-                  <li className="nav-link">
-                    <NavLink
-                      to={"/education/"}
-                      onClick={() => toggleMenu("close")}
-                    >
-                      Education
-                    </NavLink>
-                    <ul className="sub_menu">
-                      <li className="nav-link">
-                        {/* <label htmlFor="school">School</label> */}
-                        <label htmlFor="school">MVN School</label>
-                        {/* <NavLink
-                          to={"https://www.mvneducation.com/sector-17/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Sec-17, Faridabad
-                        </NavLink>
-                        <NavLink
-                          to={"https://www.mvnpalwal.com/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Palwal, Faridabad
-                        </NavLink>
-                        <NavLink
-                          to={"https://www.mvneducation.com/mvn-aravali/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Aravali Hills, Faridabad
-                        </NavLink>
-                        <NavLink
-                          to={"https://www.mvn88.com/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN School, Sector 88, Greater Faridabad
-                        </NavLink> */}
-                      </li>
-
-                      {/* <li className="nav-link">
-                        <label htmlFor="university">University</label>
-                        <NavLink
-                          to={`${
-                            import.meta.env.VITE_APP_URL
-                          }mvn-university-haryana`}
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN university Haryana
-                        </NavLink>
-                      </li>
-
-                      <li className="nav-link">
-                        <label htmlFor="Sports-Academy">Sports Academy</label>
-                        <NavLink
-                          to={"https://www.mvn88.com/exercise-sports-academy/"}
-                          target="_blank"
-                          onClick={() => toggleMenu("close")}
-                        >
-                          MVN 88
-                        </NavLink>
-                      </li> */}
-                    </ul>
-                  </li>
-                </li>
 
                 <ul className="sub_menu">
                   <li>
                     <label htmlFor="school">Social Media</label>
                     <ul className="social_links">
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.facebook.com/officialmvninfra/" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/fb.png"}`}
                             alt="mvn-fb-icon"
@@ -851,7 +757,7 @@ const MicroHeader = ({ scrollToSection }) => {
                         </Link>
                       </li>
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.instagram.com/mvn_infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/instagram.png"}`}
                             alt="mvn-insta-icon"
@@ -859,7 +765,7 @@ const MicroHeader = ({ scrollToSection }) => {
                         </Link>
                       </li>
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.linkedin.com/company/mvn-infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/linkedin.png"}`}
                             alt="mvn-linkedin-icon"
@@ -867,7 +773,7 @@ const MicroHeader = ({ scrollToSection }) => {
                         </Link>
                       </li>
                       <li>
-                        <Link onClick={() => toggleMenu("close")}>
+                        <Link to="https://www.youtube.com/@MVNInfrastructures" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
                             src={`${CONFIG.IMAGE_URL + "social/youtube.png"}`}
                             alt="mvn-youtube-icon"

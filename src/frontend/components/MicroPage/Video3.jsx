@@ -4,6 +4,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import CustomCard from "../Card";
 import PartyLoader from "../../../common/Loader/micro/partyLoader/Index";
+import Watermark from "../../../common/watermark/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -100,6 +101,8 @@ const Video3 = ({ data }) => {
       {!loading && (
         <>
           <div ref={containerRef} className="frames_content">
+            
+          <Watermark className="style1" />
             {images.map((img, index) => (
               <img
                 key={index}

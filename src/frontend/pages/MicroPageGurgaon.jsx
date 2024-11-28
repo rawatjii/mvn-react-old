@@ -17,11 +17,11 @@ import MasterBedroom from "../components/MicroPage/MasterBedroom";
 import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
 import Renders from "../components/MicroPage/Renders";
-import Location from "../components/MicroPage/Location";
 import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
 import GurgaonLoader from "../../common/Loader/micro/gurgaon/Index";
 import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
 import Typology from './../components/homepage/Typology';
+import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
 
 const MicroPageGurgaon = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
@@ -74,7 +74,7 @@ const MicroPageGurgaon = ({ data }) => {
           <MicroLocationMap data={data.locationAdvantage} />
 
 
-          <Location /> {/*no isssue*/}
+          <NoPolutionZone /> {/*no isssue*/}
 <Typology  />
 
           {/* <Slides /> */}

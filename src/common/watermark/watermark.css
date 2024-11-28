@@ -9,4 +9,8 @@
   &.left{
     left:10px;
   }
+
+  &.style1{
+    bottom: 40px;
+  }
 }
