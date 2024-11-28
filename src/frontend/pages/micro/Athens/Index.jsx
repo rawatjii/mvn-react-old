@@ -226,7 +226,7 @@ const data = {
 
 const Athens = () => {
   return (
-    <MicroPage data={data} />
+    <MicroPage data={data} projectName={'MVN-Athens'}/>
   )
 };
 

@@ -209,7 +209,7 @@ const data = {
 
 const AeroOneBangalore = () => {
   return (
-    <MicroPage data={data} />
+    <MicroPage data={data}  projectName={'MVN-AeroOne-Bangalore'}/>
   )
 };
 

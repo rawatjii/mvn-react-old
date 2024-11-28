@@ -128,7 +128,7 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<InitialLoading />}>
             <Layout>
-              <MicroPage />
+              <MicroPage projectName={'MVN-Micro'}/>
             </Layout>
           </Suspense>
         ),
