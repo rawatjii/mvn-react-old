@@ -8,6 +8,7 @@ import Experience_Sec from "../components/MvnMall/Experience_Sec";
 import LocationSec from "../components/MvnMall/LocationSec";
 
 const MvnMallGurgaon = () => {
+  window.scrollTo(0, 0);
   return (
     <>
       <Banner />

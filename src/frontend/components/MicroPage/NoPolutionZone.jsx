@@ -6,6 +6,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as CONFIG from "../../../config/config";
 import SecTitle from "../../../common/SecTitle/Index";
+import dotImg from "../../assets/images/icons/dot.png"
 
 import "swiper/css";
 import 'swiper/css/pagination';
@@ -137,6 +138,7 @@ const NoPolutionZone = () => {
             <SwiperSlide>
               <div className="content">
                 <p className="km_text">Km</p>
+                <img src={`${dotImg}`} alt="" className="golden-icon-no-pollution" />
                 <h4 className="title">{data.title}</h4>
               </div>
             </SwiperSlide>

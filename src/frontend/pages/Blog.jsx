@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useEffect, useRef } from "react";
 import MicroBanner from "../components/MicroBanner/Index";
 import Desktopmicro_bg from "../assets/images/blogs/1865.jpg";
 import BlogImg from "../assets/images/blogs/blog.jpg";
@@ -11,11 +11,15 @@ import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setSelectedBlog } from "../../redux/blogsSlice";
 import { blogData } from "../../data/blogsdata";
+import ScrollToTop from './../../common/ScrollToTop';
 
 function Blog() {
+ 
+  debugger;
   const dispatch = useDispatch();
   const titleRef = useRef();
   const desRefs = useRef([]);
+  const containerRef = useRef();
 
   const breadcrumbs = {
     title: "Blogs",
@@ -29,9 +33,14 @@ function Blog() {
       },
     ],
   };
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo(0, 0);
+    }
+  }, []);
 
   return (
-    <div className="blog_page">
+    <div className="blog_page" ref={containerRef} >
       <MicroBanner bg={BlogImg} data={breadcrumbs} />
       <div className="micro_content">
       <div className="micro_data">

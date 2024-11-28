@@ -25,6 +25,7 @@ import CareerImg from "../assets/images/career/career-img.jpg";
 
 
 function Career() {
+    window.scrollTo(0, 0);
     const titleRef = useRef();
     const desRefs = useRef([]);
 
