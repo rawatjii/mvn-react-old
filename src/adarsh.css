@@ -116,15 +116,27 @@
     .location_section .mySwiper .content {position: relative;display: block;height: 100%;width: 100%;margin: 0 auto;}
     .location_section .mySwiper .swiper-slide-active .content img {display: none !important;  }
     .location_section .mySwiper .title { font-size: 18px !important;}
-    .location_section .mySwiper .swiper-slide-active .km_text { display: block; padding: 0; margin: 0; }
+    .location_section .mySwiper .swiper-slide-active .km_text { display: block; padding: 0; margin: 0;font-size: 30px; }
     /* .location_section .mySwiper .swiper-slide-active h4 { margin-top: 20px !important; font-size: 24px !important; } */
     .location_section .swiper-scrollbar {bottom: 70px !important; width: 40% !important;  }
-    .location_section .image_col {margin-top: 25px;  height: 53vh; position: relative;}
-    .location_section .mySwiper .swiper-slide-active .title {
-                    font-size: 24px !important;
-                    margin-top: 10px !important
-                }
+    .location_section .image_col {margin-top: 25px;  height: 57vh; position: relative;}
+    .location_section .mySwiper .swiper-slide-active .title {font-size: 24px !important;margin-top: 10px !important }
+    .sec_title.text-center.color.style1 {margin-bottom: 20px;}
 
+}
+@media(min-width:1430px){
+    .location_section .abs_number { bottom: 10%; }
+    .location_section .abs_number .zero_img{width: 220px;}
+    .location_section img.golden-icon-no-pollution {width: 20px; height: auto; display: block !important; text-align: center;margin: 20px auto 15px;}
+    .location_section .mySwiper .content {position: relative;display: block;height: 100%;width: 100%;margin: 0 auto;}
+    .location_section .mySwiper .swiper-slide-active .content img {display: none !important;  }
+    .location_section .mySwiper .title { font-size: 18px !important;}
+    .location_section .mySwiper .swiper-slide-active .km_text { display: block; padding: 0; margin: 0;font-size: 30px; }
+    /* .location_section .mySwiper .swiper-slide-active h4 { margin-top: 20px !important; font-size: 24px !important; } */
+    .location_section .swiper-scrollbar {bottom: 70px !important; width: 40% !important;  }
+    .location_section .image_col {margin-top: 25px;  height: 57vh; position: relative;}
+    .location_section .mySwiper .swiper-slide-active .title {font-size: 24px !important;margin-top: 20px !important }
+    .sec_title.text-center.color.style1 {margin-bottom: 20px;}
 }
    
 
