@@ -176,7 +176,7 @@ const Header = () => {
                     {/* mobile menu  */}
                     <li className="menuFlexBox middle-menu">
                           <li className="nav-link">
-                            <NavLink>Real Estate</NavLink>
+                            <NavLink>Projects</NavLink>
                             <ul className="sub_menu">
                               <li className="nav-link">
                                 <label htmlFor="gurgaon">Gurgaon</label>
