@@ -32,6 +32,7 @@ const CustomModal = ({ show, hide, projectName }) => {
         alert("Enquiry Details Sent Successfully!");
         setFormDetails({});
         setLoading(false);
+        hide();
       })
       .catch((error) => {
         console.error("Error:", error); // Handle any errors

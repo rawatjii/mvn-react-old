@@ -14,6 +14,7 @@ const EnquireForm = ({ career, projectName }) => {
   const formRef = useRef();
 
   const [formDetails, setFormDetails] = useState({});
+  const [loading, setLoading] = useState(false);
 
   const handleFormChange = (e) => {
     setFormDetails({
@@ -47,11 +48,11 @@ const EnquireForm = ({ career, projectName }) => {
   }, []);
 
   // `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4804&qSenderName=${formDetails.name}"&qMobileNo=${formDetails.number}&qEmailID=${formDetails.email}&qQueryMessage=${formDetails.message}&qProjectName=&qIP=".getUserIP().`
-  
+
   const handleSubmit = (e) => {
     e.preventDefault();
     const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4804&qSenderName=${formDetails.name}"&qMobileNo=${formDetails.number}&qEmailID=${formDetails.email}&qQueryMessage=${formDetails.message}&qProjectName=${projectName}`;
-
+    setLoading(true);
     fetch(apiUrl, {
       method: "GET", // HTTP method
       headers: {
@@ -61,11 +62,13 @@ const EnquireForm = ({ career, projectName }) => {
     })
       .then((data) => {
         // console.log("Success:", data); // Handle the response
-        setFormDetails({})
+        setFormDetails({});
         alert("Enquiry Details Sent Successfully!");
+        setLoading(false);
       })
       .catch((error) => {
         console.error("Error:", error); // Handle any errors
+        setLoading(false);
       });
   };
 
@@ -79,14 +82,14 @@ const EnquireForm = ({ career, projectName }) => {
           </h4>
         </SecTitle>
 
-        <Form ref={formRef} onSubmit={handleSubmit}>
+        <Form ref={formRef} onSubmit={loading ? () => null : handleSubmit}>
           <Row>
             <Form.Group className="form-group" as={Col} xs="12">
               <Form.Control
                 type="text"
                 name="name"
                 placeholder="Your Name:"
-                value={formDetails.name ?? ''}
+                value={formDetails.name ?? ""}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -96,7 +99,7 @@ const EnquireForm = ({ career, projectName }) => {
                 type="email"
                 name="email"
                 placeholder="Your E-Mail:"
-                value={formDetails.email ?? ''}
+                value={formDetails.email ?? ""}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -106,7 +109,7 @@ const EnquireForm = ({ career, projectName }) => {
                 type="number"
                 name="number"
                 placeholder="Your Phone:"
-                value={formDetails.number ?? ''}
+                value={formDetails.number ?? ""}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -136,7 +139,7 @@ const EnquireForm = ({ career, projectName }) => {
                 type="text"
                 name="message"
                 placeholder="Your Message:"
-                value={formDetails.message ?? ''}
+                value={formDetails.message ?? ""}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -155,7 +158,7 @@ const EnquireForm = ({ career, projectName }) => {
           </Row>
 
           <Button type="submit" className="btn_style3">
-            Submit
+            {loading ? "Sending" : "Submit"}
           </Button>
         </Form>
       </Container>
