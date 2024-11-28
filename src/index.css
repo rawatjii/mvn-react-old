@@ -2281,6 +2281,13 @@ footer {
     }
   }
 
+  .accordion-item{
+
+    img{
+      filter:blur(3px)
+    }
+  }
+
   .accordion-header {
 
     button {
