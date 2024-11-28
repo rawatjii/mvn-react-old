@@ -97,16 +97,19 @@
 
 @media(min-width:1280px){
     .location_map_section .locationMapContent .thumbnail{position: relative;}
-    .location_map_section .locationMapContent .thumbnail .location_btn {
-        position: absolute;
-        right: 1%;
-        top: 1%;
-        padding: 6px 10px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
+    .location_map_section .locationMapContent .thumbnail .location_btn {position: absolute;right: 1%;top: 1%;padding: 6px 10px;display: flex;justify-content: center;align-items: center;gap: 10px;background: transparent;color: #fff;letter-spacing: 1px;font-weight: 300;font-size: 15px;box-shadow: none;border: 2px solid #9797979e;}
     .location_map_section .locationMapContent .thumbnail .location_btn img{width: 25px;}
+    .location_map_section .locationMapContent .title { margin-top: 0px; }
+}
+
+
+
+
+
+/* No Pollution Zone Desktop Responsive */
+
+@media(min-width:1280px){
+    .location_section .abs_number .zero_img{width: 300px;}
+   
 }
 
