@@ -63,8 +63,9 @@ const EnquireForm = ({ career, projectName }) => {
       .then((data) => {
         // console.log("Success:", data); // Handle the response
         setFormDetails({});
-        alert("Enquiry Details Sent Successfully!");
         setLoading(false);
+        alert("Enquiry Details Sent Successfully!");
+        window.location.href = '/thanks'
       })
       .catch((error) => {
         console.error("Error:", error); // Handle any errors

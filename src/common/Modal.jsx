@@ -30,6 +30,7 @@ const CustomModal = ({ show, hide, projectName }) => {
       .then((data) => {
         console.log("Success:", data); // Handle the response
         alert("Enquiry Details Sent Successfully!");
+        window.location.href = '/thanks';
         setFormDetails({});
         setLoading(false);
         hide();
