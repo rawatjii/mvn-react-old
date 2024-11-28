@@ -2602,9 +2602,14 @@ footer {
 
   &.design1{
 
-    .overview_card{
+    .about{
+      .overview_card{
 
-      margin-top:30px;
+        margin-top:20px;
+      }
+    }
+
+    .overview_card{
 
       &.style2{
 
@@ -3211,6 +3216,11 @@ footer {
   section.typology_section{
 
     padding-top:100px;
+
+    .sec_title{
+
+      margin-bottom:0!important;
+    }
   }
 
 }

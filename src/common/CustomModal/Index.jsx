@@ -7,19 +7,19 @@ const CustomModal = forwardRef((props, ref)=>{
     const [showModal, setShowModal] = useState(false);
 
     // Expose a method to open the modal using useImperativeHandle
-    useImperativeHandle(ref, () => ({
-        openModal: () => {
-            setShowModal(true);
-        },
-        closeModal: () => {
-            setShowModal(false);
-        }
-    }));
+    // useImperativeHandle(ref, () => ({
+    //     openModal: () => {
+    //         setShowModal(true);
+    //     },
+    //     closeModal: () => {
+    //         setShowModal(false);
+    //     }
+    // }));
 
     switch(props.type){
         case 'enquire':
             return(
-                <Modal className="custom_modal" animation={false} centered show={showModal} onHide={() => setShowModal(false)}>
+                <Modal className="custom_modal" animation={false} centered show={props.show} onHide={() => setShowModal(false)}>
                     <Modal.Header>
                         {/* <Modal.Title><small>Interested In</small> Brigade Orchards</Modal.Title> */}
                         <Modal.Title><small>Interested In</small> {props.property}</Modal.Title>
@@ -41,7 +41,7 @@ const CustomModal = forwardRef((props, ref)=>{
 
         case 'brochure':
             return(
-                <Modal className="custom_modal" animation={false} centered show={showModal} onHide={() => setShowModal(false)}>
+                <Modal className="custom_modal" animation={false} centered show={props.show} onHide={() => setShowModal(false)}>
                     <Modal.Header>
                         <Modal.Title><small>Interested In</small> Download Brochure</Modal.Title>
                         <span className="close" onClick={props.handleClose}>&times;</span>
@@ -54,7 +54,7 @@ const CustomModal = forwardRef((props, ref)=>{
 
         case 'job':
             return(
-                <Modal className="custom_modal" animation={false} centered show={showModal} onHide={() => setShowModal(false)}>
+                <Modal className="custom_modal" animation={false} centered show={props.show} onHide={() => setShowModal(false)}>
                     <Modal.Header>
                         <Modal.Title><small>Apply For</small> {props.property}</Modal.Title>
                         <span className="close" onClick={props.handleClose}>&times;</span>
@@ -67,7 +67,7 @@ const CustomModal = forwardRef((props, ref)=>{
 
         default:
             return(
-                <Modal className="custom_modal" animation={false} centered show={showModal} onHide={() => setShowModal(false)}>
+                <Modal className="custom_modal" animation={false} centered show={props.show} onHide={() => setShowModal(false)}>
                     <Modal.Header>
                         <Modal.Title><small>Enquire Now</small> Get in Touch with Us</Modal.Title>
                         <span className="close" onClick={props.handleClose}>&times;</span>
