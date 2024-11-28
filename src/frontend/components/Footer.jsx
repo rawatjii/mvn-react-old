@@ -164,7 +164,7 @@ const Footer = () => {
         <Col  xs={12} md={12} lg={12} className="text-center">
         <div className="border-top-footer bottom">
           <p className="main-pera"><i className="fa fa-copyright" aria-hidden="true"></i> 2024 - MVN Group. All Right Reserved.</p>
-          <p><small><a href="http://gtftechnologies.com/" target="blank"> Curated by: <b>GTF Technologies</b></a></small></p>
+          <p><small><a href="http://gtftechnologies.com/" target="blank"> Curated by: GTF Technologies</a></small></p>
         </div>
         </Col>
       </Container>
