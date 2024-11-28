@@ -19,26 +19,37 @@ const CustomModal = ({ show, hide, projectName }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4804&qSenderName=${formDetails.name}"&qMobileNo=${formDetails.number}&qEmailID=${formDetails.email}&qQueryMessage=${formDetails.message}&qProjectName=${projectName}`;
-    setLoading(true);
-    fetch(apiUrl, {
-      method: "GET", // HTTP method
-      headers: {
-        "Content-Type": "application/json", // Specify content type
-      },
-      // body: JSON.stringify(formDetails), // Convert the data to JSON string
-    })
-      .then((data) => {
-        console.log("Success:", data); // Handle the response
-        alert("Enquiry Details Sent Successfully!");
-        window.location.href = '/thanks';
-        setFormDetails({});
-        setLoading(false);
-        hide();
+
+    if (
+      !formDetails.name ||
+      !formDetails.email ||
+      !formDetails.number ||
+      !formDetails.message
+    ) {
+      alert("Please fill all details!");
+    }else{
+      setLoading(true);
+      fetch(apiUrl, {
+        method: "GET", // HTTP method
+        headers: {
+          "Content-Type": "application/json", // Specify content type
+        },
+        // body: JSON.stringify(formDetails), // Convert the data to JSON string
       })
-      .catch((error) => {
-        console.error("Error:", error); // Handle any errors
-        setLoading(false);
-      });
+        .then((data) => {
+          console.log("Success:", data); // Handle the response
+          alert("Enquiry Details Sent Successfully!");
+          window.location.href = '/thanks';
+          setFormDetails({});
+          setLoading(false);
+          hide();
+        })
+        .catch((error) => {
+          console.error("Error:", error); // Handle any errors
+          setLoading(false);
+        });
+    }
+    
   };
 
   const modalRef = useRef();
