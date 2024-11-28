@@ -31,25 +31,25 @@ export default function LargeElevation({ data }) {
         //         scrub: true,
         //     },
         // });
-        gsap.to(".abs_img_m", {
-            y: 222,
+        gsap.from(".abs_img_m", {
+            y: -200,
             scrollTrigger: {
                 trigger: ".large-elevation",
                 start: "top 80%",
-                end: "top top",
+                end: "top 20%",
                 scrub: 0.2,
             },
         });
-        gsap.to(".abs_img1", {
-            y: 400,
-            scrollTrigger: {
-                trigger: desktopRef.current,
-                start: "top bottom",
-                end: "top top",
-                scrub: true,
-                markers:false
-            },
-        });
+        // gsap.to(".abs_img1", {
+        //     y: 400,
+        //     scrollTrigger: {
+        //         trigger: desktopRef.current,
+        //         start: "top bottom",
+        //         end: "top top",
+        //         scrub: true,
+        //         markers:false
+        //     },
+        // });
 
          // Ensure triggers refresh
             ScrollTrigger.addEventListener("refresh", () => console.log("Triggers refreshed"));

@@ -69,6 +69,35 @@ export default function Renders1({ data }) {
             <img src={CONFIG.IMAGE_URL + 'renders/apartment/3.webp'} alt="" />
             <Watermark className="left" />
           </div>
+
+          <div className="card center gradient-purple">
+            <img src={CONFIG.IMAGE_URL + 'renders/apartment/4_sm.webp'} alt="" />
+            <Watermark />
+          </div>
+
+          <div className="card center gradient-purple">
+            <img src={CONFIG.IMAGE_URL + 'renders/apartment/5_sm.webp'} alt="" />
+            <Watermark className="left" />
+          </div>
+
+          <div className="card center gradient-purple">
+            <img src={CONFIG.IMAGE_URL + 'renders/apartment/6_sm.webp'} alt="" />
+            <Watermark  />
+          </div>
+
+          <div className="card center gradient-purple">
+            <img src={CONFIG.IMAGE_URL + 'renders/apartment/7_sm.webp'} alt="" />
+            <Watermark/>
+          </div>
+
+          <div className="card center gradient-purple">
+            <img src={CONFIG.IMAGE_URL + 'renders/apartment/8_sm.webp'} alt="" />
+            <Watermark className="left" />
+          </div>
+          <div className="card center gradient-purple">
+            <img src={CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp'} alt="" />
+            <Watermark className="left" />
+          </div>
         </div>
 
     </div>

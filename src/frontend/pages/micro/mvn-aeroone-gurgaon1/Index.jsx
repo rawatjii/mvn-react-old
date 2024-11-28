@@ -116,6 +116,36 @@ const data = {
           content:{},
           lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
           md: `${CONFIG.IMAGE_URL}renders/apartment/3_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/4_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/5_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/6_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/7_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/8_sm.webp`,
+        },
+        {
+          content:{},
+          lg: `${CONFIG.IMAGE_URL}renders/apartment/3.webp`,
+          md: `${CONFIG.IMAGE_URL}renders/apartment/9_sm.webp`,
         }
       ],
     },
@@ -157,8 +187,9 @@ const data = {
     { name: 'Library', imgSrc: 'librarySm.webp', desc:'A retreat for the connoisseur of knowledge, offering a curated realm of intellectual indulgence and quiet sophistication.' },
     { name: 'Business Center', imgSrc: 'businessSm.webp', desc:'Crafted for the discerning professional, this is where ambition meets elegance in an environment of unparalleled refinement.' },
     { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp', desc:'An imaginative wonderland where joy is boundless, and every detail is thoughtfully created for young dreamers to thrive.' },
-    { name: `theater`, imgSrc: 'theaterSm.webp', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
+    { name: `theatre`, imgSrc: 'theaterSm.webp', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
     { name: 'spa', imgSrc: 'spaSm.webp', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
+    // { name: 'Entry & Exit', imgSrc: 'no_image.jpg', desc:'Exclusive entrance and exit for the residents.' },
   ],
   amenities_section: [
     {
@@ -284,7 +315,7 @@ const data = {
     title: "Location Advantage",
     mapIMG: {
       desktop:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp',
-      mobile:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map.webp'
+      mobile:CONFIG.IMAGE_URL + 'gurgaon-micro/location-map_sm.webp'
     },
     //     yasho bhoomi
     // indira gandhi international airport

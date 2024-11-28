@@ -2315,7 +2315,7 @@ section.section.enquire_section p {color: #dbcfcf; font-weight: 100;font-family:
 .philosophy_section {.content  ul {display: grid;justify-content: center;gap: 5px 0px;}}
 
 .projects_section .plane_icon { display: block;}
-.swiper-slide img { display: block;  width: 100%; height: 330px;  object-fit: cover; object-fit: contain;}
+.swiper-slide img { display: block;  width: 100%; height: 330px;  object-fit: cover; object-fit: contain; filter: blur(3px);}
 .media-news_offline { padding: 40px 20px;}
 .media-news_online{padding-bottom:20px}
 section#press-center{padding-top:25px}

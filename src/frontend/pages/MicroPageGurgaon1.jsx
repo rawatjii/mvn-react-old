@@ -29,10 +29,14 @@ import MicroAmenities1 from "../components/MicroPage/Amenities1";
 import Testing from "../components/MicroPage/Testing";
 import RendersSliding from "../components/MicroPage/Testing";
 import Renders1 from "../components/MicroPage/Renders1";
+import CustomModal from "../../common/Modal";
 
 const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
+  const [show, setShow] = useState(true);
 
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
   
 
   useEffect(() => {
@@ -107,6 +111,7 @@ const MicroPageGurgaon1 = ({ data }) => {
           </div>
             {/* <MicroAmenities1 data={data.amenities} /> */}
             <MicroAmenities data={data.amenities} />
+
           <div>
           <Typology  />
           </div>
@@ -137,6 +142,7 @@ const MicroPageGurgaon1 = ({ data }) => {
               </div>
             </div>
           </div>
+
         </>
       )}
 

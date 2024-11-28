@@ -2755,6 +2755,52 @@ footer {
   justify-content: center;
 }*/
 
+.custom_modal{
+
+  .modal-body{
+
+    background: #000000d1;
+    border-radius: 0;
+    outline: none;
+    padding: 30px;
+  }
+
+  .modal-header{
+
+    background: #000;
+
+    .close{
+      margin-left:auto;
+      font-size:30px;
+    }
+  }
+}
+
+.enquire_form{
+
+  .form-group{
+
+    margin-bottom:20px!important;
+  }
+}
+
+
+.large-elevation{
+
+  .bottom_img_div{
+    position:relative;
+  }
+
+  .full_img{
+    position: absolute;
+    height: 100%;
+      
+    img{
+      height:100%;
+      object-fit: cover;
+    }
+  }
+}
 
 
 /* start responsive */
@@ -2926,6 +2972,11 @@ footer {
     .bar {
       margin: 35px auto 0;
       width: 60px;
+    }
+
+    .extraTxt{
+      text-align: center;
+      margin-top:15px;
     }
   }
 
