@@ -890,7 +890,7 @@ a {
   }
 
   .left_col .single {
-    height: calc(100% - 63px - 35px);
+    height: calc(100% - 66px - 124px);
 
     .lazyload-wrapper,
     .an_img {
@@ -3181,7 +3181,7 @@ footer {
 
     .desktop_fluid_container{
 
-      padding-top: 60px;
+      margin-top: -22px;
 
       .title{
 
@@ -3189,7 +3189,7 @@ footer {
       }
 
       .location_points{
-        margin-top:0;
+        margin-top:-20px;
       }
     }
   }

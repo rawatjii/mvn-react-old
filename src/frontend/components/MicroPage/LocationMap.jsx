@@ -60,7 +60,7 @@ const MicroLocationMap = ({data})=>{
   console.log("location map img", data.mapIMG);
   
 
-  const locationMapImg = [{src: data.mapIMG}]
+  const locationMapImg = [{src: data.mapIMG.desktop, asset:data.mapIMG.desktop}]
   
   const handleClose = () => setShowModal(false);
 
@@ -158,7 +158,7 @@ const MicroLocationMap = ({data})=>{
         </div>
 
         <Container className="desktop_fluid_container">
-          <h4 className="title">{data.title}</h4>
+          <h4 className="title style2">{data.title}</h4>
 
           <ul className="location_points">
             <span className="left_road"></span>
@@ -176,7 +176,7 @@ const MicroLocationMap = ({data})=>{
       <Lightbox 
         open={isLocationMapOpen}
         close={() => setIsLocationMapOpen(false)}
-        slides={locationMapImg}
+        slides={[{src:data.mapIMG.desktop}]}
         plugins={[Zoom]}
         carousel={{
           finite: locationMapImg.length <= 1,  // Prevent looping if there’s only one image

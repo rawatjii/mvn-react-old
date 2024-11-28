@@ -1940,6 +1940,10 @@ footer {
     z-index: -1;
   }
 
+  h4.title.style2::after {
+    display: none;
+  }
+
   .sec_title.text-center.color.style2 {
     text-align: center;
   }
