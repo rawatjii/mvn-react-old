@@ -7,6 +7,7 @@ import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.p
 
 const CustomModal = ({ show, hide, projectName }) => {
   const [formDetails, setFormDetails] = useState({});
+  const [loading,setLoading] = useState(false);
 
   const handleFormChange = (e) => {
     setFormDetails({
@@ -18,7 +19,7 @@ const CustomModal = ({ show, hide, projectName }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4804&qSenderName=${formDetails.name}"&qMobileNo=${formDetails.number}&qEmailID=${formDetails.email}&qQueryMessage=${formDetails.message}&qProjectName=${projectName}`;
-
+    setLoading(true)
     fetch(apiUrl, {
       method: "GET", // HTTP method
       headers: {
@@ -26,18 +27,15 @@ const CustomModal = ({ show, hide, projectName }) => {
       },
       // body: JSON.stringify(formDetails), // Convert the data to JSON string
     })
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error(`HTTP error! Status: ${response.status}`);
-        }
-        return response.json(); // Parse the JSON response
-      })
       .then((data) => {
         console.log("Success:", data); // Handle the response
         alert("Enquiry Details Sent Successfully!");
+        setFormDetails({})
+        setLoading(false)
       })
       .catch((error) => {
         console.error("Error:", error); // Handle any errors
+        setLoading(false)
       });
   };
 
@@ -67,13 +65,14 @@ const CustomModal = ({ show, hide, projectName }) => {
         <span className="close" onClick={hide} style={{position: 'absolute',top: 0,right: 10,fontSize: 30}}>
           &times;
         </span>
-        <Form onSubmit={handleSubmit}>
+        <Form onSubmit={loading ? () => null : handleSubmit }>
           <Row>
             <Form.Group className="form-group" as={Col} xs="12">
               <Form.Control
                 type="text"
                 name="name"
                 placeholder="Name:"
+                value={formDetails.name ?? ''}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -83,6 +82,7 @@ const CustomModal = ({ show, hide, projectName }) => {
                 type="email"
                 name="email"
                 placeholder="E-Mail:"
+                value={formDetails.email ?? ''}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -92,6 +92,7 @@ const CustomModal = ({ show, hide, projectName }) => {
                 type="number"
                 name="number"
                 placeholder="Phone:"
+                value={formDetails.number ?? ''}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -102,6 +103,7 @@ const CustomModal = ({ show, hide, projectName }) => {
                 type="text"
                 name="message"
                 placeholder="Message:"
+                value={formDetails.message ?? ''}
                 onChange={handleFormChange}
               />
             </Form.Group>
@@ -109,7 +111,7 @@ const CustomModal = ({ show, hide, projectName }) => {
           </Row>
 
           <Button type="submit" className="btn_style3">
-            Submit
+            {loading ? 'Sending' : 'Submit'}
           </Button>
         </Form>
       </Container>
