@@ -68,7 +68,7 @@ const Homepage = ()=>{
           
         <Enquire />
 
-          <EnquireForm />
+        <EnquireForm projectName={'MVN'}/>
         </div>
     </>
   )

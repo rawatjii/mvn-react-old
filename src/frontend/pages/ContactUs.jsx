@@ -53,7 +53,7 @@ const ContactUs = () => {
               
                 <Enquire />
       
-                <EnquireForm />
+                <EnquireForm projectName={'MVN'}/>
               </div>
             </Suspense>
         </div>

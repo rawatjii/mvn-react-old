@@ -281,7 +281,7 @@ const MvnAthensPh2Sohna = ()=>{
             </Container>
         </section> */}
 
-        <MicroPage data={data}/>
+        <MicroPage data={data} projectName={'MVN-athens-ph2-Sohna'}/>
         <AmenitiesAthens />
 
     

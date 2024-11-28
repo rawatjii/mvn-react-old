@@ -210,7 +210,7 @@ const data = {
 const AeroOneBangalore = () => {
   window.scrollTo(0,0)
   return (
-    <MicroPage data={data} />
+    <MicroPage data={data}  projectName={'MVN-AeroOne-Bangalore'}/>
   )
 };
 

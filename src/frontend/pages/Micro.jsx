@@ -23,8 +23,7 @@ import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
 import GallerySlider from "../components/GallerySlider";
 import SecTitle from "../../common/SecTitle/Index";
 
-const MicroPage = ({ data }) => {
-  window.scrollTo(0, 0);
+const MicroPage = ({ data, projectName }) => {
   return (
     <>
       <Suspense fallback={<p>Loading...</p>}>
@@ -108,7 +107,7 @@ const MicroPage = ({ data }) => {
               <Enquire />
             </div>
             <div className="col-sm-6 px-0">
-              <EnquireForm />
+            <EnquireForm projectName={projectName}/>
             </div>
           </div>
         </div>
