@@ -10,6 +10,10 @@ const MicroOverview = ({data})=>{
   const [isShowModal, setIsShowModal] = useState(false)
   const {title, location, extra, desc} = data.overview;
 
+  const isHideModal = () => {
+    setIsShowModal(false);
+  };
+
   const handleOpenBrochureModal = () => {
     setIsShowModal(true)
   };
@@ -47,7 +51,7 @@ const MicroOverview = ({data})=>{
 
       <Button className="btn_style4" onClick={handleOpenBrochureModal}>Download Brochure</Button>
 
-      <CustomModal show={isShowModal} type="enquire"  />
+      <CustomModal hide={isHideModal} show={isShowModal} type="enquire"  />
     </section>
   )
 }
