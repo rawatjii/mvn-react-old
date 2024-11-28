@@ -8,9 +8,10 @@ import EnquireForm from "../components/homepage/EnquireForm";
 import Mobilemicro_bg from '../assets/images/about/about-head-bg-desktop.webp';
 import Desktopmicro_bg from '../assets/images/about/about-head-bg-desktop.webp';
 import OurTeam from "../components/About/Ourteam";
+import ScrollToTop from "../../common/ScrollToTop";
 
 const AboutUs = () => {
- 
+  window.scrollTo(0, 0);
   const [microBg, setMicroBg] = useState(Desktopmicro_bg);
 
   const breadcrumbs = {
@@ -54,7 +55,7 @@ const AboutUs = () => {
           <OurTeam />
           <div className="flex-footer-form">
             <Enquire />
-            <EnquireForm />
+            <EnquireForm projectName={'MVN'}/>
           </div>
         </div>
       </div>

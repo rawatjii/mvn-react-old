@@ -6,7 +6,7 @@ import AmenitiesAthens from "../components/MicroPage/AmenitiesAthens";
 
 
 const MvnAthensPh2Sohna = ()=>{
-
+  window.scrollTo(0, 0);
 
     const data = {
         micro_hero_section: 
@@ -281,7 +281,7 @@ const MvnAthensPh2Sohna = ()=>{
             </Container>
         </section> */}
 
-        <MicroPage data={data}/>
+        <MicroPage data={data} projectName={'MVN-athens-ph2-Sohna'}/>
         <AmenitiesAthens />
 
     

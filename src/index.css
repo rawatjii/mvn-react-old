@@ -2602,9 +2602,14 @@ footer {
 
   &.design1{
 
-    .overview_card{
+    .about{
+      .overview_card{
 
-      margin-top:30px;
+        margin-top:20px;
+      }
+    }
+
+    .overview_card{
 
       &.style2{
 
@@ -2843,6 +2848,11 @@ footer {
   p,
   li {
     font-size: 14px;
+  }
+
+  .section{
+
+    padding: 90px 0 40px;
   }
 
 
@@ -3084,7 +3094,7 @@ footer {
   /* walkthrough_section */
 
   .walkthrough_section {
-    padding-bottom: 15px;
+    padding-bottom: 0;
 
     /* .frames_content{
       height: 100vh;
@@ -3206,6 +3216,11 @@ footer {
   section.typology_section{
 
     padding-top:100px;
+
+    .sec_title{
+
+      margin-bottom:0!important;
+    }
   }
 
 }

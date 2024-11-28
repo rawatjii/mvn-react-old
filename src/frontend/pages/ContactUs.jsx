@@ -9,6 +9,7 @@ import Enquire from '../components/homepage/Enquire';
 import EnquireForm from '../components/homepage/EnquireForm';
 
 const ContactUs = () => {
+  window.scrollTo(0, 0);
   const [bannerBg, setBannerBg] = useState(DesktopbannerBg);
 
   const breadcrumbs = {
@@ -52,7 +53,7 @@ const ContactUs = () => {
               
                 <Enquire />
       
-                <EnquireForm />
+                <EnquireForm projectName={'MVN'}/>
               </div>
             </Suspense>
         </div>

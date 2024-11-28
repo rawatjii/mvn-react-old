@@ -52,8 +52,10 @@ import pdfICON from "../assets/images/icons/pdf.png";
 
 import headingIconImg from "../assets/images/icons/heading-icon-img.png";
 import MediaImg from "../assets/images/mediacenter/mediaimg.jpg";
+import ScrollToTop from "../../common/ScrollToTop";
 
 function MediaCenter() {
+  window.scrollTo(0, 0);
   const mvnLOGO = CONFIG.IMAGE_URL + "logo_white.webp";
   const titleRef = useRef();
   const desRefs = useRef([]);
@@ -514,7 +516,7 @@ function MediaCenter() {
           </div>
           <div className="col-sm-6">
             <div className="media_enquiry_form_card">
-              <EnquireForm />
+            <EnquireForm projectName={'MVN'}/>
             </div>
           </div>
         </div>

@@ -12,7 +12,7 @@ export default function Renders1({ data }) {
   console.log('page data',data);
 
   return (
-    <div className="section renders1_section wrapper center">
+    <div className="section renders1_section wrapper center pb-0">
 
         <div className="sec_title text-center color style1">
           <h4 className="title">Landscape</h4>

@@ -16,12 +16,15 @@ import HomepageVideo from "../components/MicroPage/HomepageVideo";
 
 import { Suspense } from "react";
 import TestOverview from "../components/homepage/TestOverview";
+import ScrollToTop from "../../common/ScrollToTop";
 // import TestOverview from "../components/homepage/TestOverview";
 // import Header from "../components/Header/Header";
 
 
 
 const Homepage = ()=>{  
+  window.scrollTo(0, 0);
+
   const dataa={
     title:"asdfasf",
      des:"sfsafa"
@@ -65,7 +68,7 @@ const Homepage = ()=>{
           
         <Enquire />
 
-          <EnquireForm />
+        <EnquireForm projectName={'MVN'}/>
         </div>
     </>
   )

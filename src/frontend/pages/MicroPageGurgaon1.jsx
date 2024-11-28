@@ -42,7 +42,7 @@ import Footer from '../components/Footer'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const MicroPageGurgaon1 = ({ data }) => {
-
+  window.scrollTo(0, 0);
   const [heroLoaded, setHeroLoaded] = useState(false);
   const [show, setShow] = useState(true);
 
@@ -147,7 +147,7 @@ const MicroPageGurgaon1 = ({ data }) => {
             <MicroApartment />
           </div>
 
-          <Renders1 />
+          {/* <Renders1 /> */}
           {/* <div>
             {data?.renders.map((render, index) => (
               <SecSliding key={index} data={render} />
@@ -195,7 +195,7 @@ const MicroPageGurgaon1 = ({ data }) => {
                 <Enquire />
               </div>
               <div className="col-sm-6 px-0">
-                <EnquireForm />
+              <EnquireForm projectName={'MVN-AeroOne-Gurgaon'}/>
               </div>
             </div>
           </div>
