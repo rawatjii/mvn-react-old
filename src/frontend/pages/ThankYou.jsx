@@ -1,6 +1,7 @@
 import React from 'react';
 
 const ThankYou = () => {
+    window.scrollTo(0, 0);
     return (
         <div className="container p-0">
             <div className="col-lg-12 col-md-12 col-sm-12 col-xs-12">

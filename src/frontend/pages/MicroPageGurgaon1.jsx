@@ -41,7 +41,7 @@ import MicroApartment from './../components/MicroPage/MicroApartment';
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const MicroPageGurgaon1 = ({ data }) => {
-
+  window.scrollTo(0, 0);
   const [heroLoaded, setHeroLoaded] = useState(false);
   const [show, setShow] = useState(true);
 

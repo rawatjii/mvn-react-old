@@ -9,15 +9,24 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ScrollToTop from '../../common/ScrollToTop';
 
 import { Outlet } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect,useRef } from "react";
 
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Layout = ({children})=>{
-  ScrollToTop();
+  const containerRef = useRef();
+
+  useEffect(() => {
+    if (containerRef.current) {
+      containerRef.current.scrollTo(0, 0);
+    }
+  }, []);
+
+
   useEffect(()=>{
+  
     const smoother = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
       content: "#smooth-content",
@@ -34,8 +43,8 @@ const Layout = ({children})=>{
   return(
     <>
       <Header />
-      <div id="smooth-wrapper">
-        <div id="smooth-content">
+      <div id="smooth-wrapper"  >
+        <div id="smooth-content" ref={containerRef}>
           {children}
           {/* <Outlet /> */}
           <Footer />

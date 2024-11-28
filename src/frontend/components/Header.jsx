@@ -259,17 +259,17 @@ const Header = () => {
                     </li>
 
                     <li className="nav-link">
-                      <NavLink
-                        to={`${import.meta.env.VITE_APP_URL}blogs/`}
-                        onClick={() => toggleMenu("close")}
+                      <a
+                        href={`${import.meta.env.VITE_APP_URL}blogs`}
+    
                       >
                         Blogs
-                      </NavLink>
+                      </a>
                     </li>
 
                     <li className="nav-link">
                       <NavLink
-                        to={`${import.meta.env.VITE_APP_URL}career/`}
+                        to={`${import.meta.env.VITE_APP_URL}career`}
                         onClick={() => toggleMenu("close")}
                       >
                         Career

@@ -5,12 +5,16 @@ const ScrollToTop = () => {
   // Extracts pathname property(key) from an object
   const { pathname } = useLocation();
 
+  const scrollToTop = () => {
+    window.scrollTo(0, 0);
+  }
+
   // Automatically scrolls to top whenever pathname changes
   useEffect(() => {
-    window.scrollTo(0, 0);
+    scrollToTop()
   }, [pathname]);
 
-  return null;
+  return scrollToTop;
 }
 
 export default ScrollToTop;
