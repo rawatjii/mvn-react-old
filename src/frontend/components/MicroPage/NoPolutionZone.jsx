@@ -28,23 +28,23 @@ const NoPolutionZone = () => {
   const pageData = [
     {
       title: 'Entertainment',
-      imgSrc: 'entertainment.webp'
+      imgSrc: window.innerWidth <= 768 ? 'entertainment.webp' : 'desktop/entertainment.webp'
     },
     {
       title: 'shopping',
-      imgSrc: 'shopping.webp'
+      imgSrc: window.innerWidth <= 768 ? 'shopping.webp' : 'desktop/shopping.webp'
     },
     {
       title: 'sports',
-      imgSrc: 'sports.webp'
+      imgSrc: window.innerWidth <= 768 ? 'sports.webp' : 'desktop/sports.webp'
     },
     {
       title: 'office',
-      imgSrc: 'office.webp'
+      imgSrc: window.innerWidth <= 768 ? 'office.webp' : 'desktop/office.webp'
     },
     {
       title: 'cinema',
-      imgSrc: 'cinema.jpg'
+      imgSrc: window.innerWidth <= 768 ? 'cinema.jpg' : 'desktop/cinema.webp'
     },
   ]
 
