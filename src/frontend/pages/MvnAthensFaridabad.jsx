@@ -2,6 +2,7 @@ import React from "react";
 import { Container } from "react-bootstrap";
 
 const MvnAthensFaridabad = ()=>{
+    window.scrollTo(0, 0);
     return(
         <section className="upcoming_page">
             <Container>

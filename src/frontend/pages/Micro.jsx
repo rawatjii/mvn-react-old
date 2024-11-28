@@ -24,6 +24,7 @@ import GallerySlider from "../components/GallerySlider";
 import SecTitle from "../../common/SecTitle/Index";
 
 const MicroPage = ({ data }) => {
+  window.scrollTo(0, 0);
   return (
     <>
       <Suspense fallback={<p>Loading...</p>}>

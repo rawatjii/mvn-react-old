@@ -10,6 +10,7 @@ import { useParams } from "react-router-dom";
 import {blogData} from '../../data/blogsdata';
 
 function BlogDetails() {
+  window.scrollTo(0, 0);
   // const selectedBlog = useSelector((state) => state.blogs.selectedBlog);
   const [selectedBlog, setSelectedBlog] = useState({});
   const { slug } = useParams();

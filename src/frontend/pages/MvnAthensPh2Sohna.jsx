@@ -6,7 +6,7 @@ import AmenitiesAthens from "../components/MicroPage/AmenitiesAthens";
 
 
 const MvnAthensPh2Sohna = ()=>{
-
+  window.scrollTo(0, 0);
 
     const data = {
         micro_hero_section: 

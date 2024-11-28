@@ -208,6 +208,7 @@ const data = {
 
 
 const AeroOneBangalore = () => {
+  window.scrollTo(0,0)
   return (
     <MicroPage data={data} />
   )

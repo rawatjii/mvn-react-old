@@ -253,6 +253,7 @@ const data = {
 };
 
 const AeroOneGurgaon = () => {
+  window.scrollTo(0, 0);
   return (
     <MicroPageGurgaon data={data} />
   )
