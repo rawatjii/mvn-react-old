@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import Button from '../../../common/Button/Button';
 import diamondIMG from '../../assets/images/icons/diamond.png'
@@ -7,8 +7,12 @@ import Rera from "./Rera";
 import CustomModal from "../../../common/Modal";
 
 const MicroOverview = ({data})=>{
-
+  const [isShowModal, setIsShowModal] = useState(false)
   const {title, location, extra, desc} = data.overview;
+
+  const handleOpenBrochureModal = () => {
+    setIsShowModal(true)
+  };
 
   return(
     <section className="section micro_overview text-center pb-0">
@@ -41,9 +45,9 @@ const MicroOverview = ({data})=>{
         
       </Container>
 
-      <Button className="btn_style4" >Download Brochure</Button>
+      <Button className="btn_style4" onClick={handleOpenBrochureModal}>Download Brochure</Button>
 
-      {/* <CustomModal type="enquire"  /> */}
+      <CustomModal show={isShowModal} type="enquire"  />
     </section>
   )
 }
