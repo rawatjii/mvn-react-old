@@ -5,6 +5,7 @@ import { Container } from "react-bootstrap";
 import SecTitle from "../../../common/SecTitle/Index";
 import CustomCard from "../Card";
 import MasterBedroomLoader from "../../../common/Loader/micro/masterBedroom/Index";
+import Watermark from "../../../common/watermark/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -14,7 +15,7 @@ const MasterBedroom = ({ data }) => {
   const titleRef = useRef();
   const [images, setImages] = useState([]);
   const [isLoading, setIsLoading] = useState(true); // Loading state
-  const totalFrames = 183;
+  const totalFrames = window.innerWidth <= 768 ? 183 : 101;
   const frameRefs = useRef([]);
 
   // Title Animation
@@ -37,7 +38,7 @@ const MasterBedroom = ({ data }) => {
 
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
-      img.src = `assets/videos/master-bedroom/mobile/${i}.webp`;
+      img.src = window.innerWidth <=768 ? `assets/videos/master-bedroom/mobile/${i}.webp` : `assets/videos/master-bedroom/desktop/${i}.webp`;
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
@@ -98,6 +99,7 @@ const MasterBedroom = ({ data }) => {
             ref={containerRef}
             className="frames_content"
           >
+            <Watermark className="style1" />
             {images.map((img, index) => (
               <img
                 key={index}

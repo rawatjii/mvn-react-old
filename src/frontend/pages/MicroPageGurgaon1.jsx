@@ -38,6 +38,7 @@ import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
 import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from './../components/MicroPage/MicroElevation';
 import MicroApartment from './../components/MicroPage/MicroApartment';
+import Footer from '../components/Footer'
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const MicroPageGurgaon1 = ({ data }) => {
@@ -110,7 +111,11 @@ const MicroPageGurgaon1 = ({ data }) => {
         <>
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} />
-          <PeacockSection data={data} /> {/*no isssue*/}
+          {
+            window.innerWidth <= 768 ? <PeacockSection data={data} /> :
+            <p style={{fontSize:200,color: 'white'}}>Peacock</p>
+          }
+           {/*no isssue*/}
           {/*no isssue*/}
           {/* {<Video2 data={data} />}  */}
           <div>
@@ -198,7 +203,9 @@ const MicroPageGurgaon1 = ({ data }) => {
         </>
       )}
 
-</div>
+      <Footer />
+
+  </div>
 </div>
     </>
   );
