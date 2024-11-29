@@ -2,114 +2,151 @@ import React, { useEffect, useRef, useState } from "react";
 import Container from "react-bootstrap/Container";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import lottie from "lottie-web";
-import jsonData from '../../assets/images/data2.json'
-import * as CONFIG from '../../../config/config'
-
 import ImgMail from "../../assets/images/icons/email.png";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const MicroHero = ({ data, onLoadComplete }) => {
+  const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true); // Loader state
   const [totalFrames, setTotalFrames] = useState(0);
   const containerRef = useRef(null);
-  const canvasRef = useRef(null); // Reference for the canvas element
-  const lottieAnimation = useRef(null); // Reference to store the Lottie animation instance
-
-  // Use a flag to prevent re-initialization
-  const [isLottieLoaded, setIsLottieLoaded] = useState(false);
+  const frameRefs = useRef([]);
+  const mouseScrollRef = useRef()
 
   useEffect(() => {
-    // Set total frames dynamically based on device type
+    // Determine if it's mobile or desktop
     const isMobile = window.innerWidth <= 768;
-    let frameCount = isMobile ? 522 : 522;
-    if (!data.micro_hero_section.client) frameCount = isMobile ? 274 : 292;
+
+    // Set total frames dynamically
+    let frameCount = 0;
+    if (data.micro_hero_section.client) {
+      frameCount = isMobile ? 522 : 522;
+    
+    } else {
+      frameCount = isMobile ? 274 : 292;
+    }
     setTotalFrames(frameCount);
   }, [data]);
 
   useEffect(() => {
-    // Initialize Lottie animation only once
-    if (loading || !canvasRef.current || isLottieLoaded) return;
+    // Only preload images once totalFrames is set
+    if (totalFrames === 0) return;
 
-    lottieAnimation.current = lottie.loadAnimation({
-      container: canvasRef.current,
-      renderer: "canvas", // Using canvas renderer for better performance
-      loop: true, // Adjust depending on the desired effect
-      autoplay: false, // Control manually using GSAP
-      path: jsonData, // The path to your Lottie JSON file
-      onDOMLoaded: () => {
-        setIsLottieLoaded(true); // Prevent re-initializing
-        onLoadComplete(); // Call onLoadComplete once Lottie is loaded
-        setLoading(false); // Set loading to false after the animation is loaded
-      }
-    });
+    const isMobile = window.innerWidth <= 768;
+    let folderPath = null;
+    if (data.micro_hero_section.client) {
+      folderPath = isMobile
+        ? "assets/images/micro/hero/client/mobile/"
+        : "assets/images/micro/hero/client/desktop/";
+    } else {
+      folderPath = isMobile
+        ? "assets/images/micro/hero/mobile/"
+        : "assets/images/micro/hero/desktop/";
+    }
 
-    // ScrollTrigger setup for the Lottie animation
+    // Preload images
+    const loadedImages = [];
+    let loadedCount = 0;
+
+    for (let i = 1; i <= totalFrames; i++) {
+      const img = new Image();
+      img.src = `${folderPath}${i}.webp`;
+
+      // Track when each image loads
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalFrames) {
+          setImages(loadedImages); // Set images after all are loaded
+          setLoading(false); // Hide loader
+          onLoadComplete(); // Notify parent that loading is complete
+        }
+      };
+      
+      loadedImages.push(img);
+    }
+  }, [totalFrames, data]);
+  
+  useEffect(() => {
+    // Reinitialize ScrollTrigger only after all images are loaded
+    if (loading || images.length !== totalFrames) return;
+    
+    // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 2}`, // Adjust scroll distance for your animation
+      end: `+=${window.innerHeight * 2}`, // Extend scroll distance to fit more frames
       pin: true,
-      scrub: 0.5, // Adjust speed to your preference
+      scrub: 0.005,
       onUpdate: (self) => {
-        const progress = self.progress;
-
-        // Update Lottie animation progress based on scroll position
-        if (lottieAnimation.current) {
-          lottieAnimation.current.goToAndStop(progress * lottieAnimation.current.totalFrames, true);
-        }
+        const frameIndex = Math.floor(self.progress * (totalFrames - 1));
+        
+        // Ensure frames update correctly
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === frameIndex ? "block" : "none";
+        });
       },
       onLeave: () => {
-        // Ensure the animation stops when scrolling past the section
-        if (lottieAnimation.current) {
-          lottieAnimation.current.stop();
-        }
+        // Ensure the last frame stays visible when scrolling ends
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+        });
       },
       onLeaveBack: () => {
-        // Ensure the animation resets when scrolling back
-        if (lottieAnimation.current) {
-          lottieAnimation.current.goToAndStop(0, true);
-        }
+        // Ensure the first frame stays visible when scrolling back to the top
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === 0 ? "block" : "none";
+        });
       },
     });
-
+    console.log('hero section')
+    
     return () => {
       scrollAnimation.kill();
-      if (lottieAnimation.current) {
-        lottieAnimation.current.destroy();
-      }
     };
-  }, [loading, data, isLottieLoaded]);
+  }, [loading, images, totalFrames]);
 
   return (
-    <section className="section micro_hero_section p-0" ref={containerRef}>
+    <section className="section micro_hero_section p-0">
       {/* Show Loader */}
-      {loading && <div>Loading...</div>}
 
-      {/* Lottie Animation Canvas */}
-      {!loading && (
-        <div className="frames_content">
-          <canvas ref={canvasRef} />
-        </div>
-      )}
+      
 
-      {/* Other Content */}
-      {!loading && data.micro_hero_section.images && (
-        <div className="hero-img">
-          {data.micro_hero_section.images.map((imgs, index) => (
+      {!loading && data.micro_hero_section.isVdo && (
+        <div ref={containerRef} className="frames_content">
+          {images.map((img, index) => (
             <img
               key={index}
-              src={imgs.imgDesk}
-              alt={`mvn-hero-image-${index}`}
-              className="img-fluid d_lg_block"
-              fetchPriority="high"
+              ref={(el) => (frameRefs.current[index] = el)}
+              src={img.src}
+              alt={`Frame ${index}`}
+              className="frame"
+              style={{ display: index === 0 ? "block" : "none" }}
             />
           ))}
         </div>
       )}
 
-      {/* Additional Sections */}
+      {!loading &&
+        data.micro_hero_section.images &&
+        Array.isArray(data.micro_hero_section.images) &&
+        data.micro_hero_section.images.map((imgs, index) => (
+          <div key={index} className="hero-img">
+            <img
+              src={imgs.imgDesk}
+              alt={`mvn-hero-image-${index}`}
+              className="img-fluid d_lg_block"
+              fetchPriority="high"
+            />
+            <img
+              src={imgs.imgMb}
+              alt={`mvn-hero-image-sm-${index}`}
+              className="img-fluid d_sm_block"
+              fetchPriority="high"
+            />
+          </div>
+        ))}
+
       {!loading && data.micro_hero_section.bannerHighLight && (
         <div className="hero_content">
           <Container>
@@ -124,15 +161,35 @@ const MicroHero = ({ data, onLoadComplete }) => {
         </div>
       )}
 
-      {/* Enquiry Button */}
-      {!loading && data.micro_hero_section.enquiryBTN && data.micro_hero_section.enquiryBTN.isshow && (
-        <div className="enquiry_btn">
-          <a href={`mailto:${data.micro_hero_section.enquiryBTN.mail}`} className="btn btn_enquire">
-            <img src={ImgMail} className="img-fluid mail_enqiry_icon" alt="Enquire Now" />
-            Enquire Now
-          </a>
+      {!loading &&
+        data.micro_hero_section.enquiryBTN &&
+        data.micro_hero_section.enquiryBTN.isshow === true && (
+          <div className="enquiry_btn">
+            <a
+              href={`mailto:${data.micro_hero_section.enquiryBTN.mail}`}
+              className="btn btn_enquire"
+            >
+              <img
+                src={ImgMail}
+                className="img-fluid mail_enqiry_icon"
+                alt=""
+              />
+              Enquire Now
+            </a>
+          </div>
+        )}
+
+      {/* <div ref={mouseScrollRef} className="mouse_scroll">
+        <div className="mouse">
+          <div className="wheel"></div>
         </div>
-      )}
+
+        <div>
+          <span className="m_scroll_arrows unu"></span>
+          <span className="m_scroll_arrows doi"></span>
+          <span className="m_scroll_arrows trei"></span>
+        </div>
+      </div> */}
     </section>
   );
 };
