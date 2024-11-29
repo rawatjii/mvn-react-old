@@ -1257,7 +1257,7 @@ img.img-fluid.slider-bg-img {
 
 }
 
-div#livingRoomSlidingDoor { padding-top: 0px!important!;}
+div#livingRoomSlidingDoor { padding-top: 0px!important}
 .overview_card.style2 {padding-bottom: 50px;}
 .large-elevation .top_div {
   padding: 93px 0 139px 0px;
@@ -1267,8 +1267,49 @@ div#livingRoomSlidingDoor { padding-top: 0px!important!;}
   line-height: 40px;
   max-width: 463px;
 }
+.micro_overview {
+  .extra {
+      margin: 40px 0 34px;
+      text-align: center;
+      font-size: 20px;
+      letter-spacing: 2px;
+      font-weight: 100;
+      line-height: 30px;
+  }
+}
+
+.large-elevation .abs_img .abs_img_in.d_lg_block {width: 29%;}
+
+
+.bottom_img_div.d_lg_block .large-elevation {
+  .full_img {
+      position: absolute;
+      height: 85%;
+      width: 100%;
+  }
+}
+
+.bottom_img_div.d_lg_block .large-elevation {
+  & .full_img {
+      img {
+          height: 80%;
+          object-fit: cover;
+          width: 100%;
+      }
+  }
+}
+
+.large-elevation .bottom_img_div.d_lg_block{height:80vh}
+
+.large-elevation .top_div {padding: 80px 0 130px 0px!important;}
+.large-elevation { .full_img {  position: absolute;  height: 100%; width: 100%;}}
+.large-elevation .title {font-size: 25px;line-height: 40px;max-width: 511px;}
 
 }
+
+/* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
+
+
 
 .media-event-content .event-video-banner {width: 94%;height: 436px;object-fit: cover;margin: 0px auto;display: block;}
 
@@ -1298,8 +1339,6 @@ div#wrapper { margin-top: 27%;}
 #paschka{display:block;color:#fff;font-family:helvetica neue,helvetica,arial;font-size:32px;text-decoration:none;position:fixed;bottom:0;right:0;padding:0;transition:all .1s ease;background:#000;height:40px;line-height:30px;vertical-align:middle;width:40px;text-align:center;border-radius:5%;bottom:20px;right:20px}
 #paschka:hover{background:#232323;transition:all .1s ease;color:#f0f0f0}
 
-
-/* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
 
 
 

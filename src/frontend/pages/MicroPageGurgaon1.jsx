@@ -1,4 +1,5 @@
 import React, { Suspense, useEffect, useState ,useRef} from "react";
+import { Container } from 'react-bootstrap';
 import MicroHero from "../components/MicroPage/Hero";
 import MicroOverview from "../components/MicroPage/Overview";
 import LargeElevationSection from "../components/MicroPage/LargeElevationSection";
@@ -40,6 +41,7 @@ import MicroElevation from './../components/MicroPage/MicroElevation';
 import MicroApartment from './../components/MicroPage/MicroApartment';
 import Footer from '../components/Footer'
 import living_area_cam_peacock from "../../../public/assets/images/peacock/peacock.webp";
+import CustomCard from './../components/Card'
 // import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 
@@ -137,6 +139,13 @@ const MicroPageGurgaon1 = ({ data }) => {
         <>
           <MicroOverview data={data} /> {/*no isssue*/}
           <LargeElevationSection data={data.LargeElevationSection} />
+          <Container >
+                <div className='about'>
+                    <CustomCard extra="THIS ARCHITECTURAL MASTERPIECE SEAMLESSLY BLENDS CUTTING-EDGE DESIGN WITH NEW-AGE SOPHISTICATION. EVERY CURVE, EVERY DETAIL, IS METICULOUSLY CRAFTED TO ELEVATE YOUR LIVING EXPERIENCE. EMBRACE A  RESIDENCE WHERE INNOVATION MEETS BEAUTY, CREATING A LANDMARK OF LUXURIOUS URBAN LIVING. YOUR NEW HOME AWAITS."  />
+                </div>
+
+            </Container>
+
           {
             window.innerWidth <= 768 ? <PeacockSection data={data} /> :
             <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
