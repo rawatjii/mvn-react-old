@@ -182,14 +182,14 @@ export const data = {
     },  
   ],
   amenities : [
-    { name: 'club house', imgSrc: 'clubhouseSm.webp', desc:'A sanctuary of exclusivity, blending graceful leisure with moments that define timeless indulgence.' },  
-    { name: 'Gym', imgSrc: 'gymSm.webp', desc:'A space meticulously designed to redefine fitness, where every movement feels empowered amidst an ambiance of precision and poise.' },
-    { name: 'Library', imgSrc: 'librarySm.webp', desc:'A retreat for the connoisseur of knowledge, offering a curated realm of intellectual indulgence and quiet sophistication.' },
-    { name: 'Business Center', imgSrc: 'businessSm.webp', desc:'Crafted for the discerning professional, this is where ambition meets elegance in an environment of unparalleled refinement.' },
-    { name: `Kid's Play Area`, imgSrc: 'kidsSm.webp', desc:'An imaginative wonderland where joy is boundless, and every detail is thoughtfully created for young dreamers to thrive.' },
-    { name: `theatre`, imgSrc: 'theaterSm.webp', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
-    { name: 'spa', imgSrc: 'spaSm.webp', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
-    { name: 'Entry & Exit', imgSrc: 'entryexit_sm.webp', desc:'Exclusive entrance and exit for the residents.' },
+    { name: 'club house', mobile: 'clubhouseSm.webp',desktop: 'desktop/clubhouse.webp', desc:'A sanctuary of exclusivity, blending graceful leisure with moments that define timeless indulgence.' },  
+    { name: 'Gym', mobile: 'gymSm.webp',desktop: 'desktop/gym.jpg', desc:'A space meticulously designed to redefine fitness, where every movement feels empowered amidst an ambiance of precision and poise.' },
+    { name: 'Library', mobile: 'librarySm.webp', desktop: 'desktop/library.jpg',desc:'A retreat for the connoisseur of knowledge, offering a curated realm of intellectual indulgence and quiet sophistication.' },
+    { name: 'Business Center', mobile: 'businessSm.webp',desktop: 'desktop/business.jpg', desc:'Crafted for the discerning professional, this is where ambition meets elegance in an environment of unparalleled refinement.' },
+    { name: `Kid's Play Area`, mobile: 'kidsSm.webp', desktop: 'desktop/kids.jpg', desc:'An imaginative wonderland where joy is boundless, and every detail is thoughtfully created for young dreamers to thrive.' },
+    { name: `theatre`, mobile: 'theaterSm.webp', desktop: 'desktop/theatre.jpg', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
+    { name: 'spa', mobile: 'spaSm.webp',desktop: 'desktop/spa.jpg', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
+    // { name: 'Entry & Exit', mobile: 'entryexit_sm.webp',desktop: 'desktop/1.jpg', desc:'Exclusive entrance and exit for the residents.' },
   ],
   amenities_section: [
     {

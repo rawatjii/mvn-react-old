@@ -39,6 +39,8 @@ const otherData = [
 export default function Amenities({ data }) {
   const amenities = data;
   const sectionsRef = useRef([]);
+  const isMobile = window.innerWidth <= 768;
+
 
   useEffect(() => {
     const getRatio = (el) =>
@@ -49,7 +51,15 @@ export default function Amenities({ data }) {
       const bg = section.querySelector(".bg");
       if (bg) {
         // Set background image dynamically
-        bg.style.backgroundImage = `url(${CONFIG.IMAGE_URL}amenities/${amenities[i].imgSrc})`;
+
+
+        var image_url=`url(${CONFIG.IMAGE_URL}amenities/${amenities[i].desktop})`;
+        if(isMobile){
+           image_url=`url(${CONFIG.IMAGE_URL}amenities/${amenities[i].mobile})`;
+       
+        }
+
+        bg.style.backgroundImage =image_url;
 
         const defaultBgPos =
           i === 0
