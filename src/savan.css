@@ -1223,24 +1223,69 @@ ul.our-values-ul-icon{margin-top:30px;gap:30px 0!important}
 .testimonial_section .swiper-button-next { bottom: 60px; left: 53%; top: unset;}
 .testimonial_section { & .testimonial_carousel {.swiper-pagination {  position: relative; margin-top: 9px;   bottom: -20px; } }}
 .testimonial_section {& .testimonial_carousel { .swiper-pagination {   bottom: -20px; }}}
-section.section.media-press-release.pb-0 h4.title {
-  margin-bottom: 30px !important;
-  display: block;
-  width: fit-content;
-  margin: 0px auto;
+section.section.media-press-release.pb-0 h4.title { margin-bottom: 30px !important; display: block; width: fit-content; margin: 0px auto;}
+.micro_overview .overview_card {background-color: transparent;}
+.micro_overview .overview_card {background-color: transparent;}
+.micro_overview .overview_card .title { margin-top: 70px;}
+.micro_overview {.btn {  padding: 15px 20px;margin-top: 20px;font-size: 16px;}}
+.micro_overview .overview_card {background-color: transparent;}
+.micro_overview .overview_card .title { margin-top: 70px;}
+.micro_overview .aboutUs-bg { position: absolute; top: 11%;left: 0; width: 100%;object-fit: cover;opacity: 0.15;z-index: -1;}
+.micro_overview {position: relative;}
+/* 
+.aboutUs-card_heading {
+  position: absolute;
+  top: 154px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #100f0f;
+  width: 81%;
+  padding: 47px;
+} */
+
+section.section.micro_hero_section.p-0 {position: relative;}
+
+img.img-fluid.slider-bg-img {
+    position: fixed;
+    top: 11%;
+    z-index: 1;
+    right: -234px;
+    width: auto;
+    height: 600px;
+    transform: rotate(90deg);
+    opacity: 0.75;
+
 }
 
 
+.media-event-content .event-video-banner {width: 94%;height: 436px;object-fit: cover;margin: 0px auto;display: block;}
 
-}
 
-.media-event-content .event-video-banner {
-  width: 94%;
-  height: 436px;
-  object-fit: cover;
-  margin: 0px auto;
-  display: block;
+.slider-left-content { position: fixed; bottom: 10%; left: 6%;  z-index: 1; color: #ddc376;}
+h4.project-name-heading {font-size: 60px;}
+p.project-location-heading {font-size: 24px;color: #fff; letter-spacing: 2px;}
+.slider-right-content {position: fixed; bottom: 48%; right: 40%; z-index: 2; color: #ddc376; writing-mode: lr-tb; transform: rotate(90deg);}
+.slider-right-content h4 {display: grid;text-align: center; text-transform: uppercase; color: #ffdd75;font-size: 30px;letter-spacing: 6px;}
+.slider-right-content{position:fixed;bottom:48%;right:18%;z-index:2;color:#ddc376;writing-mode:lr-tb;transform:rotate(90deg)}
+.slider-right-content h4{display:grid;text-align:center;text-transform:uppercase;color:#ffdd75;font-size:30px;letter-spacing:6px}
+.project-location-heading{letter-spacing:2px}
+h4.project-name-heading{width:43%;letter-spacing:3px;text-transform:uppercase;font-size:34px;line-height:40px}
+div#wrapper span#scroll-title { font-size: 21px;text-transform: uppercase;letter-spacing: 10px;}
+div#wrapper { margin-top: 27%;}
+
+
+
+#scroll-down::before{animation:elasticus 1.2s cubic-bezier(1,0,0,1) infinite;position:absolute;top:-119px;left:5px;margin-left:-1px;width:2px;height:90px;background:#ddc376;content:' '}
+
+@keyframes elasticus {
+0%{transform-origin:0 0;-webkit-transform:scale(1,0);-ms-transform:scale(1,0);-moz-transform:scale(1,0);-o-transform:scale(1,0);transform:scale(1,0)}
+50%{transform-origin:0 0;-webkit-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-o-transform:scale(1,1);transform:scale(1,1)}
+50.1%{transform-origin:0 100%;-webkit-transform:scale(1,1);-ms-transform:scale(1,1);-moz-transform:scale(1,1);-o-transform:scale(1,1);transform:scale(1,1)}
+100%{transform-origin:0 100%;-webkit-transform:scale(1,0);-ms-transform:scale(1,0);-moz-transform:scale(1,0);-o-transform:scale(1,0);transform:scale(1,0)}
 }
+#paschka{display:block;color:#fff;font-family:helvetica neue,helvetica,arial;font-size:32px;text-decoration:none;position:fixed;bottom:0;right:0;padding:0;transition:all .1s ease;background:#000;height:40px;line-height:30px;vertical-align:middle;width:40px;text-align:center;border-radius:5%;bottom:20px;right:20px}
+#paschka:hover{background:#232323;transition:all .1s ease;color:#f0f0f0}
+
 
 /* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
 

@@ -48,7 +48,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     // Set total frames dynamically
     let frameCount = 0;
     if (data.micro_hero_section.client) {
-      frameCount = isMobile ? 452 : 452;
+      frameCount = isMobile ? 522 : 522;
     } else {
       frameCount = isMobile ? 274 : 292;
     }
@@ -135,6 +135,8 @@ const MicroHero = ({ data, onLoadComplete }) => {
   return (
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
+
+      
 
       {!loading && data.micro_hero_section.isVdo && (
         <div ref={containerRef} className="frames_content">

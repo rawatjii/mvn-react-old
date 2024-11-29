@@ -6,6 +6,8 @@ import CustomCard from "../Card";
 import Rera from "./Rera";
 import CustomModal from "../../../common/Modal";
 
+import AboutUsBg from '../../assets/images/aero-gurgaon/aboutUs-bg.jpg'
+
 const MicroOverview = ({data})=>{
   const [isShowModal, setIsShowModal] = useState(false)
   const {title, location, extra, desc} = data.overview;
@@ -22,22 +24,26 @@ const MicroOverview = ({data})=>{
     <section className="section micro_overview text-center pb-0">
       <Container>
         <div className="overview_card">
-          <div className="diamond_img_strip">
-            <img src={diamondIMG} className="img-fluid" alt="image" />
-          </div>
-          <div className="title">
-            <h1 className="pr_name">{title}</h1>
-            <h6 className="location">{location}</h6>
+          <div className="aboutUs-card_heading">
+            <div className="diamond_img_strip">
+              <img src={diamondIMG} className="img-fluid" alt="image" />
+            </div>
+            <div className="title">
+              <h1 className="pr_name">{title}</h1>
+              <h6 className="location">{location}</h6>
+            </div>
           </div>
 
           {extra && <p className="extra">{extra}</p>}
 
+          <div className="aboutUs-box">
           {
             desc && Array.isArray(desc) ?  desc.map((el, i)=>(
               <p className="desc" key={`desc-${i}`}>{el}</p>  
             )):  <p>{desc}</p>
           }
           
+          </div>
 
           <span className="bar"></span>
 
@@ -52,6 +58,10 @@ const MicroOverview = ({data})=>{
       <Button className="btn_style4" onClick={handleOpenBrochureModal}>Download Brochure</Button>
 
       <CustomModal hide={isHideModal} show={isShowModal} type="enquire"  />
+
+
+      <img src={AboutUsBg} alt="" className="img-fluid aboutUs-bg"/>
+
     </section>
   )
 }

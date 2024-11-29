@@ -40,6 +40,7 @@ import MicroElevation from './../components/MicroPage/MicroElevation';
 import MicroApartment from './../components/MicroPage/MicroApartment';
 import Footer from '../components/Footer'
 import living_area_cam_peacock from "../../../public/assets/images/peacock/peacock.webp";
+// import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -59,8 +60,6 @@ const MicroPageGurgaon1 = ({ data }) => {
       smootherRef.current.scrollTo(target, true);
     }
   };
-  
-
 
   useEffect(() => {
     if (!heroLoaded) {
@@ -95,6 +94,31 @@ const MicroPageGurgaon1 = ({ data }) => {
 
   return (
     <>
+      {/* <di>
+      <img src={HomeSliderBg} alt="" className="img-fluid slider-bg-img"/>
+      </di> */}
+{/* 
+      <div className="slider-left-content">
+            <h4 className="project-name-heading">The height of luxury living elevated above island and sea</h4>
+    
+
+            <div id="wrapper">
+  <div id="wrapper-inner">
+<div id="scroll-down">
+  <span class="arrow-down">
+  </span>
+  <span id="scroll-title">
+    Scroll <br/>down
+  </span>
+</div>
+  </div>
+  </div>      
+      </div>
+
+
+      <div className="slider-right-content">
+        <h4 className="vertical-heading">MVN Aero One <span>Elevation</span> </h4> 
+      </div> */}
       <MicroHeader scrollToSection={scrollToSection} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
