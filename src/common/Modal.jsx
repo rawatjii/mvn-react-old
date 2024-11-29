@@ -3,7 +3,9 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import SecTitle from "./SecTitle/Index";
-import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
+// import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
+import Formlogo from "../../public/assets/images/logo_dark.webp";
+
 
 const CustomModal = ({ show, hide, projectName }) => {
   const [formDetails, setFormDetails] = useState({});
@@ -58,11 +60,13 @@ const CustomModal = ({ show, hide, projectName }) => {
           <Container style={{ position: "relative" }}>
             <SecTitle className="text-center color style1">
               <img
-                src={headingIconImg}
+                src={Formlogo}
                 alt=""
                 className="img-fluid headingIcon"
               />
-              <h4 className="title">Enquire Now</h4>
+
+
+              <h4 className="title">Get In Touch With Us</h4>
             </SecTitle>
             <span
               className="close"
