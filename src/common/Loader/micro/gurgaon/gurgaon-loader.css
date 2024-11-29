@@ -1,5 +1,6 @@
 .gurgaon_loader{
   position:relative;
+  height: 100vh;
 
   .bar{
     /* width:500px; */

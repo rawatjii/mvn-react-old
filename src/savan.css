@@ -2376,7 +2376,7 @@ article.awa_card.awa_shadow p.text-capitalize { margin-right: 15px;}
 
 section.section.media-gallery {padding-top: 70px;}
 .media-news_online {padding-top: 50px;}
-.micro_hero_section { & .frames_content { img { height: 97.8%; object-fit: cover;width: 100%; }}}
+
 .grid-left-right .content-right-img h2 { color: var(--theme_primary_color); font-size: 22px;}
 
 p.text-center.career_para, .about_overview p {color: #cec7c7;}
