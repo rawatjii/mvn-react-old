@@ -52,10 +52,16 @@ const MasterBedroom = ({ data }) => {
 
   useEffect(() => {
     if (isLoading || images.length !== totalFrames) return;
-
-    // Refresh ScrollTrigger after loader is hidden
-    setTimeout(() => ScrollTrigger.refresh(), 0);
-
+  
+    // Refresh ScrollTrigger after images and about section are rendered
+    const refreshScrollTrigger = () => {
+      setTimeout(() => {
+        ScrollTrigger.refresh();
+      }, 100); // Allow enough time for rendering
+    };
+  
+    refreshScrollTrigger();
+  
     // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
@@ -82,7 +88,7 @@ const MasterBedroom = ({ data }) => {
         });
       },
     });
-
+  
     return () => {
       scrollAnimation.kill();
     };
