@@ -140,7 +140,7 @@ const MicroLocationMap = ({data})=>{
       <div className="locationMapContent">
 
         <div className="row justify-content-center">
-          <div className="col-sm-8">
+          <div className="col-sm-9">
             <div className="thumbnail">
 
               <button className="location_btn"  onClick={handleShow}>
