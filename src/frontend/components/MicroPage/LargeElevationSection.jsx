@@ -3,12 +3,12 @@ import { Container } from 'react-bootstrap'
 // import LazyLoad from 'react-lazyload'
 import bgImgMB from '../../assets/images/aero-gurgaon/largeBg1Sm.webp'
 import bgImgDesk from '../../assets/images/aero-gurgaon/largeBg1.png'
-import absDesk from '../../assets/images/aero-gurgaon/largeAbs1.png'
+import absDesk from '../../assets/images/aero-gurgaon/building_sm.webp'
 import absMob from '../../assets/images/aero-gurgaon/largeAbs1.png'
 import building_sm from '../../assets/images/aero-gurgaon/building_sm.webp'
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import CustomCard from '../../components/Card'
+// import CustomCard from '../../components/Card'
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -40,16 +40,16 @@ export default function LargeElevation({ data }) {
                 scrub: 0.2,
             },
         });
-        // gsap.to(".abs_img1", {
-        //     y: 400,
-        //     scrollTrigger: {
-        //         trigger: desktopRef.current,
-        //         start: "top bottom",
-        //         end: "top top",
-        //         scrub: true,
-        //         markers:false
-        //     },
-        // });
+        gsap.to(".abs_img1", {
+            y: -400,
+            scrollTrigger: {
+                trigger: desktopRef.current,
+                start: "top bottom",
+                end: "top top",
+                scrub: true,
+                markers:false
+            },
+        });
 
          // Ensure triggers refresh
             ScrollTrigger.addEventListener("refresh", () => console.log("Triggers refreshed"));
@@ -85,13 +85,6 @@ export default function LargeElevation({ data }) {
                     <img src={absDesk} alt={data.title} className="img-fluid abs_img_in d_lg_block" />
                 </div>
             </div>
-           
-            <Container >
-                <div className='about'>
-                    <CustomCard extra="THIS ARCHITECTURAL MASTERPIECE SEAMLESSLY BLENDS CUTTING-EDGE DESIGN WITH NEW-AGE SOPHISTICATION. EVERY CURVE, EVERY DETAIL, IS METICULOUSLY CRAFTED TO ELEVATE YOUR LIVING EXPERIENCE. EMBRACE A  RESIDENCE WHERE INNOVATION MEETS BEAUTY, CREATING A LANDMARK OF LUXURIOUS URBAN LIVING. YOUR NEW HOME AWAITS."  />
-                </div>
-
-            </Container>
 
             
         </div>

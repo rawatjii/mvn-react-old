@@ -14,33 +14,6 @@ const MicroHero = ({ data, onLoadComplete }) => {
   const frameRefs = useRef([]);
   const mouseScrollRef = useRef()
 
-  // useEffect(() => {
-  //   if (!mouseScrollRef.current || !containerRef.current) return;
-  
-  //   const scrollTriggerInstance = ScrollTrigger.create({
-  //     trigger: containerRef.current, // Target the hero section
-  //     start: "top top", // When the hero section starts
-  //     end: "bottom top", // When the hero section leaves the viewport
-  //     onUpdate: (self) => {
-  //       const scrollDownButton = mouseScrollRef.current;
-  //       if (self.progress > 0.1) {
-  //         // Hide button when scrolling beyond 10% of the hero section
-  //         scrollDownButton.style.opacity = 0;
-  //         scrollDownButton.style.pointerEvents = "none"; // Disable interactions
-  //       } else {
-  //         // Show button while in the top 10% of the hero section
-  //         scrollDownButton.style.opacity = 1;
-  //         scrollDownButton.style.pointerEvents = "auto";
-  //       }
-  //     },
-  //   });
-  
-  //   return () => {
-  //     scrollTriggerInstance.kill();
-  //   };
-  // }, []);
-
-
   useEffect(() => {
     // Determine if it's mobile or desktop
     const isMobile = window.innerWidth <= 768;

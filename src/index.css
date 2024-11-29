@@ -3010,7 +3010,7 @@ footer {
         height: 100%;
         object-fit: cover;
         width: 100%;
-        transform: scale(1.11);
+        transform: scale(1);
       }
 
     }
