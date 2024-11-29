@@ -103,8 +103,10 @@ const LivingRoomVideoGurugram = ({ data }) => {
   }, [images, isMobile, loading]);
 
   return (
+    <>
+     <CustomCard className="style2" title={title} />
     <div className="section living_room_video_section design1 pb-0" ref={sectionRef} id="livingRoomSlidingDoor">
-      <CustomCard className="style2" title={title} />
+     
       <div ref={containerRef} className="frames_content">
         {images.map((img, index) => (
           <img
@@ -123,6 +125,7 @@ const LivingRoomVideoGurugram = ({ data }) => {
         </div>
       </Container>
     </div>
+    </>
   );
 };
 

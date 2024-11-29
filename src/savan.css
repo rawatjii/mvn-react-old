@@ -1257,6 +1257,18 @@ img.img-fluid.slider-bg-img {
 
 }
 
+div#livingRoomSlidingDoor { padding-top: 0px!important!;}
+.overview_card.style2 {padding-bottom: 50px;}
+.large-elevation .top_div {
+  padding: 93px 0 139px 0px;
+}
+.large-elevation .title {
+  font-size: 22px;
+  line-height: 40px;
+  max-width: 463px;
+}
+
+}
 
 .media-event-content .event-video-banner {width: 94%;height: 436px;object-fit: cover;margin: 0px auto;display: block;}
 
@@ -1973,7 +1985,6 @@ h4.title {
   width: 87%!important;
 }
 
- 
 }
 /*---------------------------- Media Query 1600 Max END--------------------------------------- */
 section.section.other_projects_section.pb-0 {
