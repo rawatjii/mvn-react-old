@@ -89,7 +89,7 @@ const EnquireForm = ({ career, projectName }) => {
         <SecTitle className="text-center color style1">
           <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">
-            Enquire Now
+            Get In Touch With Us
           </h4>
         </SecTitle>
 
