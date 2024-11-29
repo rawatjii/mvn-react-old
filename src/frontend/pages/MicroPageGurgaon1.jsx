@@ -139,33 +139,33 @@ const MicroPageGurgaon1 = ({ data }) => {
                 <div className="about">
                   <CustomCard extra="THIS ARCHITECTURAL MASTERPIECE SEAMLESSLY BLENDS CUTTING-EDGE DESIGN WITH NEW-AGE SOPHISTICATION. EVERY CURVE, EVERY DETAIL, IS METICULOUSLY CRAFTED TO ELEVATE YOUR LIVING EXPERIENCE. EMBRACE A  RESIDENCE WHERE INNOVATION MEETS BEAUTY, CREATING A LANDMARK OF LUXURIOUS URBAN LIVING. YOUR NEW HOME AWAITS." />
                 </div>
-              </Container>
-              {window.innerWidth <= 768 ? (
-                <PeacockSection data={data} />
-              ) : (
-                <img
-                  src={living_area_cam_peacock}
-                  alt=""
-                  className="img-fluid"
-                />
-              )}
-              {/*no isssue*/}
-              {/*no isssue*/}
-              {/* {<Video2 data={data} />}  */}
-              <div>
-                <LivingRoomVideoGurugram data={data} />
-                {/* <LivingRoomVideo data={data} /> */}
-              </div>
-              <div>
-                <Video3 data={data} />
-              </div>
-              <div>
-                <MasterBedroom data={data} /> {/*no isssue*/}
-              </div>
-              <div ref={(el) => (sectionRefs.current.Walkthrough = el)}>
-                <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
-              </div>
-              {/*<div>
+
+            </Container>
+
+          {
+            window.innerWidth <= 768 ? <PeacockSection data={data} /> :
+            <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
+          }
+           {/*no isssue*/}
+          {/*no isssue*/}
+          {/* {<Video2 data={data} />}  */}
+          <div>
+            <LivingRoomVideoGurugram  data={data} />
+            {/* <LivingRoomVideo data={data} /> */}
+          </div>
+          <div>
+            <Video3 data={data} />
+          </div>
+
+          <div>
+            <MasterBedroom data={data} /> {/*no isssue*/}
+      
+          </div>
+          <div ref={(el) => (sectionRefs.current.Walkthrough = el)}>
+
+            <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
+          </div>
+          {/*<div>
             <Renders data={data} />  /~no isssue~/
           </div>*/}
               <div ref={(el) => (sectionRefs.current.MicroLandscape = el)}>

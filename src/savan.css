@@ -1304,8 +1304,29 @@ div#livingRoomSlidingDoor { padding-top: 0px!important}
 .large-elevation .bottom_img_div.d_lg_block{height:80vh}
 
 .large-elevation .top_div {padding: 80px 0 130px 0px!important;}
-.large-elevation { .full_img {  position: absolute;  height: 100%; width: 100%;}}
-.large-elevation .title {font-size: 25px;line-height: 40px;max-width: 511px;}
+.large-elevation { .full_img {  position: absolute;  height: 100%; width: 100%!important;}}
+.large-elevation .title {font-size: 25px!important;line-height: 40px!important;max-width: 511px!important;}
+.large-elevation {
+ & .full_img {
+      img {
+          height: 100%;
+          object-fit: cover;
+          width: 100%;
+      }
+  }
+}
+.large-elevation .abs_img {position: relative; right: 74px; bottom: 0;}
+.large-elevation .abs_img .abs_img_in.d_lg_block { width: 37%;}
+.large-elevation .abs_img { right: 99px;}
+.large-elevation .title { position: relative;top: 78px;}
+
+section.section.walkthrough_section  iframe { width: 100%;height: 800px; object-fit: cover;}
+.large-elevation .abs_img .abs_img_in.d_lg_block {
+  width: 30%!important;
+}
+.large-elevation .abs_img { right: 99px!important;}
+
+
 
 }
 

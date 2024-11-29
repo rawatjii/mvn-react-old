@@ -2814,6 +2814,19 @@ footer {
   }
 }
 
+.master_bedroom {
+
+  .frames_content{
+    height:730px;
+
+    img{
+      height:100%;
+      width:100%;
+      object-fit: cover;
+    }
+  }
+}
+
 
 /* start responsive */
 /* by bhupendra */
