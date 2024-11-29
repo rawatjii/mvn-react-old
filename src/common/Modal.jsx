@@ -4,7 +4,7 @@ import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import SecTitle from "./SecTitle/Index";
 // import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
-import Formlogo from "../../public/assets/images/logo_dark.webp";
+import Formlogo from "../../public/assets/images/logo_white.webp";
 
 
 const CustomModal = ({ show, hide, projectName }) => {
@@ -67,7 +67,7 @@ const CustomModal = ({ show, hide, projectName }) => {
     return () => document.removeEventListener("mousedown", close);
   }, []);
   return (
-    <Modal show={show} className="enquire_form custom_modal">
+    <Modal show={show} className="enquire_form custom_modal floor_plan_popup">
       <div ref={modalRef}>
         <Modal.Body>
           <Container style={{ position: "relative" }}>
