@@ -17,7 +17,7 @@ const PeacockSection = ({ data }) => {
   const [isMobile, setIsMobile] = useState(false);
   const [loading, setLoading] = useState(true); // State to track loading
 
-  const totalFramesDesktop = 379;
+  const totalFramesDesktop = 256;
   const totalFramesMobile = 256;
 
   // Detect screen size
@@ -37,7 +37,7 @@ const PeacockSection = ({ data }) => {
     if (isMobile === null) return; // Wait until `isMobile` is determined.
 
     const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
-    const imagePath = isMobile ? "assets/images/peacock/mobile/" : "assets/images/peacock/desktop/";
+    const imagePath = isMobile ? "assets/images/peacock/mobile/" : "assets/images/peacock/mobile/";
 
     const loadedImages = [];
     let loadedCount = 0;
