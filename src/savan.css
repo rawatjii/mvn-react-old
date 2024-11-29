@@ -420,7 +420,7 @@ ul.content{align-items:center}
 .philosophy_section .content li p {text-align: justify;}
 .philosophy_section ul.content .flex-li-row-2 ul.our-values-ul-icon li { text-align: center;color: #fff;}
 
-
+.navbar .right {display: flex;}
 
 @media screen and (min-width: 767px) {
 
