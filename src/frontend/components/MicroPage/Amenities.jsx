@@ -37,7 +37,6 @@ const otherData = [
 ];
 
 export default function Amenities({ data }) {
-  debugger;
   const amenities = data;
   const sectionsRef = useRef([]);
   const isMobile = window.innerWidth <= 768;
@@ -59,7 +58,7 @@ export default function Amenities({ data }) {
            image_url=`url(${CONFIG.IMAGE_URL}amenities/${amenities[i].mobile})`;
        
         }
-        
+
         bg.style.backgroundImage =image_url;
 
         const defaultBgPos =
