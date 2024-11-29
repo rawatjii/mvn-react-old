@@ -837,6 +837,8 @@ ul.content{align-items:center}
     margin: 0px 180px !important;
   }
 
+
+
   .enquire_section {
     .enquire_bg {
       position: absolute;
@@ -2385,3 +2387,10 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
+
+
+
+/* Modal CSS Added by Adarsh */
+.floor_plan_popup .sec_title .style1 .title { padding-bottom: 20px; }
+.floor_plan_popup .container{margin: 0 auto !important;background-color:#101010 !important ;}
+.custom_modal.floor_plan_popup .modal-body {  background: transparent !important;   }
