@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+
 import DIAMOND from "../../../frontend/assets/images/icons/diamond.png";
 import typo1 from "../../assets/images/typologies/270/1.webp";
 import typo2 from "../../assets/images/typologies/270/2.webp";
@@ -174,9 +175,9 @@ const Typology = () => {
             className="typologies-images"
             style={{ display: "block" }}
           >
-            <img className="image-1" src={typo1} alt="" />
-            <img className="image-2" src={typo2} alt="" />
-            <img className="image-3" src={typo3} alt="" />
+              <img className="image-1" src={typo1} alt="" />
+              <img className="image-2" src={typo2} alt="" />
+              <img className="image-3" src={typo3} alt="" />
           </div>
 
           <div
