@@ -3,7 +3,9 @@ import { Col, Container, Form, Row } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
 import Modal from "react-bootstrap/Modal";
 import SecTitle from "./SecTitle/Index";
-import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
+// import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
+import Formlogo from "../../public/assets/images/logo_dark.webp";
+
 
 const CustomModal = ({ show, hide, projectName }) => {
   const [formDetails, setFormDetails] = useState({});
@@ -19,24 +21,37 @@ const CustomModal = ({ show, hide, projectName }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     const apiUrl = `https://api2.gtftech.com/AjaxHelper/AgentInstantQuerySetter.aspx?qAgentID=4804&qSenderName=${formDetails.name}"&qMobileNo=${formDetails.number}&qEmailID=${formDetails.email}&qQueryMessage=${formDetails.message}&qProjectName=${projectName}`;
-    setLoading(true);
-    fetch(apiUrl, {
-      method: "GET", // HTTP method
-      headers: {
-        "Content-Type": "application/json", // Specify content type
-      },
-      // body: JSON.stringify(formDetails), // Convert the data to JSON string
-    })
-      .then((data) => {
-        console.log("Success:", data); // Handle the response
-        alert("Enquiry Details Sent Successfully!");
-        setFormDetails({});
-        setLoading(false);
+
+    if (
+      !formDetails.name ||
+      !formDetails.email ||
+      !formDetails.number ||
+      !formDetails.message
+    ) {
+      alert("Please fill all details!");
+    }else{
+      setLoading(true);
+      fetch(apiUrl, {
+        method: "GET", // HTTP method
+        headers: {
+          "Content-Type": "application/json", // Specify content type
+        },
+        // body: JSON.stringify(formDetails), // Convert the data to JSON string
       })
-      .catch((error) => {
-        console.error("Error:", error); // Handle any errors
-        setLoading(false);
-      });
+        .then((data) => {
+          console.log("Success:", data); // Handle the response
+          alert("Enquiry Details Sent Successfully!");
+          window.location.href = '/thanks';
+          setFormDetails({});
+          setLoading(false);
+          hide();
+        })
+        .catch((error) => {
+          console.error("Error:", error); // Handle any errors
+          setLoading(false);
+        });
+    }
+    
   };
 
   const modalRef = useRef();
@@ -58,11 +73,13 @@ const CustomModal = ({ show, hide, projectName }) => {
           <Container style={{ position: "relative" }}>
             <SecTitle className="text-center color style1">
               <img
-                src={headingIconImg}
+                src={Formlogo}
                 alt=""
                 className="img-fluid headingIcon"
               />
-              <h4 className="title">Enquire Now</h4>
+
+
+              <h4 className="title">Get In Touch With Us</h4>
             </SecTitle>
             <span
               className="close"

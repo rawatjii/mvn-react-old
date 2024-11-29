@@ -39,7 +39,8 @@ import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from './../components/MicroPage/MicroElevation';
 import MicroApartment from './../components/MicroPage/MicroApartment';
 import Footer from '../components/Footer'
-import living_area_cam_peacock from '../../../public/assets/images/peacock/livingarea_cam_peacock.webp'
+import living_area_cam_peacock from "../../../public/assets/images/peacock/peacock.webp";
+
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 const MicroPageGurgaon1 = ({ data }) => {
