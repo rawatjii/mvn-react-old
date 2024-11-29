@@ -80,7 +80,7 @@ const Typology = () => {
         
         <div className="sec_title text-center color style1">
 
-        <h4 className="title">Typologies</h4>
+          <h4 className="title">Typologies</h4>
         </div>
 
         {/* Images section */}
