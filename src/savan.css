@@ -2500,6 +2500,22 @@ section.section.media-gallery {padding-top: 70px;}
 p.text-center.career_para, .about_overview p {color: #cec7c7;}
 .oppotunities .title, .inner-sec .half .content-half h2, .grid-left-right .content-right-img h2 { font-size: 18px !important; padding-bottom: 8px;}
 .career_page .career_para {color: #cec7c7;}
+.overview_card p.extra {
+  margin: 0;
+  font-size: 15px;
+  margin-bottom: 4px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 1px;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  color: #c3c3c3;
+}
+.section.peacock_section.pb-0 {padding-top: 21px;}
+.overview_card { margin-top: 0;}
+.section.living_room_video_section {
+  padding-top: 12px !important;
+}
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
