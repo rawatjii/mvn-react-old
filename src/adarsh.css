@@ -2,6 +2,7 @@
 /* Typology Section */
 
 .typology_section {
+    padding: 180px 0 !important;
     .images {
         overflow: hidden;
         max-height: 340px;
