@@ -51,52 +51,53 @@ const MasterBedroom = ({ data }) => {
   }, []);
 
   useEffect(() => {
-    if (isLoading || images.length !== totalFrames) return;
-  
-    // Refresh ScrollTrigger after images and about section are rendered
-    const refreshScrollTrigger = () => {
-      setTimeout(() => {
-        ScrollTrigger.refresh();
-      }, 100); // Allow enough time for rendering
-    };
-  
-    refreshScrollTrigger();
-  
-    // Image sequence animation
-    const scrollAnimation = ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: "top top",
-      end: `+=${window.innerHeight * 4}`, // Extend scroll distance to fit more frames
-      pin: true,
-      scrub: 0.005,
-      onUpdate: (self) => {
-        const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-        if (self.progress > 0.1) {
-          frameRefs.current.forEach((img, index) => {
-            if (img) img.style.display = index === frameIndex ? "block" : "none";
-          });
-        }
-      },
-      onLeaveBack: () => {
+  if (isLoading || images.length !== totalFrames) return;
+
+  // Refresh ScrollTrigger after images and about section are rendered
+  const refreshScrollTrigger = () => {
+    setTimeout(() => {
+      ScrollTrigger.refresh();
+    }, 100); // Allow enough time for rendering
+  };
+
+  refreshScrollTrigger();
+
+  // Image sequence animation
+  const scrollAnimation = ScrollTrigger.create({
+    trigger: containerRef.current,
+    start: "top top",
+    end: `+=${window.innerHeight * 4}`, // Extend scroll distance to fit more frames
+    pin: true,
+    scrub: 0.005,
+    onUpdate: (self) => {
+      const frameIndex = Math.floor(self.progress * (totalFrames - 1));
+      if (self.progress > 0.1) {
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === 0 ? "block" : "none";
+          if (img) img.style.display = index === frameIndex ? "block" : "none";
         });
-      },
-      onLeave: () => {
-        frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
-        });
-      },
-    });
-  
-    return () => {
-      scrollAnimation.kill();
-    };
-  }, [images, isLoading, totalFrames]);
+      }
+    },
+    onLeaveBack: () => {
+      frameRefs.current.forEach((img, index) => {
+        if (img) img.style.display = index === 0 ? "block" : "none";
+      });
+    },
+    onLeave: () => {
+      frameRefs.current.forEach((img, index) => {
+        if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+      });
+    },
+  });
+
+  return () => {
+    scrollAnimation.kill();
+  };
+}, [images, isLoading, totalFrames]);
 
   const { title, desc } = data.masterBedroom;
 
   return (
+    <>
     <div className="section peacock_section master_bedroom pb-0">
       {isLoading && <MasterBedroomLoader />}
       {!isLoading && (
@@ -123,14 +124,17 @@ const MasterBedroom = ({ data }) => {
               />
             ))}
           </div>
-          <Container>
+   
+        </>
+      )}
+    </div>
+  
+           <Container>
             <div className="about">
               <CustomCard title={title} desc={desc} />
             </div>
           </Container>
-        </>
-      )}
-    </div>
+    </>
   );
 };
 

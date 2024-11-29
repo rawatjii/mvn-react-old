@@ -163,6 +163,7 @@ const MicroPageGurgaon1 = ({ data }) => {
 
           <div>
             <MasterBedroom data={data} /> {/*no isssue*/}
+      
           </div>
           <div ref={(el) => (sectionRefs.current.Walkthrough = el)}>
 

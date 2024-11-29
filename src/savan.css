@@ -1320,6 +1320,13 @@ div#livingRoomSlidingDoor { padding-top: 0px!important}
 .large-elevation .abs_img { right: 99px;}
 .large-elevation .title { position: relative;top: 78px;}
 
+section.section.walkthrough_section  iframe { width: 100%;height: 800px; object-fit: cover;}
+.large-elevation .abs_img .abs_img_in.d_lg_block {
+  width: 30%!important;
+}
+.large-elevation .abs_img { right: 99px!important;}
+
+
 
 }
 
