@@ -32,7 +32,7 @@ const Header = () => {
 
     const handleScroll = () => {
       if (pathname === "/") {
-        if (window.scrollY > 50) {
+        if (window.scrollY > 2500) {
           setScrolled(true);
         } else {
           setScrolled(false);
