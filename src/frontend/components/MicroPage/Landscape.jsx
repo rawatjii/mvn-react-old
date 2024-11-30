@@ -42,14 +42,11 @@ export default function MicroLandscape() {
 
         <div className="cards-container">
           <div className='row'>
-           
-                
-          
-      
+
           {images.map((image, index)=>(
-               <div className='col-sm-12 col-md-4 col-lg-6' key={index}>
+               <div className='col-sm-12 col-md-4 col-lg-4' key={index}>
             <div  className="card center" onClick={() => setIndex(index)}>
-              <img src={image.asset} alt="" />
+              <img src={image.asset} alt="" className='landscape-img img-fluid' />
               <Watermark className={image.watermark} />
             </div>
             </div>
