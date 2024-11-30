@@ -63,15 +63,22 @@ export default function MicroApartment({ data }) {
         </div>
 
         <div className="cards-container">
+          <div className='row'>
+            
+
+           
+ 
           {images.map((image, index)=>(
-            <div key={index} className="card center" onClick={() => setIndex(index)}>
+            <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
+            <div  className="card center" onClick={() => setIndex(index)}>
               <img src={image.asset} alt="" />
               <Watermark className={image.watermark} />
+            </div>
             </div>
           ))}
           
         </div>
-
+        </div>
         <Lightbox
           index={index}
           slides={images.map(img=>({src:img.asset}))}

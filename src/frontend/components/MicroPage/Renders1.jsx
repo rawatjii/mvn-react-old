@@ -38,6 +38,7 @@ export default function Renders1({ data }) {
         </div>
 
         <div className="cards-container">
+
           <div className="card center gradient-green">
             <img src={CONFIG.IMAGE_URL + 'renders/elevation/1.webp'} alt="" />
             <Watermark />

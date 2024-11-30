@@ -41,12 +41,16 @@ export default function MicroElevation({ data }) {
         </div>
 
         <div className="cards-container">
+        <div className='row'>
           {images.map((image, index)=>(
-            <div key={index} className="card center" onClick={() => setIndex(index)}>
-              <img src={image.asset} alt="" />
+            <div className='col-sm-12 col-md-4 col-lg-4' key={index}>
+            <div  className="card center" onClick={() => setIndex(index)}>
+              <img src={image.asset} alt="" className='img-fluid elevation-section-img'/>
               <Watermark className={image.watermark} />
             </div>
+            </div>
           ))}
+          </div>
         </div>
 
         <Lightbox
