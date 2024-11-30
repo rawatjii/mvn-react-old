@@ -1,81 +1,67 @@
-import React from "react";
-import Hero from "../components/homepage/Hero";
-import Projects from '../components/homepage/Projects';
-import OtherProjects from '../components/homepage/OtheProjects';
-import OurJourney from '../components/homepage/OurJourney';
-import OurTeam from '../components/homepage/OurTeam';
-import OurBrand from '../components/homepage/OurBrand';
-import Testimonial from '../components/homepage/Testimonial';
-import Enquire from '../components/homepage/Enquire';
-import EnquireForm from '../components/homepage/EnquireForm';
-const ScrollVideo = React.lazy(()=>import('../components/homepage/ScrollVideo'));
-const Typology = React.lazy(()=>import('../components/homepage/Typology'));
-const Overview = React.lazy(()=>import('../components/homepage/Overview'));
-// import HomepageVideo from "../components/MicroPage/HomepageVideo";
+import React, { useState, useEffect, Suspense } from "react";
+import Projects from "../components/homepage/Projects";
+import OtherProjects from "../components/homepage/OtheProjects";
+import OurJourney from "../components/homepage/OurJourney";
+import OurTeam from "../components/homepage/OurTeam";
+import OurBrand from "../components/homepage/OurBrand";
+import Testimonial from "../components/homepage/Testimonial";
+import Enquire from "../components/homepage/Enquire";
+import EnquireForm from "../components/homepage/EnquireForm";
 
+// Lazy-loaded components
+const ScrollVideo = React.lazy(() => import("../components/homepage/ScrollVideo"));
+const Typology = React.lazy(() => import("../components/homepage/Typology"));
+const Overview = React.lazy(() => import("../components/homepage/Overview"));
 
-import heronormalImg from '../../frontend/assets/images/hero/hero-normal-img.webp';
+// Hero images for desktop and mobile
+import DeskopheronormalImg from "../../frontend/assets/images/hero/hero-normal-img.webp";
+import MobileheronormalImg from "../../frontend/assets/images/hero/hero-normal-img-mobile.webp";
 
-import { Suspense } from "react";
-import TestOverview from "../components/homepage/TestOverview";
-import ScrollToTop from "../../common/ScrollToTop";
-// import TestOverview from "../components/homepage/TestOverview";
-// import Header from "../components/Header/Header";
+const Homepage = () => {
+  // State for determining the screen size
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  // Update screen size on resize
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
 
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, []);
 
-const Homepage = ()=>{  
-  window.scrollTo(0, 0);
-
-  const dataa={
-    title:"asdfasf",
-     des:"sfsafa"
-
-  }
-  return(
+  return (
     <>
+      {/* Hero Section with dynamic image rendering */}
+      <img
+        src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
+        alt="Hero Banner"
+        className="img-fluid hero-banner"
+      />
 
-    <img src={heronormalImg} alt="" className="img-fluid hero-banner"/>
-  {/* <HomepageVideo data={dataa} /> */}
-      {/* <Hero /> */}
-      {/* <Suspense fallback="Loading">
-        <Header />
-      </Suspense> */}
-
-      {/* <Suspense fallback="Loading">
-        <ScrollVideo />
-      </Suspense>  */}
-
-      {/* <Suspense fallback="Loading">
-        <Typology />
-      </Suspense> */}
-
-       <Suspense fallback="Loading">
+      {/* Lazy-loaded components */}
+      <Suspense fallback="Loading...">
         <Overview />
       </Suspense>
 
-      {/* <TestOverview /> */}
+      {/* Other Components */}
+      <Projects />
+      <OtherProjects />
+      <OurJourney />
+      <OurTeam />
+      <OurBrand />
+      <Testimonial />
 
-        <Projects />
-
-        <OtherProjects />
-
-        <OurJourney />
-
-        <OurTeam />
-
-        <OurBrand />
-
-        <Testimonial />
-        
-        <div className="flex-footer-form">
-          
+      {/* Enquiry Section */}
+      <div className="flex-footer-form">
         <Enquire />
-
-        <EnquireForm projectName={'MVN'}/>
-        </div>
+        <EnquireForm projectName={"MVN"} />
+      </div>
     </>
-  )
-}
+  );
+};
 
 export default Homepage;
