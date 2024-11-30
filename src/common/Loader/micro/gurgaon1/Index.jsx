@@ -31,7 +31,7 @@ const GurgaonLoader1 = () => {
       />
 
       <div className="loaderTxt">
-        <BarLoader color="#fff" height={2} width={100} className="bar" />
+        <BarLoader color="#8b5e10" height={2} width={100} className="bar" />
         <p>Loading Experience</p>
       </div>
     </div>

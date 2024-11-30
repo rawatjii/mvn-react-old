@@ -14,5 +14,6 @@
     transform:translateX(-50%);
     text-transform: uppercase;
     letter-spacing: 1px;
+    color:var(--theme_primary_color)
   }
 }
