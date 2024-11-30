@@ -7,7 +7,7 @@ const CustomCard = ({ className, title, location, extra, desc, extraTxt }) => {
       <div className="diamond_img_strip">
         <img src={diamondIMG} className="img-fluid" alt="image" />
       </div>
-      {(title && desc) && (
+      {title && (
         <div className="title">
           <h1 className="pr_name">{title}</h1>
           <h6 className="location">{location}</h6>
