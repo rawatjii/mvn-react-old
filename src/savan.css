@@ -1929,6 +1929,9 @@ h4.title {
   margin: 0;
 } */
 
+section.section.walkthrough_section .overview_card {
+  padding-bottom: 0px;
+}
 
 
 @media(max-width:1600px) {
