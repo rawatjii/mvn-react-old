@@ -2158,6 +2158,12 @@ section.section.other_projects_section.pb-0 {
 nav.null.navbar.navbar-expand-false.navbar-light .right {width: 150px; display: flex;align-items: center; margin-left: auto;justify-content: end;}
 .navbar .call_btn { height: 40px;width: 40px;}
 
+.terms-condition-content.container{text-align:left}
+.terms-condition-content.container h5{margin-bottom:20px}
+.terms-condition-content.container p{margin-bottom:10px;color:#d5d5d5;font-size:16px;letter-spacing:unset;text-align:justify}
+.terms-condition-content.container li {margin-bottom: 10px;color: #d5d5d5;font-size: 16px;letter-spacing: unset;text-align: justify;}
+.terms-condition-content.container ul {margin-bottom: 20px;}
+
 
 
 @media(max-width:767px) {
@@ -2588,3 +2594,6 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 .floor_plan_popup .sec_title .style1 .title { padding-bottom: 20px; }
 .floor_plan_popup .container{margin: 0 auto !important;background-color:#101010 !important ;}
 .custom_modal.floor_plan_popup .modal-body {  background: transparent !important;   }
+
+
+

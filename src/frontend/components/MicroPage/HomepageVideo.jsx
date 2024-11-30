@@ -141,7 +141,7 @@ const HomepageVideo = ({ data }) => {
         <div className="mobile-view-box">  
 
             <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
-            <a href="https://beta.mvn.in/aeroone-gurgaon1" className="link-btn">Experience Residential <span>MVN Aeroone Gurgaon</span> </a>
+            <a href="https://beta.mvn.in/aeroone-gurgaon1" className="link-btn">Enter Website </a>
 
         </div>
 
