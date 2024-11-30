@@ -45,7 +45,7 @@ const Homepage = () => {
               <div className="mobile-view-box">  
 
 <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
-<a href="https://beta.mvn.in/aeroone-gurgaon1" className="link-btn">Enter The Website </a>
+<a href="https://beta1.mvn.in/aeroone-gurgaon1" className="link-btn">Enter The Website </a>
 
 </div>
 
