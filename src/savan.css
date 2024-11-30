@@ -1325,11 +1325,28 @@ section.section.walkthrough_section  iframe { width: 100%;height: 800px; object-
   width: 30%!important;
 }
 .large-elevation .abs_img { right: 99px!important;}
-
+section.section.walkthrough_section h4.extraTxt {
+  text-align: center;
+  margin-top: 30px;
+}
 
 
 }
 
+
+.an_img {
+  overflow: hidden;
+  position: relative;
+}
+
+.renders1_section {
+  & .cards-container {
+      .card {
+          border-radius: unset!important;
+          overflow: unset!important;
+      }
+  }
+}
 /* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
 
 
