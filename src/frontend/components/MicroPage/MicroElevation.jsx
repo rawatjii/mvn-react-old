@@ -9,6 +9,7 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import "yet-another-react-lightbox/styles.css";
+import CustomCard from '../Card';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,6 +53,15 @@ export default function MicroElevation({ data }) {
           ))}
           </div>
         </div>
+
+        <Container>
+          <div className='about'>
+            <CustomCard
+              title="AN EPITOME OF CONTEMPORARY ELEGANCE." 
+              desc="This architectural masterpiece seamlessly blends cutting-edge design with new-age sophistication. Every curve, every detail, is meticulously crafted to elevate your living experience. Embrace a residence where innovation meets beauty, creating a landmark of luxurious urban living. Your new home awaits." 
+            />
+          </div>
+        </Container>
 
         <Lightbox
           index={index}

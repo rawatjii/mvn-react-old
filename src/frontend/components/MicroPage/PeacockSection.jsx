@@ -9,7 +9,7 @@ import Watermark from "../../../common/watermark/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PeacockSection = ({ data }) => {
+const PeacockSection = ({ data, onLoadComplete }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
@@ -49,7 +49,8 @@ const PeacockSection = ({ data }) => {
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
-          setLoading(false); // All images loaded, hide loader.
+          // setLoading(false); // All images loaded, hide loader.
+          onLoadComplete()
         }
       };
 
@@ -129,7 +130,7 @@ const PeacockSection = ({ data }) => {
           <Container >
             <div className='about'>
                 <CustomCard
-                  title="Experience The Bliss Of Endless Vistas" 
+                  title="EXPERIENCE THE GRANDEUR OF THE LIVING ROOM WITH 360° PANORAMIC VIEWS" 
                   desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."  
                 />
             </div>

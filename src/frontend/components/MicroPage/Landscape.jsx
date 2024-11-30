@@ -10,6 +10,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 
 import "yet-another-react-lightbox/styles.css";
+import CustomCard from '../Card';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -52,8 +53,18 @@ export default function MicroLandscape() {
             </div>
           ))}
          
-            </div>
+          </div>
         </div>
+
+        <Container>
+          <div className='about'>
+            <CustomCard
+              title="REDEFINING ECO-LUXURY WITH ELEVATED LANDSCAPING " 
+              desc="Expansive lush green gardens landscaped for beauty and sustainability. Revel in this oasis of freshness and serenity exclusively for the residents" 
+            />
+          </div>
+        </Container>
+
         <Lightbox
           index={index}
           slides={images.map(img=>({src:img.asset}))}

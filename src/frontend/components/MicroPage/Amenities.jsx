@@ -15,24 +15,21 @@ import Watermark from "../../../common/watermark/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const otherData = [
+const amenityData = [
   {
     name: "MVN School",
     Mobilethumbnail: mvnSchoolMobile,
     Desktophumbnail: mvnSchoolDesktop,
-    link: "https://www.mvneducation.com/sector-17/",
   },
   {
     name: "MVN University",
     Mobilethumbnail: mvnUniversityMobile,
     Desktophumbnail: mvnUniversityDesktop,
-    link: "https://beta.mvn.in/mvn-university-haryana/",
   },
   {
     name: "MVN Sports Academy",
     Mobilethumbnail: mvnSportsAcademyMobile,
     Desktophumbnail: mvnSportsAcademyDesktop,
-    link: "https://www.mvn88.com/exercise-sports-academy/",
   },
 ];
 
@@ -41,86 +38,34 @@ export default function Amenities({ data }) {
   const sectionsRef = useRef([]);
   const isMobile = window.innerWidth <= 768;
 
-
-  useEffect(() => {
-    const getRatio = (el) =>
-      window.innerHeight / (window.innerHeight + el.offsetHeight);
-    const triggers = [];
-
-    sectionsRef.current.forEach((section, i) => {
-      const bg = section.querySelector(".bg");
-      if (bg) {
-        // Set background image dynamically
-
-
-        var image_url=`url(${CONFIG.IMAGE_URL}amenities/${amenities[i].desktop})`;
-        if(isMobile){
-           image_url=`url(${CONFIG.IMAGE_URL}amenities/${amenities[i].mobile})`;
-       
-        }
-
-        bg.style.backgroundImage =image_url;
-
-        const defaultBgPos =
-          i === 0
-            ? "50% 0"
-            : `50% ${-window.innerHeight * getRatio(section)}px`;
-
-        const trigger = gsap.fromTo(
-          bg,
-          { backgroundPosition: defaultBgPos },
-          {
-            backgroundPosition: `50% ${
-              window.innerHeight * (1 - getRatio(section))
-            }px`,
-            ease: "none",
-            scrollTrigger: {
-              trigger: section,
-              start: i === 0 ? "top top" : "top bottom",
-              end: "bottom top",
-              scrub: true,
-              invalidateOnRefresh: true,
-            },
-          }
-        );
-        triggers.push(trigger.scrollTrigger);
-      }
-    });
-
-    // Refresh ScrollTrigger to recalculate after animations are set up
-    ScrollTrigger.refresh();
-
-    // Cleanup on unmount
-    return () => {
-      triggers.forEach((trigger) => trigger.kill());
-    };
-  }, [amenities]);
-
   return (
     <>
-      <div className="main_am">
-        <div className="sec_title text-center color style1">
-          <h4 className="title">Amenities</h4>
+      <div className="amenities_section main_am">
+        <div className="cards-container">
+          <div className="sec_title text-center color style1">
+            <h4 className="title">Amenities</h4>
+          </div>
+          
+          {amenities.map((single, index)=>(
+            <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
+              <div className="card center" onClick={() => setIndex(index)}>
+                <img src={CONFIG.IMAGE_URL + 'amenities/'+single.imgSrc.mobile} alt="" className="img-fluid d-md-none" />
+                <img src={CONFIG.IMAGE_URL + 'amenities/'+single.imgSrc.desktop} alt="" className="img-fluid d-none d-md-block" />
+                <Watermark />
+              </div>
+              <div className="content">
+                <span className="am-name">{single.name}</span>
+                <p className="desc">{single.desc}</p>
+              </div>
+            </div>
+          ))}
         </div>
-        {amenities.map((amenity, i) => (
-          <section
-            key={i}
-            className="parallax"
-            ref={(el) => (sectionsRef.current[i] = el)}
-          >
-            <div className="bg">
-            <Watermark />
-            </div>
-            <div className="content">
-              <span className="am-name">{amenity.name}</span>
-              <p className="desc">{amenity.desc}</p>
-            </div>
-          </section>
-        ))}
       </div>
+
+
       <div className="amenities-container">
         <OtherProjects
-          data={otherData}
+          data={amenityData}
           title={"sdfjkjshdkfshdfkasdf"}
           subTitle={"sdkfsldfjsdklfjskldjfklsd"}
           mobContent={12}

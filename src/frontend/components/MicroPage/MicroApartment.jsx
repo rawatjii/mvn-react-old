@@ -9,6 +9,7 @@ import Fullscreen from "yet-another-react-lightbox/plugins/fullscreen";
 import Zoom from "yet-another-react-lightbox/plugins/zoom";
 
 import "yet-another-react-lightbox/styles.css";
+import CustomCard from '../Card';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -68,17 +69,29 @@ export default function MicroApartment({ data }) {
 
            
  
-          {images.map((image, index)=>(
-            <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
-            <div  className="card center" onClick={() => setIndex(index)}>
-              <img src={image.asset} alt="" />
-              <Watermark className={image.watermark} />
-            </div>
-            </div>
-          ))}
+            {images.map((image, index)=>(
+              <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
+              <div  className="card center" onClick={() => setIndex(index)}>
+                <img src={image.asset} alt="" />
+                <Watermark className={image.watermark} />
+              </div>
+              </div>
+            ))}
           
+          </div>
         </div>
-        </div>
+
+
+        <Container>
+          <div className='about'>
+            <CustomCard
+              title="ASCEND TO THE PINNACLE OF SOPHISTICATION" 
+              desc="Experience unparalleled luxury, where opulence meets sophistication in every detail. Indulge in bespoke interiors, world-class amenities, and breathtaking views. Redefine your lifestyle with a living experience like no other" 
+            />
+          </div>
+        </Container>
+
+
         <Lightbox
           index={index}
           slides={images.map(img=>({src:img.asset}))}
