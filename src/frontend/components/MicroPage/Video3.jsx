@@ -9,7 +9,7 @@ import Watermark from "../../../common/watermark/Index";
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const Video3 = ({ data }) => {
+const Video3 = ({ data, onLoadComplete }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
@@ -31,8 +31,9 @@ const Video3 = ({ data }) => {
       img.onload = () => {
         loadedCount.current += 1;
         if (loadedCount.current === totalFrames) {
-          setLoading(false); // All images are loaded
           setImages(loadedImages);
+          setLoading(false); // All images are loaded
+          onLoadComplete();
         }
       };
 

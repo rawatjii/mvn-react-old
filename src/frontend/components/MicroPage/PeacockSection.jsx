@@ -49,7 +49,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
-          // setLoading(false); // All images loaded, hide loader.
+          setLoading(false); // All images loaded, hide loader.
           onLoadComplete()
         }
       };
