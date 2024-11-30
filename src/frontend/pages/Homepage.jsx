@@ -11,8 +11,10 @@ import EnquireForm from '../components/homepage/EnquireForm';
 const ScrollVideo = React.lazy(()=>import('../components/homepage/ScrollVideo'));
 const Typology = React.lazy(()=>import('../components/homepage/Typology'));
 const Overview = React.lazy(()=>import('../components/homepage/Overview'));
-import HomepageVideo from "../components/MicroPage/HomepageVideo";
+// import HomepageVideo from "../components/MicroPage/HomepageVideo";
 
+
+import heronormalImg from '../../frontend/assets/images/hero/hero-normal-img.webp';
 
 import { Suspense } from "react";
 import TestOverview from "../components/homepage/TestOverview";
@@ -32,7 +34,9 @@ const Homepage = ()=>{
   }
   return(
     <>
-  <HomepageVideo data={dataa} />
+
+    <img src={heronormalImg} alt="" className="img-fluid hero-banner"/>
+  {/* <HomepageVideo data={dataa} /> */}
       {/* <Hero /> */}
       {/* <Suspense fallback="Loading">
         <Header />
