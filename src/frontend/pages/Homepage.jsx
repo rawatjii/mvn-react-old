@@ -16,6 +16,7 @@ const Overview = React.lazy(() => import("../components/homepage/Overview"));
 // Hero images for desktop and mobile
 import DeskopheronormalImg from "../../frontend/assets/images/hero/hero-normal-img.webp";
 import MobileheronormalImg from "../../frontend/assets/images/hero/hero-normal-img-mobile.webp";
+import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo.png";
 
 const Homepage = () => {
   // State for determining the screen size
@@ -41,6 +42,12 @@ const Homepage = () => {
         alt="Hero Banner"
         className="img-fluid hero-banner"
       />
+              <div className="mobile-view-box">  
+
+<img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
+<a href="https://beta.mvn.in/aeroone-gurgaon1" className="link-btn">Enter Website </a>
+
+</div>
 
       {/* Lazy-loaded components */}
       <Suspense fallback="Loading...">

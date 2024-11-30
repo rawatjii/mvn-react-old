@@ -2582,7 +2582,7 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 
 .mobile-view-box .mobile-img-logo{margin:0 auto;display:block;width:auto;height:116px}
 .mobile-view-box{margin-top:20px}
-.mobile-view-box a.link-btn{text-align:center;width:fit-content;margin:0 auto;color:#ffd852;letter-spacing:1.5px;display:grid;background-color:#5554518c;padding:6px 20px;border-radius:5px;font-size:16px;margin-top:35px;text-decoration:underline;text-transform:uppercase}
+.mobile-view-box a.link-btn{text-align:center;width:fit-content;margin:0 auto;color:#ffd852;letter-spacing:1.5px;display:grid;background-color:#5554518c;padding:6px 20px;border-radius:5px;font-size:14px;margin-top:35px;text-transform:uppercase}
 
 
 }
