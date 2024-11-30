@@ -71,7 +71,7 @@ export default function MicroApartment({ data }) {
           {images.map((image, index)=>(
             <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
             <div  className="card center" onClick={() => setIndex(index)}>
-              <img src={image.asset} alt="" />
+              <img src={image.asset} alt="" className='img-fluid apartment-section-img'/>
               <Watermark className={image.watermark} />
             </div>
             </div>
