@@ -75,10 +75,15 @@
 
 @media(min-width:1280px){
     .floor_plan_section{position: relative;}
+
+    .floor_plan_section .container {margin-top: 0px;}
     .floor_plan_section::before{ position: absolute;content: '';left: 0;top: 0;width: 100%;height: 100%;
         background: url('/src/frontend/assets/images/timeline/bg.webp') no-repeat;opacity: 0.2;}
-    .floor_plan_section .floor_plan_data{display: flex;justify-content: center;gap: 50px;padding: 40px 0 80px;}
+    .floor_plan_section .floor_plan_data{display: flex;justify-content: center;gap: 50px;padding: 40px 0 40px;}
     .floor_plan_section .accordion-item {width: 30%;}
+    .location_map_section .location_points {
+        margin-bottom: 30px;
+    }
     
     .floor_plan_section .accordion-header {background: #212121;box-shadow: none;color: var(--theme_primary_color);text-transform: uppercase;font-size: 20px;letter-spacing: 1px;padding: 15px 12px;border-radius: 4px !important;}
 
