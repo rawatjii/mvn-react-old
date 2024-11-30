@@ -11,7 +11,7 @@ const MasterBedroom = ()=>{
 
       <div className="loaderTxt">
         <BarLoader
-          color="#fff"
+          color="#8b5e10"
           height={2}
           width={100}
           className="bar" 
