@@ -41,18 +41,21 @@ export const data = {
     isVdo: true,
   },
   living_room_video:{
-    title: "ESCAPE TO EXCLUSIVITY",
-    desc: "Experience the elegance of a sliding door that seamlessly connects your living space to the outdoors, transforming the ambiance with every glide.",
+    title: "OPEN THE DOORS TO EXPANSIVE ELEGANCE AND SPACIOUS LUXURY",
+    desc: "Glide your way through the floor-to-ceiling sliding doors, and step on to the sprawling deck with breathtaking vistas and an air of tranquility.",
     isVdo: true,
   },
   video3: {
-    title: "ELEVATED LIVING",
-    desc: "Turn your living room into the ultimate celebration hub, where lively gatherings and stylish stories come alive, creating lasting memories and joyful moments. ",
+    title: "LIVE. LAUGH. LOUNGE",
+    desc: "Elegant chandeliers, marble floors, and floor-to-ceiling windows create a lavish ambiance, perfect for hosting unforgettable soirees and extravagant gatherings.",
     isVdo: true,
   },
   masterBedroom: {
-    title: "MASTER BEDROOM",
-    desc: "Retreat to a master bedroom that redefines comfort and luxury. Designed for relaxation and rest, it’s a sanctuary of style, where every element exudes tranquility and elegance.",
+    title: "MASTER BEDROOM 1",
+    desc: [
+      'Bedroom platinum',
+      'Wake up to the world at your feet where luxury meets blissful vistas'
+    ],
     isVdo: true,
   },
   highlights: [
@@ -182,14 +185,70 @@ export const data = {
     },  
   ],
   amenities : [
-    { name: 'club house', mobile: 'clubhouseSm.webp',desktop: 'desktop/clubhouse.webp', desc:'A sanctuary of exclusivity, blending graceful leisure with moments that define timeless indulgence.' },  
-    { name: 'Gym', mobile: 'gymSm.webp',desktop: 'desktop/gym.jpg', desc:'A space meticulously designed to redefine fitness, where every movement feels empowered amidst an ambiance of precision and poise.' },
-    { name: 'Library', mobile: 'librarySm.webp', desktop: 'desktop/library.jpg',desc:'A retreat for the connoisseur of knowledge, offering a curated realm of intellectual indulgence and quiet sophistication.' },
-    { name: 'Business Center', mobile: 'businessSm.webp',desktop: 'desktop/business.jpg', desc:'Crafted for the discerning professional, this is where ambition meets elegance in an environment of unparalleled refinement.' },
-    { name: `Kid's Play Area`, mobile: 'kidsSm.webp', desktop: 'desktop/kids.jpg', desc:'An imaginative wonderland where joy is boundless, and every detail is thoughtfully created for young dreamers to thrive.' },
-    { name: `theatre`, mobile: 'theaterSm.webp', desktop: 'desktop/theatre.jpg', desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.' },
-    { name: 'spa', mobile: 'spaSm.webp',desktop: 'desktop/spa.jpg', desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.' },
-    // { name: 'Entry & Exit', mobile: 'entryexit_sm.webp',desktop: 'desktop/1.jpg', desc:'Exclusive entrance and exit for the residents.' },
+    { 
+      name: 'club house',
+      imgSrc:{
+        desktop:'clubhouse.webp',
+        mobile:'clubhouseSm.webp'
+      },
+      desc:'Experience timeless elegance and leisure at your exclusive clubhouse' 
+    },  
+    {
+      name: 'FITNESS CENTRE',
+      imgSrc: {
+        desktop:'gym.webp',
+        mobile:'gymSm.webp'
+      },
+      desc:'State-of-the-art fitness facilities for ultimate wellness'
+    },
+    {
+      name: 'Library',
+      imgSrc: {
+        desktop:'library.webp',
+        mobile:'librarySm.webp'
+      },
+      desc:'A tranquil haven for literary exploration and quiet contemplation'
+    },
+    {
+      name: 'Business Center',
+      imgSrc: {
+        desktop:'business.webp',
+        mobile:'businessSm.webp'
+      },
+      desc:'A sophisticated workspace designed for productivity and collaboration'
+    },
+    {
+      name: `Kid's Play Area`,
+      imgSrc: {
+        desktop:'kids.webp',
+        mobile:'kidsSm.webp'
+      },
+      desc:'A safe and imaginative space for children to explore'
+    },
+    {
+      name: `theatre`,
+      imgSrc: {
+        desktop:'theater.webp',
+        mobile:'theaterSm.webp'
+      },
+      desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.'
+    },
+    {
+      name: 'spa',
+      imgSrc: {
+        desktop:'spa.webp',
+        mobile:'spaSm.webp'
+      },
+      desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.'
+    },
+    {
+      name: 'Entry & Exit',
+      imgSrc: {
+        desktop:'entryexit.webp',
+        mobile:'entryexit_sm.webp'
+      },
+      desc:'Exclusive entrance and exit for the residents.'
+    },
   ],
   amenities_section: [
     {

@@ -11,6 +11,7 @@ import Zoom from "yet-another-react-lightbox/plugins/zoom";
 import AnImage from "../../../common/animations/Image/Index"; // Assuming AnImage is being used for animations
 
 import "yet-another-react-lightbox/styles.css";
+import CustomCard from '../Card';
 
 gsap.registerPlugin(ScrollTrigger);
 

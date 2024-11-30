@@ -59,13 +59,13 @@ const MicroHero = ({ data, onLoadComplete }) => {
         if (loadedCount === totalFrames) {
           setImages(loadedImages); // Set images after all are loaded
           setLoading(false); // Hide loader
-          onLoadComplete(); // Notify parent that loading is complete
+          onLoadComplete(); 
         }
       };
       
       loadedImages.push(img);
     }
-  }, [totalFrames, data]);
+  }, [totalFrames, data, onLoadComplete]);
   
   useEffect(() => {
     // Reinitialize ScrollTrigger only after all images are loaded
