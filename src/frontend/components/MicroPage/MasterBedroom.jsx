@@ -10,7 +10,7 @@ import Watermark from "../../../common/watermark/Index";
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const MasterBedroom = ({ data }) => {
+const MasterBedroom = ({ data, onLoadComplete }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const [images, setImages] = useState([]);
@@ -43,6 +43,7 @@ const MasterBedroom = ({ data }) => {
         loadedCount++;
         if (loadedCount === totalFrames) {
           setIsLoading(false); // All images are loaded
+          onLoadComplete();
         }
       };
       loadedImages.push(img);
@@ -124,16 +125,18 @@ const MasterBedroom = ({ data }) => {
               />
             ))}
           </div>
+
+          <Container>
+            <div className="about">
+              <CustomCard title={title} desc={desc} />
+            </div>
+          </Container>
    
         </>
       )}
     </div>
   
-           <Container>
-            <div className="about">
-              <CustomCard title={title} desc={desc} />
-            </div>
-          </Container>
+           
     </>
   );
 };
