@@ -5,6 +5,9 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImgMail from "../../assets/images/icons/email.png";
 import GurgaonLoader from "../../../common/Loader/micro/gurgaon/Index";
 
+import homeMobileLogo from "../../../frontend/assets/mvn-aeroone-logo.png";
+
+
 gsap.registerPlugin(ScrollTrigger);
 
 const HomepageVideo = ({ data }) => {
@@ -133,6 +136,15 @@ const HomepageVideo = ({ data }) => {
           ))}
         </div>
       )}
+
+
+        <div className="mobile-view-box">  
+
+            <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
+            <a href="https://beta.mvn.in/aeroone-gurgaon1" className="link-btn">Experience Residential <span>MVN Aeroone Gurgaon</span> </a>
+
+        </div>
+
 
     </section>
   );
