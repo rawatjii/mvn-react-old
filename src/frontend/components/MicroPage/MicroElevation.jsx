@@ -104,6 +104,16 @@ export default function MicroElevation({ data = images }) {
             </div>
           ))}
         </div>
+
+        <Container>
+          <div className='about'>
+            <CustomCard
+              className="px-0"
+              title="AN EPITOME OF CONTEMPORARY ELEGANCE." 
+              desc="This architectural masterpiece seamlessly blends cutting-edge design with new-age sophistication. Every curve, every detail, is meticulously crafted to elevate your living experience. Embrace a residence where innovation meets beauty, creating a landmark of luxurious urban living. Your new home awaits." 
+            />
+          </div>
+        </Container>
       </div>
 
       <Lightbox

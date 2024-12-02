@@ -113,46 +113,46 @@ const MicroFloorPlan = ({ data }) => {
               <div key={index} className="accordion-item open">
                 <h2 className="accordion-header">{item.title}</h2>
                 <div className="accordion-body">
-                <Swiper pagination={true} className="mySwiper">
-                  {item.thumbnail.map((image, index) => (
-                    <SwiperSlide>
-                      <div
-                        style={{
-                          width: "100%",
-                          height: "100%",
-                          position: "relative",
-                        }}
-                      >
-                        <img src={image.src} alt="" />
+                  <Swiper pagination={true} className="mySwiper">
+                    {item.thumbnail.map((image, index) => (
+                      <SwiperSlide>
                         <div
                           style={{
-                            position: "absolute",
-                            top: 0,
-                            left: 0,
                             width: "100%",
                             height: "100%",
-                            display: "flex",
-                            alignItems: "center",
-                            justifyContent: "center",
-                            background: '#00000030'
+                            position: "relative",
                           }}
                         >
-                          <Button type="submit" className="btn_style3" onClick={showModal}>
-                            View Layouts
-                          </Button>
+                          <img src={image.src} alt="" />
+                          <div
+                            style={{
+                              position: "absolute",
+                              top: 0,
+                              left: 0,
+                              width: "100%",
+                              height: "100%",
+                              display: "flex",
+                              alignItems: "center",
+                              justifyContent: "center",
+                              background: '#00000030'
+                            }}
+                          >
+                            <Button type="submit" className="btn_style3" onClick={showModal}>
+                              View Layouts
+                            </Button>
+                          </div>
                         </div>
-                      </div>
-                    </SwiperSlide>
-                  ))}
-                </Swiper>
+                      </SwiperSlide>
+                    ))}
+                  </Swiper>
                 </div>
               </div>
             ))}
           </div>
         ) : (
-          <Accordion defaultActiveKey={0} className="floor_plan_data">
+          <Accordion defaultActiveKey={floorPlanData.map((_, i) => i.toString())} className="floor_plan_data">
             {floorPlanData.map((item, index) => (
-              <Accordion.Item key={index} eventKey={index}>
+              <Accordion.Item key={index} eventKey={index.toString()} >
                 <Accordion.Header>{item.title}</Accordion.Header>
                 <Accordion.Body>
                 <Swiper pagination={true} className="mySwiper">

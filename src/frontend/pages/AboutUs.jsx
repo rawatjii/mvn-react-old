@@ -12,6 +12,8 @@ import ScrollToTop from "../../common/ScrollToTop";
 
 const AboutUs = () => {
   window.scrollTo(0, 0);
+
+  
   const [microBg, setMicroBg] = useState(Desktopmicro_bg);
 
   const breadcrumbs = {

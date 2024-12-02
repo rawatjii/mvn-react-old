@@ -43,6 +43,7 @@ import Footer from "../components/Footer";
 import living_area_cam_peacock from "../../../public/assets/images/peacock/peacock.webp";
 import CustomCard from "./../components/Card";
 import Amenities2 from "../components/MicroPage/Amenities2";
+import MvnMall from "../components/MicroPage/MvnMall";
 // import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -153,7 +154,7 @@ const MicroPageGurgaon1 = ({ data }) => {
                   <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
               }
 
-              {peacockLoaded && (
+              {peacockLoaded || window.innerWidth >= 768 && (
                 <>
                     {/* {<Video2 data={data} />}  */}
                     <div>
@@ -232,6 +233,10 @@ const MicroPageGurgaon1 = ({ data }) => {
 
                                 <div ref={(el) => (sectionRefs.current.MicroLocationMap = el)}>
                                   <MicroLocationMap data={data.locationAdvantage} />
+                                </div>
+
+                                <div ref={(el) => (sectionRefs.current.MicroLocationMap = el)}>
+                                  <MvnMall />
                                 </div>
 
                                 <div ref={(el) => (sectionRefs.current.NoPolutionZone = el)}>

@@ -6,7 +6,7 @@ import ScrollTrigger from "gsap/ScrollTrigger";
 import LazyLoad from "react-lazyload";
 
 // Import icons
-import diamondIcon from "../../assets/images/icons/diamond.png";
+import diamondIcon from "../../assets/images/icons/heading-icon-img.png";
 import expIcon from "../../assets/images/icons/journey/new-icons/Helmet-.gif";
 import citiesIcon from "../../assets/images/icons/journey/new-icons/building.gif";
 import completeProjectsIcon from "../../assets/images/icons/journey/new-icons/handshake.gif";

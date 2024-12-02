@@ -15,11 +15,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images= [
   {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/1.webp',
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/5_sm.webp',
+    watermark:'left'
+  },
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/7_sm.webp',
+    watermark:'right'
+  },
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/8_sm.webp',
+    watermark:'left'
+  },  
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/6_sm.webp',
+    watermark:'right'
+  },  
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp',
     watermark:'left'
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/2.webp',
+    watermark:'right'
+  },
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/1.webp',
     watermark:'right'
   },
   {
@@ -29,26 +49,6 @@ const images= [
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/4_sm.webp',
     watermark:'right'
-  },
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/5_sm.webp',
-    watermark:'left'
-  },
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/6_sm.webp',
-    watermark:'right'
-  },  
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/7_sm.webp',
-    watermark:'right'
-  }, 
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/8_sm.webp',
-    watermark:'left'
-  },  
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp',
-    watermark:'left'
   },
 ]
 
@@ -65,19 +65,19 @@ export default function MicroApartment({ data }) {
 
         <div className="cards-container">
           <div className='row'>
-            
-
-           
- 
-          {images.map((image, index)=>(
-            <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
-            <div  className="card center" onClick={() => setIndex(index)}>
-              <img src={image.asset} alt="" className='img-fluid apartment-section-img'/>
-              <Watermark className={image.watermark} />
-            </div>
-            </div>
-          ))}
-          
+            {images.map((image, index)=>(
+              <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
+                <div  className="card center" onClick={() => setIndex(index)}>
+                  <div className="img">
+                    <img src={image.asset} alt="" className='img-fluid apartment-section-img'/>
+                    <Watermark className={image.watermark} />
+                  </div>
+                  <div className="content">
+                    <h4 className='title_style1'>Dummy Text</h4>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
@@ -85,6 +85,7 @@ export default function MicroApartment({ data }) {
         <Container>
           <div className='about'>
             <CustomCard
+              className="px-0"
               title="ASCEND TO THE PINNACLE OF SOPHISTICATION" 
               desc="Experience unparalleled luxury, where opulence meets sophistication in every detail. Indulge in bespoke interiors, world-class amenities, and breathtaking views. Redefine your lifestyle with a living experience like no other" 
             />
