@@ -16,39 +16,48 @@ gsap.registerPlugin(ScrollTrigger);
 const images= [
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/5_sm.webp',
-    watermark:'left'
+    watermark:'left',
+    title:'Living Room',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/7_sm.webp',
-    watermark:'right'
+    watermark:'right',
+    title:'Living Room',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/8_sm.webp',
-    watermark:'left'
+    watermark:'left',
+    title:'Cucina Kitchen',
   },  
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/6_sm.webp',
-    watermark:'right'
+    watermark:'right',
+    title:'Master Bedroom 1 – Platinum',
   },  
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp',
-    watermark:'left'
+    watermark:'left',
+    title:'Master Bedroom 1 – Platinum',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/2.webp',
-    watermark:'right'
+    watermark:'right',
+    title:'Bathroom',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/1.webp',
-    watermark:'right'
+    watermark:'right',
+    title:'Master Bedroom 2 – Royale',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/3.webp',
-    watermark:'left'
+    watermark:'left',
+    title:'Study',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/4_sm.webp',
-    watermark:'right'
+    watermark:'right',
+    title:'Kids Room',
   },
 ]
 
@@ -73,7 +82,7 @@ export default function MicroApartment({ data }) {
                     <Watermark className={image.watermark} />
                   </div>
                   <div className="content">
-                    <h4 className='title_style1'>Dummy Text</h4>
+                    <h4 className='title_style1'>{image.title}</h4>
                   </div>
                 </div>
               </div>

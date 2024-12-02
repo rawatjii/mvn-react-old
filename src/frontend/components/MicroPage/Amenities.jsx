@@ -54,7 +54,7 @@ export default function Amenities({ data }) {
                 <Watermark />
               </div>
               <div className="content">
-                <span className="am-name">{single.name}</span>
+                <h4 className="title style2">{single.name}</h4>
                 <p className="desc">{single.desc}</p>
               </div>
             </div>
