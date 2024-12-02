@@ -6,6 +6,7 @@ import LargeElevationSection from "../components/MicroPage/LargeElevationSection
 import MicroHighlights from "../components/MicroPage/Highlights";
 import MicroPrice from "../components/MicroPage/Price";
 import MicroAmenities from "../components/MicroPage/Amenities";
+import MicroAmenitiesDesktop from "../components/MicroPage/AmenitiesDesktop";
 import MicroMasterPlan from "../components/MicroPage/MasterPlan";
 import MicroFloorPlan from "../components/MicroPage/FloorPlan";
 import MicroLocationMap from "../components/MicroPage/LocationMap";
@@ -58,8 +59,27 @@ const MicroPageGurgaon1 = ({ data }) => {
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
-  const sectionRefs = useRef({});
+
   const smootherRef = useRef(null);
+
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const sectionRefs = useRef({
+    MicroAmenitiesDesktop: null,
+    MicroAmenities: null,
+  });
+
+  useEffect(() => {
+    // Update screen size on window resize
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+
 
   const scrollToSection = (sectionKey) => {
     const target = sectionRefs.current[sectionKey];
@@ -221,9 +241,17 @@ const MicroPageGurgaon1 = ({ data }) => {
                                 {/* <div><MicroHighlights data={data.highlight} />  </div>*/}
                                 {/* <MicroAmenities1 data={data.amenities} /> */}
 
-                                <div ref={(el) => (sectionRefs.current.MicroAmenities = el)}>
-                                  <MicroAmenities data={data.amenities} />
-                                </div>
+             
+                    {/* Conditionally Render Components Based on Screen Size */}
+                    {isMobile ? (
+                      <div ref={(el) => (sectionRefs.current.MicroAmenities = el)}>
+                        <MicroAmenities data={data.amenities} />
+                      </div>
+                    ) : (
+                      <div ref={(el) => (sectionRefs.current.MicroAmenitiesDesktop = el)}>
+                        <MicroAmenitiesDesktop data={data.amenities} />
+                      </div>
+                    )}
 
 
                                 <div ref={(el) => (sectionRefs.current.MicroTypology = el)}>
