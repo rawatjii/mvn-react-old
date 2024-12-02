@@ -186,76 +186,76 @@ export const data = {
   ],
   amenities : [
     { 
-      name: 'Experience timeless elegance and leisure at your exclusive clubhouse',
+      name: 'Clubhouse',
       imgSrc:{
         desktop:'clubhouse.webp',
         mobile:'clubhouseSm.webp'
       },
-      // desc:'Experience timeless elegance and leisure at your exclusive clubhouse' 
+      desc:'Experience timeless elegance and leisure at your exclusive clubhouse' 
     },  
     {
-      name: 'A sophisticated workspace designed for productivity and collaboration',
+      name: 'Business Centre',
       imgSrc: {
         desktop:'business.webp',
         mobile:'businessSm.webp'
       },
-      // desc:'A sophisticated workspace designed for productivity and collaboration'
+      desc:'A sophisticated workspace designed for productivity and collaboration'
     },
     {
-      name: 'A tranquil haven for literary exploration and quiet contemplation',
+      name: 'Library',
       imgSrc: {
         desktop:'library.webp',
         mobile:'librarySm.webp'
       },
-      // desc:'A tranquil haven for literary exploration and quiet contemplation'
+      desc:'A tranquil haven for literary exploration and quiet contemplation'
     },
     {
-      name: 'An upscale space to unwind and enjoy sports events',
+      name: 'Sports Lounge',
       imgSrc: {
         desktop:'lounge.webp',
         mobile:'lounge.webp'
       },
-      // desc:'A tranquil haven for literary exploration and quiet contemplation'
+      desc:'An upscale space to unwind and enjoy sports events'
     },
     {
-      name: `A safe and imaginative space for children to explore`,
+      name: `Kids Play Area`,
       imgSrc: {
         desktop:'kids.webp',
         mobile:'kidsSm.webp'
       },
-      // desc:'A safe and imaginative space for children to explore'
+      desc:'A safe and imaginative space for children to explore'
     },
     {
-      name: 'State-of-the-art fitness facilities for ultimate wellness',
+      name: 'Fitness Centre',
       imgSrc: {
         desktop:'gym.webp',
         mobile:'gymSm.webp'
       },
-      // desc:'State-of-the-art fitness facilities for ultimate wellness'
+      desc:'State-of-the-art fitness facilities for ultimate wellness'
     },
     {
-      name: 'A luxurious retreat offering rejuvenation and tranquility',
+      name: 'Spa',
       imgSrc: {
         desktop:'spa.webp',
         mobile:'spaSm.webp'
       },
-      // desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.'
+      desc:'A luxurious retreat offering rejuvenation and tranquility'
     },
     {
-      name: `Intimate screenings for cinematic experiences with friends`,
+      name: `Mini Theater`,
       imgSrc: {
         desktop:'theater.webp',
         mobile:'theaterSm.webp'
       },
-      // desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.'
+      desc:'Intimate screenings for cinematic experiences with friends'
     },
     {
-      name: `An oasis of clean air and pure living`,
+      name: `Central Green`,
       imgSrc: {
         desktop:'central-green.webp',
         mobile:'central-green_sm.webp'
       },
-      desc:'Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.'
+      desc:['An oasis of clean air and pure living','Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.']
     },
     {
       name: 'Entry & Exit',

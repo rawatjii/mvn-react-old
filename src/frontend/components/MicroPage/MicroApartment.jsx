@@ -17,7 +17,7 @@ const images= [
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/5_sm.webp',
     watermark:'left',
-    title:'Living Room',
+    title:'Panaromic Living Room',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/7_sm.webp',
@@ -32,12 +32,12 @@ const images= [
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/6_sm.webp',
     watermark:'right',
-    title:'Master Bedroom 1 – Platinum',
+    title:'Master Bedroom – Platinum',
   },  
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp',
     watermark:'left',
-    title:'Master Bedroom 1 – Platinum',
+    title:'Master Bedroom – Platinum',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/2.webp',
@@ -47,12 +47,12 @@ const images= [
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/1.webp',
     watermark:'right',
-    title:'Master Bedroom 2 – Royale',
+    title:'Master Bedroom – Royale',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/3.webp',
     watermark:'left',
-    title:'Study',
+    title:'Study Room',
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/4_sm.webp',
