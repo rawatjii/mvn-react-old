@@ -20,9 +20,9 @@ import newsIMG4 from "../assets/images/mediacenter/news-img-4.jpeg";
 import newsIMG5 from "../assets/images/mediacenter/news-img-5.jpeg";
 import newsIMG6 from "../assets/images/mediacenter/news-img-6.jpeg";
 
-import mediaGalleryImg1 from "../assets/images/projects/project-img-1.jpg";
-import mediaGalleryImg2 from "../assets/images/projects/project-img-2.jpg";
-import mediaGalleryImg3 from "../assets/images/projects/project-img-3.jpg";
+import mediaGalleryImg1 from "../assets/images/projects/gallery_img1.webp";
+import mediaGalleryImg2 from "../assets/images/projects/gallery_img2.webp";
+import mediaGalleryImg3 from "../assets/images/projects/gallery_img3.webp";
 import mediaGalleryImg4 from "../assets/images/projects/gallery-img-5.jpg";
 import mediaGalleryImg5 from "../assets/images/projects/gallery-img-6.jpg";
 // import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
