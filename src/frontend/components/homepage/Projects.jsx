@@ -16,6 +16,7 @@ import mvnAerooneBangaloreImgDesktop from "../../assets/images/projects/project-
 import arrowIcon from "../../assets/images/icons/arrow.png";
 import btn_arrow from "../../assets/images/icons/btn_arrow.png";
 import planeIcon from "../../assets/images/icons/plane.jpg";
+import * as CONFIG from '../../../config/config'
 
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
@@ -28,13 +29,15 @@ const projectsData = [
     desktop: mvnAerooneImgDesktop,
     name: "Mvn Aeroone",
     location: "Gurugram",
-    link:"https://beta1.mvn.in/aeroone-gurgaon1"
+    otherPage:false,
+    link:"aeroone-gurgaon1"
   },
   {
     mobile: mvnMallImg,
     desktop: mvnMallImgDesktop,
     name: "Mvn Mall",
     location: "Gurugram",
+    otherPage:true,
     link:'https://mvnmall.com/'
   },
   {
@@ -42,6 +45,7 @@ const projectsData = [
     desktop: mvnAerooneBangaloreImgDesktop,
     name: "Mvn",
     location: "Bangalore",
+    otherPage:true,
     link:'https://www.mvnaeroone.com/'
   },
 ];
@@ -133,7 +137,7 @@ const Projects = () => {
                           ref={(el) => (imageDivRefs.current[index] = el)}
                           height={100}
                         >
-                          <Link to={item.link}>
+                          <Link to={projectsData.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
                             <img
                               src={isMobile ? item.mobile : item.desktop}
                               alt={item.name}
