@@ -23,15 +23,18 @@ const landscapeData = [
   // },
   {
     asset: CONFIG.IMAGE_URL + 'renders/landscape/1.webp',
-    watermark: 'left'
+    watermark: 'left',
+    title:'Yoga Deck',
   },
   {
     asset: CONFIG.IMAGE_URL + 'renders/landscape/2.webp',
-    watermark: 'right'
+    watermark: 'right',
+    title:'Swimming Pool',
   },
   {
     asset: CONFIG.IMAGE_URL + 'renders/landscape/3.webp',
-    watermark: 'right'
+    watermark: 'right',
+    title:'Pergola View',
   }
 ];
 
@@ -118,10 +121,15 @@ export default function MicroLandscape({ data = landscapeData, title, subTitle, 
             <div className="col-sm-12 col-md-4 col-lg-4" key={index}>
               <div className="card center" onClick={() => setIndex(index)}>
                 {/* Wrapping image in AnImage component for animation */}
-                <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
-                  <img src={image.asset} alt="" onLoad={handleImageLoad} />
-                </AnImage>
-                <Watermark className={image.watermark} />
+                <div className="img">
+                  <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
+                    <img src={image.asset} alt="" onLoad={handleImageLoad} />
+                  </AnImage>
+                  <Watermark className={image.watermark} />
+                </div>
+                <div className="content">
+                    <h4 className='title_style1'>{image.title}</h4>
+                  </div>
               </div>
             </div>
           ))}
