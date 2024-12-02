@@ -1993,18 +1993,43 @@ li.menuFlexBox.middle-menu div {
   ul.menus ul.sub_menu li.nav-link {
     width: 50%;
 }
-li.menuFlexBox.middle-menu li.nav-link:first-child {
+/* li.menuFlexBox.middle-menu li.nav-link:first-child {
 width: 100%;
 max-width:100%;
-}
+} */
+ul.sub_menu li.nav-link:first-child{width: 50%;}
+
 ul.sub_menu li.nav-link { width: 50%;}
 li.menuFlexBox.middle-menu {
   padding-left: 30px;
   padding-right: 30px;
 }
-li.menuFlexBox.middle-menu .height-transition {
+
+.height-transition {
+  width: 99%;
+max-width: 100%;
+margin-left: 24px;
+}
+label {
+  text-align: left;
+}
+
+label {
+  width: fit-content;
+}
+
+.height-transition {
+      width: 100%;
+  text-align: left;
+}
+
+li.menuFlexBox.middle-menu li.nav-link {
   width: 100%;
+  text-align: left;
+}
+li.menuFlexBox.middle-menu div .height-transition {
   max-width: 100%;
+  width: 100%;
 }
 
 }
