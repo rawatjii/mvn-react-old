@@ -7,6 +7,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as CONFIG from "../../../config/config";
 import SecTitle from "../../../common/SecTitle/Index";
 import dotImg from "../../assets/images/icons/dot.png"
+import mvnMallBannerImg1 from "../../assets/images/mall-banner-1.webp"
+import mvnMallBannerImg2 from "../../assets/images/mall-banner-2.webp"
 
 import "swiper/css";
 import 'swiper/css/pagination';
@@ -88,6 +90,24 @@ const NoPolutionZone = () => {
   }, []);
 
   return (
+<>
+    <Container className="mvn-section-banner">
+    <SecTitle className="text-center color style1">
+      <h4 ref={titleRef} className="title">MVN Mall</h4>
+      <p>Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
+      <div className="row">
+        <div className="col-sm-12 col-md-6 col-lg-6">
+        <img src={mvnMallBannerImg1} alt="" className="img-fluid"/>
+        </div>
+        <div className="col-sm-12 col-md-6 col-lg-6">
+        <img src={mvnMallBannerImg2} alt="" className="img-fluid"/>
+        </div>
+      </div>
+
+    </SecTitle>
+  </Container>
+
+
     <div>
       <section
       className="section location_section"
@@ -96,6 +116,7 @@ const NoPolutionZone = () => {
       <Container>
         <SecTitle className="text-center color style1">
           <h4 ref={titleRef} className="title">Connections with MVN Mall</h4>
+
         </SecTitle>
       </Container>
 
@@ -168,9 +189,11 @@ const NoPolutionZone = () => {
         />
       </span>
     </section>
-
-<CustomCard className="style2" desc="Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave." />
+{/* 
+<CustomCard className="style2" desc="Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave." /> */}
     </div>
+    </>
+
   );
 };
 
