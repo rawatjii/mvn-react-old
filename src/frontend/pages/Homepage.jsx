@@ -7,11 +7,12 @@ import OurBrand from "../components/homepage/OurBrand";
 import Testimonial from "../components/homepage/Testimonial";
 import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
-
+import HomepageVideo from '../components/MicroPage/HomepageVideo';
 // Lazy-loaded components
 const ScrollVideo = React.lazy(() => import("../components/homepage/ScrollVideo"));
 const Typology = React.lazy(() => import("../components/homepage/Typology"));
 const Overview = React.lazy(() => import("../components/homepage/Overview"));
+
 
 // Hero images for desktop and mobile
 import DeskopheronormalImg from "../../frontend/assets/images/hero/hero-normal-img.webp";
@@ -37,11 +38,12 @@ const Homepage = () => {
   return (
     <>
       {/* Hero Section with dynamic image rendering */}
-      <img
+      {/* <img
         src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
         alt="Hero Banner"
         className="img-fluid hero-banner"
-      />
+      /> */}
+      <HomepageVideo />
               <div className="mobile-view-box">  
 
 <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
