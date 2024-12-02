@@ -18,6 +18,10 @@ gsap.registerPlugin(ScrollTrigger);
 // Original landscape data array
 const landscapeData = [
   {
+    asset: CONFIG.IMAGE_URL + 'renders/landscape/4.webp',
+    watermark: 'left'
+  },
+  {
     asset: CONFIG.IMAGE_URL + 'renders/landscape/1.webp',
     watermark: 'left'
   },
@@ -122,6 +126,16 @@ export default function MicroLandscape({ data = landscapeData, title, subTitle, 
             </div>
           ))}
         </div>
+
+        <Container>
+          <div className='about'>
+            <CustomCard
+              className="px-0"
+              title="REDEFINING ECO-LUXURY WITH ELEVATED LANDSCAPING" 
+              desc="Expansive lush green gardens landscaped for beauty and sustainability. Revel in this oasis of freshness and serenity exclusively for the residents." 
+            />
+          </div>
+        </Container>
       </div>
 
       <Lightbox

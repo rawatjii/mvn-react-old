@@ -15,11 +15,31 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images= [
   {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/1.webp',
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/5_sm.webp',
+    watermark:'left'
+  },
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/7_sm.webp',
+    watermark:'right'
+  },
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/8_sm.webp',
+    watermark:'left'
+  },  
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/6_sm.webp',
+    watermark:'right'
+  },  
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp',
     watermark:'left'
   },
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/2.webp',
+    watermark:'right'
+  },
+  {
+    asset:CONFIG.IMAGE_URL + 'renders/apartment/1.webp',
     watermark:'right'
   },
   {
@@ -29,26 +49,6 @@ const images= [
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/4_sm.webp',
     watermark:'right'
-  },
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/5_sm.webp',
-    watermark:'left'
-  },
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/6_sm.webp',
-    watermark:'right'
-  },  
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/7_sm.webp',
-    watermark:'right'
-  }, 
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/8_sm.webp',
-    watermark:'left'
-  },  
-  {
-    asset:CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp',
-    watermark:'left'
   },
 ]
 
@@ -85,6 +85,7 @@ export default function MicroApartment({ data }) {
         <Container>
           <div className='about'>
             <CustomCard
+              className="px-0"
               title="ASCEND TO THE PINNACLE OF SOPHISTICATION" 
               desc="Experience unparalleled luxury, where opulence meets sophistication in every detail. Indulge in bespoke interiors, world-class amenities, and breathtaking views. Redefine your lifestyle with a living experience like no other" 
             />

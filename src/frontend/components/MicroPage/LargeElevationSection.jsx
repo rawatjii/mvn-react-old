@@ -60,7 +60,9 @@ export default function LargeElevation({ data }) {
             <Container>
                 <div className='container_elevation'>
                     <div className='top_div'>
-                        <h3 className='title text-uppercase'>{data.title}</h3>
+                        <h3 className='title text-uppercase'>{data.title.map((item, index)=>(
+                            <span>{item}</span>
+                        ))}</h3>
                     </div>
                 </div>
             </Container>

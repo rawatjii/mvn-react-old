@@ -27,7 +27,7 @@ export const data = {
     ],
   },
   LargeElevationSection: {
-    title: "an epitome of contemporary elegance",
+    title: ['Unseen', 'Unheard', 'Unimagined'],
     isAllow: true,
   },
   video1: {
@@ -186,60 +186,76 @@ export const data = {
   ],
   amenities : [
     { 
-      name: 'club house',
+      name: 'Experience timeless elegance and leisure at your exclusive clubhouse',
       imgSrc:{
         desktop:'clubhouse.webp',
         mobile:'clubhouseSm.webp'
       },
-      desc:'Experience timeless elegance and leisure at your exclusive clubhouse' 
+      // desc:'Experience timeless elegance and leisure at your exclusive clubhouse' 
     },  
     {
-      name: 'FITNESS CENTRE',
-      imgSrc: {
-        desktop:'gym.webp',
-        mobile:'gymSm.webp'
-      },
-      desc:'State-of-the-art fitness facilities for ultimate wellness'
-    },
-    {
-      name: 'Library',
-      imgSrc: {
-        desktop:'library.webp',
-        mobile:'librarySm.webp'
-      },
-      desc:'A tranquil haven for literary exploration and quiet contemplation'
-    },
-    {
-      name: 'Business Center',
+      name: 'A sophisticated workspace designed for productivity and collaboration',
       imgSrc: {
         desktop:'business.webp',
         mobile:'businessSm.webp'
       },
-      desc:'A sophisticated workspace designed for productivity and collaboration'
+      // desc:'A sophisticated workspace designed for productivity and collaboration'
     },
     {
-      name: `Kid's Play Area`,
+      name: 'A tranquil haven for literary exploration and quiet contemplation',
+      imgSrc: {
+        desktop:'library.webp',
+        mobile:'librarySm.webp'
+      },
+      // desc:'A tranquil haven for literary exploration and quiet contemplation'
+    },
+    {
+      name: 'An upscale space to unwind and enjoy sports events',
+      imgSrc: {
+        desktop:'lounge.webp',
+        mobile:'lounge.webp'
+      },
+      // desc:'A tranquil haven for literary exploration and quiet contemplation'
+    },
+    {
+      name: `A safe and imaginative space for children to explore`,
       imgSrc: {
         desktop:'kids.webp',
         mobile:'kidsSm.webp'
       },
-      desc:'A safe and imaginative space for children to explore'
+      // desc:'A safe and imaginative space for children to explore'
     },
     {
-      name: `theatre`,
+      name: 'State-of-the-art fitness facilities for ultimate wellness',
       imgSrc: {
-        desktop:'theater.webp',
-        mobile:'theaterSm.webp'
+        desktop:'gym.webp',
+        mobile:'gymSm.webp'
       },
-      desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.'
+      // desc:'State-of-the-art fitness facilities for ultimate wellness'
     },
     {
-      name: 'spa',
+      name: 'A luxurious retreat offering rejuvenation and tranquility',
       imgSrc: {
         desktop:'spa.webp',
         mobile:'spaSm.webp'
       },
-      desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.'
+      // desc:'An oasis of exquisite rejuvenation, where the art of relaxation is elevated to an unparalleled sensory journey.'
+    },
+    {
+      name: `Intimate screenings for cinematic experiences with friends`,
+      imgSrc: {
+        desktop:'theater.webp',
+        mobile:'theaterSm.webp'
+      },
+      // desc:'A private escape into cinematic grandeur, where every viewing transforms into an experience of opulent immersion.'
+    },
+    {
+      name: `An oasis of clean air and pure living`,
+      imgSrc: {
+        desktop:'central-green.webp',
+        mobile:'central-green_sm.webp'
+      },
+      desc:'Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.'
     },
     {
       name: 'Entry & Exit',
@@ -384,6 +400,10 @@ export const data = {
     // dlf cyber city 
     // world global city
     locationData: [
+      {
+        distance: '0 km',
+        title: 'MVN Mall',
+      },
       {
         distance: '2.9 kms',
         title: 'World global city',

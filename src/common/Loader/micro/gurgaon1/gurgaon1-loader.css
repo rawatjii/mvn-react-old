@@ -1,6 +1,11 @@
 .gurgaon_loader{
   position:relative;
 
+  .micro_thumbnail{
+    height: 100%;
+    object-fit: contain;
+  }
+
   .bar{
     /* width:500px; */
     margin:auto;

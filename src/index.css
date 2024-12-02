@@ -2467,7 +2467,7 @@ footer {
 
   .image_col {
     margin-top: 25px;
-    height: 53vh;
+    height: calc(53vh - 400px);
     position: relative;
 
     li {
@@ -2505,7 +2505,7 @@ footer {
 
 
   .mySwiper {
-    height: 30vh;
+    height: 400px;
 
 
     .sec_title {
@@ -2816,6 +2816,13 @@ footer {
 
 
 .large-elevation{
+
+  .title{
+
+    span{
+      display:block;
+    }
+  }
 
   .bottom_img_div{
     position:relative;
