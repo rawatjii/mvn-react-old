@@ -2678,6 +2678,19 @@ ul.journey_content  .plane img {width: auto; height: 61px;}
 .floor_plan_popup .sec_title .style1 .title { padding-bottom: 20px; }
 .floor_plan_popup .container{margin: 0 auto !important;background-color:#101010 !important ;}
 .custom_modal.floor_plan_popup .modal-body {  background: transparent !important; }
+p.rera-number {
+  margin: 0;
+  font-size: 15px;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 0.8px;
+  line-height: 28px;
+  color: #c3c3c3;
+  margin-bottom: 30px;
+}
 
+section.section.micro_overview.text-center.pb-0 .overview_card {
+  padding-bottom: 40px;
+}
 
 
