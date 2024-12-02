@@ -17,10 +17,10 @@ gsap.registerPlugin(ScrollTrigger);
 
 // Original landscape data array
 const landscapeData = [
-  {
-    asset: CONFIG.IMAGE_URL + 'renders/landscape/4.webp',
-    watermark: 'left'
-  },
+  // {
+  //   asset: CONFIG.IMAGE_URL + 'renders/landscape/4.webp',
+  //   watermark: 'left'
+  // },
   {
     asset: CONFIG.IMAGE_URL + 'renders/landscape/1.webp',
     watermark: 'left'

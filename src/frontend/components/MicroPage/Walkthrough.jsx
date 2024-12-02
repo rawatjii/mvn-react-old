@@ -5,7 +5,14 @@ import { Container } from "react-bootstrap";
 const Walkthrough = ()=>{
   return(
     <section className="section walkthrough_section">
-     <iframe src="https://www.youtube.com/embed/PhkCdCg9k4k?autoplay=1&loop=1&playlist=PhkCdCg9k4k" title="YouTube video player" frameborder="0" allow="autoplay" allowfullscreen="1"></iframe>
+    <iframe
+        src="https://www.youtube.com/embed/PhkCdCg9k4k?autoplay=1&loop=1&playlist=PhkCdCg9k4k&mute=1"
+        title="YouTube video player"
+        frameBorder="0"
+        allow="autoplay; fullscreen"
+        allowFullScreen
+       // Adjust size as needed
+      ></iframe>
 
       <Container>
         <div className='about'>
