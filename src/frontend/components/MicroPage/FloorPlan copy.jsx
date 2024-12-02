@@ -150,9 +150,9 @@ const MicroFloorPlan = ({ data }) => {
             ))}
           </div>
         ) : (
-          <Accordion defaultActiveKey={floorPlanData.map((_, i) => i.toString())} className="floor_plan_data">
+          <Accordion className="floor_plan_data">
             {floorPlanData.map((item, index) => (
-              <Accordion.Item key={index} eventKey={index.toString()} >
+              <Accordion.Item key={index} eventKey={index} open="open">
                 <Accordion.Header>{item.title}</Accordion.Header>
                 <Accordion.Body>
                 <Swiper pagination={true} className="mySwiper">
