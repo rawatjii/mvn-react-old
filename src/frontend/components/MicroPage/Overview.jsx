@@ -1,7 +1,7 @@
 import React, { useRef, useState } from "react";
 import { Container } from "react-bootstrap";
 import Button from '../../../common/Button/Button';
-import diamondIMG from '../../assets/images/icons/diamond.png'
+import diamondIMG from '../../assets/images/icons/plane1.png'
 import CustomCard from "../Card";
 import Rera from "./Rera";
 import CustomModal from "../../../common/Modal";
