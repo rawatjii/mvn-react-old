@@ -1,11 +1,11 @@
 import React from "react";
-import diamondIMG from "../assets/images/icons/diamond.png";
+import planeIMG from "../assets/images/icons/plane.png";
 
 const CustomCard = ({ className, title, location, extra, desc, extraTxt }) => {
   return (
     <div className={`overview_card ${className}`}>
       <div className="diamond_img_strip">
-        <img src={diamondIMG} className="img-fluid" alt="image" />
+        <img src={planeIMG} className="img-fluid" alt="image" />
       </div>
       {title && (
         <div className="title">

@@ -1,4 +1,3 @@
-
 /* Typology Section */
 
 .typology_section {
@@ -118,9 +117,9 @@
     .location_section .mySwiper .title { font-size: 18px !important;}
     .location_section .mySwiper .swiper-slide-active .km_text { display: block; padding: 0; margin: 0;font-size: 30px; }
     /* .location_section .mySwiper .swiper-slide-active h4 { margin-top: 20px !important; font-size: 24px !important; } */
-    .location_section .swiper-scrollbar {bottom: 70px !important; width: 40% !important;  }
+    .location_section .swiper-scrollbar {bottom: 0px !important; width: 40% !important;  }
     .location_section .image_col {margin-top: 0px;  height: 60vh; position: relative;}
-    .location_section .mySwiper .swiper-slide-active .title {font-size: 24px !important;margin-top: 10px !important }
+    .location_section .mySwiper .swiper-slide-active .title {font-size: 16px !important;margin-top: 10px !important }
     .sec_title.text-center.color.style1 {margin-bottom: 20px;}
 
 }
@@ -137,8 +136,8 @@
     }
     .location_section .abs_number { bottom: 5%;}
     .location_section .abs_number .zero_img {width: 260px;}
-    .location_section .swiper-scrollbar {bottom: 130px !important;}
-    .location_section .swiper-pagination-fraction {bottom: 100px;}
+    .location_section .swiper-scrollbar {bottom: 0 !important;}
+    .location_section .swiper-pagination-fraction {bottom: 40px; position: relative;}
 }
    
 
@@ -146,7 +145,7 @@
 
 
 @media(min-width:1200px){
-    .main_am .parallax .content {position: absolute;top: 50%;width: 22%;display: flex;flex-direction: column;right: 5%;padding: 50px 40px;border-radius: 10px;}
+    .main_am .parallax .content {position: absolute;top: 50%;width: 22%;display: flex;flex-direction: column;left: 5%;padding: 50px 40px;border-radius: 10px;}
     .main_am .parallax .content .am-name {font-size: 26px;position: relative;padding: 0px 25px 5px;}
     /* .main_am .parallax .content .am-name::before{position: absolute;left: 0;bottom: 0;width: 100%;height: 1px ;background-color: #f4d96642;content: '';} */
     .main_am .parallax .content .desc {font-size: 15px;font-weight: 300;letter-spacing: 1px;line-height: 28px;}
@@ -154,4 +153,3 @@
 @media(min-width:1430px){
     .main_am .parallax .content {width: 28%;top: 45%;padding: 50px 40px 45px;}
 }
-

@@ -40,8 +40,16 @@
     position: relative;
     width: 100%;
     height: 1px;
-    background-color: var(--theme_primary_color);
+    /* background-color: var(--theme_primary_color); */
     margin-bottom: 40px;
+
+    &:before{
+        height:1px;
+        width:50%;
+        background-color: var(--theme_primary_color);
+        position:absolute;
+        content:''
+    }
 
 }
 .diamond_img_strip img{
@@ -50,7 +58,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     width: 40px;
-    background-color: #131313;
+    /* background-color: #131313; */
     padding: 5px;
     z-index: 99;
 }
