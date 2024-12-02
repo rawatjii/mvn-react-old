@@ -2166,6 +2166,8 @@ section.section.other_projects_section.pb-0 {padding-top: 100px;}
 .projects_section {.sec_title { margin-right: 37%;}}
 section.section.projects_section.pb-0 { padding-top: 0px;}
 
+section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;}
+
 }
 
 /*---------------------------- Media Query 1600 Max END--------------------------------------- */
@@ -2618,6 +2620,7 @@ section.section.media-events section.section.enquire_form{padding-top:40px}
 section.section.media-events .media-event-content{margin-bottom:30px}
 section.section.media-events {padding-top: 60px;}
 ul.journey_content  .plane img {width: auto; height: 61px;}
+
 
 
 }

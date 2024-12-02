@@ -22,7 +22,7 @@ import mvnschoolsportsacademy from '../../assets/images/timeline/mvn-school-spor
 
 
 // import planeIcon from '../../assets/images/icons/plane2.webp';
-import diamondIcon from "../../assets/images/icons/diamond.png";
+import diamondIcon from "../../assets/images/icons/heading-icon-img.png";
 import timelineBg from '../../assets/images/timeline/bg.webp'
 import LazyLoad from "react-lazyload";
 import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
