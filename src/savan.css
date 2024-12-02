@@ -2164,6 +2164,8 @@ nav.null.navbar.navbar-expand-false.navbar-light .right {width: 150px; display: 
 .terms-condition-content.container li {margin-bottom: 10px;color: #d5d5d5;font-size: 16px;letter-spacing: unset;text-align: justify;}
 .terms-condition-content.container ul {margin-bottom: 20px;}
 
+.privacy-policy-content.container{text-align:left}
+.privacy-policy-content.container p{margin-bottom:20px;color:#d5d5d5;font-size:16px;letter-spacing:unset;text-align:justify}
 
 
 @media(max-width:767px) {
@@ -2583,7 +2585,6 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 .mobile-view-box .mobile-img-logo{margin:0 auto;display:block;width:auto;height:116px}
 .mobile-view-box{margin-top:20px}
 .mobile-view-box a.link-btn{text-align:center;width:fit-content;margin:0 auto;color:#ffd852;letter-spacing:1.5px;display:grid;background-color:#5554518c;padding:6px 20px;border-radius:5px;font-size:14px;margin-top:35px;text-transform:uppercase}
-
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
