@@ -2267,7 +2267,7 @@ section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;
       .thumbnail {
           object-fit: cover;
           height: 100%;
-          object-position: 0px -110px;
+          /* object-position: 0px -110px; */
       }
   }
 }
