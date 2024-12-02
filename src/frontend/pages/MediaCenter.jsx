@@ -489,12 +489,13 @@ function MediaCenter() {
                         alt=""
                         className="img-fluid event-video-banner"
                       />
-                    </a>
+                    
                     <img
                       src={playicon}
                       alt=""
                       className="img-fluid play-icon"
                     />
+                    </a>
                   </div>
                 </div>
               ))}

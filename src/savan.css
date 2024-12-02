@@ -2166,8 +2166,6 @@ section.section.other_projects_section.pb-0 {padding-top: 100px;}
 .projects_section {.sec_title { margin-right: 37%;}}
 section.section.projects_section.pb-0 { padding-top: 0px;}
 
-
-
 }
 
 /*---------------------------- Media Query 1600 Max END--------------------------------------- */
@@ -2605,6 +2603,22 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 .mobile-view-box .mobile-img-logo{margin:0 auto;display:block;width:auto;height:116px}
 .mobile-view-box{margin-top:20px}
 .mobile-view-box a.link-btn{text-align:center;width:fit-content;margin:0 auto;color:#ffd852;letter-spacing:1.5px;display:grid;background-color:#5554518c;padding:6px 20px;border-radius:5px;font-size:14px;margin-top:35px;text-transform:uppercase}
+.media-event-content .play-icon {height: 40px;}
+
+.awa_card img   {padding: 15px;padding-right:0px;}
+.awa_card div:last-child { padding: 10px 15px;}
+section.section.press-releases-container { padding-top: 40px;}
+section.section.enquire_form {padding-top: 40px;}
+.media_center .row {row-gap: 0px;}
+section.section.enquire_form .sec_title.text-center.color.style1 {margin-bottom: 22px;}
+.enquire_form .container { padding: 0px 20px !important; margin: 0px 0px !important;}
+section.section.media-gallery {  padding-top: 90px;}
+section.section.press-releases-container{padding-top:40px}
+section.section.media-events section.section.enquire_form{padding-top:40px}
+section.section.media-events .media-event-content{margin-bottom:30px}
+section.section.media-events {padding-top: 60px;}
+ul.journey_content  .plane img {width: auto; height: 61px;}
+
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
@@ -2614,7 +2628,7 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 /* Modal CSS Added by Adarsh */
 .floor_plan_popup .sec_title .style1 .title { padding-bottom: 20px; }
 .floor_plan_popup .container{margin: 0 auto !important;background-color:#101010 !important ;}
-.custom_modal.floor_plan_popup .modal-body {  background: transparent !important;   }
+.custom_modal.floor_plan_popup .modal-body {  background: transparent !important; }
 
 
 

@@ -17,12 +17,13 @@ gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Layout = ({children})=>{
   const containerRef = useRef();
-
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.scrollTo(0, 0);
-    }
-  }, []);
+    
+  window.scrollTo(0, 0);
+  // useEffect(() => {
+  //   if (containerRef.current) {
+  //     containerRef.current.scrollTo(0, 0);
+  //   }
+  // }, []);
 
 
   useEffect(()=>{
@@ -44,12 +45,13 @@ const Layout = ({children})=>{
     <>
       <Header />
       <div id="smooth-wrapper"  >
-        <div id="smooth-content" ref={containerRef}>
+        <div id="smooth-content" >
           {children}
           {/* <Outlet /> */}
           <Footer />
         </div>
       </div>
+      <ScrollToTop />
     </>
   )
 }
