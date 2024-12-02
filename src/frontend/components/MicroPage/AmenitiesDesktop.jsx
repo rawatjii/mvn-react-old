@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 
 export default function AmenitiesDesktop({ data }) {
-  debugger;
+
   const amenities = data;
   const sectionsRef = useRef([]);
   const isMobile = window.innerWidth <= 768;

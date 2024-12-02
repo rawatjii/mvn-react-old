@@ -2206,6 +2206,8 @@ section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;
 
 /*---------------------------- Media Query 1600 Max END--------------------------------------- */
 
+
+
 .our_team_section p {font-weight: unset;}
 .micro_banner {  opacity: 0.97; }
 .micro_banner {.microbanner_bg { opacity: 0.99;}}
@@ -2221,6 +2223,14 @@ section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;
 }
 
 .projects_section { .plane_icon {  top: 0%!important;}}
+.main_am .parallax .content .am-name { font-size: 15px;position: relative ; padding: 0px 25px 5px;}
+.section.renders1_section .col-sm-12.col-md-4.col-lg-4 .apartment-section-img{height:269px;object-fit:cover;width:100%}
+.section.renders1_section .row{align-items:baseline}
+.main_am .parallax .content .am-name {font-size: 15px!important;}
+.main_am .sec_title.text-center.color.style1 {
+  margin-bottom: 40px;
+}
+
 
 @media(max-width:767px) {
 
@@ -2655,6 +2665,7 @@ section.section.media-events .media-event-content{margin-bottom:30px}
 section.section.media-events {padding-top: 60px;}
 ul.journey_content  .plane img {width: auto; height: 61px;}
 
+.desktop-mvn-mall{display: none;}
 
 
 }

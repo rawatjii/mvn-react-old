@@ -267,9 +267,16 @@ const MicroPageGurgaon1 = ({ data }) => {
                                   <MicroLocationMap data={data.locationAdvantage} />
                                 </div>
 
-                                <div ref={(el) => (sectionRefs.current.MicroLocationMap = el)}>
-                                  <MvnMall />
-                                </div>
+
+                                {isMobile ? (
+                       <div ref={(el) => (sectionRefs.current.MicroLocationMap = el)}>
+                       <MvnMall />
+                     </div>
+                    ) :  ''}
+
+                                
+
+                               
 
                                 <div ref={(el) => (sectionRefs.current.NoPolutionZone = el)}>
                                   <NoPolutionZone /> {/*no isssue*/}

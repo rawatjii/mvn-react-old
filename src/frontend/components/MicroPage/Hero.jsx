@@ -21,7 +21,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     // Set total frames dynamically
     let frameCount = 0;
     if (data.micro_hero_section.client) {
-      frameCount = isMobile ? 522 : 522;
+      frameCount = isMobile ? 676 : 684;
     
     } else {
       frameCount = isMobile ? 274 : 292;
@@ -37,8 +37,8 @@ const MicroHero = ({ data, onLoadComplete }) => {
     let folderPath = null;
     if (data.micro_hero_section.client) {
       folderPath = isMobile
-        ? "assets/images/micro/hero/client/mobile/"
-        : "assets/images/micro/hero/client/desktop/";
+        ? "assets/images/micro/hero/client/mobile-new/"
+        : "assets/images/micro/hero/client/desktop-new/";
     } else {
       folderPath = isMobile
         ? "assets/images/micro/hero/mobile/"
