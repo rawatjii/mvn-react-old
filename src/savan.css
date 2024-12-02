@@ -1955,7 +1955,14 @@ section.section.other_projects_section.pb-0 {padding-top: 70px;}
 .mobile-view-box {
   margin-top: 50px;
 }
-
+li.menuFlexBox {
+  align-items: center;
+  display: grid;
+  margin-left: auto;
+}
+.section.renders1_section.wrapper.center.pb-0 .col-sm-12.col-md-4.col-lg-4 .card.center small.watermark.right {
+  display: none;
+}
 
 }
 
