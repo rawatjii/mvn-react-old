@@ -65,19 +65,19 @@ export default function MicroApartment({ data }) {
 
         <div className="cards-container">
           <div className='row'>
-            
-
-           
- 
-          {images.map((image, index)=>(
-            <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
-            <div  className="card center" onClick={() => setIndex(index)}>
-              <img src={image.asset} alt="" className='img-fluid apartment-section-img'/>
-              <Watermark className={image.watermark} />
-            </div>
-            </div>
-          ))}
-          
+            {images.map((image, index)=>(
+              <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
+                <div  className="card center" onClick={() => setIndex(index)}>
+                  <div className="img">
+                    <img src={image.asset} alt="" className='img-fluid apartment-section-img'/>
+                    <Watermark className={image.watermark} />
+                  </div>
+                  <div className="content">
+                    <h4 className='title_style1'>Dummy Text</h4>
+                  </div>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
 
