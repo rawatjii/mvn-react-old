@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, Row, Col } from "react-bootstrap";
 import { Link, NavLink } from "react-router-dom";
 import LazyLoad from "react-lazyload";
@@ -12,8 +12,11 @@ import BtnIcon from '../assets/images/icons/send.png';
 // import FormBgImg from '../assets/images/icons/form-bg.png';
 import FooterMiddleLogo from '../assets/images/logomvn.png';
 import FooterBgImg from '../assets/images/footer-bg-img.jpg';
+import subscribeBtn from '../assets/images/icons/subscribe_btn.webp';
 
 const Footer = () => {
+  const channelUrl = "https://www.youtube.com/@MVNInfrastructures?sub_confirmation=1";
+
   return (
     <footer>
 
@@ -53,6 +56,9 @@ const Footer = () => {
                   </a>
                 </li>
               </ul>
+
+              <img src={subscribeBtn} alt="subscribe_btn" className="subscribe_btn" onClick={() => window.open(channelUrl, "_blank")} />
+
             </div>
           </Col>
           {/* <Col xs={12} md={6} lg={6}>

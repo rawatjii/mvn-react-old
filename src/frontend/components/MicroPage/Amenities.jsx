@@ -54,8 +54,18 @@ export default function Amenities({ data }) {
                 <Watermark />
               </div>
               <div className="content">
-                <h4 className="title style2">{single.name}</h4>
-                <p className="desc">{single.desc}</p>
+              <span className="am-name">{single.name}</span>
+              <p className="desc">
+                {Array.isArray(single.desc) ? (
+                  single.desc.map((desc, index) => (
+                    <p key={index} className="desc">
+                      {desc}
+                    </p>
+                  ))
+                ) : (
+                  <p className="desc">{single.desc}</p>
+                )}
+              </p>
               </div>
             </div>
           ))}
