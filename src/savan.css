@@ -1955,13 +1955,56 @@ section.section.other_projects_section.pb-0 {padding-top: 70px;}
 .mobile-view-box {
   margin-top: 50px;
 }
-li.menuFlexBox {
-  align-items: center;
-  display: grid;
-  margin-left: auto;
-}
+
 .section.renders1_section.wrapper.center.pb-0 .col-sm-12.col-md-4.col-lg-4 .card.center small.watermark.right {
   display: none;
+}
+
+
+ul.menus {
+  padding-top: 0%;
+}
+
+li.menuFlexBox.middle-menu {
+  width: 60%;
+}
+li.menuFlexBox.middle-menu ul.sub_menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+li.menuFlexBox.middle-menu li.nav-link {
+  width: 40%;
+  text-align: left;
+}
+
+li.menuFlexBox.middle-menu div {
+  width: 50%;
+  max-width: 50%;
+}
+li.menuFlexBox.middle-menu div {
+  width: 45%;
+  max-width: 45%;
+}
+  .menus .menuFlexBox {
+      width: 40%;
+  }
+
+  ul.menus ul.sub_menu li.nav-link {
+    width: 50%;
+}
+li.menuFlexBox.middle-menu li.nav-link:first-child {
+width: 100%;
+max-width:100%;
+}
+ul.sub_menu li.nav-link { width: 50%;}
+li.menuFlexBox.middle-menu {
+  padding-left: 30px;
+  padding-right: 30px;
+}
+li.menuFlexBox.middle-menu .height-transition {
+  width: 100%;
+  max-width: 100%;
 }
 
 }
@@ -2674,6 +2717,7 @@ ul.journey_content  .plane img {width: auto; height: 61px;}
 
 .desktop-mvn-mall{display: none;}
 .mvn-section-banner.container {padding-top: 0;padding-bottom: 40px;}
+
 
 
 }
