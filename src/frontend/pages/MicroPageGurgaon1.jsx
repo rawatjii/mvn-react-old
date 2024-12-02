@@ -153,7 +153,7 @@ const MicroPageGurgaon1 = ({ data }) => {
                   <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
               }
 
-              {peacockLoaded && (
+              {peacockLoaded || window.innerWidth >= 768 && (
                 <>
                     {/* {<Video2 data={data} />}  */}
                     <div>
