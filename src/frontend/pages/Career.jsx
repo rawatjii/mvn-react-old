@@ -1,4 +1,4 @@
-import React, { Suspense, useRef } from 'react'
+import React, { Suspense, useEffect, useRef } from 'react'
 import MicroBanner from '../components/MicroBanner/Index'
 
 import careerbg from '../assets/images/career/tables-chairs-office.png'
@@ -24,8 +24,10 @@ import CareerImg from "../assets/images/career/career-img.jpg";
 
 
 
+
 function Career() {
-    window.scrollTo(0, 0);
+
+    
     const titleRef = useRef();
     const desRefs = useRef([]);
 
@@ -42,8 +44,9 @@ function Career() {
         ]
     }
 
-
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <div className='career_page'>
