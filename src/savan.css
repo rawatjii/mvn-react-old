@@ -2672,6 +2672,9 @@ ul.journey_content  .plane img {width: auto; height: 61px;}
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
 
+p.km_text {
+  display: none!important;
+}
 
 
 /* Modal CSS Added by Adarsh */

@@ -174,7 +174,7 @@ const MicroPageGurgaon1 = ({ data }) => {
               </Container>
 
               {
-                window.innerWidth <= 768 ? <PeacockSection data={data} onLoadComplete={() => setPeacockLoaded(true)} /> :
+                window.innerWidth <= 768 ? <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}> <PeacockSection data={data} onLoadComplete={() => setPeacockLoaded(true)}  /> </div> :
                   <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
               }
 
@@ -269,7 +269,7 @@ const MicroPageGurgaon1 = ({ data }) => {
 
 
                                 {isMobile ? (
-                       <div ref={(el) => (sectionRefs.current.MicroLocationMap = el)}>
+                       <div ref={(el) => (sectionRefs.current.MVNMALL = el)}>
                        <MvnMall />
                      </div>
                     ) :  ''}
@@ -289,7 +289,7 @@ const MicroPageGurgaon1 = ({ data }) => {
                                 {/* <MicroFloorPlan data={data.floorPlan} /> */}
                                 {/* <MicroLocationMap data={data.locationAdvantage} /> */}
                                 {/* <Slides /> */}
-                                <div className="container-fluid micro_footer">
+                                <div className="container-fluid micro_footer"  ref={(el) => (sectionRefs.current.Enuqiry = el)}>
                                   <div className="row ">
                                     <div className="col-sm-6 px-0">
                                       <Enquire />

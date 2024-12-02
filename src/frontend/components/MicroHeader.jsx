@@ -264,10 +264,18 @@ const MicroHeader = ({ scrollToSection }) => {
                                 <a
                                 
                                   className="new-launch"
-                                  onClick={() => {scrollToSection("Walkthrough");toggleMenu("close");}}
+                                  onClick={() => {scrollToSection("LIVINGROOM");toggleMenu("close");}}
                                 >
-                                  Walkthrough
+                                  The Living Room
                                 </a>
+
+                                <a
+                                
+                                className="new-launch"
+                                onClick={() => {scrollToSection("Walkthrough");toggleMenu("close");}}
+                              >
+                                Walkthrough
+                              </a>
                                 <a
                                  
                                   className="new-launch"
@@ -287,7 +295,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
                                 >
-                                  Apartment
+                                  Apartment Views
                                 </a>
                                 <a
                            
@@ -301,7 +309,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => {scrollToSection("MicroTypology");toggleMenu("close");}}
                                 >
-                                  Typologies
+                                  Typology
                                 </a>
                                 <a
                                
@@ -317,13 +325,28 @@ const MicroHeader = ({ scrollToSection }) => {
                                 >
                                   Location Map
                                 </a>
+
+                                <a
+                                 
+                                 className="new-launch"
+                                 onClick={() => {scrollToSection("MVNMALL");toggleMenu("close");}}
+                               >
+                                MVN Mall
+                               </a>
                                 <a
                                  
                                   className="new-launch"
                                   onClick={() => {scrollToSection("NoPolutionZone");toggleMenu("close");}}
                                 >
-                                  No Pollution Zone
+                                 Connections MVN Mall
                                 </a>
+                                <a
+                                 
+                                 className="new-launch"
+                                 onClick={() => {scrollToSection("Enuqiry");toggleMenu("close");}}
+                               >
+                                Contact Us
+                               </a>
                               </li>
                               <div className="">
                                 <h4
@@ -530,38 +553,16 @@ const MicroHeader = ({ scrollToSection }) => {
                               className="new-launch"
                               onClick={() => scrollToOverview()}
                             >
-                              Building animation
+                              Overview
                             </a>
                             <a
                               
                               className="new-launch"
                               onClick={() => toggleMenu("close")}
                             >
-                              Living room peacock view
+                             The Living Room
                             </a>
-                            <a
-                              href={`#livingRoomSlidingDoor`}
-                              className="new-launch"
-                              onClick={() => toggleMenu("close")}
-                            >
-                              Living room sliding door animated
-                            </a>
-                            <a
-                              href={``}
-                              className="new-launch"
-                              onClick={() => toggleMenu("close")}
-                            >
-                              Living room party
-                            </a>
-                            <a
-                              href={`${
-                                import.meta.env.VITE_APP_URL
-                              }mvn-mall-gurgaon`}
-                              className="new-launch"
-                              onClick={() => toggleMenu("close")}
-                            >
-                              Master bedroom
-                            </a>
+                          
                             <a
                               href={`${
                                 import.meta.env.VITE_APP_URL
