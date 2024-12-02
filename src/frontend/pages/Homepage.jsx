@@ -16,7 +16,7 @@ const Overview = React.lazy(() => import("../components/homepage/Overview"));
 // Hero images for desktop and mobile
 import DeskopheronormalImg from "../../frontend/assets/images/hero/hero-normal-img.webp";
 import MobileheronormalImg from "../../frontend/assets/images/hero/hero-normal-img-mobile.webp";
-import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo.png";
+import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo-img.webp";
 
 const Homepage = () => {
   // State for determining the screen size
