@@ -551,27 +551,94 @@ const MicroHeader = ({ scrollToSection }) => {
                             <a
                               
                               className="new-launch"
-                              onClick={() => scrollToOverview()}
+                              onClick={() => {scrollToSection('microOverview');toggleMenu("close");}}
                             >
                               Overview
                             </a>
                             <a
                               
                               className="new-launch"
-                              onClick={() => toggleMenu("close")}
+                              onClick={() => {scrollToSection("LIVINGROOM");toggleMenu("close");}}
                             >
                              The Living Room
                             </a>
                           
                             <a
-                              href={`${
-                                import.meta.env.VITE_APP_URL
-                              }mvn-mall-gurgaon`}
                               className="new-launch"
-                              onClick={() => toggleMenu("close")}
+                              onClick={() => {scrollToSection("Walkthrough");toggleMenu("close");}}
                             >
                               Walkthrough
                             </a>
+
+                            <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroLandscape");toggleMenu("close");}}
+                                >
+                                  Landscape
+                                </a>
+
+                                <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroElevation");toggleMenu("close");}}
+                                >
+                                  Elevation
+                                </a>
+
+                                <a
+                              
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
+                                >
+                                  Apartment Views
+                                </a>
+
+                                <a
+                           
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroAmenities");toggleMenu("close");}}
+                                >
+                                  Amenities
+                                </a>
+
+                                <a
+                                 
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroTypology");toggleMenu("close");}}
+                                >
+                                  Typology
+                                </a>
+
+                                <a
+                               
+                               className="new-launch"
+                               onClick={() => {scrollToSection("MicroFloorPlan");toggleMenu("close");}}
+                             >
+                               Floor Plans
+                             </a>
+
+                             <a
+                                 
+                                 className="new-launch"
+                                 onClick={() => {scrollToSection("MicroLocationMap");toggleMenu("close");}}
+                               >
+                                 Location Map
+                               </a>
+
+                               <a
+                                 
+                                 className="new-launch"
+                                 onClick={() => {scrollToSection("MVNMALL");toggleMenu("close");}}
+                               >
+                                MVN Mall
+                               </a>
+
+                               <a
+                                 
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("NoPolutionZone");toggleMenu("close");}}
+                                >
+                                 Connections MVN Mall
+                                </a>
                           </li>
                           <div className="">
                             <h4
@@ -580,7 +647,7 @@ const MicroHeader = ({ scrollToSection }) => {
                               }
                               style={{ cursor: "pointer" }}
                             >
-                              Other Projects -
+                              Other Projects +
                             </h4>
                             <div
                               className={
