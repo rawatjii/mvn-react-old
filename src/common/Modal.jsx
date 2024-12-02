@@ -5,6 +5,7 @@ import Modal from "react-bootstrap/Modal";
 import SecTitle from "./SecTitle/Index";
 // import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
 import Formlogo from "../../public/assets/images/logo_white.webp";
+import Loader from "./Loader/loader";
 
 
 const CustomModal = ({ show, hide, projectName }) => {
@@ -41,7 +42,13 @@ const CustomModal = ({ show, hide, projectName }) => {
         .then((data) => {
           console.log("Success:", data); // Handle the response
           alert("Enquiry Details Sent Successfully!");
-          window.location.href = '/thanks';
+          const newTab = window.open("/thanks", "_blank");
+
+          // Close the current tab
+          if (newTab) {
+            // If the new tab opened successfully, close the current tab
+            window.close();
+          }
           setFormDetails({});
           setLoading(false);
           hide();
@@ -88,6 +95,7 @@ const CustomModal = ({ show, hide, projectName }) => {
             >
               &times;
             </span>
+            {loading  ? <Loader  /> : '' }
             <Form onSubmit={loading ? () => null : handleSubmit}>
               <Row>
                 <Form.Group className="form-group" as={Col} xs="12">

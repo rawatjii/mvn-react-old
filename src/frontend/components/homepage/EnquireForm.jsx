@@ -6,7 +6,7 @@ import Button from "../../../common/Button/Button";
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
-
+import Loader from '../../../common/Loader/loader';
 gsap.registerPlugin(ScrollTrigger);
 
 const EnquireForm = ({ career, projectName }) => {
@@ -74,7 +74,15 @@ const EnquireForm = ({ career, projectName }) => {
           setFormDetails({});
           setLoading(false);
           alert("Enquiry Details Sent Successfully!");
-          window.location.href = "/thanks";
+       
+          const newTab = window.open("/thanks", "_blank");
+
+// Close the current tab
+if (newTab) {
+  // If the new tab opened successfully, close the current tab
+  window.close();
+}
+
         })
         .catch((error) => {
           console.error("Error:", error); // Handle any errors
@@ -92,7 +100,8 @@ const EnquireForm = ({ career, projectName }) => {
             Get In Touch With Us
           </h4>
         </SecTitle>
-
+        {loading  ? <Loader  /> : '' }
+   
         <Form ref={formRef} onSubmit={loading ? () => null : handleSubmit}>
           <Row>
             <Form.Group className="form-group" as={Col} xs="12">
