@@ -237,10 +237,10 @@ const Timeline = () => {
         </SecTitle>
 
         <ul ref={timelineRef} className="timeline_content">
-          {/* <div ref={planeRef} className="plane">
-            <img src={planeIcon} alt="mvn plan icon" className="img-fluid plan_icon" />
-          </div> */}
-          <img src={diamondIcon} alt="" className="img-fluid diamond-img"/>
+        <div ref={planeRef} className="plane">
+            <img src={diamondIcon} alt="mvn plan icon" className="img-fluid plan_icon" />
+          </div> 
+          {/* <img src={diamondIcon} alt="" className="img-fluid diamond-img"/> */}
           {data.map((item, index) => (
             <li key={index} className={`single ${index % 2 !== 0 ? 'right' : ''}`}>
               <div ref={(el) => (imageRefs.current[index] = el)} className="thumbnail">
