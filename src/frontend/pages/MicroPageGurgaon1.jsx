@@ -90,6 +90,10 @@ const MicroPageGurgaon1 = ({ data }) => {
       smoothTouch: 1.4, // Smooth scrolling on touch devices
     });
 
+    if(window.innerWidth >= 768){
+      setPeacockLoaded(true);
+    }
+
     return () => {
       if (smootherRef.current) {
         smootherRef.current.kill();
@@ -154,7 +158,7 @@ const MicroPageGurgaon1 = ({ data }) => {
                   <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
               }
 
-              {peacockLoaded || window.innerWidth >= 768 && (
+              {peacockLoaded && (
                 <>
                     {/* {<Video2 data={data} />}  */}
                     <div>
