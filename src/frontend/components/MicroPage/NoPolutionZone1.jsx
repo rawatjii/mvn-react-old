@@ -19,7 +19,7 @@ import CustomCard from "../Card";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const NoPolutionZone = () => {
+const NoPolutionZone1 = () => {
   const titleRef = useRef();
   const swiperRef = useRef(null);
   const sectionRef = useRef(null);
@@ -179,4 +179,4 @@ const NoPolutionZone = () => {
   );
 };
 
-export default NoPolutionZone;
+export default NoPolutionZone1;

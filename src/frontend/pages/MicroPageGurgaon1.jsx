@@ -36,6 +36,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
+import NoPolutionZone1 from "../components/MicroPage/NoPolutionZone1";
 import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from "./../components/MicroPage/MicroElevation";
 import MicroApartment from "./../components/MicroPage/MicroApartment";
@@ -234,11 +235,9 @@ const MicroPageGurgaon1 = ({ data }) => {
                       </div>
 
 
-                    {isMobile ? (
-                       <div ref={(el) => (sectionRefs.current.MVNMALL = el)}>
+                      <div ref={(el) => (sectionRefs.current.MVNMALL = el)}>
                        <MvnMall />
                      </div>
-                    ) :  ''}
 
                                 
 
@@ -246,6 +245,10 @@ const MicroPageGurgaon1 = ({ data }) => {
 
                                 <div ref={(el) => (sectionRefs.current.NoPolutionZone = el)}>
                                   <NoPolutionZone /> {/*no isssue*/}
+                                </div>
+
+                                <div ref={(el) => (sectionRefs.current.NoPolutionZone = el)}>
+                                  <NoPolutionZone1 /> {/*no isssue*/}
                                 </div>
 
                                 {/* <div>
