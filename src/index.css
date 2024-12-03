@@ -696,6 +696,7 @@ a {
 
       .close {
         font-size: 35px;
+        cursor: pointer;
       }
     }
 
@@ -771,6 +772,13 @@ a {
               filter: invert(1);
             }
           }
+        }
+
+        .subscribe_btn{
+          width:120px;
+          display: table;
+          margin: auto;
+          margin-top: 15px;
         }
       }
     }

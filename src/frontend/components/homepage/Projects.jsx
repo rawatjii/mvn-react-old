@@ -125,9 +125,6 @@ const Projects = () => {
               if (index === 0) {
                 return (
                   <>
-                    {/* <Col xs={12}>
-
-                    </Col> */}
                     <Col key={index} xs={6} className="px_8 left_col">
                       <h3 className="sec_title">
                         Explore <span>Our Projects</span>

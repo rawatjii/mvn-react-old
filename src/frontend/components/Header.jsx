@@ -9,10 +9,12 @@ import "./Header.css";
 
 import { gsap } from "gsap";
 import Button from "../../common/Button/Button";
+import subscribeBtn from '../assets/images/icons/subscribe_btn.webp';
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isMicro, setIsMicro] = useState(false);
+  const channelUrl = "https://www.youtube.com/@MVNInfrastructures?sub_confirmation=1";
 
   const [innerWidth, setInnerWidth] = useState(window.innerWidth);
   const [otherProjectsOpen, setOtherProjectsOpen] = useState(false);
@@ -751,8 +753,8 @@ const Header = () => {
 
                 <ul className="sub_menu">
                   <li>
-                    <label htmlFor="school">Social Media</label>
-                    <ul className="social_links">
+                    <label htmlFor="school" className="text-center d-block w-100">Social Media</label>
+                    <ul className="social_links justify-content-center">
                       <li>
                         <Link to="https://www.facebook.com/officialmvninfra/" target="_blank" onClick={() => toggleMenu("close")}>
                           <img
@@ -786,6 +788,10 @@ const Header = () => {
                         </Link>
                       </li>
                     </ul>
+
+                    <img src={subscribeBtn} alt="subscribe_btn" className="subscribe_btn" onClick={() => window.open(channelUrl, "_blank")} style={{cursor:'pointer'}} />
+
+
                   </li>
                 </ul>
               </ul>

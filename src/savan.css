@@ -2011,7 +2011,7 @@ li.menuFlexBox.middle-menu div {
   }
 
   ul.menus ul.sub_menu li.nav-link {
-    width: 50%;
+    width: calc(50% - 20px);
 }
 /* li.menuFlexBox.middle-menu li.nav-link:first-child {
 width: 100%;
