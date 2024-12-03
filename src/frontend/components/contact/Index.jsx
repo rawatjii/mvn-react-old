@@ -33,7 +33,7 @@ const ContactPage = ()=>{
                         <span className="icon">
                             <img src={CONFIG.IMAGE_URL + 'icons/location.png'} alt="mvn envelope icon" className="img-fluid" />
                         </span>
-                        MVN AeroOne Dwarka Expressway, 22Km Milestone, Sector-37D, Gurugram, Pin-122103 | CIN:ACA-4678 | PAN:ABWFM8415E
+                        MVN AeroOne Dwarka Expressway, 22Km Milestone, Sector-37D, <br /> Gurugram, Pin-122103 | CIN:ACA-4678 | PAN:ABWFM8415E
                     </li>
                 </ul>
             </Container>
