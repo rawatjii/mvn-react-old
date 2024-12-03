@@ -36,6 +36,7 @@ import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
+import NoPolutionZone1 from "../components/MicroPage/NoPolutionZone1";
 import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from "./../components/MicroPage/MicroElevation";
 import MicroApartment from "./../components/MicroPage/MicroApartment";
@@ -45,6 +46,7 @@ import CustomCard from "./../components/Card";
 import Amenities2 from "../components/MicroPage/Amenities2";
 import MvnMall from "../components/MicroPage/MvnMall";
 import DownloadBrochure from "../components/MicroPage/DownloadBrochure";
+import NoPollutionZone1 from "../components/MicroPage/NoPolutionZone1";
 // import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -234,18 +236,13 @@ const MicroPageGurgaon1 = ({ data }) => {
                       </div>
 
 
-                    {isMobile ? (
-                       <div ref={(el) => (sectionRefs.current.MVNMALL = el)}>
+                      <div ref={(el) => (sectionRefs.current.MVNMALL = el)}>
                        <MvnMall />
                      </div>
-                    ) :  ''}
 
-                                
-
-                               
 
                                 <div ref={(el) => (sectionRefs.current.NoPolutionZone = el)}>
-                                  <NoPolutionZone /> {/*no isssue*/}
+                                  <NoPolutionZone data={data.noPollutionZone} /> {/*no isssue*/}
                                 </div>
 
                                 {/* <div>

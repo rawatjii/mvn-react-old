@@ -111,7 +111,7 @@ const Header = () => {
       >
         <Container>
           <Navbar.Brand ref={logoRef} className="logo">
-            <Link onClick={() => toggleMenu("close")}>
+            <Link onClick={() => toggleMenu("close")} to={import.meta.env.VITE_APP_URL}>
               <img
                 src={CONFIG.IMAGE_URL + "logo_white.webp"}
                 alt="mvn-logo"

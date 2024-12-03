@@ -373,6 +373,38 @@ export const data = {
       }
     },   
   ],
+  noPollutionZone: [
+    // {
+    //   title: 'An oasis of clean air and pure living',
+    //   desc:'Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.',
+    //   imgSrc: window.innerWidth <= 768 ? 'central-green.webp' : 'central-green.webp'
+    // },
+    {
+      title: '0 km from all the urban needs 0km from your office',
+      desc:'Now you don’t have to even walk to work. Take a ride on your exclusive elevator to work',
+      imgSrc: window.innerWidth <= 768 ? 'office.webp' : 'desktop/office.webp'
+    },
+    {
+      title: '0 km from luxury Shopping',
+      desc:'All the best of luxury shopping and brands from the world over, right at your doorstep at MVN Mall',
+      imgSrc: window.innerWidth <= 768 ? 'shopping.webp' : 'desktop/shopping.webp'
+    },
+    {
+      title: '0 km from Global Entertainment',
+      desc:'When it comes to best of entertainment, you won’t have to look far. Just step into your exclusive elevator and enter a whole world of global entertainment in the MVN mall.',
+      imgSrc: window.innerWidth <= 768 ? 'entertainment.webp' : 'desktop/entertainment.webp'
+    },
+    {
+      title: '0 km from the Sports Club & Lounge',
+      desc:'Make sports a regular part of your life. Participate in sports events and also follow you passion to play your favourite sports, at the exclusive Sports lounge and Sports Club.',
+      imgSrc: window.innerWidth <= 768 ? 'sports.webp' : 'desktop/sports.webp'
+    },
+    {
+      title: '0 km cinema',
+      desc:'Have a blockbuster of a time, without ever missing a show due to traffic. Catch up with all the superhits at the theatres below in the MVN mall.',
+      imgSrc: window.innerWidth <= 768 ? 'cinema.jpg' : 'desktop/cinema.webp'
+    },
+  ],
   highlight:{
     isshow: true,
     title: "Highlight",
