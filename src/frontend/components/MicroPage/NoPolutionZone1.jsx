@@ -1,182 +1,99 @@
-import React, { useEffect, useRef, useState } from "react";
-import { Container } from "react-bootstrap";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Scrollbar, Pagination } from "swiper/modules";
-import { gsap } from "gsap";
+import React, { useEffect, useRef } from "react";
+import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as CONFIG from "../../../config/config";
-import SecTitle from "../../../common/SecTitle/Index";
-import dotImg from "../../assets/images/icons/dot.png"
-import mvnMallBannerImg1 from "../../assets/images/mall-banner-1.webp"
-import mvnMallBannerImg2 from "../../assets/images/mall-banner-2.webp"
 
-import "swiper/css";
-import 'swiper/css/pagination';
-import 'swiper/css/scrollbar';
-import 'swiper/css/navigation';
-import CustomCard from "../Card";
 
+
+import Watermark from "../../../common/watermark/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const NoPolutionZone1 = () => {
-  const titleRef = useRef();
-  const swiperRef = useRef(null);
-  const sectionRef = useRef(null);
-  const [activeIndex, setActiveIndex] = useState(0);
-  const [sectionRendered, setSectionRendered] = useState(false);
 
 
-  const pageData = [
-    // {
-    //   title: 'An oasis of clean air and pure living',
-    //   desc:'Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.',
-    //   imgSrc: window.innerWidth <= 768 ? 'central-green.webp' : 'central-green.webp'
-    // },
-    {
-      title: '0 km from all the urban needs 0km from your office',
-      desc:'Now you don’t have to even walk to work. Take a ride on your exclusive elevator to work',
-      imgSrc: window.innerWidth <= 768 ? 'office.webp' : 'desktop/office.jpg'
-    },
-    {
-      title: '0 km from luxury Shopping',
-      desc:'All the best of luxury shopping and brands from the world over, right at your doorstep at MVN Mall',
-      imgSrc: window.innerWidth <= 768 ? 'shopping.webp' : 'desktop/shopping.jpg'
-    },
-    {
-      title: '0 km from Global Entertainment',
-      desc:'When it comes to best of entertainment, you won’t have to look far. Just step into your exclusive elevator and enter a whole world of global entertainment in the MVN mall.',
-      imgSrc: window.innerWidth <= 768 ? 'entertainment.webp' : 'desktop/entertainment.jpg'
-    },
-    {
-      title: '0 km from the Sports Club & Lounge',
-      desc:'Make sports a regular part of your life. Participate in sports events and also follow you passion to play your favourite sports, at the exclusive Sports lounge and Sports Club.',
-      imgSrc: window.innerWidth <= 768 ? 'sports.webp' : 'desktop/sports.jpg'
-    },
-    {
-      title: '0 km cinema',
-      desc:'Have a blockbuster of a time, without ever missing a show due to traffic. Catch up with all the superhits at the theatres below in the MVN mall.',
-      imgSrc: window.innerWidth <= 768 ? 'cinema.jpg' : 'desktop/cinema.jpg'
-    },
-  ]
+export default function NoPollutionZone1({ data }) {
+
+  const noPollutionZone = data;
+  const sectionsRef = useRef([]);
+  const isMobile = window.innerWidth <= 768;
+
+  const imgICON = CONFIG.IMAGE_URL
 
   useEffect(() => {
-    const swiperInstance = swiperRef.current.swiper;
+    const getRatio = (el) =>
+      window.innerHeight / (window.innerHeight + el.offsetHeight);
+    const triggers = [];
 
+    sectionsRef.current.forEach((section, i) => {
 
-    ScrollTrigger.create({
-      trigger: sectionRef.current,
-      start: "top top",
-      end: "+=1000",
-      pin: true,
-      scrub: 1,
-      onUpdate: (self) => {
-        const progress = self.progress;
-        const totalSlides = swiperInstance.slides.length - 1;
-        const targetSlide = Math.floor(progress * totalSlides);
+      const bg = section.querySelector(".bg");
+      if (bg) {
+        // Set background image dynamically
+        
 
-        swiperInstance.slideTo(targetSlide);
-      },
-      onLeave: () => {
-        swiperInstance.slideTo(swiperInstance.slides.length - 1);
+        var image_url=`url(${CONFIG.IMAGE_URL}/no-pollution/${noPollutionZone[i].imgSrc})`;
+     
+
+        bg.style.backgroundImage =image_url;
+
+        const defaultBgPos =
+          i === 0
+            ? "50% 0"
+            : `50% ${-window.innerHeight * getRatio(section)}px`;
+
+        const trigger = gsap.fromTo(
+          bg,
+          { backgroundPosition: defaultBgPos },
+          {
+            backgroundPosition: `50% ${
+              window.innerHeight * (1 - getRatio(section))
+            }px`,
+            ease: "none",
+            scrollTrigger: {
+              trigger: section,
+              start: i === 0 ? "top top" : "top bottom",
+              end: "bottom top",
+              scrub: true,
+              invalidateOnRefresh: true,
+            },
+          }
+        );
+        triggers.push(trigger.scrollTrigger);
       }
     });
 
-    setSectionRendered(true)
+    // Refresh ScrollTrigger to recalculate after animations are set up
+    ScrollTrigger.refresh();
 
-    swiperInstance.on("slideChange", () => {
-      setActiveIndex(swiperInstance.activeIndex);
-    });
-  }, []);
+    // Cleanup on unmount
+    return () => {
+      triggers.forEach((trigger) => trigger.kill());
+    };
+  }, [noPollutionZone]);
 
   return (
-<>
-    <div>
-      <section
-      className="section location_section"
-      ref={sectionRef}
-    >
-      <Container>
-        <SecTitle className="text-center color style1">
-          <h4 ref={titleRef} className="title">Connections with MVN Mall</h4>
-        </SecTitle>
-      </Container>
-
-      {/* Images */}
-      <div className="image_col">
-        {pageData && pageData.map((image, index) => (
-          <li
-            key={index}
-            style={{
-              display: index === activeIndex ? "block" : "none",
-            }}
+    <>
+      <div className="main_am">
+        <div className="sec_title text-center color style1">
+          <h4 className="title">Connections with MVN Mall</h4>
+        </div>
+        {noPollutionZone.map((amenity, i) => (
+          <section
+            key={i}
+            className="parallax"
+            ref={(el) => (sectionsRef.current[i] = el)}
           >
-            <img src={`${CONFIG.IMAGE_URL}/no-pollution/${image.imgSrc}`} alt="" />
-          </li>
+            <div className="bg">
+            <Watermark />
+            </div>
+            <div className="content">
+              <span className="am-name">{amenity.title}</span>
+              <p className="desc">{amenity.desc}</p>
+            </div>
+          </section>
         ))}
       </div>
-
-      {/* Swiper */}
-      <Swiper
-        // slidesPerView={1}
-        // spaceBetween={30}
-        centeredSlides={true}
-        className="mySwiper"
-        ref={swiperRef}
-        scrollbar={{
-          hide: false,
-        }}
-        pagination={{
-          type: 'fraction',
-        }}
-        modules={[Scrollbar, Pagination]}
-        breakpoints={{
-          640: {
-            slidesPerView: 2,
-            spaceBetween: 0,
-          },
-          768: {
-            slidesPerView: 3,
-            spaceBetween: 0,
-          },
-          1024: {
-            slidesPerView: 5,
-            spaceBetween: 0,
-          },
-        }}
-      >
-
-        {
-          pageData && pageData.map((data, index) => (
-            <SwiperSlide>
-              <Container>
-                <div className="content">
-                  <p className="km_text">Km</p>
-                  <img src={`${dotImg}`} alt="" className="golden-icon-no-pollution" />
-                  <h4 className="title">{data.title}</h4>
-                  <p>{data.desc}</p>
-                </div>
-              </Container>
-            </SwiperSlide>
-          ))
-        }
-      </Swiper>
-
-      
-      {/* <span className="abs_number">
-        <img
-          className="zero_img"
-          src={`${CONFIG.IMAGE_URL}micro/location/okm.png`}
-          alt="0 km"
-        />
-      </span> */}
-    </section>
-{/* 
-<CustomCard className="style2" desc="Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave." /> */}
-    </div>
+ 
     </>
-
   );
-};
-
-export default NoPolutionZone1;
+}

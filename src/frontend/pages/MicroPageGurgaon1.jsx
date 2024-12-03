@@ -46,6 +46,7 @@ import CustomCard from "./../components/Card";
 import Amenities2 from "../components/MicroPage/Amenities2";
 import MvnMall from "../components/MicroPage/MvnMall";
 import DownloadBrochure from "../components/MicroPage/DownloadBrochure";
+import NoPollutionZone1 from "../components/MicroPage/NoPolutionZone1";
 // import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -239,16 +240,9 @@ const MicroPageGurgaon1 = ({ data }) => {
                        <MvnMall />
                      </div>
 
-                                
-
-                               
 
                                 <div ref={(el) => (sectionRefs.current.NoPolutionZone = el)}>
-                                  <NoPolutionZone /> {/*no isssue*/}
-                                </div>
-
-                                <div ref={(el) => (sectionRefs.current.NoPolutionZone = el)}>
-                                  <NoPolutionZone1 /> {/*no isssue*/}
+                                  <NoPolutionZone data={data.noPollutionZone} /> {/*no isssue*/}
                                 </div>
 
                                 {/* <div>
