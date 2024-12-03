@@ -92,7 +92,7 @@ const HomepageVideo = ({ data,isMobile }) => {
     });
 
     // Set loading to false after both the animation and Lottie are ready
-    lottieAnimation.addEventListener("DOMLoaded", () => setLoading(false));
+    // lottieAnimation.addEventListener("DOMLoaded", () => setLoading(false));
     return () => {
       scrollAnimation.kill();
       lottieAnimation.destroy();
@@ -103,7 +103,7 @@ const HomepageVideo = ({ data,isMobile }) => {
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
       {loading && (
-        <HomePagerLoader  mobile={mobile} />
+        <HomePagerLoader  mobile={isMobile} />
       )}
 
       {!loading && (
