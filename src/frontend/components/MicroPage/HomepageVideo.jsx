@@ -3,7 +3,7 @@ import Container from "react-bootstrap/Container";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImgMail from "../../assets/images/icons/email.png";
-import GurgaonLoader from "../../../common/Loader/micro/gurgaon/Index";
+import HomePagerLoader from "../../../common/Loader/Homepage/Index";
 
 
 
@@ -119,7 +119,7 @@ const HomepageVideo = ({ data }) => {
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
       {loading && (
-        <GurgaonLoader  mobile={mobile} />
+        <HomePagerLoader  mobile={mobile} />
       )}
 
       {!loading && (
@@ -136,11 +136,6 @@ const HomepageVideo = ({ data }) => {
           ))}
         </div>
       )}
-
-
-
-
-
     </section>
   );
 };

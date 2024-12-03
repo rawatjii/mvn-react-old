@@ -2,24 +2,88 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
-import SecTitle from "../../../common/SecTitle/Index";
 import CustomCard from "../Card";
-import MasterBedroomLoader from "../../../common/Loader/micro/masterBedroom/Index";
+import PartyLoader from "../../../common/Loader/micro/partyLoader/Index";
 import Watermark from "../../../common/watermark/Index";
+import lottie from "lottie-web";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const MasterBedroom = ({ data, onLoadComplete }) => {
+const MasterBedroom = ({ isMobile, data,onLoadComplete }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
-  const [images, setImages] = useState([]);
-  const [isLoading, setIsLoading] = useState(true); // Loading state
-  const totalFrames = window.innerWidth <= 768 ? 183 : 101;
-  const frameRefs = useRef([]);
+  const lottieContainerRef = useRef(null);
+  const [loading, setLoading] = useState(false);
+  const [animationData, setAnimationData] = useState(null);
+  const { title, desc } = data.masterBedroom;
 
-  // Title Animation
+  // Dynamically import the correct JSON animation data
   useEffect(() => {
+    const loadAnimationData = async () => {
+      try {
+        const importedData = isMobile
+          ? await import("../../../../public/assets/json-frame/aeroone-gurgaon1/Panther/Mobile/data.json")
+          : await import("../../../../public/assets/json-frame/aeroone-gurgaon1/Panther/Desktop/data.json");
+
+        setAnimationData(importedData.default);
+      } catch (error) {
+        console.error("Error loading animation data:", error);
+      }
+    };
+
+    loadAnimationData();
+  }, [isMobile]);
+
+  // Initialize Lottie and ScrollTrigger
+  useEffect(() => {
+    if (!animationData || !lottieContainerRef.current || !containerRef.current) return;
+
+    const lottieAnimation = lottie.loadAnimation({
+      container: lottieContainerRef.current,
+      animationData,
+      renderer: "canvas",
+      loop: false,
+      autoplay: false,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+        clearCanvas: true,
+      },
+    });
+
+    const scrollAnimation = ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top top",
+      end: `+=${window.innerHeight * 2}`,
+      pin: true,
+      scrub: 0.5,
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const totalFrames = lottieAnimation.totalFrames;
+        const frameIndex = Math.floor(progress * (totalFrames - 1));
+        lottieAnimation.goToAndStop(frameIndex, true);
+      },
+      onLeave: () => {
+        lottieAnimation.goToAndStop(lottieAnimation.totalFrames - 1, true);
+      },
+      onLeaveBack: () => {
+        lottieAnimation.goToAndStop(0, true);
+      },
+    });
+
+    // Set loading to false after both the animation and Lottie are ready
+    lottieAnimation.addEventListener("DOMLoaded", () => setLoading(false));
+    onLoadComplete();
+    return () => {
+      scrollAnimation.kill();
+      lottieAnimation.destroy();
+    };
+  }, [animationData]);
+
+  // Title animation with GSAP
+  useEffect(() => {
+    if (!titleRef.current) return;
+
     gsap.from(titleRef.current, {
       y: 50,
       opacity: 0,
@@ -31,113 +95,23 @@ const MasterBedroom = ({ data, onLoadComplete }) => {
     });
   }, []);
 
-  useEffect(() => {
-    // Preload images
-    const loadedImages = [];
-    let loadedCount = 0;
-
-    for (let i = 1; i <= totalFrames; i++) {
-      const img = new Image();
-      img.src = window.innerWidth <=768 ? `assets/videos/master-bedroom/mobile/${i}.webp` : `assets/videos/master-bedroom/desktop/${i}.webp`;
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === totalFrames) {
-          setIsLoading(false); // All images are loaded
-          onLoadComplete();
-        }
-      };
-      loadedImages.push(img);
-    }
-    setImages(loadedImages);
-  }, []);
-
-  useEffect(() => {
-  if (isLoading || images.length !== totalFrames) return;
-
-  // Refresh ScrollTrigger after images and about section are rendered
-  const refreshScrollTrigger = () => {
-    setTimeout(() => {
-      ScrollTrigger.refresh();
-    }, 100); // Allow enough time for rendering
-  };
-
-  refreshScrollTrigger();
-
-  // Image sequence animation
-  const scrollAnimation = ScrollTrigger.create({
-    trigger: containerRef.current,
-    start: "top top",
-    end: `+=${window.innerHeight * 4}`, // Extend scroll distance to fit more frames
-    pin: true,
-    scrub: 0.005,
-    onUpdate: (self) => {
-      const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-      if (self.progress > 0.1) {
-        frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === frameIndex ? "block" : "none";
-        });
-      }
-    },
-    onLeaveBack: () => {
-      frameRefs.current.forEach((img, index) => {
-        if (img) img.style.display = index === 0 ? "block" : "none";
-      });
-    },
-    onLeave: () => {
-      frameRefs.current.forEach((img, index) => {
-        if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
-      });
-    },
-  });
-
-  return () => {
-    scrollAnimation.kill();
-  };
-}, [images, isLoading, totalFrames]);
-
-  const { title, desc } = data.masterBedroom;
-
   return (
-    <>
-    <div className="section peacock_section master_bedroom pb-0">
-      {isLoading && <MasterBedroomLoader />}
-      {!isLoading && (
+    <div className="section peacock_section pb-0">
+      {loading && <PartyLoader />}
+      {!loading && (
         <>
-          <div
-            ref={containerRef}
-            className="frames_content"
-          >
-            <Watermark className="style3 left" />
-            {images.map((img, index) => (
-              <img
-                key={index}
-                ref={(el) => (frameRefs.current[index] = el)}
-                src={img.src}
-                alt={`Frame ${index}`}
-                className="frame"
-                style={{
-                  position: "absolute",
-                  top: 0,
-                  left: 0,
-                  width: "100%",
-                  display: index === 0 ? "block" : "none",
-                }}
-              />
-            ))}
+          <div ref={containerRef} className="frames_content">
+            <Watermark className="style2" />
+            <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }}></div>
           </div>
-
           <Container>
             <div className="about">
               <CustomCard title={title} desc={desc} />
             </div>
           </Container>
-   
         </>
       )}
     </div>
-  
-           
-    </>
   );
 };
 

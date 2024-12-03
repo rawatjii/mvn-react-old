@@ -9,14 +9,9 @@ import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import HomepageVideo from '../components/MicroPage/HomepageVideo';
 // Lazy-loaded components
-const ScrollVideo = React.lazy(() => import("../components/homepage/ScrollVideo"));
-const Typology = React.lazy(() => import("../components/homepage/Typology"));
+
 const Overview = React.lazy(() => import("../components/homepage/Overview"));
 
-
-// Hero images for desktop and mobile
-import DeskopheronormalImg from "../../frontend/assets/images/hero/hero-normal-img.webp";
-import MobileheronormalImg from "../../frontend/assets/images/hero/hero-normal-img-mobile.webp";
 import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo-img.webp";
 
 const Homepage = () => {
