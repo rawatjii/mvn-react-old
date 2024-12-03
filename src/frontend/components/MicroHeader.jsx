@@ -687,44 +687,28 @@ const MicroHeader = ({ scrollToSection }) => {
                                   <span className="status">New Launch</span>
                                 </NavLink>
 
-                                <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }aeroone-gurgaon1`}
-                                  className="new-launch"
-                                  onClick={() => toggleMenu("close")}
-                                >
-                                  MVN Aero One{" "}
-                                  <span className="status">New Launch</span>
-                                </NavLink>
                               </li>
 
                               <li className="nav-link">
                                 <label htmlFor="bangalore">Bangalore</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }aeroone-bangalore`}
+                                  to="https://www.mvnaeroone.com/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
-                                  MVN Aero One
+                                  MVN
                                 </NavLink>
                               </li>
 
                               <li className="nav-link">
                                 <label htmlFor="sohna">Sohna</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-athens-sohna`}
+                                  to="https://www.mvn.in/athens-gurugram/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
                                   MVN Athens
                                 </NavLink>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-athens-ph2-sohna`}
+                                  to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
                                   MVN Athens PH-2
@@ -734,9 +718,7 @@ const MicroHeader = ({ scrollToSection }) => {
                               <li className="nav-link">
                                 <label htmlFor="faridabad">Faridabad</label>
                                 <NavLink
-                                  to={`${
-                                    import.meta.env.VITE_APP_URL
-                                  }mvn-athens-faridabad`}
+                                  to="https://www.mvn.in/athens-faridabad/" target="_blank"
                                   onClick={() => toggleMenu("close")}
                                 >
                                   MVN Athens

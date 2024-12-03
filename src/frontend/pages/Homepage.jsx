@@ -45,11 +45,9 @@ const Homepage = () => {
                     <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
                     <h4 className="logo_title">Gurugram</h4>
                     <span className="status">New Launch</span>
-                    <a href="https://beta1.mvn.in/aeroone-gurgaon1" className="link-btn">Enter The Website </a>
+                    <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} className="link-btn">Enter The Website </a>
                   </Container>
-
                 </div>
-
       {/* Lazy-loaded components */}
       <Suspense fallback="Loading...">
         <Overview />

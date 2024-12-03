@@ -3377,6 +3377,20 @@ footer {
     }
   }
 
+  /* floor_plan_section  */
+
+  .floor_plan_section {
+
+    .accordion-header{
+
+      button{
+
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+    }
+  }
+
 }
 
 .thanks-page {

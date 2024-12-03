@@ -51,7 +51,7 @@ const MicroOverview = ({data})=>{
       </Container>
 
 
-      <img src={AboutUsBg} alt="" className="img-fluid aboutUs-bg"/>
+      {/* <img src={AboutUsBg} alt="" className="img-fluid aboutUs-bg"/> */}
 
     </section>
   )

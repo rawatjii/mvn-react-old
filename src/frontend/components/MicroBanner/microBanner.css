@@ -4,6 +4,17 @@
   position:relative;
   text-align: center;
 
+  &:before{
+    position:absolute;
+    content:'';
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background: rgba(0 0 0 / 30%);
+    z-index: 1;
+  }
+
   .microbanner_bg{
     
     position: absolute;
@@ -22,11 +33,21 @@
     margin: 0;
     margin-bottom: 4px;
     font-size: 24px;
+    position: relative;
+        z-index: 1;
+  }
+
+  nav{
+    position: relative;
+    z-index: 1;
+
   }
 
   .breadcrumb{
     justify-content: center;
     margin:0;
+    position: relative;
+        z-index: 1;
 
     li{
 

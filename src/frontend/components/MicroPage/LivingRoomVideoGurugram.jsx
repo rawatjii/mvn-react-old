@@ -72,7 +72,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
 
     const scrollAnimation = ScrollTrigger.create({
       trigger: sectionRef.current,
-      start: "top 20%",
+      start: "top 80px",
       end: `+=${window.innerHeight * 4}`,
       pin: true,
       scrub: 0.005,
