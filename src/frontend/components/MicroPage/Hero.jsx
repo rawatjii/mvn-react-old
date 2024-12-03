@@ -18,7 +18,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     const lottieAnimation = lottie.loadAnimation({
       container: lottieContainerRef.current, 
       animationData: jsondata, 
-      renderer: "canvas",
+      renderer: "svg",
       loop: false, 
       autoplay: false, 
     });

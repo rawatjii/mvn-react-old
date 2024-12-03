@@ -137,7 +137,7 @@ const MicroPageGurgaon1 = ({ data }) => {
               </Container>
 
               {
-                window.innerWidth <= 768 ? <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}> <PeacockSection data={data} onLoadComplete={() => setPeacockLoaded(true)}  /> </div> :
+                window.innerWidth <= 768 ? <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}> <PeacockSection data={data} onLoadComplete={() => setPeacockLoaded(true)} isMobile={isMobile}  /> </div> :
                   <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
               }
 
@@ -145,7 +145,7 @@ const MicroPageGurgaon1 = ({ data }) => {
                 <>
                     {/* {<Video2 data={data} />}  */}
                     <div>
-                      <LivingRoomVideoGurugram  data={data} onLoadComplete={() => setLivingRoomLoaded(true)} />
+                      <LivingRoomVideoGurugram  data={data} onLoadComplete={() => setLivingRoomLoaded(true)} isMobile={isMobile}  />
                       {/* <LivingRoomVideo data={data} /> */}
                     </div>
 

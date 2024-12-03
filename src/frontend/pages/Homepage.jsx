@@ -38,7 +38,7 @@ const Homepage = () => {
         alt="Hero Banner"
         className="img-fluid hero-banner"
       /> */}
-      <HomepageVideo />
+      <HomepageVideo isMobile={isMobile} />
               <div className="mobile-view-box">  
 
 <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
