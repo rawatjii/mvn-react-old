@@ -3,14 +3,15 @@ import Container from "react-bootstrap/Container";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImgMail from "../../assets/images/icons/email.png";
-import GurgaonLoader from "../../../common/Loader/micro/gurgaon/Index";
+import HomePagerLoader from "../../../common/Loader/Homepage/Index";
+import lottie from "lottie-web";
 
 
 
 
 gsap.registerPlugin(ScrollTrigger);
 
-const HomepageVideo = ({ data }) => {
+const HomepageVideo = ({ data,isMobile }) => {
   const [images, setImages] = useState([]);
   const [mobile, setMobile] = useState(false);
 
@@ -19,6 +20,8 @@ const HomepageVideo = ({ data }) => {
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
   const mouseScrollRef = useRef()
+  const lottieContainerRef = useRef(null);
+  const [animationData, setAnimationData] = useState(null);
 
   useEffect(() => {
     if (loading) {
@@ -35,112 +38,79 @@ const HomepageVideo = ({ data }) => {
     };
   }, [loading]);
 
-  useEffect(() => {
-    // Determine if it's mobile or desktop
-    const isMobile = window.innerWidth <= 768;
-    if(isMobile){
-      setMobile(true);
-    }
-
-    // Set total frames dynamically
-    let frameCount = isMobile ? 274 : 292;
-    setTotalFrames(frameCount);
-  }, [data]);
 
   useEffect(() => {
-    // Only preload images once totalFrames is set
-    if (totalFrames === 0) return;
+    const loadAnimationData = async () => {
+      try {
+        const importedData = isMobile
+          ? await import("../../../../public/assets/json-frame/Homepage/Mobile/data.json")
+          : await import("../../../../public/assets/json-frame/Homepage/Desktop/data.json");
 
-    const isMobile = window.innerWidth <= 768;
-    let folderPath = isMobile
-    ? "assets/images/micro/hero/mobile/"
-    : "assets/images/micro/hero/desktop/";
+        setAnimationData(importedData.default);
+        setLoading();
+      } catch (error) {
+        console.error("Error loading animation data:", error);
+      }
+    };
 
-    // Preload images
-    const loadedImages = [];
-    let loadedCount = 0;
-
-    for (let i = 1; i <= totalFrames; i++) {
-      const img = new Image();
-      img.src = `${folderPath}${i}.webp`;
-
-      // Track when each image loads
-      img.onload = () => {
-        loadedCount++;
-        if (loadedCount === totalFrames) {
-          setImages(loadedImages); // Set images after all are loaded
-          setLoading(false); // Hide loader
-        }
-      };
-
-      loadedImages.push(img);
-    }
-  }, [totalFrames, data]);
+    loadAnimationData();
+  }, [isMobile]);
 
   useEffect(() => {
-    // Reinitialize ScrollTrigger only after all images are loaded
-    if (loading || images.length !== totalFrames) return;
+    if (!animationData || !lottieContainerRef.current || !containerRef.current) return;
 
-    // Image sequence animation
-    const scrollAnimation = ScrollTrigger.create({
-      trigger: containerRef.current,
-      start: "top top",
-      end: `+=${window.innerHeight * 2}`, // Extend scroll distance to fit more frames
-      pin: true,
-      scrub: 0.005,
-      onUpdate: (self) => {
-        const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-
-        // Ensure frames update correctly
-        frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === frameIndex ? "block" : "none";
-        });
-      },
-      onLeave: () => {
-        // Ensure the last frame stays visible when scrolling ends
-        frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
-        });
-      },
-      onLeaveBack: () => {
-        // Ensure the first frame stays visible when scrolling back to the top
-        frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === 0 ? "block" : "none";
-        });
+    const lottieAnimation = lottie.loadAnimation({
+      container: lottieContainerRef.current,
+      animationData,
+      renderer: "svg",
+      loop: false,
+      autoplay: false,
+      rendererSettings: {
+        preserveAspectRatio: "xMidYMid slice",
+        clearCanvas: true,
       },
     });
 
+    const scrollAnimation = ScrollTrigger.create({
+      trigger: containerRef.current,
+      start: "top top",
+      end: `+=${window.innerHeight * 2}`,
+      pin: true,
+      scrub: 0.5,
+      onUpdate: (self) => {
+        const progress = self.progress;
+        const totalFrames = lottieAnimation.totalFrames;
+        const frameIndex = Math.floor(progress * (totalFrames - 1));
+        lottieAnimation.goToAndStop(frameIndex, true);
+      },
+      onLeave: () => {
+        lottieAnimation.goToAndStop(lottieAnimation.totalFrames - 1, true);
+      },
+      onLeaveBack: () => {
+        lottieAnimation.goToAndStop(0, true);
+      },
+    });
+
+    // Set loading to false after both the animation and Lottie are ready
+    lottieAnimation.addEventListener("DOMLoaded", () => setLoading(false));
     return () => {
       scrollAnimation.kill();
+      lottieAnimation.destroy();
     };
-  }, [loading, images, totalFrames]);
+  }, [animationData]);
 
   return (
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
       {loading && (
-        <GurgaonLoader  mobile={mobile} />
+        <HomePagerLoader  mobile={mobile} />
       )}
 
       {!loading && (
         <div ref={containerRef} className="frames_content">
-          {images?.map((img, index) => (
-            <img
-              key={index}
-              ref={(el) => (frameRefs.current[index] = el)}
-              src={img.src}
-              alt={`Frame ${index}`}
-              className="frame"
-              style={{ display: index === 0 ? "block" : "none" }}
-            />
-          ))}
+          <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }}></div>
         </div>
       )}
-
-
-
-
-
     </section>
   );
 };

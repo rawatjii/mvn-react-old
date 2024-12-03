@@ -11,7 +11,7 @@ import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import PeacockSection from "../components/MicroPage/PeacockSection";
 import Video2 from "../components/MicroPage/Video2";
-import Video3 from "../components/MicroPage/Video3";
+import PartyVideo from "../components/MicroPage/PartyVideo";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
 import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
@@ -36,7 +36,7 @@ const MicroPage = ({ data, projectName }) => {
         {data.video1 && data.video1.isVdo === true && <PeacockSection data={data} />}
         {/* {data.video2.isVdo === true && <Video2 data={data} />} */}
         {data.living_room_video && data.living_room_video.isVdo === true && <LivingRoomVideo data={data} />}
-        {data.video3 && data.video3.isVdo === true && <Video3 data={data} />}
+        {data.video3 && data.video3.isVdo === true && <PartyVideo data={data} />}
 
         {data.masterBedroom && data.masterBedroom.isVdo === true && <MasterBedroom data={data} />}
 

@@ -14,13 +14,12 @@ import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import PeacockSection from "../components/MicroPage/PeacockSection";
 import Video2 from "../components/MicroPage/Video2";
-import Video3 from "../components/MicroPage/Video3";
+import PartyVideo from "../components/MicroPage/PartyVideo";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
 import Slides from "../components/MicroPage/Slides";
 import Walkthrough from "../components/MicroPage/Walkthrough";
 import Renders from "../components/MicroPage/Renders";
 import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
-import GurgaonLoader from "../../common/Loader/micro/gurgaon/Index";
 import GurgaonLoader1 from "../../common/Loader/micro/gurgaon1/Index";
 import Typology from "../components/homepage/Typology";
 import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
@@ -89,19 +88,7 @@ const MicroPageGurgaon1 = ({ data }) => {
     }
   };
 
-  // useEffect(() => {
-  //   if (!heroLoaded) {
-  //     // Add overflow: hidden to the body when heroLoaded is false
-  //     document.body.style.overflow = "hidden";
-  //   } else {
-  //     // Remove overflow: hidden when heroLoaded is true
-  //     document.body.style.overflow = "";
-  //   }
-
-  //   // Cleanup function to reset the body overflow if the component unmounts
-  //   return () => (document.body.style.overflow = "");
-  // }, [heroLoaded]);
-
+  
   useEffect(() => {
     smootherRef.current = ScrollSmoother.create({
       wrapper: "#smooth-wrapper",
@@ -125,31 +112,7 @@ const MicroPageGurgaon1 = ({ data }) => {
 
   return (
     <>
-      {/* <di>
-      <img src={HomeSliderBg} alt="" className="img-fluid slider-bg-img"/>
-      </di> */}
-      {/* 
-      <div className="slider-left-content">
-            <h4 className="project-name-heading">The height of luxury living elevated above island and sea</h4>
-    
-
-            <div id="wrapper">
-  <div id="wrapper-inner">
-<div id="scroll-down">
-  <span class="arrow-down">
-  </span>
-  <span id="scroll-title">
-    Scroll <br/>down
-  </span>
-</div>
-  </div>
-  </div>      
-      </div>
-
-
-      <div className="slider-right-content">
-        <h4 className="vertical-heading">MVN Aero One <span>Elevation</span> </h4> 
-      </div> */}
+      
       <MicroHeader scrollToSection={scrollToSection} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -175,7 +138,7 @@ const MicroPageGurgaon1 = ({ data }) => {
               </Container>
 
               {
-                window.innerWidth <= 768 ? <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}> <PeacockSection data={data} onLoadComplete={() => setPeacockLoaded(true)}  /> </div> :
+                window.innerWidth <= 768 ? <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}> <PeacockSection data={data} onLoadComplete={() => setPeacockLoaded(true)} isMobile={isMobile}  /> </div> :
                   <img src={living_area_cam_peacock} alt="" className="img-fluid"/>
               }
 
@@ -183,20 +146,20 @@ const MicroPageGurgaon1 = ({ data }) => {
                 <>
                     {/* {<Video2 data={data} />}  */}
                     <div>
-                      <LivingRoomVideoGurugram  data={data} onLoadComplete={() => setLivingRoomLoaded(true)} />
+                      <LivingRoomVideoGurugram  data={data} onLoadComplete={() => setLivingRoomLoaded(true)} isMobile={isMobile}  />
                       {/* <LivingRoomVideo data={data} /> */}
                     </div>
 
                     {livingRoomLoaded && (
                       <>
                         <div>
-                          <Video3 data={data} onLoadComplete={() => setPartyLoaded(true)} />
+                          <PartyVideo data={data} onLoadComplete={() => setPartyLoaded(true)} isMobile={isMobile} />
                         </div>
 
                         {partyLoaded && (
                           <>
                             <div>
-                              <MasterBedroom data={data} onLoadComplete={() => setMasterBedroomLoaded(true)} /> {/*no isssue*/}
+                              <MasterBedroom data={data} onLoadComplete={() => setMasterBedroomLoaded(true)} isMobile={isMobile} /> {/*no isssue*/}
                             </div>
 
                             {masterBedroomLoaded && (
