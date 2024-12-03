@@ -19,8 +19,8 @@ const GurgaonLoader1 = () => {
 
   // Set the image URL based on the device type
   const imageUrl = isMobile
-    ? `${CONFIG.IMAGE_URL}micro/hero/client/mobile/1.webp`
-    : `${CONFIG.IMAGE_URL}micro/hero/client/desktop/1.webp`;
+    ? `${CONFIG.IMAGE_URL}micro/hero/client/mobile-new/1.webp`
+    : `${CONFIG.IMAGE_URL}micro/hero/client/desktop-new/1.webp`;
 
   return (
     <div className="loader_section gurgaon_loader">
@@ -31,8 +31,8 @@ const GurgaonLoader1 = () => {
       />
 
       <div className="loaderTxt">
-        <BarLoader color="#8b5e10" height={2} width={100} className="bar" />
-        <p>Loading Experience</p>
+        <BarLoader color="#fff" height={2} width={100} className="bar" />
+        <p className="text-white">Loading Experience</p>
       </div>
     </div>
   );

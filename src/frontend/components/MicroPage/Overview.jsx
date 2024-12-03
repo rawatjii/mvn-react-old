@@ -12,18 +12,11 @@ const MicroOverview = ({data})=>{
   const [isShowModal, setIsShowModal] = useState(false)
   const {title, location, extra, desc} = data.overview;
 
-  const isHideModal = () => {
-    setIsShowModal(false);
-  };
-
-  const handleOpenBrochureModal = () => {
-    setIsShowModal(true)
-  };
 
   return(
     <section className="section micro_overview text-center pb-0">
       <Container>
-        <div className="overview_card">
+        <div className="overview_card px-0">
           <div className="aboutUs-card_heading">
             <div className="diamond_img_strip">
               <img src={diamondIMG} className="img-fluid" alt="image" />
@@ -35,14 +28,13 @@ const MicroOverview = ({data})=>{
           </div>
 
           {extra && <p className="extra">{extra}</p>}
-
+  
           <div className="aboutUs-box">
           {
             desc && Array.isArray(desc) ?  desc.map((el, i)=>(
               <p className="desc" key={`desc-${i}`}>{el}</p>  
             )):  <p>{desc}</p>
           }
-          
           </div>
 
           <span className="bar"></span>
@@ -54,13 +46,9 @@ const MicroOverview = ({data})=>{
         <p className="rera-number">RERA Registration no : RERA-GRG-PROJ-1729- 2024<br/>
           Bank A/C Name: M/s MVN Infrastructure Projects LLP<br/>
           HDFC A/C NO : 9991340000999<br/>
-          IFSC CODE : HDFC0000279<br/></p>
-        
+          IFSC CODE : HDFC0000279<br/>
+        </p>
       </Container>
-
-      <Button className="btn_style4" onClick={handleOpenBrochureModal}>Download Brochure</Button>
-
-      <CustomModal hide={isHideModal} show={isShowModal} type="enquire"  />
 
 
       <img src={AboutUsBg} alt="" className="img-fluid aboutUs-bg"/>

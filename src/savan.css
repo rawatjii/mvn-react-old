@@ -424,6 +424,26 @@ ul.content{align-items:center}
 
 
 /* .mobile-view-box{display: none;} */
+.mobile-view-box{
+  text-align: center;
+
+  .logo_title{
+
+    text-transform: uppercase;
+    margin-top:20px;
+    font-size: 20px;
+    letter-spacing: 2px;
+  }
+
+  .status{
+
+    margin-bottom:0;
+    font-style: italic;
+    color:var(--theme_primary_color);
+    letter-spacing: 0.5px;
+  }
+}
+
 .mobile-view-box a.link-btn {
   text-align: center;
   width: fit-content;
@@ -1669,7 +1689,7 @@ section.section.walkthrough_section .overview_card {
   }
 
   .testimonial_section .swiper-slide {
-    height: 44vh;
+    height: 48vh;
   }
 
   .excited-to-meet-us .title::after {
@@ -2130,7 +2150,7 @@ nav.null.navbar.navbar-expand-false.navbar-light .right {width: 150px; display: 
 .mvn-section-banner h4.title{position:relative;width:fit-content;margin:0 auto!important;display:block;margin-bottom:30px!important}
 .mvn-section-banner .sec_title.text-center.color.style1{margin:0 auto;display:block;width:fit-content}
 .section.peacock_section.master_bedroom.pb-0 .overview_card.undefined { padding-bottom: 0;}
-section.section.walkthrough_section { padding-bottom: 30px;}
+section.section.walkthrough_section { padding-bottom: 30px; width: 100%;}
 .section.renders1_section.wrapper.center.pb-0 .overview_card.px-0 {padding-bottom: 30px;}
 
 
@@ -2718,12 +2738,25 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 
 .mobile-view-box {
   margin-top: 20px;
+
+  .logo_title{
+
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin-top: 15px;
+    margin-bottom: 5px;
+  }
+
+  .status{
+
+    font-size: 14px;
+  }
 }
 
 
 .mobile-view-box .mobile-img-logo{margin:0 auto;display:block;width:auto;height:116px}
 .mobile-view-box{margin-top:20px}
-.mobile-view-box a.link-btn{text-align:center;width:fit-content;margin:0 auto;color:#ffd852;letter-spacing:1.5px;display:grid;background-color:#5554518c;padding:6px 20px;border-radius:5px;font-size:14px;margin-top:35px;text-transform:uppercase}
+.mobile-view-box a.link-btn{text-align:center;width:fit-content;margin:0 auto;color:#ffd852;letter-spacing:1.5px;display:grid;background-color:#5554518c;padding:6px 20px;border-radius:5px;font-size:14px;margin-top: 20px;text-transform:uppercase}
 .media-event-content .play-icon {height: 40px;}
 
 .awa_card img   {padding: 15px;padding-right:0px;}

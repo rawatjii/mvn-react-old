@@ -116,7 +116,6 @@ const NoPolutionZone = () => {
       <Container>
         <SecTitle className="text-center color style1">
           <h4 ref={titleRef} className="title">Connections with MVN Mall</h4>
-
         </SecTitle>
       </Container>
 

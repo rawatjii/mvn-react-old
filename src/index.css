@@ -1224,6 +1224,7 @@ a {
           letter-spacing: 0.5px;
           color: #9b9b9b;
           margin: 0;
+          height: 165px;
         }
 
         .name {
@@ -1763,11 +1764,11 @@ footer {
     height: 600px;
   }
 
-  img {
+  /* img {
     height: 100%;
     object-fit: cover;
     width: 100%;
-  }
+  } */
 }
 
 .overview_section {
@@ -2895,6 +2896,23 @@ footer {
   }
 }
 
+/* download_brochure_section */
+
+.download_brochure_section{
+
+  padding-top: 100px;
+
+  .btn_style4{
+
+    padding: 15px 20px;
+    border-left: 0;
+    border-right: 0;
+    font-size: 16px;
+    letter-spacing: 2px;
+    font-weight: 300;
+  }
+}
+
 
 /* start responsive */
 /* by bhupendra */
@@ -2918,6 +2936,7 @@ footer {
 }
 
 @media(max-width:767px) {
+
   .d_lg_block {
     display: none;
   }
@@ -2935,6 +2954,16 @@ footer {
 
     padding: 90px 0 40px;
   }
+
+  .download_brochure_section{
+  
+    .btn_style4{
+  
+      font-size: 14px;
+      padding: 12px 20px;
+    }
+  }
+  
 
 
   /* header */
@@ -3190,7 +3219,19 @@ footer {
 
     iframe {
       width: 100%;
-      height: 240px;
+      height: 350px;
+      max-width: 100%;
+      object-fit: contain;
+
+      &:fullscreen {
+        width: 100vw; /* Full width of the viewport */
+        height: 100vh; /* Full height of the viewport */
+      }
+
+      &::-webkit-full-screen {
+        width: 100vw;
+        height: 100vh;
+      }
     }
 
     .video {

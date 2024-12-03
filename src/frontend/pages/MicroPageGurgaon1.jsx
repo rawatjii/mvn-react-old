@@ -45,6 +45,7 @@ import living_area_cam_peacock from "../../../public/assets/images/peacock/peaco
 import CustomCard from "./../components/Card";
 import Amenities2 from "../components/MicroPage/Amenities2";
 import MvnMall from "../components/MicroPage/MvnMall";
+import DownloadBrochure from "../components/MicroPage/DownloadBrochure";
 // import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -204,6 +205,10 @@ const MicroPageGurgaon1 = ({ data }) => {
                                   <Walkthrough data={data.Walkthrough} /> {/*no isssue*/}
                                 </div>
 
+                                <div ref={(el) => (sectionRefs.current.downloadBrochure = el)}>
+                                  <DownloadBrochure />
+                                </div>
+
                                 {/*<div>
                                   <Renders data={data} />  /~no isssue~/
                                 </div>*/}
@@ -253,22 +258,20 @@ const MicroPageGurgaon1 = ({ data }) => {
                       </div>
                     )}
 
+                      <div ref={(el) => (sectionRefs.current.MicroTypology = el)}>
+                        <Typology />
+                      </div>
 
-                                <div ref={(el) => (sectionRefs.current.MicroTypology = el)}>
-                                  <Typology />
-                                </div>
+                      <div ref={(el) => (sectionRefs.current.MicroFloorPlan = el)}>
+                        <MicroFloorPlan data={data.floorPlan} />
+                      </div>
 
-
-                                <div ref={(el) => (sectionRefs.current.MicroFloorPlan = el)}>
-                                  <MicroFloorPlan data={data.floorPlan} />
-                                </div>
-
-                                <div ref={(el) => (sectionRefs.current.MicroLocationMap = el)}>
-                                  <MicroLocationMap data={data.locationAdvantage} />
-                                </div>
+                      <div ref={(el) => (sectionRefs.current.MicroLocationMap = el)}>
+                        <MicroLocationMap data={data.locationAdvantage} />
+                      </div>
 
 
-                                {isMobile ? (
+                    {isMobile ? (
                        <div ref={(el) => (sectionRefs.current.MVNMALL = el)}>
                        <MvnMall />
                      </div>

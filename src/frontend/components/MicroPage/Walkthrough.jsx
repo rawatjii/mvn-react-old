@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import CustomCard from "../Card";
-import { Container } from "react-bootstrap";
+import { Button, Container } from "react-bootstrap";
+import CustomModal from "../../../common/Modal";
 
 const Walkthrough = ()=>{
+
   return(
     <section className="section walkthrough_section">
     {/* <iframe
@@ -14,7 +16,7 @@ const Walkthrough = ()=>{
        // Adjust size as needed
       ></iframe> */}
 
-<iframe  src="https://www.youtube.com/embed/9CHcJAveejU?si=Sr3K9ETfhxeyjrOW" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/9CHcJAveejU?si=Sr3K9ETfhxeyjrOW" title="YouTube video player" frameborder="0" allow="fullscreen; accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
       <Container>
         <div className='about'>
@@ -24,6 +26,8 @@ const Walkthrough = ()=>{
             // extraTxt="Exclusive entrance and exit for the residents."
           />
         </div>
+
+        
       </Container>
     </section>
     

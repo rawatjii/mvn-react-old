@@ -2,7 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
-import DIAMOND from "../../../frontend/assets/images/icons/diamond.png";
+import PlaneIcon from "../../../frontend/assets/images/icons/plane.png";
 import typo1 from "../../assets/images/typologies/270/1.webp";
 import typo2 from "../../assets/images/typologies/270/2.webp";
 import typo3 from "../../assets/images/typologies/270/3.webp";
@@ -118,11 +118,16 @@ const Typology = () => {
         {/* Content boxes */}
         <div className="typology_content">
           <div className="typology-before-line">
-            <div className="typology_diamond_btn">
-              <img src={DIAMOND} alt="" />
-              <img src={DIAMOND} alt="" />
-              <img src={DIAMOND} alt="" />
+
+          <div class="diamond_img_strip">
+            <img src={PlaneIcon} class="img-fluid" alt="image" />
             </div>
+
+            {/* <div className="typology_diamond_btn">
+              <img src={PlaneIcon} alt="" />
+              <img src={PlaneIcon} alt="" />
+              <img src={PlaneIcon} alt="" />
+            </div> */}
 
             <div
               ref={(el) => (contentRefs.current[0] = el)}

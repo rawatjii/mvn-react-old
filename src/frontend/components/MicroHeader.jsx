@@ -118,7 +118,7 @@ const MicroHeader = ({ scrollToSection }) => {
           </Navbar.Brand>
 
           <div className="right">
-            <a href="tel:+918062525105" className="call_btn" ref={callBtnRef}>
+            <a href="tel:+919071008464" className="call_btn" ref={callBtnRef}>
               <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="" />
             </a>
             <Navbar.Toggle
@@ -275,6 +275,13 @@ const MicroHeader = ({ scrollToSection }) => {
                                 onClick={() => {scrollToSection("Walkthrough");toggleMenu("close");}}
                               >
                                 Walkthrough
+                              </a>
+                              <a
+                                
+                                className="new-launch"
+                                onClick={() => {scrollToSection("downloadBrochure");toggleMenu("close");}}
+                              >
+                                Brochure
                               </a>
                                 <a
                                  
@@ -568,6 +575,13 @@ const MicroHeader = ({ scrollToSection }) => {
                               onClick={() => {scrollToSection("Walkthrough");toggleMenu("close");}}
                             >
                               Walkthrough
+                            </a>
+
+                            <a
+                              className="new-launch"
+                              onClick={() => {scrollToSection("downloadBrochure");toggleMenu("close");}}
+                            >
+                              Brochure
                             </a>
 
                             <a

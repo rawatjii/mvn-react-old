@@ -51,7 +51,7 @@ export const data = {
     isVdo: true,
   },
   masterBedroom: {
-    title: "MASTER BEDROOM 1",
+    title: "MASTER BEDROOM Platinum",
     desc: [
       'Bedroom platinum',
       'Wake up to the world at your feet where luxury meets blissful vistas'

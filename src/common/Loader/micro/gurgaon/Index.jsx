@@ -8,11 +8,10 @@ const GurgaonLoader = ({mobile})=>{
   return(
     <div className="loader_section gurgaon_loader">
       {
-    mobile 
-      ? <img src={CONFIG.IMAGE_URL + 'micro/hero/mobile/1.webp'} alt="mvn-micro-loader" className="img-fluid micro_thumbnail" />
-      : <img src={CONFIG.IMAGE_URL + 'micro/hero/desktop/1.webp'} alt="mvn-micro-loader" className="img-fluid micro_thumbnail" />
-  }
-
+        mobile 
+          ? <img src={CONFIG.IMAGE_URL + 'micro/hero/mobile/1.webp'} alt="mvn-micro-loader" className="img-fluid micro_thumbnail" />
+          : <img src={CONFIG.IMAGE_URL + 'micro/hero/desktop/1.webp'} alt="mvn-micro-loader" className="img-fluid micro_thumbnail" />
+      }
       <div className="loaderTxt">
         <BarLoader
           color="#fff"
@@ -20,10 +19,8 @@ const GurgaonLoader = ({mobile})=>{
           width={100}
           className="bar" 
         />
-        <p>Loading Experience</p>
+        <p className="text-white">Loading Experience</p>
       </div>
-      
-      
     </div>
   )
 }

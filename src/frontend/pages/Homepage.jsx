@@ -18,6 +18,7 @@ const Overview = React.lazy(() => import("../components/homepage/Overview"));
 import DeskopheronormalImg from "../../frontend/assets/images/hero/hero-normal-img.webp";
 import MobileheronormalImg from "../../frontend/assets/images/hero/hero-normal-img-mobile.webp";
 import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo-img.webp";
+import { Container } from "react-bootstrap";
 
 const Homepage = () => {
   // State for determining the screen size
@@ -44,12 +45,14 @@ const Homepage = () => {
         className="img-fluid hero-banner"
       /> */}
       <HomepageVideo />
-              <div className="mobile-view-box">  
-
-<img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
-<a href="https://beta1.mvn.in/aeroone-gurgaon1" className="link-btn">Enter The Website </a>
-
-</div>
+      <div className="mobile-view-box">  
+        <Container>
+          <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
+          <h4 className="logo_title">Gurugram</h4>
+          <span className="status">New Launch</span>
+          <a href="https://beta1.mvn.in/aeroone-gurgaon1" className="link-btn">Enter The Website </a>
+        </Container>
+      </div>
 
       {/* Lazy-loaded components */}
       <Suspense fallback="Loading...">

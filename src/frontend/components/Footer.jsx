@@ -77,7 +77,7 @@ const Footer = () => {
             <div className="box office-details-box">
               <h4 className="footer-second-heading">Contact Details</h4>
               <p className="address-details"><span>Meet:</span> MVN AeroOne Dwarka Expressway, 22 Km Milestone, Sector-37D, Gurugram, Pin-122103 <br/> CIN:ACA-4678 | PAN:ABWFM8415E</p>
-              <p className="phone-details"><span>Talk:</span> +91 88267 93148</p>
+              <p className="phone-details"><span>Talk:</span> +91 90710 08464</p>
               <p className="mail-details"><span>Write:</span> info@mvngroup.in</p>
             </div>
           </div>
