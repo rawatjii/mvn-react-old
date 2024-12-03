@@ -25,20 +25,20 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
   {
-    mobile: mvnAerooneImg,
-    desktop: mvnAerooneImgDesktop,
-    name: "Mvn Aeroone",
-    location: "Gurugram",
-    otherPage:false,
-    link:"aeroone-gurgaon1"
-  },
-  {
     mobile: mvnMallImg,
     desktop: mvnMallImgDesktop,
     name: "Mvn Mall",
     location: "Gurugram",
     otherPage:true,
     link:'https://mvnmall.com/'
+  },
+  {
+    mobile: mvnAerooneImg,
+    desktop: mvnAerooneImgDesktop,
+    name: "Mvn Aeroone",
+    location: "Gurugram",
+    otherPage:false,
+    link:"aeroone-gurgaon1"
   },
   {
     mobile: mvnAerooneBangaloreImg,

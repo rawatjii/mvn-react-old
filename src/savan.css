@@ -2607,7 +2607,7 @@ section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;
 
 .section.peacock_section.pb-0.homeScroll-video {padding-top: 0px;}
 
-.projects_section {& .left_col .single {.lazyload-wrapper, .an_img { height: calc(100% - 46px) !important; }}}
+.projects_section {& .left_col .single {.lazyload-wrapper, .an_img { height: calc(100% - 66px) !important; }}}
 
 .projects_section .sec_title span {font-size: 16px !important; padding-bottom: 20px !important;letter-spacing: 1px !important;}
 .projects_section {.sec_title { font-size: 22px;  margin-bottom: 0;height: 63px;letter-spacing: 3px; margin-top: 85px;} }

@@ -43,7 +43,7 @@ const PartyVideo = ({ isMobile, data,onLoadComplete }) => {
     const lottieAnimation = lottie.loadAnimation({
       container: lottieContainerRef.current,
       animationData,
-      renderer: "canvas",
+      renderer: "svg",
       loop: false,
       autoplay: false,
       rendererSettings: {

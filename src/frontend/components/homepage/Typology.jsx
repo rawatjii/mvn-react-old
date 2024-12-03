@@ -134,11 +134,14 @@ const Typology = () => {
               className="content-box"
               style={{ display: "block" }}
             >
-              <h1>270 degree Panoramic Apartment</h1>
+              <h1>Penthouse</h1>
               <p>
-                Spanning an expansive 5,850 sq. ft., these exquisite residences
-                offer a captivating 270-degree panoramic view, seamlessly
-                blending breathtaking vistas with unmatched sophistication.
+                Elevate your lifestyle to new heights with these extraordinary
+                duplex flats, where two levels of unmatched luxury unfold before
+                you. With impeccable attention to detail and a focus on privacy
+                and exclusivity, these residences embody the pinnacle of
+                sophisticated living, where only the most discerning will
+                reside.
               </p>
             </div>
 
@@ -161,16 +164,14 @@ const Typology = () => {
               className="content-box"
               style={{ display: "none" }}
             >
-              <h1>Penthouse</h1>
+              <h1>270 degree Panoramic Apartment</h1>
               <p>
-                Elevate your lifestyle to new heights with these extraordinary
-                duplex flats, where two levels of unmatched luxury unfold before
-                you. With impeccable attention to detail and a focus on privacy
-                and exclusivity, these residences embody the pinnacle of
-                sophisticated living, where only the most discerning will
-                reside.
+                Spanning an expansive 5,850 sq. ft., these exquisite residences
+                offer a captivating 270-degree panoramic view, seamlessly
+                blending breathtaking vistas with unmatched sophistication.
               </p>
             </div>
+
           </div>
         </div>
 
