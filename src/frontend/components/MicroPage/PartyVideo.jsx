@@ -10,7 +10,7 @@ import lottie from "lottie-web";
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const PartyVideo = ({ isMobile, data,onLoadComplete }) => {
+const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const lottieContainerRef = useRef(null);
@@ -65,6 +65,14 @@ const PartyVideo = ({ isMobile, data,onLoadComplete }) => {
         lottieAnimation.goToAndStop(frameIndex, true);
       },
       onLeave: () => {
+        // Apply the desired transform value when the animation ends
+        const svgElement = lottieContainerRef.current.querySelector(".jpg");
+        if (svgElement) {
+          svgElement.setAttribute(
+            "transform",
+            "matrix(0.3437773883342743,0,0,0.3437773883342743,50.0512752532959,-205.71138763427734)"
+          );
+        }
         lottieAnimation.goToAndStop(lottieAnimation.totalFrames - 1, true);
       },
       onLeaveBack: () => {
@@ -75,6 +83,7 @@ const PartyVideo = ({ isMobile, data,onLoadComplete }) => {
     // Set loading to false after both the animation and Lottie are ready
     lottieAnimation.addEventListener("DOMLoaded", () => setLoading(false));
     onLoadComplete();
+
     return () => {
       scrollAnimation.kill();
       lottieAnimation.destroy();

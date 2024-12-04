@@ -2764,8 +2764,18 @@ ul.journey_content  .plane img {width: auto; height: 61px;}
 
 .desktop-mvn-mall{display: none;}
 .mvn-section-banner.container {padding-top: 0;padding-bottom: 40px;}
-
-
+/* .section.peacock_section.pb-0  svg g image {
+  height: 5852px!important;
+} */
+.modal-body  .sec_title.text-center.color.style1 {
+  margin-bottom: 0px;
+}
+.modal-body     h4.title {
+      padding-bottom: 20px;
+  }
+.modal-body .floor_plan_popup .container {
+  padding: 28px!important;
+}
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
@@ -2793,5 +2803,7 @@ p.rera-number {
 section.section.micro_overview.text-center.pb-0 .overview_card {
   padding-bottom: 40px;
 }
+
+
 
 
