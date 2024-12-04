@@ -152,11 +152,13 @@ const Header = () => {
                 <div class="menu-area">
                   <div>
                     <div className="top_head">
-                    <Link
-                      onClick={() => toggleMenu("close")}
-                    >
-                      <img src={CONFIG.IMAGE_URL + "logo_white.webp"} width="50" />
-                    </Link>
+                      <Link
+                        onClick={() => toggleMenu("close")}
+                      >
+                        <img src={CONFIG.IMAGE_URL + "logo_white.webp"} width="50" />
+                      </Link>
+
+                      <span className="close d-md-none"onClick={() => toggleMenu("close")}>&times;</span>
                     </div>
                     <div class="inner-menu">
                       <div class="top-area">
@@ -332,7 +334,7 @@ const Header = () => {
                 </div>
 
 
-                <div class="closebtn-area d-none d-md-grid">
+                <div class="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> Close</a>
                 </div>
               </div>

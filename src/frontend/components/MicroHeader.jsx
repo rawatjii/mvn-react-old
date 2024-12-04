@@ -149,6 +149,9 @@ const MicroHeader = ({ scrollToSection }) => {
                     >
                       <img src={CONFIG.IMAGE_URL + "logo_white.webp"} className="logo"/>
                     </Link>
+                    
+
+                    <span className="close d-md-none"onClick={() => toggleMenu("close")}>&times;</span>
                     </div>
                     <div class="inner-menu">
                       <div class="top-area">

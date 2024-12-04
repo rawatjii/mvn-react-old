@@ -3310,6 +3310,16 @@ footer {
 
             width: 100%;
 
+            .top_head{
+              display:flex;
+              justify-content: space-between;
+
+              .close{
+
+                font-size: 30px;
+              }
+            }
+
             .inner-menu{
               display:flex;
               flex-direction: column;
