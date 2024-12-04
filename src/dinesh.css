@@ -738,14 +738,6 @@ section.section.experience-section {
     align-content: space-between;
   }
 
-  .projects_section {
-    & .left_col .single {
-      .lazyload-wrapper,
-      .an_img {
-        height: 791px !important;
-      }
-    }
-  }
 
   .projects_section {
     .plane_icon {
@@ -1883,14 +1875,14 @@ footer {
     }
   }
 
-  .projects_section {
+  /* .projects_section {
     & .left_col .single {
       .lazyload-wrapper,
       .an_img {
         height: 584px !important;
       }
     }
-  }
+  } */
 
   .projects_section {
     .sec_title {

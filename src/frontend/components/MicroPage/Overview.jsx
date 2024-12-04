@@ -43,10 +43,11 @@ const MicroOverview = ({data})=>{
 
         {/* <CustomCard data={data} /> */}
 
-        <p className="rera-number">RERA Registration no : RERA-GRG-PROJ-1729- 2024<br/>
+        <p className="rera-number">RERA Registration no : RERA-GRG-PROJ-1729- 2024
+          {/* <br/>
           Bank A/C Name: M/s MVN Infrastructure Projects LLP<br/>
           HDFC A/C NO : 9991340000999<br/>
-          IFSC CODE : HDFC0000279<br/>
+          IFSC CODE : HDFC0000279<br/> */}
         </p>
       </Container>
 

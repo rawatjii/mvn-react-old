@@ -17,15 +17,24 @@ gsap.registerPlugin(ScrollTrigger);
 
 const images = [
   {
-    asset: CONFIG.IMAGE_URL + 'renders/elevation/1.webp',
+    assets: {
+      desktop:CONFIG.IMAGE_URL + 'renders/elevation/1.webp',
+      mobile:CONFIG.IMAGE_URL + 'renders/elevation/1_sm.webp',
+    },
     watermark: 'right'
   },
   {
-    asset: CONFIG.IMAGE_URL + 'renders/elevation/2.webp',
+    assets: {
+      desktop:CONFIG.IMAGE_URL + 'renders/elevation/2.webp',
+      mobile:CONFIG.IMAGE_URL + 'renders/elevation/2_sm.webp',
+    },
     watermark: 'left'
   },
   {
-    asset: CONFIG.IMAGE_URL + 'renders/elevation/3.webp',
+    assets: {
+      desktop:CONFIG.IMAGE_URL + 'renders/elevation/3.webp',
+      mobile:CONFIG.IMAGE_URL + 'renders/elevation/3_sm.webp',
+    },
     watermark: 'left'
   }
 ];
@@ -97,7 +106,8 @@ export default function MicroElevation({ data = images }) {
               <div className="card center" onClick={() => setIndex(index)}>
                 {/* Wrapping image in AnImage component for animation */}
                 <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
-                  <img src={image.asset} alt="" className='img-fluid elevation-section-img' onLoad={handleImageLoad} />
+                  <img src={image.assets.desktop} alt="" className='img-fluid elevation-section-img d-none d-md-block' onLoad={handleImageLoad} />
+                  <img src={image.assets.mobile} alt="" className='img-fluid elevation-section-img d-md-none' />
                   <Watermark className={image.watermark} />
                 </AnImage>
               </div>
@@ -118,7 +128,7 @@ export default function MicroElevation({ data = images }) {
 
       <Lightbox
         index={index}
-        slides={images.map(img => ({ src: img.asset }))}
+        slides={images.map(img => ({ src: img.assets.desktop }))}
         open={index >= 0}
         close={() => setIndex(-1)}
         plugins={[Fullscreen, Zoom]}

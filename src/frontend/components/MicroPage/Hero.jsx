@@ -75,7 +75,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 2}`, // Extend scroll distance to fit more frames
+      end: `+=${window.innerHeight * 6}`, // Extend scroll distance to fit more frames
       pin: true,
       scrub: 0.005,
       onUpdate: (self) => {

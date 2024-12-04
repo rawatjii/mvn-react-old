@@ -35,7 +35,7 @@ const projectsData = [
   {
     mobile: mvnAerooneImg,
     desktop: mvnAerooneImgDesktop,
-    name: "Mvn Aeroone Residencies",
+    name: "Mvn Aeroone Residency",
     location: "Gurugram",
     otherPage:false,
     link:"aeroone-gurgaon1"
@@ -54,11 +54,11 @@ const Projects = () => {
   const imageDivRefs = useRef([]);
   const titleRef = useRef();
   const [imagesLoaded, setImagesLoaded] = useState(0);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768); // Set initial state based on current screen size
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 768); // Set initial state based on current screen size
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768);
+      setIsDesktop(window.innerWidth >= 768);
     };
 
     window.addEventListener("resize", handleResize);
@@ -110,6 +110,13 @@ const Projects = () => {
     setImagesLoaded((prev) => prev + 1);
   };
 
+  const leftColProjects = isDesktop
+    ? [projectsData[0], projectsData[2]] // "Mvn Mall" and "Mvn"
+    : [projectsData[0]]; // Desktop: "Mvn Mall" only
+  const rightColProjects = isDesktop
+    ? [projectsData[1]] // "Mvn Aeroone Residency"
+    : projectsData.slice(1); // Desktop: Rest of the projects
+
   return (
     <>
       <section className="section projects_section pb-0">
@@ -121,104 +128,85 @@ const Projects = () => {
 
         <Container>
           <Row className="mx_-8">
-            {projectsData?.map((item, index) => {
-              if (index === 0) {
-                return (
-                  <>
-                    <Col key={index} xs={6} className="px_8 left_col">
-                      <h3 className="sec_title">
-                        Explore <span>Our Projects</span>
-                      </h3>
-                      <div className="single">
-                        <AnImage
-                          ref={(el) => (imageDivRefs.current[index] = el)}
-                          height={100}
-                        >
-                          <Link to={projectsData.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
-                            <img
-                              src={isMobile ? item.mobile : item.desktop}
-                              alt={item.name}
-                              className="img-fluid thumbnail"
-                              onLoad={handleImageLoad}
-                              />
-                            </Link>
-                        </AnImage>
-                        <div className="content">
-                          <div className="left">
-                            <h4 className="project_name">{item.name}</h4>
-                            <p className="location">{item.location}</p>
-                          </div>
-
-                          <div className="right">
-                            <Link to={item.link}>                            
-                              <img
-                                src={arrowIcon}
-                                alt="mvn-arrow-icon"
-                                className="img-fluid icon"
-                              />
-                            </Link>
-                          </div>
-                        </div>
-                      </div>
-                    </Col>
-                  </>
-                );
-              }
-
-              return null;
-            })}
-
-            <Col xs={6} className="px_8 right_col">
-              {projectsData?.map((item, index) => {
-                if (index > 0) {
-                  return (
-                    <div key={index} className="single">
-                      <AnImage
-                        ref={(el) => (imageDivRefs.current[index] = el)}
-                        height={100}
-                      >
-                       <Link to={item.link} target="_blank">                       
-                        <img
-                            src={isMobile ? item.mobile : item.desktop}
-                            alt={item.name}
-                            className="img-fluid thumbnail"
-                            onLoad={handleImageLoad}
-                          />
-                       </Link>
-                      </AnImage>
-                      <div className="content">
-                        <div className="left">
-                          <h4 className="project_name">{item.name}</h4>
-                          <p className="location">{item.location}</p>
-                        </div>
-
-                        <div className="right">
-                          <Link to={item.link} target="_blank">
-                            <img
-                              src={arrowIcon}
-                              alt="mvn-arrow-icon"
-                              className="img-fluid icon"
-                            />
-                          </Link>
-                        </div>
-                      </div>
+            {/* Left Column */}
+            <Col xs={6} className="px_8 left_col">
+              <h3 className="sec_title">
+                Explore <span>Our Projects</span>
+              </h3>
+              {leftColProjects.map((item, index) => (
+                <div key={index} className="single">
+                  <AnImage
+                    ref={(el) => (imageDivRefs.current[index] = el)}
+                    height={100}
+                  >
+                    <Link to={item.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
+                      <img
+                        src={isDesktop ? item.mobile : item.desktop}
+                        alt={item.name}
+                        className="img-fluid thumbnail"
+                        onLoad={handleImageLoad}
+                      />
+                    </Link>
+                  </AnImage>
+                  <div className="content">
+                    <div className="left">
+                      <h4 className="project_name">{item.name}</h4>
+                      <p className="location">{item.location}</p>
                     </div>
-                  );
-                }
 
-                return null;
-              })}
+                    <div className="right">
+                      <Link to={item.link}>
+                        <img
+                          src={arrowIcon}
+                          alt="mvn-arrow-icon"
+                          className="img-fluid icon"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </Col>
+
+            {/* Right Column */}
+            <Col xs={6} className="px_8 right_col">
+              {rightColProjects.map((item, index) => (
+                <div key={index} className="single">
+                  <AnImage
+                    ref={(el) =>
+                      (imageDivRefs.current[leftColProjects.length + index] = el)
+                    }
+                    height={100}
+                  >
+                    <Link to={item.link} target="_blank">
+                      <img
+                        src={isDesktop ? item.mobile : item.desktop}
+                        alt={item.name}
+                        className="img-fluid thumbnail"
+                        onLoad={handleImageLoad}
+                      />
+                    </Link>
+                  </AnImage>
+                  <div className="content">
+                    <div className="left">
+                      <h4 className="project_name">{item.name}</h4>
+                      <p className="location">{item.location}</p>
+                    </div>
+
+                    <div className="right">
+                      <Link to={item.link} target="_blank">
+                        <img
+                          src={arrowIcon}
+                          alt="mvn-arrow-icon"
+                          className="img-fluid icon"
+                        />
+                      </Link>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </Col>
           </Row>
-
-          {/* <Button className="btn_style1">
-            <span className="txt">View All Projects</span>
-            <img
-              src={btn_arrow}
-              alt="mvn button arrow icon"
-              className="img-fluid"
-            />
-          </Button> */}
         </Container>
       </section>
     </>

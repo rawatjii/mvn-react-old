@@ -10,6 +10,7 @@ import ScrollToTop from '../../common/ScrollToTop';
 
 import { Outlet } from "react-router-dom";
 import { useEffect,useRef } from "react";
+import HeaderNew from "./HeaderNew";
 
 
 // Register GSAP plugins
@@ -43,6 +44,7 @@ const Layout = ({children})=>{
 
   return(
     <>
+      {/* <HeaderNew /> */}
       <Header />
       <div id="smooth-wrapper"  >
         <div id="smooth-content" >
