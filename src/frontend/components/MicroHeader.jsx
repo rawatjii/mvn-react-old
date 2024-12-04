@@ -208,6 +208,15 @@ const MicroHeader = ({ scrollToSection }) => {
                       <div class="bottom-area">
                         <div class="inner-bottom-area">
                           <div class="microsite">
+                        
+
+                          <ul>
+                          <li>
+                                <NavLink to={import.meta.env.VITE_APP_URL} onClick={() => toggleMenu("close")}>
+                                  Home
+                                </NavLink>
+                              </li>
+                              </ul>
                             <h4>MVN AeroOne, Gurugram</h4>
                             <ul>
                               <li>
@@ -370,11 +379,7 @@ const MicroHeader = ({ scrollToSection }) => {
 
                           <div class="right top">
                             <ul>
-                              <li>
-                                <NavLink to={import.meta.env.VITE_APP_URL} onClick={() => toggleMenu("close")}>
-                                  Home
-                                </NavLink>
-                              </li>
+                             
                               {window.innerWidth > 768 ? (
                                 <>
                                   <li>
