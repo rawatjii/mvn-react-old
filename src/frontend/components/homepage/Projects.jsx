@@ -9,7 +9,7 @@ import AnImage from "../../../common/animations/Image/Index";
 
 import mvnMallImg from "../../assets/images/projects/mvn-mall.webp";
 import mvnAerooneImg from "../../assets/images/projects/mvn-aeroone.webp";
-import mvnAerooneBangaloreImg from "../../assets/images/projects/mvn-aeroone-bangalore.webp";
+import mvnAerooneBangaloreImg from "../../assets/images/projects/gg.jpg";
 import mvnMallImgDesktop from "../../assets/images/projects/project-img-3.webp";
 import mvnAerooneImgDesktop from "../../assets/images/projects/mvn-aeroone.webp";
 import mvnAerooneBangaloreImgDesktop from "../../assets/images/projects/project-img-1.jpg";

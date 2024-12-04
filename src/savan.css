@@ -2776,6 +2776,31 @@ ul.journey_content  .plane img {width: auto; height: 61px;}
 .modal-body .floor_plan_popup .container {
   padding: 28px!important;
 }
+.micro_hero_section .frames_content img {
+  object-position: -20px 0px;
+}
+.projects_section {
+  & .right_col {
+      & .an_img {
+          a {
+              height: unset!important;
+              display: block!important;
+          }
+      }
+  }
+}
+.projects_section {
+  & .right_col {
+      & .an_img {
+          img {
+              object-fit: cover;
+              height: unset!important;
+              min-height: 125px!important;
+          }
+      }
+  }
+}
+
 
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
