@@ -145,57 +145,186 @@ const Header = () => {
           <div id="basic-navbar-nav" className="navbar_collapse" ref={menusRef}>
             <div class="overlay-content">
               <div class="inner-overlay">
-                <div class="video-area">
+                <div class="video-area d-none d-md-block">
                   <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" />
                 </div>
 
-
                 <div class="menu-area">
-                  <div class="inner-menu">
-                    <div class="top-area">
-                      <img src="images/mvn-logo.png" />
-                      <div class="inner-logo">
-                        <p><span>Office:</span> 58A/1, First Floor, Kalu Sarai, New Delhi 110016</p>
-                        <p><span>Phone:</span> (+91)-9999 8888 222, (+91)-9999 8888 222</p>
-                      </div>
+                  <div>
+                    <div className="top_head">
+                    <Link
+                      onClick={() => toggleMenu("close")}
+                    >
+                      <img src={CONFIG.IMAGE_URL + "logo_white.webp"} width="50" />
+                    </Link>
                     </div>
-
-                    <div class="bottom-area">
-                      <div class="inner-bottom-area">
-                        <div class="left">
-                          <h4>Gurugram</h4>
-                        <ul>
-                          <li><a href="#">MVN Mall </a><a href="#"><span>New Launch</span></a></li>
-                          <li><a href="#">MVN Aero One </a><a href="#"><span>New Launch</span></a></li>
-                        </ul>
-
-                        <h4>Sohna</h4>
-                        <ul>
-                          <li><a href="#">MVN Athens</a></li>
-                          <li><a href="#">MVN Athens PH-2</a></li>
-                        </ul>
-
-                        <h4>Bangalore</h4>
-                        <ul>
-                          <li><a href="#">MVN</a></li>
-                        </ul>
-
-                        <h4>Faridabad</h4>
-                        <ul>
-                          <li><a href="#">MVN Mall</a></li>
-                          <li><a href="#">MVN Athens</a></li>
-                        </ul>
+                    <div class="inner-menu">
+                      <div class="top-area">
+                        
+                        <div class="inner-logo d-none d-md-block">
+                          <p><span>Office:</span> MVN AeroOne Dwarka Expressway, 22 Km Milestone, Sector-37D, Gurugram, Pin-122103</p>
+                          <p><span>Talk:</span> +91 90710 08464</p>
                         </div>
 
-                        <div class="right">
+                        <ul className="sub_menu d-md-none">
+                            <li>
+                              <label htmlFor="school" className=" d-block w-100">Social Media</label>
+                              <ul className="social_links ">
+                                <li>
+                                  <Link to="https://www.facebook.com/officialmvninfra/" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/fb.png"}`}
+                                      alt="mvn-fb-icon"
+                                    />
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="https://www.instagram.com/mvn_infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/instagram.png"}`}
+                                      alt="mvn-insta-icon"
+                                    />
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="https://www.linkedin.com/company/mvn-infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/linkedin.png"}`}
+                                      alt="mvn-linkedin-icon"
+                                    />
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="https://www.youtube.com/@MVNInfrastructures" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/youtube.png"}`}
+                                      alt="mvn-youtube-icon"
+                                    />
+                                  </Link>
+                                </li>
+                              </ul>
+
+                              <img src={subscribeBtn} alt="subscribe_btn" className="subscribe_btn" onClick={() => window.open(channelUrl, "_blank")} style={{cursor:'pointer'}} />
+
+
+                            </li>
+                        </ul>
+                      </div>
+
+                      <div class="bottom-area">
+                        <div class="inner-bottom-area">
+                          <div class="left">
+                            <h4>Gurugram</h4>
                           <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Media Center</a></li>
-                            <li><a href="#">Blog</a></li>
-                            <li><a href="#">Career</a></li>
-                            <li><a href="#">Contact Us</a></li>
+                            <li className="new_launch">
+                              <NavLink to="https://mvnmall.com/" target="_blank" onClick={() => toggleMenu("close")}>
+                                MVN Mall
+                              </NavLink>
+                                <a href="javascript:void(0)"><span>New Launch</span></a>
+                            </li>
+                            <li className="new_launch">
+                              <NavLink to={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} onClick={() => toggleMenu("close")}>
+                                MVN Aero One
+                              </NavLink>
+                              <a href="javascript:void(0)"><span>New Launch</span></a>
+                            </li>
                           </ul>
+
+                          <h4>Sohna</h4>
+                          <ul>
+                            <li>
+                              <NavLink to="https://www.mvn.in/athens-gurugram/" target="_blank" onClick={() => toggleMenu("close")}>
+                                MVN Athens
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank" onClick={() => toggleMenu("close")}>MVN Athens PH-2</NavLink>
+                            </li>
+                          </ul>
+
+                          <h4>Bangalore</h4>
+                          <ul>
+                            <li>
+                              <NavLink to="https://www.mvnaeroone.com/" target="_blank" onClick={() => toggleMenu("close")}>MVN</NavLink>
+                            </li>
+                          </ul>
+
+                          <h4>Faridabad</h4>
+                          <ul>
+                            <li>
+                              <NavLink to="https://www.mvn.in/athens-faridabad/" target="_blank" onClick={() => toggleMenu("close")}>MVN Athens</NavLink>
+                            </li>
+                          </ul>
+                          </div>
+
+                          <div class="right top">
+                            <ul>
+                              <li>
+                                <NavLink to={import.meta.env.VITE_APP_URL} onClick={() => toggleMenu("close")}>
+                                  Home
+                                </NavLink>
+                              </li>
+                              {window.innerWidth > 768 ? (
+                                <>
+                                  <li>
+                                    <NavLink to={import.meta.env.VITE_APP_URL + 'about-us'} onClick={() => toggleMenu("close")}>
+                                      About Us
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink to={import.meta.env.VITE_APP_URL + 'media-center'} onClick={() => toggleMenu("close")}>
+                                    Media Center
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink to={import.meta.env.VITE_APP_URL + 'blogs'} onClick={() => toggleMenu("close")}>
+                                    Blogs
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink to={import.meta.env.VITE_APP_URL + 'career'} onClick={() => toggleMenu("close")}>
+                                    Career
+                                    </NavLink>
+                                  </li>
+                                  <li>
+                                    <NavLink to={import.meta.env.VITE_APP_URL + 'contact-us'} onClick={() => toggleMenu("close")}>
+                                    Contact Us
+                                    </NavLink>
+                                  </li>
+                                </>
+                              ) : null}
+                            </ul>
+                          </div>
+
+                          <div class="right bottom d-md-none">
+                            <ul>
+                            <li>
+                              <NavLink to={import.meta.env.VITE_APP_URL + 'about-us'} onClick={() => toggleMenu("close")}>
+                                About Us
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to={import.meta.env.VITE_APP_URL + 'media-center'} onClick={() => toggleMenu("close")}>
+                              Media Center
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to={import.meta.env.VITE_APP_URL + 'blogs'} onClick={() => toggleMenu("close")}>
+                              Blogs
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to={import.meta.env.VITE_APP_URL + 'career'} onClick={() => toggleMenu("close")}>
+                              Career
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to={import.meta.env.VITE_APP_URL + 'contact-us'} onClick={() => toggleMenu("close")}>
+                              Contact Us
+                              </NavLink>
+                            </li>
+                            </ul>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -203,7 +332,7 @@ const Header = () => {
                 </div>
 
 
-                <div class="closebtn-area">
+                <div class="closebtn-area d-none d-md-grid">
                   <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> Close</a>
                 </div>
               </div>
