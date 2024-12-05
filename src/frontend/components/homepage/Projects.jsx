@@ -16,6 +16,9 @@ import mvnAerooneBangaloreImgDesktop from "../../assets/images/projects/mobile-d
 import arrowIcon from "../../assets/images/icons/arrow.png";
 import btn_arrow from "../../assets/images/icons/btn_arrow.png";
 import planeIcon from "../../assets/images/icons/plane.jpg";
+import NewLaunchIcon from "../../assets/images/icons/new-launch-patch.png"
+
+
 import * as CONFIG from '../../../config/config'
 
 import { Link } from "react-router-dom";
@@ -128,18 +131,22 @@ const Projects = () => {
 
         <Container>
           <Row className="mx_-8">
+
             {/* Left Column */}
             <Col xs={6} className="px_8 left_col">
+         
               <h3 className="sec_title">
                 Explore <span>Our Projects</span>
               </h3>
               {leftColProjects.map((item, index) => (
                 <div key={index} className="single">
+                  
                   <AnImage
                     ref={(el) => (imageDivRefs.current[index] = el)}
                     height={100}
-                  >
+                  >   <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
                     <Link to={item.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
+
                       <img
                         src={isDesktop ? item.mobile : item.desktop}
                         alt={item.name}
@@ -170,8 +177,12 @@ const Projects = () => {
 
             {/* Right Column */}
             <Col xs={6} className="px_8 right_col">
+
+        
+             
               {rightColProjects.map((item, index) => (
                 <div key={index} className="single">
+                        <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
                   <AnImage
                     ref={(el) =>
                       (imageDivRefs.current[leftColProjects.length + index] = el)

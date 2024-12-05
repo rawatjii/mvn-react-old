@@ -43,7 +43,7 @@ const HomepageVideo = ({ data }) => {
     }
 
     // Set total frames dynamically
-    let frameCount = isMobile ? 93 : 93;
+    let frameCount = isMobile ? 10 : 93;
     setTotalFrames(frameCount);
   }, [data]);
 
@@ -116,6 +116,9 @@ const HomepageVideo = ({ data }) => {
   }, [loading, images, totalFrames]);
 
   return (
+    <>
+    
+
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
       {loading && (
@@ -134,14 +137,28 @@ const HomepageVideo = ({ data }) => {
               style={{ display: index === 0 ? "block" : "none" }}
             />
           ))}
+
+
+
+<div id="scroll-wrapper">
+        <div id="scroll-wrapper-inner">
+          <div id="scroll-title">
+            Scroll Down
+          </div>
+          <div class="scroll-down-dude"></div>
+        </div>
+      </div>
+
+
         </div>
       )}
 
 
-
-
-
     </section>
+
+
+
+    </>
   );
 };
 

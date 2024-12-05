@@ -8,6 +8,7 @@ import Testimonial from "../components/homepage/Testimonial";
 import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import HomepageVideo from '../components/MicroPage/HomepageVideo';
+import CussorPointer from '../../frontend/assets/images/icons/swipe-up.gif';
 // Lazy-loaded components
 
 const Overview = React.lazy(() => import("../components/homepage/Overview"));
@@ -39,15 +40,25 @@ const Homepage = () => {
         alt="Hero Banner"
         className="img-fluid hero-banner"
       /> */}
+
+
+
+
+
       <HomepageVideo isMobile={isMobile} />
               <div className="mobile-view-box">  
                   <Container>
                     <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
                     <h4 className="logo_title">Gurugram</h4>
                     <span className="status">New Launch</span>
-                    <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} className="link-btn">Enter The Website </a>
+                    <p className="slogan-heading">Behold to Experience the complete view!</p>
+                    <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} className="link-btn">Entre To Experience </a>
                   </Container>
                 </div>
+
+                {/* <img src={CussorPointer} alt="" className="img-fluid cursor-img"/> */}
+
+
       {/* Lazy-loaded components */}
       <Suspense fallback="Loading...">
         <Overview />
