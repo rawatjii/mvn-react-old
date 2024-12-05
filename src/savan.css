@@ -1061,6 +1061,11 @@ section.section.walkthrough_section .overview_card {
 
 @media screen and (min-width: 767px) {
 
+
+  
+
+
+
   .navbar {
     & .navbar-toggler {
       .navbar-toggler-icon {
@@ -2050,7 +2055,9 @@ section.section.projects_section.pb-0 .new-launch-patch {
 }
 
 
-
+.mobile-view-box a.link-btn {
+  padding: 10px 20px;
+}
 
 }
 
@@ -2352,7 +2359,7 @@ section.section.micro_overview.text-center.pb-0 .overview_card {
 #scroll-down{display:block;position:relative;padding-top:79px;text-align:center}
 #scroll-title{display:block;text-transform:uppercase;color:#fff;font-family:"raleway";font-size:14px;font-weight:700;letter-spacing:.4em;text-align:center;margin-bottom:20px}
 #scroll-down::before{animation:elasticus 2.9s cubic-bezier(1,0,0,1) infinite;position:absolute;top:0;left:50%;margin-left:-1px;width:2px;height:90px;background:#dbc275;content:' '}
-#scroll-wrapper {display: table;width: 100%;height: auto;position: relative;top: -100px;color: #dbc275;}
+#scroll-wrapper {display: table;width: 100%;height: auto;position: relative;top: -180px;color: #dbc275;}
 .scroll-down-dude {
   position: relative;
   margin: 0px auto;
@@ -2916,7 +2923,6 @@ ul.journey_content  .plane img {width: auto; height: 61px;}
   border-style: double;
   border-left: none;
   border-right: none;
-  width: 63%;
 }
 
 section.section.projects_section.pb-0 .px_8.right_col.col-6{position:relative}
@@ -2937,6 +2943,22 @@ section.section.projects_section.pb-0 .single:nth-of-type(2) .new-launch-patch {
 }
 .mobile-view-box a.link-btn {
   width: 60%!important;
+}
+.mobile-view-box a.link-btn {
+  padding: 7px;
+  width: 64% !important;
+}
+.mobile-view-box a.link-btn {
+  padding: 7px 10px !important;
+  width: 63% !important;
+}
+section.section.projects_section.pb-0 .new-launch-patch {
+  top:50%;
+  filter: drop-shadow(0px 2px 3px #262626);
+}
+
+section.section.projects_section.pb-0 .new-launch-patch {
+  filter: drop-shadow(0px 2px 3px #262626);
 }
 
 }
@@ -2976,9 +2998,10 @@ p.km_text {
   display: flex;
   align-items: center;
   padding: 0px;
-  width: 75%;
   justify-content: center;
   gap: 0px 1px;
 }
 
+
 /* Modal CSS Added by Adarsh */
+
