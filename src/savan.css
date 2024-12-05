@@ -2039,6 +2039,19 @@ li.menuFlexBox.middle-menu div .height-transition {
   width: 100%;
 }
 
+section.section.projects_section.pb-0 .new-launch-patch {
+  position: absolute;
+  top: 0px!important;
+  z-index: 1;
+  width: 144px!important;
+  height: auto;
+  right: 0!important;
+  z-index: 999;
+}
+
+
+
+
 }
 
 section.section.other_projects_section.pb-0 {padding-bottom: 70px !important;}
