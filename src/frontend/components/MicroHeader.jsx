@@ -6,6 +6,7 @@ import * as CONFIG from "root/config/config";
 import { useEffect, useRef, useState } from "react";
 
 import subscribeBtn from '../assets/images/icons/subscribe_btn.webp';
+import CloseBtnimg from '../assets/images/icons/close.png';
 
 import "./Header.css";
 
@@ -256,32 +257,6 @@ const MicroHeader = ({ scrollToSection }) => {
                                 </a>
                               </li>
 
-                              <li>
-                                <a
-                                  className="new-launch"
-                                  onClick={() => {scrollToSection("MicroLandscape");toggleMenu("close");}}
-                                >
-                                  Landscape
-                                </a>
-                              </li>
-
-                              <li>
-                                <a
-                                  className="new-launch"
-                                  onClick={() => {scrollToSection("MicroElevation");toggleMenu("close");}}
-                                >
-                                  Elevation
-                                </a>
-                              </li>
-
-                              <li>
-                                <a
-                                  className="new-launch"
-                                  onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
-                                >
-                                  Apartment Views
-                                </a>
-                              </li>
 
                               <li>
                                 <a
@@ -338,9 +313,40 @@ const MicroHeader = ({ scrollToSection }) => {
                               </li>
 
                             </ul>
+                            <ul>
+                            <h4>Gallery</h4>
+                            <li>
+                                <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroLandscape");toggleMenu("close");}}
+                                >
+                                  Landscape
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroElevation");toggleMenu("close");}}
+                                >
+                                  Elevation
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
+                                >
+                                  Apartment Views
+                                </a>
+                              </li>
+                            </ul>
                           </div>
                           <div class="left">
-                            <h4>Gurugram</h4>
+                
+
+                          <h4>Gurugram</h4>
                           <ul>
                             <li className="new_launch">
                               <NavLink to="https://mvnmall.com/" target="_blank" onClick={() => toggleMenu("close")}>
@@ -349,19 +355,6 @@ const MicroHeader = ({ scrollToSection }) => {
                                 <a href="javascript:void(0)"><span>New Launch</span></a>
                             </li>
                           </ul>
-
-                          <h4>Sohna</h4>
-                          <ul>
-                            <li>
-                              <NavLink to="https://www.mvn.in/athens-gurugram/" target="_blank" onClick={() => toggleMenu("close")}>
-                                MVN Athens
-                              </NavLink>
-                            </li>
-                            <li>
-                              <NavLink to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank" onClick={() => toggleMenu("close")}>MVN Athens PH-2</NavLink>
-                            </li>
-                          </ul>
-
                           <h4>Bangalore</h4>
                           <ul>
                             <li>
@@ -375,6 +368,24 @@ const MicroHeader = ({ scrollToSection }) => {
                               <NavLink to="https://www.mvn.in/athens-faridabad/" target="_blank" onClick={() => toggleMenu("close")}>MVN Athens</NavLink>
                             </li>
                           </ul>
+
+
+                          <h4>Sohna</h4>
+                          <ul>
+                            <li>
+                              <NavLink to="https://www.mvn.in/athens-gurugram/" target="_blank" onClick={() => toggleMenu("close")}>
+                                MVN Athens
+                              </NavLink>
+                            </li>
+                            <li>
+                              <NavLink to="https://www.mvninfrastructure.com/athens-gurugram-phase2/" target="_blank" onClick={() => toggleMenu("close")}>MVN Athens PH-2</NavLink>
+                            </li>
+                          </ul>
+
+
+
+
+
                           </div>
 
                           <div class="right top">
@@ -449,7 +460,7 @@ const MicroHeader = ({ scrollToSection }) => {
 
 
                 <div class="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> Close</a>
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> <img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
                 </div>
               </div>
             </div>

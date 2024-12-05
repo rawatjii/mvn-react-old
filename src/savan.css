@@ -1062,7 +1062,17 @@ section.section.walkthrough_section .overview_card {
 @media screen and (min-width: 767px) {
 
 
-  
+  .close-img {
+    width: auto;
+    height: 35px;
+    filter: invert(1);
+}
+
+a.closebtn {
+    display: flex;
+    align-items: center;
+    gap: 0px 40px;
+}
 
 
 
@@ -2056,7 +2066,7 @@ section.section.projects_section.pb-0 .new-launch-patch {
 
 
 .mobile-view-box a.link-btn {
-  padding: 10px 20px;
+  padding: 10px 20px!important;
 }
 
 }

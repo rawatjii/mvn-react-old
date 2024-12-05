@@ -4,6 +4,7 @@ import Nav from "react-bootstrap/Nav";
 import { Link, NavLink, useLocation } from "react-router-dom";
 import * as CONFIG from "root/config/config";
 import { useEffect, useRef, useState } from "react";
+import CloseBtnimg from '../assets/images/icons/close.png';
 
 import "./Header.css";
 
@@ -218,19 +219,21 @@ const Header = () => {
                           <div class="left">
                             <h4>Gurugram</h4>
                           <ul>
-                            <li className="new_launch">
-                              <NavLink to="https://mvnmall.com/" target="_blank" onClick={() => toggleMenu("close")}>
-                                MVN Mall
-                              </NavLink>
-                                <a href="javascript:void(0)"><span>New Launch</span></a>
-                            </li>
+                   
                             <li className="new_launch">
                               <NavLink to={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} onClick={() => toggleMenu("close")}>
                                 MVN Aero One
                               </NavLink>
                               <a href="javascript:void(0)"><span>New Launch</span></a>
                             </li>
+                            <li className="new_launch">
+                              <NavLink to="https://mvnmall.com/" target="_blank" onClick={() => toggleMenu("close")}>
+                                MVN Mall
+                              </NavLink>
+                                <a href="javascript:void(0)"><span>New Launch</span></a>
+                            </li>
                           </ul>
+
 
                           <h4>Sohna</h4>
                           <ul>
@@ -335,7 +338,7 @@ const Header = () => {
 
 
                 <div class="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> Close</a>
+                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
                 </div>
               </div>
             </div>
