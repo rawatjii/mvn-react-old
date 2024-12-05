@@ -65,12 +65,15 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
         lottieAnimation.goToAndStop(frameIndex, true);
       },
       onLeave: () => {
-        // Apply the desired transform value when the animation ends
+        // Check screen size and apply the correct transform value
+        const isMobileView = window.innerWidth <= 768; // Mobile view condition
         const svgElement = lottieContainerRef.current.querySelector(".jpg");
         if (svgElement) {
           svgElement.setAttribute(
             "transform",
-            "matrix(0.3437773883342743,0,0,0.3437773883342743,50.0512752532959,-205.71138763427734)"
+            isMobileView
+              ? "matrix(0.3437773883342743,0,0,0.3437773883342743,50.0512752532959,-205.71138763427734)" // Mobile
+              : "matrix(0.2715912461280823,0,0,0.2715912461280823,-178.04544067382812,-439.8266296386719)" // Desktop
           );
         }
         lottieAnimation.goToAndStop(lottieAnimation.totalFrames - 1, true);

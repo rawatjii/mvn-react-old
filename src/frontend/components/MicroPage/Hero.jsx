@@ -107,6 +107,18 @@ const MicroHero = ({ data, onLoadComplete }) => {
   }, [loading, images, totalFrames]);
 
   return (
+
+<>
+
+
+
+
+
+
+
+
+
+
     <section className="section micro_hero_section p-0">
       {/* Show Loader */}
 
@@ -124,6 +136,16 @@ const MicroHero = ({ data, onLoadComplete }) => {
               style={{ display: index === 0 ? "block" : "none" }}
             />
           ))}
+
+<div id="scroll-wrapper">
+        <div id="scroll-wrapper-inner">
+          <div id="scroll-title">
+            Scroll Down
+          </div>
+          <div class="scroll-down-dude"></div>
+        </div>
+      </div>
+
         </div>
       )}
 
@@ -131,7 +153,12 @@ const MicroHero = ({ data, onLoadComplete }) => {
         data.micro_hero_section.images &&
         Array.isArray(data.micro_hero_section.images) &&
         data.micro_hero_section.images.map((imgs, index) => (
+
+          
           <div key={index} className="hero-img">
+
+
+
             <img
               src={imgs.imgDesk}
               alt={`mvn-hero-image-${index}`}
@@ -144,8 +171,13 @@ const MicroHero = ({ data, onLoadComplete }) => {
               className="img-fluid d_sm_block"
               fetchPriority="high"
             />
+
+            
           </div>
         ))}
+
+
+
 
       {!loading && data.micro_hero_section.bannerHighLight && (
         <div className="hero_content">
@@ -179,8 +211,11 @@ const MicroHero = ({ data, onLoadComplete }) => {
           </div>
         )}
 
-      
+
+
     </section>
+
+    </>
   );
 };
 

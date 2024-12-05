@@ -107,9 +107,9 @@ const MicroHero = ({ data, onLoadComplete }) => {
   }, [loading, images, totalFrames]);
 
   return (
-    <section className="section micro_hero_section p-0">
+    <section className="section micro_hero_section p-0 ">
       {/* Show Loader */}
-
+ 
       
 
       {!loading && data.micro_hero_section.isVdo && (
@@ -190,6 +190,9 @@ const MicroHero = ({ data, onLoadComplete }) => {
           <span className="m_scroll_arrows trei"></span>
         </div>
       </div> */}
+
+
+
     </section>
   );
 };

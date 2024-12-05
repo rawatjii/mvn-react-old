@@ -125,6 +125,9 @@ const MicroPageGurgaon1 = ({ data }) => {
           
           <div ref={(el) => (sectionRefs.current.microOverview = el)}>
             <MicroHero data={data} onLoadComplete={() => setHeroLoaded(true)} />
+
+ 
+
           </div>
           
           {/* Render other components only after Hero Section is loaded */}
