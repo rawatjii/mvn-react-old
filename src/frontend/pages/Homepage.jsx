@@ -52,7 +52,7 @@ const Homepage = () => {
                     <h4 className="logo_title">Gurugram</h4>
                     <span className="status">New Launch</span>
                     <p className="slogan-heading">Behold to Experience the complete view!</p>
-                    <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} className="link-btn">Entre To Experience </a>
+                    <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} className="link-btn">Enter To Experience </a>
                   </Container>
                 </div>
 
