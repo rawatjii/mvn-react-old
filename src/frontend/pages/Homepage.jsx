@@ -1,5 +1,6 @@
 import React, { useState, useEffect, Suspense } from "react";
 import Projects from "../components/homepage/Projects";
+import Projectsmobile from "../components/homepage/Projectsmobile";
 import OtherProjects from "../components/homepage/OtheProjects";
 import OurJourney from "../components/homepage/OurJourney";
 import OurTeam from "../components/homepage/OurTeam";
@@ -31,6 +32,9 @@ const Homepage = () => {
       window.removeEventListener("resize", handleResize);
     };
   }, []);
+
+
+  
 
   return (
     <>
@@ -65,7 +69,7 @@ const Homepage = () => {
       </Suspense>
 
       {/* Other Components */}
-      <Projects />
+      {isMobile ? <Projectsmobile /> : <Projects />}
       <OtherProjects />
       <OurJourney />
       <OurTeam />

@@ -2179,6 +2179,9 @@ section.section.walkthrough_section { padding-bottom: 30px; width: 100%;}
   color: #e3ca5d;
 }
 
+.desktop-project-section{display:block;}
+.mobile-project-section{display:none;}
+
 @media(max-width:1600px) {
 
   .media-event-content .event-video-banner {
@@ -2449,6 +2452,17 @@ p.slogan-heading {
 100%{transform:rotate(45deg) translate(-70%,-70%);opacity:1}
 }
 
+
+.HomeMobileProject-section .px_8.right_col.col-12 .single .thumbnail {height: 288px !important; border-radius: 10px;}
+.HomeMobileProject-section .px_8.left_col.col-12 .thumbnail {border-radius: 10px;margin-bottom:10px;}
+.HomeMobileProject-section .px_8.right_col.col-12 {margin-top: 20px;}
+.HomeMobileProject-section { & .single {& .right {.icon {width: 14px;}}}}
+.HomeMobileProject-section .plane_icon {position: unset;width: auto;margin-bottom: 20px; margin-left: auto;margin-right: 33px;}
+.flex-heading-project h3.sec_title {margin-top: unset!important;}
+.flex-heading-project .plane_icon {position: unset;}
+.flex-heading-project {display: flex;align-items: center; width: 100%;}
+.flex-box-1 {width: 50%;}
+.HomeMobileProject-section {& .left_col { .single {      height: calc(100% - 80px); }}}
 
 
 @media(max-width:767px) {
@@ -2979,11 +2993,17 @@ section.section.projects_section.pb-0 .new-launch-patch {
   filter: drop-shadow(0px 2px 3px #262626);
 }
 
+.desktop-project-section{display:none;}
+.mobile-project-section{display:block;}
+
+section.section.other_projects_section.pb-0 {padding-top: 60px;}
+.projects_section .sec_title span {line-height: 24px;}
+.projects_section {.plane_icon {position: absolute;top: 9%;left: 12%;width: 87px;}}
+
+
 }
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
-section.section.projects_section.pb-0 .single:nth-of-type(2) .new-launch-patch {
-  display:none;
-}
+section.section.projects_section.pb-0 .single:nth-of-type(2) .new-launch-patch { display:none;}
 
 
 
@@ -3019,6 +3039,7 @@ p.km_text {
   justify-content: center;
   gap: 0px 1px;
 }
+
 
 
 /* Modal CSS Added by Adarsh */
