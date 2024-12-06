@@ -2212,7 +2212,7 @@ section.section.walkthrough_section { padding-bottom: 30px; width: 100%;}
 
 .slider-content {
   position: absolute;
-  bottom: 3%;
+  bottom: -1%;
   transform: translate(-50%, -50%);
   left: 50%;
   text-align: center;
@@ -2248,6 +2248,42 @@ img.img-fluid.degree-img {
 
 section.overview_section {padding-bottom: 25px;}
 
+#scroll-wrapper {
+  display: table;
+  width: fit-content;
+  height: auto;
+  position: relative;
+  top: -93px;
+  color: #dbc275;
+  right: 0;
+  text-align: right;
+  margin-left: auto;
+  margin-right: 64px;
+}
+.projects_section {
+  & .single {
+      .project_name {
+          font-size: 19px;
+      }
+  }
+}
+.projects_section {
+  & .single {
+      .location {
+          font-size: 15px;
+      }
+  }
+}
+
+section.section.projects_section.pb-0 .px_8.left_col.col-12 .an_img.undefined  .single .new-launch-patch {
+  display: block;
+}
+
+
+.flex-box:nth-of-type(1){position:relative}
+.flex-box:nth-of-type(2){position:relative}
+.flex-box:nth-of-type(1)::after{content:"";position:absolute;top:36%;right:-50%;width:50px;height:1px;background-color:#d9c072}
+.flex-box:nth-of-type(2)::after{content:"";position:absolute;top:36%;right:-50%;width:50px;height:1px;background-color:#d9c072}
 
 
 @media(max-width:1600px) {
@@ -3105,8 +3141,52 @@ section.section.other_projects_section.pb-0 {padding-top: 60px;}
   width: 297px;
 }
 
+.parent-box-div .hero-banner {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+.slider-content {
+  bottom: -4%;
+}
+
+.video-area.d-none.d-md-block {
+  display: none!important;
+}
+
+.px_8.left_col.col-12 .single .new-launch-patch {
+  display: block!important;
+}
+
+.flex-box:nth-of-type(1)::after {
+  content: "";
+  position: absolute;
+  top: 120%;
+  right: 31%;
+  width: 50px;
+  height: 1px;
+  background-color: #d9c072;
+}
 
 }
+
+.microsite-scrolldown #scroll-title {
+  color: #ffffff;
+}
+.microsite-scrolldown .scroll-down-dude:before, .microsite-scrolldown .scroll-down-dude:after {
+  border-bottom: 4px solid #ffffff !important;
+  border-right: 4px solid #ffffff !important;
+}
+
+.counter-heading {
+  font-size: 20px;
+}
+.typology_section .typology_content::before {
+
+  filter: brightness(100);
+}
+
+
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */
 section.section.projects_section.pb-0 .single:nth-of-type(2) .new-launch-patch { display:none;}
 

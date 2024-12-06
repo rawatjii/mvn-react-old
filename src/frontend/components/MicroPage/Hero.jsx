@@ -21,7 +21,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     // Set total frames dynamically
     let frameCount = 0;
     if (data.micro_hero_section.client) {
-      frameCount = isMobile ? 732 : 731;
+      frameCount = isMobile ? 721 : 720;
     
     } else {
       frameCount = isMobile ? 10 : 10;

@@ -48,12 +48,19 @@ const Homepage = () => {
       {/* Hero Section with dynamic image rendering */}
       <div className="parent-box-div">
 
-   
-      <img
-        src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
-        alt="Hero Banner"
-        className="img-fluid hero-banner"
-      />
+      <a 
+  href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
+  className="hero-banner-link"
+  target="_blank" 
+  rel="noopener noreferrer"
+>
+  <img
+    src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
+    alt="Hero Banner"
+    className="img-fluid hero-banner"
+  />
+</a>
+
 
 <div className="slider-content">
 <p className="slider-heading">Enter The Experience Center</p>
@@ -71,7 +78,7 @@ const Homepage = () => {
                     <h4 className="logo_title">Gurugram</h4>
                     <span className="status">New Launch</span>
                     <p className="slogan-heading">Behold to Experience the complete view!</p>
-           
+                    <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} className="link-btn"> Click Here </a>
                   </Container>
                 </div>
     
@@ -85,12 +92,18 @@ const Homepage = () => {
         <Overview />
       </Suspense>
 
-
+      <a 
+  href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
+  className="hero-banner-link"
+  target="_blank" 
+  rel="noopener noreferrer"
+>
       <img
         src={isMobile ? MobileheronormalImg2 : DeskopheronormalImg2}
         alt="Hero Banner"
         className="img-fluid degree-img"
       />
+      </a>
 
       {/* Other Components */}
       {isMobile ? <Projectsmobile /> : <Projects />}

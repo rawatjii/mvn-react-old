@@ -23,9 +23,9 @@ const MicroOverview = ({ data }) => {
   };
 
   const countUp = (countTo, setCount, setEnded) => {
-    const duration = 2500; // Duration of the animation in milliseconds
+    const duration = 200; // Duration of the animation in milliseconds
     const fps = 60; // Frames per second
-    const steps = duration / (1000 / fps); // Total steps for the animation
+    const steps = duration / (300 / fps); // Total steps for the animation
     const increment = Math.ceil(countTo / steps); // Increment value per step
 
     let currentCount = 0;
@@ -50,10 +50,10 @@ const MicroOverview = ({ data }) => {
         countUp(13000, setCount1, setEnded1);
       }
       if (!ended2 && isScrolledIntoView(ref2)) {
-        countUp(5850, setCount2, setEnded2);
+        countUp(11700, setCount2, setEnded2);
       }
       if (!ended3 && isScrolledIntoView(ref3)) {
-        countUp(11700, setCount3, setEnded3);
+        countUp(5850, setCount3, setEnded3);
       }
     };
 

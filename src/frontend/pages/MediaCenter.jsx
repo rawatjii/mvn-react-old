@@ -250,6 +250,18 @@ function MediaCenter() {
         <div className="container-fluid">
           <div className="row">
             <div className="col-sm-6 px-md-0">
+
+            <SecTitle className="text-center color style1 mb-0">
+                  <img
+                    src={headingIconImg}
+                    alt=""
+                    className="img-fluid headingIcon"
+                  />
+                  <h4 className="title">Offline Media News</h4>
+                </SecTitle>
+
+
+
               <div className="media-news_offline">
                
 

@@ -37,7 +37,7 @@ const Header = () => {
 
     const handleScroll = () => {
       if (pathname === "/") {
-        if (window.scrollY > 2500) {
+        if (window.scrollY > 500) {
           setScrolled(true);
         } else {
           setScrolled(false);
@@ -241,7 +241,14 @@ const Header = () => {
                             </li>
                           </ul>
 
+                          <h4>Bangalore</h4>
+                          <ul>
+                            <li>
+                              <NavLink to="https://www.mvnaeroone.com/" target="_blank" onClick={() => toggleMenu("close")}>MVN</NavLink>
+                            </li>
+                          </ul>
 
+                          
                           <h4>Sohna</h4>
                           <ul>
                             <li>
@@ -254,12 +261,7 @@ const Header = () => {
                             </li>
                           </ul>
 
-                          <h4>Bangalore</h4>
-                          <ul>
-                            <li>
-                              <NavLink to="https://www.mvnaeroone.com/" target="_blank" onClick={() => toggleMenu("close")}>MVN</NavLink>
-                            </li>
-                          </ul>
+           
 
                           <h4>Faridabad</h4>
                           <ul>
