@@ -11,8 +11,8 @@ import EnquireForm from "../components/homepage/EnquireForm";
 import HomepageVideo from '../components/MicroPage/HomepageVideo';
 import CussorPointer from '../../frontend/assets/images/icons/swipe-up.gif';
 
-import DeskopheronormalImg from "../../frontend/assets/images/hero/home-banner-img.jpg";
-import MobileheronormalImg from "../../frontend/assets/images/hero/home-banner-img.jpg";
+import DeskopheronormalImg from "../../frontend/assets/images/hero/home-banner-img-4.webp";
+import MobileheronormalImg from "../../frontend/assets/images/hero/home-banner-img-4-mobile.webp";
 
 // Lazy-loaded components
 
