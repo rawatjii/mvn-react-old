@@ -24,7 +24,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
       frameCount = isMobile ? 732 : 731;
     
     } else {
-      frameCount = isMobile ? 274 : 292;
+      frameCount = isMobile ? 10 : 10;
     }
     setTotalFrames(frameCount);
   }, [data]);

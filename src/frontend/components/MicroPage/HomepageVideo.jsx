@@ -43,7 +43,7 @@ const HomepageVideo = ({ data }) => {
     }
 
     // Set total frames dynamically
-    let frameCount = isMobile ? 10 : 93;
+    let frameCount = isMobile ? 10 : 10;
     setTotalFrames(frameCount);
   }, [data]);
 
