@@ -2216,21 +2216,21 @@ section.section.walkthrough_section { padding-bottom: 30px; width: 100%;}
   transform: translate(-50%, -50%);
   left: 50%;
   text-align: center;
-  display: flex;
-  align-items: center;
+  /* display: flex;
+  align-items: center; */
   gap: 0px 20px;
-  border-bottom: 1px solid #dcc275;
+  /* border-bottom: 1px solid #dcc275; */
   padding: 6px 13px;
 }
 p.slider-heading {
   text-transform: uppercase;
   letter-spacing: 4px;
-  margin-bottom: 0;
+  margin-bottom: 30px;
   font-size: 16px;
 }
 .slider-content a.link-btn {
   background-color: #f4d966;
-  padding: 8px 25px;
+  padding: 11px 40px;
   border-radius: 50px;
   color: #000;
   letter-spacing: 1px;
@@ -2241,6 +2241,12 @@ p.slider-heading {
   object-fit: cover;
 }
 
+
+img.img-fluid.degree-img {
+  margin-bottom: 60px;
+}
+
+section.overview_section {padding-bottom: 25px;}
 
 
 

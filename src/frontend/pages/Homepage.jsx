@@ -14,6 +14,9 @@ import CussorPointer from '../../frontend/assets/images/icons/swipe-up.gif';
 import DeskopheronormalImg from "../../frontend/assets/images/hero/home-banner-img-4.webp";
 import MobileheronormalImg from "../../frontend/assets/images/hero/home-banner-img-4-mobile.webp";
 
+import DeskopheronormalImg2 from "../../frontend/assets/images/hero/strip-banner.webp";
+import MobileheronormalImg2 from "../../frontend/assets/images/hero/strip-banner-mobile.webp";
+
 // Lazy-loaded components
 
 const Overview = React.lazy(() => import("../components/homepage/Overview"));
@@ -59,6 +62,8 @@ const Homepage = () => {
 
 
 </div>
+
+
       {/* <HomepageVideo isMobile={isMobile} /> */}
               <div className="mobile-view-box">  
                   <Container>
@@ -73,13 +78,23 @@ const Homepage = () => {
                 {/* <img src={CussorPointer} alt="" className="img-fluid cursor-img"/> */}
 
 
+
+
       {/* Lazy-loaded components */}
       <Suspense fallback="Loading...">
         <Overview />
       </Suspense>
 
+
+      <img
+        src={isMobile ? MobileheronormalImg2 : DeskopheronormalImg2}
+        alt="Hero Banner"
+        className="img-fluid degree-img"
+      />
+
       {/* Other Components */}
       {isMobile ? <Projectsmobile /> : <Projects />}
+
       <OtherProjects />
       <OurJourney />
       <OurTeam />
