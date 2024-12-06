@@ -65,7 +65,7 @@ const Overview = () => {
                   <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
                  <h4 className="hero_title">40+ years of delivering trust and projects on time</h4>
                   <p>
-                  MVN Group is one of the best entities focused on Education and Real Estate. As per The Hindustan Times-C Fore Top Schools Survey, the leading newspaper of India, MVN is known as the first educational group to be Ranked no.1 for Eight years in Academic Performance.
+                  MVN Infrastructure introduces MVN Aero one Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway. These stunning 5.5 BHK residences offer breathtaking 360-degree panoramic views and set a new standard for luxury living. MVN is poised to add yet another wonder to the world.
                   </p>
                  </div>
               </Col>
