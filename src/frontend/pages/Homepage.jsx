@@ -10,6 +10,10 @@ import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import HomepageVideo from '../components/MicroPage/HomepageVideo';
 import CussorPointer from '../../frontend/assets/images/icons/swipe-up.gif';
+
+import DeskopheronormalImg from "../../frontend/assets/images/hero/home-banner-img.jpg";
+import MobileheronormalImg from "../../frontend/assets/images/hero/home-banner-img.jpg";
+
 // Lazy-loaded components
 
 const Overview = React.lazy(() => import("../components/homepage/Overview"));
@@ -39,17 +43,17 @@ const Homepage = () => {
   return (
     <>
       {/* Hero Section with dynamic image rendering */}
-      {/* <img
+      <img
         src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
         alt="Hero Banner"
         className="img-fluid hero-banner"
-      /> */}
+      />
 
 
 
 
 
-      <HomepageVideo isMobile={isMobile} />
+      {/* <HomepageVideo isMobile={isMobile} /> */}
               <div className="mobile-view-box">  
                   <Container>
                     <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />

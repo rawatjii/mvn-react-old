@@ -2069,6 +2069,11 @@ section.section.projects_section.pb-0 .new-launch-patch {
   padding: 10px 20px!important;
 }
 
+section.section.projects_section.pb-0 .new-launch-patch {
+  top: 43%!important;
+  position: absolute;
+}
+
 }
 
 section.section.other_projects_section.pb-0 {padding-bottom: 70px !important;}
@@ -2084,6 +2089,7 @@ section.section.other_projects_section.pb-0 {padding-bottom: 70px !important;}
           overflow: unset!important;
       }
   }
+
 }
 /* -------------------------------------------------------------------------------------MIN WIDTH 768px END ------------------------------------------- */
 
