@@ -24,8 +24,8 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
     const loadAnimationData = async () => {
       try {
         const importedData = isMobile
-          ? await import("../../../../public/assets/json-frame/aeroone-gurgaon/PartyVideo/Mobile/data.json")
-          : await import("../../../../public/assets/json-frame/aeroone-gurgaon/PartyVideo/Desktop/data.json");
+          ? await import("../../../../public/assets/json-frame/aeroone-gurgaon1/PartyVideo/Mobile/data.json")
+          : await import("../../../../public/assets/json-frame/aeroone-gurgaon1/PartyVideo/Desktop/data.json");
 
         setAnimationData(importedData.default);
       } catch (error) {
