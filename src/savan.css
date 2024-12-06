@@ -2170,6 +2170,14 @@ nav.null.navbar.navbar-expand-false.navbar-light .right {width: 150px; display: 
 section.section.walkthrough_section { padding-bottom: 30px; width: 100%;}
 .section.renders1_section.wrapper.center.pb-0 .overview_card.px-0 {padding-bottom: 30px;}
 
+.microsite-scrolldown { color: #f3d866;}
+.microsite-scrolldown .scroll-down-dude:before, .microsite-scrolldown .scroll-down-dude:after {
+  border-bottom: 4px solid #f3d866!important;
+  border-right: 4px solid #f3d866!important;
+}
+.microsite-scrolldown #scroll-title {
+  color: #e3ca5d;
+}
 
 @media(max-width:1600px) {
 

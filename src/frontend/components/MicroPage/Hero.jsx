@@ -137,8 +137,8 @@ const MicroHero = ({ data, onLoadComplete }) => {
             />
           ))}
 
-<div id="scroll-wrapper">
-        <div id="scroll-wrapper-inner">
+<div id="scroll-wrapper" className="microsite-scrolldown"> 
+        <div id="scroll-wrapper-inner ">
           <div id="scroll-title">
             Scroll Down
           </div>
