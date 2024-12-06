@@ -34,7 +34,7 @@ const projectsData = [
         name: "MVN AEROONE RESIDENCES",
         location: "Gurugram",
         otherPage:false,
-        link:"aeroone-gurgaon1"
+        link:"aeroone-gurgaon"
       },
 
   {

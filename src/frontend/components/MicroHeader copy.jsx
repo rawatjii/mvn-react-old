@@ -95,7 +95,7 @@ const MicroHeader = ({ scrollToSection }) => {
     return () => window.removeEventListener("resize", () => null);
   }, []);
 
-  const pathnamesToHideMiddleMenu = ["/aeroone-gurgaon1"];
+  const pathnamesToHideMiddleMenu = ["/aeroone-gurgaon"];
   return (
     <>
       <Navbar
@@ -192,7 +192,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                 <NavLink
                                   to={`${
                                     import.meta.env.VITE_APP_URL
-                                  }aeroone-gurgaon1`}
+                                  }aeroone-gurgaon`}
                                   className="new-launch"
                                   onClick={() => toggleMenu("close")}
                                 >
@@ -250,7 +250,7 @@ const MicroHeader = ({ scrollToSection }) => {
                       )}
                     {/* mobile menu microsites  */}
                     {innerWidth < 768 &&
-                      window.location.pathname === "/aeroone-gurgaon1" && (
+                      window.location.pathname === "/aeroone-gurgaon" && (
                         <li className="menuFlexBox middle-menu">
                           <li className="nav-link">
                             <NavLink>Projects</NavLink>
@@ -500,7 +500,7 @@ const MicroHeader = ({ scrollToSection }) => {
                             <NavLink
                               to={`${
                                 import.meta.env.VITE_APP_URL
-                              }aeroone-gurgaon1`}
+                              }aeroone-gurgaon`}
                               className="new-launch"
                               onClick={() => toggleMenu("close")}
                             >
@@ -550,7 +550,7 @@ const MicroHeader = ({ scrollToSection }) => {
                   )}
                 {/* desktop menu microsites  */}
                 {innerWidth > 767 &&
-                  window.location.pathname === "/aeroone-gurgaon1" && (
+                  window.location.pathname === "/aeroone-gurgaon" && (
                     <li className="menuFlexBox middle-menu">
                       <li className="nav-link">
                         <NavLink>Real Estate</NavLink>

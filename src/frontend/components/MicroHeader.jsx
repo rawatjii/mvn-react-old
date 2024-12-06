@@ -96,7 +96,7 @@ const MicroHeader = ({ scrollToSection }) => {
     return () => window.removeEventListener("resize", () => null);
   }, []);
 
-  const pathnamesToHideMiddleMenu = ["/aeroone-gurgaon1"];
+  const pathnamesToHideMiddleMenu = ["/aeroone-gurgaon"];
   return (
     <>
       <Navbar

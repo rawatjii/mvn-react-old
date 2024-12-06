@@ -6,6 +6,8 @@ import * as CONFIG from "root/config/config";
 import { useEffect, useRef, useState } from "react";
 import CloseBtnimg from '../assets/images/icons/close.png';
 
+import MenuSideVideo from '../assets/images/hero/tiger.mp4';
+
 import "./Header.css";
 
 import { gsap } from "gsap";
@@ -104,7 +106,7 @@ const Header = () => {
     return () => window.removeEventListener("resize", () => null);
   }, []);
 
-  const pathnamesToHideMiddleMenu = ["/aeroone-gurgaon1"];
+  const pathnamesToHideMiddleMenu = ["/aeroone-gurgaon"];
   return (
     <>
       <Navbar
@@ -147,7 +149,12 @@ const Header = () => {
             <div class="overlay-content">
               <div class="inner-overlay">
                 <div class="video-area d-none d-md-block">
-                  <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" />
+
+                  {/* <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" /> */}
+                  <video autoPlay muted  loop>
+                    <source src={MenuSideVideo} type="video/mp4" className="img-fluid videoMenu"/>
+                </video>
+
                 </div>
 
                 <div class="menu-area">
@@ -221,7 +228,7 @@ const Header = () => {
                           <ul>
                    
                             <li className="new_launch">
-                              <NavLink to={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon1'} onClick={() => toggleMenu("close")}>
+                              <NavLink to={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} onClick={() => toggleMenu("close")}>
                                 MVN Aero One
                               </NavLink>
                               <a href="javascript:void(0)"><span>New Launch</span></a>

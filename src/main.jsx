@@ -83,18 +83,18 @@ const router = createBrowserRouter([
           </Suspense>
         ),
       },
+      // {
+      //   path: "aeroone-gurgaon",
+      //   element: (
+      //     <Suspense fallback={<InitialLoading />}>
+      //       <Layout>
+      //         <AeroOneGurgaon />
+      //       </Layout>
+      //     </Suspense>
+      //   ),
+      // },
       {
         path: "aeroone-gurgaon",
-        element: (
-          <Suspense fallback={<InitialLoading />}>
-            <Layout>
-              <AeroOneGurgaon />
-            </Layout>
-          </Suspense>
-        ),
-      },
-      {
-        path: "aeroone-gurgaon1",
         element: (
           <Suspense fallback={<InitialLoading />}>
           

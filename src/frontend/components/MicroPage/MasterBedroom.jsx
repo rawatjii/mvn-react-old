@@ -23,8 +23,8 @@ const MasterBedroom = ({ isMobile, data,onLoadComplete }) => {
     const loadAnimationData = async () => {
       try {
         const importedData = isMobile
-          ? await import("../../../../public/assets/json-frame/aeroone-gurgaon1/Panther/Mobile/data.json")
-          : await import("../../../../public/assets/json-frame/aeroone-gurgaon1/Panther/Desktop/data.json");
+          ? await import("../../../../public/assets/json-frame/aeroone-gurgaon/Panther/Mobile/data.json")
+          : await import("../../../../public/assets/json-frame/aeroone-gurgaon/Panther/Desktop/data.json");
 
         setAnimationData(importedData.default);
       } catch (error) {

@@ -144,7 +144,7 @@ const Footer = () => {
                       <NavLink to='https://mvnmall.com/' target="_blank">MVN Mall</NavLink>
                     </li>
                     <li>
-                      <NavLink to={`${import.meta.env.VITE_APP_URL}aeroone-gurgaon1`}>MVN Aero One</NavLink>
+                      <NavLink to={`${import.meta.env.VITE_APP_URL}aeroone-gurgaon`}>MVN Aero One</NavLink>
                     </li>
                     <li>
                       <label htmlFor="">Bangalore</label>
