@@ -3217,7 +3217,30 @@ div#livingRoomSlidingDoor #scroll-wrapper {
 .Apartment-section .watermark{
   color: #000000!important;
 }
-
+.master-bed-room .watermark {
+  &.style2 {
+      bottom: 135px;
+  }
+}
+#scroll-title {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-family:unset;
+  font-size: 15px;
+  font-weight: unset;
+  letter-spacing: .3em;
+  text-align: center;
+  margin-bottom: 5px;
+}
+section.section.micro_hero_section.p-0 div#scroll-wrapper-inner\ {
+  position: relative;
+  top: -40px;
+}
+.other_projects_section .other-project-img {
+  height: 180px;
+  border-radius: 10px;
+}
 
 }
 

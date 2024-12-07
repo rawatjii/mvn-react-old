@@ -96,7 +96,7 @@ const MasterBedroom = ({ isMobile, data,onLoadComplete }) => {
   }, []);
 
   return (
-    <div className="section peacock_section pb-0">
+    <div className="section peacock_section pb-0 master-bed-room">
       {loading && <PartyLoader />}
       {!loading && (
         <>
