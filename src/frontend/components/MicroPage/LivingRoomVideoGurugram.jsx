@@ -128,6 +128,17 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
                   style={{ display: index === 0 ? "block" : "none" }}
                 />
               ))}
+
+
+<div id="scroll-wrapper" className="microsite-scrolldown"> 
+        <div id="scroll-wrapper-inner ">
+          <div id="scroll-title">
+            Scroll Down
+          </div>
+          <div class="scroll-down-dude"></div>
+        </div>
+      </div>
+
             </div>
             <Container>
               <div className="about">

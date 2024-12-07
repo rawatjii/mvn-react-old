@@ -47,7 +47,7 @@ const MicroOverview = ({ data }) => {
   useEffect(() => {
     const handleScroll = () => {
       if (!ended1 && isScrolledIntoView(ref1)) {
-        countUp(13000, setCount1, setEnded1);
+        countUp(13600, setCount1, setEnded1);
       }
       if (!ended2 && isScrolledIntoView(ref2)) {
         countUp(11700, setCount2, setEnded2);
@@ -101,17 +101,17 @@ const MicroOverview = ({ data }) => {
 <div className="counter-flex-box">
   <div className="flex-box" ref={ref1}>
     <h4>
-      <span className="counter">{count1}</span> sq.ft.
+      <span className="counter">{count1}</span> sqft
     </h4>
   </div>
   <div className="flex-box" ref={ref2}>
     <h4>
-      <span className="counter">{count2}</span> sq.ft.
+      <span className="counter">{count2}</span> sqft
     </h4>
   </div>
   <div className="flex-box" ref={ref3}>
     <h4>
-      <span className="counter">{count3}</span> sq.ft.
+      <span className="counter">{count3}</span> sqft
     </h4>
   </div>
 </div>

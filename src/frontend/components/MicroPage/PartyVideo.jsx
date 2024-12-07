@@ -116,6 +116,14 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
           <div ref={containerRef} className="frames_content">
             <Watermark className="style2" />
             <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }}></div>
+            <div id="scroll-wrapper" className="microsite-scrolldown"> 
+        <div id="scroll-wrapper-inner ">
+          <div id="scroll-title">
+            Scroll Down
+          </div>
+          <div class="scroll-down-dude"></div>
+        </div>
+      </div>
           </div>
           <Container>
             <div className="about">
@@ -124,6 +132,8 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
           </Container>
         </>
       )}
+
+
     </div>
   );
 };

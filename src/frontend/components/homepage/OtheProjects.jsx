@@ -17,7 +17,7 @@ import mvnSportsAcademyMobile from "../../assets/images/other-projects/mvn-sport
 
 import mvnSchoolDesktop from "../../assets/images/other-projects/mvn-school-desktop.webp";
 import mvnUniversityDesktop from "../../assets/images/other-projects/mvn-university-desktop.webp";
-import mvnSportsAcademyDesktop from "../../assets/images/other-projects/mvn-sports-academy-desktop.webp";
+import mvnSportsAcademyDesktop from "../../assets/images/other-projects/mvn-sports-academy-desktop-2.webp";
 import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 const otherProjects = [

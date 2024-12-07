@@ -125,7 +125,10 @@ const PeacockSection = ({ data, onLoadComplete }) => {
                 style={{ display: index === 0 ? "block" : "none" }}
               />
             ))}
+
           </div>
+
+
 
           <Container >
             <div className='about'>
