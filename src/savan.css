@@ -1058,6 +1058,11 @@ section.section.walkthrough_section .overview_card {
   padding-bottom: 0px;
 }
 
+#scroll-wrapper {
+  width: fit-content!important;
+  top: -90px!important;
+}
+
 
 @media screen and (min-width: 767px) {
 
@@ -3166,6 +3171,10 @@ section.section.other_projects_section.pb-0 {padding-top: 60px;}
   width: 50px;
   height: 1px;
   background-color: #d9c072;
+}
+#scroll-wrapper {
+  width: 100%!important;
+  top: -90px!important;
 }
 
 }

@@ -35,7 +35,7 @@ const otherProjects = [
       mobile: mvnUniversityMobile,
       desktop: mvnUniversityDesktop,
     },
-    link: "https://beta.mvn.in/mvn-university-haryana/",
+    link: "https://www.mvn.edu.in/",
   },
   {
     name: "MVN Sports Academy",
