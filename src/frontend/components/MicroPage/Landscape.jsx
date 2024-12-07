@@ -110,7 +110,7 @@ export default function MicroLandscape({ data = landscapeData, title, subTitle, 
   };
 
   return (
-    <div className="section renders1_section wrapper center pb-0">
+    <div className="section renders1_section wrapper center pb-0 Landscape-section">
       <div className="sec_title text-center color style1" ref={sectionsRef}>
         <h4 className="title">{title || "Landscape"}</h4>
       </div>

@@ -13,7 +13,7 @@ import AnImage from "../../../common/animations/Image/Index";
 
 import mvnSchoolMobile from "../../assets/images/other-projects/mvn-school.webp";
 import mvnUniversityMobile from "../../assets/images/other-projects/mvn-university.webp";
-import mvnSportsAcademyMobile from "../../assets/images/other-projects/mvn-sports-academy.webp";
+import mvnSportsAcademyMobile from "../../assets/images/other-projects/mvn-sports-academy-desktop-2.webp";
 
 import mvnSchoolDesktop from "../../assets/images/other-projects/mvn-school-desktop.webp";
 import mvnUniversityDesktop from "../../assets/images/other-projects/mvn-university-desktop.webp";

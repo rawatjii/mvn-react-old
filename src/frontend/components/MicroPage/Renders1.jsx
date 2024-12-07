@@ -12,7 +12,7 @@ export default function Renders1({ data }) {
   console.log('page data',data);
 
   return (
-    <div className="section renders1_section wrapper center pb-0">
+    <div className="section renders1_section wrapper center pb-0 Landscape-section">
 
         <div className="sec_title text-center color style1">
           <h4 className="title">Landscape</h4>
@@ -60,7 +60,7 @@ export default function Renders1({ data }) {
         <div className="cards-container">
           <div className="card center gradient-green">
             <img src={CONFIG.IMAGE_URL + 'renders/apartment/1.webp'} alt="" />
-            <Watermark className="left" />
+            <Watermark className="left black" />
           </div>
           <div className="card center gradient-blue">
             <img src={CONFIG.IMAGE_URL + 'renders/apartment/2.webp'} alt="" />

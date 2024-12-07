@@ -66,7 +66,7 @@ export default function MicroApartment({ data }) {
   const [index, setIndex] = useState(-1);
 
   return (
-    <div className="section renders1_section wrapper center pb-0">
+    <div className="section renders1_section wrapper center pb-0 Apartment-section">
       
         <div className="sec_title text-center color style1 mt_50">
           <h4 className="title">Apartment</h4>

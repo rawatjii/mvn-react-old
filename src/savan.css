@@ -3199,6 +3199,25 @@ div#livingRoomSlidingDoor #scroll-wrapper {
   width: 100% !important;
   top: 22px !important;
 }
+.flex-heading-project {
+  margin-bottom: 40px;
+}
+
+.HomeMobileProject-section .px_8.right_col.col-12 {
+  margin-top: 60px;
+}
+.watermark {
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  z-index: 1;
+  color: #fffdfd;
+  font-size: 18px;
+}
+.Apartment-section .watermark{
+  color: #000000!important;
+}
+
 
 }
 
