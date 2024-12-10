@@ -146,18 +146,18 @@ const Header = () => {
           </div>
 
           <div id="basic-navbar-nav" className="navbar_collapse" ref={menusRef}>
-            <div class="overlay-content">
-              <div class="inner-overlay">
-                <div class="video-area d-none d-md-block">
+            <div className="overlay-content">
+              <div className="inner-overlay">
+                <div className="video-area d-none d-md-block">
 
                   {/* <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" /> */}
                   <video autoPlay muted  loop>
                     <source src={MenuSideVideo} type="video/mp4" className="img-fluid videoMenu"/>
-                </video>
+                  </video>
 
                 </div>
 
-                <div class="menu-area">
+                <div className="menu-area">
                   <div>
                     <div className="top_head">
                       <Link
@@ -168,10 +168,10 @@ const Header = () => {
 
                       <span className="close d-md-none"onClick={() => toggleMenu("close")}>&times;</span>
                     </div>
-                    <div class="inner-menu">
-                      <div class="top-area">
+                    <div className="inner-menu">
+                      <div className="top-area">
                         
-                        <div class="inner-logo d-none d-md-block">
+                        <div className="inner-logo d-none d-md-block">
                           <p><span>Office:</span> MVN AeroOne Dwarka Expressway, 22 Km Milestone, Sector-37D, Gurugram, Pin-122103</p>
                           <p><span>Talk:</span> +91 90710 08464</p>
                         </div>
@@ -221,9 +221,9 @@ const Header = () => {
                         </ul>
                       </div>
 
-                      <div class="bottom-area">
-                        <div class="inner-bottom-area">
-                          <div class="left">
+                      <div className="bottom-area">
+                        <div className="inner-bottom-area">
+                          <div className="left">
                             <h4>Gurugram</h4>
                           <ul>
                    
@@ -231,13 +231,13 @@ const Header = () => {
                               <NavLink to={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} onClick={() => toggleMenu("close")}>
                                 MVN Aero One
                               </NavLink>
-                              <a href="javascript:void(0)"><span>New Launch</span></a>
+                              <span>New Launch</span>
                             </li>
                             <li className="new_launch">
                               <NavLink to="https://mvnmall.com/" target="_blank" onClick={() => toggleMenu("close")}>
                                 MVN Mall
                               </NavLink>
-                                <a href="javascript:void(0)"><span>New Launch</span></a>
+                              <span>New Launch</span>
                             </li>
                           </ul>
 
@@ -271,7 +271,7 @@ const Header = () => {
                           </ul>
                           </div>
 
-                          <div class="right top">
+                          <div className="right top">
                             <ul>
                               <li>
                                 <NavLink to={import.meta.env.VITE_APP_URL} onClick={() => toggleMenu("close")}>
@@ -310,7 +310,7 @@ const Header = () => {
                             </ul>
                           </div>
 
-                          <div class="right bottom d-md-none">
+                          <div className="right bottom d-md-none">
                             <ul>
                             <li>
                               <NavLink to={import.meta.env.VITE_APP_URL + 'about-us'} onClick={() => toggleMenu("close")}>
@@ -346,8 +346,8 @@ const Header = () => {
                 </div>
 
 
-                <div class="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"><img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
+                <div className="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
+                  <a className="closebtn" onclick="closeNav()"><img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
                 </div>
               </div>
             </div>

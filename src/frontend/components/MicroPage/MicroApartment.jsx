@@ -95,8 +95,8 @@ export default function MicroApartment({ data }) {
           <div className='about'>
             <CustomCard
               className="px-0"
-              title="ASCEND TO THE PINNACLE OF SOPHISTICATION" 
-              desc="Experience unparalleled luxury, where opulence meets sophistication in every detail. Indulge in bespoke interiors, world-class amenities, and breathtaking views. Redefine your lifestyle with a living experience like no other" 
+              title="Every corner a symphony of style & opulence" 
+              desc="Experience ultra-luxury living in this exclusive apartment boasting plush interiors and bespoke design. The spacious layout includes a designer bathroom with premium fittings, a modern Cucina kitchen for culinary excellence, and a state-of-the-art home theatre for entertainment. A thoughtfully designed kids' room ensures comfort and fun, completing a perfect sanctuary for a sophisticated, family-friendly lifestyle." 
             />
           </div>
         </Container>

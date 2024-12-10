@@ -6,6 +6,8 @@ import SecTitle from "../../../common/SecTitle/Index";
 import CustomCard from "../Card";
 import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 import Watermark from "../../../common/watermark/Index";
+import * as CONFIG from '../../../config/config'
+import ScrollDown from "../../../common/scrollDown/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -59,12 +61,12 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     setImages(loadedImages);
   }, [isMobile]); // Depend on `isMobile` to reload images when the state changes.
 
-  // GSAP Animation
+  // GSAP Animation only for mobile
   useEffect(() => {
-    if (images.length === 0 || loading) return;
+    if (images.length === 0 || loading || !isMobile) return; // Skip if no images, still loading, or not mobile.
 
     // Initialize ScrollTrigger animation
-    const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
+    const totalFrames = totalFramesMobile;
 
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
@@ -91,10 +93,10 @@ const PeacockSection = ({ data, onLoadComplete }) => {
         });
       },
     });
-  
+
     // Refresh ScrollTrigger to account for loaded content
     ScrollTrigger.refresh();
-  
+
     return () => {
       // Clean up ScrollTrigger instance
       scrollAnimation.kill();
@@ -114,33 +116,32 @@ const PeacockSection = ({ data, onLoadComplete }) => {
       {!loading && (
         <>
           <div ref={containerRef} className="frames_content">
-            <Watermark className="style1" />
-            {images.map((img, index) => (
-              <img
-                key={index}
-                ref={(el) => (frameRefs.current[index] = el)}
-                src={img.src}
-                alt={`Frame ${index}`}
-                className="frame"
-                style={{ display: index === 0 ? "block" : "none" }}
-              />
-            ))}
+            <div className="image_col position-relative">
+              <Watermark className={isMobile ? 'style1' : 'style2'} />
+              {isMobile && images.map((img, index) => (
+                <img
+                  key={index}
+                  ref={(el) => (frameRefs.current[index] = el)}
+                  src={img.src}
+                  alt={`Frame ${index}`}
+                  className="frame"
+                  style={{ display: index === 0 ? "block" : "none" }}
+                />
+              ))}
 
-<div id="scroll-wrapper" className="microsite-scrolldown"> 
-        <div id="scroll-wrapper-inner ">
-          <div id="scroll-title">
-            Scroll Down
+              {!isMobile && (
+                <img src={CONFIG.IMAGE_URL + 'peacock/peacock.webp'} className="img-fluid peacock_img" />
+              )}
+            </div>
+
+            <ScrollDown className="color-black" />
+
           </div>
-          <div class="scroll-down-dude"></div>
-        </div>
-      </div>
-          </div>
-
-
 
           <Container >
             <div className='about'>
                 <CustomCard
+                className="p_sm_0"
                   title="EXPERIENCE THE GRANDEUR OF THE LIVING ROOM WITH 360° PANORAMIC VIEWS" 
                   desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."  
                 />
@@ -149,18 +150,6 @@ const PeacockSection = ({ data, onLoadComplete }) => {
           </Container>
         </>
       )}
-
-      
-
-      {/* <div className="content">
-        <Container>
-          <SecTitle className="text-center color style1">
-            <h4 ref={titleRef} className="title">{title}</h4>
-          </SecTitle>
-
-          {desc && <p className="desc">{desc}</p>}
-        </Container>
-      </div> */}
     </div>
   );
 };

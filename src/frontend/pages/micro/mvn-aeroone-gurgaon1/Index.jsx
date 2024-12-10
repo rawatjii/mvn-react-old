@@ -17,14 +17,14 @@ export const data = {
     client:true,
   },
   overview: {
-    title: "MVN Aero One",
-    location: "Gurugram",
-    extra: "ASCEND TO UNRIVALED HEIGHTS OF PURE SOPHISTICATION",
-    // desc: "Luxury Reimagined. Elegance Redefined. Experience Unparalleled Luxury, Where Opulence Meets Sophistication In Every Detail Indulge In Bespoke Interiors, World-class Amenities, And Breathtaking Views. Redefine Your Lifestyle With A Living Experience Like No Other.",
-    desc: [
-      'Luxury Reimagined. Elegance Reborn.',
-      'Step into a world of unparalleled luxury, where every detail blends sophistication with style. Relish in tailored interiors, exceptional amenities, and panoramic views. Transform your lifestyle with an extraordinary living experience beyond compare.',
-    ],
+    title: "MVN RESIDENCE",
+    // location: "Gurugram",
+    extra: "AN EPITOME OF GLOBAL LUXURY NOW IN GURUGRAM",
+    desc: "Gurugram is set to redefine luxury living with the launch  of MVN ultra-luxurious 5.5 BHK apartments, offering unmatched opulence. Combining the grandeur of Dubai and New York, these residences feature cutting-edge designs, premium amenities, and breathtaking views. Experience an elite lifestyle with sophistication and comfort at its pinnacle, like never before!",
+    // desc: [
+    //   'Luxury Reimagined. Elegance Reborn.',
+    //   'Step into a world of unparalleled luxury, where every detail blends sophistication with style. Relish in tailored interiors, exceptional amenities, and panoramic views. Transform your lifestyle with an extraordinary living experience beyond compare.',
+    // ],
   },
   LargeElevationSection: {
     title: ['Unseen', 'Unheard', 'Unimagined'],
@@ -51,11 +51,8 @@ export const data = {
     isVdo: true,
   },
   masterBedroom: {
-    title: "MASTER BEDROOM Platinum",
-    desc: [
-      'Bedroom platinum',
-      'Wake up to the world at your feet where luxury meets blissful vistas'
-    ],
+    title: "BEDROOM Platinum",
+    desc: "Your own sphere of serenity crafted artfully for the ultimate retreat into blissful moments of privacy.",
     isVdo: true,
   },
   highlights: [
@@ -186,12 +183,12 @@ export const data = {
   ],
   amenities : [
     { 
-      name: 'Clubhouse',
+      name: 'Elevate Your Family Time At The Exclusive Clubhouse',
       imgSrc:{
         desktop:'clubhouse.webp',
         mobile:'clubhouseSm.webp'
       },
-      desc:'Experience timeless elegance and leisure at your exclusive clubhouse' 
+      desc:'The ultra-luxury clubhouse offers residents an opulent retreat, featuring state-of-the-art amenities, a lavish spa, infinity pools, gourmet dining, private lounges, and exquisite interiors for unparalleled leisure and comfort for the whole family.' 
     },  
     {
       name: 'Business Centre',
@@ -213,7 +210,7 @@ export const data = {
       name: 'Sports Lounge',
       imgSrc: {
         desktop:'lounge.webp',
-        mobile:'lounge.webp'
+        mobile:'loungeSm.webp'
       },
       desc:'An upscale space to unwind and enjoy sports events'
     },
@@ -258,12 +255,12 @@ export const data = {
       desc:['An oasis of clean air and pure living','Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.']
     },
     {
-      name: 'Entry & Exit',
+      name: 'Exclusive entrance and exit for the residents',
       imgSrc: {
         desktop:'entryexit.webp',
         mobile:'entryexit_sm.webp'
       },
-      desc:'Exclusive entrance and exit for the residents.'
+      desc:'Experience unparalleled privacy and convenience with exclusive entry and exit points designed for residents of MVN, ensuring seamless access and an elite living experience.'
     },
   ],
   amenities_section: [
@@ -479,7 +476,7 @@ export const data = {
         ]
       },
       {
-        title:'360 Panoramic Apartment (11700 sq.ft.)',
+        title:'360 Panoramic Apartment (11,700 Sqft)',
         thumbnail:[
           {
             src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/360/1.webp',
@@ -488,7 +485,7 @@ export const data = {
         ]
       },
       {
-        title:'270 Panoramic Apartment (5850 sq.ft.)',
+        title:'270 Panoramic Apartment (5,850 Sqft)',
         thumbnail:[
           {
             src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/1.webp',

@@ -137,7 +137,7 @@ const Typology = () => {
               <h1>Penthouse</h1>
               <p>
                 Elevate your lifestyle to new heights with these extraordinary
-                duplex flats, where two levels of unmatched luxury unfold before
+                duplex residences, where two levels of unmatched luxury unfold before
                 you. With impeccable attention to detail and a focus on privacy
                 and exclusivity, these residences embody the pinnacle of
                 sophisticated living, where only the most discerning will
@@ -152,7 +152,7 @@ const Typology = () => {
             >
               <h1>360 degree Panoramic Apartment</h1>
               <p>
-                At an impressive 11,700 sq. ft., the simplex flats offer a
+                At an impressive 11,700 Sqft, the simplex flats offer a
                 commanding 360-degree panoramic vista, presenting a boundless
                 world of elegance. This is where space, design, and nature
                 converge in perfect harmony.
@@ -166,7 +166,7 @@ const Typology = () => {
             >
               <h1>270 degree Panoramic Apartment</h1>
               <p>
-                Spanning an expansive 5,850 sq. ft., these exquisite residences
+                Spanning an expansive 5,850 Sqft, these exquisite residences
                 offer a captivating 270-degree panoramic view, seamlessly
                 blending breathtaking vistas with unmatched sophistication.
               </p>

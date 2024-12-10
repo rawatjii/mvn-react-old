@@ -136,13 +136,13 @@ const MicroHeader = ({ scrollToSection }) => {
           </div>
 
           <div id="basic-navbar-nav" className="navbar_collapse" ref={menusRef}>
-          <div class="overlay-content">
-              <div class="inner-overlay">
-                <div class="video-area d-none d-md-block">
+          <div className="overlay-content">
+              <div className="inner-overlay">
+                <div className="video-area d-none d-md-block">
                   <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" />
                 </div>
 
-                <div class="menu-area">
+                <div className="menu-area">
                   <div>
                     <div className="top_head">
                     <Link
@@ -154,10 +154,10 @@ const MicroHeader = ({ scrollToSection }) => {
 
                     <span className="close d-md-none"onClick={() => toggleMenu("close")}>&times;</span>
                     </div>
-                    <div class="inner-menu">
-                      <div class="top-area">
+                    <div className="inner-menu">
+                      <div className="top-area">
                         
-                        <div class="inner-logo d-none d-md-block">
+                        <div className="inner-logo d-none d-md-block">
                           <p><span>Office:</span> MVN AeroOne Dwarka Expressway, 22 Km Milestone, Sector-37D, Gurugram, Pin-122103</p>
                           <p><span>Talk:</span> +91 90710 08464</p>
                         </div>
@@ -206,9 +206,9 @@ const MicroHeader = ({ scrollToSection }) => {
                         </ul>
                       </div>
 
-                      <div class="bottom-area">
-                        <div class="inner-bottom-area">
-                          <div class="microsite">
+                      <div className="bottom-area">
+                        <div className="inner-bottom-area">
+                          <div className="microsite">
                         
 
                           <ul>
@@ -343,7 +343,7 @@ const MicroHeader = ({ scrollToSection }) => {
                               </li>
                             </ul>
                           </div>
-                          <div class="left">
+                          <div className="left">
                 
 
                           <h4>Gurugram</h4>
@@ -388,7 +388,7 @@ const MicroHeader = ({ scrollToSection }) => {
 
                           </div>
 
-                          <div class="right top">
+                          <div className="right top">
                             <ul>
                              
                               {window.innerWidth > 768 ? (
@@ -423,7 +423,7 @@ const MicroHeader = ({ scrollToSection }) => {
                             </ul>
                           </div>
 
-                          <div class="right bottom d-md-none">
+                          <div className="right bottom d-md-none">
                             <ul>
                             <li>
                               <NavLink to={import.meta.env.VITE_APP_URL + 'about-us'} onClick={() => toggleMenu("close")}>
@@ -459,8 +459,8 @@ const MicroHeader = ({ scrollToSection }) => {
                 </div>
 
 
-                <div class="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
-                  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()"> <img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
+                <div className="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
+                  <a href="javascript:void(0)" className="closebtn" onclick="closeNav()"> <img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
                 </div>
               </div>
             </div>

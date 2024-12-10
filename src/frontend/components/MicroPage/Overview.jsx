@@ -32,7 +32,7 @@ const MicroOverview = ({ data }) => {
 
     const animate = () => {
       currentCount = Math.min(currentCount + increment, countTo); // Increment or cap at countTo
-      setCount(currentCount);
+      setCount(currentCount.toLocaleString());
 
       if (currentCount < countTo) {
         requestAnimationFrame(animate);
@@ -95,35 +95,30 @@ const MicroOverview = ({ data }) => {
             )}
           </div>
 
-
           <p className="counter-heading">5.5 BHK One of the Largest Apartments in Gurugram</p>
 
-<div className="counter-flex-box">
-  <div className="flex-box" ref={ref1}>
-    <h4>
-      <span className="counter">{count1}</span> sqft
-    </h4>
-  </div>
-  <div className="flex-box" ref={ref2}>
-    <h4>
-      <span className="counter">{count2}</span> sqft
-    </h4>
-  </div>
-  <div className="flex-box" ref={ref3}>
-    <h4>
-      <span className="counter">{count3}</span> sqft
-    </h4>
-  </div>
-</div>
+          <div className="counter-flex-box">
+            <div className="flex-box" ref={ref1}>
+              <h4>
+                <span className="counter">{count1}</span> <span className="sqft">sqft</span>
+              </h4>
+            </div>
+            <div className="flex-box" ref={ref2}>
+              <h4>
+                <span className="counter">{count2}</span> <span className="sqft">sqft</span>
+              </h4>
+            </div>
+            <div className="flex-box" ref={ref3}>
+              <h4>
+                <span className="counter">{count3}</span> <span className="sqft">sqft</span>
+              </h4>
+            </div>
+          </div>
 
           <span className="bar"></span>
         </div>
 
-
-
-        <p className="rera-number">
-          RERA Registration no : RERA-GRG-PROJ-1729-2024
-        </p>
+        <p className="rera-number">RERA Registration no : RERA-GRG-PROJ-1729-2024</p>
       </Container>
     </section>
   );

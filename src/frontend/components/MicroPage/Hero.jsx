@@ -10,9 +10,10 @@ const MicroHero = ({ data, onLoadComplete }) => {
   const [images, setImages] = useState([]);
   const [loading, setLoading] = useState(true); // Loader state
   const [totalFrames, setTotalFrames] = useState(0);
+  const [loadingComplete, setLoadingComplete] = useState(false); // State to track when all images are loaded
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
-  const mouseScrollRef = useRef()
+  const isImagesLoaded = useRef(false);
 
   useEffect(() => {
     // Determine if it's mobile or desktop
@@ -21,8 +22,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     // Set total frames dynamically
     let frameCount = 0;
     if (data.micro_hero_section.client) {
-      frameCount = isMobile ? 721 : 720;
-    
+      frameCount = isMobile ? 686 : 720;
     } else {
       frameCount = isMobile ? 10 : 10;
     }
@@ -30,8 +30,8 @@ const MicroHero = ({ data, onLoadComplete }) => {
   }, [data]);
 
   useEffect(() => {
-    // Only preload images once totalFrames is set
-    if (totalFrames === 0) return;
+      // Only preload images once totalFrames is set
+    if (totalFrames === 0 || isImagesLoaded.current) return;
 
     const isMobile = window.innerWidth <= 768;
     let folderPath = null;
@@ -59,18 +59,20 @@ const MicroHero = ({ data, onLoadComplete }) => {
         if (loadedCount === totalFrames) {
           setImages(loadedImages); // Set images after all are loaded
           setLoading(false); // Hide loader
-          onLoadComplete(); 
+          isImagesLoaded.current = true; // Mark as loaded
+          setLoadingComplete(true); // Mark loading as complete
+          onLoadComplete(); // Call the callback
         }
       };
       
       loadedImages.push(img);
     }
-  }, [totalFrames, data, onLoadComplete]);
-  
+  }, [totalFrames]);
+
   useEffect(() => {
     // Reinitialize ScrollTrigger only after all images are loaded
-    if (loading || images.length !== totalFrames) return;
-    
+    if (loading || !loadingComplete || images.length !== totalFrames) return;
+
     // Image sequence animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
@@ -81,140 +83,108 @@ const MicroHero = ({ data, onLoadComplete }) => {
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
         
-        // Ensure frames update correctly
+        // Ensure frames update correctly using opacity
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === frameIndex ? "block" : "none";
+          if (img) {
+            img.style.opacity = index === frameIndex ? 1 : 0;
+          }
         });
       },
       onLeave: () => {
         // Ensure the last frame stays visible when scrolling ends
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+          if (img) img.style.opacity = index === totalFrames - 1 ? 1 : 0;
         });
       },
       onLeaveBack: () => {
         // Ensure the first frame stays visible when scrolling back to the top
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === 0 ? "block" : "none";
+          if (img) img.style.opacity = index === 0 ? 1 : 0;
         });
       },
     });
-    console.log('hero section')
-    
+
     return () => {
       scrollAnimation.kill();
     };
-  }, [loading, images, totalFrames]);
+  }, [loading, images, totalFrames, loadingComplete]);
 
   return (
-
-<>
-
-
-
-
-
-
-
-
-
-
-    <section className="section micro_hero_section p-0">
-      {/* Show Loader */}
-
-      
-
-      {!loading && data.micro_hero_section.isVdo && (
-        <div ref={containerRef} className="frames_content">
-          {images.map((img, index) => (
-            <img
-              key={index}
-              ref={(el) => (frameRefs.current[index] = el)}
-              src={img.src}
-              alt={`Frame ${index}`}
-              className="frame"
-              style={{ display: index === 0 ? "block" : "none" }}
-            />
-          ))}
-
-<div id="scroll-wrapper" className="microsite-scrolldown"> 
-        <div id="scroll-wrapper-inner ">
-          <div id="scroll-title">
-            Scroll Down
-          </div>
-          <div class="scroll-down-dude"></div>
-        </div>
-      </div>
-
-        </div>
-      )}
-
-      {!loading &&
-        data.micro_hero_section.images &&
-        Array.isArray(data.micro_hero_section.images) &&
-        data.micro_hero_section.images.map((imgs, index) => (
-
-          
-          <div key={index} className="hero-img">
-
-
-
-            <img
-              src={imgs.imgDesk}
-              alt={`mvn-hero-image-${index}`}
-              className="img-fluid d_lg_block"
-              fetchPriority="high"
-            />
-            <img
-              src={imgs.imgMb}
-              alt={`mvn-hero-image-sm-${index}`}
-              className="img-fluid d_sm_block"
-              fetchPriority="high"
-            />
-
-            
-          </div>
-        ))}
-
-
-
-
-      {!loading && data.micro_hero_section.bannerHighLight && (
-        <div className="hero_content">
-          <Container>
-            <div className="content">
-              <h5 className="starting_price">
-                <small>Starting At</small>
-                ₹ 4.51 Cr*
-              </h5>
-              <p className="typo">2 & 3 BHK Luxury Apartments</p>
-            </div>
-          </Container>
-        </div>
-      )}
-
-      {!loading &&
-        data.micro_hero_section.enquiryBTN &&
-        data.micro_hero_section.enquiryBTN.isshow === true && (
-          <div className="enquiry_btn">
-            <a
-              href={`mailto:${data.micro_hero_section.enquiryBTN.mail}`}
-              className="btn btn_enquire"
-            >
+    <>
+      <section className="section micro_hero_section p-0">
+        {!loading && data.micro_hero_section.isVdo && (
+          <div ref={containerRef} className="frames_content">
+            {images.map((img, index) => (
               <img
-                src={ImgMail}
-                className="img-fluid mail_enqiry_icon"
-                alt=""
+                key={index}
+                ref={(el) => (frameRefs.current[index] = el)}
+                src={img.src}
+                alt={`Frame ${index}`}
+                className="frame"
+                style={{ opacity: index === 0 ? 1 : 0 }}
               />
-              Enquire Now
-            </a>
+            ))}
+
+            <div id="scroll-wrapper" className="microsite-scrolldown">
+              <div id="scroll-wrapper-inner">
+                <div id="scroll-title">Scroll Down</div>
+                <div className="scroll-down-dude"></div>
+              </div>
+            </div>
           </div>
         )}
 
+        {!loading &&
+          data.micro_hero_section.images &&
+          Array.isArray(data.micro_hero_section.images) &&
+          data.micro_hero_section.images.map((imgs, index) => (
+            <div key={index} className="hero-img">
+              <img
+                src={imgs.imgDesk}
+                alt={`mvn-hero-image-${index}`}
+                className="img-fluid d_lg_block"
+                fetchPriority="high"
+              />
+              <img
+                src={imgs.imgMb}
+                alt={`mvn-hero-image-sm-${index}`}
+                className="img-fluid d_sm_block"
+                fetchPriority="high"
+              />
+            </div>
+          ))}
 
+        {!loading && data.micro_hero_section.bannerHighLight && (
+          <div className="hero_content">
+            <Container>
+              <div className="content">
+                <h5 className="starting_price">
+                  <small>Starting At</small>₹ 4.51 Cr*
+                </h5>
+                <p className="typo">2 & 3 BHK Luxury Apartments</p>
+              </div>
+            </Container>
+          </div>
+        )}
 
-    </section>
-
+        {!loading &&
+          data.micro_hero_section.enquiryBTN &&
+          data.micro_hero_section.enquiryBTN.isshow === true && (
+            <div className="enquiry_btn">
+              <a
+                href={`mailto:${data.micro_hero_section.enquiryBTN.mail}`}
+                className="btn btn_enquire"
+              >
+                <img
+                  src={ImgMail}
+                  className="img-fluid mail_enqiry_icon"
+                  alt=""
+                />
+                Enquire Now
+              </a>
+            </div>
+          )}
+      </section>
     </>
   );
 };

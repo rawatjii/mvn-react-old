@@ -55,7 +55,7 @@ import MediaImg from "../assets/images/mediacenter/mediaimg.jpg";
 import ScrollToTop from "../../common/ScrollToTop";
 
 function MediaCenter() {
-  window.scrollTo(0, 0);
+  
   const mvnLOGO = CONFIG.IMAGE_URL + "logo_white.webp";
   const titleRef = useRef();
   const desRefs = useRef([]);

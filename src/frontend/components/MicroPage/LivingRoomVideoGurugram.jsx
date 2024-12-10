@@ -6,6 +6,7 @@ import CustomCard from "../Card";
 import * as CONFIG from "../../../config/config";
 import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 import LivingRoomVideoLoader from "../../../common/Loader/micro/livingRoomVideo/Index";
+import ScrollDown from "../../../common/scrollDown/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -114,7 +115,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
 
     {!loading && (
       <>
-        <CustomCard className="style2" title={title} />
+        {/* <CustomCard className="style2" title={title} /> */}
           <div className="section living_room_video_section design1 pb-0" ref={sectionRef} id="livingRoomSlidingDoor">
           
             <div ref={containerRef} className="frames_content">
@@ -130,19 +131,12 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
               ))}
 
 
-<div id="scroll-wrapper" className="microsite-scrolldown"> 
-        <div id="scroll-wrapper-inner ">
-          <div id="scroll-title">
-            Scroll Down
-          </div>
-          <div class="scroll-down-dude"></div>
-        </div>
-      </div>
+            <ScrollDown className="color-black" />
 
             </div>
             <Container>
               <div className="about">
-                <CustomCard title={title} desc={desc} />
+                <CustomCard title={title} desc={desc} className="px_sm_0" />
               </div>
             </Container>
           </div>

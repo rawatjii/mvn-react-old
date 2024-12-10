@@ -31,11 +31,7 @@ function Blog() {
       },
     ],
   };
-  useEffect(() => {
-    if (containerRef.current) {
-      containerRef.current.scrollTo(0, 0);
-    }
-  }, []);
+  
 
   return (
     <div className="blog_page" ref={containerRef} >

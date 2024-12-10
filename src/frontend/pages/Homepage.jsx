@@ -11,7 +11,7 @@ import EnquireForm from "../components/homepage/EnquireForm";
 import HomepageVideo from '../components/MicroPage/HomepageVideo';
 import CussorPointer from '../../frontend/assets/images/icons/swipe-up.gif';
 
-import DeskopheronormalImg from "../../frontend/assets/images/hero/home-banner-img-4.webp";
+import DeskopheronormalImg from "../../frontend/assets/images/hero/hero_img.webp";
 import MobileheronormalImg from "../../frontend/assets/images/hero/home-banner-img-4-mobile.webp";
 
 import DeskopheronormalImg2 from "../../frontend/assets/images/hero/strip-banner.webp";

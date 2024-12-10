@@ -2,28 +2,25 @@ import Header from "./Header";
 import Footer from "./Footer";
 
 import { gsap } from 'gsap';
+import { ScrollToPlugin } from "gsap/ScrollToPlugin";
 import ScrollTrigger from 'gsap/ScrollTrigger';
 import ScrollSmoother from 'gsap/ScrollSmoother';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ScrollToTop from '../../common/ScrollToTop';
 
-import { Outlet } from "react-router-dom";
-import { useEffect,useRef } from "react";
-import HeaderNew from "./HeaderNew";
+import { useEffect } from "react";
 
 
 // Register GSAP plugins
-gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 const Layout = ({children})=>{
-  const containerRef = useRef();
     
-  window.scrollTo(0, 0);
+  // window.scrollTo(0, 0);
   // useEffect(() => {
-  //   if (containerRef.current) {
-  //     containerRef.current.scrollTo(0, 0);
-  //   }
+  //   ScrollSmoother
+  //   gsap.to(window, { scrollTo: 0, duration: 0 }); // Scroll instantly to top
   // }, []);
 
 
@@ -36,6 +33,9 @@ const Layout = ({children})=>{
       effects: true, // looks for data-speed and data-lag attributes on elements
       smoothTouch: 1.4, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
     })
+
+    // Scroll to the top when the layout is mounted
+    smoother.scrollTo(0);
 
     return ()=>{
       smoother.kill();

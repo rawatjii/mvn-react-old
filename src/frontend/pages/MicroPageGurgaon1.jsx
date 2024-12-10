@@ -130,25 +130,17 @@ const MicroPageGurgaon1 = ({ data }) => {
               <LargeElevationSection data={data.LargeElevationSection} />
               <Container>
                 <div className="about">
-                  <CustomCard extra="THIS ARCHITECTURAL MASTERPIECE SEAMLESSLY BLENDS CUTTING-EDGE DESIGN WITH NEW-AGE SOPHISTICATION. EVERY CURVE, EVERY DETAIL, IS METICULOUSLY CRAFTED TO ELEVATE YOUR LIVING EXPERIENCE. EMBRACE A  RESIDENCE WHERE INNOVATION MEETS BEAUTY, CREATING A LANDMARK OF LUXURIOUS URBAN LIVING. YOUR NEW HOME AWAITS." />
+                  <CustomCard className="px-0" title="ΑΝ ΕΡΙΤOME OF CONTEMPORARY ELEGANCE" extra="THIS ARCHITECTURAL MASTERPIECE SEAMLESSLY BLENDS CUTTING-EDGE DESIGN WITH NEW-AGE SOPHISTICATION. EVERY CURVE, EVERY DETAIL, IS METICULOUSLY CRAFTED TO ELEVATE YOUR LIVING EXPERIENCE. EMBRACE A  RESIDENCE WHERE INNOVATION MEETS BEAUTY, CREATING A LANDMARK OF LUXURIOUS URBAN LIVING. YOUR NEW HOME AWAITS." />
                 </div>
               </Container>
-              {window.innerWidth <= 768 ? (
-                <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}>
-                  {" "}
-                  <PeacockSection
-                    data={data}
-                    onLoadComplete={() => setPeacockLoaded(true)}
-                    isMobile={isMobile}
-                  />{" "}
-                </div>
-              ) : (
-                <img
-                  src={living_area_cam_peacock}
-                  alt=""
-                  className="img-fluid"
-                />
-              )}
+              <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}>
+                {" "}
+                <PeacockSection
+                  data={data}
+                  onLoadComplete={() => setPeacockLoaded(true)}
+                  isMobile={isMobile}
+                />{" "}
+              </div>
               {peacockLoaded && (
                 <>
                   {/* {<Video2 data={data} />}  */}
