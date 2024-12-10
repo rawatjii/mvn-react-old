@@ -7,6 +7,7 @@ import * as CONFIG from "../../../config/config";
 import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 import LivingRoomVideoLoader from "../../../common/Loader/micro/livingRoomVideo/Index";
 import ScrollDown from "../../../common/scrollDown/Index";
+import InitialLoading from "../../skeleton/Initial/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -111,6 +112,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
     {/* Show loader if still loading */}
     {loading && (
         <LivingRoomVideoLoader />
+        // <InitialLoading className="style1" />
       )}
 
     {!loading && (
@@ -130,8 +132,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
                 />
               ))}
 
-
-            <ScrollDown className="color-black" />
+            <ScrollDown />
 
             </div>
             <Container>

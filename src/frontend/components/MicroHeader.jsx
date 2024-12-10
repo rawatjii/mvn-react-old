@@ -44,8 +44,6 @@ const MicroHeader = ({ scrollToSection }) => {
       } else {
         if (window.scrollY > 2500) {
           setScrolled(true);
-        } else {
-          setScrolled(false);
         }
       }
       // if (window.scrollY > 50) {

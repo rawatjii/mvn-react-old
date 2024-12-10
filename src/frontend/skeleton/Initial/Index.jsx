@@ -15,6 +15,7 @@ const InitialLoading = ()=>{
     return(
         <div className="initial_loading">
             <img src={CONFIG.IMAGE_URL + 'logo.webp'} alt="mvn-loading-logo" className="img-fluid logo" style={{width: '90px'}} />
+            {/* <video src={CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop controls={false}  playsInline ></video> */}
         </div>
     )
 }

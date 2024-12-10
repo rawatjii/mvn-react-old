@@ -49,26 +49,26 @@ const Homepage = () => {
       <div className="parent-box-div">
 
       <a 
-  href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
-  className="hero-banner-link"
-  target="_blank" 
-  rel="noopener noreferrer"
->
-  <img
-    src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
-    alt="Hero Banner"
-    className="img-fluid hero-banner"
-  />
-</a>
+        href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
+        className="hero-banner-link"
+        target="_blank" 
+        rel="noopener noreferrer"
+      >
+        <img
+          src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
+          alt="Hero Banner"
+          className="img-fluid hero-banner"
+        />
+      </a>
 
 
-<div className="slider-content">
-<p className="slider-heading">Enter The Experience Center</p>
-<a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} className="link-btn"> Click Here </a>
-</div>
+      <div className="slider-content">
+        <p className="slider-heading">Enter The Experience Center</p>
+        <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} className="link-btn"> Click Here </a>
+      </div>
 
 
-</div>
+      </div>
 
 
       {/* <HomepageVideo isMobile={isMobile} /> */}

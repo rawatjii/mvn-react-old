@@ -6,6 +6,7 @@ import CustomCard from "../Card";
 import PartyLoader from "../../../common/Loader/micro/partyLoader/Index";
 import Watermark from "../../../common/watermark/Index";
 import lottie from "lottie-web";
+import InitialLoading from "../../skeleton/Initial/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -65,15 +66,14 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
         lottieAnimation.goToAndStop(frameIndex, true);
       },
       onLeave: () => {
-        // Check screen size and apply the correct transform value
-        const isMobileView = window.innerWidth <= 768; // Mobile view condition
+        const isMobileView = window.innerWidth <= 768;
         const svgElement = lottieContainerRef.current.querySelector(".jpg");
         if (svgElement) {
           svgElement.setAttribute(
             "transform",
             isMobileView
-              ? "matrix(0.3437773883342743,0,0,0.3437773883342743,50.0512752532959,-205.71138763427734)" // Mobile
-              : "matrix(0.2715912461280823,0,0,0.2715912461280823,-178.04544067382812,-439.8266296386719)" // Desktop
+              ? "matrix(0.3437773883342743,0,0,0.3437773883342743,50.0512752532959,-205.71138763427734)"
+              : "matrix(0.2715912461280823,0,0,0.2715912461280823,-178.04544067382812,-439.8266296386719)"
           );
         }
         lottieAnimation.goToAndStop(lottieAnimation.totalFrames - 1, true);
@@ -83,15 +83,18 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
       },
     });
 
-    // Set loading to false after both the animation and Lottie are ready
-    lottieAnimation.addEventListener("DOMLoaded", () => setLoading(false));
-    onLoadComplete();
+    // Event listener for when Lottie is fully initialized
+    lottieAnimation.addEventListener("DOMLoaded", () => {
+      console.log("Lottie animation is fully loaded.");
+      setLoading(false);
+      onLoadComplete && onLoadComplete();
+    });
 
     return () => {
       scrollAnimation.kill();
       lottieAnimation.destroy();
     };
-  }, [animationData]);
+  }, [animationData, onLoadComplete]);
 
   // Title animation with GSAP
   useEffect(() => {
@@ -110,20 +113,20 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
 
   return (
     <div className="section peacock_section pb-0">
-      {loading && <PartyLoader />}
-      {!loading && (
+      {loading ? (
+        <PartyLoader />
+        // <InitialLoading className="style1" />
+      ) : (
         <>
           <div ref={containerRef} className="frames_content">
             <Watermark className="style2" />
             <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }}></div>
-            <div id="scroll-wrapper" className="microsite-scrolldown"> 
-        <div id="scroll-wrapper-inner ">
-          <div id="scroll-title">
-            Scroll Down
-          </div>
-          <div class="scroll-down-dude"></div>
-        </div>
-      </div>
+            <div id="scroll-wrapper" className="microsite-scrolldown">
+              <div id="scroll-wrapper-inner">
+                <div id="scroll-title">Scroll Down</div>
+                <div className="scroll-down-dude"></div>
+              </div>
+            </div>
           </div>
           <Container>
             <div className="about">
@@ -132,8 +135,6 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
           </Container>
         </>
       )}
-
-
     </div>
   );
 };

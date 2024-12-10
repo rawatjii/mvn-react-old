@@ -112,7 +112,7 @@ const Header = () => {
       <Navbar
         ref={headerRef}
         expand="false"
-        className={`${scrolled ? "fixed" : ""} ${isMicro ? "micro_nav" : null}`}
+        className={`${scrolled ? "fixed" : ""} ${isMicro ? "micro_nav 1" : null}`}
       >
         <Container>
           <Navbar.Brand ref={logoRef} className="logo">

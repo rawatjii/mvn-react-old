@@ -6,6 +6,7 @@ import CustomCard from "../Card";
 import PartyLoader from "../../../common/Loader/micro/partyLoader/Index";
 import Watermark from "../../../common/watermark/Index";
 import lottie from "lottie-web";
+import InitialLoading from "../../skeleton/Initial/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -97,7 +98,7 @@ const MasterBedroom = ({ isMobile, data,onLoadComplete }) => {
 
   return (
     <div className="section peacock_section pb-0 master-bed-room">
-      {loading && <PartyLoader />}
+      {loading && <InitialLoading className="style1" />}
       {!loading && (
         <>
           <div ref={containerRef} className="frames_content">

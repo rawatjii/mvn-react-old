@@ -8,18 +8,17 @@ import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 import Watermark from "../../../common/watermark/Index";
 import * as CONFIG from '../../../config/config'
 import ScrollDown from "../../../common/scrollDown/Index";
+import InitialLoading from "../../skeleton/Initial/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const PeacockSection = ({ data, onLoadComplete }) => {
   const containerRef = useRef(null);
-  const titleRef = useRef();
   const [images, setImages] = useState([]);
   const frameRefs = useRef([]);
   const [isMobile, setIsMobile] = useState(false);
-  const [loading, setLoading] = useState(true); // State to track loading
+  const [loading, setLoading] = useState(true); // State to track loading for mobile
 
-  const totalFramesDesktop = 256;
   const totalFramesMobile = 256;
 
   // Detect screen size
@@ -32,14 +31,19 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     return () => {
       window.removeEventListener("resize", checkMobile);
     };
-  }, []); // Dependency array doesn't include data to ensure it's initialized once.
+  }, []);
 
-  // Load images
+  // Load images for mobile
   useEffect(() => {
-    if (isMobile === null) return; // Wait until `isMobile` is determined.
+    if (!isMobile) {
+      // Immediately call onLoadComplete for desktop
+      setLoading(false);
+      onLoadComplete();
+      return;
+    }
 
-    const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
-    const imagePath = isMobile ? "assets/images/peacock/mobile/" : "assets/images/peacock/mobile/";
+    const totalFrames = totalFramesMobile;
+    const imagePath = "assets/images/peacock/mobile/";
 
     const loadedImages = [];
     let loadedCount = 0;
@@ -51,21 +55,20 @@ const PeacockSection = ({ data, onLoadComplete }) => {
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
-          setLoading(false); // All images loaded, hide loader.
-          onLoadComplete()
+          setLoading(false); // All images loaded, hide loader
+          onLoadComplete();
         }
       };
 
       loadedImages.push(img);
     }
     setImages(loadedImages);
-  }, [isMobile]); // Depend on `isMobile` to reload images when the state changes.
+  }, [isMobile, onLoadComplete]);
 
-  // GSAP Animation only for mobile
+  // GSAP Animation for mobile
   useEffect(() => {
-    if (images.length === 0 || loading || !isMobile) return; // Skip if no images, still loading, or not mobile.
+    if (!isMobile || images.length === 0 || loading) return; // Skip if not mobile or still loading
 
-    // Initialize ScrollTrigger animation
     const totalFrames = totalFramesMobile;
 
     const scrollAnimation = ScrollTrigger.create({
@@ -98,7 +101,6 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     ScrollTrigger.refresh();
 
     return () => {
-      // Clean up ScrollTrigger instance
       scrollAnimation.kill();
     };
   }, [images, isMobile, loading]);
@@ -109,9 +111,8 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     <div className="section peacock_section pb-0" id="peacockSection">
 
       {/* Show loader if still loading */}
-      {loading && (
-        <PeacockLoader />
-      )}
+      {loading && isMobile && <PeacockLoader />}
+      {/* {loading && <InitialLoading className="style1" />} */}
 
       {!loading && (
         <>
@@ -135,18 +136,16 @@ const PeacockSection = ({ data, onLoadComplete }) => {
             </div>
 
             <ScrollDown className="color-black" />
-
           </div>
 
-          <Container >
+          <Container>
             <div className='about'>
-                <CustomCard
+              <CustomCard
                 className="p_sm_0"
-                  title="EXPERIENCE THE GRANDEUR OF THE LIVING ROOM WITH 360° PANORAMIC VIEWS" 
-                  desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."  
-                />
+                title="EXPERIENCE THE GRANDEUR OF THE LIVING ROOM WITH 360° PANORAMIC VIEWS"
+                desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."
+              />
             </div>
-
           </Container>
         </>
       )}

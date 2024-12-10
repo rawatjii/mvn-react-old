@@ -3207,7 +3207,30 @@ footer {
   }
 }
 
+.living_room_video_loader{
+  min-height:calc(130vh);
+}
 
+.loader_section{
+
+  .micro_thumbnail{
+    width: 100%;
+    object-fit: contain;
+  }
+}
+
+.party_loader{
+  min-height:calc(130vh);
+}
+
+.gurgaon_loader.party_loader{
+
+  .micro_thumbnail{
+    width: 100%;
+    height:auto;
+    object-fit: contain;
+  }
+}
 
 
 /* start responsive */
@@ -3833,9 +3856,18 @@ footer {
     }
   }
 
+  .living_room_video_loader{
 
+    min-height: 100vh;
+  }
+
+  .party_loader{
+    min-height: calc(150vh);
+  }
 
 }
+
+/* end of 767 */
 
 .thanks-page {
   width: 100%;

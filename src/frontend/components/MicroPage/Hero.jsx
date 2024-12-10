@@ -22,7 +22,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     // Set total frames dynamically
     let frameCount = 0;
     if (data.micro_hero_section.client) {
-      frameCount = isMobile ? 686 : 720;
+      frameCount = isMobile ? 664 : 711;
     } else {
       frameCount = isMobile ? 10 : 10;
     }
@@ -77,9 +77,9 @@ const MicroHero = ({ data, onLoadComplete }) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 6}`, // Extend scroll distance to fit more frames
+      end: `+=${window.innerHeight * 12}`, // Extend scroll distance to fit more frames
       pin: true,
-      scrub: 0.005,
+      scrub: 2,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
         

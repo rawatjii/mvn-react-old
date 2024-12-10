@@ -30,7 +30,7 @@ import Testing from "../components/MicroPage/Testing";
 import RendersSliding from "../components/MicroPage/Testing";
 import Renders1 from "../components/MicroPage/Renders1";
 import CustomModal from "../../common/Modal";
-import MicroHeader from "./../components/MicroHeader";
+import MicroHeader from "../components/MicroHeader";
 
 import { gsap } from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
@@ -38,15 +38,16 @@ import ScrollSmoother from "gsap/ScrollSmoother";
 import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
 import NoPolutionZone1 from "../components/MicroPage/NoPolutionZone1";
 import MicroLandscape from "../components/MicroPage/Landscape";
-import MicroElevation from "./../components/MicroPage/MicroElevation";
-import MicroApartment from "./../components/MicroPage/MicroApartment";
+import MicroElevation from "../components/MicroPage/MicroElevation";
+import MicroApartment from "../components/MicroPage/MicroApartment";
 import Footer from "../components/Footer";
 import living_area_cam_peacock from "../../../public/assets/images/peacock/peacock.webp";
-import CustomCard from "./../components/Card";
+import CustomCard from "../components/Card";
 import Amenities2 from "../components/MicroPage/Amenities2";
 import MvnMall from "../components/MicroPage/MvnMall";
 import DownloadBrochure from "../components/MicroPage/DownloadBrochure";
 import NoPollutionZone1 from "../components/MicroPage/NoPolutionZone1";
+import InitialLoading from "../skeleton/Initial/Index";
 // import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
@@ -96,9 +97,9 @@ const MicroPageGurgaon1 = ({ data }) => {
       smoothTouch: 1.4, // Smooth scrolling on touch devices
     });
 
-    if (window.innerWidth >= 768) {
-      setPeacockLoaded(true);
-    }
+    // if (window.innerWidth >= 768) {
+    //   setPeacockLoaded(true);
+    // }
 
     return () => {
       if (smootherRef.current) {
@@ -114,7 +115,7 @@ const MicroPageGurgaon1 = ({ data }) => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           {/* Show Loader until hero section is loaded */}
-          {!heroLoaded && <GurgaonLoader1 />}
+          {!heroLoaded && <InitialLoading />}
 
           {/* Render Hero Section */}
 
@@ -141,16 +142,16 @@ const MicroPageGurgaon1 = ({ data }) => {
                   isMobile={isMobile}
                 />{" "}
               </div>
+
+
               {peacockLoaded && (
                 <>
-                  {/* {<Video2 data={data} />}  */}
                   <div>
                     <LivingRoomVideoGurugram
                       data={data}
                       onLoadComplete={() => setLivingRoomLoaded(true)}
                       isMobile={isMobile}
                     />
-                    {/* <LivingRoomVideo data={data} /> */}
                   </div>
 
                   {livingRoomLoaded && (
@@ -337,6 +338,9 @@ const MicroPageGurgaon1 = ({ data }) => {
                   )}
                 </>
               )}
+
+
+
             </>
           )}
         </div>
