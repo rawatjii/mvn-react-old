@@ -23,6 +23,7 @@ const Layout = ({children})=>{
 
   useEffect(()=>{
     setIsAerooneGurgaon(pathname.includes('aeroone-gurgaon'));
+    window.scrollTo(0, 0);
   }, [pathname])
 
   useEffect(()=>{
@@ -36,12 +37,14 @@ const Layout = ({children})=>{
     })
 
     // Scroll to the top when the layout is mounted
-    smoother.scrollTo(0);
+    setTimeout(() => {
+      smoother.scrollTo(0);
+    }, 100);
 
     return ()=>{
       smoother.kill();
     }
-  }, [])
+  }, [pathname])
 
   return(
     <>
@@ -78,7 +81,6 @@ const Layout = ({children})=>{
           <Footer />
         </div>
       </div>
-      <ScrollToTop />
     </>
   )
 }

@@ -14,6 +14,8 @@ import { blogData } from "../../data/blogsdata";
 import ScrollToTop from './../../common/ScrollToTop';
 
 function Blog() {
+  window.scrollTo(0, 0);
+  
   const dispatch = useDispatch();
   const titleRef = useRef();
   const desRefs = useRef([]);

@@ -47,7 +47,7 @@ const MicroOverview = ({ data }) => {
   useEffect(() => {
     const handleScroll = () => {
       if (!ended1 && isScrolledIntoView(ref1)) {
-        countUp(13600, setCount1, setEnded1);
+        countUp(13500, setCount1, setEnded1);
       }
       if (!ended2 && isScrolledIntoView(ref2)) {
         countUp(11700, setCount2, setEnded2);

@@ -398,10 +398,6 @@ const MicroHeader = ({ scrollToSection }) => {
                             </li>
                           </ul>
 
-
-
-
-
                           </div>
 
                           <div className="right top">
