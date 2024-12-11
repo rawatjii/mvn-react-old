@@ -111,7 +111,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     <div className="section peacock_section pb-0" id="peacockSection">
 
       {/* Show loader if still loading */}
-      {loading && isMobile && <PeacockLoader />}
+      {loading && <PeacockLoader />}
       {/* {loading && <InitialLoading className="style1" />} */}
 
       {!loading && (

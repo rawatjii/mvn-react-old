@@ -12,7 +12,7 @@ import HomepageVideo from '../components/MicroPage/HomepageVideo';
 import CussorPointer from '../../frontend/assets/images/icons/swipe-up.gif';
 
 import DeskopheronormalImg from "../../frontend/assets/images/hero/hero_img.webp";
-import MobileheronormalImg from "../../frontend/assets/images/hero/home-banner-img-4-mobile.webp";
+import MobileheronormalImg from "../../frontend/assets/images/hero/hero_img_sm.webp";
 
 import DeskopheronormalImg2 from "../../frontend/assets/images/hero/strip-banner.webp";
 import MobileheronormalImg2 from "../../frontend/assets/images/hero/strip-banner-mobile.webp";
@@ -117,7 +117,7 @@ const Homepage = () => {
       {/* Enquiry Section */}
       <div className="flex-footer-form">
         <Enquire />
-        <EnquireForm projectName={"MVN"} />
+        <EnquireForm projectName={"MVN Infrastructure"} />
       </div>
     </>
   );

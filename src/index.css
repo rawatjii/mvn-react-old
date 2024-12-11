@@ -3232,6 +3232,11 @@ footer {
   }
 }
 
+.master-bed-room{
+
+  min-height:100vh;
+}
+
 
 /* start responsive */
 /* by bhupendra */

@@ -100,7 +100,7 @@ if (newTab) {
             Get In Touch With Us
           </h4>
         </SecTitle>
-        {loading  ? <Loader  /> : '' }
+        {/* {loading  ? <Loader  /> : '' } */}
    
         <Form ref={formRef} onSubmit={loading ? () => null : handleSubmit}>
           <Row>
@@ -177,8 +177,8 @@ if (newTab) {
             )}
           </Row>
 
-          <Button type="submit" className="btn_style3">
-            {loading ? "Sending" : "Submit"}
+          <Button type="submit" className="btn_style3" disabled={loading ? true:false}>
+            {loading ? "Sending..." : "Submit"}
           </Button>
         </Form>
       </Container>

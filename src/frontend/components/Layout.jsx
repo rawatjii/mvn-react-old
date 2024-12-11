@@ -1,5 +1,6 @@
 import Header from "./Header";
 import Footer from "./Footer";
+import { Helmet } from "react-helmet";
 
 import { gsap } from 'gsap';
 import { ScrollToPlugin } from "gsap/ScrollToPlugin";
@@ -9,20 +10,20 @@ import ScrollSmoother from 'gsap/ScrollSmoother';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import ScrollToTop from '../../common/ScrollToTop';
 
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
 
 
 // Register GSAP plugins
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother, ScrollToPlugin);
 
 const Layout = ({children})=>{
-    
-  // window.scrollTo(0, 0);
-  // useEffect(() => {
-  //   ScrollSmoother
-  //   gsap.to(window, { scrollTo: 0, duration: 0 }); // Scroll instantly to top
-  // }, []);
+  const [isAerooneGurgaon, setIsAerooneGurgaon] = useState(false);
+  const { pathname } = useLocation();
 
+  useEffect(()=>{
+    setIsAerooneGurgaon(pathname.includes('aeroone-gurgaon'));
+  }, [pathname])
 
   useEffect(()=>{
   
@@ -44,7 +45,31 @@ const Layout = ({children})=>{
 
   return(
     <>
-      {/* <HeaderNew /> */}
+      <Helmet>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+          `}
+        </script>
+
+        <script
+          async
+          src={
+          isAerooneGurgaon
+            ? "https://www.googletagmanager.com/gtag/js?id=G-P7MQ5KWWGL"
+            : "https://www.googletagmanager.com/gtag/js?id=G-T5WPYZN1FC"
+          }
+        ></script>
+
+        <script>
+          {`
+            gtag('js', new Date());
+            gtag('config', '${isAerooneGurgaon ? 'G-P7MQ5KWWGL' : 'G-T5WPYZN1FC'}');
+          `}
+        </script>
+      </Helmet>
+
       <Header />
       <div id="smooth-wrapper"  >
         <div id="smooth-content" >

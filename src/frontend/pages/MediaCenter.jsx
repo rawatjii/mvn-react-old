@@ -521,7 +521,7 @@ function MediaCenter() {
           </div>
           <div className="col-sm-6">
             <div className="media_enquiry_form_card">
-            <EnquireForm projectName={'MVN'}/>
+            <EnquireForm projectName={'MVN Infrastructure'}/>
             </div>
           </div>
         </div>

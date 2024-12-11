@@ -111,9 +111,9 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
     <>
     {/* Show loader if still loading */}
     {loading && (
-        <LivingRoomVideoLoader />
-        // <InitialLoading className="style1" />
-      )}
+      <LivingRoomVideoLoader />
+      // <InitialLoading className="style1" />
+    )}
 
     {!loading && (
       <>

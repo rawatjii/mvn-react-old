@@ -3,7 +3,7 @@ import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import CustomCard from "../Card";
-import PartyLoader from "../../../common/Loader/micro/partyLoader/Index";
+import MasterBedroomLoader from "../../../common/Loader/micro/masterBedroomLoader/Index";
 import Watermark from "../../../common/watermark/Index";
 import lottie from "lottie-web";
 import InitialLoading from "../../skeleton/Initial/Index";
@@ -11,7 +11,7 @@ import InitialLoading from "../../skeleton/Initial/Index";
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
 
-const MasterBedroom = ({ isMobile, data,onLoadComplete }) => {
+const MasterBedroom = ({ isMobile, data, onLoadComplete }) => {
   const containerRef = useRef(null);
   const titleRef = useRef();
   const lottieContainerRef = useRef(null);
@@ -75,11 +75,12 @@ const MasterBedroom = ({ isMobile, data,onLoadComplete }) => {
     // Set loading to false after both the animation and Lottie are ready
     lottieAnimation.addEventListener("DOMLoaded", () => setLoading(false));
     onLoadComplete();
+
     return () => {
       scrollAnimation.kill();
       lottieAnimation.destroy();
     };
-  }, [animationData]);
+  }, [animationData, onLoadComplete]);
 
   // Title animation with GSAP
   useEffect(() => {
@@ -98,23 +99,21 @@ const MasterBedroom = ({ isMobile, data,onLoadComplete }) => {
 
   return (
     <div className="section peacock_section pb-0 master-bed-room">
-      {loading && <InitialLoading className="style1" />}
+      {loading && <MasterBedroomLoader />}
       {!loading && (
         <>
           <div ref={containerRef} className="frames_content">
             <Watermark className="style2" />
             <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }}></div>
-        
-            <div id="scroll-wrapper" className="microsite-scrolldown"> 
+
+            <div id="scroll-wrapper" className="microsite-scrolldown">
               <div id="scroll-wrapper-inner ">
-                <div id="scroll-title">
-                  Scroll Down
-                </div>
-                <div class="scroll-down-dude"></div>
+                <div id="scroll-title">Scroll Down</div>
+                <div className="scroll-down-dude"></div>
               </div>
             </div>
           </div>
-  
+
           <Container>
             <div className="about">
               <CustomCard className="px_sm_0" title={title} desc={desc} />

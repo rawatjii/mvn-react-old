@@ -18,7 +18,7 @@ const DownloadBrochure = ()=>{
       <Button className="btn btn_style4" onClick={handleOpenBrochureModal}>Download Brochure</Button>
 
 
-      <CustomModal hide={isHideModal} show={isShowModal} type="enquire"  />
+      <CustomModal hide={isHideModal} show={isShowModal} type="enquire" projectName="MVN Aeroone"  />
     </section>
   )
 }

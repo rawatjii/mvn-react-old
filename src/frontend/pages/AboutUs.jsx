@@ -57,7 +57,7 @@ const AboutUs = () => {
           <OurTeam />
           <div className="flex-footer-form">
             <Enquire />
-            <EnquireForm projectName={'MVN'}/>
+            <EnquireForm projectName={'MVN Infrastructure'}/>
           </div>
         </div>
       </div>

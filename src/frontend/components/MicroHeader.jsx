@@ -15,6 +15,7 @@ import { gsap } from "gsap";
 const MicroHeader = ({ scrollToSection }) => {
   const [scrolled, setScrolled] = useState(false);
   const [isMicro, setIsMicro] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   const channelUrl = "https://www.youtube.com/@MVNInfrastructures?sub_confirmation=1";
 
@@ -29,23 +30,40 @@ const MicroHeader = ({ scrollToSection }) => {
 
   const { pathname } = useLocation();
 
+  useEffect(()=>{
+    const updateIsMobile = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+
+    updateIsMobile();
+    window.addEventListener("resize", updateIsMobile); // Update on resize
+
+    return () => {
+      window.removeEventListener("resize", updateIsMobile);
+    };
+    
+  }, [])
+
   useEffect(() => {
     if (pathname.includes("aeroone-gurgaon")) {
       setIsMicro(true);
     }
 
     const handleScroll = () => {
-      if (pathname === "/") {
-        if (window.scrollY > 2960) {
+      if(!isMobile){
+        if (window.scrollY > 12000) {
           setScrolled(true);
-        } else {
+        }else{
           setScrolled(false);
         }
-      } else {
-        if (window.scrollY > 2500) {
+      }else{
+        if (window.scrollY > 9000) {
           setScrolled(true);
+        }else{
+          setScrolled(false);
         }
       }
+      
       // if (window.scrollY > 50) {
       //   setScrolled(true);
       // } else {
@@ -56,7 +74,7 @@ const MicroHeader = ({ scrollToSection }) => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [isMobile]);
 
   useEffect(() => {
     // logo animation

@@ -194,7 +194,7 @@ const MicroFloorPlan = ({ data }) => {
         )}
       </Container>
 
-      <CustomModal show={isShowModal} hide={isHideModal} projectName={'MVN-AeroOne-Gurgaon'}/>
+      <CustomModal show={isShowModal} hide={isHideModal} projectName={'MVN Aeroone'}/>
 
       <Lightbox
         open={index >= 0}

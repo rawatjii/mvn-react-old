@@ -33,6 +33,7 @@ import CustomModal from "../../common/Modal";
 import MicroHeader from "../components/MicroHeader";
 
 import { gsap } from "gsap";
+import { Helmet } from "react-helmet";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import ScrollSmoother from "gsap/ScrollSmoother";
 import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
@@ -111,6 +112,28 @@ const MicroPageGurgaon1 = ({ data }) => {
 
   return (
     <>
+      <Helmet>
+        <script>
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+          `}
+        </script>
+
+        <script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-P7MQ5KWWGL"
+        ></script>
+
+        <script>
+          {`
+            gtag('js', new Date());
+            gtag('config', 'G-P7MQ5KWWGL');
+          `}
+        </script>
+      </Helmet>
+
+      
       <MicroHeader scrollToSection={scrollToSection} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -135,214 +158,162 @@ const MicroPageGurgaon1 = ({ data }) => {
                 </div>
               </Container>
               <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}>
-                {" "}
                 <PeacockSection
                   data={data}
                   onLoadComplete={() => setPeacockLoaded(true)}
                   isMobile={isMobile}
-                />{" "}
+                />
+              </div>
+
+              <div>
+                <LivingRoomVideoGurugram
+                  data={data}
+                  onLoadComplete={() => setLivingRoomLoaded(true)}
+                  isMobile={isMobile}
+                />
+              </div>
+
+              <div>
+                <PartyVideo
+                  data={data}
+                  onLoadComplete={() => setPartyLoaded(true)}
+                  isMobile={isMobile}
+                />
+              </div>
+
+              <div>
+                <MasterBedroom
+                  data={data}
+                  onLoadComplete={() =>
+                    setMasterBedroomLoaded(true)
+                  }
+                  isMobile={isMobile}
+                />
               </div>
 
 
-              {peacockLoaded && (
-                <>
-                  <div>
-                    <LivingRoomVideoGurugram
-                      data={data}
-                      onLoadComplete={() => setLivingRoomLoaded(true)}
-                      isMobile={isMobile}
-                    />
-                  </div>
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.Walkthrough = el)
+                }
+              >
+                <Walkthrough data={data.Walkthrough} />{" "}
+              </div>
 
-                  {livingRoomLoaded && (
-                    <>
-                      <div>
-                        <PartyVideo
-                          data={data}
-                          onLoadComplete={() => setPartyLoaded(true)}
-                          isMobile={isMobile}
-                        />
-                      </div>
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.downloadBrochure = el)
+                }
+              >
+                <DownloadBrochure />
+              </div>
 
-                      {partyLoaded && (
-                        <>
-                          <div>
-                            <MasterBedroom
-                              data={data}
-                              onLoadComplete={() =>
-                                setMasterBedroomLoaded(true)
-                              }
-                              isMobile={isMobile}
-                            />{" "}
-                            {/*no isssue*/}
-                          </div>
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.MicroLandscape = el)
+                }
+              >
+                <MicroLandscape />
+              </div>
 
-                          {masterBedroomLoaded && (
-                            <>
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.Walkthrough = el)
-                                }
-                              >
-                                <Walkthrough data={data.Walkthrough} />{" "}
-                                {/*no isssue*/}
-                              </div>
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.MicroElevation = el)
+                }
+              >
+                <MicroElevation />
+              </div>
 
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.downloadBrochure = el)
-                                }
-                              >
-                                <DownloadBrochure />
-                              </div>
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.MicroApartment = el)
+                }
+              >
+                <MicroApartment />
+              </div>
 
-                              {/*<div>
-                                  <Renders data={data} />  /~no isssue~/
-                                </div>*/}
-
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.MicroLandscape = el)
-                                }
-                              >
-                                <MicroLandscape />
-                              </div>
-
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.MicroElevation = el)
-                                }
-                              >
-                                <MicroElevation />
-                              </div>
-
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.MicroApartment = el)
-                                }
-                              >
-                                <MicroApartment />
-                              </div>
-
-                              {/* <Renders1 /> */}
-                              {/* <div>
-
-                                  {data?.renders.map((render, index) => (
-                                    <SecSliding key={index} data={render} />
-                                  ))}
-
-                                </div> */}
-
-                              {/* <div>
-                                  {data?.renders.map((render, index)=>(
-                                    <SecSliding key={index} data={render} />
-                                  ))}
-                                </div> */}
-
-                              {/* No polution zone location */}
-                              {/* <div><MicroHighlights data={data.highlight} />  </div>*/}
-                              {/* <MicroAmenities1 data={data.amenities} /> */}
-
-                              {/* Conditionally Render Components Based on Screen Size */}
-                              {isMobile ? (
-                                <div
-                                  ref={(el) =>
-                                    (sectionRefs.current.MicroAmenities = el)
-                                  }
-                                >
-                                  <MicroAmenities data={data.amenities} />
-                                </div>
-                              ) : (
-                                <div
-                                  ref={(el) =>
-                                    (sectionRefs.current.MicroAmenitiesDesktop =
-                                      el)
-                                  }
-                                >
-                                  <MicroAmenitiesDesktop
-                                    data={data.amenities}
-                                  />
-                                </div>
-                              )}
-
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.MicroTypology = el)
-                                }
-                              >
-                                <Typology />
-                              </div>
-
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.MicroFloorPlan = el)
-                                }
-                              >
-                                <MicroFloorPlan data={data.floorPlan} />
-                              </div>
-
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.MicroLocationMap = el)
-                                }
-                              >
-                                <MicroLocationMap
-                                  data={data.locationAdvantage}
-                                />
-                              </div>
-
-                              <div
-                                ref={(el) => (sectionRefs.current.MVNMALL = el)}
-                              >
-                                <MvnMall />
-                              </div>
-
-                              <div
-                                ref={(el) =>
-                                  (sectionRefs.current.NoPolutionZone = el)
-                                }
-                              >
-                                <NoPolutionZone data={data.noPollutionZone} />{" "}
-                                {/*no isssue*/}
-                              </div>
-
-                              {/* <div>
-                                    <MicroPrice /> 
-                                  </div> */}
-                              {/* <MicroAmenities data={data.menities_section} /> */}
-                              {/* <MicroFloorPlan data={data.floorPlan} /> */}
-                              {/* <MicroLocationMap data={data.locationAdvantage} /> */}
-                              {/* <Slides /> */}
-                              <div
-                                className="container-fluid micro_footer"
-                                ref={(el) => (sectionRefs.current.Enuqiry = el)}
-                              >
-                                <div className="row ">
-                                  <div className="col-sm-6 px-0">
-                                    <Enquire />
-                                  </div>
-                                  <div className="col-sm-6 px-0">
-                                    <EnquireForm
-                                      projectName={"MVN-AeroOne-Gurgaon"}
-                                    />
-                                  </div>
-                                </div>
-                              </div>
-
-                              <Footer />
-                            </>
-                          )}
-                        </>
-                      )}
-                    </>
-                  )}
-                </>
+              {isMobile ? (
+                <div
+                  ref={(el) =>
+                    (sectionRefs.current.MicroAmenities = el)
+                  }
+                >
+                  <MicroAmenities data={data.amenities} />
+                </div>
+              ) : (
+                <div
+                  ref={(el) =>
+                    (sectionRefs.current.MicroAmenitiesDesktop =
+                      el)
+                  }
+                >
+                  <MicroAmenitiesDesktop
+                    data={data.amenities}
+                  />
+                </div>
               )}
 
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.MicroTypology = el)
+                }
+              >
+                <Typology />
+              </div>
 
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.MicroFloorPlan = el)
+                }
+              >
+                <MicroFloorPlan data={data.floorPlan} />
+              </div>
 
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.MicroLocationMap = el)
+                }
+              >
+                <MicroLocationMap
+                  data={data.locationAdvantage}
+                />
+              </div>
+
+              <div
+                ref={(el) => (sectionRefs.current.MVNMALL = el)}
+              >
+                <MvnMall />
+              </div>
+
+              <div
+                ref={(el) =>
+                  (sectionRefs.current.NoPolutionZone = el)
+                }
+              >
+                <NoPolutionZone data={data.noPollutionZone} />{" "}
+              </div>
+
+              <div
+                className="container-fluid micro_footer"
+                ref={(el) => (sectionRefs.current.Enuqiry = el)}
+              >
+                <div className="row ">
+                  <div className="col-sm-6 px-0">
+                    <Enquire />
+                  </div>
+                  <div className="col-sm-6 px-0">
+                    <EnquireForm
+                      projectName={"MVN Aeroone"}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <Footer />
             </>
           )}
+
+          
         </div>
       </div>
     </>

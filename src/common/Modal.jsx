@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Col, Container, Form, Row } from "react-bootstrap";
-import Button from "react-bootstrap/Button";
+import Button from "./Button/Button";
 import Modal from "react-bootstrap/Modal";
 import SecTitle from "./SecTitle/Index";
 // import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
@@ -95,7 +95,7 @@ const CustomModal = ({ show, hide, projectName }) => {
             >
               &times;
             </span>
-            {loading  ? <Loader  /> : '' }
+            {/* {loading  ? <Loader  /> : '' } */}
             <Form onSubmit={loading ? () => null : handleSubmit}>
               <Row>
                 <Form.Group className="form-group" as={Col} xs="12">
@@ -139,8 +139,8 @@ const CustomModal = ({ show, hide, projectName }) => {
                 </Form.Group>
               </Row>
 
-              <Button type="submit" className="btn_style3">
-                {loading ? "Sending" : "Submit"}
+              <Button type="submit" className="btn_style3" disabled={loading ? true:false}>
+                {loading ? "Sending..." : "Submit"}
               </Button>
             </Form>
           </Container>
