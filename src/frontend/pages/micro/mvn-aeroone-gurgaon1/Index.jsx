@@ -399,7 +399,7 @@ export const data = {
     {
       title: '0 km cinema',
       desc:'Have a blockbuster of a time, without ever missing a show due to traffic. Catch up with all the superhits at the theatres below in the MVN mall.',
-      imgSrc: window.innerWidth <= 768 ? 'cinema.jpg' : 'desktop/cinema.webp'
+      imgSrc: window.innerWidth <= 768 ? 'cinema.webp' : 'desktop/cinema.webp'
     },
   ],
   highlight:{
