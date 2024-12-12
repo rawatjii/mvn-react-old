@@ -55,17 +55,15 @@ export default function Amenities({ data }) {
               </div>
               <div className="content">
               <span className="am-name">{single.name}</span>
-              <p className="desc">
-                {Array.isArray(single.desc) ? (
+              {Array.isArray(single.desc) ? (
                   single.desc.map((desc, index) => (
                     <p key={index} className="desc">
-                      {desc}
+                      {desc}                   
                     </p>
                   ))
                 ) : (
                   <p className="desc">{single.desc}</p>
                 )}
-              </p>
               </div>
             </div>
           ))}

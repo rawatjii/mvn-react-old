@@ -252,7 +252,7 @@ export const data = {
         desktop:'central-green.webp',
         mobile:'central-green_sm.webp'
       },
-      desc:['An oasis of clean air and pure living','Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.']
+      desc:['An oasis of clean air and pure living. ','Advanced air purification systems create pollution-free zones, ensuring residents breathe clean, fresh air, promoting healthier living and well-being.']
     },
     {
       name: 'Exclusive entrance and exit for the residents',

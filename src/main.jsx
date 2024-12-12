@@ -6,12 +6,12 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 
 import Layout from "./frontend/components/Layout.jsx";
-// const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
-const Homepage = React.lazy(() =>
-  new Promise((resolve) =>
-    setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 3000)
-  )
-);
+const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
+// const Homepage = React.lazy(() =>
+//   new Promise((resolve) =>
+//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 30000)
+//   )
+// );
 const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
 const MicroPage = React.lazy(() => import("./frontend/pages/Micro.jsx"));
 const AeroOneGurgaon = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
