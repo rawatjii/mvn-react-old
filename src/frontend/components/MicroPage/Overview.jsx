@@ -118,7 +118,7 @@ const MicroOverview = ({ data }) => {
           <span className="bar"></span>
         </div>
 
-        <p className="rera-number">RERA Registration no : RERA-GRG-PROJ-1729-2024</p>
+        <p className="rera-number">RERA Registration no : RC/REP/HARERA/GGM/889/621/2024/116</p>
       </Container>
     </section>
   );

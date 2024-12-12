@@ -9,7 +9,7 @@ import Layout from "./frontend/components/Layout.jsx";
 const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
 // const Homepage = React.lazy(() =>
 //   new Promise((resolve) =>
-//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 1000000)
+//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 500000)
 //   )
 // );
 const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
@@ -71,12 +71,12 @@ const router = createBrowserRouter([
       {
         path: "",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')}/>}>
             <Layout>
               <Homepage />
             </Layout>
           </Suspense>
-        ),
+        ), 
       },
       {
         path: "about-us",
