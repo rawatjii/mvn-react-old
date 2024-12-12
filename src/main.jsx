@@ -6,12 +6,12 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 
 import Layout from "./frontend/components/Layout.jsx";
-const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
-// const Homepage = React.lazy(() =>
-//   new Promise((resolve) =>
-//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 500000)
-//   )
-// );
+// const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
+const Homepage = React.lazy(() =>
+  new Promise((resolve) =>
+    setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 3000)
+  )
+);
 const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
 const MicroPage = React.lazy(() => import("./frontend/pages/Micro.jsx"));
 const AeroOneGurgaon = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
@@ -81,7 +81,7 @@ const router = createBrowserRouter([
       {
         path: "about-us",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')}  />}>
             <Layout>
               <AboutUs />
             </Layout>
@@ -101,7 +101,7 @@ const router = createBrowserRouter([
       {
         path: "aeroone-gurgaon",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
               <MicroPageGurgaon1 data={data} />
           </Suspense>
         ),
@@ -109,7 +109,7 @@ const router = createBrowserRouter([
       {
         path: "aeroone-bangalore",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <AeroOneBangalore />
             </Layout>
@@ -119,7 +119,7 @@ const router = createBrowserRouter([
       {
         path: "athens",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <Athens />
             </Layout>
@@ -129,7 +129,7 @@ const router = createBrowserRouter([
       {
         path: "micro",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <MicroPage projectName={'MVN-Micro'}/>
             </Layout>
@@ -139,7 +139,7 @@ const router = createBrowserRouter([
       {
         path: "contact-us",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <ContactPage />
             </Layout>
@@ -149,7 +149,7 @@ const router = createBrowserRouter([
       {
         path: "career",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <Career />
             </Layout>
@@ -159,7 +159,7 @@ const router = createBrowserRouter([
       {
         path: "thanks",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <ThankYou />
             </Layout>
@@ -169,7 +169,7 @@ const router = createBrowserRouter([
       {
         path: "media-center",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <MediaCenter />
             </Layout>
@@ -179,7 +179,7 @@ const router = createBrowserRouter([
       {
         path: "blogs",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <Blog />
             </Layout>
@@ -189,7 +189,7 @@ const router = createBrowserRouter([
       {
         path: "blogs/details/:slug",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <BlogDetails />
             </Layout>
@@ -199,7 +199,7 @@ const router = createBrowserRouter([
       {
         path: "mvn-mall-gurgaon",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <MvnMallGurgaon />
             </Layout>
@@ -209,7 +209,7 @@ const router = createBrowserRouter([
       {
         path: "mvn-athens-sohna",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <MvnAthensSohna />
             </Layout>
@@ -219,7 +219,7 @@ const router = createBrowserRouter([
       {
         path: "mvn-athens-ph2-sohna",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <MvnAthensPh2Sohna />
             </Layout>
@@ -229,7 +229,7 @@ const router = createBrowserRouter([
       {
         path: "mvn-athens-faridabad",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <MvnAthensFaridabad />
             </Layout>
@@ -239,7 +239,7 @@ const router = createBrowserRouter([
       {
         path: "mvn-university-haryana",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <MvnUniversityHaryana />
             </Layout>
@@ -249,7 +249,7 @@ const router = createBrowserRouter([
       {
         path: "gallery",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <Gallery />
             </Layout>
@@ -259,7 +259,7 @@ const router = createBrowserRouter([
       {
         path: "csr",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <Csr />
             </Layout>
@@ -269,7 +269,7 @@ const router = createBrowserRouter([
       {
         path: "privacy-policy",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <PrPolcy />
             </Layout>
@@ -279,7 +279,7 @@ const router = createBrowserRouter([
       {
         path: "disclaimer",
         element: (
-          <Suspense fallback={<InitialLoading />}>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
             <Layout>
               <Disclaimer />
             </Layout>
