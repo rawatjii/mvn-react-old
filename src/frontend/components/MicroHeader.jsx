@@ -273,6 +273,33 @@ const MicroHeader = ({ scrollToSection }) => {
                                 </a>
                               </li>
 
+                              <li>
+                                <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroLandscape");toggleMenu("close");}}
+                                >
+                                  Landscape
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroElevation");toggleMenu("close");}}
+                                >
+                                  Elevation
+                                </a>
+                              </li>
+
+                              <li>
+                                <a
+                                  className="new-launch"
+                                  onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
+                                >
+                                  Apartment Views
+                                </a>
+                              </li>
+
 
                               <li>
                                 <a
@@ -329,7 +356,7 @@ const MicroHeader = ({ scrollToSection }) => {
                               </li>
 
                             </ul>
-                            <ul>
+                            {/* <ul>
                             <h4>Gallery</h4>
                             <li>
                                 <a
@@ -357,7 +384,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   Apartment Views
                                 </a>
                               </li>
-                            </ul>
+                            </ul> */}
                           </div>
                           <div className="left">
                 

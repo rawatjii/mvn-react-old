@@ -60,6 +60,7 @@ const MicroPageGurgaon1 = ({ data }) => {
   const [partyLoaded, setPartyLoaded] = useState(false);
   const [masterBedroomLoaded, setMasterBedroomLoaded] = useState(false);
   const [show, setShow] = useState(true);
+  const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count')));
 
   const handleClose = () => setShow(false);
   const handleShow = () => setShow(true);
@@ -71,6 +72,10 @@ const MicroPageGurgaon1 = ({ data }) => {
     MicroAmenitiesDesktop: null,
     MicroAmenities: null,
   });
+
+  useEffect(() => {
+    setNewLoadingCount(Number(localStorage.getItem('count')));
+  }, [localStorage.getItem('count')]);
 
   useEffect(() => {
     // Update screen size on window resize
@@ -90,25 +95,38 @@ const MicroPageGurgaon1 = ({ data }) => {
   };
 
   useEffect(() => {
-    smootherRef.current = ScrollSmoother.create({
-      wrapper: "#smooth-wrapper",
-      content: "#smooth-content",
-      smooth: 1.5, // Smoothing duration
-      effects: true, // Enable data-speed and data-lag effects
-      smoothTouch: 1.4, // Smooth scrolling on touch devices
-    });
+    if(heroLoaded){
+      smootherRef.current = ScrollSmoother.create({
+        wrapper: "#smooth-wrapper",
+        content: "#smooth-content",
+        smooth: 1.5, // Smoothing duration
+        effects: true, // Enable data-speed and data-lag effects
+        smoothTouch: 1.4, // Smooth scrolling on touch devices
+      });
+    }
+    
 
     // if (window.innerWidth >= 768) {
     //   setPeacockLoaded(true);
     // }
 
-    return () => {
-      if (smootherRef.current) {
-        smootherRef.current.kill();
-        smootherRef.current = null;
-      }
-    };
-  }, []);
+    // return () => {
+    //   if (smootherRef.current) {
+    //     smootherRef.current.kill();
+    //     smootherRef.current = null;
+    //   }
+    // };
+  }, [heroLoaded]);
+
+  useEffect(() => {
+    if (heroLoaded) {
+      smootherRef.current.refresh(); // Refresh ScrollSmoother after hero loads
+    }
+  }, [heroLoaded]);
+
+  if (newLoadingCount < 99) {
+    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" />;
+  }
 
   return (
     <>
@@ -174,10 +192,10 @@ const MicroPageGurgaon1 = ({ data }) => {
       <div id="smooth-wrapper">
         <div id="smooth-content">
           {/* Show Loader until hero section is loaded */}
-          {!heroLoaded && <InitialLoading />}
+          {!heroLoaded && <GurgaonLoader1 />}
 
           {/* Render Hero Section */}
-
+ 
           <div ref={(el) => (sectionRefs.current.microOverview = el)}>
             <MicroHero data={data} onLoadComplete={() => setHeroLoaded(true)} />
           </div>

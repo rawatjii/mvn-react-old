@@ -6,25 +6,25 @@ import { Provider } from "react-redux";
 import store from "./store/store.js";
 
 import Layout from "./frontend/components/Layout.jsx";
-const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
-const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
+// const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
+const Homepage = React.lazy(() =>
+  new Promise((resolve) =>
+    setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 2000)
+  )
+);
+// const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));
+const AboutUs = React.lazy(() =>
+  new Promise((resolve) =>
+    setTimeout(() => resolve(import("./frontend/pages/AboutUs.jsx")), 2000)
+  )
+);
 const MicroPage = React.lazy(() => import("./frontend/pages/Micro.jsx"));
 const AeroOneGurgaon = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon/Index.jsx"));
 const AeroOneGurgaon1 = React.lazy(() => import("./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx"));
 const Athens = React.lazy(() => import("./frontend/pages/micro/Athens/Index.jsx"));
 
 const ContactPage = React.lazy(() => import("./frontend/pages/ContactUs.jsx"));
-import Career from "./frontend/pages/Career.jsx";
-
 const ThankYou = React.lazy(() => import("./frontend/pages/ThankYou.jsx"));
-import MediaCenter from "./frontend/pages/MediaCenter.jsx";
-import Blog from "./frontend/pages/Blog.jsx"; 
-import BlogDetails from "./frontend/pages/BlogDetails.jsx"; 
-// const Homepage = React.lazy(() =>
-//   new Promise((resolve) =>
-//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 2000)
-//   )
-// );
 
 // admin
 
@@ -35,6 +35,7 @@ import JobApplications from "./admin/JobApplications.jsx";
 
 import ContactQuery from "./admin/ContactQuery.jsx";
 import ContactUs from "./admin/Contactus.jsx";
+import Blogs from "./admin/Blogs/Index.jsx";
 import InitialLoading from "./frontend/skeleton/Initial/Index.jsx";
 
 import PageNotFound from "./common/PageNotFound/Index.jsx";
@@ -45,6 +46,10 @@ import "./index.css";
 
 
 import AeroOneBangalore from "./frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx";
+import Career from "./frontend/pages/Career.jsx";
+import MediaCenter from "./frontend/pages/MediaCenter.jsx";
+import Blog from "./frontend/pages/Blog.jsx"; 
+import BlogDetails from "./frontend/pages/BlogDetails.jsx"; 
 import MvnMallGurgaon from "./frontend/pages/MvnMallGurgaon.jsx";
 import MvnAthensSohna from "./frontend/pages/MvnAthensSohna.jsx";
 import MvnAthensPh2Sohna from "./frontend/pages/MvnAthensPh2Sohna.jsx";
@@ -60,12 +65,7 @@ import "./awaneesh.css";
 
 import "./savan.css";
 import './adarsh.css'
-// import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
-const MicroPageGurgaon1 = React.lazy(() =>
-  new Promise((resolve) =>
-    setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 2000)
-  )
-);
+import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
 import { data } from "./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx";
 import FrontendRoute from "./common/FrontendRoute.jsx";
 
@@ -90,12 +90,22 @@ const router = createBrowserRouter([
           </FrontendRoute>
         ),
       },
+      // {
+      //   path: "aeroone-gurgaon",
+      //   element: (
+      //     <Suspense fallback={<InitialLoading />}>
+      //       <Layout>
+      //         <AeroOneGurgaon />
+      //       </Layout>
+      //     </Suspense>
+      //   ),
+      // },
       {
         path: "aeroone-gurgaon",
         element: (
-          <FrontendRoute >
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
               <MicroPageGurgaon1 data={data} />
-          </FrontendRoute>
+          </Suspense>
         ),
       },
       {
@@ -131,49 +141,61 @@ const router = createBrowserRouter([
       {
         path: "contact-us",
         element: (
-          <FrontendRoute >
-            <ContactPage />
-          </FrontendRoute>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
+            <Layout>
+              <ContactPage />
+            </Layout>
+          </Suspense>
         ),
       },
       {
         path: "career",
         element: (
-          <FrontendRoute >
-            <Career />
-          </FrontendRoute>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
+            <Layout>
+              <Career />
+            </Layout>
+          </Suspense>
         ),
       },
       {
         path: "thanks",
         element: (
-          <FrontendRoute>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
+            <Layout>
               <ThankYou />
-          </FrontendRoute>
+            </Layout>
+          </Suspense>
         ),
       },
       {
         path: "media-center",
         element: (
-          <FrontendRoute>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
+            <Layout>
               <MediaCenter />
-          </FrontendRoute>
+            </Layout>
+          </Suspense>
         ),
       },
       {
         path: "blogs",
         element: (
-          <FrontendRoute>
-            <Blog />
-          </FrontendRoute>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
+            <Layout>
+              <Blog />
+            </Layout>
+          </Suspense>
         ),
       },
       {
         path: "blogs/details/:slug",
         element: (
-          <FrontendRoute>
-            <BlogDetails />
-          </FrontendRoute>
+          <Suspense fallback={<InitialLoading onComplete={()=>console.log('Loading complete')} />}>
+            <Layout>
+              <BlogDetails />
+            </Layout>
+          </Suspense>
         ),
       },
       {
@@ -296,10 +318,10 @@ const router = createBrowserRouter([
         path: "contact-us",
         element: <ContactUs />,
       },
-      // {
-      //   path: "blogs",
-      //   element: <Blogs />,
-      // },
+      {
+        path: "blogs",
+        element: <Blogs />,
+      },
     ],
   },
 ]);

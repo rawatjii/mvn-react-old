@@ -1,4 +1,5 @@
-import React, { useState, useEffect, Suspense } from "react";
+import React, { useState, useEffect, Suspense, useRef } from "react";
+import Layout from "../components/Layout";
 import Projects from "../components/homepage/Projects";
 import Projectsmobile from "../components/homepage/Projectsmobile";
 import OtherProjects from "../components/homepage/OtheProjects";
@@ -23,12 +24,25 @@ const Overview = React.lazy(() => import("../components/homepage/Overview"));
 
 import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo-img.webp";
 import { Container } from "react-bootstrap";
+import InitialLoading from "../skeleton/Initial/Index";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
+
+import { gsap } from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollSmoother from "gsap/ScrollSmoother";
+
+gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const Homepage = () => {
-  // State for determining the screen size
+  const smootherRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count')));
 
-  // Update screen size on resize
+  useEffect(() => {
+    setNewLoadingCount(Number(localStorage.getItem('count')));
+  }, [localStorage.getItem('count')]);
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
@@ -40,86 +54,71 @@ const Homepage = () => {
     };
   }, []);
 
-
-  
+  if (newLoadingCount < 99) {
+    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" />;
+  }
 
   return (
-    <>
-      {/* Hero Section with dynamic image rendering */}
+    <Layout>
       <div className="parent-box-div">
+          <a
+            href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
+            className="hero-banner-link"
+            target="_blank" 
+            rel="noopener noreferrer"
+          >
+            <img
+              src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
+              alt="Hero Banner"
+              className="img-fluid hero-banner"
+            />
+          </a>
 
-      <a 
-        href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
-        className="hero-banner-link"
-        target="_blank" 
-        rel="noopener noreferrer"
-      >
-        <img
-          src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
-          alt="Hero Banner"
-          className="img-fluid hero-banner"
-        />
-      </a>
+          <div className="slider-content">
+            <p className="slider-heading">Enter The Experience Center</p>
+            <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} className="link-btn">Click Here</a>
+          </div>
+        </div>
 
+        <div className="mobile-view-box">
+          <Container>
+            <img src={homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
+            <h4 className="logo_title">Gurugram</h4>
+            <span className="status">New Launch</span>
+            <p className="slogan-heading">Behold to Experience the complete view!</p>
+            <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} className="link-btn">Click Here</a>
+          </Container>
+        </div>
 
-      <div className="slider-content">
-        <p className="slider-heading">Enter The Experience Center</p>
-        <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} className="link-btn"> Click Here </a>
-      </div>
+        <Suspense fallback={<div>Loading...</div>}>
+          <Overview />
+        </Suspense>
 
+        <a
+          href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
+          className="hero-banner-link"
+          target="_blank" 
+          rel="noopener noreferrer"
+        >
+          <img
+            src={isMobile ? MobileheronormalImg2 : DeskopheronormalImg2}
+            alt="Hero Banner"
+            className="img-fluid degree-img"
+          />
+        </a>
 
-      </div>
+        {isMobile ? <Projectsmobile /> : <Projects />}
+        <OtherProjects />
+        <OurJourney />
+        <OurTeam />
+        <OurBrand />
+        <Testimonial />
 
-
-      {/* <HomepageVideo isMobile={isMobile} /> */}
-              <div className="mobile-view-box">  
-                  <Container>
-                    <img src={ homeMobileLogo} alt="" className="img-fluid mobile-img-logo" />
-                    <h4 className="logo_title">Gurugram</h4>
-                    <span className="status">New Launch</span>
-                    <p className="slogan-heading">Behold to Experience the complete view!</p>
-                    <a href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'} className="link-btn"> Click Here </a>
-                  </Container>
-                </div>
-    
-                {/* <img src={CussorPointer} alt="" className="img-fluid cursor-img"/> */}
-
-
-
-
-      {/* Lazy-loaded components */}
-      <Suspense fallback="Loading...">
-        <Overview />
-      </Suspense>
-
-      <a 
-  href={import.meta.env.VITE_APP_URL + 'aeroone-gurgaon'}
-  className="hero-banner-link"
-  target="_blank" 
-  rel="noopener noreferrer"
->
-      <img
-        src={isMobile ? MobileheronormalImg2 : DeskopheronormalImg2}
-        alt="Hero Banner"
-        className="img-fluid degree-img"
-      />
-      </a>
-
-      {/* Other Components */}
-      {isMobile ? <Projectsmobile /> : <Projects />}
-
-      <OtherProjects />
-      <OurJourney />
-      <OurTeam />
-      <OurBrand />
-      <Testimonial />
-
-      {/* Enquiry Section */}
-      <div className="flex-footer-form">
-        <Enquire />
-        <EnquireForm projectName={"MVN Infrastructure"} />
-      </div>
-    </>
+        <div className="flex-footer-form">
+          <Enquire />
+          <EnquireForm projectName={"MVN Infrastructure"} />
+        </div>
+    </Layout>
   );
 };
 

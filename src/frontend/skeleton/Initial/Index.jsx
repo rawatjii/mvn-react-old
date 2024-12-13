@@ -3,66 +3,53 @@ import * as CONFIG from "../../../config/config";
 import "./initialLoading.css";
 import { useLocation } from "react-router-dom";
 
-const InitialLoading = ({ onComplete }) => {
-    const [progress, setProgress] = useState(0);
-    const location = useLocation();
-    const [loadingComplete, setLoadingComplete] = useState(false);
-    const [fastForward, setFastForward] = useState(false);
-    const totalFrames = 120; // Total number of frames
-    const frames = Array.from({ length: totalFrames }, (_, i) => `${CONFIG.IMAGE_URL}loader/${i + 1}.webp`);
-    const progressRef = useRef(progress);
+const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast = "false" }) => {
     const intervalRef = useRef(null);
+    const onCompleteRef = useRef(onComplete);
+    const isComplete = useRef(false);
+    const {pathname} = useLocation()
 
     useEffect(() => {
-        document.body.classList.add("in_loading");
+        // Update the onCompleteRef to ensure it references the latest function
+        onCompleteRef.current = onComplete;
+    }, [onComplete]);
 
-        const handlePageLoad = () => {
-            setLoadingComplete(true);
+    useEffect(() => {
+        // Set the interval duration based on the `fast` prop
+        const intervalDuration = fast === "true" ? 0 : 400;
 
-            // Delay the unmounting and trigger onComplete after delay
-            setTimeout(() => {
-                if (onComplete) onComplete();
-            }, 200); // Adjust the delay as needed
-        };
-        handlePageLoad();
-        const simulateProgress = () => {
-            intervalRef.current = setInterval(() => {
-                setProgress((prev) => {
-                    const increment = fastForward ? 3 : 1; // Increase by a larger step during fast forward
-                    const nextProgress = prev + increment;
-                    progressRef.current = nextProgress; // Update ref
-                    return Math.min(nextProgress, totalFrames - 1); // Prevent exceeding totalFrames
-                });
-
-                if (progressRef.current >= totalFrames - 1) {
-                    clearInterval(intervalRef.current);
-            
+        // Increment loadingCount at a regular interval
+        intervalRef.current = setInterval(() => {
+            setLoadingCount((prevState) => {
+                if (prevState >= 99) {
+                    clearInterval(intervalRef.current); // Pause near completion
+                    localStorage.setItem('count', prevState);
+                    onCompleteRef.current?.(); // Call the onComplete callback if available
+                    return prevState;
                 }
-            }, fastForward ? 2 : 100); // Adjust speed for fast forward and normal mode
-        };
-
-        simulateProgress();
+                localStorage.setItem('count', Math.floor(prevState + Math.random() * 5));
+                return Math.floor(prevState + Math.random() * 5); // Increment slightly
+            });
+        }, intervalDuration);
 
         return () => {
-            clearInterval(intervalRef.current);
-        };
-    }, [fastForward, onComplete, location]);
-
-    useEffect(() => {
-        if (progress >= totalFrames - 1 && !fastForward) {
-            setFastForward(true); // Trigger fast forward when near completion
+            clearInterval(intervalRef.current); // Cleanup interval on unmount
         }
-    }, [progress, fastForward, location]);
-
-    const currentFrame = Math.min(progress, totalFrames - 1);
+    }, [fast]);
 
     return (
         <div className="initial_loading">
-            <img
-                src={frames[currentFrame]}
-                alt={`Loading frame ${currentFrame + 1}`}
-                className="img-fluid logo"
-            />
+            <div className="custom_load">
+                <div className="building">
+                    <img src={CONFIG.IMAGE_URL + 'loader_building.webp'} alt="loader building" className="img-fluid building_icon" />
+                    <div className="overlay" style={{bottom:Math.floor(loadingCount)+'%'}}></div>
+                </div>
+                <video src={CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop />
+                <div className="bar">
+                    <span className="fill" style={{width:Math.floor(loadingCount)+'%'}}></span>
+                </div>
+                <p className="count">{Math.floor(loadingCount)} %</p>
+            </div>
         </div>
     );
 };

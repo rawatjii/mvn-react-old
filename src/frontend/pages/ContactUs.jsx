@@ -7,10 +7,13 @@ import MobilebannerBg from '../assets/images/contact/head-banner_bg.webp';
 import DesktopbannerBg from '../assets/images/contact/head-banner_bg-2.webp';
 import Enquire from '../components/homepage/Enquire';
 import EnquireForm from '../components/homepage/EnquireForm';
+import InitialLoading from "../skeleton/Initial/Index";
+import Layout from "../components/Layout";
 
 const ContactUs = () => {
   window.scrollTo(0, 0);
   const [bannerBg, setBannerBg] = useState(DesktopbannerBg);
+  const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count')));
 
   const breadcrumbs = {
     title: 'Contact Us',
@@ -19,6 +22,10 @@ const ContactUs = () => {
       { name: 'Contact Us' }
     ]
   };
+
+  useEffect(() => {
+    setNewLoadingCount(Number(localStorage.getItem('count')));
+  }, [localStorage.getItem('count')]);
 
   // Update background image dynamically based on screen width
   useEffect(() => {
@@ -42,22 +49,26 @@ const ContactUs = () => {
     };
   }, []);
 
+  if (newLoadingCount < 99) {
+    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" />;
+  }
+
   return (
     <>
-      <MicroBanner bg={bannerBg} data={breadcrumbs} />
-      <div className="micro_content">
-        <div className="micro_data">
-            <Suspense fallback="loading">
-              <ContactPage />
-                <div className="flex-footer-form">
-              
-                <Enquire />
-      
-                <EnquireForm projectName={'MVN Infrastructure'}/>
-              </div>
-            </Suspense>
+      <Layout>
+        <MicroBanner bg={bannerBg} data={breadcrumbs} />
+        <div className="micro_content">
+          <div className="micro_data">
+              <Suspense fallback="loading">
+                <ContactPage />
+                  <div className="flex-footer-form">
+                  <Enquire />
+                  <EnquireForm projectName={'MVN Infrastructure'}/>
+                </div>
+              </Suspense>
+          </div>
         </div>
-      </div>
+      </Layout>
     </>
   );
 };

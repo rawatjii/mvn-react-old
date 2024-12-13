@@ -1,9 +1,21 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { Helmet } from "react-helmet";
+import InitialLoading from '../skeleton/Initial/Index';
+import Layout from '../components/Layout';
 
 const ThankYou = () => {
+    window.scrollTo(0, 0);
+    const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count')));
+
+    useEffect(() => {
+        setNewLoadingCount(Number(localStorage.getItem('count')));
+    }, [localStorage.getItem('count')]);
+
+    if (newLoadingCount < 99) {
+        return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" />;
+    }
     
     return (
         <>
@@ -28,6 +40,7 @@ const ThankYou = () => {
                 `}
             </noscript>
         </Helmet>
+        <Layout>
             <div className="thanks-page">
                 <Container>
                     <div className="thnu">
@@ -44,6 +57,8 @@ const ThankYou = () => {
                 </Container>
                 
             </div>
+        </Layout>
+            
         </>
     );
 };

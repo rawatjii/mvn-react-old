@@ -9,11 +9,14 @@ import Mobilemicro_bg from '../assets/images/about/about-head-bg-desktop.webp';
 import Desktopmicro_bg from '../assets/images/about/about-head-bg-desktop.webp';
 import OurTeam from "../components/About/Ourteam";
 import ScrollToTop from "../../common/ScrollToTop";
+import Layout from "../components/Layout";
+import InitialLoading from "../skeleton/Initial/Index";
 
 const AboutUs = () => {
   window.scrollTo(0, 0);
   
   const [microBg, setMicroBg] = useState(Desktopmicro_bg);
+  const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count')));
   
   const breadcrumbs = {
     title: 'About Us',
@@ -22,6 +25,10 @@ const AboutUs = () => {
       { name: 'About Us' }
     ]
   };
+
+  useEffect(() => {
+    setNewLoadingCount(Number(localStorage.getItem('count')));
+  }, [localStorage.getItem('count')]);
 
   // Update background image based on window width
   useEffect(() => {
@@ -45,21 +52,27 @@ const AboutUs = () => {
     };
   }, []);
 
+  if (newLoadingCount < 99) {
+    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" />;
+  }
+
   return (
     <>
-      <MicroBanner bg={microBg} data={breadcrumbs} />
-      <div className="micro_content">
-        <div className="micro_data">
-          <AboutOverview />
-          <Philosophy />
-          <Timeline />
-          <OurTeam />
-          <div className="flex-footer-form">
-            <Enquire />
-            <EnquireForm projectName={'MVN Infrastructure'}/>
+      <Layout>
+        <MicroBanner bg={microBg} data={breadcrumbs} />
+        <div className="micro_content">
+          <div className="micro_data">
+            <AboutOverview />
+            <Philosophy />
+            <Timeline />
+            <OurTeam />
+            <div className="flex-footer-form">
+              <Enquire />
+              <EnquireForm projectName={'MVN Infrastructure'}/>
+            </div>
           </div>
         </div>
-      </div>
+      </Layout>
     </>
   );
 };
