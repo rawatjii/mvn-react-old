@@ -20,11 +20,6 @@ const ThankYou = React.lazy(() => import("./frontend/pages/ThankYou.jsx"));
 import MediaCenter from "./frontend/pages/MediaCenter.jsx";
 import Blog from "./frontend/pages/Blog.jsx"; 
 import BlogDetails from "./frontend/pages/BlogDetails.jsx"; 
-// const Homepage = React.lazy(() =>
-//   new Promise((resolve) =>
-//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 2000)
-//   )
-// );
 
 // admin
 
@@ -60,12 +55,12 @@ import "./awaneesh.css";
 
 import "./savan.css";
 import './adarsh.css'
-// import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
-const MicroPageGurgaon1 = React.lazy(() =>
-  new Promise((resolve) =>
-    setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 2000)
-  )
-);
+import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
+// const MicroPageGurgaon1 = React.lazy(() =>
+//   new Promise((resolve) =>
+//     setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 200000)
+//   )
+// );
 import { data } from "./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx";
 import FrontendRoute from "./common/FrontendRoute.jsx";
 

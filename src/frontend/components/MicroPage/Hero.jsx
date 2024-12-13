@@ -3,6 +3,7 @@ import Container from "react-bootstrap/Container";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ImgMail from "../../assets/images/icons/email.png";
+import ScrollDown from "../../../common/scrollDown/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -113,7 +114,8 @@ const MicroHero = ({ data, onLoadComplete }) => {
     <>
       <section className="section micro_hero_section p-0">
         {!loading && data.micro_hero_section.isVdo && (
-          <div ref={containerRef} className="frames_content">
+          <>
+            <div ref={containerRef} className="frames_content">
             {images.map((img, index) => (
               <img
                 key={index}
@@ -131,7 +133,11 @@ const MicroHero = ({ data, onLoadComplete }) => {
                 <div className="scroll-down-dude"></div>
               </div>
             </div>
+            
+
           </div>
+          <ScrollDown className="color-black" />
+          </>
         )}
 
         {!loading &&
