@@ -32,7 +32,8 @@ const MicroOverview = ({ data }) => {
 
     const animate = () => {
       currentCount = Math.min(currentCount + increment, countTo); // Increment or cap at countTo
-      setCount(currentCount.toLocaleString());
+      setCount(currentCount);
+      // .toLocaleString() add this to currentcount to add comma
 
       if (currentCount < countTo) {
         requestAnimationFrame(animate);

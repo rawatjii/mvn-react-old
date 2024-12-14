@@ -178,6 +178,8 @@ const Projects = () => {
             {/* Right Column */}
             <Col xs={6} className="px_8 right_col">
 
+        
+             
               {rightColProjects.map((item, index) => (
                 <div key={index} className="single">
                         <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>

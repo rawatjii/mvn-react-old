@@ -17,12 +17,14 @@ import arrowIcon from "../../assets/images/icons/arrow.png";
 import btn_arrow from "../../assets/images/icons/btn_arrow.png";
 import planeIcon from "../../assets/images/icons/plane.jpg";
 import NewLaunchIcon from "../../assets/images/icons/new-launch-patch.png"
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
 
 
 import * as CONFIG from '../../../config/config'
 
 import { Link } from "react-router-dom";
 import LazyLoad from "react-lazyload";
+import SecTitle from "../../../common/SecTitle/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -130,6 +132,88 @@ const Projects = () => {
         />
 
         <Container>
+
+          <SecTitle className="text-center color style1">
+            <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
+            <h4 ref={titleRef} className="title">
+              Explore Our Projects
+            </h4>
+            <p className="sec_para">MVN Infrastructure introduces MVN Aero one Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway. </p>
+          </SecTitle>
+
+          <Row className="mx_-8">
+            <Col xs={4} className="px_8 single_col">
+              <p>MVN</p>
+              <p>Aero World</p>
+            </Col>
+
+            <Col xs={4} className="px_8 single_col">
+              <div className="single">
+                <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
+                <AnImage className="active"
+                  height={100}
+                >
+                  <Link  target="_blank">
+                    <img
+                      src="https://mvn.in/assets/mvn-aeroone-xyIy6nMp.webp"
+                      className="img-fluid thumbnail"
+                      onLoad={handleImageLoad}
+                    />
+                  </Link>
+                </AnImage>
+                <div className="content">
+                  <div className="left">
+                    <h4 className="project_name">Mvn Aero one RESIDENCES</h4>
+                    {/* <p className="location">{item.location}</p> */}
+                  </div>
+
+                  <div className="right">
+                    <Link target="_blank">
+                      <img
+                        src={arrowIcon}
+                        alt="mvn-arrow-icon"
+                        className="img-fluid icon"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </Col>
+
+            <Col xs={4} className="px_8 single_col">
+              <div className="single">
+                <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
+                <AnImage className="active"
+                  height={100}
+                >
+                  <Link  target="_blank">
+                    <img
+                      src="https://mvn.in/assets/mvn-aeroone-xyIy6nMp.webp"
+                      className="img-fluid thumbnail"
+                      onLoad={handleImageLoad}
+                    />
+                  </Link>
+                </AnImage>
+                <div className="content">
+                  <div className="left">
+                    <h4 className="project_name">Mvn Aero one RESIDENCES</h4>
+                    {/* <p className="location">{item.location}</p> */}
+                  </div>
+
+                  <div className="right">
+                    <Link target="_blank">
+                      <img
+                        src={arrowIcon}
+                        alt="mvn-arrow-icon"
+                        className="img-fluid icon"
+                      />
+                    </Link>
+                  </div>
+                </div>
+              </div>
+            </Col>
+          </Row>   
+
           <Row className="mx_-8">
 
             {/* Left Column */}
@@ -178,9 +262,11 @@ const Projects = () => {
             {/* Right Column */}
             <Col xs={6} className="px_8 right_col">
 
+        
+             
               {rightColProjects.map((item, index) => (
                 <div key={index} className="single">
-                        <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
+                  <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
                   <AnImage
                     ref={(el) =>
                       (imageDivRefs.current[leftColProjects.length + index] = el)
