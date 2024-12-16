@@ -6,7 +6,7 @@ import SecTitle from "../../../common/SecTitle/Index";
 import CustomCard from "../Card";
 import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 import Watermark from "../../../common/watermark/Index";
-import * as CONFIG from '../../../config/config';
+import * as CONFIG from '../../../config/config'
 import ScrollDown from "../../../common/scrollDown/Index";
 import InitialLoading from "../../skeleton/Initial/Index";
 
@@ -37,6 +37,8 @@ const PeacockSection = ({ data, onLoadComplete }) => {
   useEffect(() => {
     if (!isMobile) {
       // Immediately call onLoadComplete for desktop
+      setLoading(false);
+      onLoadComplete();
       return;
     }
 
@@ -54,7 +56,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
         loadedCount++;
         if (loadedCount === totalFrames) {
           setLoading(false); // All images loaded, hide loader
-          onLoadComplete(); // Notify parent component
+          onLoadComplete();
         }
       };
 
@@ -73,7 +75,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
       trigger: containerRef.current,
       start: "top top",
       end: `+=${window.innerHeight * 4}`,
-      pin: true, // Pin the container while scrolling
+      pin: true,
       scrub: 0.005,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
@@ -107,10 +109,11 @@ const PeacockSection = ({ data, onLoadComplete }) => {
 
   return (
     <div className="section peacock_section pb-0" id="peacockSection">
+
       {/* Show loader if still loading */}
       {loading && <PeacockLoader />}
+      {/* {loading && <InitialLoading className="style1" />} */}
 
-      {/* Main content once loading is complete */}
       {!loading && (
         <>
           <div ref={containerRef} className="frames_content">

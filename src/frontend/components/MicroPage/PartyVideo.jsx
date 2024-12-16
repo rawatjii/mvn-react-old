@@ -56,7 +56,7 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
-      end: `+=${window.innerHeight * 4}`,
+      end: `+=${window.innerHeight * 8}`,
       pin: true,
       scrub: 0.5,
       onUpdate: (self) => {

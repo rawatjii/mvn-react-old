@@ -18,7 +18,7 @@ const GurgaonLoader1 = () => {
   }, []);
 
   // Set the image URL based on the device type
-  const imageUrl = isMobile
+  const imageUrl = window.innerWidth <= 768
     ? `${CONFIG.IMAGE_URL}micro/hero/client/mobile-new/1.webp`
     : `${CONFIG.IMAGE_URL}micro/hero/client/desktop-new/1.webp`;
 
