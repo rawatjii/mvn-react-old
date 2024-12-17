@@ -39,6 +39,27 @@ const ThankYou = () => {
                     <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=562105226581202&ev=PageView&noscript=1"/>
                 `}
             </noscript>
+
+            {/* conversion */}
+
+            <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11490416244"></script>
+
+            <script>
+                {`
+                    window.dataLayer = window.dataLayer || [];
+                    function gtag(){dataLayer.push(arguments);}
+                    gtag('js', new Date());
+
+                    gtag('config', 'AW-11490416244');
+                `}
+            </script>
+
+            <script>
+                {`
+                    gtag('event', 'conversion', {'send_to': 'AW-11490416244/XHAKCNLcmfgZEPSsh-cq'});
+                `}
+            </script>
+
         </Helmet>
         <Layout>
             <div className="thanks-page">

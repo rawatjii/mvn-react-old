@@ -115,4 +115,18 @@
             }
         }
     }
+
+    .initial_loading{
+
+        video{
+
+            max-width: 220px;
+            margin-bottom: 10px;
+        }
+    }
+
+    .building{
+
+        margin-bottom:20px;
+    }
 }

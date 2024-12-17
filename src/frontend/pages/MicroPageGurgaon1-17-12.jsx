@@ -42,31 +42,48 @@ import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from "../components/MicroPage/MicroElevation";
 import MicroApartment from "../components/MicroPage/MicroApartment";
 import Footer from "../components/Footer";
+import living_area_cam_peacock from "../../../public/assets/images/peacock/peacock.webp";
 import CustomCard from "../components/Card";
 import Amenities2 from "../components/MicroPage/Amenities2";
 import MvnMall from "../components/MicroPage/MvnMall";
 import DownloadBrochure from "../components/MicroPage/DownloadBrochure";
+import NoPollutionZone1 from "../components/MicroPage/NoPolutionZone1";
 import InitialLoading from "../skeleton/Initial/Index";
+// import HomeSliderBg from "../../../public/assets/images/micro/hero/home-bg-img.jpg";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 const MicroPageGurgaon1 = ({ data }) => {
+  window.scrollTo(0, 0);
   const [heroLoaded, setHeroLoaded] = useState(false);
-  const [newLoadingCount, setNewLoadingCount] = useState(
-    Number(localStorage.getItem("count"))
-  );
   const [peacockLoaded, setPeacockLoaded] = useState(false);
   const [livingRoomLoaded, setLivingRoomLoaded] = useState(false);
   const [partyLoaded, setPartyLoaded] = useState(false);
   const [masterBedroomLoaded, setMasterBedroomLoaded] = useState(false);
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [show, setShow] = useState(true);
+  const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count')));
+
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+
   const smootherRef = useRef(null);
-  const sectionRefs = useRef({});
+
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const sectionRefs = useRef({
+    MicroAmenitiesDesktop: null,
+    MicroAmenities: null,
+  });
 
   useEffect(() => {
+    setNewLoadingCount(Number(localStorage.getItem('count')));
+  }, [localStorage.getItem('count')]);
+
+  useEffect(() => {
+    // Update screen size on window resize
     const handleResize = () => {
       setIsMobile(window.innerWidth <= 768);
     };
+
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
@@ -79,26 +96,32 @@ const MicroPageGurgaon1 = ({ data }) => {
   };
 
   useEffect(() => {
-    if (heroLoaded) {
+    if(heroLoaded){
       smootherRef.current = ScrollSmoother.create({
         wrapper: "#smooth-wrapper",
         content: "#smooth-content",
-        smooth: 1.5,
-        effects: true,
-        smoothTouch: 1.4,
+        smooth: 1.5, // Smoothing duration
+        effects: true, // Enable data-speed and data-lag effects
+        smoothTouch: 1.4, // Smooth scrolling on touch devices
       });
     }
-    return () => {
-      if (smootherRef.current) {
-        smootherRef.current.kill();
-        smootherRef.current = null;
-      }
-    };
-  }, [heroLoaded]);
+    
+
+    // if (window.innerWidth >= 768) {
+    //   setPeacockLoaded(true);
+    // }
+
+    // return () => {
+    //   if (smootherRef.current) {
+    //     smootherRef.current.kill();
+    //     smootherRef.current = null;
+    //   }
+    // };
+  }, [heroLoaded, newLoadingCount]);
 
   useEffect(() => {
-    if (heroLoaded && smootherRef.current) {
-      smootherRef.current.refresh();
+    if (heroLoaded) {
+      smootherRef.current.refresh(); // Refresh ScrollSmoother after hero loads
     }
   }, [heroLoaded]);
 
@@ -106,20 +129,14 @@ const MicroPageGurgaon1 = ({ data }) => {
     if (newLoadingCount === 100) {
       const timer = setTimeout(() => {
         setNewLoadingCount(101);
-      }, 500);
+      }, 500); // 1 seconds delay before removing InitialLoading
+
       return () => clearTimeout(timer);
     }
   }, [newLoadingCount]);
 
   if (newLoadingCount <= 100) {
-    return (
-      <InitialLoading
-        loadingCount={newLoadingCount}
-        setLoadingCount={setNewLoadingCount}
-        fast="true"
-        second="true"
-      />
-    );
+    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
   }
 
   return (
@@ -156,20 +173,6 @@ const MicroPageGurgaon1 = ({ data }) => {
           `}
         </script>
 
-        {/* conversion code */}
-
-        <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11490416244"></script>
-
-        <script>
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-
-            gtag('config', 'AW-11490416244');
-          `}
-        </script>
-
         {/* Meta Pixel Code */}
 
         <script>
@@ -195,6 +198,7 @@ const MicroPageGurgaon1 = ({ data }) => {
 
       </Helmet>
 
+      
       <MicroHeader scrollToSection={scrollToSection} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -240,10 +244,10 @@ const MicroPageGurgaon1 = ({ data }) => {
           <div>
             <MasterBedroom
               data={data}
-              isMobile={isMobile}
               onLoadComplete={() =>
                 setMasterBedroomLoaded(true)
               }
+              isMobile={isMobile}
             />
           </div>
           <div

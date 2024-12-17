@@ -1579,7 +1579,8 @@ a {
     margin-bottom: 15px;
   }
 
-  .form-control {
+  .form-select{cursor: pointer; text-transform: capitalize;}
+  .form-control, .form-select {
     border-radius: 5px;
     border: none;
     height: 40px;
@@ -1601,6 +1602,8 @@ a {
   }
 }
 
+
+.microsite-scrolldown_1{display: table;width: fit-content;height: auto;position: absolute;top: 78%; left:50%; transform:translateX(-50%); -webkit-transform:translateX(-50%); }
 /* footer */
 
 footer {

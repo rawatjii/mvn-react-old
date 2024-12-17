@@ -31,7 +31,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
   }, [data]);
 
   useEffect(() => {
-      // Only preload images once totalFrames is set
+    // Only preload images once totalFrames is set
     if (totalFrames === 0 || isImagesLoaded.current) return;
 
     const isMobile = window.innerWidth <= 768;
@@ -65,7 +65,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
           onLoadComplete(); // Call the callback
         }
       };
-      
+
       loadedImages.push(img);
     }
   }, [totalFrames]);
@@ -83,7 +83,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
       scrub: 2,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-        
+
         // Ensure frames update correctly using opacity
         frameRefs.current.forEach((img, index) => {
           if (img) {
@@ -116,27 +116,25 @@ const MicroHero = ({ data, onLoadComplete }) => {
         {!loading && data.micro_hero_section.isVdo && (
           <>
             <div ref={containerRef} className="frames_content">
-            {images.map((img, index) => (
-              <img
-                key={index}
-                ref={(el) => (frameRefs.current[index] = el)}
-                src={img.src}
-                alt={`Frame ${index}`}
-                className="frame"
-                style={{ opacity: index === 0 ? 1 : 0 }}
-              />
-            ))}
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  ref={(el) => (frameRefs.current[index] = el)}
+                  src={img.src}
+                  alt={`Frame ${index}`}
+                  className="frame"
+                  style={{ opacity: index === 0 ? 1 : 0 }}
+                />
+              ))}
 
-            <div id="scroll-wrapper" className="microsite-scrolldown">
-              <div id="scroll-wrapper-inner">
-                <div id="scroll-title">Scroll Down</div>
-                <div className="scroll-down-dude"></div>
+              <div className="microsite-scrolldown microsite-scrolldown_1">
+                <div id="scroll-wrapper-inner">
+                  <div id="scroll-title">Scroll Down</div>
+                  <div className="scroll-down-dude"></div>
+                </div>
               </div>
             </div>
-            
-
-          </div>
-          <ScrollDown className="color-black" />
+            {/* <ScrollDown className="color-black" /> */}
           </>
         )}
 

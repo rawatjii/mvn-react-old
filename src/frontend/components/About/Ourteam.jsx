@@ -48,13 +48,13 @@ What sets apart the peerless from the prosaic is their vision, mission and commi
       Person_Photo: Saurabh_Kaushik,
       Person_content: `Mr. Saurabh Kaushik holds a bachelor's degree in Engineering from the National Institute of Technology, Kurukshetra, with a total experience of 16 years, 5 years in construction and real estate. He has been associated with MVN Infrastructure since 2016.`,
     },
-    {
-      id: 5,
-      Person_Name: "Mr. Vinod Kumar",
-      Person_Post: "Head Billing Engineer, MVN Group",
-      Person_Photo: Vinod_Kumar,
-      Person_content: `Mr. Vinod Kumar is a dedicated professional who has contributed immensely to the operational success of MVN Group, ensuring efficiency and excellence in billing and engineering processes.`,
-    },
+    // {
+    //   id: 5,
+    //   Person_Name: "Mr. Vinod Kumar",
+    //   Person_Post: "Head Billing Engineer, MVN Group",
+    //   Person_Photo: Vinod_Kumar,
+    //   Person_content: `Mr. Vinod Kumar is a dedicated professional who has contributed immensely to the operational success of MVN Group, ensuring efficiency and excellence in billing and engineering processes.`,
+    // },
   ];
 
   return (

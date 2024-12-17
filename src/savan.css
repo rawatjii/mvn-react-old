@@ -374,7 +374,19 @@ ul.content{align-items:center}
   margin-top: 35px;
   text-transform: uppercase;
 }
+.enquire_form .invalid-feedback{text-align: left;}
 
+.enquire_btn{
+  background: var(--theme_primary_color);
+  border: 0;
+  border-radius: 50px;
+  color: #000;
+  padding: 8px 20px;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-transform: capitalize;
+  
+}
 
 .media-event-content .event-video-banner {width: 94%;height: 436px;object-fit: cover;margin: 0px auto;display: block;}
 
@@ -2679,6 +2691,22 @@ section.section.other_projects_section.pb-0 {padding-top: 60px;}
   gap: 0px 20px;
   padding: 6px 13px;
   width: 297px;
+
+  .btns{
+
+    display: flex;
+    justify-content: center;
+
+    .enquire_btn{
+      margin-left:10px!important;
+    }
+
+    .link-btn,
+    .enquire_btn{
+      padding: 10px 15px;
+      font-size: 12px;
+    }
+  }
 }
 
 .parent-box-div .hero-banner {

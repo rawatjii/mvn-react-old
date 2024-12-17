@@ -232,8 +232,18 @@ function MediaCenter() {
     setNewLoadingCount(Number(localStorage.getItem('count')));
   }, [localStorage.getItem('count')]);
 
-  if (newLoadingCount < 99) {
-    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" />;
+  useEffect(() => {
+    if (newLoadingCount === 100) {
+      const timer = setTimeout(() => {
+        setNewLoadingCount(101);
+      }, 500); // 1 seconds delay before removing InitialLoading
+
+      return () => clearTimeout(timer);
+    }
+  }, [newLoadingCount]);
+
+  if (newLoadingCount <= 100) {
+    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
   }
 
   return (
