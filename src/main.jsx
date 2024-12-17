@@ -87,7 +87,7 @@ const router = createBrowserRouter([
         path: "about-us",
         element: (
           <FrontendRoute >
-              <AboutUs />
+            <AboutUs />
           </FrontendRoute>
         ),
       },
@@ -95,7 +95,7 @@ const router = createBrowserRouter([
         path: "aeroone-gurgaon",
         element: (
           <FrontendRoute >
-              <MicroPageGurgaon1 data={data} />
+            <MicroPageGurgaon1 data={data} />
           </FrontendRoute>
         ),
       },

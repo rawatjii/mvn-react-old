@@ -1079,10 +1079,10 @@ a.closebtn {
     z-index: 1;
   }
 
-  .enquire_form,
+  /* .enquire_form,
   .enquire_section {
     height: unset !important;
-  }
+  } */
 
   .our_brand_section {
     & .brand_content {

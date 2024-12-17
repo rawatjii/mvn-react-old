@@ -1570,6 +1570,7 @@ a {
 
 .enquire_form {
   border-top: 1px solid rgb(255 255 255 / 10%);
+  z-index: 99999;
 
   .sec_title {
     margin-bottom: 50px;
@@ -3499,6 +3500,77 @@ footer {
   min-height:100vh;
 }
 
+/* homepage_hero_slider */
+
+.homepage_hero_slider{
+
+  .navigation_btns{
+
+    button{
+      position:absolute;
+      top:50%;
+      transform:translateY(-50%);
+      -webkit-transform:translateY(-50%);
+      left:20px;
+      z-index: 1;
+      height: 40px;
+      width: 40px;
+      border-radius: 100%;
+      background: transparent;
+      border: 1px solid var(--theme_primary_color);
+      outline: none;
+      box-shadow: none;
+
+      &.next{
+
+        right:20px;
+        left:unset;
+      }
+
+      img{
+
+        height:20px;
+      }
+
+      &:disabled{
+        opacity:0.3;
+      }
+    }
+  }
+}
+
+.offer_modal{
+  .modal-dialog{
+
+    max-width: 1000px!important;
+  }
+
+  .modal-body{
+    padding:0;
+    background:#000;
+
+    display:flex;
+    flex-wrap: wrap;
+
+    .left,
+    .right{
+
+      max-width: 50%;
+      flex:0 0 50%
+    }
+
+    .right{
+
+      padding: 50px;
+
+      .sec_title{
+
+        margin-bottom:20px!important;
+      }
+    }
+  }
+}
+
 
 /* start responsive */
 /* by bhupendra */
@@ -4196,6 +4268,24 @@ footer {
 
         display: block;
         text-align: center;
+      }
+    }
+  }
+
+  .offer_modal {
+
+    .modal-dialog{
+      display:unset;
+    }
+
+    .modal-body{
+
+      display: block;
+
+      .left,
+      .right{
+        max-width: 100%;
+        flex:0 0 100%;
       }
     }
   }
