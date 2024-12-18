@@ -5,10 +5,11 @@ import Modal from "react-bootstrap/Modal";
 import SecTitle from "./SecTitle/Index";
 // import headingIconImg from "./../frontend/assets/images/icons/heading-icon-img.png";
 import Formlogo from "../../public/assets/images/logo_white.webp";
+import * as CONFIG from '../config/config'
 import Loader from "./Loader/loader";
 
 
-const CustomModal = ({ show, hide, projectName }) => {
+const CustomModal = ({ show, hide, projectName, isOffer }) => {
   const [formDetails, setFormDetails] = useState({});
   const [loading, setLoading] = useState(false);
 
@@ -73,6 +74,87 @@ const CustomModal = ({ show, hide, projectName }) => {
     document.addEventListener("mousedown", close);
     return () => document.removeEventListener("mousedown", close);
   }, []);
+
+  if(isOffer){
+    return(
+
+      <Modal show={show} className="enquire_form custom_modal offer_modal " aria-labelledby="contained-modal-title-vcenter" centered>
+        <div ref={modalRef}>
+          <Modal.Body>
+            <div className="left">
+              <img src={CONFIG.IMAGE_URL + 'offer/1.webp'} className="img-fluid offer_img" />
+            </div>
+
+            <div className="right">
+              <SecTitle className="text-center color style1">
+                {/* <img src={Formlogo} alt="" className="img-fluid headingIcon" /> */}
+                <h4 className="title">Grab an Offer</h4>
+              </SecTitle>
+
+
+              <span
+                className="close"
+                onClick={hide}
+                style={{ position: "absolute", top: 0, right: 10, fontSize: 30 }}
+              >
+                &times;
+              </span>
+              {/* {loading  ? <Loader  /> : '' } */}
+              <Form onSubmit={loading ? () => null : handleSubmit}>
+                <Row>
+                  <Form.Group className="form-group" as={Col} xs="12">
+                    <Form.Control
+                      type="text"
+                      name="name"
+                      placeholder="Name:"
+                      value={formDetails.name ?? ""}
+                      onChange={handleFormChange}
+                    />
+                  </Form.Group>
+
+                  <Form.Group className="form-group" as={Col} xs="12">
+                    <Form.Control
+                      type="email"
+                      name="email"
+                      placeholder="E-Mail:"
+                      value={formDetails.email ?? ""}
+                      onChange={handleFormChange}
+                    />
+                  </Form.Group>
+
+                  <Form.Group className="form-group" as={Col} xs="12">
+                    <Form.Control
+                      type="number"
+                      name="number"
+                      placeholder="Phone:"
+                      value={formDetails.number ?? ""}
+                      onChange={handleFormChange}
+                    />
+                  </Form.Group>
+
+                  <Form.Group className="form-group" as={Col} xs="12">
+                    <Form.Control
+                      type="text"
+                      name="message"
+                      placeholder="Message:"
+                      value={formDetails.message ?? ""}
+                      onChange={handleFormChange}
+                    />
+                  </Form.Group>
+                </Row>
+
+                <Button type="submit" className="btn_style3" disabled={loading ? true:false}>
+                  {loading ? "Sending..." : "Submit"}
+                </Button>
+              </Form>
+            </div>
+
+              
+          </Modal.Body>
+        </div>
+      </Modal>
+    )
+  }
   return (
     <Modal show={show} className="enquire_form custom_modal floor_plan_popup">
       <div ref={modalRef}>

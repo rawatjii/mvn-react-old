@@ -3375,10 +3375,13 @@ footer {
 
     background: #000;
 
-    .close{
-      margin-left:auto;
-      font-size:30px;
-    }
+    
+  }
+  
+  .close{
+    cursor: pointer;
+    margin-left:auto;
+    font-size:30px;
   }
 }
 
@@ -3568,6 +3571,17 @@ footer {
         margin-bottom:20px!important;
       }
     }
+  }
+}
+
+/* offers_section */
+
+.offers_section{
+  display: inline-block;
+  margin-bottom:40px;
+
+  .single{
+    margin-bottom:50px;
   }
 }
 

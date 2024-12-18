@@ -41,6 +41,10 @@
     height:70px;
 }
 
+.custom_modal .close{
+    cursor: pointer;
+}
+
 .custom_modal .submit_btn{
     width: 120px;
     display: flex;

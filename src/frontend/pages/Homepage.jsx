@@ -1,6 +1,5 @@
 import React, { useState, useEffect, Suspense, useRef } from "react";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation } from 'swiper/modules';
+
 import Layout from "../components/Layout";
 import Projects from "../components/homepage/Projects";
 import Projectsmobile from "../components/homepage/Projectsmobile";
@@ -40,6 +39,7 @@ import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo-img.webp";
 
 import 'swiper/css';
 import 'swiper/css/navigation';
+import CustomModal from "../../common/Modal";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -53,7 +53,17 @@ const Homepage = () => {
 
   const isHideModal = () => {
     setIsShowModal(false);
+    setIsOffer(false)
   };
+
+  const showCustomModal = (offer)=>{
+    if(offer){
+      setIsOffer(true)
+      setIsShowModal(true);
+    }else{
+      setIsShowModal(true);
+    }
+  }
 
   const smootherRef = useRef(null);
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -62,7 +72,7 @@ const Homepage = () => {
   );
 
   useEffect(() => {
-    if (newLoadingCount === 100) {
+    if (newLoadingCount >= 100) {
       const timer = setTimeout(() => {
         setNewLoadingCount(101);
         setIsPageLoaded(true); // Mark page as loaded
@@ -73,6 +83,7 @@ const Homepage = () => {
   }, [newLoadingCount]);
 
   useEffect(() => {
+    localStorage.removeItem('count');
     setNewLoadingCount(Number(localStorage.getItem("count")));
   }, []);
 
@@ -100,108 +111,43 @@ const Homepage = () => {
 
   return (
     <Layout>
+      <div className="parent-box-div">
+        <a
+          href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
+          className="hero-banner-link"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          <img
+            src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
+            alt="Hero Banner"
+            className="img-fluid hero-banner"
+          />
+        </a>
 
-      <Swiper
-        modules={[Navigation]}
-        className="homepage_hero_slider"
-        onInit={(swiper) => {
-          // Assign custom navigation buttons
-          swiper.params.navigation.prevEl = prevRef.current;
-          swiper.params.navigation.nextEl = nextRef.current;
-          swiper.navigation.init();
-          swiper.navigation.update();
-        }}
-        navigation={{
-          prevEl: prevRef.current,
-          nextEl: nextRef.current,
-        }}
-      >
-        <SwiperSlide>
-          <div className="parent-box-div">
+        <div className="slider-content">
+          <p className="slider-heading">Enter The Experience Center</p>
+          <div className="btns">
             <a
               href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
-              className="hero-banner-link"
-              target="_blank"
-              rel="noopener noreferrer"
+              className="link-btn"
             >
-              <img
-                src={isMobile ? MobileheronormalImg : DeskopheronormalImg}
-                alt="Hero Banner"
-                className="img-fluid hero-banner"
-              />
+              Click Here
             </a>
-
-            <div className="slider-content">
-              <p className="slider-heading">Enter The Experience Center</p>
-              <div className="btns">
-                <a
-                  href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
-                  className="link-btn"
-                >
-                  Click Here
-                </a>
-                {/* <button
-                  className="enquire_btn"
-                  onClick={() => setIsShowModal(true)}
-                  style={{ marginLeft: "27px" }}
-                >
-                  enquire now
-                </button> */}
-              </div>
-            </div>
+            {/* <button
+              className="enquire_btn"
+              onClick={() => setIsShowModal(true)}
+              style={{ marginLeft: "27px" }}
+            >
+              enquire now
+            </button> */}
           </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div
-            className="parent-box-div"
-            onClick={() => {
-              setIsShowModal(true);
-              setIsOffer(true)
-            }}
-            style={{cursor:'pointer'}}
-          >
-            
-              <img
-                src={isMobile ? banner2_mobile : banner2_desktop}
-                alt="Hero Banner"
-                className="img-fluid hero-banner"
-              />
-
-            {/* <div className="slider-content">
-              <p className="slider-heading">Enter The Experience Center</p>
-              <div className="btns">
-                <a
-                  href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
-                  className="link-btn"
-                >
-                  Click Here
-                </a>
-                <button
-                  className="enquire_btn"
-                  onClick={() => setIsShowModal(true)}
-                  style={{ marginLeft: "27px" }}
-                >
-                  enquire now
-                </button>
-              </div>
-            </div> */}
-          </div>
-        </SwiperSlide>
-
-        <div className="navigation_btns">
-          <button ref={prevRef} className=" prev">
-            <img src={CONFIG.IMAGE_URL + 'icons/arrow_left.png'} className="img-fluid" />
-          </button>
-          <button ref={nextRef} className=" next">
-            <img src={CONFIG.IMAGE_URL + 'icons/arrow_right.png'} className="img-fluid" />
-          </button>
         </div>
-      </Swiper>
+      </div>
 
       
 
-      <ModalSelectBox
+      {/* <ModalSelectBox
         hide={isHideModal}
         show={isShowModal}
         type="enquire"
@@ -211,7 +157,7 @@ const Homepage = () => {
         //   "MVN Mall Gurugram",
         //   "MVN Aero One Bangalore",
         // ]}
-      />
+      /> */}
 
       <div className="mobile-view-box">
         <Container>
@@ -251,6 +197,21 @@ const Homepage = () => {
         />
       </a>
 
+      <div className="offers_section">
+        <div className="single" style={{cursor:'pointer'}} onClick={()=>showCustomModal(false)}>
+          <video src={CONFIG.IMAGE_URL + "offer/offer1.mp4"} loop muted autoPlay className="img-fluid d-none d-md-block" playsInline />
+          <video src={CONFIG.IMAGE_URL + "offer/offer1_sm.mp4"} loop muted autoPlay className="img-fluid d-md-none" playsInline />
+        </div>
+
+        <div className="single" style={{cursor:'pointer'}} onClick={()=>showCustomModal(true)}>
+          <img
+            src={isMobile ? CONFIG.IMAGE_URL + 'offer/offer2_sm.webp' : CONFIG.IMAGE_URL + 'offer/offer2.webp'}
+            alt="Hero Banner"
+            className="img-fluid hero-banner"
+          />
+        </div>
+      </div>
+
       {isMobile ? <Projectsmobile /> : <Projects />}
       <OtherProjects />
       <OurJourney />
@@ -262,6 +223,8 @@ const Homepage = () => {
         <Enquire />
         <EnquireForm projectName={"MVN Infrastructure"} />
       </div>
+
+      <CustomModal hide={isHideModal} show={isShowModal} type="enquire" projectName="MVN Aeroone" isOffer={isOffer}  />
     </Layout>
   );
 };

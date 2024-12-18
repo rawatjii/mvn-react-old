@@ -39,36 +39,34 @@ import InitialLoading from "./frontend/skeleton/Initial/Index.jsx";
 
 import PageNotFound from "./common/PageNotFound/Index.jsx";
 
-import "bootstrap/dist/css/bootstrap.min.css";
-
-import "./index.css";
-
-
 import AeroOneBangalore from "./frontend/pages/micro/mvn-aeroone-bangalore/Index.jsx";
 import MvnMallGurgaon from "./frontend/pages/MvnMallGurgaon.jsx";
 import MvnAthensSohna from "./frontend/pages/MvnAthensSohna.jsx";
 import MvnAthensPh2Sohna from "./frontend/pages/MvnAthensPh2Sohna.jsx";
 import MvnAthensFaridabad from "./frontend/pages/MvnAthensFaridabad.jsx";
 import MvnUniversityHaryana from "./frontend/pages/MvnUniversityHaryana.jsx";
-import Gallery from './frontend/pages/Gallery.jsx'
-import Csr from './frontend/pages/Csr.jsx'
+import Gallery from './frontend/pages/Gallery.jsx';
+import Csr from './frontend/pages/Csr.jsx';
 import PrPolcy from './frontend/pages/PrPolcy.jsx';
 import Disclaimer from "./frontend/pages/Disclaimer.jsx";
+import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
 
+import { data } from "./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx";
+import FrontendRoute from "./common/FrontendRoute.jsx";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import "./index.css";
 
 import "./awaneesh.css";
 
 import "./savan.css";
 import './adarsh.css'
-import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
 // const MicroPageGurgaon1 = React.lazy(() =>
 //   new Promise((resolve) =>
 //     setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 1000)
 //   )
 // );
-
-import { data } from "./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx";
-import FrontendRoute from "./common/FrontendRoute.jsx";
 
 const router = createBrowserRouter([
   {
