@@ -15,7 +15,8 @@ import mvnAerooneImgDesktop from "../../assets/images/projects/mvn-aeroone.webp"
 import mvnAerooneBangaloreImgDesktop from "../../assets/images/projects/mvn-bangalore-project.webp";
 import arrowIcon from "../../assets/images/icons/arrow.png";
 import btn_arrow from "../../assets/images/icons/btn_arrow.png";
-import planeIcon from "../../assets/images/icons/heading-icon-img";
+// import planeIcon from "../../assets/images/icons/plane.jpg";
+import planeIcon from "../../assets/images/icons/heading-icon-img.png";
 import NewLaunchIcon from "../../assets/images/icons/new-launch-patch.png"
 
 
