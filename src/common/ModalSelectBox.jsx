@@ -155,7 +155,7 @@ const ModalSelectBox = ({
         <div className="right">
           <SecTitle className="text-center color style1">
             {/* <img src={Formlogo} alt="" className="img-fluid headingIcon" /> */}
-            <h4 className="title">Grab an Offer</h4>
+            <h4 className="title">Grab The Offer</h4>
           </SecTitle>
           <span
             className="close"
