@@ -137,7 +137,7 @@ const MicroFloorPlan = ({ data }) => {
                               background: '#00000030'
                             }}
                           >
-                            <Button type="submit" className="btn_style3" onClick={showModal}>
+                            <Button type="submit" className="btn_style3 r_100" onClick={showModal}>
                               View Layouts
                             </Button>
                           </div>

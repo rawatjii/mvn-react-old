@@ -8,6 +8,7 @@ import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 import Watermark from "../../../common/watermark/Index";
 import * as CONFIG from '../../../config/config';
 import ScrollDown from "../../../common/scrollDown/Index";
+import InitialLoading from "../../skeleton/Initial/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -36,7 +37,6 @@ const PeacockSection = ({ data, onLoadComplete }) => {
   useEffect(() => {
     if (!isMobile) {
       // Immediately call onLoadComplete for desktop
-      setLoading(false); // No loader for desktop
       return;
     }
 
@@ -107,8 +107,8 @@ const PeacockSection = ({ data, onLoadComplete }) => {
 
   return (
     <div className="section peacock_section pb-0" id="peacockSection">
-      {/* Show loader only on mobile */}
-      {isMobile && loading && <PeacockLoader />}
+      {/* Show loader if still loading */}
+      {loading && <PeacockLoader />}
 
       {/* Main content once loading is complete */}
       {!loading && (

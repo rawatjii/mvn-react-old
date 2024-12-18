@@ -130,7 +130,7 @@ const Homepage = () => {
           <div className="btns">
             <a
               href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
-              className="link-btn"
+              className="btn ink-btn btn_style3 r_100"
             >
               Click Here
             </a>
@@ -173,7 +173,7 @@ const Homepage = () => {
           </p>
           <a
             href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
-            className="link-btn"
+            className="btn btn_style3 r_100 mt-3 mt-md-4"
           >
             Click Here
           </a>

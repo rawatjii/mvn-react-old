@@ -191,6 +191,10 @@ input[type=number] {
   color: var(--theme_primary_txt)
 }
 
+.r_100{
+  border-radius:100px!important;
+}
+
 .btn {
   border-radius: 4px;
   color: #555;
