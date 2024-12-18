@@ -15,7 +15,8 @@ import mvnAerooneImgDesktop from "../../assets/images/projects/mvn-aeroone.webp"
 import mvnAerooneBangaloreImgDesktop from "../../assets/images/projects/mvn-bangalore-project.webp";
 import arrowIcon from "../../assets/images/icons/arrow.png";
 import btn_arrow from "../../assets/images/icons/btn_arrow.png";
-import planeIcon from "../../assets/images/icons/plane.jpg";
+// import planeIcon from "../../assets/images/icons/plane.jpg";
+import planeIcon from "../../assets/images/icons/heading-icon-img.png";
 import NewLaunchIcon from "../../assets/images/icons/new-launch-patch.png"
 
 
@@ -28,32 +29,33 @@ gsap.registerPlugin(ScrollTrigger);
 
 const projectsData = [
   {
-    mobile: mvnMallImg,
-    desktop: mvnMallImgDesktop,
-    name: "Mvn Mall",
-    location: "Gurugram",
-    otherPage:true,
-    link:'https://mvnmall.com/'
-  },
-  {
     mobile: mvnAerooneImg,
     desktop: mvnAerooneImgDesktop,
     name: "MVN AEROONE RESIDENCES",
     location: "Gurugram",
-    otherPage:false,
-    link:"aeroone-gurgaon"
+    otherPage: false,
+    link: "aeroone-gurgaon"
+  },
+  {
+    mobile: mvnMallImg,
+    desktop: mvnMallImgDesktop,
+    name: "Mvn Mall",
+    location: "Gurugram",
+    otherPage: true,
+    link: 'https://mvnmall.com/'
   },
   {
     mobile: mvnAerooneBangaloreImg,
     desktop: mvnAerooneBangaloreImgDesktop,
-    name: "Mvn",
+    name: "Mvn AERO ONE",
     location: "Bangalore",
-    otherPage:true,
-    link:'https://www.mvnaeroone.com/'
+    otherPage: true,
+    link: 'https://www.mvnaeroone.com/'
   },
 ];
 
 const Projects = () => {
+
   const imageDivRefs = useRef([]);
   const titleRef = useRef();
   const [imagesLoaded, setImagesLoaded] = useState(0);
@@ -83,13 +85,17 @@ const Projects = () => {
     });
 
     imageDivRefs.current.forEach((imagediv) => {
+
       if (imagediv) {
         gsap.to(imagediv, {
           scrollTrigger: {
             trigger: imagediv,
             start: "top 95%",
             once: true,
-            onEnter: () => imagediv.classList.add("active"),
+            onEnter: () => {
+              imagediv.classList.add("active")
+              // console.log(imagediv.classList);
+            },
           },
           clearProps: "all",
         });
@@ -114,26 +120,156 @@ const Projects = () => {
   };
 
   const leftColProjects = isDesktop
-    ? [projectsData[0], projectsData[2]] // "Mvn Mall" and "Mvn"
-    : [projectsData[0]]; // Desktop: "Mvn Mall" only
+    ? [projectsData[0], projectsData[1]]
+    : [projectsData[0], projectsData[1]];
   const rightColProjects = isDesktop
-    ? [projectsData[1]] // "Mvn Aeroone Residency"
-    : projectsData.slice(1); // Desktop: Rest of the projects
+    ? [projectsData[2]]
+    : [projectsData[2]]
+
+
+
+  // const leftColProjects = isDesktop
+  //   ? [projectsData[0], projectsData[2]] // "Mvn Mall" and "Mvn"
+  //   : [projectsData[0]]; // Desktop: "Mvn Mall" only
+  // const rightColProjects = isDesktop
+  //   ? [projectsData[1]] // "Mvn Aeroone Residency"
+  //   : projectsData.slice(1); // Desktop: Rest of the projects
+
 
   return (
     <>
-      <section className="section projects_section pb-0">
-        <img
-          src={planeIcon}
-          alt="mvn-plane-icon"
-          className="img-fluid plane_icon"
-        />
+      <section className="section projects_section_new pb-0">
+
 
         <Container>
           <Row className="mx_-8">
 
+
+            <div className="col-md-12 col-12 heading_div">
+              <img
+                src={planeIcon}
+                alt="mvn-plane-icon"
+                className="img-fluid plane_icon"
+              />
+              <h4 className="sec_title title text-uppercase">Explore Our Projects</h4>
+              <article className="desc">MVN Infrastructure introduces MVN Aero one Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway.</article>
+            </div>
+
+            <div className="project_div d-flex flex-wrap">
+              <div className="box_with_overlay col-md-4">
+                <div className="box_with_overlay_in">
+                  <img
+                    src={CONFIG.IMAGE_URL + "gurgaon-project-map.jpg"}
+                    alt="bg img"
+                    className="img-fluid img_bg d-lg-block d-none"
+                  />
+                  <img
+                    src={CONFIG.IMAGE_URL + "gurgaon-project-map-sm.jpg"}
+                    alt="bg img"
+                    className="img-fluid img_bg d-lg-none d-block"
+                  />
+                  <div className="abs_div">
+                    <div className="content_div">
+                      <span className="title text-uppercase">MVN</span>
+                      <p className="text-uppercase pro_name">Aero World</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="projects_flex_row d-flex flex-wrap col-md-8 col-12">
+                {leftColProjects.map((item, index) => (
+                  <div className="project_box col-md-6 col-12">
+                    <div className="project_box_in" key={index}>
+                      <AnImage
+                        ref={(el) => (imageDivRefs.current[index] = el)}
+                        className="pro_img"
+                        height={100}
+                      >   <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch" />
+                        <Link to={item.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
+                          <img
+                            src={isDesktop ? item.mobile : item.desktop}
+                            alt={item.name}
+                            className="img-fluid thumbnail"
+                            onLoad={handleImageLoad}
+                          />
+                        </Link>
+                      </AnImage>
+                      <div className="text d-flex">
+                        <span className="pro_name text-uppercase">{item.name}</span>
+                        <Link className="pro_link text-capitalize" to={item.link}>
+                          view detail
+                          <img
+                            src={arrowIcon}
+                            alt="mvn-arrow-icon"
+                            className="img-fluid icon"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
+            <div className="project_div d-flex flex-wrap">
+              <div className="box_with_overlay col-md-4">
+                <div className="box_with_overlay_in">
+                  <img
+                    src={CONFIG.IMAGE_URL + "bangalore-project-map.jpg"}
+                    alt="bg img"
+                    className="img-fluid img_bg d-lg-block d-none"
+                  />
+                  <img
+                    src={CONFIG.IMAGE_URL + "bangalore-project-map-sm.jpg"}
+                    alt="bg img"
+                    className="img-fluid img_bg d-lg-none d-block"
+                  />
+                  <div className="abs_div">
+                    <div className="content_div">
+                      <span className="title text-uppercase">MVN</span>
+                      <p className="text-uppercase pro_name">Bangalore</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="projects_flex_row d-flex flex-wrap col-md-8 col-12">
+                {rightColProjects.map((item, index) => (
+                  <div className="project_box col-12">
+                    <div className="project_box_in" key={index}>
+                      <AnImage
+                        ref={(el) => (imageDivRefs.current[index] = el)}
+                        className="pro_img"
+                        height={100}
+                      >
+                        {/* <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch" /> */}
+                        <Link to={item.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
+                          <img
+                            src={isDesktop ? item.mobile : item.desktop}
+                            alt={item.name}
+                            className="img-fluid thumbnail"
+                            onLoad={handleImageLoad}
+                          />
+                        </Link>
+                      </AnImage>
+                      <div className="text d-flex">
+                        <span className="pro_name text-uppercase">{item.name}</span>
+                        <Link className="pro_link text-capitalize" to={item.link}>
+                          view detail
+                          <img
+                            src={arrowIcon}
+                            alt="mvn-arrow-icon"
+                            className="img-fluid icon"
+                          />
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+
             {/* Left Column */}
-            <Col xs={6} className="px_8 left_col">
+            {/* <Col xs={6} className="px_8 left_col">
          
               <h3 className="sec_title">
                 Explore <span>Our Projects</span>
@@ -173,10 +309,10 @@ const Projects = () => {
                   </div>
                 </div>
               ))}
-            </Col>
+            </Col> */}
 
             {/* Right Column */}
-            <Col xs={6} className="px_8 right_col">
+            {/* <Col xs={6} className="px_8 right_col">
 
               {rightColProjects.map((item, index) => (
                 <div key={index} className="single">
@@ -214,7 +350,7 @@ const Projects = () => {
                   </div>
                 </div>
               ))}
-            </Col>
+            </Col> */}
           </Row>
         </Container>
       </section>
