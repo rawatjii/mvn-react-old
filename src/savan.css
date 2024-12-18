@@ -1827,7 +1827,7 @@ section.overview_section {padding-bottom: 25px;}
   width: fit-content;
   height: auto;
   position: relative;
-  top: -90px;
+  top: -70px;
   color: #dbc275;
   text-align: right;
   margin-left: auto;
@@ -2059,7 +2059,7 @@ section.section.micro_overview.text-center.pb-0 .overview_card {
 
 #scroll-wrapper-inner{display:table-cell;vertical-align:middle;width:100%;height:100%}
 #scroll-down{display:block;position:relative;padding-top:79px;text-align:center}
-#scroll-title{display:block;text-transform:uppercase;color:#fff;font-family:"raleway";font-size:14px;font-weight:700;letter-spacing:.4em;text-align:center;margin-bottom:20px}
+#scroll-title{display:block;text-transform:uppercase;color:#fff;font-size:14px;font-weight:700;letter-spacing:.4em;text-align:center;margin-bottom:6px; font-family: var(--tinos_font);}
 #scroll-down::before{animation:elasticus 2.9s cubic-bezier(1,0,0,1) infinite;position:absolute;top:0;left:50%;margin-left:-1px;width:2px;height:90px;background:#dbc275;content:' '}
 
 .scroll-down-dude {
