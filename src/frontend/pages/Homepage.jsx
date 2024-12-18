@@ -212,8 +212,7 @@ const Homepage = () => {
         </div>
       </div>
 
-      {/* {isMobile ? <Projectsmobile /> : <Projects />} */}
-      <Projects />
+      {isMobile ? <Projectsmobile /> : <Projects />}
       <OtherProjects />
       <OurJourney />
       <OurTeam />
