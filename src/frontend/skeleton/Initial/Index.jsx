@@ -3,7 +3,7 @@ import * as CONFIG from "../../../config/config";
 import "./initialLoading.css";
 import { useLocation } from "react-router-dom";
 
-const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, second}) => {
+const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, second, videoUrl}) => {
     const intervalRef = useRef(null);
     const onCompleteRef = useRef(onComplete);
     const { pathname } = useLocation();
@@ -46,7 +46,7 @@ const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, secon
                     <img src={CONFIG.IMAGE_URL + 'loader_building.webp'} alt="loader building" className="img-fluid building_icon" />
                     <div className="overlay" style={{ bottom: Math.floor(loadingCount) + '%' }}></div>
                 </div>
-                <video src={CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop />
+                <video src={videoUrl ? videoUrl : CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop playsInline />
                 <div className="bar">
                     <span className="fill" style={{ width: Math.floor(loadingCount) + '%' }}></span>
                 </div>

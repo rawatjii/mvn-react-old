@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from "react";
+import React, { Suspense, useEffect, useState, useRef } from "react";
 import { Container } from "react-bootstrap";
 import MicroHero from "../components/MicroPage/Hero";
 import MicroOverview from "../components/MicroPage/Overview";
@@ -13,32 +13,44 @@ import MicroLocationMap from "../components/MicroPage/LocationMap";
 import Enquire from "../components/homepage/Enquire";
 import EnquireForm from "../components/homepage/EnquireForm";
 import PeacockSection from "../components/MicroPage/PeacockSection";
-import Walkthrough from "../components/MicroPage/Walkthrough";
-import MvnMall from "../components/MicroPage/MvnMall";
-import Footer from "../components/Footer";
-import Typology from "../components/homepage/Typology";
-import DownloadBrochure from "../components/MicroPage/DownloadBrochure";
-import InitialLoading from "../skeleton/Initial/Index";
-import { gsap } from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger";
-import ScrollSmoother from "gsap/ScrollSmoother";
-import GurgaonLoader1 from "../../common/Loader/micro/gurgaon1/Index";
-import { Helmet } from "react-helmet";
-import MicroHeader from "../components/MicroHeader";
-import CustomCard from "../components/Card";
-import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
+import Video2 from "../components/MicroPage/Video2";
 import PartyVideo from "../components/MicroPage/PartyVideo";
 import MasterBedroom from "../components/MicroPage/MasterBedroom";
+import Slides from "../components/MicroPage/Slides";
+import Walkthrough from "../components/MicroPage/Walkthrough";
+import Renders from "../components/MicroPage/Renders";
+import LivingRoomVideo from "../components/MicroPage/LivingRoomVideo";
+import GurgaonLoader1 from "../../common/Loader/micro/gurgaon1/Index";
+import Typology from "../components/homepage/Typology";
+import LivingRoomVideoGurugram from "../components/MicroPage/LivingRoomVideoGurugram";
+import SecSliding from "../components/MicroPage/SecSliding";
+import MicroAmenities1 from "../components/MicroPage/Amenities1";
+
+import Testing from "../components/MicroPage/Testing";
+import RendersSliding from "../components/MicroPage/Testing";
+import Renders1 from "../components/MicroPage/Renders1";
+import CustomModal from "../../common/Modal";
+import MicroHeader from "../components/MicroHeader";
+
+import { gsap } from "gsap";
+import { Helmet } from "react-helmet";
+import ScrollTrigger from "gsap/ScrollTrigger";
+import ScrollSmoother from "gsap/ScrollSmoother";
+import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
+import NoPolutionZone1 from "../components/MicroPage/NoPolutionZone1";
 import MicroLandscape from "../components/MicroPage/Landscape";
 import MicroElevation from "../components/MicroPage/MicroElevation";
 import MicroApartment from "../components/MicroPage/MicroApartment";
-import NoPolutionZone from "../components/MicroPage/NoPolutionZone";
-
-import * as CONFIG from '../../config/config';
+import Footer from "../components/Footer";
+import CustomCard from "../components/Card";
+import Amenities2 from "../components/MicroPage/Amenities2";
+import MvnMall from "../components/MicroPage/MvnMall";
+import DownloadBrochure from "../components/MicroPage/DownloadBrochure";
+import InitialLoading from "../skeleton/Initial/Index";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
-const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
+const MicroPageGurgaon1 = ({ data }) => {
   const [heroLoaded, setHeroLoaded] = useState(false);
   const [newLoadingCount, setNewLoadingCount] = useState(
     Number(localStorage.getItem("count"))
@@ -83,6 +95,32 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
       }
     };
   }, [heroLoaded]);
+
+  useEffect(() => {
+    if (heroLoaded && smootherRef.current) {
+      smootherRef.current.refresh();
+    }
+  }, [heroLoaded]);
+
+  useEffect(() => {
+    if (newLoadingCount === 100) {
+      const timer = setTimeout(() => {
+        setNewLoadingCount(101);
+      }, 500);
+      return () => clearTimeout(timer);
+    }
+  }, [newLoadingCount]);
+
+  if (newLoadingCount <= 100) {
+    return (
+      <InitialLoading
+        loadingCount={newLoadingCount}
+        setLoadingCount={setNewLoadingCount}
+        fast="true"
+        second="true"
+      />
+    );
+  }
 
   return (
     <>
@@ -156,21 +194,15 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
           </noscript>
 
       </Helmet>
+
       <MicroHeader scrollToSection={scrollToSection} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
-          {!heroLoaded && (
-            <>
-              <InitialLoading
-                fast={heroLoaded}
-                videoUrl={CONFIG.IMAGE_URL + 'loader.mp4'}
-                loadingCount={newLoadingCount}
-                setLoadingCount={setNewLoadingCount}
-              />
-              {/* <GurgaonLoader1 /> */}
-            </>
-          )}
+          {/* Show Loader until hero section is loaded */}
+          {!heroLoaded && <GurgaonLoader1 />}
 
+          {/* Render Hero Section */}
+ 
           <div ref={(el) => (sectionRefs.current.microOverview = el)}>
             <MicroHero data={data} onLoadComplete={() => setHeroLoaded(true)} />
           </div>
@@ -332,6 +364,10 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
           </div>
 
           <Footer />
+
+          
+
+          
         </div>
       </div>
     </>

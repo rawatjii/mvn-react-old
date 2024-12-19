@@ -50,6 +50,11 @@ import Csr from './frontend/pages/Csr.jsx';
 import PrPolcy from './frontend/pages/PrPolcy.jsx';
 import Disclaimer from "./frontend/pages/Disclaimer.jsx";
 import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
+// const MicroPageGurgaon1 = React.lazy(() =>
+//   new Promise((resolve) =>
+//     setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 2000)
+//   )
+// );
 
 import { data } from "./frontend/pages/micro/mvn-aeroone-gurgaon1/Index.jsx";
 import FrontendRoute from "./common/FrontendRoute.jsx";
@@ -62,11 +67,7 @@ import "./awaneesh.css";
 
 import "./savan.css";
 import './adarsh.css'
-// const MicroPageGurgaon1 = React.lazy(() =>
-//   new Promise((resolve) =>
-//     setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 1000)
-//   )
-// );
+
 
 const router = createBrowserRouter([
   {
