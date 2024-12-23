@@ -15,7 +15,7 @@ const DownloadBrochure = ()=>{
 
   return(
     <section className="download_brochure_section">
-      <Button className="btn btn_style4" onClick={handleOpenBrochureModal}>Download Brochure</Button>
+      <Button className="btn btn_style4" onClick={handleOpenBrochureModal}>Download MVN ID Brochure</Button>
 
 
       <CustomModal hide={isHideModal} show={isShowModal} type="enquire" projectName="MVN Aeroone"  />

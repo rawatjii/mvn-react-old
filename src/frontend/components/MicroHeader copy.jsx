@@ -306,7 +306,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
                                 >
-                                  Apartment Views
+                                  Apartment
                                 </a>
                                 <a
                            
@@ -607,7 +607,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
                                 >
-                                  Apartment Views
+                                  Apartment
                                 </a>
 
                                 <a

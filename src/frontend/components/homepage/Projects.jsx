@@ -184,7 +184,11 @@ const Projects = () => {
                         ref={(el) => (imageDivRefs.current[index] = el)}
                         className="pro_img"
                         height={100}
-                      >   <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch" />
+                      >   
+                        <span className="new-launch-patch">
+                          New Launch
+                        </span>
+                        {/* <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch" /> */}
                         <Link to={item.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
                           <img
                             src={isDesktop ? item.mobile : item.desktop}

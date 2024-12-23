@@ -269,7 +269,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => {scrollToSection("downloadBrochure");toggleMenu("close");}}
                                 >
-                                  Brochure
+                                  MVN ID Brochure
                                 </a>
                               </li>
 
@@ -296,7 +296,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
                                 >
-                                  Apartment Views
+                                  Apartment
                                 </a>
                               </li>
 
@@ -381,7 +381,7 @@ const MicroHeader = ({ scrollToSection }) => {
                                   className="new-launch"
                                   onClick={() => {scrollToSection("MicroApartment");toggleMenu("close");}}
                                 >
-                                  Apartment Views
+                                  Apartment
                                 </a>
                               </li>
                             </ul> */}

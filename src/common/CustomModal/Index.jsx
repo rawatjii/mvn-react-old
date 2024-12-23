@@ -43,7 +43,7 @@ const CustomModal = forwardRef((props, ref)=>{
             return(
                 <Modal className="custom_modal" animation={false} centered show={props.show} onHide={() => setShowModal(false)}>
                     <Modal.Header>
-                        <Modal.Title><small>Interested In</small> Download Brochure</Modal.Title>
+                        <Modal.Title><small>Interested In</small> Download MVN ID Brochure</Modal.Title>
                         <span className="close" onClick={props.handleClose}>&times;</span>
                     </Modal.Header>
                     <Modal.Body>

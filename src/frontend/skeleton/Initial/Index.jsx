@@ -14,30 +14,30 @@ const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, secon
     }, [onComplete]);
 
     useEffect(() => {
-        // Set the interval duration based on the `fast` prop
         const intervalDuration = fast === "true" ? 20 : 300;
-
-        // Increment loadingCount at a regular interval
+    
         intervalRef.current = setInterval(() => {
             setLoadingCount((prevState) => {
-                if (prevState >= 99) {
-                    clearInterval(intervalRef.current); // Pause near completion
-                    localStorage.setItem('count', prevState + 1);
-                    onCompleteRef.current?.(); // Call the onComplete callback if available
-                    return prevState + 1;
+                const nextCount = Math.min(100, Math.floor(prevState + 1)); // Ensure integer and cap at 100
+                if (nextCount >= 100) {
+                    clearInterval(intervalRef.current);
+                    localStorage.setItem('count1', 100); // Ensure integer in localStorage
+                    onCompleteRef.current?.();
+                } else {
+                    localStorage.setItem('count1', nextCount); // Ensure integer in localStorage
                 }
-                localStorage.setItem('count', prevState + 1);
-                return prevState + 1; // Increment by 1
+                return nextCount; // Ensure return is an integer
             });
         }, intervalDuration);
-
+    
         return () => {
-            if(second === 'true'){
+            if (second === 'true') {
                 localStorage.removeItem('count');
             }
-            clearInterval(intervalRef.current); // Cleanup interval on unmount
+            clearInterval(intervalRef.current);
         };
     }, [fast]);
+    
 
     return (
         <div className="initial_loading">
@@ -46,11 +46,13 @@ const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, secon
                     <img src={CONFIG.IMAGE_URL + 'loader_building.webp'} alt="loader building" className="img-fluid building_icon" />
                     <div className="overlay" style={{ bottom: Math.floor(loadingCount) + '%' }}></div>
                 </div>
-                <video src={videoUrl ? videoUrl : CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop playsInline />
+
+                <video src={CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop playsInline />
+                
                 <div className="bar">
                     <span className="fill" style={{ width: Math.floor(loadingCount) + '%' }}></span>
                 </div>
-                <p className="count">{Math.floor(loadingCount)} %</p>
+                <p className="count1">{Math.floor(loadingCount)} %</p>
             </div>
         </div>
     );

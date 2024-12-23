@@ -40,6 +40,7 @@ import homeMobileLogo from "../../frontend/assets/mvn-aeroone-logo-img.webp";
 import 'swiper/css';
 import 'swiper/css/navigation';
 import CustomModal from "../../common/Modal";
+import { Link } from "react-router-dom";
 
 gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
@@ -128,12 +129,12 @@ const Homepage = () => {
         <div className="slider-content">
           <p className="slider-heading">Enter The Experience Center</p>
           <div className="btns">
-            <a
-              href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
+            <Link
+              to={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
               className="btn ink-btn btn_style3 r_100"
             >
               Click Here
-            </a>
+            </Link>
             {/* <button
               className="enquire_btn"
               onClick={() => setIsShowModal(true)}

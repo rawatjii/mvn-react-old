@@ -36,6 +36,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
   useEffect(() => {
     if (!isMobile) {
       // Immediately call onLoadComplete for desktop
+      onLoadComplete();
       setLoading(false); // No loader for desktop
       return;
     }
