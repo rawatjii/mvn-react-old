@@ -17,12 +17,15 @@ import typo9 from "../../assets/images/typologies/penthouse/3.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Typology = () => {
+const Typology = ({onLoadComplete}) => {
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
+  const isImagesLoaded = useRef(false);
   const contentRefs = useRef([]);
   const imageContentRefs = useRef([]);
   const [images, setImages] = useState([]);
+  const [loading, setLoading] = useState(true); // Loader state
+  const [loadingComplete, setLoadingComplete] = useState(false); // State to track when all images are loaded
   const isMobile = window.innerWidth <= 768;
 
   let totalFrames = isMobile ? 327 : 327;
@@ -33,20 +36,37 @@ const Typology = () => {
   ];
 
   useEffect(() => {
+    // Only preload images once totalFrames is set
+    if (totalFrames === 0 || isImagesLoaded.current) return;
+
     // Preload images
     const loadedImages = [];
+    let loadedCount = 0;
+
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
       img.src = isMobile
         ? `assets/images/micro/aeroone-gurgaon/mobiles/${i}.webp`
         : `assets/images/micro/aeroone-gurgaon/mobiles/${i}.webp`;
+
+      // Track when each image loads
+      img.onload = () => {
+        loadedCount++;
+        if (loadedCount === totalFrames) {
+          setImages(loadedImages); // Set images after all are loaded
+          setLoading(false); // Hide loader
+          isImagesLoaded.current = true; // Mark as loaded
+          setLoadingComplete(true); // Mark loading as complete
+          onLoadComplete();
+        }
+      };
+
       loadedImages.push(img);
     }
-    setImages(loadedImages);
   }, []);
 
   useEffect(() => {
-    if (images.length !== totalFrames) return;
+    if (loading || !loadingComplete ||images.length !== totalFrames) return;
   
     ScrollTrigger.create({
       trigger: containerRef.current,
@@ -92,7 +112,7 @@ const Typology = () => {
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
-  }, [images]);
+  }, [loading, images, totalFrames, loadingComplete]);
 
   return (
     <>
@@ -110,7 +130,8 @@ const Typology = () => {
               src={img.src}
               alt={`Frame ${index}`}
               className="frame"
-              style={{ display: index === 0 ? "block" : "none" }}
+              loading="lazy"
+              style={{ display: index === 0 ? "block" : "none",}}
             />
           ))}
         </div>

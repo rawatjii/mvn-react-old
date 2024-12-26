@@ -49,10 +49,10 @@ import Gallery from './frontend/pages/Gallery.jsx';
 import Csr from './frontend/pages/Csr.jsx';
 import PrPolcy from './frontend/pages/PrPolcy.jsx';
 import Disclaimer from "./frontend/pages/Disclaimer.jsx";
-import MicroPageGurgaon1 from "./frontend/pages/MicroPageGurgaon1.jsx";
+const MicroPageGurgaon1 = React.lazy(()=>import("./frontend/pages/MicroPageGurgaon1.jsx"));
 // const MicroPageGurgaon1 = React.lazy(() =>
 //   new Promise((resolve) =>
-//     setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 2000)
+//     setTimeout(() => resolve(import("./frontend/pages/MicroPageGurgaon1.jsx")), 100000)
 //   )
 // );
 

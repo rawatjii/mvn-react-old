@@ -16,7 +16,7 @@ const AboutUs = () => {
   window.scrollTo(0, 0);
   
   const [microBg, setMicroBg] = useState(Desktopmicro_bg);
-  const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count')));
+  const [newLoadingCount, setNewLoadingCount] = useState(Number(localStorage.getItem('count1')));
   
   const breadcrumbs = {
     title: 'About Us',
@@ -27,8 +27,8 @@ const AboutUs = () => {
   };
 
   useEffect(() => {
-    setNewLoadingCount(Number(localStorage.getItem('count')));
-  }, [localStorage.getItem('count')]);
+    setNewLoadingCount(Number(localStorage.getItem('count1')));
+  }, [localStorage.getItem('count1')]);
 
   // Update background image based on window width
   useEffect(() => {

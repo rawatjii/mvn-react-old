@@ -3,7 +3,7 @@ import * as CONFIG from "../../../config/config";
 import "./initialLoading.css";
 import { useLocation } from "react-router-dom";
 
-const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, second, videoUrl}) => {
+const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, second, videoUrl, test}) => {
     const intervalRef = useRef(null);
     const onCompleteRef = useRef(onComplete);
     const { pathname } = useLocation();
@@ -14,17 +14,17 @@ const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, secon
     }, [onComplete]);
 
     useEffect(() => {
-        const intervalDuration = fast === "true" ? 20 : 300;
+        const intervalDuration = fast == "true" ? 20 : 300;
     
         intervalRef.current = setInterval(() => {
             setLoadingCount((prevState) => {
                 const nextCount = Math.min(100, Math.floor(prevState + 1)); // Ensure integer and cap at 100
                 if (nextCount >= 100) {
                     clearInterval(intervalRef.current);
-                    localStorage.setItem('count1', 100); // Ensure integer in localStorage
+                    localStorage.setItem('count', 100); // Ensure integer in localStorage
                     onCompleteRef.current?.();
                 } else {
-                    localStorage.setItem('count1', nextCount); // Ensure integer in localStorage
+                    localStorage.setItem('count', nextCount); // Ensure integer in localStorage
                 }
                 return nextCount; // Ensure return is an integer
             });
@@ -36,7 +36,7 @@ const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, secon
             }
             clearInterval(intervalRef.current);
         };
-    }, [fast]);
+    }, []);
     
 
     return (
@@ -52,7 +52,7 @@ const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, secon
                 <div className="bar">
                     <span className="fill" style={{ width: Math.floor(loadingCount) + '%' }}></span>
                 </div>
-                <p className="count1">{Math.floor(loadingCount)} %</p>
+                <p className="count1">{Math.floor(loadingCount)} % {test === 'true' ? 'testing' : ''}</p>
             </div>
         </div>
     );

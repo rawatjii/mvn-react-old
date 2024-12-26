@@ -123,7 +123,7 @@ export default function MicroLandscape({ data = landscapeData, title, subTitle, 
                 {/* Wrapping image in AnImage component for animation */}
                 <div className="img">
                   <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
-                    <img src={image.asset} alt="" onLoad={handleImageLoad} />
+                    <img src={image.asset} alt="" onLoad={handleImageLoad} loading='lazy'  />
                   </AnImage>
                   {/* <Watermark className={image.watermark} /> */}
                 </div>

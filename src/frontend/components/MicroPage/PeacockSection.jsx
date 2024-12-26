@@ -34,7 +34,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
 
   // Load images for mobile
   useEffect(() => {
-    if (!isMobile) {
+    if (window.innerWidth >= 768) {
       // Immediately call onLoadComplete for desktop
       onLoadComplete();
       setLoading(false); // No loader for desktop
@@ -55,7 +55,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
         loadedCount++;
         if (loadedCount === totalFrames) {
           setLoading(false); // All images loaded, hide loader
-          onLoadComplete(); // Notify parent component
+          onLoadComplete();
         }
       };
 
@@ -124,7 +124,8 @@ const PeacockSection = ({ data, onLoadComplete }) => {
                   src={img.src}
                   alt={`Frame ${index}`}
                   className="frame"
-                  style={{ display: index === 0 ? "block" : "none" }}
+                  style={{ display: index === 0 ? "block" : "none",}}
+                  loading="lazy"
                 />
               ))}
 

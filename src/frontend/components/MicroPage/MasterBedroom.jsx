@@ -54,7 +54,7 @@ const MasterBedroom = ({ isMobile, data, onLoadComplete }) => {
 
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: "top top",
+      start: "top 90px",
       end: `+=${window.innerHeight * 6}`,
       pin: true,
       scrub: 0.5,

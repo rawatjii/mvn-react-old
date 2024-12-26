@@ -1,6 +1,5 @@
 import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
 import * as CONFIG from "../../../config/config";
 import OtherProjects from "../homepage/OtheProjects";
 
@@ -13,7 +12,6 @@ import mvnUniversityDesktop from "../../assets/images/other-projects/mvn-univers
 import mvnSportsAcademyDesktop from "../../assets/images/other-projects/mvn-sports-academy-desktop.webp";
 import Watermark from "../../../common/watermark/Index";
 
-gsap.registerPlugin(ScrollTrigger);
 
 const amenityData = [
   {
@@ -49,8 +47,8 @@ export default function Amenities({ data }) {
           {amenities.map((single, index)=>(
             <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
               <div className="card center" onClick={() => setIndex(index)}>
-                <img src={CONFIG.IMAGE_URL + 'amenities/'+single.imgSrc.mobile} alt="" className="img-fluid d-md-none" />
-                <img src={CONFIG.IMAGE_URL + 'amenities/'+single.imgSrc.desktop} alt="" className="img-fluid d-none d-md-block" />
+                <img src={CONFIG.IMAGE_URL + 'amenities/'+single.imgSrc.mobile} alt="" className="img-fluid d-md-none" loading="lazy" />
+                <img src={CONFIG.IMAGE_URL + 'amenities/'+single.imgSrc.desktop} alt="" className="img-fluid d-none d-md-block" loading="lazy" />
                 <Watermark />
               </div>
               <div className="content">

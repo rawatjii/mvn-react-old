@@ -84,21 +84,23 @@ const MicroHero = ({ data, onLoadComplete }) => {
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
 
-        // Ensure frames update correctly
+        // Ensure frames update correctly using opacity
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === frameIndex ? "block" : "none";
+          if (img) {
+            img.style.opacity = index === frameIndex ? 1 : 0;
+          }
         });
       },
       onLeave: () => {
         // Ensure the last frame stays visible when scrolling ends
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+          if (img) img.style.opacity = index === totalFrames - 1 ? 1 : 0;
         });
       },
       onLeaveBack: () => {
         // Ensure the first frame stays visible when scrolling back to the top
         frameRefs.current.forEach((img, index) => {
-          if (img) img.style.display = index === 0 ? "block" : "none";
+          if (img) img.style.opacity = index === 0 ? 1 : 0;
         });
       },
     });
@@ -121,7 +123,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
                   src={img.src}
                   alt={`Frame ${index}`}
                   className="frame"
-                  style={{ display: index === 0 ? "block" : "none",}}
+                  style={{ opacity: index === 0 ? 1 : 0 }}
                 />
               ))}
 

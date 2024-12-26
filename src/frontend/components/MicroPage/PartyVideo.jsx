@@ -44,7 +44,7 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
     const lottieAnimation = lottie.loadAnimation({
       container: lottieContainerRef.current,
       animationData,
-      renderer: "svg",
+      renderer: "canvas",
       loop: false,
       autoplay: false,
       rendererSettings: {
@@ -55,7 +55,7 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
 
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: "top top",
+      start: "top 95px",
       end: `+=${window.innerHeight * 8}`,
       pin: true,
       scrub: 0.5,
