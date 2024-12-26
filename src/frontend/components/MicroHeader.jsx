@@ -140,7 +140,7 @@ const MicroHeader = ({ scrollToSection }) => {
 
           <div className="right">
             <a href="tel:+919071008464" className="call_btn" ref={callBtnRef}>
-              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="" />
+              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="mvn call icon" />
             </a>
             <Navbar.Toggle
               ref={toggleRef}
@@ -155,7 +155,7 @@ const MicroHeader = ({ scrollToSection }) => {
           <div className="overlay-content">
               <div className="inner-overlay">
                 <div className="video-area d-none d-md-block">
-                  <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" />
+                  <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="mvn elevation image" />
                 </div>
 
                 <div className="menu-area">
@@ -164,7 +164,7 @@ const MicroHeader = ({ scrollToSection }) => {
                     <Link
                       onClick={() => toggleMenu("close")}
                     >
-                      <img src={CONFIG.IMAGE_URL + "logo_white.webp"} className="logo"/>
+                      <img src={CONFIG.IMAGE_URL + "logo_white.webp"} className="logo" alt="mvn logo"/>
                     </Link>
                     
 
@@ -499,7 +499,7 @@ const MicroHeader = ({ scrollToSection }) => {
 
 
                 <div className="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
-                  <a href="javascript:void(0)" className="closebtn" onclick="closeNav()"> <img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
+                  <a href="javascript:void(0)" className="closebtn" onclick="closeNav()"> <img src={CloseBtnimg} alt="mvn close icon"  className="img-fluid close-img"/>  Close</a>
                 </div>
               </div>
             </div>

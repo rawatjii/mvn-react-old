@@ -111,7 +111,7 @@ const NoPolutionZone = () => {
               display: index === activeIndex ? "block" : "none",
             }}
           >
-            <img src={`${CONFIG.IMAGE_URL}/no-pollution/${image.imgSrc}`} alt="" />
+            <img src={`${CONFIG.IMAGE_URL}/no-pollution/${image.imgSrc}`} alt="mvn no pollution image" />
           </li>
         ))}
       </div>
@@ -152,7 +152,7 @@ const NoPolutionZone = () => {
               <Container>
                 <div className="content">
                   <p className="km_text">Km</p>
-                  <img src={`${dotImg}`} alt="" className="golden-icon-no-pollution" />
+                  <img src={`${dotImg}`} alt="mvn no pollution image" className="golden-icon-no-pollution" />
                   <h4 className="title">{data.title}</h4>
                   <p>{data.desc}</p>
                 </div>

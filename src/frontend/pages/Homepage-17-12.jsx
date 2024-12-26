@@ -133,7 +133,7 @@ const Homepage = () => {
             </a>
 
             <div className="slider-content">
-              <p className="slider-heading">Enter The Experience Center</p>
+              <h1 className="slider-heading">Enter The Experience Center</h1>
               <div className="btns">
                 <a
                   href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
@@ -170,7 +170,7 @@ const Homepage = () => {
               />
 
             {/* <div className="slider-content">
-              <p className="slider-heading">Enter The Experience Center</p>
+              <h1 className="slider-heading">Enter The Experience Center</h1>
               <div className="btns">
                 <a
                   href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
@@ -218,7 +218,7 @@ const Homepage = () => {
         <Container>
           <img
             src={homeMobileLogo}
-            alt=""
+            alt="mvn aeroone logo"
             className="img-fluid mobile-img-logo"
           />
           <h4 className="logo_title">Gurugram</h4>

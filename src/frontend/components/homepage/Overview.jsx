@@ -57,12 +57,12 @@ const Overview = () => {
     <section className="overview_section"> 
           <Row>
               {/* <Col xs={12} md={12} className="about-box">
-                  <img src={buildingImgBanner} alt="" className="img-fluid"/>
+                  <img src={buildingImgBanner} alt="mvn building image" className="img-fluid"/>
               </Col> */}
               <Col xs={12} md={12} className="about-content">
               
                  <div className="home-about-content">
-                  <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
+                  <img src={headingIconImg} alt="mvn head icon" className="img-fluid headingIcon"/>
                  <h4 className="hero_title">40+ years of delivering trust and projects on time</h4>
                   <p>
                   MVN Infrastructure introduces MVN Aero one Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway. These stunning 5.5 BHK residences offer breathtaking 360-degree panoramic views and set a new standard for luxury living. MVN is poised to add yet another wonder to the world.

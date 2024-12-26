@@ -79,7 +79,7 @@ function Career() {
 
                             <Container>
                                 <SecTitle className="text-center color style1 mb_30">
-                                    <img src={headingIconImg} alt="" className="img-fluid headpage-icon" />
+                                    <img src={headingIconImg} alt="mvn career image" className="img-fluid headpage-icon" />
                                     <h4 ref={titleRef} className="title">
                                         Talent Management
                                     </h4>
@@ -97,7 +97,7 @@ function Career() {
                 <div className="row align-items-center justify-content-center row_gap">
                     <div className="col-sm-8">
                         <div className='job_description_img'>
-                            <img src={careerIMG} className='img-fluid' alt="" />
+                            <img src={careerIMG} className='img-fluid' alt="mvn career image" />
                         </div>
                     </div>
                     <div className="col-sm-8">

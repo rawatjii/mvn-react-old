@@ -123,7 +123,7 @@ const MicroFloorPlan = ({ data }) => {
                             position: "relative",
                           }}
                         >
-                          <img src={image.src} alt="" />
+                          <img src={image.src} alt="mvn floor plan image" />
                           <div
                             style={{
                               position: "absolute",
@@ -165,7 +165,7 @@ const MicroFloorPlan = ({ data }) => {
                           position: "relative",
                         }}
                       >
-                        <img src={image.src} alt="" />
+                        <img src={image.src} alt="mvn floor plan image" />
                         <div
                           style={{
                             position: "absolute",

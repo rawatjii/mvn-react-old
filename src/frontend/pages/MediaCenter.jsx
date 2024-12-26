@@ -258,7 +258,7 @@ function MediaCenter() {
                   <SecTitle className="text-center color style1 mb_30">
                     <img
                       src={headingIconImg}
-                      alt=""
+                      alt="mvn media center image"
                       className="img-fluid headpage-icon"
                     />
                     <h4 ref={titleRef} className="title">
@@ -277,7 +277,7 @@ function MediaCenter() {
               <SecTitle className="text-center color style1 mb-0">
                     <img
                       src={headingIconImg}
-                      alt=""
+                      alt="mvn plane icon"
                       className="img-fluid headingIcon"
                     />
                     <h4 className="title">Offline Media News</h4>
@@ -300,12 +300,12 @@ function MediaCenter() {
                                           <div className="media-news-page ">
                                               <div className="media-news-page-box">
                                                   <div className="media-news-page-img">
-                                                      <img src={newsIMG} alt="" />
+                                                      <img src={newsIMG} alt="mvn news image" />
                                                   </div>
                                                   <div className="news-page-content">
                                                       <p className="news-date">25 September, 2025</p>
                                                       <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                                      <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
+                                                      <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="mvn arrow icon" /></a>
                                                   </div>
                                               </div>
                                           </div>
@@ -314,12 +314,12 @@ function MediaCenter() {
                                           <div className="media-news-page ">
                                               <div className="media-news-page-box">
                                                   <div className="media-news-page-img">
-                                                      <img src={newsIMG} alt="" />
+                                                      <img src={newsIMG} alt="mvn news image" />
                                                   </div>
                                                   <div className="news-page-content">
                                                       <p className="news-date">25 September, 2025</p>
                                                       <p className="news-title">MVN Infrastructure Celebrates MVN Mall’s New Office Opening</p>
-                                                      <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="" /></a>
+                                                      <a className="btn btn_style-news" href="">View Details <img className="img-fluid" src={rightArrow} alt="mvn arrow icon" /></a>
                                                   </div>
                                               </div>
                                           </div>
@@ -332,7 +332,7 @@ function MediaCenter() {
                   <SecTitle className="text-center color style1 mb-0">
                     <img
                       src={headingIconImg}
-                      alt=""
+                      alt="mvn heading image"
                       className="img-fluid headingIcon"
                     />
                     <h4 className="title">Online Media News</h4>
@@ -376,7 +376,7 @@ function MediaCenter() {
             <div className="sec_title text-center color style1 mb_30">
               <img
                 src={headingIconImg}
-                alt=""
+                alt="mvn heading image"
                 className="img-fluid headingIcon"
               />
               <h4 className="title">Press Center</h4>
@@ -478,7 +478,7 @@ function MediaCenter() {
             <SecTitle className="text-center color style1 mb_30">
               <img
                 src={headingIconImg}
-                alt=""
+                alt="mvn press heading image"
                 className="img-fluid headingIcon"
               />
               <h4 className="title">Press Releases</h4>
@@ -521,13 +521,13 @@ function MediaCenter() {
                       >
                         <img
                           src={item.videobanner}
-                          alt=""
+                          alt={`mvn events ${index}`}
                           className="img-fluid event-video-banner"
                         />
                       
                       <img
                         src={playicon}
-                        alt=""
+                        alt={`mvn events ${index}`}
                         className="img-fluid play-icon"
                       />
                       </a>

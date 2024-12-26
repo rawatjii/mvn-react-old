@@ -58,20 +58,20 @@ const TestOverview = () => {
       <section ref={sectionRef} className="testOverviewSection">
       <img
           src={CONFIG.IMAGE_URL + `test/frame1.jpg`}
-          alt=""
+          alt="mvn overview image"
           className="overviewAnImg main_img"
         />
         <div ref={animationRef} className="overviewAnimation">
-          <img src={CONFIG.IMAGE_URL + `test/frame10.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame9.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame8.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame7.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame6.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame5.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame4.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame3.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame2.jpg`} alt="" className="overviewAnImg" />
-          <img src={CONFIG.IMAGE_URL + `test/frame1.jpg`} alt="" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame10.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame9.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame8.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame7.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame6.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame5.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame4.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame3.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame2.jpg`} alt="mvn overview image" className="overviewAnImg" />
+          <img src={CONFIG.IMAGE_URL + `test/frame1.jpg`} alt="mvn overview image" className="overviewAnImg" />
         </div>
       </section>
     </>

@@ -232,7 +232,7 @@ const Timeline = () => {
 
       <Container>
         <SecTitle className="text-center color style1 mb_30">
-        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
+        <img src={headingIconImg} alt="mvn timeline icon" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Our Timeline</h4>
         </SecTitle>
 
@@ -240,7 +240,7 @@ const Timeline = () => {
         <div ref={planeRef} className="plane">
             <img src={diamondIcon} alt="mvn plan icon" className="img-fluid plan_icon" />
           </div> 
-          {/* <img src={diamondIcon} alt="" className="img-fluid diamond-img"/> */}
+          {/* <img src={diamondIcon} alt="mvn diamond icon" className="img-fluid diamond-img"/> */}
           {data.map((item, index) => (
             <li key={index} className={`single ${index % 2 !== 0 ? 'right' : ''}`}>
               <div ref={(el) => (imageRefs.current[index] = el)} className="thumbnail">

@@ -1795,11 +1795,13 @@ section.section.walkthrough_section { padding-bottom: 30px; width: 100%;}
   /* border-bottom: 1px solid #dcc275; */
   padding: 6px 13px;
 }
-p.slider-heading {
+.slider-heading {
   text-transform: uppercase;
   letter-spacing: 4px;
   margin-bottom: 30px;
   font-size: 16px;
+  font-family: var(--roboto_font);
+  font-weight: normal;
 }
 .slider-content a.link-btn {
   background-color: #f4d966;
@@ -2105,12 +2107,15 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
 .projects_section .left_col .single .new-launch-patch{position:absolute;top:-45px;z-index:1;width:110px;height:auto;right:-20px;z-index:999}
 
 
-p.slogan-heading {
+.slogan-heading {
   letter-spacing: 1px;
   text-transform: uppercase;
   width: 80%;
   margin: 0px auto;
   margin-top: 30px;
+  font-size: 16px;
+  font-family: var(--roboto_font);
+  font-weight: normal;
 }
 .mobile-view-box a.link-btn {
   background-color: #ffe7b2;
@@ -2802,6 +2807,10 @@ section.section.micro_hero_section.p-0 div#scroll-wrapper-inner\ {
   #scroll-wrapper{
     top: -130px !important;
   }
+}
+
+.slogan-heading{
+  font-size:14px;
 }
 
 }

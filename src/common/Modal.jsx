@@ -87,7 +87,7 @@ const CustomModal = ({ show, hide, projectName, isOffer }) => {
 
             <div className="right">
               <SecTitle className="text-center color style1">
-                {/* <img src={Formlogo} alt="" className="img-fluid headingIcon" /> */}
+                {/* <img src={Formlogo} alt="mvn modal logo" className="img-fluid headingIcon" /> */}
                 <h4 className="title">Grab The Offer</h4>
               </SecTitle>
 
@@ -163,7 +163,7 @@ const CustomModal = ({ show, hide, projectName, isOffer }) => {
             <SecTitle className="text-center color style1">
               <img
                 src={Formlogo}
-                alt=""
+                alt="mvn modal logo"
                 className="img-fluid headingIcon"
               />
 

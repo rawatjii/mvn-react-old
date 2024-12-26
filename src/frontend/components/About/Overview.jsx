@@ -94,7 +94,7 @@ const Overview = () => {
 
         <Container>
           <SecTitle className="text-center color style1 mb_30">
-            <img src={OverviewIcon} alt="" className="img-fluid headpage-icon"/>
+            <img src={OverviewIcon} alt="mvn overview image" className="img-fluid headpage-icon"/>
             <h4 ref={titleRef} className="title">
               Building spaces <span>that help you grow</span>
             </h4>

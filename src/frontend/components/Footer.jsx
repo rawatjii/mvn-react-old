@@ -29,7 +29,7 @@ const Footer = () => {
           <div class="inner-mid">
             <div class="center">
               <div class="f-logo reveal">
-                <img src={CONFIG.IMAGE_URL + 'logo_white.webp'} width="100%" />
+                <img src={CONFIG.IMAGE_URL + 'logo_white.webp'} width="100%" alt="mvn logo" />
               </div>
             </div>
 

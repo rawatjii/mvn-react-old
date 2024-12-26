@@ -126,7 +126,7 @@ const OurJourney = () => {
 
       <Container>
         <SecTitle className="text-center color style2">
-          <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
+          <img src={headingIconImg} alt="mvn infrastructure heading icon" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">
             <span>Our Infrastructure </span>
             Real Estate Journey

@@ -145,9 +145,9 @@ const Typology = ({onLoadComplete}) => {
             </div>
 
             {/* <div className="typology_diamond_btn">
-              <img src={PlaneIcon} alt="" />
-              <img src={PlaneIcon} alt="" />
-              <img src={PlaneIcon} alt="" />
+              <img src={PlaneIcon} alt="mvn plane icon" />
+              <img src={PlaneIcon} alt="mvn plane icon" />
+              <img src={PlaneIcon} alt="mvn plane icon" />
             </div> */}
 
             <div
@@ -202,9 +202,9 @@ const Typology = ({onLoadComplete}) => {
             className="typologies-images"
             style={{ display: "block" }}
           >
-              <img className="image-1" src={typo1} alt="" />
-              <img className="image-2" src={typo2} alt="" />
-              <img className="image-3" src={typo3} alt="" />
+              <img className="image-1" src={typo1} alt="mvn typlogy 1" />
+              <img className="image-2" src={typo2} alt="mvn typlogy 1" />
+              <img className="image-3" src={typo3} alt="mvn typlogy 1" />
           </div>
 
           <div
@@ -212,9 +212,9 @@ const Typology = ({onLoadComplete}) => {
             className="typologies-images"
             style={{ display: "none" }}
           >
-            <img className="image-1" src={typo4} alt="" />
-            <img className="image-2" src={typo5} alt="" />
-            <img className="image-3" src={typo6} alt="" />
+            <img className="image-1" src={typo4} alt="mvn typlogy 2" />
+            <img className="image-2" src={typo5} alt="mvn typlogy 2" />
+            <img className="image-3" src={typo6} alt="mvn typlogy 2" />
           </div>
 
           <div
@@ -222,9 +222,9 @@ const Typology = ({onLoadComplete}) => {
             className="typologies-images"
             style={{ display: "none" }}
           >
-            <img className="image-1" src={typo7} alt="" />
-            <img className="image-2" src={typo8} alt="" />
-            <img className="image-3" src={typo9} alt="" />
+            <img className="image-1" src={typo7} alt="mvn typlogy 3" />
+            <img className="image-2" src={typo8} alt="mvn typlogy 3" />
+            <img className="image-3" src={typo9} alt="mvn typlogy 3" />
           </div>
         </div>
       </section>

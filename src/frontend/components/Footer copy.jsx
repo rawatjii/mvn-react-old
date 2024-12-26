@@ -83,7 +83,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="custom-col flex-middel-col">
-            <img src={FooterMiddleLogo} alt="" className="footerM" />
+            <img src={FooterMiddleLogo} alt="mvn footer logo" className="footerM" />
           </div>
           <div className="custom-col">
             <div className="box footer-links-box">

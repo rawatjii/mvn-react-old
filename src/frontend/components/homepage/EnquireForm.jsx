@@ -95,7 +95,7 @@ if (newTab) {
     <section className="section enquire_form">
       <Container>
         <SecTitle className="text-center color style1">
-          <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
+          <img src={headingIconImg} alt="mvn heading icon" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">
             Get In Touch With Us
           </h4>

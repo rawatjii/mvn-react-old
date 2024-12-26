@@ -154,7 +154,7 @@ const ModalSelectBox = ({
 
         <div className="right">
           <SecTitle className="text-center color style1">
-            {/* <img src={Formlogo} alt="" className="img-fluid headingIcon" /> */}
+            {/* <img src={Formlogo} alt="mvn modal logo" className="img-fluid headingIcon" /> */}
             <h4 className="title">Grab The Offer</h4>
           </SecTitle>
           <span
@@ -244,7 +244,7 @@ const ModalSelectBox = ({
         <Modal.Body>
           <Container style={{ position: "relative" }}>
             <SecTitle className="text-center color style1">
-              <img src={Formlogo} alt="" className="img-fluid headingIcon" />
+              <img src={Formlogo} alt="mvn modal logo" className="img-fluid headingIcon" />
               <h4 className="title">Get In Touch With Us</h4>
             </SecTitle>
             <span

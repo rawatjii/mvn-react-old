@@ -81,7 +81,7 @@ const Philosophy = () => {
     <section className="section philosophy_section pb-0">
       <Container>
         <SecTitle className="text-center color style1 mb_30">
-        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
+        <img src={headingIconImg} alt="mvn heading icon" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Our Philosophy</h4>
         </SecTitle>
 
@@ -115,20 +115,20 @@ const Philosophy = () => {
             </h4>
             <ul ref={(el) => desRefs.current[2] = el} className="our-values-ul-icon">
               <li>
-                <img src={ourValueIcon1} alt="" className="img-fluid values-ul-icon" />                
+                <img src={ourValueIcon1} alt="mvn values icon 1" className="img-fluid values-ul-icon" />                
                 Enrich lives
                 </li>
               <li>
-              <img src={ourValueIcon2} alt="" className="img-fluid values-ul-icon" />   
+              <img src={ourValueIcon2} alt="mvn values icon 2" className="img-fluid values-ul-icon" />   
                 Empower ambitions
                 </li>
               <li>
-              <img src={ourValueIcon3} alt="" className="img-fluid values-ul-icon" />   
+              <img src={ourValueIcon3} alt="mvn values icon 3" className="img-fluid values-ul-icon" />   
                 Drive innovation
                 
                 </li>
               <li>
-              <img src={ourValueIcon4} alt="" className="img-fluid values-ul-icon" />   
+              <img src={ourValueIcon4} alt="mvn values icon 4" className="img-fluid values-ul-icon" />   
                 Inspire quality
                 </li>
             </ul>

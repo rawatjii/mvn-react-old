@@ -134,7 +134,7 @@ const Header = () => {
 
           <div className="right">
             <a href="tel:+918062525105" className="call_btn" ref={callBtnRef}>
-              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="" />
+              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="mvn call icon" />
             </a>
             <Navbar.Toggle
               ref={toggleRef}
@@ -150,7 +150,7 @@ const Header = () => {
               <div className="inner-overlay">
                 <div className="video-area d-none d-md-block">
 
-                  {/* <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="" /> */}
+                  {/* <img src={CONFIG.IMAGE_URL + 'renders/elevation/2.webp'} alt="mvn elevation image" /> */}
                   <video autoPlay muted  loop>
                     <source src={MenuSideVideo} type="video/mp4" className="img-fluid videoMenu"/>
                   </video>
@@ -163,7 +163,7 @@ const Header = () => {
                       <Link
                         onClick={() => toggleMenu("close")}
                       >
-                        <img src={CONFIG.IMAGE_URL + "logo_white.webp"} width="50" />
+                        <img src={CONFIG.IMAGE_URL + "logo_white.webp"} width="50" alt="mvn logo" />
                       </Link>
 
                       <span className="close d-md-none"onClick={() => toggleMenu("close")}>&times;</span>
@@ -347,7 +347,7 @@ const Header = () => {
 
 
                 <div className="closebtn-area d-none d-md-grid" onClick={() => toggleMenu("close")}>
-                  <a className="closebtn" onclick="closeNav()"><img src={CloseBtnimg} alt=""  className="img-fluid close-img"/>  Close</a>
+                  <a className="closebtn" onclick="closeNav()"><img src={CloseBtnimg} alt="mvn close icon"  className="img-fluid close-img"/>  Close</a>
                 </div>
               </div>
             </div>

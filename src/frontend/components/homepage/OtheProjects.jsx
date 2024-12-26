@@ -123,7 +123,7 @@ const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
     <section className="section other_projects_section pb-0">
       <Container>
         <SecTitle className="text-center color style1">
-          <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
+          <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">
             Other Verticals
           </h4>
@@ -153,7 +153,7 @@ const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
                 <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
                   <img
                     src={isMobile ? item.thumbnails.mobile : item.thumbnails.desktop}
-                    alt=""
+                    alt="mvn projects image"
                     className="img-fluid other-project-img"
                     onLoad={handleImageLoad}
                   />

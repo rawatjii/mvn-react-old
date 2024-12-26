@@ -106,7 +106,7 @@ const OurBrand = () => {
 
       <Container>
         <SecTitle className="text-center color style1">
-        <img src={headingIconImg} alt="" className="img-fluid headingIcon"/>
+        <img src={headingIconImg} alt="mvn brand heading icon" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Our Brand Ethos</h4>
         </SecTitle>
 

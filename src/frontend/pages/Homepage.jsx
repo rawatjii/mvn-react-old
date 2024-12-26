@@ -127,7 +127,7 @@ const Homepage = () => {
         </a>
 
         <div className="slider-content">
-          <p className="slider-heading">Enter The Experience Center</p>
+          <h1 className="slider-heading">Enter The Experience Center</h1>
           <div className="btns">
             <Link
               to={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
@@ -164,14 +164,14 @@ const Homepage = () => {
         <Container>
           <img
             src={homeMobileLogo}
-            alt=""
+            alt="mvn aeroone logo"
             className="img-fluid mobile-img-logo"
           />
-          <h4 className="logo_title">Gurugram</h4>
+          <h2 className="logo_title">Gurugram</h2>
           <span className="status">New Launch</span>
-          <p className="slogan-heading">
+          <h3 className="slogan-heading">
             Behold to Experience the complete view!
-          </p>
+          </h3>
           <a
             href={import.meta.env.VITE_APP_URL + "aeroone-gurgaon"}
             className="btn btn_style3 r_100 mt-3 mt-md-4"

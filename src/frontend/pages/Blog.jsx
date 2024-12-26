@@ -67,7 +67,7 @@ function Blog() {
               <SecTitle className="text-center color style1 mb_30">
                 <img
                   src={headingIconImg}
-                  alt=""
+                  alt="mvn blog image"
                   className="img-fluid headpage-icon"
                 />
                 <h4 ref={titleRef} className="title">
@@ -94,7 +94,7 @@ function Blog() {
                 <div className="col-sm-4" key={`blog-${i}`}>
                   <div className="blog-platter-box">
                     <div className="blog-platter-img">
-                      <img className="img-fluid" src={el.img} alt="" />
+                      <img className="img-fluid" src={el.img} alt="mvn blog image" />
                     </div>
                     <div className="blog-platter-detail">
                       <h4>{el.title}</h4>

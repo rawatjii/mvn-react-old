@@ -131,7 +131,7 @@ const Header = () => {
 
           <div className="right">
             <a href="tel:+918062525105" className="call_btn" ref={callBtnRef}>
-              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="" />
+              <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="mvn call icon" />
             </a>
             <Navbar.Toggle
               ref={toggleRef}

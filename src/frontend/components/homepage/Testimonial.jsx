@@ -83,7 +83,7 @@ const Testimonial = () => {
       <Container>
       
         <SecTitle className="text-center color style1">
-        <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
+        <img src={headingIconImg} alt="mvn heading image" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">What Client Says!</h4>
         </SecTitle>
 

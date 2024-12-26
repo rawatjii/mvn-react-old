@@ -78,7 +78,7 @@ export default function MicroApartment({ data }) {
               <div key={index} className='col-sm-12 col-md-4 col-lg-4'>
                 <div  className="card center" onClick={() => setIndex(index)}>
                   <div className="img">
-                    <img src={image.asset} alt="" className='img-fluid apartment-section-img' loading='lazy' />
+                    <img src={image.asset} alt={`mvn apartment ${index}`} className='img-fluid apartment-section-img' loading='lazy' />
                     <Watermark className={image.watermark} />
                   </div>
                   <div className="content">

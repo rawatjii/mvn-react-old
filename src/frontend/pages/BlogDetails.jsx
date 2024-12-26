@@ -81,7 +81,7 @@ function BlogDetails() {
           <div className="">
               <img
                 src={selectedBlog?.img}
-                alt=""
+                alt="mvn blog image"
                 className="w-100 rounded-3"
               />
             </div>
@@ -144,7 +144,7 @@ function BlogDetails() {
                       >
                         <div className="blog-platter-box">
                           <div className="blog-platter-img">
-                            <img className="img-fluid" src={el.img} alt="" />
+                            <img className="img-fluid" src={el.img} alt="mvn blog image" />
                           </div>
                           <div className="blog-platter-detail">
                             <h4>{el.title}</h4>

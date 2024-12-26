@@ -134,7 +134,7 @@ const Projects = () => {
         <Container>
 
           <SecTitle className="text-center color style1">
-            <img src={headingIconImg} alt="" className="img-fluid headingIcon" />
+            <img src={headingIconImg} alt="mvn heading image" className="img-fluid headingIcon" />
             <h4 ref={titleRef} className="title">
               Explore Our Projects
             </h4>
@@ -149,7 +149,7 @@ const Projects = () => {
 
             <Col xs={4} className="px_8 single_col">
               <div className="single">
-                <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
+                <img src={NewLaunchIcon} alt="mvn new launch image" className="img-fluid new-launch-patch"/>
                 <AnImage className="active"
                   height={100}
                 >
@@ -182,7 +182,7 @@ const Projects = () => {
 
             <Col xs={4} className="px_8 single_col">
               <div className="single">
-                <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
+                <img src={NewLaunchIcon} alt="mvn new launch image" className="img-fluid new-launch-patch"/>
                 <AnImage className="active"
                   height={100}
                 >
@@ -228,7 +228,7 @@ const Projects = () => {
                   <AnImage
                     ref={(el) => (imageDivRefs.current[index] = el)}
                     height={100}
-                  >   <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
+                  >   <img src={NewLaunchIcon} alt="mvn new launch image" className="img-fluid new-launch-patch"/>
                     <Link to={item.otherPage ? item.link : import.meta.env.VITE_APP_URL + item.link}>
 
                       <img
@@ -266,7 +266,7 @@ const Projects = () => {
              
               {rightColProjects.map((item, index) => (
                 <div key={index} className="single">
-                  <img src={NewLaunchIcon} alt="" className="img-fluid new-launch-patch"/>
+                  <img src={NewLaunchIcon} alt="mvn new launch image" className="img-fluid new-launch-patch"/>
                   <AnImage
                     ref={(el) =>
                       (imageDivRefs.current[leftColProjects.length + index] = el)
