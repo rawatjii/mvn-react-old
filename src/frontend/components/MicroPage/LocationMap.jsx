@@ -151,8 +151,8 @@ const MicroLocationMap = ({data})=>{
 
               
               <div onClick={()=>setIsLocationMapOpen(true)}>
-                <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block" loading="lazy" />
-                <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none" loading="lazy" />
+                <img src={data.mapIMG.desktop} alt="mvn-master-plan" className="img-fluid d-none d-md-block"  />
+                <img src={data.mapIMG.mobile} alt="mvn-master-plan" className="img-fluid d-md-none"  />
               </div>
             </div>
           </div>

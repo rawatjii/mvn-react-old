@@ -47,7 +47,8 @@ const InitialLoading = ({ loadingCount, setLoadingCount, onComplete, fast, secon
                     <div className="overlay" style={{ bottom: Math.floor(loadingCount) + '%' }}></div>
                 </div>
 
-                <video src={CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop playsInline />
+                <img src={CONFIG.IMAGE_URL + 'loader.gif'} alt="mvn loader" className="img-fluid" />
+                {/* <video src={CONFIG.IMAGE_URL + 'loader.mp4'} muted autoPlay loop playsInline /> */}
                 
                 <div className="bar">
                     <span className="fill" style={{ width: Math.floor(loadingCount) + '%' }}></span>

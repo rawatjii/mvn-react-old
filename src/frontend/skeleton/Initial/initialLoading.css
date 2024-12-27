@@ -48,6 +48,7 @@
     .building{
         position:relative;
         overflow: hidden;
+        margin-bottom: 20px;
 
         .overlay{
 
@@ -79,6 +80,7 @@
         position: relative;
         overflow: hidden;
         border-radius: 100px;
+        margin-top: 20px;
 
         .fill{
             position:absolute;

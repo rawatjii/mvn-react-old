@@ -130,7 +130,6 @@ const Typology = ({onLoadComplete}) => {
               src={img.src}
               alt={`Frame ${index}`}
               className="frame"
-              loading="lazy"
               style={{ display: index === 0 ? "block" : "none",}}
             />
           ))}

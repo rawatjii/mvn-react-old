@@ -129,7 +129,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
                   alt={`Frame ${index}`}
                   className="frame"
                   style={{ display: index === 0 ? "block" : "none", }}
-                  loading="lazy"
+                  
                 />
               ))}
 

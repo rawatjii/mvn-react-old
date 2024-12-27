@@ -204,13 +204,13 @@ const Homepage = () => {
           <video src={CONFIG.IMAGE_URL + "offer/offer1_sm.mp4"} loop muted autoPlay className="img-fluid d-md-none" playsInline />
         </div>
 
-        <div className="single" style={{cursor:'pointer'}} onClick={()=>showCustomModal(true)}>
+        {/* <div className="single" style={{cursor:'pointer'}} onClick={()=>showCustomModal(true)}>
           <img
             src={isMobile ? CONFIG.IMAGE_URL + 'offer/offer2_sm.webp' : CONFIG.IMAGE_URL + 'offer/offer2.webp'}
             alt="Hero Banner"
             className="img-fluid hero-banner"
           />
-        </div>
+        </div> */}
       </div>
 
       {/* {isMobile ? <Projectsmobile /> : <Projects />} */}

@@ -180,7 +180,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
                 <img
                   src={ImgMail}
                   className="img-fluid mail_enqiry_icon"
-                  alt="mvn enquire icon"
+                  alt=""
                 />
                 Enquire Now
               </a>

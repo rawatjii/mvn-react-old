@@ -73,10 +73,10 @@ const MvnMall = () => {
 
               <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-6">
-                  <img src={mvnMallBannerImg1} alt="mvn mall icon" className="img-fluid" loading="lazy" />
+                  <img src={mvnMallBannerImg1} alt="mvn mall icon" className="img-fluid"  />
                 </div>
                 <div className="col-sm-12 col-md-6 col-lg-6">
-                  <img src={mvnMallBannerImg2} alt="mvn mall icon" className="img-fluid" loading="lazy" />
+                  <img src={mvnMallBannerImg2} alt="mvn mall icon" className="img-fluid"  />
                 </div>
               </div>
           </Container>

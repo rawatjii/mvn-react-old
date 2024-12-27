@@ -291,13 +291,13 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
             </div>
           )}
 
-          <div
+          {/* <div
             ref={(el) =>
               (sectionRefs.current.MicroTypology = el)
             }
           >
             <Typology onLoadComplete={() => setTypologyLoaded(true)} />
-          </div>
+          </div> */}
 
           <div
             ref={(el) =>
