@@ -12,44 +12,13 @@ import ScrollDown from "../../../common/scrollDown/Index";
 gsap.registerPlugin(ScrollTrigger);
 
 const PeacockSection = ({ data, onLoadComplete }) => {
-  const canvasRef = useRef(null); // Ref for the canvas
-  const containerRef = useRef(null); // Ref for the scrollable container
-  const [images, setImages] = useState([]); // Array to store loaded images
-  const [isMobile, setIsMobile] = useState(false); // Track if it's mobile
-  const [loading, setLoading] = useState(true); // Loader state
+  const containerRef = useRef(null);
+  const [images, setImages] = useState([]);
+  const frameRefs = useRef([]);
+  const [isMobile, setIsMobile] = useState(false);
+  const [loading, setLoading] = useState(true); // State to track loading for mobile
 
-  const totalFramesMobile = 256; // Total frames for mobile
-
-  // Function to draw a frame on the canvas
-  const drawFrame = (frameIndex, ctx, canvas, images) => {
-    if (!images || images.length === 0) return; // Guard against empty images array
-
-    const img = images[frameIndex];
-    if (!img) return; // Ensure the image exists
-
-    const canvasWidth = canvas.width;
-    const canvasHeight = canvas.height;
-
-    const imageAspectRatio = img.width / img.height;
-    const canvasAspectRatio = canvasWidth / canvasHeight;
-
-    let drawWidth = canvasWidth;
-    let drawHeight = canvasHeight;
-
-    if (canvasAspectRatio > imageAspectRatio) {
-      // Image is taller than the canvas, fit the width
-      drawHeight = canvasWidth / imageAspectRatio;
-    } else {
-      // Image is wider than the canvas, fit the height
-      drawWidth = canvasHeight * imageAspectRatio;
-    }
-
-    const offsetX = (canvasWidth - drawWidth) / 2;
-    const offsetY = (canvasHeight - drawHeight) / 2;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous frame
-    ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight); // Draw the current frame
-  };
+  const totalFramesMobile = 256;
 
   // Detect screen size
   useEffect(() => {
@@ -66,7 +35,8 @@ const PeacockSection = ({ data, onLoadComplete }) => {
   // Load images for mobile
   useEffect(() => {
     if (window.innerWidth >= 768) {
-      onLoadComplete(); // Immediately call onLoadComplete for desktop
+      // Immediately call onLoadComplete for desktop
+      onLoadComplete();
       setLoading(false); // No loader for desktop
       return;
     }
@@ -85,8 +55,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
         loadedCount++;
         if (loadedCount === totalFrames) {
           setLoading(false); // All images loaded, hide loader
-          onLoadComplete(); // Call onLoadComplete when loading is done
-          drawFrame(0, loadedImages); // Immediately draw the first frame on the canvas
+          onLoadComplete();
         }
       };
 
@@ -95,38 +64,35 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     setImages(loadedImages);
   }, [isMobile, onLoadComplete]);
 
-  // GSAP ScrollTrigger Animation for mobile
+  // GSAP Animation for mobile
   useEffect(() => {
-    if (!isMobile || images.length === 0 || loading) return; // Skip if not mobile, still loading, or no images
-
-    const canvas = canvasRef.current;
-    if (!canvas) return; // Early exit if canvas is not available
-
-    const ctx = canvas.getContext("2d");
-    if (!ctx) return; // Early exit if getContext fails
+    if (!isMobile || images.length === 0 || loading) return; // Skip if not mobile or still loading
 
     const totalFrames = totalFramesMobile;
-
-    // Draw the first frame immediately after images are loaded
-    drawFrame(0, ctx, canvas, images);
 
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
       end: `+=${window.innerHeight * 4}`,
-      pin: true, // Pin the canvas while scrolling
+      pin: true, // Pin the container while scrolling
       scrub: 0.005,
       onUpdate: (self) => {
-        if (images.length === 0) return; // Guard against empty image array
-
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-        drawFrame(frameIndex, ctx, canvas, images);
+        if (self.progress > 0.1) {
+          frameRefs.current.forEach((img, index) => {
+            if (img) img.style.display = index === frameIndex ? "block" : "none";
+          });
+        }
       },
       onLeaveBack: () => {
-        drawFrame(0, ctx, canvas, images); // Show the first frame when leaving back
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === 0 ? "block" : "none";
+        });
       },
       onLeave: () => {
-        drawFrame(totalFrames - 1, ctx, canvas, images); // Show the last frame when leaving
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+        });
       },
     });
 
@@ -136,7 +102,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     return () => {
       scrollAnimation.kill();
     };
-  }, [images, isMobile, loading]); // Re-run when images or loading state changes
+  }, [images, isMobile, loading]);
 
   const { title, desc } = data.video1;
 
@@ -151,18 +117,17 @@ const PeacockSection = ({ data, onLoadComplete }) => {
           <div ref={containerRef} className="frames_content">
             <div className="image_col position-relative">
               <Watermark className={isMobile ? 'style1' : 'style2'} />
-
-              {/* Mobile Canvas */}
-              {isMobile && (
-                <canvas
-                  ref={canvasRef}
-                  width={window.innerWidth}
-                  height={window.innerHeight}
-                  style={{ display: "block", margin: "auto" }}
+              {isMobile && images.map((img, index) => (
+                <img
+                  key={index}
+                  ref={(el) => (frameRefs.current[index] = el)}
+                  src={img.src}
+                  alt={`Frame ${index}`}
+                  className="frame"
+                  style={{ display: index === 0 ? "block" : "none",}}
                 />
-              )}
+              ))}
 
-              {/* Desktop Image */}
               {!isMobile && (
                 <img src={CONFIG.IMAGE_URL + 'peacock/peacock.webp'} className="img-fluid peacock_img" />
               )}
@@ -172,7 +137,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
           </div>
 
           <Container>
-            <div className="about">
+            <div className='about'>
               <CustomCard
                 className="p_sm_0"
                 title="EXPERIENCE THE GRANDEUR OF THE LIVING ROOM WITH 360° PANORAMIC VIEWS"

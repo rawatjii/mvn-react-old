@@ -182,6 +182,7 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
           </noscript>
 
       </Helmet>
+
       <MicroHeader scrollToSection={scrollToSection} />
       <div id="smooth-wrapper">
         <div id="smooth-content">
@@ -270,34 +271,20 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
             <MicroApartment />
           </div>
 
-          {isMobile ? (
-            <div
-              ref={(el) =>
-                (sectionRefs.current.MicroAmenities = el)
-              }
-            >
-              <MicroAmenities data={data.amenities} />
-            </div>
-          ) : (
-            <div
-              ref={(el) =>
-                (sectionRefs.current.MicroAmenitiesDesktop =
-                  el)
-              }
-            >
-              <MicroAmenitiesDesktop
-                data={data.amenities}
-              />
-            </div>
-          )}
+          <div
+            ref={(el) =>
+              (sectionRefs.current.MicroAmenities = el)
+            }>
+            <MicroAmenities data={data.amenities} />
+          </div>
 
-          {/* <div
+          <div
             ref={(el) =>
               (sectionRefs.current.MicroTypology = el)
             }
           >
             <Typology onLoadComplete={() => setTypologyLoaded(true)} />
-          </div> */}
+          </div>
 
           <div
             ref={(el) =>

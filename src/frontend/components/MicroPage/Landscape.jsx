@@ -91,13 +91,13 @@ export default function MicroLandscape({ data = landscapeData, title, subTitle, 
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
-      ScrollTrigger.refresh();
+      // ScrollTrigger.refresh();
     };
 
     if (imagesLoaded === data.length) {
       setTimeout(() => {
         initializeAnimations();
-        ScrollTrigger.refresh();
+        // ScrollTrigger.refresh();
       }, 300);
     }
 
@@ -123,7 +123,7 @@ export default function MicroLandscape({ data = landscapeData, title, subTitle, 
                 {/* Wrapping image in AnImage component for animation */}
                 <div className="img">
                   <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
-                    <img src={image.asset} alt={`mvn landscape ${index}`} onLoad={handleImageLoad} loading='lazy'  />
+                    <img src={image.asset} alt={`mvn landscape ${index}`} onLoad={handleImageLoad}  />
                   </AnImage>
                   {/* <Watermark className={image.watermark} /> */}
                 </div>

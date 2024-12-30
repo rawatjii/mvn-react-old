@@ -75,13 +75,13 @@ export default function MicroElevation({ data = images }) {
 
   useEffect(() => {
     const handleResize = () => {
-      ScrollTrigger.refresh();
+      // ScrollTrigger.refresh();
     };
 
     if (imagesLoaded === data.length) {
       setTimeout(() => {
         initializeAnimations();
-        ScrollTrigger.refresh();
+        // ScrollTrigger.refresh();
       }, 300);
     }
 
@@ -106,8 +106,8 @@ export default function MicroElevation({ data = images }) {
               <div className="card center" onClick={() => setIndex(index)}>
                 {/* Wrapping image in AnImage component for animation */}
                 <AnImage ref={(el) => (imageDivRefs.current[index] = el)}>
-                  <img src={image.assets.desktop} alt={`mvn elevation ${index}`} className='img-fluid elevation-section-img d-none d-md-block' onLoad={handleImageLoad} loading='lazy' />
-                  <img src={image.assets.mobile} alt={`mvn elevation ${index}`} className='img-fluid elevation-section-img d-md-none' loading='lazy' />
+                  <img src={image.assets.desktop} alt={`mvn elevation ${index}`} className='img-fluid elevation-section-img d-none d-md-block' onLoad={handleImageLoad} />
+                  <img src={image.assets.mobile} alt={`mvn elevation ${index}`} className='img-fluid elevation-section-img d-md-none' />
                   <Watermark className={image.watermark} />
                 </AnImage>
               </div>

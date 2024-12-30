@@ -4,21 +4,27 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Container } from "react-bootstrap";
 import CustomCard from "../Card";
 import * as CONFIG from "../../../config/config";
+import PeacockLoader from "../../../common/Loader/micro/peacockLoader/Index";
 import LivingRoomVideoLoader from "../../../common/Loader/micro/livingRoomVideo/Index";
 import ScrollDown from "../../../common/scrollDown/Index";
+import InitialLoading from "../../skeleton/Initial/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
 const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
-  const canvasRef = useRef(null); // Ref for the canvas element
+  const containerRef = useRef(null);
   const [loading, setLoading] = useState(true);
-  const [images, setImages] = useState([]); // Array to store loaded images
+  const [images, setImages] = useState([]);
+  const [videoFinished, setVideoFinished] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
+  const frameRefs = useRef([]);
   const sectionRef = useRef(null);
-  const totalFramesDesktop = 126;
-  const totalFramesMobile = 126;
+  const videoRef = useRef(null);
 
   const { title, desc } = data.living_room_video;
+
+  const totalFramesDesktop = 126;
+  const totalFramesMobile = 126;
 
   // Detect screen size
   useEffect(() => {
@@ -30,9 +36,9 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
     return () => {
       window.removeEventListener("resize", checkMobile);
     };
-  }, []);
+  }, []); // Dependency array doesn't include data to ensure it's initialized once.
 
-  // Load images for mobile and desktop
+  // Load images
   useEffect(() => {
     if (isMobile === null) return; // Wait until `isMobile` is determined.
 
@@ -49,28 +55,23 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
       img.onload = () => {
         loadedCount++;
         if (loadedCount === totalFrames) {
-          setImages(loadedImages); // Set loaded images
           setLoading(false); // All images loaded, hide loader.
-          onLoadComplete(); // Notify that loading is complete
-          drawFrame(0, loadedImages); // Immediately draw the first frame on the canvas
+          onLoadComplete();
         }
       };
 
       loadedImages.push(img);
     }
+    setImages(loadedImages);
   }, [isMobile]); // Depend on `isMobile` to reload images when the state changes.
 
-  // GSAP Animation (canvas version)
+  // GSAP Animation
   useEffect(() => {
     if (images.length === 0 || loading) return;
 
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    if (!canvas || !ctx) return; // Early exit if canvas or context is not available
-
+    // Initialize ScrollTrigger animation
     const totalFrames = isMobile ? totalFramesMobile : totalFramesDesktop;
 
-    // ScrollTrigger Animation
     const scrollAnimation = ScrollTrigger.create({
       trigger: sectionRef.current,
       start: "top 80px",
@@ -79,84 +80,62 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
       scrub: 0.005,
       onUpdate: (self) => {
         const frameIndex = Math.floor(self.progress * (totalFrames - 1));
-        drawFrame(frameIndex, images); // Update the frame dynamically as user scrolls
+        if (self.progress > 0.1) {
+          frameRefs.current.forEach((img, index) => {
+            if (img) img.style.display = index === frameIndex ? "block" : "none";
+          });
+        }
       },
       onLeaveBack: () => {
-        drawFrame(0, images); // Show the first frame when leaving back
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === 0 ? "block" : "none";
+        });
       },
       onLeave: () => {
-        drawFrame(totalFrames - 1, images); // Show the last frame when leaving
+        frameRefs.current.forEach((img, index) => {
+          if (img) img.style.display = index === totalFrames - 1 ? "block" : "none";
+        });
       },
     });
-
+  
     // Refresh ScrollTrigger to account for loaded content
     ScrollTrigger.refresh();
-
+  
     return () => {
       // Clean up ScrollTrigger instance
       scrollAnimation.kill();
     };
   }, [images, isMobile, loading]);
 
-  // Function to draw a frame on the canvas
-  const drawFrame = (frameIndex, images) => {
-    const canvas = canvasRef.current;
-    const ctx = canvas.getContext("2d");
-    if (!canvas || !ctx) return;
-
-    const img = images[frameIndex];
-    const canvasWidth = canvas.width;
-    const canvasHeight = canvas.height;
-
-    const imageAspectRatio = img.width / img.height;
-    const canvasAspectRatio = canvasWidth / canvasHeight;
-
-    let drawWidth = canvasWidth;
-    let drawHeight = canvasHeight;
-
-    if (canvasAspectRatio > imageAspectRatio) {
-      // Image is taller than the canvas, fit the width
-      drawHeight = canvasWidth / imageAspectRatio;
-    } else {
-      // Image is wider than the canvas, fit the height
-      drawWidth = canvasHeight * imageAspectRatio;
-    }
-
-    const offsetX = (canvasWidth - drawWidth) / 2;
-    const offsetY = (canvasHeight - drawHeight) / 2;
-
-    ctx.clearRect(0, 0, canvas.width, canvas.height); // Clear previous frame
-    ctx.drawImage(img, offsetX, offsetY, drawWidth, drawHeight); // Draw the current frame
-  };
-
-  // Ensuring the canvas size is adjusted properly
-  useEffect(() => {
-    if (!canvasRef.current) return;
-
-    const canvas = canvasRef.current;
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
-  }, [isMobile]); // Update canvas size on window resize
-
   return (
     <>
-      {/* Show loader if still loading */}
-      {loading && <LivingRoomVideoLoader />}
+    {/* Show loader if still loading */}
+    {loading && (
+      <LivingRoomVideoLoader />
+      // <InitialLoading className="style1" />
+    )}
 
-      {!loading && (
-        <>
+    {!loading && (
+      <>
+        {/* <CustomCard className="style2" title={title} /> */}
           <div className="section living_room_video_section design1 pb-0" ref={sectionRef} id="livingRoomSlidingDoor">
-            <div className="frames_content">
-              {/* Canvas for images */}
-              <canvas
-                ref={canvasRef}
-                style={{ display: "block", margin: "auto", width:'100%' }}
-              />
+          
+            <div ref={containerRef} className="frames_content">
+              {images.map((img, index) => (
+                <img
+                  key={index}
+                  ref={(el) => (frameRefs.current[index] = el)}
+                  src={img.src}
+                  alt={`Frame ${index}`}
+                  className="frame"
+                  style={{ display: index === 0 ? "block" : "none", }}
+                  
+                />
+              ))}
 
-              {/* Optional ScrollDown component */}
-              <ScrollDown />
+            <ScrollDown />
+
             </div>
-
             <Container>
               <div className="about">
                 <CustomCard title={title} desc={desc} className="px_sm_0" />
@@ -165,6 +144,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
           </div>
         </>
       )}
+     
     </>
   );
 };
