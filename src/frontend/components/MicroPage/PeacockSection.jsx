@@ -112,7 +112,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
 
     const scrollAnimation = ScrollTrigger.create({
       trigger: containerRef.current,
-      start: "top top",
+      start: "top 79px",
       end: `+=${window.innerHeight * 4}`,
       pin: true, // Pin the canvas while scrolling
       scrub: 0.005,

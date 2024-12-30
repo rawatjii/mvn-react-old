@@ -119,6 +119,7 @@ const MicroHero = ({ data, onLoadComplete }) => {
     
     // Get the height of the frames content
     const framesContentHeight = framesContent.offsetHeight;
+    localStorage.setItem('navbar_scroll_height',  framesContentHeight);
 
     // Create ScrollTrigger for scrollDownRef to pin it until canvas reaches 50%
     const scrollDownPin = ScrollTrigger.create({

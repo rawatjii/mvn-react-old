@@ -30,6 +30,8 @@ const MicroHeader = ({ scrollToSection }) => {
 
   const { pathname } = useLocation();
 
+  let navbarScroll = localStorage.getItem('navbar_scroll_height');
+
   useEffect(()=>{
     const updateIsMobile = () => {
       setIsMobile(window.innerWidth <= 767);
@@ -50,19 +52,25 @@ const MicroHeader = ({ scrollToSection }) => {
     }
 
     const handleScroll = () => {
-      if(!isMobile){
-        if (window.scrollY > 12000) {
-          setScrolled(true);
-        }else{
-          setScrolled(false);
-        }
+      
+      if (window.scrollY > navbarScroll){
+        setScrolled(true)
       }else{
-        if (window.scrollY > 9000) {
-          setScrolled(true);
-        }else{
-          setScrolled(false);
-        }
+        setScrolled(false);
       }
+      // if(!isMobile){
+      //   if (window.scrollY > 12000) {
+      //     setScrolled(true);
+      //   }else{
+      //     setScrolled(false);
+      //   }
+      // }else{
+      //   if (window.scrollY > 9000) {
+      //     setScrolled(true);
+      //   }else{
+      //     setScrolled(false);
+      //   }
+      // }
       
       // if (window.scrollY > 50) {
       //   setScrolled(true);

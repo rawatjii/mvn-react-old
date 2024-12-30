@@ -112,7 +112,7 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
   }, []);
 
   return (
-    <div className="section peacock_section pb-0">
+    <div className="section peacock_section party_section pb-0">
       {loading ? (
         <PartyLoader />
         // <InitialLoading className="style1" />

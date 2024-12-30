@@ -4000,8 +4000,13 @@ footer {
 
   .peacock_section {
 
+    .about{
+
+      margin-top:30px;
+    }
+
     .frames_content {
-      height: 100vh;
+      /* height: 100vh; */
       position:relative;
 
 
@@ -4045,6 +4050,22 @@ footer {
         visibility: visible;
       }
     } */
+  }
+  
+  .party_section{
+
+    .frames_content{
+
+      height: 100vh;
+    }
+  }
+
+  .master-bed-room{
+
+    .frames_content{
+
+      height: 100vh;
+    }
   }
 
   /* master_bedroom_section */

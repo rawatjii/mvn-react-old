@@ -87,7 +87,7 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
   }, [heroLoaded]);
 
   useEffect(() => {
-    if (newLoadingCount >= 100 && heroLoaded && peacockLoaded && livingRoomLoaded && partyLoaded && masterBedroomLoaded) {
+    if (newLoadingCount >= 100 && heroLoaded && peacockLoaded && livingRoomLoaded && partyLoaded) {
       const timer = setTimeout(() => {
         setNewLoadingCount(101);
         setIsPageLoaded(true); // Mark page as loaded
@@ -99,7 +99,7 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
 
   return (
     <>
-      {(!heroLoaded || !peacockLoaded || !livingRoomLoaded || !partyLoaded || !masterBedroomLoaded) && (
+      {(!heroLoaded || !peacockLoaded || !livingRoomLoaded || !partyLoaded) && (
         <>
           <InitialLoading
             fast="false"
