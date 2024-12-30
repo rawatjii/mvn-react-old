@@ -13,7 +13,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
   const canvasRef = useRef(null); // Ref for the canvas element
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]); // Array to store loaded images
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const sectionRef = useRef(null);
   const totalFramesDesktop = 126;
   const totalFramesMobile = 126;
@@ -21,16 +21,16 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
   const { title, desc } = data.living_room_video;
 
   // Detect screen size
-  useEffect(() => {
-    const checkMobile = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
-    };
-    checkMobile();
-    window.addEventListener("resize", checkMobile);
-    return () => {
-      window.removeEventListener("resize", checkMobile);
-    };
-  }, []);
+  // useEffect(() => {
+  //   const checkMobile = () => {
+  //     setIsMobile(window.innerWidth <= 768); // Adjust breakpoint as needed
+  //   };
+  //   checkMobile();
+  //   window.addEventListener("resize", checkMobile);
+  //   return () => {
+  //     window.removeEventListener("resize", checkMobile);
+  //   };
+  // }, []);
 
   // Load images for mobile and desktop
   useEffect(() => {

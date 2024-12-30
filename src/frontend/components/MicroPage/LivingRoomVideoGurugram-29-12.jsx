@@ -16,7 +16,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
   const [loading, setLoading] = useState(true);
   const [images, setImages] = useState([]);
   const [videoFinished, setVideoFinished] = useState(false);
-  const [isMobile, setIsMobile] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
   const frameRefs = useRef([]);
   const sectionRef = useRef(null);
   const videoRef = useRef(null);
@@ -36,7 +36,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
     return () => {
       window.removeEventListener("resize", checkMobile);
     };
-  }, []); // Dependency array doesn't include data to ensure it's initialized once.
+  }, []); 
 
   // Load images
   useEffect(() => {
