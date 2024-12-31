@@ -30,30 +30,30 @@ What sets apart the peerless from the prosaic is their vision, mission and commi
     {
       id: 2,
       Person_Name: "Mr. Varun Sharma",
-      Person_Post: "Founder & MD, MVN Group",
+      Person_Post: "Founder & MD, MVN Infrastructure",
       Person_Photo: Varun_Sharma,
       Person_content: `The key driving force behind taking MVN’s deep-rooted legacy to new heights, Mr. Varun Sharma is a man with an indomitable vision and passion for creating world-class infrastructure. His strong knowledge and astute insights on infrastructure development and operations have catapulted MVN from a leader in the NCR geography to a pan-India one.`,
     },
     {
       id: 3,
       Person_Name: "Mrs. Kanta Sharma",
-      Person_Post: "Founder & CEO, MVN Group",
+      Person_Post: "Founder & CEO, MVN Infrastructure",
       Person_Photo: Kanta_Sharma,
       Person_content: `Mrs. Kanta Sharma, a renowned educationist, has been imparting knowledge and unparalleled educational values to more than 1 lakh students over the past 40 years. Her vision and guidance have succeeded in creating leaders and serving society.`,
     },
     {
       id: 4,
       Person_Name: "Mr. Saurabh Kaushik",
-      Person_Post: "Director, MVN Group",
+      Person_Post: "Director, MVN Infrastructure",
       Person_Photo: Saurabh_Kaushik,
       Person_content: `Mr. Saurabh Kaushik holds a bachelor's degree in Engineering from the National Institute of Technology, Kurukshetra, with a total experience of 16 years, 5 years in construction and real estate. He has been associated with MVN Infrastructure since 2016.`,
     },
     // {
     //   id: 5,
     //   Person_Name: "Mr. Vinod Kumar",
-    //   Person_Post: "Head Billing Engineer, MVN Group",
+    //   Person_Post: "Head Billing Engineer, MVN Infrastructure",
     //   Person_Photo: Vinod_Kumar,
-    //   Person_content: `Mr. Vinod Kumar is a dedicated professional who has contributed immensely to the operational success of MVN Group, ensuring efficiency and excellence in billing and engineering processes.`,
+    //   Person_content: `Mr. Vinod Kumar is a dedicated professional who has contributed immensely to the operational success of MVN Infrastructure, ensuring efficiency and excellence in billing and engineering processes.`,
     // },
   ];
 
