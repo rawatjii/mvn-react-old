@@ -75,8 +75,9 @@ const ThankYou = () => {
                 `}
             </script>
             <noscript>
-                <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1277605383505048&ev=PageView&noscript=1"
-            />
+                {`
+                    <img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=1277605383505048&ev=PageView&noscript=1"/>
+                `}
             </noscript>
 
         </Helmet>

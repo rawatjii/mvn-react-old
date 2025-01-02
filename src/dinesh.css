@@ -50,12 +50,6 @@ section.scrollSlider-Content-2.desktop-view {
   font-size: 14px;
 }
 
-.single .content {
-  h4.title {
-    font-size: 24px !important;
-  }
-}
-
 .enquire_section {
   .sec_title {
     margin-bottom: 25px;
@@ -254,8 +248,7 @@ img.img-fluid.headpage-icon {
 }
 
 h4.title {
-  font-size: 24px !important;
-  padding-bottom: 30px;
+  font-size: 24px ;
 }
 
 .brand_bg {
@@ -692,9 +685,6 @@ section.section.experience-section {
     }
   }
 
-  h4.title {
-    font-size: 24px !important;
-  }
 
   .other_projects_section .other-project-img {
     height: 476px;
@@ -793,18 +783,7 @@ section.section.experience-section {
   .journey_section .data {
     height: 100%;
   }
-
-  .testimonial_section .swiper-slide {
-    height: 33vh;
-  }
-
-  .testimonial_section {
-    & .testimonial_carousel {
-      .single {
-        height: 100%;
-      }
-    }
-  }
+  
 
   .testimonial_section .single {
     width: fit-content;
@@ -820,18 +799,6 @@ section.section.experience-section {
     margin: 25px;
   }
 
-  .our_brand_section .brand_content .content h4.title {
-    font-size: 18px !important;
-  }
-
-  .our_team_section p {
-    font-size: 27px;
-    letter-spacing: 3px;
-    line-height: 34px;
-    width: 64%;
-    font-weight: 200;
-    margin: 0px auto;
-  }
 
   .our_brand_section {
     .brand_bg {
@@ -1051,15 +1018,6 @@ section.section.experience-section {
     }
   }
 
-  .page-header-main-heading {
-    max-width: 88%;
-    background-color: #131313;
-    margin: 0px auto;
-    transform: translate(0px, -100px);
-    border-radius: 14px;
-    padding: 51px;
-  }
-
   p {
     font-size: 17px;
   }
@@ -1132,9 +1090,6 @@ section.section.experience-section {
     color: #c1c2c1;
   }
 
-  .testimonial_section .swiper-slide {
-    height: 48vh;
-  }
 
   .excited-to-meet-us .title::after {
     display: none;
@@ -1208,16 +1163,6 @@ section.section.experience-section {
   margin-bottom: 15px;
 }
 
-.our_team_section p {
-  font-size: 14px;
-  width: 50%;
-  line-height: 26px;
-  letter-spacing: 1px;
-  margin: 0 auto;
-  color: #c1c2c1;
-  font-weight: unset;
-}
-
 .our_brand_section .brand_content .single h4.title::after {
   display: none;
 }
@@ -1269,35 +1214,9 @@ section.section.our_brand_section .brand_content {
   text-align: left !important;
 }
 
-.our_brand_section h4.title {
-  margin: unset !important;
-  margin-bottom: 10px !important;
-  padding-bottom: 0;
-}
 
 .our_brand_section p {
   margin-bottom: 0;
-}
-
-.our_brand_section .brand_content .content h4.title {
-  color: #e6cc60;
-  font-size: 23px !important;
-}
-
-.our_brand_section p {
-  font-size: 14px;
-  line-height: 26px;
-  letter-spacing: 1px;
-  margin: 0 auto;
-  color: #c1c2c1;
-  font-weight: unset;
-}
-
-section.section.enquire_section p {
-  unicode-bidi: unset;
-  font-weight: 100;
-  letter-spacing: 1px;
-  color: #adadad;
 }
 
 .our_brand_section .icon .img-fluid {
@@ -1305,11 +1224,6 @@ section.section.enquire_section p {
   height: 70px;
 }
 
-section.section.our_brand_section .sec_title.text-center.color.style1 {
-  width: fit-content;
-  margin: 0px auto;
-  margin-bottom: 50px;
-}
 
 .testimonial_section {
   padding-top: 80px;
@@ -1346,15 +1260,6 @@ section.section.other_projects_section.pb-0 {
   padding-top: 20px;
 }
 
-.testimonial_carousel .single .testimonial-pic {
-  width: 60px;
-  margin-bottom: 20px;
-  margin-top: 10px;
-  border: 1px solid #fff;
-  border-radius: 50%;
-  height: 60px;
-  object-fit: contain;
-}
 
 .flex-name-pic {
   display: flex;
@@ -1363,13 +1268,7 @@ section.section.other_projects_section.pb-0 {
   width: 100%;
 }
 
-.testimonial_section {
-  & .testimonial_carousel {
-    .single {
-      height: 350px;
-    }
-  }
-}
+
 
 .testimonial_section .content {
   height: 100%;
@@ -1482,28 +1381,18 @@ section.section.other_projects_section.pb-0 {
     margin-bottom: 15px;
   }
 
-  h4.title {
-    font-size: 24px !important;
-    padding-bottom: 30px;
-  }
-
-  h4.title {
-    position: relative;
-    width: fit-content;
-    margin: 0 auto !important;
-    display: block;
-  }
-
   h4.title::after {
     position: absolute;
     content: "";
     background-color: #d6bf5a59;
     width: 70px;
     height: 70px;
-    top: -17px;
+    top: 50%;
     left: -25px;
     border-radius: 100px;
     z-index: -1;
+    transform: translateY(-50%);
+    -webkit-transform: translateY(-50%);
   }
 
   h4.title.style2::after {
@@ -1516,10 +1405,6 @@ section.section.other_projects_section.pb-0 {
 
   .excited-to-meet-us .title::after {
     display: none;
-  }
-
-  .our_team_section p {
-    margin-top: 40px;
   }
 
   .projects_section {
@@ -1650,63 +1535,9 @@ section.section.other_projects_section.pb-0 {
     }
   }
 
-  .micro_content {
-    position: relative;
-    margin-top: -210px;
-    background: transparent;
-    z-index: 1;
-
-    &:before {
-      /* position: absolute; */
-      content: "";
-      background: #131313;
-      top: -160px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 1000px;
-      z-index: 1;
-    }
-
-    .micro_data {
-      border-top-left-radius: 1000px !important;
-      border-top-right-radius: 1000px !important;
-      padding-top: 20px;
-      overflow: hidden;
-      background: #000;
-    }
-  }
-
   .about_overview {
     .img_col {
       left: 0px !important;
-    }
-  }
-
-  .micro_content {
-    position: relative;
-    margin-top: -210px;
-    background: transparent;
-    z-index: 1;
-
-    &:before {
-      /* position: absolute; */
-      content: "";
-      background: #131313;
-      top: -160px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 1000px;
-      z-index: 1;
-    }
-
-    .micro_data {
-      border-top-left-radius: unset;
-      border-top-right-radius: unset;
-      padding-top: 20px;
-      overflow: hidden;
-      background: #000;
     }
   }
 

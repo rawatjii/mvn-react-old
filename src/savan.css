@@ -50,11 +50,6 @@ section.scrollSlider-Content-2.desktop-view {
   font-size: 14px;
 }
 
-.single .content {
-  h4.title {
-    font-size: 24px !important;
-  }
-}
 
 .enquire_section {
   .sec_title {
@@ -254,8 +249,7 @@ img.img-fluid.headpage-icon {
 }
 
 h4.title {
-  font-size: 24px !important;
-  padding-bottom: 30px;
+  font-size: 24px ;
 }
 
 .brand_bg {
@@ -301,7 +295,7 @@ section.section.our_brand_section .container {
 
 .testimonial_section .swiper-button-prev{position:absolute;bottom:60px;left:46%;top:unset;width:40px;height:40px;border-radius:50%;background-color:#edd363;opacity:1!important}
 .testimonial_section .swiper-button-next{position:absolute;bottom:60px;left:51%;top:unset;width:40px;height:40px;border-radius:50%;background-color:#edd363;opacity:1!important}
-.testimonial_section .swiper-button-prev::after, .testimonial_section .swiper-button-next::after{color:#fff;font-size:16px}
+.testimonial_section .swiper-button-prev::after, .testimonial_section .swiper-button-next::after{color:#000;font-size:14px; font-weight: 800;}
 .testimonial_section {padding-top: 50px!important;padding-bottom: 220px!important;}
 section.section.journey_section.pb-0 { padding-bottom: 60px!important;}
 
@@ -441,15 +435,6 @@ div#wrapper { margin-top: 27%;}
   margin-bottom: 15px;
 }
 
-.our_team_section p {
-  font-size: 14px;
-  width: 50%;
-  line-height: 26px;
-  letter-spacing: 1px;
-  margin: 0 auto;
-  color: #c1c2c1;
-  font-weight: unset
-}
 
 .our_brand_section .brand_content .single h4.title::after {
   display: none
@@ -505,16 +490,13 @@ section.section.our_brand_section .brand_content {
 .our_brand_section h4.title {
   margin: unset !important;
   margin-bottom: 10px !important;
-  padding-bottom: 0
+  padding-bottom: 0;
+  text-transform: uppercase;
+  color: #e6cc60;
 }
 
 .our_brand_section p {
   margin-bottom: 0
-}
-
-.our_brand_section .brand_content .content h4.title {
-  color: #e6cc60;
-  font-size: 23px !important;
 }
 
 .our_brand_section p {
@@ -570,7 +552,6 @@ section.section.our_brand_section .sec_title.text-center.color.style1 {
 section.section.other_projects_section.pb-0 {padding-top: 20px;}
 .testimonial_carousel .single .testimonial-pic{width:60px;margin-bottom:20px;margin-top:10px;border:1px solid #fff;border-radius:50%;height:60px;object-fit:contain}
 .flex-name-pic{display:flex;align-items:center;justify-content:space-between;width:100%}
-.testimonial_section {& .testimonial_carousel {  .single {  height: 350px; }}}
 .testimonial_section .content{height:100%}
 .testimonial_section .flex-content-box{height:80%}
 .testimonial_section .flex-heading-row {display: flex;align-items: center;margin-bottom: 15px;}
@@ -612,13 +593,6 @@ section.section.other_projects_section.pb-0 {
   width: 100%
 }
 
-.testimonial_section {
-  & .testimonial_carousel {
-    .single {
-      height: 350px;
-    }
-  }
-}
 
 .testimonial_section .content {
   height: 100%
@@ -674,16 +648,22 @@ section.section.other_projects_section.pb-0 {
   border-radius: 50%;
   top: 100%;
 }
-.press-releases-container .swiper-button-next {right: 65%;}
+.press-releases-container .swiper-button-prev{
+  left: 50%;
+  transform: translateX(calc(-50% - 30px));
+}
+.press-releases-container .swiper-button-next{
+  right: 50%;
+  transform: translateX(calc(-50% - -60px));
+}
 .press-releases-container  .swiper-button-next:after, .press-releases-container  .swiper-rtl .swiper-button-prev:after {
   content: 'next';
-  color: #fff;
+  color: #000;
   font-size: 18px;
-
 }
 .press-releases-container .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
   content: 'prev';
-  color: #fff;
+  color: #000;
   font-size: 18px;
 }
 
@@ -695,13 +675,10 @@ section.section.press-releases-container  .swiper.swiper-initialized.swiper-hori
 article.awa_card.awa_shadow p {text-align: left;}
 article.awa_card.awa_shadow p.text-capitalize { color: var(--theme_primary_color);cursor: pointer;}
 
-h4.title::after{position:absolute;content:"";background-color:#d6bf5a59;width:70px;height:70px;top:-17px;left:-25px;border-radius:100px;z-index:-1}
-.sec_title.text-center.color.style1{position:relative;width:fit-content;margin:0 auto;margin-top: 0 !important;margin-bottom:40px}
+.sec_title.text-center.color.style1{position:relative;width:fit-content;margin:0 auto;margin-top: 0 !important;margin-bottom:60px}
 .sec_title.text-center.color.style2{width:fit-content;margin:0 auto;margin-bottom:40px}
 .testimonial_section .flex-content-box::after {display:none;}
 h4.title {
-  font-size: 24px !important;
-  padding-bottom: 30px;
   position: relative;
 }
 /* Adarsh */
@@ -820,10 +797,6 @@ a.closebtn {
     }
   }
 
-  h4.title {
-    font-size: 24px !important;
-  }
-
   .other_projects_section .other-project-img {
     height: 476px;
     object-fit: cover;
@@ -922,17 +895,6 @@ a.closebtn {
     height: 100%;
   }
 
-  .testimonial_section .swiper-slide {
-    height: 33vh;
-  }
-
-  .testimonial_section {
-    & .testimonial_carousel {
-      .single {
-        height: 100%;
-      }
-    }
-  }
 
   .testimonial_section .single {
     width: fit-content;
@@ -949,16 +911,7 @@ a.closebtn {
   }
 
   .our_brand_section .brand_content .content h4.title {
-    font-size: 18px !important
-  }
-
-  .our_team_section p {
-    font-size: 27px;
-    letter-spacing: 3px;
-    line-height: 34px;
-    width: 64%;
-    font-weight: 200;
-    margin: 0px auto;
+    font-size: 18px 
   }
 
   .our_brand_section {
@@ -1184,9 +1137,10 @@ a.closebtn {
     max-width: 88%;
     background-color: #131313;
     margin: 0px auto;
-    transform: translate(0px, -100px);
+    /* transform: translate(0px, -100px); */
     border-radius: 14px;
     padding: 51px;
+    margin: 80px auto 100px;
   }
 
   p {
@@ -1259,10 +1213,6 @@ a.closebtn {
     letter-spacing: 1px;
     margin: 0 auto;
     color: #c1c2c1;
-  }
-
-  .testimonial_section .swiper-slide {
-    height: 48vh;
   }
 
   .excited-to-meet-us .title::after {
@@ -1364,7 +1314,6 @@ a.closebtn {
     .home-about-content{text-align:center;padding-left:150px;padding-right:150px}
     section.overview_section .headingIcon{width:auto;height:50px;margin:0 auto;margin-bottom:20px}
 
-    .our_team_section p {font-size: 15px!important;}
     .menus .menuFlexBox{gap:10px;width:33%}
     .menus .menus{display:flex;flex-wrap:wrap;justify-content:space-between}
     .menus .sub_menu{width:100%}
@@ -1731,7 +1680,6 @@ section.section.other_projects_section.pb-0 {
 .blog_page .col-sm-12.col-md-4.col-lg-4 .row { display: flex;  justify-content: center; text-align: center;}
 .blog_page h3 { font-size: 24px; margin-bottom: 20px;}
 .blog-platter-detail {padding: 15px;}
-.blog-platter-box {margin-bottom: 30px;}
 nav.null.navbar.navbar-expand-false.navbar-light .right {width: 150px; display: flex;align-items: center; margin-left: auto;justify-content: end;}
 .navbar .call_btn { height: 40px;width: 40px;}
 
@@ -1939,29 +1887,15 @@ section.section.projects_section.pb-0 .px_8.left_col.col-12 .an_img.undefined  .
     margin-bottom: 15px;
   }
 
-  h4.title {
-    font-size: 24px !important;
-    padding-bottom: 30px;
-  }
 
   h4.title {
     position: relative;
     width: fit-content;
-    margin: 0 auto !important;
-    display: block
+    margin: 0 auto;
+    display: block;
+    margin-bottom:30px;
   }
 
-  h4.title::after {
-    position: absolute;
-    content: "";
-    background-color: #d6bf5a59;
-    width: 70px;
-    height: 70px;
-    top: -17px;
-    left: -25px;
-    border-radius: 100px;
-    z-index: -1
-  }
 
   .sec_title.text-center.color.style2 {
     text-align: center
@@ -1969,10 +1903,6 @@ section.section.projects_section.pb-0 .px_8.left_col.col-12 .an_img.undefined  .
 
   .excited-to-meet-us .title::after {
     display: none;
-  }
-
-  .our_team_section p {
-    margin-top: 40px;
   }
 
   .projects_section {
@@ -1990,9 +1920,8 @@ section.section.projects_section.pb-0 .px_8.left_col.col-12 .an_img.undefined  .
 .press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next { top: 88%;}
 .press_release_slider .thumbnail {width: 87%!important;}
 .other_projects_section .sec_title.text-center.color.style1 {margin-bottom: 30px;}
-section.section.our_team_section .sec_title.text-center.color.style1 {margin-bottom: 60px;}
+section.section.our_team_section .sec_title.text-center.color.style1 {margin-bottom: 30px;}
 section.section.enquire_section .sec_title.text-center.color.style1 {margin-bottom: 15px;}
-section.section.enquire_form  .sec_title.text-center.color.style1 {margin-bottom: 40px;}
 .testimonial_section {padding-top: 70px !important;padding-bottom: 180px !important;}
 .testimonial_section .swiper-button-next { bottom: 85px;}
 .testimonial_section .swiper-button-prev {bottom: 85px;}
@@ -2011,7 +1940,6 @@ section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;
 
 
 
-.our_team_section p {font-weight: unset;}
 .micro_banner {  opacity: 0.97; }
 .micro_banner {.microbanner_bg { opacity: 0.99;}}
 
@@ -2281,32 +2209,6 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
     }
   }
 
-  .micro_content {
-    position: relative;
-    margin-top: -210px;
-    background: transparent;
-    z-index: 1;
-
-    &:before {
-      /* position: absolute; */
-      content: '';
-      background: #131313;
-      top: -160px;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      border-radius: 1000px;
-      z-index: 1;
-    }
-
-    .micro_data {
-      border-top-left-radius: 1000px !important;
-      border-top-right-radius: 1000px !important;
-      padding-top: 20px;
-      overflow: hidden;
-      background: #000;
-    }
-  }
 
   .about_overview {
     .img_col {
@@ -2316,7 +2218,7 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
 
   .micro_content {
     position: relative;
-    margin-top: -210px;
+    /* margin-top: -210px; */
     background: transparent;
     z-index: 1;
 
@@ -2335,9 +2237,9 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
     .micro_data {
       border-top-left-radius: unset;
       border-top-right-radius: unset;
-      padding-top: 20px;
+      /* padding-top: 20px; */
       overflow: hidden;
-      background: #000;
+      background: transparent;
     }
   }
 
@@ -2436,22 +2338,21 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
 .projects_section {.plane_icon {  position: absolute;   z-index: -1; top: 9%;left: 8%;width: 24%;  opacity: 1;transform: rotate(180deg); }}
 .projects_section {.sec_title { font-size: 17px; margin-bottom: 0;  height: 63px;letter-spacing: 3px; margin-top: 124px;}}
 .projects_section .sec_title span {font-size: 15px !important;padding-bottom: 20px !important;letter-spacing: 1px !important;padding-top: 8px;}
-h4.title {font-size: 18px !important;padding-bottom: 30px;}
 .our_brand_section .inner-ethos { width: 100%; margin-left: auto;}
-.our_brand_section .brand_content .content h4.title {font-size: 18px !important;}
+.our_brand_section .brand_content .content h4.title {font-size: 18px;}
 .our_brand_section .box-flex {padding: 15px;}
-.our_brand_section .icon .img-fluid {height: 47px;}
+.our_brand_section .icon .img-fluid {height: 47px; object-fit: contain;}
 section.section.our_brand_section .brand_bg.brand_bg-2 { display: none;}
 section.section.our_team_section { padding-bottom: 17px;}
-.our_team_section p {width: 100%;}
+.our_team_section p {max-width: 100%; letter-spacing: 1px; line-height:22px; padding: 0 20px;}
 .testimonial_section { padding-top: 40px; padding-bottom: 40px;}
 section.section.testimonial_section .swiper-slide {background-color: unset;}
 .testimonial_section {& .testimonial_carousel {.single {padding: 20px 20px; }}}
-.single .content {h4.title { font-size: 20px !important;}}
+.single .content {h4.title { font-size: 20px }}
 .testimonial_section .flex-content-box {height: auto;padding-bottom: 10px;}
 
 p.main-pera {  font-size: 13px;}
-section.section.enquire_section p {color: #dbcfcf; font-weight: 100;font-family: 'Futura_Bt_medium';font-size: 17px;}
+section.section.enquire_section p {color: #dbcfcf; font-weight: 300;  font-size: 15px; max-width: 100%;}
 .modal-body p { font-size: 14px; letter-spacing: 0.5px; color: #d1d1d1;}
 .modal-body {padding: 15px;}
 .modal-body {border-radius: 15px; outline: 1px dashed #f4d9667a;outline-offset: -6px;}
@@ -2481,7 +2382,7 @@ section.section.media-gallery {padding-bottom: 20px;}
 .testimonial_carousel .single .testimonial-pic { width: 60px;margin-bottom: 5px; margin-top: 10px; height: 60px; object-fit: contain;}
 .testimonial_carousel .flex-name-pic {margin-top: 10px;}
 h4.hero_title {
-  font-size: 24px;
+  font-size: 20px;
   margin-bottom:20px;
 }
 .home-about-content{padding-left:40px;padding-right:40px;}
@@ -2507,20 +2408,17 @@ ul.our-values-ul-icon{display:flex!important;flex-wrap:wrap}
 .testimonial_section {& .testimonial_carousel { .swiper-pagination { position: relative; margin-top: 50px;bottom: 40px;}}}
 .testimonial_section .swiper-button-next { left: 60%;}
 .testimonial_section .swiper-button-prev { left: 33%;}
-.press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {top: 94%;margin-left: 5px;}
 .philosophy_section {.content {background: unset;border: none !important;border-radius: 24px;padding: 0;border: none;}}
 .about_overview { p {  text-align: justify; text-align-last: center;}}
 .press_release_slider   .swiper-slide img { height: auto; }
 article.awa_card.awa_shadow p.text-capitalize {font-size: 14px;}
-.press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {top: 88%;margin-left: 5px;}
+.press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {top: 88%;}
 article.awa_card.awa_shadow p.text-capitalize { margin-right: 15px;}
 .press_release_slider .media_center .row { row-gap: 10px;}
 .press_release_slider .enquire_form {.form-group { margin-bottom: 0px;}}
 .press-releases-container .swiper-button-next:after, .press-releases-container .swiper-rtl .swiper-button-prev:after {font-size: 12px;}
 .press-releases-container .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {font-size: 12px;}
 .gallery_slider .swiper-button-prev:after, .gallery_slider .swiper-button-next:after { font-size: 12px;}
-.press-releases-container .swiper-button-next {right: 40%;}
-.press-releases-container .swiper-button-prev, .press-releases-container .swiper-button-next {margin-left: 33%;}
 
 section.section.media-gallery {padding-top: 70px;}
 .media-news_online {padding-top: 50px;}
@@ -2583,7 +2481,6 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 section.section.press-releases-container { padding-top: 40px;}
 section.section.enquire_form {padding-top: 40px;}
 .media_center .row {row-gap: 0px;}
-section.section.enquire_form .sec_title.text-center.color.style1 {margin-bottom: 22px;}
 .enquire_form .container { padding: 0px 20px !important; margin: 0px 0px !important;}
 section.section.media-gallery {  padding-top: 90px;}
 section.section.press-releases-container{padding-top:40px}
@@ -2812,7 +2709,24 @@ section.section.micro_hero_section.p-0 div#scroll-wrapper-inner\ {
   font-size:14px;
 }
 
+h4.title{
+
+  font-size:18px;
 }
+
+
+section.section.our_brand_section .sec_title.text-center.color.style1{
+  margin-bottom: 30px;
+}
+
+.sec_title.text-center.color.style1{
+  margin-bottom: 30px;
+}
+
+
+}
+
+/* end of 767 */
 
 .microsite-scrolldown .scroll-down-dude:before, .microsite-scrolldown .scroll-down-dude:after {
   border-bottom: 4px solid #ffffff !important;

@@ -29,8 +29,8 @@ const MvnMall = () => {
         x: "-50%", // Moves the image 50% to the left
         ease: "none",
         scrollTrigger: {
-          trigger: ".mvn_mall_section",
-          start: "top 100px",
+          trigger: image,
+          start: "top 20%",
           pin: true,
           scrub: 1,
           end: "+=1000", // Adjust this value based on desired scroll distance
@@ -47,13 +47,14 @@ const MvnMall = () => {
 
   return (
     <>
-      <section className="mvn_mall_section">
+      <section className="mvn_mall_section micro_design1">
         {isMobile ? (
           <>
             <Container>
               <SecTitle className="text-center color style1">
                 <h4 className="title">MVN Mall</h4>
               </SecTitle>
+              <p className="desc">Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
             </Container>  
             <div className="image_animation">
               <img
@@ -68,8 +69,9 @@ const MvnMall = () => {
           <Container>
             <SecTitle className="text-center color style1">
               <h4 className="title">MVN Mall</h4>
-              <p>Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
             </SecTitle>
+
+            <p className="desc">Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
 
               <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-6">

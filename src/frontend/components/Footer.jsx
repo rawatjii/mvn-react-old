@@ -7,7 +7,7 @@ import * as CONFIG from '../../config/config';
 // import twitterIcon from '../assets/images/icons/social/twitter.png';
 import linkedinIcon from '../assets/images/icons/social/linkedin.png';
 import fbIcon from '../assets/images/icons/social/fb.png';
-import instaIcon from '../assets/images/icons/social/instagram-2.png';
+import instaIcon from '../assets/images/icons/social/insta.png';
 import YoutubeIcon from '../assets/images/icons/social/youtube.png';
 import BtnIcon from '../assets/images/icons/send.png';
 // import FormBgImg from '../assets/images/icons/form-bg.png';
@@ -100,7 +100,7 @@ const Footer = () => {
 
               <p class="address-details"><span>Meet:</span> MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157 
               <br /> CIN:ACA-4678 | PAN:ABWFM8415E</p>
-              <p class="phone-details"><span>Talk:</span> +91 916 4001 177</p>
+              <p class="phone-details"><span>Talk:</span> +91 799 6000 196</p>
               <p class="mail-details"><span>Write:</span> info@mvn.in</p>
 
               <div class="footer-top">

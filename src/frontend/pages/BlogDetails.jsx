@@ -166,13 +166,13 @@ function BlogDetails() {
 
 
 
-            <div className="col-sm-12">
+            {/* <div className="col-sm-12">
               <div className="text-center py-5">
                 <a href="" className="btn btn_style2">
                   View More
                 </a>
               </div>
-            </div>
+            </div> */}
 
 
           </div>

@@ -134,7 +134,7 @@ const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
             <Col key={index} xs={12} md={4} lg={4} className="single_col">
               <div className="single">
                 <div className="top">
-                  <h4 className="name">{item.name}</h4>
+                  <h5 className="name">{item.name}</h5>
                   <Link to={item.link} target="_blank">
                     <img
                       src={arrowIcon}

@@ -138,9 +138,9 @@ function Career() {
                                         </div>
 
                                     </div>
-                                    <div className="arrow-g">
+                                    {/* <div className="arrow-g">
                                         <img src={leftArrow} />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>
@@ -208,9 +208,9 @@ function Career() {
                                             <p>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being.</p>
                                         </div>
                                     </div>
-                                    <div className="arrow-g">
+                                    {/* <div className="arrow-g">
                                         <img src={leftArrow} />
-                                    </div>
+                                    </div> */}
                                 </div>
                             </div>
                         </div>

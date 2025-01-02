@@ -133,7 +133,7 @@ const Header = () => {
           </Navbar.Brand>
 
           <div className="right">
-            <a href="tel:+918062525105" className="call_btn" ref={callBtnRef}>
+            <a href="tel:+917996000196" className="call_btn" ref={callBtnRef}>
               <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="mvn call icon" />
             </a>
             <Navbar.Toggle
@@ -169,57 +169,6 @@ const Header = () => {
                       <span className="close d-md-none"onClick={() => toggleMenu("close")}>&times;</span>
                     </div>
                     <div className="inner-menu">
-                      <div className="top-area">
-                        
-                        <div className="inner-logo d-none d-md-block">
-                          <p><span>Office:</span> MVN AeroOne Dwarka Expressway, 22 Km Milestone, Sector-37D, Gurugram, Pin-122103</p>
-                          <p><span>Talk:</span> +91 90710 08464</p>
-                        </div>
-
-                        <ul className="sub_menu d-md-none">
-                            <li>
-                              <label htmlFor="school" className=" d-block w-100">Social Media</label>
-                              <ul className="social_links ">
-                                <li>
-                                  <Link to="https://www.facebook.com/officialmvninfra/" target="_blank" onClick={() => toggleMenu("close")}>
-                                    <img
-                                      src={`${CONFIG.IMAGE_URL + "social/fb.png"}`}
-                                      alt="mvn-fb-icon"
-                                    />
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link to="https://www.instagram.com/mvn_infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
-                                    <img
-                                      src={`${CONFIG.IMAGE_URL + "social/instagram.png"}`}
-                                      alt="mvn-insta-icon"
-                                    />
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link to="https://www.linkedin.com/company/mvn-infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
-                                    <img
-                                      src={`${CONFIG.IMAGE_URL + "social/linkedin.png"}`}
-                                      alt="mvn-linkedin-icon"
-                                    />
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link to="https://www.youtube.com/@MVNInfrastructures" target="_blank" onClick={() => toggleMenu("close")}>
-                                    <img
-                                      src={`${CONFIG.IMAGE_URL + "social/youtube.png"}`}
-                                      alt="mvn-youtube-icon"
-                                    />
-                                  </Link>
-                                </li>
-                              </ul>
-
-                              <img src={subscribeBtn} alt="subscribe_btn" className="subscribe_btn" onClick={() => window.open(channelUrl, "_blank")} style={{cursor:'pointer'}} />
-
-
-                            </li>
-                        </ul>
-                      </div>
 
                       <div className="bottom-area">
                         <div className="inner-bottom-area">
@@ -340,6 +289,57 @@ const Header = () => {
                             </ul>
                           </div>
                         </div>
+                      </div>
+
+                      <div className="top-area">
+                        
+                        <div className="inner-logo d-none d-md-block">
+                          <p><span>Office:</span> MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157</p>
+                          <p><span>Talk:</span> +91 79960 00196</p>
+                        </div>
+
+                        <ul className="sub_menu">
+                            <li>
+                              <label htmlFor="school" className=" d-block w-100">Social Media</label>
+                              <ul className="social_links ">
+                                <li>
+                                  <Link to="https://www.facebook.com/officialmvninfra/" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/fb.png"}`}
+                                      alt="mvn-fb-icon"
+                                    />
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="https://www.instagram.com/mvn_infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/instagram.png"}`}
+                                      alt="mvn-insta-icon"
+                                    />
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="https://www.linkedin.com/company/mvn-infrastructure/" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/linkedin.png"}`}
+                                      alt="mvn-linkedin-icon"
+                                    />
+                                  </Link>
+                                </li>
+                                <li>
+                                  <Link to="https://www.youtube.com/@MVNInfrastructures" target="_blank" onClick={() => toggleMenu("close")}>
+                                    <img
+                                      src={`${CONFIG.IMAGE_URL + "social/youtube.png"}`}
+                                      alt="mvn-youtube-icon"
+                                    />
+                                  </Link>
+                                </li>
+                              </ul>
+                            </li>
+                            <li>
+                              <img src={subscribeBtn} alt="subscribe_btn" className="subscribe_btn" onClick={() => window.open(channelUrl, "_blank")} style={{cursor:'pointer'}} />
+                            </li>
+                        </ul>
                       </div>
                     </div>
                   </div>

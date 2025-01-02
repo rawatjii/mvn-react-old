@@ -123,14 +123,12 @@
     .location_section .swiper-scrollbar {bottom: 0px !important; width: 40% !important;  }
     .location_section .image_col {margin-top: 0px;  height: 60vh; position: relative;}
     .location_section .mySwiper .swiper-slide-active .title {font-size: 16px !important;margin-top: 10px !important }
-    .sec_title.text-center.color.style1 {margin-bottom: 20px;}
 
 }
 @media screen and (min-width:1430px) and (max-width:1500px){
     .location_section { padding: 10px 0 0 !important;}
     .location_section .abs_number { bottom: 10%; }
     .location_section .mySwiper .swiper-slide-active .title {font-size: 24px !important;margin-top: 20px !important }
-    .sec_title.text-center.color.style1 {margin-bottom: 0px;}
     .location_section .image_col { height: 62vh;}
 }
 @media(min-width:1501px){

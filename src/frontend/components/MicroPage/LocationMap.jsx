@@ -179,7 +179,7 @@ const MicroLocationMap = ({data})=>{
           <CustomCard
             className="px-0"
             title="THE LOCATION AS INVITING AS ITS ALLURE" 
-            desc="Located at the prime 22km stone on dwarka expressway, gurugram, mvn aero one sits on the growth corridor at the first and only drop of the 23km elevated expressway. Strategically positioned at downtown gurugram." 
+            desc="Located at the prime 22km stone on Dwarka Expressway, Gurugram, MVN Aero One sits on the growth corridor at the first and only drop of the 23km elevated expressway. Strategically positioned at downtown gurugram." 
           />
         </div>
       </Container>

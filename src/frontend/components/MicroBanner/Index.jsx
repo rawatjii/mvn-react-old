@@ -14,20 +14,20 @@ const MicroBanner = ({bg, data})=>{
 
   useEffect(()=>{
     // title animation
-    const titleTimeline = gsap.timeline({
-      scrollTrigger:{
-        trigger: titleRef.current,
-        start: "top 95%",
-      }
-    })
+    // const titleTimeline = gsap.timeline({
+    //   scrollTrigger:{
+    //     trigger: titleRef.current,
+    //     start: "top 95%",
+    //   }
+    // })
 
     // Add animation to the timeline with a delay
 
-    titleTimeline.from(titleRef.current, {
-      y: 20,    
-      opacity: 0,      // Start with 0 opacity (invisible)
-      duration: 1,   // Animation duration in seconds
-    }, "+=0.4")
+    // titleTimeline.from(titleRef.current, {
+    //   y: 20,    
+    //   opacity: 0, 
+    //   duration: 1, 
+    // }, "+=0.4")
 
 
 
@@ -50,19 +50,25 @@ const MicroBanner = ({bg, data})=>{
   }, [])
 
   return(
-    <section className="section micro_banner">
-      <Container>
-        <LazyLoad>
-          <img src={bg} alt="mvn-microbanner-bg" className="img-fluid microbanner_bg" />
-        </LazyLoad>
-        <h2 ref={titleRef} className="microTitle" >{data.title}</h2>
-        <Breadcrumb ref={linksRef}>
-          {data.links.map((link, index)=>(
-            <Breadcrumb.Item key={index} href={link.link ? link.link : null}>{link.name}</Breadcrumb.Item>
-          ))}
-        </Breadcrumb>
-      </Container>
-    </section>
+    <>
+      <section className="section micro_banner">
+        <Container>
+          <LazyLoad>
+            <img src={bg} alt="mvn-microbanner-bg" className="img-fluid microbanner_bg" />
+          </LazyLoad>
+          <h2 ref={titleRef} className="microTitle" >{data.title}</h2>
+        </Container>
+      </section>
+      <section className="breadcrumb_section">
+          <Container>
+            <Breadcrumb ref={linksRef}>
+              {data.links.map((link, index)=>(
+                <Breadcrumb.Item key={index} href={link.link ? link.link : null}>{link.name}</Breadcrumb.Item>
+              ))}
+            </Breadcrumb>
+          </Container>
+      </section>
+    </>
   )
 }
 

@@ -274,7 +274,7 @@ function MediaCenter() {
             <div className="row">
               <div className="col-sm-6 px-md-0">
 
-              <SecTitle className="text-center color style1 mb-0">
+              <SecTitle className="text-center color style1">
                     <img
                       src={headingIconImg}
                       alt="mvn plane icon"
@@ -329,7 +329,7 @@ function MediaCenter() {
               </div>
               <div className="col-sm-6 px-md-0">
                 <div className="media-news_online">
-                  <SecTitle className="text-center color style1 mb-0">
+                  <SecTitle className="text-center color style1">
                     <img
                       src={headingIconImg}
                       alt="mvn heading image"
