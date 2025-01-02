@@ -116,7 +116,7 @@ const Testimonial = () => {
                  <div className="flex-content-box">
                    <div className="flex-heading-row">
                    <img src={quoteIcon} alt="mvn quotes icon" className="img-fluid quote_icon" />
-                   <h4 className="title">{item.title}</h4>
+                   <h5 className="title">{item.title}</h5>
                    </div>
                   <p className="msg">{item.msg}</p>
                  </div>

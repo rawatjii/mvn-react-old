@@ -387,7 +387,7 @@ a {
 
     .title {
       color: var(--theme_primary_color);
-      font-size: 18px;
+      font-size: 24px;
       line-height: 30px;
       letter-spacing: 1px;
       margin: 0;
@@ -1005,7 +1005,9 @@ a {
 
           .right{
 
-            display: grid;align-items: flex-end;
+            display: grid;
+            align-items: flex-end;
+            padding-right: 30px;
 
             ul{
 
@@ -3822,6 +3824,17 @@ footer {
     font-size:16px;
   }
 
+  .sec_title{
+
+    &.style1{
+
+      .title{
+
+        font-size: 18px;
+      }
+    }
+  }
+
   .breadcrumb_section{
 
     .breadcrumb{
@@ -4575,6 +4588,7 @@ footer {
         .title{
 
           text-align: left;
+          font-weight: 400!important;
         }
       }
     }

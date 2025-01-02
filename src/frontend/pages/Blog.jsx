@@ -87,7 +87,7 @@ function Blog() {
             </div>
           </div>
         </div>
-        <div className="blogs_content mb-4">
+        <div className="blogs_content mb-5">
           <div className="container">
             <div className="row row-gap-3">
               {blogData &&

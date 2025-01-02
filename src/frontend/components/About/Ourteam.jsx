@@ -5,6 +5,8 @@ import Varun_Sharma from '../../assets/images/our-team/mvngroup-founder-md-varun
 import Kanta_Sharma from '../../assets/images/our-team/mvngroup-founder-ceo-kantasharma.jpg';
 import Saurabh_Kaushik from '../../assets/images/our-team/mvn-infrastructure-director-saurabh-kaushik.jpeg';
 import Vinod_Kumar from '../../assets/images/our-team/Vinod-Kumar_adobespark.jpg';
+import headingIconImg from "../../assets/images/icons/heading-icon-img.png";
+import SecTitle from "../../../common/SecTitle/Index";
 
 const OurTeam = () => {
   const [show, setShow] = useState(false);
@@ -63,7 +65,11 @@ What sets apart the peerless from the prosaic is their vision, mission and commi
         {/* Row for the first three members */}
         <Row>
           <Col xs={12}>
-            <h3 className="sec_title title">People Behind</h3>
+            <SecTitle className="text-center color style1 mb_30">
+              <img src={headingIconImg} alt="mvn timeline icon" className="img-fluid headingIcon"/>
+              <h4 className="sec_title title">People Behind</h4>
+            </SecTitle>
+            
           </Col>
           {OurTeamData.slice(0, 3).map((member) => (
             <Col xs={12} md={4} lg={4} key={member.id}>

@@ -767,12 +767,6 @@ section.section.experience-section {
     font-size: 40px;
   }
 
-  .journey_section .title {
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    font-size: 18px;
-  }
-
   .journey_section .journey_content .single .top .icon {
     position: absolute;
     top: -9px;
@@ -952,17 +946,6 @@ section.section.experience-section {
     p {
       text-align: center;
     }
-  }
-
-  .enquire_section {
-    .enquire_bg {
-      left: 0;
-      top: 0;
-      opacity: 1;
-    }
-
-    z-index: 1;
-    filter: brightness(5);
   }
 
   /* 
@@ -1390,7 +1373,7 @@ section.section.other_projects_section.pb-0 {
     top: 50%;
     left: -25px;
     border-radius: 100px;
-    z-index: -1;
+    z-index: 0;
     transform: translateY(-50%);
     -webkit-transform: translateY(-50%);
   }
