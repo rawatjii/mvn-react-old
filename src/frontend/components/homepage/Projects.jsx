@@ -31,7 +31,7 @@ const projectsData = [
   {
     mobile: mvnAerooneImg,
     desktop: mvnAerooneImgDesktop,
-    name: "MVN AEROONE RESIDENCES",
+    name: "MVN AERO ONE RESIDENCES",
     location: "Gurugram",
     otherPage: false,
     link: "aeroone-gurgaon"
@@ -152,7 +152,7 @@ const Projects = () => {
                 className="img-fluid plane_icon"
               />
               <h4 className="sec_title title text-uppercase">Explore Our Projects</h4>
-              <article className="desc">MVN Infrastructure introduces MVN Aero one Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway.</article>
+              <article className="desc">MVN Infrastructure introduces MVN Aero One Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway.</article>
             </div>
 
             <div className="project_div d-flex flex-wrap">

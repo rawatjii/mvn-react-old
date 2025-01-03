@@ -1328,7 +1328,7 @@ a.closebtn {
  .navbar {& .navbar_collapse { & .menus {  & .sub_menu {.nav-link { margin-bottom: 5px; }} }}}
     /* span.logo.navbar-brand {position: absolute;left: 50%;top: 40px;} */
   ul.social_links { justify-content: center; margin-top: 20px;}
-  ul.sub_menu li label {text-align: center;}
+  /* ul.sub_menu li label {text-align: center;} */
   ul.menus {padding-top: 5%;}
   a.new-launch { display: flex;gap: 0px 31px;}
 

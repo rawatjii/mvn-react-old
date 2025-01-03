@@ -7,7 +7,7 @@ import * as CONFIG from '../../config/config';
 // import twitterIcon from '../assets/images/icons/social/twitter.png';
 import linkedinIcon from '../assets/images/icons/social/linkedin.png';
 import fbIcon from '../assets/images/icons/social/fb.png';
-import instaIcon from '../assets/images/icons/social/insta.png';
+import instaIcon from '../assets/images/icons/social/instagram.png';
 import YoutubeIcon from '../assets/images/icons/social/youtube.png';
 import BtnIcon from '../assets/images/icons/send.png';
 // import FormBgImg from '../assets/images/icons/form-bg.png';

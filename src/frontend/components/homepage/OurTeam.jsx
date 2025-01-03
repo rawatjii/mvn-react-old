@@ -70,7 +70,7 @@ const OurTeam = ()=>{
       <img src={teamImg} alt="mvn team image" className="img-fluid team_img" />
     </AnImage>
 
-    <p ref={contentRef}>MVN Group is backed up by a team of experienced professionals who are committed to offering high standards of professional conduct in real estate practices.</p>
+    <p ref={contentRef}>MVN Infrastructure is backed up by a team of experienced professionals who are committed to offering high standards of professional conduct in real estate practices.</p>
 
   </section>
   )

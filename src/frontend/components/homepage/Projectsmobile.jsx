@@ -31,7 +31,7 @@ const projectsData = [
     {
         mobile: mvnAerooneImg,
         desktop: mvnAerooneImgDesktop,
-        name: "MVN AEROONE RESIDENCES",
+        name: "MVN AERO ONE RESIDENCES",
         location: "Gurugram",
         otherPage:false,
         link:"aeroone-gurgaon"
