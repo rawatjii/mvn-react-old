@@ -18,6 +18,7 @@ import mvninfrastructureAthensSohna from '../../assets/images/timeline/mvn-infra
 import mvnaerooneBangalore from '../../assets/images/timeline/mvn-aeroone-bangalore.webp';
 import mvnaeroonebengaluru from '../../assets/images/timeline/mvn-aeroone-bengaluru.webp';
 import mvnschoolsportsacademy from '../../assets/images/timeline/mvn-school-sports-academy.webp';
+import aeroonegurgaon from '../../assets/images/timeline/aeroone_gurgaon.webp';
 
 
 
@@ -98,13 +99,19 @@ const data = [
     img: mvnaeroonebengaluru,
     year: '2023',
     title: 'MVN Aeroone | Luxury Apartments',
-    location: '(Phase ii) Bengaluru'},
-
+    location: '(Phase-II) Bengaluru'
+  },
   {
     img: mvnschoolsportsacademy,
     year: '2023',
     title: 'MVN School Sports Academy',
     location: 'Sector - 88, Greater Faridabad'
+  },
+  {
+    img: aeroonegurgaon,
+    year: '2024',
+    title: 'MVN Aero One Gurugram',
+    location: 'Dwarka Expressway, Sector-37D, Gurugram'
   }
 
 ];

@@ -50,7 +50,7 @@ const NoPolutionZone = () => {
     },
     {
       title: '0 km from the Sports Club & Lounge',
-      desc:'Make sports a regular part of your life. Participate in sports events and also follow you passion to play your favourite sports, at the exclusive Sports lounge and Sports Club.',
+      desc:'Make sports a regular part of your life. Participate in sports events and also follow your passion to play your favourite sports, at the exclusive Sports Lounge and Sports Club.',
       imgSrc: window.innerWidth <= 768 ? 'sports.webp' : 'desktop/sports.jpg'
     },
     {

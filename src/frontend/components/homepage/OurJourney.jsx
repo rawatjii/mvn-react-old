@@ -128,8 +128,8 @@ const OurJourney = () => {
         <SecTitle className="text-center color style2">
           <img src={headingIconImg} alt="mvn infrastructure heading icon" className="img-fluid headingIcon" />
           <h4 ref={titleRef} className="title">
-            <span>Our Infrastructure </span>
-            Real Estate Journey
+            {/* <span>Our Infrastructure </span> */}
+            Our Infrastructure Real Estate Journey
           </h4>
         </SecTitle>
 

@@ -239,7 +239,7 @@ export const data = {
       desc:'A luxurious retreat offering rejuvenation and tranquility'
     },
     {
-      name: `Mini Theater`,
+      name: `Mini Theatre`,
       imgSrc: {
         desktop:'theater.webp',
         mobile:'theaterSm.webp'
@@ -330,7 +330,7 @@ export const data = {
       }
     },
     {
-      title: 'Mini Theater',
+      title: 'Mini Theatre',
       data:{
         content:{},
         images: [
@@ -393,7 +393,7 @@ export const data = {
     },
     {
       title: '0 km from the Sports Club & Lounge',
-      desc:'Make sports a regular part of your life. Participate in sports events and also follow you passion to play your favourite sports, at the exclusive Sports lounge and Sports Club.',
+      desc:'Make sports a regular part of your life. Participate in sports events and also follow your passion to play your favourite sports, at the exclusive Sports Lounge and Sports Club.',
       imgSrc: window.innerWidth <= 768 ? 'sports.webp' : 'desktop/sports.webp'
     },
     {

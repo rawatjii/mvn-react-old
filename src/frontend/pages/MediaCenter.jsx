@@ -19,6 +19,7 @@ import newsIMG3 from "../assets/images/mediacenter/news-img-3.jpeg";
 import newsIMG4 from "../assets/images/mediacenter/news-img-4.jpeg";
 import newsIMG5 from "../assets/images/mediacenter/news-img-5.jpeg";
 import newsIMG6 from "../assets/images/mediacenter/news-img-6.jpeg";
+import newsIMG7 from "../assets/images/mediacenter/news-img-7.webp";
 
 import mediaGalleryImg1 from "../assets/images/projects/gallery_img1.webp";
 import mediaGalleryImg2 from "../assets/images/projects/gallery_img2.webp";
@@ -98,6 +99,7 @@ function MediaCenter() {
   const newsImages = {
     isshow: true,
     galleryData: [
+      { src: newsIMG7, alt: "Image 7" },
       { src: newsIMG1, alt: "Image 1" },
       { src: newsIMG2, alt: "Image 2" },
       { src: newsIMG3, alt: "Image 3" },

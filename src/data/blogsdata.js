@@ -6,7 +6,7 @@ export const blogData = [
       title: "Why Real Estate Remains a Top Investment Choice: Key Benefits and Opportunities",
       slug:'why-real-estate-remains-a-top-investment-choice-key-benefits-and-opportunities',
       img: `${ASSET_IMG_URL}blogs/blog_12.webp`,
-      date: "16 April, 2021",
+      date: "16 April, 2024",
       link: "",
       content: [
         `The Real Estate market has always been dominant over others because of the tremendous returns it offers to its investors. Land is always considered as the major asset of the individual because the value only grows with time.`,
@@ -105,7 +105,7 @@ Let's focus our attention on the reasons that will show why investing in real es
       title: "Dwarka Expressway Redefining Urban Connectivity And Real Estate Dynamics",
       slug:'dwarka-expressway-redefining-urban-connectivity-and-real-estate-dynamics',
       img: `${ASSET_IMG_URL}blogs/1588.jpg`,
-      date: "16 April, 2021",
+      date: "24 June, 2024",
       link: "",
       content: [
         `Stretching over 29 kilometers, the Dwarka Expressway is a trailblazer in India's urban transportation landscape. Strategically designed to decongest NH-48 and enhance connectivity between Delhi and Gurugram, this eight-lane elevated motorway is much more than a road; it is a symbol of urban evolution. Completed in phases, it has already begun transforming travel and real estate in the National Capital Region (NCR), making it a magnet for investors, developers, and homebuyers alike.`,
@@ -171,7 +171,7 @@ Whether you're looking for luxury living, commercial investment opportunities, o
       title: "MVN AeroOne Gurugram by MVN: Redefining Luxury Living in Gurugram",
       slug:'mvn-aeroone-gurugram-by-mvn-redefining-luxury-living-in-gurugram',
       img: `${ASSET_IMG_URL}blogs/blog_11.webp`,
-      date: "16 April, 2021",
+      date: "02 October, 2024",
       link: "",
       content: [
         `MVN AeroOne Gurugram—luxurious residences perched high above the city—are synonymous with opulence and exclusivity in major global cities like New York, Dubai, and Singapore.These architectural marvels, often occupying the highest floors of premium skyscrapers, offer panoramic views, unparalleled privacy, and amenities fit for royalty`,

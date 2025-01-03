@@ -129,7 +129,7 @@ const data = {
       }
     },
     {
-      title: 'Mini Theater',
+      title: 'Mini Theatre',
       images: {
         lg: CONFIG.IMAGE_URL + 'amenities/theater.webp',
         mb: CONFIG.IMAGE_URL + 'amenities/theaterSm.webp',

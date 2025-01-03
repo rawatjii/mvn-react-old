@@ -85,7 +85,7 @@ function Career() {
                                     </h4>
                                 </SecTitle>
                                 <p className='text-center career_para' ref={(el) => (desRefs.current[0] = el)}>
-                                    Our Human Resource team is dedicated to attracting, nurturing, and retaining top talent, ensuring the right people are in the right roles to drive the company forward. We prioritize skill, passion, and commitment to our shared goals.
+                                Our Human Resources team is dedicated to attracting, nurturing, and retaining top talent, ensuring the right individuals are in the right roles to drive the company forward. We prioritize skills, passion, and commitment to achieving our shared goals.
                                 </p>
 
                             </Container>
