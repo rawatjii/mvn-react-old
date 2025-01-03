@@ -175,6 +175,13 @@ function MediaCenter() {
 
   const onlineNews = [
     {
+      id: 4,
+      title: `MVN Infrastructure Celebrates MVN Mall's New Office Opening with Traditional Hawan Ceremony`,
+      img: aninewsIMG,
+      postedDate: "September 11, 2024",
+      url: "https://www.aninews.in/news/business/mvn-infrastructure-celebrates-mvn-malls-new-office-opening-with-traditional-hawan-ceremony20240911182559/",
+    },
+    {
       id: 1,
       title:
         "MVN Aero One pre-leases 3 lakh sq ft to co-working operator Spring House in Gurugram",
@@ -329,6 +336,7 @@ function MediaCenter() {
                                   </div> */}
                 </div>
               </div>
+
               <div className="col-sm-6 px-md-0">
                 <div className="media-news_online">
                   <SecTitle className="text-center color style1">
