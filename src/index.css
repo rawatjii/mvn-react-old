@@ -1295,7 +1295,7 @@ a {
   .plane_icon{height: 51px;}
   .heading_div{text-align: center; max-width: 800px; margin: 0 auto; margin-bottom: 50px;}
   .sec_title{color: var(--theme_primary_color); margin-top: 50px !important;}
-  .desc{margin-top: 20px; font-size: 15px; letter-spacing: 1px;}
+  .desc{margin-top: 20px; font-size: 15px; letter-spacing: 1px; color: #c1c2c1;}
   .box_with_overlay_in{position: relative; padding-right: 25px;}
   .abs_div{position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 100%; background: rgb(0 0 0 / 82%); color: var(--theme_primary_color); display: grid; place-content: center; text-align: center;
     .title{display: block; font-size: 25px; font-family: 'Tinos'; letter-spacing: 1px;}

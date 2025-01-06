@@ -301,9 +301,9 @@ section.section.our_brand_section .container {
 
 .oppotunities .content p {
   text-align: left;
-  line-height: 28px;
-  letter-spacing: 0.8px;
-  color: #ffffffa6;
+  /* line-height: 28px; */
+  letter-spacing: 1px;
+  color: #c1c2c1;
 }
 
 .oppotunities .content .job_mail p,
@@ -1390,11 +1390,6 @@ section.section.other_projects_section.pb-0 {
     }
   }
 
-  .career_page .career_para {
-    letter-spacing: 0.8px;
-    line-height: 32px;
-    font-weight: 300;
-  }
 }
 
 @media (max-width: 767px) {
