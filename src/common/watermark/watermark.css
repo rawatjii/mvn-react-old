@@ -8,6 +8,7 @@
 
   &.left{
     left:10px;
+    text-align: left;
   }
 
   &.style1{

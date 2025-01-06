@@ -21,19 +21,23 @@ const ContactPage = ()=>{
                         <span className="icon">
                             <img src={CONFIG.IMAGE_URL + 'icons/mail.png'} alt="mvn envelope icon" className="img-fluid" />
                         </span>
-                        <a href="">info@mvngroup.in</a>
+                        <span className="txt">
+                            <a href="">info@mvngroup.in</a>
+                        </span>
                     </li>
                     <li>
                         <span className="icon">
                             <img src={CONFIG.IMAGE_URL + 'icons/call.png'} alt="mvn envelope icon" className="img-fluid" />
                         </span>
-                        <a href="">(+91) 799 6000 196</a>
+                        <span  className="txt">
+                            <a href="">(+91) 799 6000 196</a>
+                        </span>
                     </li>
                     <li>
                         <span className="icon">
                             <img src={CONFIG.IMAGE_URL + 'icons/location.png'} alt="mvn envelope icon" className="img-fluid" />
                         </span>
-                        MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157 | CIN:ACA-4678 | PAN:ABWFM8415E
+                        <span className="txt">MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157 | CIN:ACA-4678 | PAN:ABWFM8415E</span>
                     </li>
                 </ul>
             </Container>

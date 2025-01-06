@@ -3,7 +3,6 @@
 .typology_section {
     padding: 180px 0 !important;
     .images {
-        overflow: hidden;
         max-height: 340px;
         object-fit: cover;
 
@@ -31,13 +30,13 @@
 @media(min-width:1200px){
     .typology_section {padding: 100px 0 !important;}
     .location_map_section .locationMapContent .location_points .distance {font-size: 20px;padding: 4px 10px; }
-    .typology_section .images{max-height: 500px;height: 500px;}
-    .typology_section .images img { height: 100%; object-fit: cover; width: 100%;height: 460px;max-height:500px;object-fit: contain;}
+    .typology_section .images{max-height: 500px;height: 500px; display: table; margin: auto;}
+    .typology_section .images img { height: 100%; object-fit: cover; height: 460px;max-height:500px;object-fit: contain;}
 
     .typology_section .typology_content{position: absolute;right: 7%;top: 44%;width: 23%;padding: 70px 30px 40px; transform: translateY(-50%);min-height: 330px;}
     .typology_section .content-box {min-height: 230px;}
     .typology_section .typology-before-line{position: relative;}
-    .typology_section .typology_content::before { position: absolute;content: '';left: -100%;top: 10%;width: 100%;height: 100%;background: url('/src/frontend/assets/images/typologies/before-lines.svg') no-repeat;background-position: right;background-size: 170px; }
+    /* .typology_section .typology_content::before { position: absolute;content: '';left: -100%;top: 10%;width: 100%;height: 100%;background: url('/src/frontend/assets/images/typologies/before-lines.svg') no-repeat;background-position: right;background-size: 170px; } */
 
     .typology_section .desktop-view-typo-images {display: block !important;position: absolute;left: 10%;top: 50%;transform: translateY(-50%);}
     .typology_section .desktop-view-typo-images .typologies-images .image-1 {width: 220px;height: 170px;position: absolute;z-index: -1;left: 20%;top: -2%;}
@@ -56,7 +55,6 @@
     .typology_section .typology-before-line{position: relative;}
     /* .typology-before-line::before{position: absolute;content: '';left: -81%; top: 24%;transform: translateY(-50%);width: 90px;height: 1px;background: #404040;}
     .typology-before-line::after { position: absolute;content: ''; left: -48%; top: 55%;transform: translateY(-50%); width: 1px;height: 140px;background: #404040; } */
-    .typology_section .typology_content::before {position: absolute;content: '';left: -100%;top: 10%;width: 100%;height: 100%;background: url('/src/frontend/assets/images/typologies/before-lines.svg') no-repeat;background-position: right;background-size: 180px;}
     .typology_section .desktop-view-typo-images .typologies-images .image-2 {width: 250px;position: absolute;left: -10%;height: 300px;top: 50%;transform: translateY(-50%);}
     
 }
@@ -81,7 +79,7 @@
     .floor_plan_section .container {margin-top: 0px;}
     .floor_plan_section::before{ position: absolute;content: '';left: 0;top: 0;width: 100%;height: 100%;
         background: url('/src/frontend/assets/images/timeline/bg.webp') no-repeat;opacity: 0.2;}
-    .floor_plan_section .floor_plan_data{display: flex;justify-content: center;gap: 50px;padding: 40px 0 40px;}
+    .floor_plan_section .floor_plan_data{display: flex;justify-content: center;gap: 50px;padding: 40px 0 40px; position:relative;}
     .floor_plan_section .accordion-item {width: 30%;}
     .location_map_section .location_points {
         margin-bottom: 30px;

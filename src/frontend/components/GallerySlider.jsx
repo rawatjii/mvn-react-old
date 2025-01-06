@@ -5,6 +5,7 @@ import 'swiper/css/navigation';
 import Lightbox from "yet-another-react-lightbox";
 import "yet-another-react-lightbox/styles.css";
 import { Navigation } from 'swiper/modules';
+import Watermark from "../../common/watermark/Index";
 
 function GallerySlider({ data, slidesPerView, spaceBetween, navigation }) {
     const [open, setOpen] = useState(false);
@@ -37,6 +38,7 @@ function GallerySlider({ data, slidesPerView, spaceBetween, navigation }) {
             >
                 {images?.map((image, index) => (
                     <SwiperSlide key={index}>
+                        <Watermark className="left" />
                         <img
                             src={image.src}
                             alt={image.alt}

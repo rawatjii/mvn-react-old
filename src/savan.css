@@ -1164,7 +1164,7 @@ a.closebtn {
   .contact-us-section ul.contact_details {
     display: flex;
     align-items: center;
-    gap: 30px 0;
+    gap: 30px;
     justify-content: space-between;
     border-top: 1px solid #f4d96669;
     border-bottom: 1px solid #f4d96669;
@@ -2352,7 +2352,7 @@ section.section.enquire_section p {color: #dbcfcf; font-weight: 300;  font-size:
 .philosophy_section {.content  ul {display: grid;justify-content: center;gap: 5px 0px;}}
 
 .projects_section .plane_icon { display: block;}
-.swiper-slide img { display: block;  width: 100%; height: 330px;  object-fit: cover; object-fit: contain;}
+.swiper-slide img { display: block;  width: 100%; height: 220px;  object-fit: cover; object-fit: contain;}
 .media-news_offline { padding: 40px 20px;}
 .media-news_online{padding-bottom:20px}
 section#press-center{padding-top:25px}
@@ -2464,8 +2464,10 @@ p.text-center.career_para, .about_overview p {color: #cec7c7;}
 .mobile-view-box a.link-btn{text-align:center;width:fit-content;margin:0 auto;color:#ffd852;letter-spacing:1.5px;display:grid;padding:6px 20px;border-radius:5px;font-size:14px;margin-top: 20px;text-transform:uppercase}
 .media-event-content .play-icon {height: 40px;}
 
-.awa_card img   {padding: 15px;padding-right:0px;}
-.awa_card div:last-child { padding: 10px 15px;}
+.awa_card img   {padding: 15px;padding-right:0px; height: 110px;}
+.awa_card span{display:block; margin-bottom: 4px; text-align: left;}
+.awa_card div:last-child { padding: 10px 15px; flex-basis: 70%;}
+.awa_card p{font-size: 14px;}
 section.section.press-releases-container { padding-top: 40px;}
 section.section.enquire_form {padding-top: 40px;}
 .media_center .row {row-gap: 0px;}
@@ -2566,7 +2568,7 @@ section.section.other_projects_section.pb-0 {padding-top: 60px;}
 .projects_section .sec_title span {line-height: 24px;}
 .projects_section {.plane_icon {position: absolute;top: 9%;left: 12%;width: 87px;}}
 .flex-box h4{font-size:18px;}
-.micro_overview .counter-flex-box {width: 100%; margin-bottom: 30px;}
+.micro_overview .counter-flex-box {width: 100%; margin-bottom: 30px; gap: 30px;}
 .micro_overview .counter-heading {font-size: 14px; font-weight: 300; line-height: 24px;margin-bottom: 30px;}
 .slider-content {
   position: absolute;
@@ -2616,7 +2618,7 @@ section.section.other_projects_section.pb-0 {padding-top: 60px;}
 .flex-box:nth-of-type(2)::after {
   right: unset;
   width: 18px;
-  left: calc(100% + 15px);
+  left: calc(100% + 7px);
 }
 #scroll-wrapper {
   width: 100%!important;
@@ -2629,9 +2631,15 @@ section.section.other_projects_section.pb-0 {padding-top: 60px;}
 
 .section.peacock_section #scroll-wrapper {
   top: 0px !important;
+  margin-top: -80px;
 }
 .section.living_room_section #scroll-wrapper {
   top: 20px !important;
+  margin-top:0;
+}
+.section.party_section #scroll-wrapper {
+  top: 20px !important;
+  margin-top:0;
 }
 div#livingRoomSlidingDoor #scroll-wrapper {
   width: 100% !important;
@@ -2689,7 +2697,8 @@ section.section.micro_hero_section.p-0 div#scroll-wrapper-inner\ {
 .section.master-bed-room{
 
   #scroll-wrapper{
-    top: -130px !important;
+    top: -20px !important;
+    margin-top: 0;
   }
 }
 
@@ -2711,6 +2720,24 @@ section.section.our_brand_section .sec_title.text-center.color.style1{
   margin-bottom: 30px;
 }
 
+.timeline_section{
+
+  .timeline_content{
+
+    .single{
+
+      .thumbnail{
+
+        img{
+
+          height: 70px;
+          width: 70px;
+        }
+      }
+    }
+  }
+}
+
 
 }
 
@@ -2724,10 +2751,10 @@ section.section.our_brand_section .sec_title.text-center.color.style1{
 .counter-heading {
   font-size: 20px;
 }
-.typology_section .typology_content::before {
+/* .typology_section .typology_content::before {
 
   filter: brightness(100);
-}
+} */
 
 
 /*---------------------------- Media Query max-width 767 Max END--------------------------------------- */

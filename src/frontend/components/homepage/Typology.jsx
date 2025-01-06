@@ -17,7 +17,7 @@ import typo9 from "../../assets/images/typologies/penthouse/3.webp";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const Typology = ({onLoadComplete}) => {
+const Typology = ({ onLoadComplete }) => {
   const containerRef = useRef(null);
   const frameRefs = useRef([]);
   const isImagesLoaded = useRef(false);
@@ -27,6 +27,7 @@ const Typology = ({onLoadComplete}) => {
   const [loading, setLoading] = useState(true); // Loader state
   const [loadingComplete, setLoadingComplete] = useState(false); // State to track when all images are loaded
   const isMobile = window.innerWidth <= 768;
+  const isLaptop = window.innerWidth <= 1400;
 
   let totalFrames = isMobile ? 327 : 327;
   let segments = [
@@ -66,8 +67,8 @@ const Typology = ({onLoadComplete}) => {
   }, []);
 
   useEffect(() => {
-    if (loading || !loadingComplete ||images.length !== totalFrames) return;
-  
+    if (loading || !loadingComplete || images.length !== totalFrames) return;
+
     ScrollTrigger.create({
       trigger: containerRef.current,
       start: "top top",
@@ -79,7 +80,7 @@ const Typology = ({onLoadComplete}) => {
           Math.floor(self.progress * segments.length),
           segments.length - 1
         );
-  
+
         const segment = segments[segmentIndex];
         const segmentProgress =
           (self.progress - segmentIndex / segments.length) * segments.length;
@@ -88,27 +89,39 @@ const Typology = ({onLoadComplete}) => {
             Math.floor(segmentProgress * (segment.endFrame - segment.startFrame)),
           totalFrames - 1
         );
-  
+
         // Debugging output (optional)
         console.log("Frame Index:", frameIndex, "Progress:", self.progress);
-  
+
         // Show the current frame and hide others
         frameRefs.current.forEach((img, index) => {
           img.style.display = index === frameIndex ? "block" : "none";
         });
-  
+
         // Toggle content-box visibility
         contentRefs.current.forEach((el, i) => {
           el.style.display = i === segment.contentIndex ? "block" : "none";
         });
-  
+
         // Toggle typologies-images visibility
         imageContentRefs.current.forEach((el, i) => {
           el.style.display = i === segment.contentIndex ? "block" : "none";
         });
+
+        // Update typology_arrow top value based on segment
+        const typologyArrow = document.querySelector(".typology_arrow");
+        if (typologyArrow) {
+          let topValue;
+          if (isLaptop) {
+            topValue = segmentIndex === 0 ? 65 : segmentIndex === 1 ? 215 : 260;
+          } else {
+            topValue = segmentIndex === 0 ? 70 : segmentIndex === 1 ? 220 : 265;
+          }
+          typologyArrow.style.top = `${topValue}px`;
+        }
       },
     });
-  
+
     return () => {
       ScrollTrigger.getAll().forEach((trigger) => trigger.kill());
     };
@@ -130,24 +143,25 @@ const Typology = ({onLoadComplete}) => {
               src={img.src}
               alt={`Frame ${index}`}
               className="frame"
-              style={{ display: index === 0 ? "block" : "none",}}
+              style={{ display: index === 0 ? "block" : "none" }}
             />
           ))}
+
+<div className="typology_arrow">
+            <div className="line"></div>
+          </div>
         </div>
 
         {/* Content boxes */}
         <div className="typology_content">
+          {/* <div className="typology_arrow">
+            <div className="line"></div>
+          </div> */}
+
           <div className="typology-before-line">
-
-          <div class="diamond_img_strip">
-            <img src={PlaneIcon} class="img-fluid" alt="image" />
+            <div className="diamond_img_strip">
+              <img src={PlaneIcon} className="img-fluid" alt="image" />
             </div>
-
-            {/* <div className="typology_diamond_btn">
-              <img src={PlaneIcon} alt="mvn plane icon" />
-              <img src={PlaneIcon} alt="mvn plane icon" />
-              <img src={PlaneIcon} alt="mvn plane icon" />
-            </div> */}
 
             <div
               ref={(el) => (contentRefs.current[0] = el)}
@@ -191,7 +205,6 @@ const Typology = ({onLoadComplete}) => {
                 blending breathtaking vistas with unmatched sophistication.
               </p>
             </div>
-
           </div>
         </div>
 
@@ -201,9 +214,9 @@ const Typology = ({onLoadComplete}) => {
             className="typologies-images"
             style={{ display: "block" }}
           >
-              <img className="image-1" src={typo1} alt="mvn typlogy 1" />
-              <img className="image-2" src={typo2} alt="mvn typlogy 1" />
-              <img className="image-3" src={typo3} alt="mvn typlogy 1" />
+            <img className="image-1" src={typo1} alt="mvn typlogy 1" />
+            <img className="image-2" src={typo2} alt="mvn typlogy 1" />
+            <img className="image-3" src={typo3} alt="mvn typlogy 1" />
           </div>
 
           <div

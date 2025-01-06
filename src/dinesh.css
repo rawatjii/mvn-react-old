@@ -1020,16 +1020,6 @@ section.section.experience-section {
     margin-right: 20px;
   }
 
-  .contact-us-section ul.contact_details {
-    display: flex;
-    align-items: center;
-    gap: 30px 0;
-    justify-content: space-between;
-    border-top: 1px solid #f4d96669;
-    border-bottom: 1px solid #f4d96669;
-    margin-top: 30px;
-  }
-
   .contact-us-section li {
     gap: 20px 0;
     display: flex;

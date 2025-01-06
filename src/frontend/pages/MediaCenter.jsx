@@ -24,7 +24,7 @@ import newsIMG7 from "../assets/images/mediacenter/news-img-7.webp";
 import mediaGalleryImg1 from "../assets/images/projects/gallery_img1.webp";
 import mediaGalleryImg2 from "../assets/images/projects/gallery_img2.webp";
 import mediaGalleryImg3 from "../assets/images/projects/gallery_img3.webp";
-import mediaGalleryImg4 from "../assets/images/projects/gallery-img-5.jpg";
+import mediaGalleryImg4 from "../assets/images/projects/gallery-img-5.webp";
 import mediaGalleryImg5 from "../assets/images/projects/gallery-img-6.jpg";
 // import eventGalleryImg1 from '../assets/images/mediacenter/event-img-1.jpg'
 // import eventGalleryImg2 from '../assets/images/mediacenter/event-img-2.jpg'
@@ -128,10 +128,10 @@ function MediaCenter() {
         src: mediaGalleryImg4,
         alt: "Image 4",
       },
-      {
-        src: mediaGalleryImg5,
-        alt: "Image 5",
-      },
+      // {
+      //   src: mediaGalleryImg5,
+      //   alt: "Image 5",
+      // },
       {
         src: mediaGalleryImg1,
         alt: "Image 4",
@@ -148,10 +148,10 @@ function MediaCenter() {
         src: mediaGalleryImg4,
         alt: "Image 7",
       },
-      {
-        src: mediaGalleryImg5,
-        alt: "Image 6",
-      },
+      // {
+      //   src: mediaGalleryImg5,
+      //   alt: "Image 6",
+      // },
     ],
   };
 
@@ -360,7 +360,7 @@ function MediaCenter() {
 
                         <div>
                           <p>{item.title}</p>
-                          <div className="awa_posted d-flex justify-content-between align-items-center">
+                          <div className="awa_posted d-md-flex justify-content-between align-items-center">
                             <span className="text-capitalize">
                               <time>{item.postedDate}</time>
                             </span>

@@ -36,7 +36,7 @@ const images= [
   },  
   {
     asset:CONFIG.IMAGE_URL + 'renders/apartment/9_sm.webp',
-    watermark:'left',
+    watermark:'right',
     title:'Master Bedroom – Platinum',
   },
   {

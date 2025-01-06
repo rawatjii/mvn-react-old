@@ -354,7 +354,7 @@ const MicroHeader = ({ scrollToSection }) => {
                               <NavLink to="https://mvnmall.com/" target="_blank" onClick={() => toggleMenu("close")}>
                                 MVN Mall
                               </NavLink>
-                                <a href="javascript:void(0)"><span>New Launch</span></a>
+                                <span>New Launch</span>
                             </li>
                           </ul>
                           <h4>Bangalore</h4>

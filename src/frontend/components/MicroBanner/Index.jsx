@@ -53,9 +53,7 @@ const MicroBanner = ({bg, data})=>{
     <>
       <section className="section micro_banner">
         <Container>
-          <LazyLoad>
-            <img src={bg} alt="mvn-microbanner-bg" className="img-fluid microbanner_bg" />
-          </LazyLoad>
+        <img src={bg} alt="mvn-microbanner-bg" className="img-fluid microbanner_bg" />
           <h2 ref={titleRef} className="microTitle" >{data.title}</h2>
         </Container>
       </section>

@@ -154,7 +154,7 @@ const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
       <>
           <div ref={containerRef} className="frames_content">
             <div className="image_col position-relative">
-              <Watermark className={isMobile ? 'style1' : 'style2'} />
+              {/* <Watermark className={isMobile ? 'style1' : 'style2'} /> */}
 
               <canvas
                   ref={canvasRef}

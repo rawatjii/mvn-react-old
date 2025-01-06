@@ -90,7 +90,7 @@ export default function NoPolutionZone({ data }) {
                 ref={(el) => (sectionsRef.current[i] = el)}
               >
                 <div className="bg">
-                <Watermark />
+                <Watermark className="left" />
                 </div>
                 <div className="content">
                   <span className="am-name">{amenity.title}</span>
@@ -104,7 +104,7 @@ export default function NoPolutionZone({ data }) {
                 <div className="card center" onClick={() => setIndex(index)}>
                   <img src={CONFIG.IMAGE_URL + 'no-pollution/'+single.imgSrc} alt={`mvn connection ${index}`} className="img-fluid d-md-none"  />
                   <img src={CONFIG.IMAGE_URL + 'no-pollution/'+single.imgSrc} alt={`mvn connection ${index}`} className="img-fluid d-none d-md-block"  />
-                  <Watermark />
+                  <Watermark  />
                 </div>
                 <div className="content">
                   <span className="am-name">{single.title}</span>

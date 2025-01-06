@@ -181,6 +181,17 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
             `}
           </noscript>
 
+          <script async src="https://www.googletagmanager.com/gtag/js?id=AW-11490416244"></script>
+          <script>
+            {`
+              window.dataLayer = window.dataLayer || [];
+              function gtag(){dataLayer.push(arguments);}
+              gtag('js', new Date());
+
+              gtag('config', 'AW-11490416244');
+            `}
+          </script>
+
       </Helmet>
 
       <MicroHeader scrollToSection={scrollToSection} />
@@ -198,7 +209,7 @@ const MicroPageGurgaon1 = ({ data, loadingCount, setLoadingCount }) => {
           <LargeElevationSection data={data.LargeElevationSection} />
           <Container>
             <div className="about">
-              <CustomCard className="px-0" title="ΑΝ ΕΡΙΤOME OF CONTEMPORARY ELEGANCE" extra="THIS ARCHITECTURAL MASTERPIECE SEAMLESSLY BLENDS CUTTING-EDGE DESIGN WITH NEW-AGE SOPHISTICATION. EVERY CURVE, EVERY DETAIL, IS METICULOUSLY CRAFTED TO ELEVATE YOUR LIVING EXPERIENCE. EMBRACE A  RESIDENCE WHERE INNOVATION MEETS BEAUTY, CREATING A LANDMARK OF LUXURIOUS URBAN LIVING. YOUR NEW HOME AWAITS." />
+              <CustomCard className="px-0" title="ΑΝ ΕΡΙΤOME OF CONTEMPORARY ELEGANCE" desc="This architectural masterpiece seamlessly blends cutting-edge design with new-age sophistication. Every curve, every detail, is meticulously crafted to elevate your living experience. Embrace a  residence where innovation meets beauty, creating a landmark of luxurious urban living. Your new home awaits." />
             </div>
           </Container>
           <div ref={(el) => (sectionRefs.current.LIVINGROOM = el)}>

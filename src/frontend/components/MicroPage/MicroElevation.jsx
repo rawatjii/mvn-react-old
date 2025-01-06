@@ -28,7 +28,7 @@ const images = [
       desktop:CONFIG.IMAGE_URL + 'renders/elevation/2.webp',
       mobile:CONFIG.IMAGE_URL + 'renders/elevation/2_sm.webp',
     },
-    watermark: 'left'
+    watermark: 'right'
   },
   {
     assets: {

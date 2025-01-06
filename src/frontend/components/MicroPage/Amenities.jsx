@@ -172,7 +172,7 @@ export default function Amenities({ data }) {
           ref={(el) => (sectionsRef.current[i] = el)}
         >
           <div className="bg">
-            <Watermark />
+            <Watermark className="left" />
           </div>
           <div className="content">
             <span className="am-name">{amenity.name}</span>

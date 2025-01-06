@@ -41,7 +41,7 @@ function PressRelease({ data, slidesPerView, spaceBetween }) {
         </div>
     <div>
         <p> {item.presscontent}</p>
-        <div className=" awa_posted d-flex justify-content-between align-items-center"><span class="text-capitalize"><time>{item.EventDate}   </time></span>
+        <div className=" awa_posted d-md-flex justify-content-between align-items-center"><span class="text-capitalize"><time>{item.EventDate}   </time></span>
             <p class="text-capitalize  " onClick={() => window.open(item.pdf, "_blank")}>View Details</p>
         </div>
     </div>
