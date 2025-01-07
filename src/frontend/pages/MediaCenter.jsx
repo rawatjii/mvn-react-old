@@ -66,7 +66,7 @@ function MediaCenter() {
   const desRefs = useRef([]);
 
   const breadcrumbs = {
-    title: "Media Center",
+    title: "Media Centre",
     content: "Discover the Pinnacle of Luxury Living",
     links: [
       {
@@ -74,7 +74,7 @@ function MediaCenter() {
         link: "/",
       },
       {
-        name: "Media Center",
+        name: "Media Centre",
       },
     ],
   };
