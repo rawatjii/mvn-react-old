@@ -60,14 +60,22 @@ const OurTeam = () => {
     <section className="our-team-section">
       <Container>
         {/* Row for the first three members */}
+
+        <div className="heading_div ">
+          <img src={headingIconImg} alt="mvn overview image" className="img-fluid title_plane1"/>
+          <h4 className="title title_style1 text-center">
+            People Behind
+          </h4>
+        </div>
+
         <Row>
-          <Col xs={12}>
-            <SecTitle className="text-center color style1 mb_30">
+          {/*<Col xs={12}>
+            /~ <SecTitle className="text-center color style1 mb_30">
               <img src={headingIconImg} alt="mvn timeline icon" className="img-fluid headingIcon"/>
               <h4 className="sec_title title">People Behind</h4>
-            </SecTitle>
+            </SecTitle> ~/
             
-          </Col>
+          </Col>*/}
           {OurTeamData.slice(0, 3).map((member) => (
             <Col xs={12} md={4} lg={4} key={member.id}>
               <div className="ourteamCard">

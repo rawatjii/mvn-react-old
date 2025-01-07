@@ -105,19 +105,15 @@ const OurBrand = () => {
 
 
       <Container>
-        <SecTitle className="text-center color style1">
-        <img src={headingIconImg} alt="mvn brand heading icon" className="img-fluid headingIcon"/>
-          <h4 ref={titleRef} className="title">Our Brand Ethos</h4>
-        </SecTitle>
+        <div className="heading_div  mb_60 mb_sm_30">
+          <img src={headingIconImg} alt="mvn brand heading icon" className="img-fluid title_plane1"/>
+          <h4 ref={titleRef} className="title title_style1 text-center">Our Brand Ethos</h4>
+        </div>
 
         <div className="brand_content">
           <Row>
           <div className="inner-ethos">
             {brandData?.map((item, index) => (
-
-
-
-
          
                 <div key={index}   className="box">
                 <div ref={(el) => (dataRefs.current[index] = el)} className="box-flex">

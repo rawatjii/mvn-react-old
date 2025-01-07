@@ -122,12 +122,13 @@ const OtherProjects = ({ data, title, subTitle, mobContent=12 }) => {
   return (
     <section className="section other_projects_section pb-0">
       <Container>
-        <SecTitle className="text-center color style1">
-          <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid headingIcon" />
-          <h4 ref={titleRef} className="title">
+
+        <div className="heading_div mb_60 mb_sm_30">
+          <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+          <h4 ref={titleRef} className="title title_style1 text-center">
             Other Verticals
           </h4>
-        </SecTitle>
+        </div>
 
         <Row>
           {otherProjects?.map((item, index) => (

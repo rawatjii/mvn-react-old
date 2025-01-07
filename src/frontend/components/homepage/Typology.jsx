@@ -130,9 +130,13 @@ const Typology = ({ onLoadComplete }) => {
   return (
     <>
       <section ref={containerRef} className="section typology_section">
-        <div className="sec_title text-center color style1">
-          <h4 className="title">Typologies</h4>
+        <div className="heading_div mb_60 mb_sm_30" >
+          <h4 className="title title_style1 text-center">Typologies</h4>
         </div>
+        
+        {/* <div className="sec_title text-center color style1">
+          <h4 className="title">Typologies</h4>
+        </div> */}
 
         {/* Images section */}
         <div className="images">

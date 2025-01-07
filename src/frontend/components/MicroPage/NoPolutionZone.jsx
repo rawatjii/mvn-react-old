@@ -78,8 +78,12 @@ export default function NoPolutionZone({ data }) {
     <>
       <div className={!isMobile ? 'main_am' : 'amenities_section main_am'}>
         <div className="cards-container">
-          <div className="sec_title text-center color style1">
+          {/* <div className="sec_title text-center color style1">
             <h4 className="title">Connections with MVN Mall</h4>
+          </div> */}
+
+          <div className="heading_div mb_60 mb_sm_30" >
+            <h4 className="title title_style1 text-center">Connections with MVN Mall</h4>
           </div>
 
           {!isMobile ? (
@@ -94,7 +98,7 @@ export default function NoPolutionZone({ data }) {
                 </div>
                 <div className="content">
                   <span className="am-name">{amenity.title}</span>
-                  <p className="desc">{amenity.desc}</p>
+                  <p className="desc des_style1 text-center mt-2">{amenity.desc}</p>
                 </div>
               </section>
             ))
@@ -116,7 +120,7 @@ export default function NoPolutionZone({ data }) {
                         </p>
                       ))
                     ) : (
-                      <p className="desc">{single.desc}</p>
+                      <p className="desc des_style1 text-center mt-2">{single.desc}</p>
                     )}
                   </p>
                 </div>

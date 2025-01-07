@@ -101,11 +101,15 @@ const MicroFloorPlan = ({ data }) => {
 
   return (
     <section className="section floor_plan_section">
-      <SecTitle className="text-center color style1">
+      <div className="heading_div mb_60 mb_sm_30">
+        <h4 className="title title_style1 text-center">{title}</h4>
+      </div>
+
+      {/* <SecTitle className="text-center color style1">
         <h4 ref={titleRef} className="title">
           {title}
         </h4>
-      </SecTitle>
+      </SecTitle> */}
       <Container>
         {isDesktop ? (
           <div className="floor_plan_data">

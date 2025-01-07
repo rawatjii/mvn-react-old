@@ -49,19 +49,19 @@ const ContactUs = () => {
     };
   }, []);
 
-  useEffect(() => {
-    if (newLoadingCount === 100) {
-      const timer = setTimeout(() => {
-        setNewLoadingCount(101);
-      }, 500); // 1 seconds delay before removing InitialLoading
+  // useEffect(() => {
+  //   if (newLoadingCount === 100) {
+  //     const timer = setTimeout(() => {
+  //       setNewLoadingCount(101);
+  //     }, 500); // 1 seconds delay before removing InitialLoading
 
-      return () => clearTimeout(timer);
-    }
-  }, [newLoadingCount]);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [newLoadingCount]);
 
-  if (newLoadingCount <= 100) {
-    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
-  }
+  // if (newLoadingCount <= 100) {
+  //   return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
+  // }
 
   return (
     <>

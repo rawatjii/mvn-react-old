@@ -9,7 +9,7 @@ import Layout from "./frontend/components/Layout.jsx";
 const Homepage = React.lazy(() => import("./frontend/pages/Homepage.jsx"));
 // const Homepage = React.lazy(() =>
 //   new Promise((resolve) =>
-//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 50000)
+//     setTimeout(() => resolve(import("./frontend/pages/Homepage.jsx")), 5000)
 //   )
 // );
 const AboutUs = React.lazy(() => import("./frontend/pages/AboutUs.jsx"));

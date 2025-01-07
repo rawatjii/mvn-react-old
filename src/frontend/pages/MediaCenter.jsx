@@ -241,19 +241,19 @@ function MediaCenter() {
     setNewLoadingCount(Number(localStorage.getItem('count')));
   }, [localStorage.getItem('count')]);
 
-  useEffect(() => {
-    if (newLoadingCount === 100) {
-      const timer = setTimeout(() => {
-        setNewLoadingCount(101);
-      }, 500); // 1 seconds delay before removing InitialLoading
+  // useEffect(() => {
+  //   if (newLoadingCount === 100) {
+  //     const timer = setTimeout(() => {
+  //       setNewLoadingCount(101);
+  //     }, 500); // 1 seconds delay before removing InitialLoading
 
-      return () => clearTimeout(timer);
-    }
-  }, [newLoadingCount]);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [newLoadingCount]);
 
-  if (newLoadingCount <= 100) {
-    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
-  }
+  // if (newLoadingCount <= 100) {
+  //   return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
+  // }
 
   return (
     <Layout>
@@ -264,7 +264,14 @@ function MediaCenter() {
             <div className="micro_data">
               <div className="content_col position-relative page-header-main-heading">
                 <Container>
-                  <SecTitle className="text-center color style1 mb_30">
+                  <div className="heading_div ">
+                    <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+                    <h4 ref={titleRef} className="title title_style1 text-center">
+                    Latest News
+                    </h4>
+                  </div>
+
+                  {/* <SecTitle className="text-center color style1 mb_30">
                     <img
                       src={headingIconImg}
                       alt="mvn media center image"
@@ -273,7 +280,7 @@ function MediaCenter() {
                     <h4 ref={titleRef} className="title">
                       Latest News
                     </h4>
-                  </SecTitle>
+                  </SecTitle> */}
     
                 </Container>
               </div>
@@ -283,14 +290,21 @@ function MediaCenter() {
             <div className="row">
               <div className="col-sm-6 px-md-0">
 
-              <SecTitle className="text-center color style1">
+                <div className="heading_div mb_60 mb_sm_30">
+                  <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+                  <h4 className="title title_style1 text-center">
+                  Offline Media News
+                  </h4>
+                </div>
+
+              {/* <SecTitle className="text-center color style1">
                     <img
                       src={headingIconImg}
                       alt="mvn plane icon"
                       className="img-fluid headingIcon"
                     />
                     <h4 className="title">Offline Media News</h4>
-                  </SecTitle>
+                  </SecTitle> */}
 
 
 
@@ -339,14 +353,21 @@ function MediaCenter() {
 
               <div className="col-sm-6 px-md-0">
                 <div className="media-news_online">
-                  <SecTitle className="text-center color style1">
+                  <div className="heading_div mb_60 mb_sm_30">
+                    <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+                    <h4 className="title title_style1 text-center">
+                    Online Media News
+                    </h4>
+                  </div>
+                  
+                  {/* <SecTitle className="text-center color style1">
                     <img
                       src={headingIconImg}
                       alt="mvn heading image"
                       className="img-fluid headingIcon"
                     />
                     <h4 className="title">Online Media News</h4>
-                  </SecTitle>
+                  </SecTitle> */}
 
                   {onlineNews &&
                     onlineNews.map((item, index) => (
@@ -485,14 +506,21 @@ function MediaCenter() {
 
         <section className="section press-releases-container">
           <div className="container">
-            <SecTitle className="text-center color style1 mb_30">
+            <div className="heading_div mb_60 mb_sm_30">
+              <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+              <h4 className="title title_style1 text-center">
+              Press Releases
+              </h4>
+            </div>
+
+            {/* <SecTitle className="text-center color style1 mb_30">
               <img
                 src={headingIconImg}
                 alt="mvn press heading image"
                 className="img-fluid headingIcon"
               />
               <h4 className="title">Press Releases</h4>
-            </SecTitle>
+            </SecTitle> */}
 
             <PressRelease
               data={pressReleaseData}
@@ -503,9 +531,16 @@ function MediaCenter() {
         </section>
         <section className="section media-gallery">
           <div className="container">
-            <SecTitle className="text-center color style1 mb_30">
+            <div className="heading_div mb_60 mb_sm_30">
+              <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+              <h4 className="title title_style1 text-center">
+                Gallery
+              </h4>
+            </div>
+
+            {/* <SecTitle className="text-center color style1 mb_30">
               <h4 className="title">GALLERY</h4>
-            </SecTitle>
+            </SecTitle> */}
             <GallerySlider
               data={ourGallery}
               slidesPerView={3}
@@ -516,9 +551,17 @@ function MediaCenter() {
         </section>
         <section className="section media-events">
           <div className="container">
-            <div className="sec_title text-center color style1 mb_30">
-              <h4 className="title">OUR EVENTS</h4>
+            <div className="heading_div mb_60 mb_sm_30">
+              <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+              <h4 className="title title_style1 text-center">
+              OUR EVENTS
+              </h4>
             </div>
+
+            {/* <div className="sec_title text-center color style1 mb_30">
+              <h4 className="title">OUR EVENTS</h4>
+            </div> */}
+            
             <div className="row">
               {ourEvents &&
                 ourEvents.map((item, index) => (

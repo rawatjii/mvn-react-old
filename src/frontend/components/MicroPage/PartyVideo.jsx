@@ -130,7 +130,7 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
           </div>
           <Container>
             <div className="about">
-              <CustomCard title={title} desc={desc} />
+              <CustomCard className="px-0" title={title} desc={desc} />
             </div>
           </Container>
         </>

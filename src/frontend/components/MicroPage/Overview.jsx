@@ -87,12 +87,12 @@ const MicroOverview = ({ data }) => {
           <div className="aboutUs-box">
             {desc && Array.isArray(desc) ? (
               desc.map((el, i) => (
-                <p className="desc" key={`desc-${i}`}>
+                <p className="desc des_style1 text-center" key={`desc-${i}`}>
                   {el}
                 </p>
               ))
             ) : (
-              <p>{desc}</p>
+              <p className="des_style1 text-center">{desc}</p>
             )}
           </div>
 
@@ -119,7 +119,7 @@ const MicroOverview = ({ data }) => {
           <span className="bar"></span>
         </div>
 
-        <p className="rera-number">RERA Registration no : RC/REP/HARERA/GGM/889/621/2024/116</p>
+        <p className="rera-number des_style1 text-center">RERA Registration no : RC/REP/HARERA/GGM/889/621/2024/116</p>
       </Container>
     </section>
   );

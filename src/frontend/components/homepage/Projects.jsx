@@ -149,10 +149,10 @@ const Projects = () => {
               <img
                 src={planeIcon}
                 alt="mvn-plane-icon"
-                className="img-fluid plane_icon"
+                className="img-fluid title_plane1"
               />
-              <h4 className="sec_title title text-uppercase">Explore Our Projects</h4>
-              <article className="desc">MVN Infrastructure introduces MVN Aero One Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway.</article>
+              <h4 className="title title_style1 text-center">Explore Our Projects</h4>
+              <article className="des_style1 text-center">MVN Infrastructure introduces MVN Aero One Residencies, the largest ultra-luxury apartments in Delhi NCR, located at the 22-kilometer stone on Dwarka Expressway.</article>
             </div>
 
             <div className="project_div d-flex flex-wrap">

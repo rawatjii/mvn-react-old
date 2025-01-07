@@ -97,7 +97,7 @@
   --futura_bt_medium: 'Futura_Bt_medium';
   /* --theme_primary_color: #f4d966; */
   --theme_primary_color: #e6d49c;
-  --theme_primary_dark_color: #d3be7a;
+  --theme_primary_dark_color: #dfb772;
   /* --theme_primary_dark_color: #8b5e10; */
   --theme_secondary_color: #0158c7;
   --theme_secondary_dark_color: #003f8f;
@@ -612,6 +612,44 @@ a {
   position: absolute;
   width: 100%;
   min-height: 100%;
+}
+
+.title_plane1{
+  height: 50px;
+  width: auto;
+  margin: 0 auto;
+  margin-bottom: 20px;
+  display: table;
+}
+
+.title_style1{
+
+  font-size: 24px;
+  color: var(--theme_primary_color);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  margin-bottom: 30px;
+  width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.des_style1{
+
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #c1c2c1;
+}
+
+.mb_30{
+
+  margin-bottom:30px;
+}
+
+.mb_60{
+
+  margin-bottom:60px;
 }
 
 
@@ -1298,7 +1336,7 @@ a {
   .desc{margin-top: 20px; font-size: 15px; letter-spacing: 1px; color: #c1c2c1;}
   .box_with_overlay_in{position: relative; padding-right: 25px;}
   .abs_div{position: absolute; left: 0; right: 0; top: 0; bottom: 0; height: 100%; background: rgb(0 0 0 / 82%); color: var(--theme_primary_color); display: grid; place-content: center; text-align: center;
-    .title{display: block; font-size: 25px; font-family: 'Tinos'; letter-spacing: 1px;}
+    .title{display: block; font-size: 25px; font-family: var(--tinos_font); letter-spacing: 1px;}
     .pro_name{font-size: 35px; font-weight: 100;}
   }
   .project_div:not(:last-child){margin-bottom: 25px;}
@@ -1467,12 +1505,8 @@ a {
   }
 
   p {
-    text-align: center;
-    font-size: 15px;
     margin: 40px auto 0;
-    letter-spacing: 1px;
     max-width: 50%;
-    color: #c1c2c1;
   }
 }
 
@@ -2664,7 +2698,7 @@ footer {
     width: 100%;
   }
 
-  .desc {
+  /* .desc {
 
     margin: 0;
     font-size: 15px;
@@ -2675,7 +2709,7 @@ footer {
     letter-spacing: 0.8px;
     line-height: 28px;
     color: #c3c3c3;
-  }
+  } */
 
   .bar {
     height: 1px;
@@ -3896,6 +3930,10 @@ footer {
 
 @media(max-width:767px) {
 
+  .mb_sm_30{
+    margin-bottom:30px;
+  }
+
   .p_sm_0{
     padding:0!important;
   }
@@ -3913,13 +3951,37 @@ footer {
     display: block;
   }
 
+  .container{
+    padding-left:20px;
+    padding-right:20px;
+  }
+
   p,
   li {
     font-size: 14px;
   }
 
-  h4.title{
-    font-size:16px;
+  .des_style1{
+
+    font-size:13px;
+  }
+
+  .title_plane1{
+
+    margin-bottom: 15px;
+  }
+
+  .title_style1{
+    font-size: 20px;
+    margin-bottom: 20px;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  h4.title::after{
+    width: 50px;
+    height: 50px;
   }
 
   .sec_title{
@@ -3938,6 +4000,14 @@ footer {
     .breadcrumb{
 
       justify-content: center;
+    }
+  }
+
+  .inner_section{
+
+    .micro_content{
+
+      padding:40px 0;
     }
   }
 
@@ -3986,6 +4056,7 @@ footer {
   /* header */
 
   .navbar {
+    padding: 15px 0px;
 
     .right{
 
@@ -4154,7 +4225,7 @@ footer {
     .sec_title{margin-top: 27px !important;}
     .abs_div {
       .title{font-size: 20px;}
-      .pro_name {font-size: 18px; font-weight: 400; margin: 0;}
+      .pro_name {font-size: 22px; font-weight: 300; margin: 0; letter-spacing: 1px;}
     }
     .desc{font-size: 15px;}
     .img_bg{height: auto;}
@@ -4514,7 +4585,8 @@ footer {
 
   section.typology_section{
 
-    padding-top:100px;
+    padding:60px 0!important;
+    padding-bottom: 0 !important;
 
     .sec_title{
 
@@ -4770,6 +4842,11 @@ footer {
   .awa_card div:first-child{
 
     flex-basis: 30%;
+  }
+
+  .blog_page .blog-detail-page-heading{
+
+    font-size: 18px;
   }
 
 }
@@ -5101,7 +5178,7 @@ footer {
 
   .am-name {
     /* text-shadow: 1px 1px 3px black; */ z-index: 1;font-size: 24px;  letter-spacing: 2px;  text-transform: uppercase;color: var(--theme_primary_color);}
-  .desc{margin:0; color: #333;  line-height: 20px; margin-top: 10px;}
+  /* .desc{margin:0; color: #333;  line-height: 20px; margin-top: 10px;} */
   .media-event-content .event-video-banner {width: 94%;height: 303px;}
   .media-event-content .play-icon { height: 48px;}
   .media-event-content a {display: block;}

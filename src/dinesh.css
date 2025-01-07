@@ -247,10 +247,6 @@ img.img-fluid.headpage-icon {
   object-fit: cover;
 }
 
-h4.title {
-  font-size: 24px ;
-}
-
 .brand_bg {
   opacity: 0.15 !important;
 }
@@ -301,9 +297,6 @@ section.section.our_brand_section .container {
 
 .oppotunities .content p {
   text-align: left;
-  /* line-height: 28px; */
-  letter-spacing: 1px;
-  color: #c1c2c1;
 }
 
 .oppotunities .content .job_mail p,
@@ -1339,11 +1332,6 @@ section.section.other_projects_section.pb-0 {
     }
   }
 
-  .our_team_section h4.title {
-    margin-bottom: 0px;
-    line-height: 0;
-    padding-bottom: 0px;
-  }
 
   .other_projects_section .other-project-img {
     height: 350px;

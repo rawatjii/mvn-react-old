@@ -51,10 +51,14 @@ const MvnMall = () => {
         {isMobile ? (
           <>
             <Container>
-              <SecTitle className="text-center color style1">
+              <div className="heading_div mb_60 mb_sm_30">
+                <h4 className="title title_style1 text-center">MVN Mall</h4>
+              </div>
+
+              {/* <SecTitle className="text-center color style1">
                 <h4 className="title">MVN Mall</h4>
-              </SecTitle>
-              <p className="desc">Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
+              </SecTitle> */}
+              <p className="des_style1 text-center mb_20">Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
             </Container>  
             <div className="image_animation">
               <img
@@ -67,11 +71,11 @@ const MvnMall = () => {
           </>
         ) : (
           <Container>
-            <SecTitle className="text-center color style1">
-              <h4 className="title">MVN Mall</h4>
-            </SecTitle>
+            <div className="heading_div mb_60 mb_sm_30">
+                <h4 className="title title_style1 text-center">MVN Mall</h4>
+              </div>
 
-            <p className="desc">Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
+            <p className="des_style1 text-center mb_40">Experience a pollution-free haven at MVN's iconic masterpiece, where every breath you take is purified by advanced air filtration systems. Nestled above MVN mall, everything you need—from gourmet dining to designer boutiques and private cinemas—is just an elevator ride away. This is a sanctuary where luxury and convenience come together, offering you everything at your doorstep, so you never need to leave.</p>
 
               <div className="row">
                 <div className="col-sm-12 col-md-6 col-lg-6">

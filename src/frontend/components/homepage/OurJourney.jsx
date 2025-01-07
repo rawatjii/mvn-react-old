@@ -125,13 +125,13 @@ const OurJourney = () => {
       </LazyLoad>
 
       <Container>
-        <SecTitle className="text-center color style2">
-          <img src={headingIconImg} alt="mvn infrastructure heading icon" className="img-fluid headingIcon" />
-          <h4 ref={titleRef} className="title">
+        <div className="heading_div mb_60 mb_sm_30">
+          <img src={headingIconImg} alt="mvn infrastructure heading icon" className="img-fluid title_plane1" />
+          <h4 ref={titleRef} className="title title_style1 text-center">
             {/* <span>Our Infrastructure </span> */}
             Our Infrastructure Real Estate Journey
           </h4>
-        </SecTitle>
+        </div>
 
         <ul ref={journeyRef} className="journey_content">
           <div className="plane">

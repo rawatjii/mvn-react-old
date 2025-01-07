@@ -41,30 +41,37 @@ function Blog() {
     ],
   };
 
-  useEffect(() => {
-    if (newLoadingCount === 100) {
-      const timer = setTimeout(() => {
-        setNewLoadingCount(101);
-      }, 500); // 1 seconds delay before removing InitialLoading
+  // useEffect(() => {
+  //   if (newLoadingCount === 100) {
+  //     const timer = setTimeout(() => {
+  //       setNewLoadingCount(101);
+  //     }, 500); // 1 seconds delay before removing InitialLoading
 
-      return () => clearTimeout(timer);
-    }
-  }, [newLoadingCount]);
+  //     return () => clearTimeout(timer);
+  //   }
+  // }, [newLoadingCount]);
 
-  if (newLoadingCount <= 100) {
-    return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
-  }
+  // if (newLoadingCount <= 100) {
+  //   return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
+  // }
   
 
   return (
     <Layout>
-      <div className="blog_page" ref={containerRef} >
+      <div className="blog_page inner_section" ref={containerRef} >
         <MicroBanner bg={BlogImg} data={breadcrumbs} />
         <div className="micro_content">
           <div className="micro_data">
             <div className="content_col position-relative page-header-main-heading">
               <Container>
-                <SecTitle className="text-center color style1 mb_30">
+                <div className="heading_div mb_sm_30">
+                  <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+                  <h4 ref={titleRef} className="title title_style1 text-center">
+                  Perspectives That Redefine: Welcome to Our Blogs
+                  </h4>
+                </div>
+
+                {/* <SecTitle className="text-center color style1 mb_30">
                   <img
                     src={headingIconImg}
                     alt="mvn blog image"
@@ -73,7 +80,7 @@ function Blog() {
                   <h4 ref={titleRef} className="title">
                     Perspectives That Redefine: Welcome to Our Blogs
                   </h4>
-                </SecTitle>
+                </SecTitle> */}
                 {/* <p
                 className="text-center career_para"
                 ref={(el) => (desRefs.current[0] = el)}
@@ -86,8 +93,8 @@ function Blog() {
               </Container>
             </div>
           </div>
-        </div>
-        <div className="blogs_content mb-5">
+
+          <div className="blogs_content mb-5">
           <div className="container">
             <div className="row row-gap-3">
               {blogData &&
@@ -128,6 +135,8 @@ function Blog() {
             </div>
           </div>
         </div>
+        </div>
+        
         
       </div>
     </Layout>

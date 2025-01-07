@@ -51,23 +51,23 @@ function Career() {
         setNewLoadingCount(Number(localStorage.getItem('count')));
     }, [localStorage.getItem('count')]);
 
-    useEffect(() => {
-        if (newLoadingCount === 100) {
-          const timer = setTimeout(() => {
-            setNewLoadingCount(101);
-          }, 500); // 1 seconds delay before removing InitialLoading
+    // useEffect(() => {
+    //     if (newLoadingCount === 100) {
+    //       const timer = setTimeout(() => {
+    //         setNewLoadingCount(101);
+    //       }, 500); // 1 seconds delay before removing InitialLoading
     
-          return () => clearTimeout(timer);
-        }
-      }, [newLoadingCount]);
+    //       return () => clearTimeout(timer);
+    //     }
+    //   }, [newLoadingCount]);
 
-    if (newLoadingCount <= 100) {
-        return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
-    }
+    // if (newLoadingCount <= 100) {
+    //     return <InitialLoading loadingCount={newLoadingCount} setLoadingCount={setNewLoadingCount} fast="true" second="true" />;
+    // }
     
     return (
         <Layout>
-            <div className='career_page'>
+            <div className='career_page inner_section'>
 
             <MicroBanner bg={CareerImg} data={breadcrumbs} />
 
@@ -78,13 +78,20 @@ function Career() {
 
 
                             <Container>
-                                <SecTitle className="text-center color style1 mb_30">
+                                <div className="heading_div mb_60 mb_sm_30">
+                                    <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" />
+                                    <h4 ref={titleRef} className="title title_style1 text-center">
+                                    Talent Management
+                                    </h4>
+                                </div>
+
+                                {/* <SecTitle className="text-center color style1 mb_30">
                                     <img src={headingIconImg} alt="mvn career image" className="img-fluid headpage-icon" />
                                     <h4 ref={titleRef} className="title">
                                         Talent Management
                                     </h4>
-                                </SecTitle>
-                                <p className='text-center career_para' ref={(el) => (desRefs.current[0] = el)}>
+                                </SecTitle> */}
+                                <p className='des_style1 text-center' ref={(el) => (desRefs.current[0] = el)}>
                                 Our Human Resources team is dedicated to attracting, nurturing, and retaining top talent, ensuring the right individuals are in the right roles to drive the company forward. We prioritize skills, passion, and commitment to achieving our shared goals.
                                 </p>
 
@@ -133,7 +140,7 @@ function Career() {
                                     <div className="content-half h-100">
                                         <div>
                                             <h2>Work Environment</h2>
-                                            <p>At MVN, we cultivate a culture of collaboration, innovation, and inclusivity, where every individual’s voice is valued and every contribution matters. We believe in fostering a positive, dynamic work environment that encourages personal and professional growth.
+                                            <p className='des_style1'>At MVN, we cultivate a culture of collaboration, innovation, and inclusivity, where every individual’s voice is valued and every contribution matters. We believe in fostering a positive, dynamic work environment that encourages personal and professional growth.
                                             </p>
                                         </div>
 
@@ -153,7 +160,7 @@ function Career() {
                                         <div className="gd-inner h-100 d-grid align-items-center">
                                             <div>
                                                 <h2>Employee Growth</h2>
-                                                <p>We are committed to the continuous development of our people, providing opportunities for learning, mentorship, and skill enhancement. Our focus is on empowering employees to reach their fullest potential, both personally and professionally.
+                                                <p className='des_style1'>We are committed to the continuous development of our people, providing opportunities for learning, mentorship, and skill enhancement. Our focus is on empowering employees to reach their fullest potential, both personally and professionally.
                                                 </p>
                                             </div>
                                         </div>
@@ -179,7 +186,7 @@ function Career() {
                                         <div className="gd-inner h-100 d-grid align-items-center">
                                             <div>
                                                 <h2>Rewards & Recognition</h2>
-                                                <p>We celebrate achievements and milestones, ensuring our employees’ hard work and dedication are recognized and rewarded. Through tailored incentives and acknowledgment, we motivate our team to strive for excellence.
+                                                <p className='des_style1'>We celebrate achievements and milestones, ensuring our employees’ hard work and dedication are recognized and rewarded. Through tailored incentives and acknowledgment, we motivate our team to strive for excellence.
                                                 </p>
                                             </div>
                                         </div>
@@ -205,7 +212,7 @@ function Career() {
                                     <div className="content-half h-100">
                                         <div>
                                             <h2>Life At MVN</h2>
-                                            <p>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being.</p>
+                                            <p className='des_style1'>Life at MVN is all about balance, collaboration, and growth. We offer a supportive and vibrant workplace where employees thrive, enjoy meaningful work, and are encouraged to achieve both professional success and personal well-being.</p>
                                         </div>
                                     </div>
                                     {/* <div className="arrow-g">
@@ -227,7 +234,7 @@ function Career() {
                         <div className="left text-center mx-auto">
                             <h2 className='title'>Shape Your Future with MVN</h2>
                             <div className='content'>
-                                    <p>At MVN, your career isn’t just a job—it’s a journey of growth, learning, and limitless opportunities. We empower individuals to explore their potential, embrace challenges, and achieve excellence in a dynamic and supportive environment. Join us to build a rewarding future where your ideas and ambitions find their true place.</p>
+                                    <p className='des_style1'>At MVN, your career isn’t just a job—it’s a journey of growth, learning, and limitless opportunities. We empower individuals to explore their potential, embrace challenges, and achieve excellence in a dynamic and supportive environment. Join us to build a rewarding future where your ideas and ambitions find their true place.</p>
                                 <div className="job_mail">
                                 <div>
                                 <p className='mb-0'>Send your Resume to  </p>

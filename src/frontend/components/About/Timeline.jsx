@@ -238,10 +238,17 @@ const Timeline = () => {
       </LazyLoad>
 
       <Container>
-        <SecTitle className="text-center color style1 mb_30">
+        <div className="heading_div mb_60 mb_sm_30">
+          <img src={headingIconImg} alt="mvn overview image" className="img-fluid title_plane1"/>
+          <h4 ref={titleRef} className="title title_style1 text-center">
+          Our Timeline
+          </h4>
+        </div>
+
+        {/* <SecTitle className="text-center color style1 mb_30">
         <img src={headingIconImg} alt="mvn timeline icon" className="img-fluid headingIcon"/>
           <h4 ref={titleRef} className="title">Our Timeline</h4>
-        </SecTitle>
+        </SecTitle> */}
 
         <ul ref={timelineRef} className="timeline_content">
         <div ref={planeRef} className="plane">

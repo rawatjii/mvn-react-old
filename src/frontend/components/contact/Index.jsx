@@ -8,11 +8,17 @@ const ContactPage = ()=>{
     return(
         <section className="section contact-us-section ">
             <Container>
-           
+                {/*<div className="heading_div mb_60 mb_sm_30">
+                    <img src={supportIcon} alt="mvn-support-icon" className="img-fluid supportIcon" />
+                    /~ <img src={headingIconImg} alt="mvn vertical icon" className="img-fluid title_plane1" /> ~/
+                    <h4 className="title title_style1 text-center">
+                    Call or Visit us at One of our locations
+                    </h4>
+                </div>*/}
 
                 <SecTitle className="text-center color style1 mb_30 page-header-main-heading">
-                <img src={supportIcon} alt="mvn-support-icon" className="img-fluid supportIcon" />
-                    <h4 className="title">Call or Visit us at One of our locations</h4>
+                    <img src={supportIcon} alt="mvn-support-icon" className="img-fluid supportIcon" />
+                    <h4 className="title title_style1 text-center">Call or Visit us at One of our locations</h4>
                 </SecTitle>
 
                 <p className="detail_title">Write <span>T</span>o us</p>

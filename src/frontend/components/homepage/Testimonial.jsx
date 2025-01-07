@@ -81,11 +81,10 @@ const Testimonial = () => {
   return (
     <section className="section testimonial_section">
       <Container>
-      
-        <SecTitle className="text-center color style1">
-        <img src={headingIconImg} alt="mvn heading image" className="img-fluid headingIcon" />
-          <h4 ref={titleRef} className="title">What Client Says!</h4>
-        </SecTitle>
+        <div className="heading_div mb_60 mb_sm_30">
+          <img src={headingIconImg} alt="mvn heading image" className="img-fluid title_plane1" />
+          <h4 ref={titleRef} className="title title_style1 text-center">What Client Says!</h4>
+        </div>
 
         <Swiper
           ref={contentRef}

@@ -248,9 +248,6 @@ img.img-fluid.headpage-icon {
   object-fit: cover;
 }
 
-h4.title {
-  font-size: 24px ;
-}
 
 .brand_bg {
   opacity: 0.15 !important;
@@ -487,13 +484,6 @@ section.section.our_brand_section .brand_content {
   text-align: left !important
 }
 
-.our_brand_section h4.title {
-  margin: unset !important;
-  margin-bottom: 10px !important;
-  padding-bottom: 0;
-  text-transform: uppercase;
-  color: var(--theme_primary_color);
-}
 
 .our_brand_section p {
   margin-bottom: 0
@@ -683,7 +673,7 @@ h4.title {
 /* Adarsh */
 
 .blog_page .blog-detail-page-heading {
-  font-size: 28px;
+  font-size: 24px;
   letter-spacing: 1px;
   padding: 15px 0;
 }
@@ -1305,11 +1295,10 @@ a.closebtn {
     .awa_card p {font-size: 15px;}
     .projects_section {.plane_icon {   display: block; }}
     section.overview_section {padding-top: 50px;padding-bottom: 50px;}
-    .overview_section .hero_title{text-align:center;display:table;padding-bottom:3px;margin-bottom:3px;margin-left:auto;margin-right:auto;font-size:24px!important;color:var(--theme_primary_color);text-transform:uppercase;letter-spacing:1px;margin-bottom:30px}
+    /* .overview_section .hero_title{text-align:center;display:table;padding-bottom:3px;margin-bottom:3px;margin-left:auto;margin-right:auto;font-size:24px!important;color:var(--theme_primary_color);text-transform:uppercase;letter-spacing:1px;margin-bottom:30px} */
     .micro_hero_section .frame{width:100%;height:100vh;object-fit:cover}
     /* .micro_hero_section .pin-spacer{height:fit-content!important} */
     section.overview_section{padding-top:50px;padding-bottom:70px}
-    .home-about-content p{font-size:15px;text-align:center;letter-spacing:1px; color: #c1c2c1;}
     .home-about-content{text-align:center;padding-left:150px;padding-right:150px}
     section.overview_section .headingIcon{width:auto;height:50px;margin:0 auto;margin-bottom:20px}
 
@@ -1622,14 +1611,14 @@ section.section.other_projects_section.pb-0 {
       color: #fff;
   }
 }
-.main_am {
+/* .main_am {
   .desc {
       margin: 0;
       color: #ffffff;
       line-height: 20px;
       margin-top: 10px;
   }
-}
+} */
 
 
 .main_am .content {
@@ -1660,7 +1649,6 @@ section.section.other_projects_section.pb-0 {
 }
 
 
-.about_overview p {color: #cec7c7;}
 .career_page .career_para{margin-bottom:20px;}
 
 
@@ -1860,11 +1848,6 @@ section.section.projects_section.pb-0 .px_8.left_col.col-12 .an_img.undefined  .
     }
   }
 
-  .our_team_section h4.title {
-    margin-bottom: 0px;
-    line-height: 0;
-    padding-bottom: 0px;
-  }
 
   .other_projects_section .other-project-img {
     height: 350px;
@@ -1876,13 +1859,12 @@ section.section.projects_section.pb-0 .px_8.left_col.col-12 .an_img.undefined  .
   }
 
 
-  h4.title {
+  /* h4.title {
     position: relative;
     width: fit-content;
     margin: 0 auto;
     display: block;
-    margin-bottom:30px;
-  }
+  } */
 
 
   .sec_title.text-center.color.style2 {
@@ -1953,16 +1935,6 @@ section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;
 .floor_plan_popup .sec_title .style1 .title { padding-bottom: 20px; }
 .floor_plan_popup .container{margin: 0 auto !important;background-color:#101010 !important ;}
 .custom_modal.floor_plan_popup .modal-body {  background: transparent !important; }
-p.rera-number {
-  margin: 0;
-  font-size: 15px;
-  text-align: center;
-  font-weight: 300;
-  letter-spacing: 0.8px;
-  line-height: 28px;
-  color: #c3c3c3;
-  margin-bottom: 30px;
-}
 
 section.section.micro_overview.text-center.pb-0 .overview_card {
   padding-bottom: 40px;
@@ -2209,6 +2181,7 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
     /* margin-top: -210px; */
     background: transparent;
     z-index: 1;
+    /* padding: 40px 0; */
 
     &:before {
       /* position: absolute; */
@@ -2332,7 +2305,7 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
 .our_brand_section .icon .img-fluid {height: 47px; object-fit: contain;}
 section.section.our_brand_section .brand_bg.brand_bg-2 { display: none;}
 section.section.our_team_section { padding-bottom: 17px;}
-.our_team_section p {max-width: 100%; letter-spacing: 1px; line-height:22px; padding: 0 20px;}
+.our_team_section p {max-width: 100%; padding: 0 20px;}
 .testimonial_section { padding-top: 40px; padding-bottom: 40px;}
 section.section.testimonial_section .swiper-slide {background-color: unset;}
 .testimonial_section {& .testimonial_carousel {.single {padding: 20px 20px; }}}
@@ -2373,13 +2346,12 @@ h4.hero_title {
   font-size: 20px;
   margin-bottom:20px;
 }
-.home-about-content{padding-left:40px;padding-right:40px;}
+.home-about-content{padding-left:20px;padding-right:20px;}
 .home-about-content {
   text-align: center;
   padding-top: 40px;
   padding-bottom: 40px;
 }
-.home-about-content p{color: #c1c2c1; letter-spacing: 1px;}
 .lazyload-wrapper.timeline_bg ul.timeline_content li.single .content { padding-top: 37px;  position: relative; top: 20px;}
 .philosophy_section ul.content .flex-li-row-2 {width: 100%; max-width: 100%;}
 .flex-li-row-1 { width: 100%; max-width: 100%; display: grid;gap: 45px 0;}
@@ -2414,7 +2386,6 @@ section.section.media-gallery {padding-top: 70px;}
 
 .grid-left-right .content-right-img h2 { color: var(--theme_primary_color); font-size: 22px;}
 
-.about_overview p {color: #c1c2c1;}
 .oppotunities .title, .inner-sec .half .content-half h2, .grid-left-right .content-right-img h2 { font-size: 18px !important; padding-bottom: 8px;}
 .overview_card p.extra {
   margin: 0;
@@ -2631,7 +2602,7 @@ section.section.other_projects_section.pb-0 {padding-top: 60px;}
 
 .section.peacock_section #scroll-wrapper {
   top: 0px !important;
-  margin-top: -80px;
+  margin-top: -40px;
 }
 .section.living_room_section #scroll-wrapper {
   top: 20px !important;
@@ -2661,11 +2632,11 @@ div#livingRoomSlidingDoor #scroll-wrapper {
   font-size: 12px;
 }
 
-.master-bed-room .watermark {
+/* .master-bed-room .watermark {
   &.style2 {
       bottom: 135px;
   }
-}
+} */
 #scroll-title {
   display: block;
   text-transform: uppercase;
@@ -2697,18 +2668,13 @@ section.section.micro_hero_section.p-0 div#scroll-wrapper-inner\ {
 .section.master-bed-room{
 
   #scroll-wrapper{
-    top: -20px !important;
-    margin-top: 0;
+    top: 0px !important;
+    margin-top: 20px;
   }
 }
 
 .slogan-heading{
   font-size:14px;
-}
-
-h4.title{
-
-  font-size:18px;
 }
 
 

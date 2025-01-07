@@ -121,9 +121,14 @@ export default function Amenities({ data }) {
   const renderMobileView = () => (
     <div className="amenities_section main_am">
       <div className="cards-container">
-        <div className="sec_title text-center color style1">
-          <h4 className="title">Amenities</h4>
+
+        <div className="heading_div mb_60 mb_sm_30">
+          <h4 className="title title_style1 text-center">Amenities</h4>
         </div>
+
+        {/* <div className="sec_title text-center color style1">
+          <h4 className="title">Amenities</h4>
+        </div> */}
 
         {data.map((single, index) => (
           <div key={index} className="col-sm-12 col-md-4 col-lg-4">
@@ -148,10 +153,10 @@ export default function Amenities({ data }) {
               <span className="am-name">{single.name}</span>
               {Array.isArray(single.desc) ? (
                 single.desc.map((desc, idx) => (
-                  <p key={idx} className="desc">{desc}</p>
+                  <p key={idx} className="desc des_style1 text-center mt-3">{desc}</p>
                 ))
               ) : (
-                <p className="desc">{single.desc}</p>
+                <p className="desc des_style1 text-center mt-3">{single.desc}</p>
               )}
             </div>
           </div>
@@ -162,9 +167,10 @@ export default function Amenities({ data }) {
 
   const renderDesktopView = () => (
     <div className="main_am">
-      <div className="sec_title text-center color style1">
-        <h4 className="title">Amenities</h4>
+      <div className="heading_div mb_60 mb_sm_30">
+        <h4 className="title title_style1 text-center">Amenities</h4>
       </div>
+
       {data.map((amenity, i) => (
         <section
           key={i}
@@ -176,7 +182,7 @@ export default function Amenities({ data }) {
           </div>
           <div className="content">
             <span className="am-name">{amenity.name}</span>
-            <p className="desc">{amenity.desc}</p>
+            <p className="desc des_style1 text-center mt-2">{amenity.desc}</p>
           </div>
         </section>
       ))}

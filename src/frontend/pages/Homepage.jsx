@@ -72,7 +72,7 @@ const Homepage = () => {
     Number(localStorage.getItem("count"))
   );
 
-  useEffect(() => {
+  {/*useEffect(() => {
     if (newLoadingCount >= 100) {
       const timer = setTimeout(() => {
         setNewLoadingCount(101);
@@ -81,7 +81,7 @@ const Homepage = () => {
 
       return () => clearTimeout(timer);
     }
-  }, [newLoadingCount]);
+  }, [newLoadingCount]);*/}
 
   useEffect(() => {
     localStorage.removeItem('count');
@@ -99,16 +99,16 @@ const Homepage = () => {
     };
   }, []);
 
-  if (!isPageLoaded) {
-    return (
-      <InitialLoading
-        loadingCount={newLoadingCount}
-        setLoadingCount={setNewLoadingCount}
-        fast="true"
-        second="true"
-      />
-    );
-  }
+  // if (!isPageLoaded) {
+  //   return (
+  //     <InitialLoading
+  //       loadingCount={newLoadingCount}
+  //       setLoadingCount={setNewLoadingCount}
+  //       fast="true"
+  //       second="true"
+  //     />
+  //   );
+  // }
 
   return (
     <Layout>

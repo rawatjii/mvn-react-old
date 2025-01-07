@@ -133,9 +133,13 @@ const MicroLocationMap = ({data})=>{
   return(
     <section className="section location_map_section">
       <Container>
-        <SecTitle className="text-center color style1">
+        <div className="heading_div mb_60 mb_sm_30">
+          <h4 className="title title_style1 text-center">Location Map</h4>
+        </div>
+
+        {/* <SecTitle className="text-center color style1">
           <h4 ref={titleRef} className="title">Location Map</h4>
-        </SecTitle>
+        </SecTitle> */}
       </Container>
 
       <div className="locationMapContent">

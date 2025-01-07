@@ -80,10 +80,10 @@ const Philosophy = () => {
   return (
     <section className="section philosophy_section pb-0">
       <Container>
-        <SecTitle className="text-center color style1 mb_30">
-        <img src={headingIconImg} alt="mvn heading icon" className="img-fluid headingIcon"/>
-          <h4 ref={titleRef} className="title">Our Philosophy</h4>
-        </SecTitle>
+        <div className="heading_div mb_60 mb_sm_30">
+          <img src={headingIconImg} alt="mvn heading icon" className="img-fluid title_plane1"/>
+          <h4 ref={titleRef} className="title title_style1 text-center">Our Philosophy</h4>
+        </div>
 
         <ul className="content">
           <div className="flex-li-row-1">

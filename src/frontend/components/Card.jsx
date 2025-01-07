@@ -18,12 +18,12 @@ const CustomCard = ({ className, title, location, extra, desc, extraTxt }) => {
 
       {desc && Array.isArray(desc) ? (
         desc.map((el, i) => (
-          <p className="desc" key={`desc-${i}`}>
+          <p className="desc des_style1 text-center" key={`desc-${i}`}>
             {el}
           </p>
         ))
       ) : (
-        <p className="desc">{desc}</p>
+        <p className="desc des_style1 text-center">{desc}</p>
       )}
       {extraTxt && <h4 className="extraTxt">{extraTxt}</h4>}
     </div>
