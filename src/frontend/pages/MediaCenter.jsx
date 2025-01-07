@@ -275,7 +275,7 @@ function MediaCenter() {
                   {/* <SecTitle className="text-center color style1 mb_30">
                     <img
                       src={headingIconImg}
-                      alt="mvn media center image"
+                      alt="mvn Media Centre image"
                       className="img-fluid headpage-icon"
                     />
                     <h4 ref={titleRef} className="title">
