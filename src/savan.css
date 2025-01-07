@@ -1911,7 +1911,7 @@ section.section.timeline_section.pb-0 .diamond-img {  width: auto; height: 70px;
 
 
 .micro_banner {  opacity: 0.97; }
-.micro_banner {.microbanner_bg { opacity: 0.99;}}
+.micro_banner {.microbanner_bg { opacity: 0.7;}}
 
 .projects_section {
   & .left_col .single {

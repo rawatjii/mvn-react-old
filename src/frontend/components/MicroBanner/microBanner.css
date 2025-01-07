@@ -25,7 +25,8 @@
     width: 100%;
     object-fit: cover;
     z-index: 0;
-    opacity: 0.9;
+    opacity: 0.7;
+    
   }
 
   .microTitle{
@@ -37,7 +38,16 @@
     position: relative;
         z-index: 1;
   }
-
+  .microContent{
+    text-align: center;
+    font-size: 14px;
+    letter-spacing: 2px;
+    position: relative;
+    z-index: 1;
+    margin-top: 5px;
+    margin-bottom: 0;
+  
+  }
   nav{
     position: relative;
     z-index: 1;

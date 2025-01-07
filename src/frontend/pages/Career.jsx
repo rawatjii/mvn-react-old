@@ -36,6 +36,7 @@ function Career() {
 
     const breadcrumbs = {
         title: 'Career',
+        content: "Be a Part of Our Legacy of Luxury",
         links: [
             {
                 name: 'Home',

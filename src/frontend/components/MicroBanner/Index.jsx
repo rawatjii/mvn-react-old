@@ -55,6 +55,7 @@ const MicroBanner = ({bg, data})=>{
         <Container>
         <img src={bg} alt="mvn-microbanner-bg" className="img-fluid microbanner_bg" />
           <h2 ref={titleRef} className="microTitle" >{data.title}</h2>
+          <p className="microContent">{data.content}</p>
         </Container>
       </section>
       <section className="breadcrumb_section">

@@ -20,6 +20,7 @@ const AboutUs = () => {
   
   const breadcrumbs = {
     title: 'About Us',
+    content: 'Building Brilliamce, Crafting Opulence',
     links: [
       { name: 'Home', link: '/' },
       { name: 'About Us' }

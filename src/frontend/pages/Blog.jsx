@@ -30,6 +30,7 @@ function Blog() {
 
   const breadcrumbs = {
     title: "Blogs",
+    content: "Insights into Luxurious Living",
     links: [
       {
         name: "Home",

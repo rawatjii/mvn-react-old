@@ -67,6 +67,7 @@ function MediaCenter() {
 
   const breadcrumbs = {
     title: "Media Center",
+    content: "Discover the Pinnacle of Luxury Living",
     links: [
       {
         name: "Home",
