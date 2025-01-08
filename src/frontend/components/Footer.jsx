@@ -98,7 +98,7 @@ const Footer = () => {
             <div class="left">
               <h4>Contact Details</h4>
 
-              <p class="address-details"><span>Meet:</span> MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157 
+              <p class="address-details"><span>Meet:</span> MVN AERO ONE, C/o Awfis, 7th floor, gate no. 3 &4 Ambience mall, Ambience Island, NH 8, DLF phase 3, Sector 24, Gurugram
               <br /> CIN:ACA-4678 | PAN:ABWFM8415E</p>
               <p class="phone-details"><span>Talk:</span> +91 799 6000 196</p>
               <p class="mail-details"><span>Write:</span> info@mvn.in</p>

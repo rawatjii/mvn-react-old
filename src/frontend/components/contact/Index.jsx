@@ -43,7 +43,7 @@ const ContactPage = ()=>{
                         <span className="icon">
                             <img src={CONFIG.IMAGE_URL + 'icons/location.png'} alt="mvn envelope icon" className="img-fluid" />
                         </span>
-                        <span className="txt">MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157 | CIN:ACA-4678 | PAN:ABWFM8415E</span>
+                        <span className="txt">MVN AERO ONE, C/o Awfis, 7th floor, gate no. 3 &4 Ambience mall, Ambience Island, NH 8, DLF phase 3, Sector 24, Gurugram | CIN:ACA-4678 | PAN:ABWFM8415E</span>
                     </li>
                 </ul>
             </Container>

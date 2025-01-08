@@ -9,7 +9,7 @@
         img {
             height: 100%;
             object-fit: cover;
-            width: 100%;
+            width: auto;
             height: 300px;
             object-fit: contain;
         }
@@ -33,7 +33,7 @@
     .typology_section .images{display: table; margin: auto;}
     .typology_section .images img { height: 100%; object-fit: cover; height: 460px;max-height:500px;object-fit: contain;}
 
-    .typology_section .typology_content{position: absolute;right: 7%;top: 44%;width: 23%;padding: 70px 30px 40px; transform: translateY(-50%);min-height: 330px;}
+    .typology_section .typology_content{position: absolute;right: 7%;width: 23%;padding: 70px 30px 40px; min-height: 330px; top:50%; transform:translateY(-50%); -webkit-transform:translateY(-50%);}
     .typology_section .content-box {min-height: 230px;}
     .typology_section .typology-before-line{position: relative;}
     /* .typology_section .typology_content::before { position: absolute;content: '';left: -100%;top: 10%;width: 100%;height: 100%;background: url('/src/frontend/assets/images/typologies/before-lines.svg') no-repeat;background-position: right;background-size: 170px; } */
@@ -47,9 +47,7 @@
 
 @media screen and (min-width: 1430px) and (max-width: 1500px){
     .typology_section {padding: 100px 0 !important;}
-    .typology_section .images img { height: 100%; object-fit: cover; width: 100%;object-fit: contain;}
     /* .typology_section .images{max-height: 520px;height: 520px;} */
-    .typology_section .typology_content{position: absolute;right: 7%;top: 40%;width: 23%;padding: 70px 30px 40px; transform: translateY(-50%);min-height: 330px;}
     .typology_section .desktop-view-typo-images {top: 50%;}
     .typology_section .content-box {min-height: 230px;}
     .typology_section .typology-before-line{position: relative;}

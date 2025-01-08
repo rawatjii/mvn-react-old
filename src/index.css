@@ -4849,6 +4849,16 @@ footer {
     font-size: 18px;
   }
 
+  .typology_section {
+
+    .images{
+
+      img{
+        width:100%;
+      }
+    }
+  }
+
 }
 
 /* end of 767 */

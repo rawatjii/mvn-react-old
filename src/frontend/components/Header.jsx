@@ -294,7 +294,7 @@ const Header = () => {
                       <div className="top-area">
                         
                         <div className="inner-logo d-none d-md-block">
-                          <p><span>Office:</span> MVN Group, 2nd Floor, Above McDonald's, Jansons Mall, Downtown Park II, Menakunte, Sadahalli Gate, Bangalore - 562157</p>
+                          <p><span>Office:</span> MVN AERO ONE, C/o Awfis, 7th floor, gate no. 3 &4 Ambience mall, Ambience Island, NH 8, DLF phase 3, Sector 24, Gurugram</p>
                           <p><span>Talk:</span> +91 79960 00196</p>
                         </div>
 

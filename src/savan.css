@@ -1749,11 +1749,12 @@ section.overview_section {padding-bottom: 25px;}
   width: fit-content;
   height: auto;
   position: relative;
-  top: -70px;
+  top: 0;
   color: #dbc275;
   text-align: right;
   margin-left: auto;
   margin-right: auto;
+  margin-top:20px;
 }
 .projects_section {
   & .single {
