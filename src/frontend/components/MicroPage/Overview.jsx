@@ -51,10 +51,10 @@ const MicroOverview = ({ data }) => {
         countUp(13500, setCount1, setEnded1);
       }
       if (!ended2 && isScrolledIntoView(ref2)) {
-        countUp(11700, setCount2, setEnded2);
+        countUp(12420, setCount2, setEnded2);
       }
       if (!ended3 && isScrolledIntoView(ref3)) {
-        countUp(5850, setCount3, setEnded3);
+        countUp(6210, setCount3, setEnded3);
       }
     };
 

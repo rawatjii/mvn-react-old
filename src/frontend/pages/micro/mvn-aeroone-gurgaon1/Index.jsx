@@ -476,7 +476,7 @@ export const data = {
         ]
       },
       {
-        title:'360 Panoramic Apartment (11700 sqft)',
+        title:'360 Panoramic Apartment (12420 sqft)',
         thumbnail:[
           {
             src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/360/1.webp',
@@ -485,7 +485,7 @@ export const data = {
         ]
       },
       {
-        title:'270 Panoramic Apartment (5850 sqft)',
+        title:'270 Panoramic Apartment (6210 sqft)',
         thumbnail:[
           {
             src:CONFIG.IMAGE_URL + 'aero-bangalore/floorPlan/270/1.webp',
