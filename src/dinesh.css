@@ -1019,10 +1019,6 @@ section.section.experience-section {
     justify-content: space-between;
   }
 
-  .section.peacock_section.pb-0 {
-    padding-top: 0px;
-  }
-
   .journey_section .journey_content .single::before {
     top: -26px;
     left: -24px;

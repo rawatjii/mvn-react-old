@@ -131,7 +131,7 @@ const MicroLocationMap = ({data})=>{
 
 
   return(
-    <section className="section location_map_section">
+    <section className="section location_map_section pb-0">
       <Container>
         <div className="heading_div mb_60 mb_sm_30">
           <h4 className="title title_style1 text-center">Location Map</h4>
@@ -181,7 +181,7 @@ const MicroLocationMap = ({data})=>{
       <Container>
         <div className='about'>
           <CustomCard
-            className="px-0"
+            className="px-0 pb-0"
             title="THE LOCATION AS INVITING AS ITS ALLURE" 
             desc="Located at the prime 22km stone on Dwarka Expressway, Gurugram, MVN Aero One sits on the growth corridor at the first and only drop of the 23km elevated expressway. Strategically positioned at downtown Gurugram." 
           />

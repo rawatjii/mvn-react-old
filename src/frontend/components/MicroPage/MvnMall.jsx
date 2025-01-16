@@ -47,7 +47,7 @@ const MvnMall = () => {
 
   return (
     <>
-      <section className="mvn_mall_section micro_design1">
+      <section className="section mvn_mall_section micro_design1 pb-0">
         {isMobile ? (
           <>
             <Container>

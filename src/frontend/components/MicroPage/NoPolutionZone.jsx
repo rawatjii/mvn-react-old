@@ -76,7 +76,7 @@ export default function NoPolutionZone({ data }) {
 
   return (
     <>
-      <div className={!isMobile ? 'main_am' : 'amenities_section main_am'}>
+      <div className={!isMobile ? 'section main_am pb-0' : 'section amenities_section main_am'}>
         <div className="cards-container">
           {/* <div className="sec_title text-center color style1">
             <h4 className="title">Connections with MVN Mall</h4>

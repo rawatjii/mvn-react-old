@@ -7,6 +7,7 @@ import PartyLoader from "../../../common/Loader/micro/partyLoader/Index";
 import Watermark from "../../../common/watermark/Index";
 import lottie from "lottie-web";
 import InitialLoading from "../../skeleton/Initial/Index";
+import ScrollDown from "../../../common/scrollDown/Index";
 
 // Register the ScrollTrigger plugin
 gsap.registerPlugin(ScrollTrigger);
@@ -119,18 +120,24 @@ const PartyVideo = ({ isMobile, data, onLoadComplete }) => {
       ) : (
         <>
           <div ref={containerRef} className="frames_content">
-            <Watermark />
-            <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }}></div>
-            <div id="scroll-wrapper" className="microsite-scrolldown">
+            
+            <div className="position-relative h_sm_100">
+              <div className="position-relative h_sm_100">
+                <Watermark />
+                <div ref={lottieContainerRef} style={{ width: "100%", height: "100%" }}></div>
+              </div>
+              <ScrollDown className="color-black" />
+            </div>
+            {/* <div id="scroll-wrapper" className="microsite-scrolldown">
               <div id="scroll-wrapper-inner">
                 <div id="scroll-title">Scroll Down</div>
                 <div className="scroll-down-dude"></div>
               </div>
-            </div>
+            </div> */}
           </div>
           <Container>
             <div className="about">
-              <CustomCard className="px-0" title={title} desc={desc} />
+              <CustomCard className="px-0 pb-0" title={title} desc={desc} />
             </div>
           </Container>
         </>

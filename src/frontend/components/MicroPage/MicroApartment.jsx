@@ -98,7 +98,7 @@ export default function MicroApartment({ data }) {
         <Container>
           <div className='about'>
             <CustomCard
-              className="px-0"
+              className="px-0 pb-0"
               title="Every corner a symphony of style & opulence" 
               desc="Experience ultra-luxury living in this exclusive apartment boasting plush interiors and bespoke design. The spacious layout includes a designer bathroom with premium fittings, a modern Cucina kitchen for culinary excellence, and a state-of-the-art home theatre for entertainment. A thoughtfully designed kids' room ensures comfort and fun, completing a perfect sanctuary for a sophisticated, family-friendly lifestyle." 
             />

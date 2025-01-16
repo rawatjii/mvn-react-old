@@ -100,7 +100,7 @@ const MicroFloorPlan = ({ data }) => {
   }, []);
 
   return (
-    <section className="section floor_plan_section">
+    <section className="section floor_plan_section pb-0">
       <div className="heading_div mb_60 mb_sm_30">
         <h4 className="title title_style1 text-center">{title}</h4>
       </div>

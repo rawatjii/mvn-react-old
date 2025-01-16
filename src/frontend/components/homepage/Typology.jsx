@@ -129,7 +129,7 @@ const Typology = ({ onLoadComplete }) => {
 
   return (
     <>
-      <section ref={containerRef} className="section typology_section">
+      <section ref={containerRef} className="section typology_section pb-0">
         <div className="heading_div mb_60 mb_sm_30" >
           <h4 className="title title_style1 text-center">Typologies</h4>
         </div>

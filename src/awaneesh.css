@@ -30,7 +30,6 @@
     /* background-color: #131313; */
     padding: 60px 40px 40px;
     border-radius: 8px;
-    margin-top: -30px;
     position: relative;
 }
 .micro_overview{
@@ -625,13 +624,6 @@ border-bottom: 1px solid rgb(42 42 42 / 49%);text-decoration: none;letter-spacin
 
 
 
-
-
-
-
-
-
-
 @media (min-width: 768px) {
 .hero-img img{
     width: 100%;
@@ -643,13 +635,6 @@ border-bottom: 1px solid rgb(42 42 42 / 49%);text-decoration: none;letter-spacin
         box-shadow: 0px 0px 4px #ffffff29;
     }
 }
- .overview_card{
-    padding: 100px;
-    border-radius: 8px;
-    padding-bottom: 65px;
-
-   
- }
 
 
 .content{
@@ -773,9 +758,6 @@ border-bottom: 1px solid rgb(42 42 42 / 49%);text-decoration: none;letter-spacin
    background-color: black;
 }
 
-.floor_plan_section{
-    padding: 60px 0;
-}
 
 .floor_plan_section .container{
     margin-top: 40px;

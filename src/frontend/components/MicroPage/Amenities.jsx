@@ -119,7 +119,7 @@ export default function Amenities({ data }) {
   }, []);
 
   const renderMobileView = () => (
-    <div className="amenities_section main_am">
+    <div className="section amenities_section main_am">
       <div className="cards-container">
 
         <div className="heading_div mb_60 mb_sm_30">
@@ -166,7 +166,7 @@ export default function Amenities({ data }) {
   );
 
   const renderDesktopView = () => (
-    <div className="main_am">
+    <div className="section main_am pb-0">
       <div className="heading_div mb_60 mb_sm_30">
         <h4 className="title title_style1 text-center">Amenities</h4>
       </div>

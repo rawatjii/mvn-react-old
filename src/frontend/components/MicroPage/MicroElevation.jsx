@@ -121,7 +121,7 @@ export default function MicroElevation({ data = images }) {
         <Container>
           <div className='about'>
             <CustomCard
-              className="px-0"
+              className="px-0 pb-0"
               title="Pinnacle of Sophisticated Luxury" 
               desc="This architectural masterpiece seamlessly blends cutting-edge design with new-age sophistication. Every curve, every detail, is meticulously crafted to elevate your living experience. Embrace a residence where innovation meets beauty, creating a landmark of luxurious urban living. Your new home awaits." 
             />

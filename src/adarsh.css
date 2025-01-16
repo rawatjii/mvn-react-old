@@ -1,7 +1,6 @@
 /* Typology Section */
 
 .typology_section {
-    padding: 180px 0 !important;
     .images {
         max-height: 340px;
         object-fit: cover;
@@ -28,7 +27,6 @@
 
 
 @media(min-width:1200px){
-    .typology_section {padding: 100px 0 !important;}
     .location_map_section .locationMapContent .location_points .distance {font-size: 20px;padding: 4px 10px; }
     .typology_section .images{display: table; margin: auto;}
     .typology_section .images img { height: 100%; object-fit: cover; height: 460px;max-height:500px;object-fit: contain;}

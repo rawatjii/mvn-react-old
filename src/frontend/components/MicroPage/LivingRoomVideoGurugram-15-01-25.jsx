@@ -11,14 +11,16 @@ import ScrollDown from "../../../common/scrollDown/Index";
 
 gsap.registerPlugin(ScrollTrigger);
 
-const PeacockSection = ({ data, onLoadComplete }) => {
+const LivingRoomVideoGurugram = ({ data, onLoadComplete }) => {
   const canvasRef = useRef(null); // Ref for the canvas
   const containerRef = useRef(null); // Ref for the scrollable container
+  const sectionRef = useRef(null);
   const [images, setImages] = useState([]); // Array to store loaded images
   const [isMobile, setIsMobile] = useState(false); // Track if it's mobile
   const [loading, setLoading] = useState(true); // Loader state
+  const totalFramesMobile = 126; // Total frames for mobile
 
-  const totalFramesMobile = 256; // Total frames for mobile
+  const { title, desc } = data.living_room_video;
 
   // Function to draw a frame on the canvas
   const drawFrame = (frameIndex, ctx, canvas, images) => {
@@ -65,39 +67,44 @@ const PeacockSection = ({ data, onLoadComplete }) => {
 
   // Load images for mobile
   useEffect(() => {
-    if (window.innerWidth >= 768) {
-      onLoadComplete(); // Immediately call onLoadComplete for desktop
-      setLoading(false); // No loader for desktop
-      return;
-    }
-
     const totalFrames = totalFramesMobile;
-    const imagePath = "assets/images/peacock/mobile/";
-
+    const imagePath = "assets/videos/living-room/desktop/";
+  
     const loadedImages = [];
     let loadedCount = 0;
-
+  
     for (let i = 1; i <= totalFrames; i++) {
       const img = new Image();
       img.src = `${imagePath}${i}.webp`;
-
+  
       img.onload = () => {
         loadedCount++;
+        loadedImages.push(img);
+  
+        if (loadedCount === 1) {
+          // Set canvas dimensions based on the first image's aspect ratio
+          const canvas = canvasRef.current;
+          if (canvas) {
+            const aspectRatio = img.width / img.height;
+            canvas.width = window.innerWidth;
+            canvas.height = canvas.width / aspectRatio;
+          }
+        }
+  
         if (loadedCount === totalFrames) {
           setLoading(false); // All images loaded, hide loader
           onLoadComplete(); // Call onLoadComplete when loading is done
           drawFrame(0, loadedImages); // Immediately draw the first frame on the canvas
         }
       };
-
-      loadedImages.push(img);
     }
     setImages(loadedImages);
-  }, [isMobile, onLoadComplete]);
+  }, [onLoadComplete]);
+  
 
   // GSAP ScrollTrigger Animation for mobile
   useEffect(() => {
-    if (!isMobile || images.length === 0 || loading) return; // Skip if not mobile, still loading, or no images
+    if (images.length === 0 || loading) return; // Skip if not mobile, still loading, or no images
 
     const canvas = canvasRef.current;
     if (!canvas) return; // Early exit if canvas is not available
@@ -111,7 +118,7 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     drawFrame(0, ctx, canvas, images);
 
     const scrollAnimation = ScrollTrigger.create({
-      trigger: containerRef.current,
+      trigger: sectionRef.current,
       start: "top 79px",
       end: `+=${window.innerHeight * 4}`,
       pin: true, // Pin the canvas while scrolling
@@ -136,36 +143,40 @@ const PeacockSection = ({ data, onLoadComplete }) => {
     return () => {
       scrollAnimation.kill();
     };
-  }, [images, isMobile, loading]); // Re-run when images or loading state changes
-
-  const { title, desc } = data.video1;
+  }, [images, loading]); // Re-run when images or loading state changes
 
   return (
-    <div className="section peacock_section pb-0" id="peacockSection">
+    <div className="section peacock_section living_room_section pb-0" ref={sectionRef} id="peacockSection">
       {/* Show loader only on mobile */}
-      {isMobile && loading && <PeacockLoader />}
+      {loading && <PeacockLoader />}
 
       {/* Main content once loading is complete */}
-      {!loading && (
-        <>
+      <>
           <div ref={containerRef} className="frames_content">
             <div className="image_col position-relative">
-              <Watermark className={isMobile ? 'style1' : 'style2'} />
+              {/* <Watermark className={isMobile ? 'style1' : 'style2'} /> */}
+
+              <canvas
+                  ref={canvasRef}
+                  width={window.innerWidth}
+                  height={window.innerHeight}
+                  style={{ display: "block", margin: "auto" }}
+                />
 
               {/* Mobile Canvas */}
-              {isMobile && (
+              {/* {isMobile && (
                 <canvas
                   ref={canvasRef}
                   width={window.innerWidth}
                   height={window.innerHeight}
                   style={{ display: "block", margin: "auto" }}
                 />
-              )}
+              )} */}
 
               {/* Desktop Image */}
-              {!isMobile && (
+              {/* {!isMobile && (
                 <img src={CONFIG.IMAGE_URL + 'peacock/peacock.webp'} className="img-fluid peacock_img" />
-              )}
+              )} */}
             </div>
 
             <ScrollDown className="color-black" />
@@ -173,17 +184,12 @@ const PeacockSection = ({ data, onLoadComplete }) => {
 
           <Container>
             <div className="about">
-              <CustomCard
-                className="p_sm_0 pb-0"
-                title="EXPERIENCE THE GRANDEUR OF THE LIVING ROOM WITH 360° PANORAMIC VIEWS"
-                desc="Step into a living room where nature’s vibrant splendor enchants, blending elegance and serenity for both relaxation and gatherings."
-              />
+            <CustomCard title={title} desc={desc} className="px_sm_0" />
             </div>
           </Container>
         </>
-      )}
     </div>
   );
 };
 
-export default PeacockSection;
+export default LivingRoomVideoGurugram;

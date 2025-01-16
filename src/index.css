@@ -115,6 +115,10 @@ body {
   color: #fff;
 }
 
+a{
+  cursor: pointer;
+}
+
 h1,
 h2,
 h3,
@@ -204,6 +208,7 @@ input[type=number] {
   font-weight: 500;
   letter-spacing: 0.3px;
   font-size: 14px;
+  border: none;
 }
 
 .btn_outline,
@@ -303,7 +308,7 @@ fieldset:disabled {
 
 .section {
   position: relative;
-  padding: 60px 0;
+  padding: 100px 0;
 }
 
 .main_title {
@@ -675,9 +680,12 @@ a {
   &.fixed {
     padding: 10px 5px;
 
-    /* img {
-      max-width: 55px;
-    } */
+    .navbar-brand{
+
+      img{
+        max-width: 50px;
+      }
+    }
   }
 
   .navbar-toggler {
@@ -3005,8 +3013,7 @@ footer {
 /* floor_plan_section */
 
 .floor_plan_section {
-  padding-top: 50px;
-  padding-bottom: 0;
+
 
   .sec_title {
     margin-bottom: 25px;
@@ -3632,7 +3639,7 @@ footer {
 
 .download_brochure_section{
 
-  padding-top: 100px;
+  padding-top: 80px;
 
   .btn_style4{
 
@@ -3930,6 +3937,10 @@ footer {
 
 @media(max-width:767px) {
 
+  .h_sm_100{
+    height:100%;
+  }
+
   .mb_sm_30{
     margin-bottom:30px;
   }
@@ -4039,7 +4050,7 @@ footer {
 
   .section{
 
-    padding: 60px 0 40px;
+    padding: 60px 0;
   }
 
   .download_brochure_section{
@@ -4317,6 +4328,7 @@ footer {
   }
 
   .overview_card {
+    padding: 40px 40px 40px;
 
     .desc {
       line-height: 22px;
@@ -4387,6 +4399,14 @@ footer {
         visibility: visible;
       }
     } */
+  }
+
+  .peacock_section.living_room_section{
+
+    .about{
+
+      margin-top:0;
+    }
   }
   
   .party_section{
@@ -4860,6 +4880,7 @@ footer {
     }
   }
 
+
 }
 
 /* end of 767 */
@@ -5134,7 +5155,7 @@ footer {
 
 
 .main_am {
-  padding-top: 90px;
+  /* padding-top: 90px; */
 
 
   /* 50% -285.498px */

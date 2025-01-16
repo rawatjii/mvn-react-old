@@ -1167,10 +1167,6 @@ a.closebtn {
     justify-content: space-between
   }
 
-  .section.peacock_section.pb-0 {
-    padding-top: 0px;
-  }
-
   .journey_section .journey_content .single::before {
     top: -26px;
     left: -24px;
@@ -1673,7 +1669,7 @@ nav.null.navbar.navbar-expand-false.navbar-light .right {width: 200px; display: 
 .mvn-section-banner h4.title{position:relative;width:fit-content;margin:0 auto!important;display:block;margin-bottom:30px!important}
 .mvn-section-banner .sec_title.text-center.color.style1{margin:0 auto;display:block;width:fit-content}
 .section.peacock_section.master_bedroom.pb-0 .overview_card.undefined { padding-bottom: 0;}
-section.section.walkthrough_section { padding-bottom: 30px; width: 100%;}
+section.section.walkthrough_section { padding-bottom: 0; width: 100%;}
 .section.renders1_section.wrapper.center.pb-0 .overview_card.px-0 {padding-bottom: 30px;}
 
 .microsite-scrolldown { color: #f3d866;}
@@ -2088,9 +2084,14 @@ section.section.projects_section.pb-0 .new-launch-patch { position: absolute;top
       background: #000;
       padding: 10px 5px;
 
-      img {
-        max-width: 55px;
+      .navbar-brand{
+
+        img {
+          max-width: 40px;
+        }
       }
+
+      
     }
   }
 
@@ -2399,7 +2400,6 @@ section.section.media-gallery {padding-top: 70px;}
   line-height: 28px;
   color: #c3c3c3;
 }
-.section.peacock_section.pb-0 {padding-top: 21px;}
 .overview_card { margin-top: 0;}
 .section.living_room_video_section {
   padding-top: 12px !important;
